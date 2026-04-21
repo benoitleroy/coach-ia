@@ -17,7 +17,9 @@
   const header = document.createElement("div");
   header.className = "mobile-header";
   header.innerHTML = `
-    <button class="mobile-menu-btn" id="drawerToggle" aria-label="Menu">☰</button>
+    <button class="mobile-menu-btn" id="drawerToggle" aria-label="Menu"
+            onclick="window.__toggleCoachIaDrawer && window.__toggleCoachIaDrawer(event)"
+            ontouchstart="">☰</button>
     <div style="display:flex;align-items:center;gap:8px;">
       <div style="width:28px;height:28px;background:linear-gradient(135deg,#6C63FF,#00D4AA);border-radius:7px;display:flex;align-items:center;justify-content:center;">
         <span style="color:white;font-weight:800;font-size:12px;">C</span>
@@ -67,10 +69,22 @@
   document.body.appendChild(drawer);
 
   // ─── TOGGLE ───
-  document.getElementById("drawerToggle").addEventListener("click", () => {
+  // Exposé en global pour que le onclick inline fonctionne sur iOS Safari
+  window.__toggleCoachIaDrawer = function (e) {
+    if (e) { e.preventDefault(); e.stopPropagation(); }
     drawer.classList.toggle("open");
     overlay.classList.toggle("active");
-  });
+  };
+
+  // Backup : addEventListener sur click ET touchend pour iOS
+  const btn = document.getElementById("drawerToggle");
+  if (btn) {
+    btn.addEventListener("click", window.__toggleCoachIaDrawer);
+    btn.addEventListener("touchend", function (e) {
+      e.preventDefault();
+      window.__toggleCoachIaDrawer(e);
+    }, { passive: false });
+  }
 
   window.closeDrawer = function () {
     drawer.classList.remove("open");
