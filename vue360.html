@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coach IA 2030 — Vue 360°</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#6C63FF" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Coach IA" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));
+    }
+  </script>
+</head>
+<body>
+
+<div class="flex min-h-screen">
+
+  <!-- ─── SIDEBAR ─── -->
+  <aside style="width:240px;background:#13151F;border-right:1px solid #2A2D3E;" class="flex flex-col flex-shrink-0 p-5">
+    <div class="mb-8">
+      <a href="accueil.html" style="text-decoration:none;">
+        <div class="flex items-center gap-2 mb-1" style="cursor:pointer;">
+          <div style="width:32px;height:32px;background:linear-gradient(135deg,#6C63FF,#00D4AA);border-radius:8px;display:flex;align-items:center;justify-content:center;">
+            <span style="color:white;font-weight:800;font-size:14px;">C</span>
+          </div>
+          <span style="font-weight:700;font-size:1rem;color:#F0F0F5;">Coach IA</span>
+          <span style="font-size:0.65rem;color:#6C63FF;background:rgba(108,99,255,0.15);padding:2px 6px;border-radius:4px;font-weight:600;">2030</span>
+        </div>
+      </a>
+      <p style="font-size:0.7rem;color:#555870;margin-top:4px;">Niveau Solo Athlete</p>
+      <span style="font-size:0.62rem;color:#FF6B6B;background:rgba(255,107,107,0.1);border:1px solid rgba(255,107,107,0.2);padding:2px 6px;border-radius:4px;font-weight:600;margin-top:4px;display:inline-block;">PROTOTYPE</span>
+    </div>
+    <nav class="flex flex-col gap-1 flex-1">
+      <a href="index.html" class="nav-link"><span>📊</span> Dashboard</a>
+      <a href="journal.html" class="nav-link"><span>📝</span> Journal du jour</a>
+      <a href="vue360.html" class="nav-link active"><span>🔭</span> Vue 360°</a>
+      <div style="height:1px;background:#2A2D3E;margin:12px 0;"></div>
+      <a href="historique.html" class="nav-link"><span>📈</span> Historique</a>
+      <a href="archive.html" class="nav-link"><span>📚</span> Mes Semaines</a>
+      <a href="objectifs.html" class="nav-link"><span>🎯</span> Objectifs</a>
+      <a href="parametres.html" class="nav-link"><span>⚙️</span> Paramètres</a>
+    </nav>
+    <div style="border-top:1px solid #2A2D3E;padding-top:16px;">
+      <p style="font-size:0.7rem;color:#555870;margin-bottom:6px;text-transform:uppercase;letter-spacing:0.05em;">Athlète</p>
+      <div class="athlete-selector flex-col gap-1" id="athleteSelector">
+        <button class="athlete-btn active" data-athlete="benoit">Benoît L.</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ─── CONTENU ─── -->
+  <main class="flex-1 overflow-y-auto p-8">
+
+    <!-- HEADER -->
+    <div class="mb-8 fade-in">
+      <p style="color:#8B8FA8;font-size:0.85rem;margin-bottom:4px;">Profil complet</p>
+      <h1 style="font-size:1.75rem;font-weight:800;color:#F0F0F5;">Vue 360° de l'athlète</h1>
+      <p style="color:#8B8FA8;font-size:0.9rem;margin-top:4px;">8 dimensions pour te comprendre comme un être humain complet</p>
+    </div>
+
+    <!-- PHILOSOPHIE BANNER -->
+    <div class="alerte-banner alerte-info mb-7 fade-in" style="animation-delay:0.05s">
+      <span style="font-size:1.4rem;">🪞</span>
+      <div>
+        <div style="font-weight:700;font-size:0.92rem;margin-bottom:3px;">L'IA comme miroir, pas comme prescripteur</div>
+        <p style="font-size:0.83rem;color:#A0A0C0;line-height:1.5;">
+          Ces 8 couches ne sont pas des cases à cocher. Elles révèlent des patterns, des forces, des zones d'attention. Toi seul décides quoi en faire. Clique sur chaque couche pour explorer.
+        </p>
+      </div>
+    </div>
+
+    <!-- LAYOUT : RADAR + SCORE GLOBAL -->
+    <div class="grid gap-6 mb-7" style="grid-template-columns:1fr 1fr;align-items:start;">
+
+      <!-- RADAR CHART -->
+      <div class="card fade-in" style="animation-delay:0.1s">
+        <h2 style="font-size:0.8rem;font-weight:600;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:1.25rem;">Profil radar</h2>
+        <div class="radar-container" style="height:300px;">
+          <svg id="radarSvg" viewBox="0 0 300 300" width="300" height="300"></svg>
+        </div>
+        <div style="display:flex;gap:16px;justify-content:center;margin-top:1rem;flex-wrap:wrap;" id="radarLegende"></div>
+      </div>
+
+      <!-- SCORE GLOBAL + RÉSUMÉ -->
+      <div style="display:flex;flex-direction:column;gap:16px;">
+
+        <div class="card fade-in" style="animation-delay:0.15s;text-align:center;">
+          <p style="font-size:0.78rem;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:12px;">Score global athlète</p>
+          <div style="position:relative;display:inline-flex;align-items:center;justify-content:center;margin-bottom:12px;">
+            <svg width="120" height="120" style="transform:rotate(-90deg)">
+              <circle cx="60" cy="60" r="50" fill="none" stroke="#2A2D3E" stroke-width="8"/>
+              <circle cx="60" cy="60" r="50" fill="none" stroke="url(#gradGlobal)" stroke-width="8"
+                stroke-linecap="round" id="globalRingFill" class="ring-animated"
+                stroke-dasharray="314" stroke-dashoffset="314"/>
+              <defs>
+                <linearGradient id="gradGlobal" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" style="stop-color:#6C63FF"/>
+                  <stop offset="100%" style="stop-color:#00D4AA"/>
+                </linearGradient>
+              </defs>
+            </svg>
+            <div style="position:absolute;text-align:center;">
+              <div style="font-size:2rem;font-weight:800;color:#F0F0F5;" id="globalScore">—</div>
+              <div style="font-size:0.7rem;color:#8B8FA8;">/100</div>
+            </div>
+          </div>
+          <p style="font-size:0.82rem;color:#8B8FA8;line-height:1.5;" id="globalResume">—</p>
+        </div>
+
+        <!-- Barres par couche (mini) -->
+        <div class="card fade-in" style="animation-delay:0.2s;">
+          <h3 style="font-size:0.78rem;font-weight:600;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:12px;">Par dimension</h3>
+          <div id="miniBars" style="display:flex;flex-direction:column;gap:8px;"></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- GRILLE 8 COUCHES -->
+    <h2 style="font-size:0.8rem;font-weight:600;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:16px;" class="fade-in">Explorer les 8 dimensions</h2>
+    <div class="grid gap-4 mb-6 fade-in" style="grid-template-columns:repeat(4,1fr);animation-delay:0.25s;" id="grilleCouches"></div>
+
+    <!-- CALENDRIER MENSUEL SOMMEIL (Lot 32) -->
+    <div id="sleepCalendarCard" class="card mb-6 fade-in" style="animation-delay:0.29s;display:none;">
+      <div class="flex items-center justify-between mb-5">
+        <div>
+          <h2 style="font-size:0.95rem;font-weight:700;">🌙 Calendrier sommeil — 30 derniers jours</h2>
+          <p style="font-size:0.78rem;color:#8B8FA8;margin-top:2px;" id="sleepCalSub">Durée et régularité jour par jour</p>
+        </div>
+        <span id="sleepCalBadge" class="badge">—</span>
+      </div>
+
+      <div id="sleepCalGrid" style="display:grid;grid-template-columns:repeat(10,1fr);gap:6px;margin-bottom:14px;"></div>
+
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;flex-wrap:wrap;gap:10px;">
+        <div style="display:flex;gap:4px;align-items:center;font-size:0.72rem;color:#8B8FA8;">
+          <span>&lt;6h</span>
+          <div style="width:14px;height:14px;background:#FF6B6B;border-radius:3px;"></div>
+          <div style="width:14px;height:14px;background:#FFD166;border-radius:3px;"></div>
+          <div style="width:14px;height:14px;background:#A9A3FF;border-radius:3px;"></div>
+          <div style="width:14px;height:14px;background:#6C63FF;border-radius:3px;"></div>
+          <div style="width:14px;height:14px;background:#00D4AA;border-radius:3px;"></div>
+          <span>&gt;8.5h</span>
+        </div>
+        <div style="display:flex;gap:16px;font-size:0.72rem;color:#8B8FA8;">
+          <span>Moy : <strong id="sleepCalAvg" style="color:#F0F0F5;">—</strong></span>
+          <span>Dette 30j : <strong id="sleepCalDebt" style="color:#FF6B6B;">—</strong></span>
+          <span>Nuits 7h+ : <strong id="sleepCalGood" style="color:#00D4AA;">—</strong></span>
+        </div>
+      </div>
+
+      <p id="sleepCalNarrative" style="font-size:0.82rem;color:#8B8FA8;line-height:1.5;"></p>
+    </div>
+
+    <!-- IMMUNITÉ — tracking maladie dédié (Lot 37) -->
+    <div id="immunityCard" class="card mb-6 fade-in" style="animation-delay:0.295s;display:none;">
+      <div class="flex items-center justify-between mb-5">
+        <div>
+          <h2 style="font-size:0.95rem;font-weight:700;">Immunité — tracking maladie</h2>
+          <p style="font-size:0.78rem;color:#8B8FA8;margin-top:2px;">Épisodes immunitaires, fenêtres de vulnérabilité, signaux faibles</p>
+        </div>
+        <span id="immunityBadge" class="badge">—</span>
+      </div>
+
+      <div class="grid gap-3 mb-4" style="grid-template-columns:repeat(4,1fr);">
+        <div style="padding:12px;background:rgba(255,255,255,0.02);border-radius:10px;text-align:center;">
+          <div style="font-size:0.68rem;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;">Jours sans</div>
+          <div id="immunityDaysSince" style="font-size:1.6rem;font-weight:800;color:#F0F0F5;margin-top:4px;">—</div>
+          <div id="immunityDaysSinceSub" style="font-size:0.65rem;color:#8B8FA8;">—</div>
+        </div>
+        <div style="padding:12px;background:rgba(255,255,255,0.02);border-radius:10px;text-align:center;">
+          <div style="font-size:0.68rem;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;">Épisodes 12m</div>
+          <div id="immunityEpisodes" style="font-size:1.6rem;font-weight:800;color:#F0F0F5;margin-top:4px;">—</div>
+          <div id="immunityEpisodesSub" style="font-size:0.65rem;color:#8B8FA8;">—</div>
+        </div>
+        <div style="padding:12px;background:rgba(255,255,255,0.02);border-radius:10px;text-align:center;">
+          <div style="font-size:0.68rem;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;">Durée moy.</div>
+          <div id="immunityAvgDur" style="font-size:1.6rem;font-weight:800;color:#F0F0F5;margin-top:4px;">—</div>
+          <div id="immunityAvgDurSub" style="font-size:0.65rem;color:#8B8FA8;">jours</div>
+        </div>
+        <div style="padding:12px;background:rgba(255,255,255,0.02);border-radius:10px;text-align:center;">
+          <div style="font-size:0.68rem;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;">Vulnérabilité</div>
+          <div id="immunityVuln" style="font-size:1.6rem;font-weight:800;margin-top:4px;">—</div>
+          <div id="immunityVulnSub" style="font-size:0.65rem;color:#8B8FA8;">score actuel</div>
+        </div>
+      </div>
+
+      <div id="immunityEpisodesList" style="display:flex;flex-direction:column;gap:8px;margin-bottom:14px;"></div>
+
+      <div id="immunitySignals" style="padding:12px;background:rgba(108,99,255,0.06);border:1px solid rgba(108,99,255,0.18);border-radius:10px;margin-bottom:14px;display:none;">
+        <div style="font-size:0.72rem;color:#A9A3FF;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px;">Signaux faibles actuels</div>
+        <ul id="immunitySignalsList" style="font-size:0.8rem;color:#D0D0E0;line-height:1.55;padding-left:18px;"></ul>
+      </div>
+
+      <p id="immunityNarrative" style="font-size:0.82rem;color:#8B8FA8;line-height:1.5;"></p>
+    </div>
+
+    <!-- ZONES FC (Lot 38) -->
+    <div id="hrZonesCard" class="card mb-6 fade-in" style="animation-delay:0.297s;display:none;">
+      <div class="flex items-center justify-between mb-5">
+        <div>
+          <h2 style="font-size:0.95rem;font-weight:700;">Zones de fréquence cardiaque</h2>
+          <p style="font-size:0.78rem;color:#8B8FA8;margin-top:2px;">Répartition du temps passé dans chaque zone sur 30 j</p>
+        </div>
+        <span id="hrZonesBadge" class="badge">—</span>
+      </div>
+
+      <div class="grid gap-3 mb-4" style="grid-template-columns:repeat(3,1fr);">
+        <div style="padding:10px;background:rgba(255,255,255,0.02);border-radius:8px;text-align:center;">
+          <div style="font-size:0.66rem;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;">HRmax est.</div>
+          <div id="hrMax" style="font-size:1.3rem;font-weight:800;color:#F0F0F5;margin-top:2px;">—</div>
+        </div>
+        <div style="padding:10px;background:rgba(255,255,255,0.02);border-radius:8px;text-align:center;">
+          <div style="font-size:0.66rem;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;">FC repos</div>
+          <div id="hrRest" style="font-size:1.3rem;font-weight:800;color:#F0F0F5;margin-top:2px;">—</div>
+        </div>
+        <div style="padding:10px;background:rgba(255,255,255,0.02);border-radius:8px;text-align:center;">
+          <div style="font-size:0.66rem;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;">Volume 30j</div>
+          <div id="hrTotalTime" style="font-size:1.3rem;font-weight:800;color:#F0F0F5;margin-top:2px;">—</div>
+        </div>
+      </div>
+
+      <div id="hrZonesList" style="display:flex;flex-direction:column;gap:8px;margin-bottom:14px;"></div>
+
+      <p id="hrZonesNarrative" style="font-size:0.82rem;color:#8B8FA8;line-height:1.5;"></p>
+    </div>
+
+    <!-- GUT TRAINING — progression vers cible Ironman -->
+    <div id="gutCard" class="card mb-6 fade-in" style="animation-delay:0.3s;display:none;">
+      <div class="flex items-center justify-between mb-5">
+        <div>
+          <h2 style="font-size:0.95rem;font-weight:700;">Gut training — progression</h2>
+          <p style="font-size:0.78rem;color:#8B8FA8;margin-top:2px;">Glucides absorbés par heure sur tes séances longues · cible 80 g/h</p>
+        </div>
+        <span id="gutBadge" class="badge">—</span>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:18px;">
+        <div style="background:rgba(108,99,255,0.06);border:1px solid rgba(108,99,255,0.15);border-radius:10px;padding:10px 12px;">
+          <div style="font-size:0.7rem;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;">Dernière</div>
+          <div id="gutLatest" style="font-size:1.3rem;font-weight:800;color:#F0F0F5;margin-top:4px;">—</div>
+        </div>
+        <div style="background:rgba(108,99,255,0.06);border:1px solid rgba(108,99,255,0.15);border-radius:10px;padding:10px 12px;">
+          <div style="font-size:0.7rem;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;">Moyenne</div>
+          <div id="gutMean" style="font-size:1.3rem;font-weight:800;color:#F0F0F5;margin-top:4px;">—</div>
+        </div>
+        <div style="background:rgba(0,212,170,0.06);border:1px solid rgba(0,212,170,0.15);border-radius:10px;padding:10px 12px;">
+          <div style="font-size:0.7rem;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;">Cible Thun</div>
+          <div style="font-size:1.3rem;font-weight:800;color:#00D4AA;margin-top:4px;">80 g/h</div>
+        </div>
+      </div>
+
+      <div style="position:relative;height:200px;">
+        <svg id="gutChart" width="100%" height="200" style="overflow:visible;"></svg>
+      </div>
+      <div style="display:flex;justify-content:space-between;margin-top:8px;padding:0 8px;" id="gutLabels"></div>
+      <p id="gutSummary" style="font-size:0.82rem;color:#8B8FA8;margin-top:14px;line-height:1.5;text-align:center;"></p>
+    </div>
+
+    <!-- HEAT ACCLIMATION — progression vers course -->
+    <div id="heatCard" class="card mb-6 fade-in" style="animation-delay:0.32s;display:none;">
+      <div class="flex items-center justify-between mb-5">
+        <div>
+          <h2 style="font-size:0.95rem;font-weight:700;">🔥 Acclimatation chaleur — 14 derniers jours</h2>
+          <p style="font-size:0.78rem;color:#8B8FA8;margin-top:2px;">Protocole Périard · cible 10-14 expos avant Thun</p>
+        </div>
+        <span id="heatBadge" class="badge">—</span>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:18px;">
+        <div style="background:rgba(255,107,107,0.06);border:1px solid rgba(255,107,107,0.15);border-radius:10px;padding:10px 12px;">
+          <div style="font-size:0.7rem;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;">Expos</div>
+          <div id="heatCount" style="font-size:1.3rem;font-weight:800;color:#F0F0F5;margin-top:4px;">—</div>
+        </div>
+        <div style="background:rgba(255,107,107,0.06);border:1px solid rgba(255,107,107,0.15);border-radius:10px;padding:10px 12px;">
+          <div style="font-size:0.7rem;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;">Cible</div>
+          <div style="font-size:1.3rem;font-weight:800;color:#F0F0F5;margin-top:4px;">10-14</div>
+        </div>
+        <div style="background:rgba(0,212,170,0.06);border:1px solid rgba(0,212,170,0.15);border-radius:10px;padding:10px 12px;">
+          <div style="font-size:0.7rem;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;">J-Thun</div>
+          <div id="heatDaysRace" style="font-size:1.3rem;font-weight:800;color:#00D4AA;margin-top:4px;">—</div>
+        </div>
+      </div>
+
+      <!-- Barre de progression -->
+      <div style="margin-bottom:18px;">
+        <div style="height:10px;background:#2A2D3E;border-radius:5px;overflow:hidden;">
+          <div id="heatCardProgress" style="height:100%;width:0%;background:linear-gradient(90deg,#FF6B6B,#FFD166,#00D4AA);transition:width 0.4s ease;"></div>
+        </div>
+        <div style="display:flex;justify-content:space-between;margin-top:6px;">
+          <span style="font-size:0.72rem;color:#555870;">0</span>
+          <span style="font-size:0.72rem;color:#FFD166;">5 (min)</span>
+          <span style="font-size:0.72rem;color:#00D4AA;">10 (cible)</span>
+          <span style="font-size:0.72rem;color:#555870;">14 (max)</span>
+        </div>
+      </div>
+
+      <!-- Timeline des expos -->
+      <div style="position:relative;height:80px;">
+        <svg id="heatTimeline" width="100%" height="80" style="overflow:visible;"></svg>
+      </div>
+      <p id="heatSummary" style="font-size:0.82rem;color:#8B8FA8;margin-top:14px;line-height:1.5;text-align:center;"></p>
+    </div>
+
+    <!-- SECTION ABSENTE (état vide gut training) -->
+    <div id="gutEmpty" class="card mb-6 fade-in" style="animation-delay:0.3s;display:none;text-align:center;padding:28px 20px;">
+      <div style="font-size:2rem;margin-bottom:10px;">🥤</div>
+      <h3 style="font-size:0.95rem;font-weight:700;margin-bottom:6px;">Gut training — pas encore de données</h3>
+      <p style="font-size:0.82rem;color:#8B8FA8;line-height:1.5;max-width:480px;margin:0 auto;">
+        Après chaque séance longue (> 90 min), note dans ton <a href="journal.html" style="color:#6C63FF;">journal</a> la quantité de glucides prise.
+        L'objectif Ironman est 80 g/h — on construit la progression semaine après semaine.
+      </p>
+    </div>
+
+    <!-- DÉTAIL COUCHE (accordéon) -->
+    <div id="detailCouche" style="display:none;" class="card mb-8 fade-in">
+      <div class="flex items-start justify-between mb-4">
+        <div class="flex items-center gap-3">
+          <div id="detailIcone" style="font-size:1.8rem;"></div>
+          <div>
+            <h2 id="detailTitre" style="font-size:1.1rem;font-weight:700;"></h2>
+            <p id="detailSousTitre" style="font-size:0.8rem;color:#8B8FA8;"></p>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <div id="detailScore" style="font-size:1.5rem;font-weight:800;"></div>
+          <button onclick="fermerDetail()" style="background:none;border:none;color:#8B8FA8;font-size:1.1rem;cursor:pointer;">✕</button>
+        </div>
+      </div>
+
+      <!-- Barre score -->
+      <div class="progress-bar mb-5" style="height:8px;">
+        <div class="progress-fill" id="detailBarFill" style="width:0%;background:linear-gradient(90deg,#6C63FF,#00D4AA);"></div>
+      </div>
+
+      <!-- Points clés -->
+      <div id="detailPoints" style="display:flex;flex-direction:column;gap:10px;margin-bottom:20px;"></div>
+
+      <!-- DRILL-DOWN SIGNAUX (Lot 28) -->
+      <div id="detailSignals" style="display:none;margin-bottom:20px;">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">
+          <h3 style="font-size:0.78rem;font-weight:700;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;">Signaux actifs</h3>
+          <span id="detailSignalsCount" style="font-size:0.7rem;color:#555870;"></span>
+        </div>
+        <div id="detailSignalsList" style="display:flex;flex-direction:column;gap:10px;"></div>
+      </div>
+
+      <!-- DRILL-DOWN SPARKLINE 30J (Lot 28) -->
+      <div id="detailSparkline" style="display:none;margin-bottom:20px;padding:14px;background:rgba(255,255,255,0.02);border-radius:12px;">
+        <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:8px;">
+          <h3 style="font-size:0.78rem;font-weight:700;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;" id="detailSparklineTitle">—</h3>
+          <span id="detailSparklineStats" style="font-size:0.7rem;color:#8B8FA8;">—</span>
+        </div>
+        <svg id="detailSparklineSvg" width="100%" height="60" style="overflow:visible;"></svg>
+        <div style="display:flex;justify-content:space-between;margin-top:4px;font-size:0.65rem;color:#555870;">
+          <span>30j</span>
+          <span>aujourd'hui</span>
+        </div>
+      </div>
+
+      <!-- CTA selon statut -->
+      <div id="detailCTA"></div>
+    </div>
+
+  </main>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/scoring.js"></script>
+<script src="js/profile.js"></script>
+<script src="js/data-benoit.js" onerror="void 0"></script>
+<script src="js/observations-strava.js" onerror="void 0"></script>
+<script src="js/observations-whoop.js" onerror="void 0"></script>
+<script src="js/history.js" onerror="void 0"></script>
+<script src="js/vue360.js"></script>
+<script src="js/mobile-nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+# Clés API — jamais dans git
+scripts/.env.local
+scripts/.tokens.local
+scripts/.whoop.tokens.local
+scripts/.cert/
+
+# Logs et caches locaux
+scripts/sync.log
+scripts/sync.err.log
+scripts/.activities.cache.json
+
+# Dossier Whoop CSV historique (remplacé par API v2)
+my_whoop_data_2026_04_16/
+
+# Dépendances Node (régénérées avec npm install)
+node_modules/
+
+# Claude Code settings locaux
+.claude/
+
+# Mac
+.DS_Store

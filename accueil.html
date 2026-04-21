@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coach IA 2030</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#6C63FF" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Coach IA" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));
+    }
+  </script>
+  <style>
+    .gradient-text {
+      background: linear-gradient(135deg, #6C63FF 0%, #00D4AA 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-glow {
+      position: absolute;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(108,99,255,0.12) 0%, transparent 70%);
+      border-radius: 50%;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -60%);
+      pointer-events: none;
+    }
+    .pilier-card {
+      background: rgba(26,29,39,0.8);
+      border: 1px solid #2A2D3E;
+      border-radius: 16px;
+      padding: 1.5rem;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(8px);
+    }
+    .pilier-card:hover {
+      border-color: rgba(108,99,255,0.4);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(108,99,255,0.1);
+    }
+    .couche-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 20px;
+      border: 1px solid #2A2D3E;
+      font-size: 0.82rem;
+      color: #8B8FA8;
+      background: rgba(255,255,255,0.02);
+      transition: all 0.2s;
+    }
+    .couche-pill:hover {
+      border-color: #6C63FF;
+      color: #F0F0F5;
+      background: rgba(108,99,255,0.08);
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+    }
+    .float { animation: float 4s ease-in-out infinite; }
+    .float-2 { animation: float 5s ease-in-out infinite 1s; }
+    .float-3 { animation: float 6s ease-in-out infinite 0.5s; }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .slide-up-1 { animation: slideUp 0.6s ease forwards; }
+    .slide-up-2 { animation: slideUp 0.6s ease 0.15s forwards; opacity: 0; }
+    .slide-up-3 { animation: slideUp 0.6s ease 0.3s forwards; opacity: 0; }
+    .slide-up-4 { animation: slideUp 0.6s ease 0.45s forwards; opacity: 0; }
+    .slide-up-5 { animation: slideUp 0.6s ease 0.6s forwards; opacity: 0; }
+  </style>
+</head>
+<body style="background:#0F1117;overflow-x:hidden;">
+
+  <div class="hero-glow"></div>
+
+  <!-- ─── NAV ─── -->
+  <nav style="position:fixed;top:0;left:0;right:0;z-index:50;padding:1.25rem 2rem;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(42,45,62,0.5);backdrop-filter:blur(12px);background:rgba(15,17,23,0.8);">
+    <div style="display:flex;align-items:center;gap:10px;">
+      <div style="width:34px;height:34px;background:linear-gradient(135deg,#6C63FF,#00D4AA);border-radius:9px;display:flex;align-items:center;justify-content:center;">
+        <span style="color:white;font-weight:800;font-size:16px;">C</span>
+      </div>
+      <span style="font-weight:800;font-size:1.1rem;color:#F0F0F5;">Coach IA</span>
+      <span style="font-size:0.65rem;color:#6C63FF;background:rgba(108,99,255,0.15);padding:3px 7px;border-radius:4px;font-weight:700;">2030</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;">
+      <span style="font-size:0.75rem;color:#555870;background:rgba(255,107,107,0.1);border:1px solid rgba(255,107,107,0.2);padding:4px 10px;border-radius:6px;color:#FF6B6B;font-weight:600;">PROTOTYPE v0.1</span>
+      <a href="index.html" class="btn-primary" style="text-decoration:none;padding:8px 18px;font-size:0.88rem;">
+        Voir la démo →
+      </a>
+    </div>
+  </nav>
+
+  <!-- ─── HERO ─── -->
+  <section style="min-height:100vh;display:flex;align-items:center;justify-content:center;padding:8rem 2rem 4rem;text-align:center;position:relative;">
+    <div style="max-width:780px;margin:0 auto;">
+
+      <div class="slide-up-1" style="margin-bottom:1.5rem;">
+        <span style="display:inline-flex;align-items:center;gap:6px;font-size:0.8rem;color:#6C63FF;font-weight:600;background:rgba(108,99,255,0.1);border:1px solid rgba(108,99,255,0.2);padding:6px 14px;border-radius:20px;">
+          ✦ Coaching sportif réinventé par l'IA
+        </span>
+      </div>
+
+      <h1 class="slide-up-2" style="font-size:clamp(2.8rem,6vw,4.5rem);font-weight:900;line-height:1.05;margin-bottom:1.5rem;color:#F0F0F5;">
+        Ton coach IA qui te voit
+        <span class="gradient-text"> comme un être humain complet</span>
+      </h1>
+
+      <p class="slide-up-3" style="font-size:1.15rem;color:#8B8FA8;line-height:1.7;margin-bottom:2.5rem;max-width:580px;margin-left:auto;margin-right:auto;">
+        Pas juste tes watts ou tes kilomètres. Tes 8 dimensions — génétique, biologie, psychologie, sommeil, charge, ressentis de vie. Toutes intégrées, pour la première fois.
+      </p>
+
+      <div class="slide-up-4" style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:3.5rem;">
+        <a href="index.html" style="background:linear-gradient(135deg,#6C63FF,#8B7FFF);color:white;text-decoration:none;padding:14px 28px;border-radius:12px;font-size:1rem;font-weight:700;display:inline-flex;align-items:center;gap:8px;box-shadow:0 8px 32px rgba(108,99,255,0.35);transition:all 0.2s;"
+          onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 12px 40px rgba(108,99,255,0.5)'"
+          onmouseout="this.style.transform='';this.style.boxShadow='0 8px 32px rgba(108,99,255,0.35)'">
+          📊 Voir le dashboard
+        </a>
+        <a href="vue360.html" style="background:transparent;color:#F0F0F5;text-decoration:none;padding:14px 28px;border-radius:12px;font-size:1rem;font-weight:600;border:1px solid #2A2D3E;display:inline-flex;align-items:center;gap:8px;transition:all 0.2s;"
+          onmouseover="this.style.borderColor='#6C63FF';this.style.color='#6C63FF'"
+          onmouseout="this.style.borderColor='#2A2D3E';this.style.color='#F0F0F5'">
+          🔭 Vue 360° athlète
+        </a>
+      </div>
+
+      <!-- Floating stats cards -->
+      <div class="slide-up-5" style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+        <div class="float" style="background:rgba(26,29,39,0.9);border:1px solid #2A2D3E;border-radius:14px;padding:14px 20px;text-align:left;backdrop-filter:blur(8px);">
+          <div style="font-size:0.7rem;color:#8B8FA8;margin-bottom:4px;">HRV ce matin</div>
+          <div style="font-size:1.5rem;font-weight:800;color:#00D4AA;">62 ms</div>
+          <div style="font-size:0.7rem;color:#00D4AA;">↑ Zone haute</div>
+        </div>
+        <div class="float-2" style="background:rgba(26,29,39,0.9);border:1px solid #2A2D3E;border-radius:14px;padding:14px 20px;text-align:left;backdrop-filter:blur(8px);">
+          <div style="font-size:0.7rem;color:#8B8FA8;margin-bottom:4px;">Forme du jour</div>
+          <div style="font-size:1.5rem;font-weight:800;color:#6C63FF;">78/100</div>
+          <div style="font-size:0.7rem;color:#6C63FF;">Zone optimale</div>
+        </div>
+        <div class="float-3" style="background:rgba(26,29,39,0.9);border:1px solid rgba(255,107,107,0.3);border-radius:14px;padding:14px 20px;text-align:left;backdrop-filter:blur(8px);">
+          <div style="font-size:0.7rem;color:#8B8FA8;margin-bottom:4px;">Ratio charge</div>
+          <div style="font-size:1.5rem;font-weight:800;color:#FFD166;">1.23</div>
+          <div style="font-size:0.7rem;color:#FFD166;">Progression active</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─── 3 RUPTURES PHILOSOPHIQUES ─── -->
+  <section style="padding:5rem 2rem;max-width:1100px;margin:0 auto;">
+    <div style="text-align:center;margin-bottom:3rem;">
+      <span style="font-size:0.75rem;color:#6C63FF;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;">Ce qui nous différencie</span>
+      <h2 style="font-size:2rem;font-weight:800;color:#F0F0F5;margin-top:8px;">3 ruptures philosophiques</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;">
+      <div class="pilier-card">
+        <div style="font-size:2rem;margin-bottom:1rem;">🪞</div>
+        <h3 style="font-size:1.05rem;font-weight:700;margin-bottom:8px;color:#F0F0F5;">L'IA comme miroir</h3>
+        <p style="font-size:0.85rem;color:#8B8FA8;line-height:1.6;">L'IA révèle, elle n'impose pas. Pas de programme dicté — des insights qui t'aident à comprendre et décider par toi-même.</p>
+      </div>
+      <div class="pilier-card">
+        <div style="font-size:2rem;margin-bottom:1rem;">🎯</div>
+        <h3 style="font-size:1.05rem;font-weight:700;margin-bottom:8px;color:#F0F0F5;">L'athlète acteur</h3>
+        <p style="font-size:0.85rem;color:#8B8FA8;line-height:1.6;">Comprendre → Décider → Progresser. Tu n'es plus un exécutant passif. Tu deviens l'architecte de ta propre transformation.</p>
+      </div>
+      <div class="pilier-card">
+        <div style="font-size:2rem;margin-bottom:1rem;">🤝</div>
+        <h3 style="font-size:1.05rem;font-weight:700;margin-bottom:8px;color:#F0F0F5;">Le coach augmenté</h3>
+        <p style="font-size:0.85rem;color:#8B8FA8;line-height:1.6;">L'IA donne au coach une vision 360° impossible à avoir seul. L'humain reste au centre — l'IA amplifie, jamais ne remplace.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── 8 COUCHES ─── -->
+  <section style="padding:4rem 2rem 6rem;max-width:1100px;margin:0 auto;">
+    <div style="text-align:center;margin-bottom:3rem;">
+      <span style="font-size:0.75rem;color:#00D4AA;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;">Vision holistique</span>
+      <h2 style="font-size:2rem;font-weight:800;color:#F0F0F5;margin-top:8px;">8 dimensions intégrées</h2>
+      <p style="font-size:0.95rem;color:#8B8FA8;margin-top:8px;">Pas juste ton corps. Pas juste ta tête. Tout.</p>
+    </div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:3rem;">
+      <span class="couche-pill">🧬 Génétique</span>
+      <span class="couche-pill">⏳ Biologique</span>
+      <span class="couche-pill">❤️ Physiologique</span>
+      <span class="couche-pill">🧠 Psychologique</span>
+      <span class="couche-pill">🌙 Sommeil</span>
+      <span class="couche-pill">🥗 Nutrition</span>
+      <span class="couche-pill">⚡ Charge d'entraînement</span>
+      <span class="couche-pill">🌊 Ressentis de vie</span>
+    </div>
+
+    <!-- CTA final -->
+    <div style="text-align:center;background:linear-gradient(135deg,rgba(108,99,255,0.1),rgba(0,212,170,0.08));border:1px solid rgba(108,99,255,0.2);border-radius:20px;padding:3rem 2rem;">
+      <div style="font-size:2.5rem;margin-bottom:1rem;">🚀</div>
+      <h3 style="font-size:1.4rem;font-weight:800;color:#F0F0F5;margin-bottom:8px;">Prototype Solo Athlete</h3>
+      <p style="font-size:0.9rem;color:#8B8FA8;margin-bottom:1.5rem;max-width:400px;margin-left:auto;margin-right:auto;">
+        3 athlètes fictifs, données en temps réel, coach IA conversationnel. Explore le futur du coaching.
+      </p>
+      <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">
+        <a href="index.html" style="background:linear-gradient(135deg,#6C63FF,#8B7FFF);color:white;text-decoration:none;padding:12px 24px;border-radius:10px;font-size:0.95rem;font-weight:700;display:inline-flex;align-items:center;gap:6px;">
+          📊 Dashboard Benoît
+        </a>
+        <a href="journal.html" style="background:transparent;color:#F0F0F5;text-decoration:none;padding:12px 24px;border-radius:10px;font-size:0.95rem;font-weight:600;border:1px solid #2A2D3E;display:inline-flex;align-items:center;gap:6px;transition:border-color 0.2s;"
+          onmouseover="this.style.borderColor='#6C63FF'" onmouseout="this.style.borderColor='#2A2D3E'">
+          📝 Journal du jour
+        </a>
+        <a href="vue360.html" style="background:transparent;color:#F0F0F5;text-decoration:none;padding:12px 24px;border-radius:10px;font-size:0.95rem;font-weight:600;border:1px solid #2A2D3E;display:inline-flex;align-items:center;gap:6px;transition:border-color 0.2s;"
+          onmouseover="this.style.borderColor='#00D4AA'" onmouseout="this.style.borderColor='#2A2D3E'">
+          🔭 Vue 360°
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <footer style="border-top:1px solid #2A2D3E;padding:1.5rem 2rem;text-align:center;">
+    <p style="font-size:0.75rem;color:#555870;">
+      Coach IA 2030 — Prototype v0.1 · Construit par Benoît Leroy · <span style="color:#6C63FF;">Vision 2030</span>
+    </p>
+  </footer>
+
+</body>
+</html>

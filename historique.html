@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coach IA 2030 — Historique</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#6C63FF" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Coach IA" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));
+    }
+  </script>
+</head>
+<body>
+
+<div class="flex min-h-screen">
+
+  <!-- ─── SIDEBAR ─── -->
+  <aside style="width:240px;background:#13151F;border-right:1px solid #2A2D3E;" class="flex flex-col flex-shrink-0 p-5">
+    <div class="mb-8">
+      <a href="accueil.html" style="text-decoration:none;">
+        <div class="flex items-center gap-2 mb-1" style="cursor:pointer;">
+          <div style="width:32px;height:32px;background:linear-gradient(135deg,#6C63FF,#00D4AA);border-radius:8px;display:flex;align-items:center;justify-content:center;">
+            <span style="color:white;font-weight:800;font-size:14px;">C</span>
+          </div>
+          <span style="font-weight:700;font-size:1rem;color:#F0F0F5;">Coach IA</span>
+          <span style="font-size:0.65rem;color:#6C63FF;background:rgba(108,99,255,0.15);padding:2px 6px;border-radius:4px;font-weight:600;">2030</span>
+        </div>
+      </a>
+      <p style="font-size:0.7rem;color:#555870;margin-top:4px;">Niveau Solo Athlete</p>
+      <span style="font-size:0.62rem;color:#FF6B6B;background:rgba(255,107,107,0.1);border:1px solid rgba(255,107,107,0.2);padding:2px 6px;border-radius:4px;font-weight:600;margin-top:4px;display:inline-block;">PROTOTYPE</span>
+    </div>
+    <nav class="flex flex-col gap-1 flex-1">
+      <a href="index.html" class="nav-link"><span>📊</span> Dashboard</a>
+      <a href="journal.html" class="nav-link"><span>📝</span> Journal du jour</a>
+      <a href="vue360.html" class="nav-link"><span>🔭</span> Vue 360°</a>
+      <a href="historique.html" class="nav-link active"><span>📈</span> Historique</a>
+      <a href="archive.html" class="nav-link"><span>📚</span> Mes Semaines</a>
+      <div style="height:1px;background:#2A2D3E;margin:12px 0;"></div>
+      <a href="objectifs.html" class="nav-link"><span>🎯</span> Objectifs</a>
+      <a href="parametres.html" class="nav-link"><span>⚙️</span> Paramètres</a>
+    </nav>
+    <div style="border-top:1px solid #2A2D3E;padding-top:16px;">
+      <p style="font-size:0.7rem;color:#555870;margin-bottom:8px;text-transform:uppercase;letter-spacing:0.05em;">Athlète actif</p>
+      <div class="athlete-selector flex-col gap-1" id="athleteSelector">
+        <button class="athlete-btn active" data-athlete="benoit">Benoît L.</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ─── CONTENU ─── -->
+  <main class="flex-1 overflow-y-auto p-8">
+
+    <!-- HEADER -->
+    <div class="flex items-start justify-between mb-8 fade-in">
+      <div>
+        <p style="color:#8B8FA8;font-size:0.85rem;margin-bottom:4px;">8 dernières semaines</p>
+        <h1 style="font-size:1.75rem;font-weight:800;color:#F0F0F5;">Historique & tendances</h1>
+        <p style="color:#8B8FA8;font-size:0.9rem;margin-top:4px;" id="headerSub">Évolution de Benoît L.</p>
+      </div>
+      <!-- Filtre période + rapport -->
+      <div style="display:flex;gap:10px;align-items:center;">
+        <a href="rapport.html" style="background:rgba(108,99,255,0.12);border:1px solid rgba(108,99,255,0.35);color:#A9A3FF;padding:6px 14px;border-radius:10px;font-size:0.8rem;font-weight:600;text-decoration:none;display:flex;align-items:center;gap:6px;">📄 Rapport hebdo</a>
+        <div style="display:flex;gap:6px;background:#13151F;border:1px solid #2A2D3E;border-radius:10px;padding:4px;" id="periodeBtns">
+          <button class="periode-btn active" data-n="8">8 sem.</button>
+          <button class="periode-btn" data-n="12">12 sem.</button>
+          <button class="periode-btn" data-n="16">16 sem.</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- KPI ROW -->
+    <div class="grid gap-4 mb-7 fade-in" style="grid-template-columns:repeat(4,1fr);animation-delay:0.05s" id="kpiRow"></div>
+
+    <!-- GRAPHIQUE CHARGE (aiguë vs chronique) -->
+    <div class="card mb-6 fade-in" style="animation-delay:0.1s">
+      <div class="flex items-center justify-between mb-5">
+        <div>
+          <h2 style="font-size:0.95rem;font-weight:700;">Charge d'entraînement</h2>
+          <p style="font-size:0.78rem;color:#8B8FA8;margin-top:2px;">Charge aiguë (7j) vs charge chronique (28j)</p>
+        </div>
+        <div style="display:flex;gap:16px;">
+          <div style="display:flex;align-items:center;gap:6px;font-size:0.75rem;color:#8B8FA8;">
+            <div style="width:12px;height:3px;background:#FF6B6B;border-radius:2px;"></div> Aiguë
+          </div>
+          <div style="display:flex;align-items:center;gap:6px;font-size:0.75rem;color:#8B8FA8;">
+            <div style="width:12px;height:3px;background:#6C63FF;border-radius:2px;"></div> Chronique
+          </div>
+          <div style="display:flex;align-items:center;gap:6px;font-size:0.75rem;color:#8B8FA8;">
+            <div style="width:12px;height:3px;background:rgba(0,212,170,0.5);border-radius:2px;border-top:1px dashed #00D4AA;"></div> Zone optimale
+          </div>
+        </div>
+      </div>
+      <div style="position:relative;height:200px;">
+        <svg id="chargeChart" width="100%" height="200" style="overflow:visible;"></svg>
+      </div>
+      <div style="display:flex;justify-content:space-between;margin-top:8px;padding:0 8px;" id="chargeLabels"></div>
+    </div>
+
+    <!-- GRILLE : HRV + RÉPARTITION DISCIPLINES -->
+    <div class="grid gap-6 mb-6" style="grid-template-columns:1fr 1fr;">
+
+      <!-- HRV TREND -->
+      <div class="card fade-in" style="animation-delay:0.15s">
+        <div class="flex items-center justify-between mb-4">
+          <div>
+            <h2 style="font-size:0.95rem;font-weight:700;">HRV — Tendance</h2>
+            <p style="font-size:0.78rem;color:#8B8FA8;margin-top:2px;">Moyenne hebdomadaire (ms)</p>
+          </div>
+          <span class="badge badge-ok" id="hrvTrend">↑ +4ms</span>
+        </div>
+        <div style="position:relative;height:140px;">
+          <svg id="hrvChart" width="100%" height="140" style="overflow:visible;"></svg>
+        </div>
+        <div style="display:flex;justify-content:space-between;margin-top:6px;padding:0 4px;" id="hrvLabels"></div>
+      </div>
+
+      <!-- RÉPARTITION DISCIPLINES -->
+      <div class="card fade-in" style="animation-delay:0.2s">
+        <h2 style="font-size:0.95rem;font-weight:700;margin-bottom:4px;">Répartition des séances</h2>
+        <p style="font-size:0.78rem;color:#8B8FA8;margin-bottom:1.25rem;">8 dernières semaines</p>
+        <div style="position:relative;height:140px;display:flex;align-items:center;justify-content:center;">
+          <svg id="donutChart" width="140" height="140"></svg>
+          <div style="position:absolute;text-align:center;">
+            <div style="font-size:1.4rem;font-weight:800;color:#F0F0F5;" id="donutTotal">—</div>
+            <div style="font-size:0.7rem;color:#8B8FA8;">séances</div>
+          </div>
+        </div>
+        <div id="donutLegende" style="display:flex;flex-direction:column;gap:6px;margin-top:12px;"></div>
+      </div>
+
+    </div>
+
+    <!-- BASE AÉROBIE — Decoupling Friel -->
+    <div id="decouplingCard" class="card mb-6 fade-in" style="animation-delay:0.22s;display:none;">
+      <div class="flex items-center justify-between mb-5">
+        <div>
+          <h2 style="font-size:0.95rem;font-weight:700;">Base aérobie — dérive Friel</h2>
+          <p style="font-size:0.78rem;color:#8B8FA8;margin-top:2px;">Dérive du couple allure/FC par course · 8 dernières semaines</p>
+        </div>
+        <span id="decouplingBadge" class="badge">—</span>
+      </div>
+      <div style="position:relative;height:180px;">
+        <svg id="decouplingChart" width="100%" height="180" style="overflow:visible;"></svg>
+      </div>
+      <div style="display:flex;justify-content:space-between;margin-top:8px;padding:0 8px;" id="decouplingLabels"></div>
+      <p id="decouplingSummary" style="font-size:0.82rem;color:#8B8FA8;margin-top:14px;line-height:1.5;text-align:center;"></p>
+    </div>
+
+    <!-- HEATMAP CALENDRIER ANNUEL (Lot 20) -->
+    <div id="heatmapCard" class="card mb-6 fade-in" style="animation-delay:0.19s;display:none;">
+      <div class="flex items-center justify-between mb-4">
+        <div>
+          <h2 style="font-size:0.95rem;font-weight:700;">Calendrier annuel</h2>
+          <p style="font-size:0.78rem;color:#8B8FA8;margin-top:2px;">52 dernières semaines · intensité quotidienne</p>
+        </div>
+        <div style="display:flex;gap:8px;align-items:center;font-size:0.7rem;color:#8B8FA8;">
+          <span>Moins</span>
+          <div style="display:flex;gap:3px;">
+            <div style="width:12px;height:12px;border-radius:3px;background:#22263A;"></div>
+            <div style="width:12px;height:12px;border-radius:3px;background:rgba(0,212,170,0.35);"></div>
+            <div style="width:12px;height:12px;border-radius:3px;background:rgba(108,99,255,0.55);"></div>
+            <div style="width:12px;height:12px;border-radius:3px;background:rgba(255,209,102,0.75);"></div>
+            <div style="width:12px;height:12px;border-radius:3px;background:rgba(255,107,107,0.9);"></div>
+          </div>
+          <span>Plus</span>
+        </div>
+      </div>
+      <div id="heatmapMonths" style="display:flex;gap:0;margin-left:36px;margin-bottom:6px;font-size:0.68rem;color:#8B8FA8;"></div>
+      <div style="display:flex;gap:6px;">
+        <div style="display:flex;flex-direction:column;gap:3px;font-size:0.65rem;color:#555870;padding-top:1px;">
+          <span style="height:12px;line-height:12px;">Lun</span>
+          <span style="height:12px;line-height:12px;"></span>
+          <span style="height:12px;line-height:12px;">Mer</span>
+          <span style="height:12px;line-height:12px;"></span>
+          <span style="height:12px;line-height:12px;">Ven</span>
+          <span style="height:12px;line-height:12px;"></span>
+          <span style="height:12px;line-height:12px;">Dim</span>
+        </div>
+        <div id="heatmapGrid" style="display:flex;gap:3px;overflow-x:auto;padding-bottom:4px;"></div>
+      </div>
+      <div id="heatmapSummary" style="margin-top:14px;display:grid;grid-template-columns:repeat(4,1fr);gap:12px;"></div>
+      <p id="heatmapNarrative" style="font-size:0.8rem;color:#8B8FA8;margin-top:12px;line-height:1.5;text-align:center;"></p>
+    </div>
+
+    <!-- COMPARAISON PÉRIODES (Lot 23) -->
+    <div id="comparePeriodsCard" class="card mb-6 fade-in" style="animation-delay:0.195s;display:none;">
+      <div class="flex items-center justify-between mb-4">
+        <div>
+          <h2 style="font-size:0.95rem;font-weight:700;">Comparaison périodes</h2>
+          <p style="font-size:0.78rem;color:#8B8FA8;margin-top:2px;">Les N dernières semaines vs les N précédentes</p>
+        </div>
+        <div style="display:flex;gap:4px;background:#13151F;border:1px solid #2A2D3E;border-radius:10px;padding:4px;" id="comparePeriodBtns">
+          <button class="cmp-btn active" data-n="4">4 sem</button>
+          <button class="cmp-btn" data-n="8">8 sem</button>
+          <button class="cmp-btn" data-n="12">12 sem</button>
+        </div>
+      </div>
+      <div id="compareHeader" style="display:grid;grid-template-columns:1fr 40px 1fr;gap:14px;align-items:center;margin-bottom:14px;padding:10px 14px;background:rgba(255,255,255,0.02);border-radius:10px;">
+        <div style="text-align:center;">
+          <div style="font-size:0.68rem;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;">Période précédente</div>
+          <div id="comparePrevLabel" style="font-size:0.88rem;font-weight:700;color:#A9A3FF;margin-top:2px;">—</div>
+        </div>
+        <div style="font-size:1rem;color:#555870;text-align:center;">vs</div>
+        <div style="text-align:center;">
+          <div style="font-size:0.68rem;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;">Période actuelle</div>
+          <div id="compareCurrLabel" style="font-size:0.88rem;font-weight:700;color:#00D4AA;margin-top:2px;">—</div>
+        </div>
+      </div>
+      <div id="compareRows" style="display:flex;flex-direction:column;gap:8px;"></div>
+      <p id="compareNarrative" style="font-size:0.82rem;color:#8B8FA8;margin-top:16px;line-height:1.6;padding:12px;background:rgba(108,99,255,0.05);border-left:3px solid #6C63FF;border-radius:6px;"></p>
+    </div>
+
+    <style>
+      .cmp-btn { padding: 6px 12px; border-radius: 7px; border: none; background: transparent; color: #8B8FA8; font-size: 0.78rem; font-weight: 600; cursor: pointer; transition: all 0.2s; }
+      .cmp-btn.active { background: #2A2D3E; color: #F0F0F5; }
+      .cmp-btn:hover:not(.active) { color: #F0F0F5; }
+      .cmp-row { display:grid; grid-template-columns:1fr 40px 1fr; gap:14px; align-items:center; padding:10px 14px; border:1px solid rgba(255,255,255,0.05); border-radius:10px; }
+      .cmp-side { text-align:center; }
+      .cmp-label { font-size:0.68rem; color:#8B8FA8; text-transform:uppercase; letter-spacing:0.05em; }
+      .cmp-val { font-size:1.2rem; font-weight:800; color:#F0F0F5; margin-top:3px; }
+      .cmp-arrow { text-align:center; font-size:0.72rem; font-weight:700; }
+    </style>
+
+    <!-- TSB — FORME vs FATIGUE (Lot 18) -->
+    <div id="tsbCard" class="card mb-6 fade-in" style="animation-delay:0.21s;display:none;">
+      <div class="flex items-center justify-between mb-4">
+        <div>
+          <h2 style="font-size:0.95rem;font-weight:700;">Forme &amp; fatigue (TSB)</h2>
+          <p style="font-size:0.78rem;color:#8B8FA8;margin-top:2px;">Fitness (CTL 42j) · Fatigue (ATL 7j) · Forme (TSB = CTL − ATL)</p>
+        </div>
+        <span id="tsbStateBadge" class="badge">—</span>
+      </div>
+      <div style="display:flex;gap:16px;margin-bottom:12px;font-size:0.75rem;color:#8B8FA8;flex-wrap:wrap;">
+        <div style="display:flex;align-items:center;gap:6px;">
+          <div style="width:12px;height:3px;background:#00D4AA;border-radius:2px;"></div> Fitness (CTL)
+        </div>
+        <div style="display:flex;align-items:center;gap:6px;">
+          <div style="width:12px;height:3px;background:#FF6B6B;border-radius:2px;"></div> Fatigue (ATL)
+        </div>
+        <div style="display:flex;align-items:center;gap:6px;">
+          <div style="width:12px;height:3px;background:#6C63FF;border-radius:2px;"></div> Forme (TSB)
+        </div>
+      </div>
+      <div style="position:relative;height:220px;">
+        <svg id="tsbChart" width="100%" height="220" style="overflow:visible;"></svg>
+      </div>
+      <div style="display:flex;justify-content:space-between;margin-top:8px;padding:0 8px;font-size:0.7rem;color:#555870;" id="tsbLabels"></div>
+      <div class="grid gap-3 mt-4" style="grid-template-columns:repeat(3,1fr);">
+        <div style="text-align:center;padding:10px;background:rgba(0,212,170,0.06);border:1px solid rgba(0,212,170,0.18);border-radius:10px;">
+          <div style="font-size:0.68rem;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;">Fitness</div>
+          <div id="ctlCurrent" style="font-size:1.3rem;font-weight:800;color:#00D4AA;margin-top:2px;">—</div>
+        </div>
+        <div style="text-align:center;padding:10px;background:rgba(255,107,107,0.06);border:1px solid rgba(255,107,107,0.18);border-radius:10px;">
+          <div style="font-size:0.68rem;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;">Fatigue</div>
+          <div id="atlCurrent" style="font-size:1.3rem;font-weight:800;color:#FF6B6B;margin-top:2px;">—</div>
+        </div>
+        <div style="text-align:center;padding:10px;background:rgba(108,99,255,0.06);border:1px solid rgba(108,99,255,0.18);border-radius:10px;">
+          <div style="font-size:0.68rem;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;">Forme (TSB)</div>
+          <div id="tsbCurrent" style="font-size:1.3rem;font-weight:800;color:#6C63FF;margin-top:2px;">—</div>
+        </div>
+      </div>
+      <p id="tsbNarrative" style="font-size:0.82rem;color:#8B8FA8;margin-top:14px;line-height:1.5;text-align:center;"></p>
+    </div>
+
+    <!-- RECORDS & ACHIEVEMENTS -->
+    <div id="recordsCard" class="card mb-6 fade-in" style="animation-delay:0.23s;display:none;">
+      <div class="flex items-center justify-between mb-4">
+        <div>
+          <h2 style="font-size:0.95rem;font-weight:700;">Records &amp; badges</h2>
+          <p style="font-size:0.78rem;color:#8B8FA8;margin-top:2px;">Tes meilleures sessions, semaines et séries depuis le début de l'historique</p>
+        </div>
+      </div>
+      <div class="grid gap-3" style="grid-template-columns:repeat(auto-fill,minmax(180px,1fr));" id="recordsGrid"></div>
+      <p id="recordsNarrative" style="font-size:0.82rem;color:#8B8FA8;margin-top:14px;line-height:1.5;"></p>
+    </div>
+
+    <!-- PROGRESSION FTP 12 MOIS (Lot 49) -->
+    <div id="ftpCard" class="card mb-6 fade-in" style="animation-delay:0.235s;display:none;">
+      <div class="flex items-center justify-between mb-4">
+        <div>
+          <h2 style="font-size:0.95rem;font-weight:700;">Progression FTP vélo — 12 mois</h2>
+          <p style="font-size:0.78rem;color:#8B8FA8;margin-top:2px;" id="ftpSub">—</p>
+        </div>
+        <div style="text-align:right;">
+          <div id="ftpCurrent" style="font-size:1.6rem;font-weight:800;color:#F0F0F5;line-height:1;">—</div>
+          <div id="ftpDelta" style="font-size:0.72rem;margin-top:2px;">—</div>
+        </div>
+      </div>
+      <div id="ftpChartWrap" style="position:relative;height:200px;margin:20px 0 12px;">
+        <svg id="ftpChart" viewBox="0 0 700 200" preserveAspectRatio="none" style="width:100%;height:100%;"></svg>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-top:14px;" id="ftpStats"></div>
+      <p id="ftpNarrative" style="font-size:0.82rem;color:#8B8FA8;margin-top:14px;line-height:1.55;"></p>
+    </div>
+
+    <!-- LISTE DERNIÈRES SÉANCES -->
+    <div class="card fade-in" style="animation-delay:0.25s">
+      <div class="flex items-center justify-between mb-5">
+        <h2 style="font-size:0.95rem;font-weight:700;">Dernières séances</h2>
+        <span class="badge badge-calibration">4 semaines</span>
+      </div>
+      <div id="listeSeances" style="display:flex;flex-direction:column;gap:0;"></div>
+    </div>
+
+  </main>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/scoring.js"></script>
+<script src="js/profile.js"></script>
+<script src="js/data-benoit.js" onerror="void 0"></script>
+<script src="js/observations-strava.js" onerror="void 0"></script>
+<script src="js/observations-whoop.js" onerror="void 0"></script>
+<script src="js/history.js" onerror="void 0"></script>
+<script src="js/historique.js"></script>
+
+<style>
+.periode-btn {
+  padding: 6px 12px;
+  border-radius: 7px;
+  border: none;
+  background: transparent;
+  color: #8B8FA8;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.periode-btn.active { background: #2A2D3E; color: #F0F0F5; }
+.periode-btn:hover:not(.active) { color: #F0F0F5; }
+
+.seance-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1px solid #2A2D3E;
+  transition: background 0.15s;
+  border-radius: 8px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.seance-row:last-child { border-bottom: none; }
+.seance-row:hover { background: rgba(255,255,255,0.02); }
+</style>
+<script src="js/mobile-nav.js"></script>
+</body>
+</html>

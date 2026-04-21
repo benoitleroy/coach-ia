@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coach IA 2030 — Objectifs</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#6C63FF" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Coach IA" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));
+    }
+  </script>
+</head>
+<body>
+
+<div class="flex min-h-screen">
+
+  <!-- ─── SIDEBAR ─── -->
+  <aside style="width:240px;background:#13151F;border-right:1px solid #2A2D3E;" class="flex flex-col flex-shrink-0 p-5">
+    <div class="mb-8">
+      <a href="accueil.html" style="text-decoration:none;">
+        <div class="flex items-center gap-2 mb-1" style="cursor:pointer;">
+          <div style="width:32px;height:32px;background:linear-gradient(135deg,#6C63FF,#00D4AA);border-radius:8px;display:flex;align-items:center;justify-content:center;">
+            <span style="color:white;font-weight:800;font-size:14px;">C</span>
+          </div>
+          <span style="font-weight:700;font-size:1rem;color:#F0F0F5;">Coach IA</span>
+          <span style="font-size:0.65rem;color:#6C63FF;background:rgba(108,99,255,0.15);padding:2px 6px;border-radius:4px;font-weight:600;">2030</span>
+        </div>
+      </a>
+      <p style="font-size:0.7rem;color:#555870;margin-top:4px;">Niveau Solo Athlete</p>
+      <span style="font-size:0.62rem;color:#FF6B6B;background:rgba(255,107,107,0.1);border:1px solid rgba(255,107,107,0.2);padding:2px 6px;border-radius:4px;font-weight:600;margin-top:4px;display:inline-block;">PROTOTYPE</span>
+    </div>
+    <nav class="flex flex-col gap-1 flex-1">
+      <a href="index.html"      class="nav-link"><span>📊</span> Dashboard</a>
+      <a href="journal.html"    class="nav-link"><span>📝</span> Journal du jour</a>
+      <a href="vue360.html"     class="nav-link"><span>🔭</span> Vue 360°</a>
+      <a href="historique.html" class="nav-link"><span>📈</span> Historique</a>
+      <a href="archive.html"    class="nav-link"><span>📚</span> Mes Semaines</a>
+      <a href="objectifs.html"  class="nav-link active"><span>🎯</span> Objectifs</a>
+      <a href="parametres.html" class="nav-link"><span>⚙️</span> Paramètres</a>
+    </nav>
+    <div style="border-top:1px solid #2A2D3E;padding-top:16px;">
+      <p style="font-size:0.7rem;color:#555870;margin-bottom:8px;text-transform:uppercase;letter-spacing:0.05em;">Athlète actif</p>
+      <div class="athlete-selector flex-col gap-1" id="athleteSelector">
+        <button class="athlete-btn active" data-athlete="benoit">Benoît L.</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ─── CONTENU ─── -->
+  <main class="flex-1 overflow-y-auto p-8">
+
+    <!-- HEADER -->
+    <div class="flex items-start justify-between mb-8 fade-in">
+      <div>
+        <p style="color:#8B8FA8;font-size:0.85rem;margin-bottom:4px;" id="headerSub">Benoît L. · Ironman Switzerland Thun</p>
+        <h1 style="font-size:1.75rem;font-weight:800;color:#F0F0F5;">Objectifs & Jalons</h1>
+        <p style="color:#8B8FA8;font-size:0.9rem;margin-top:4px;">Ta route vers la ligne d'arrivée</p>
+      </div>
+    </div>
+
+    <!-- COUNTDOWN RACE ─────────────────────── -->
+    <div id="raceCard" class="mb-7 fade-in" style="animation-delay:0.05s;position:relative;overflow:hidden;border-radius:20px;padding:2rem;background:linear-gradient(135deg,rgba(108,99,255,0.15),rgba(0,212,170,0.08));border:1px solid rgba(108,99,255,0.3);">
+      <!-- Glow déco -->
+      <div style="position:absolute;top:-60px;right:-60px;width:240px;height:240px;background:radial-gradient(circle,rgba(108,99,255,0.15),transparent 70%);border-radius:50%;pointer-events:none;"></div>
+
+      <div class="flex items-start justify-between" style="position:relative;">
+        <div>
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+            <span style="font-size:1.6rem;" id="raceIcone">🏊🚴🏃</span>
+            <span class="badge badge-violet" id="raceBadge">Objectif A</span>
+          </div>
+          <h2 style="font-size:1.6rem;font-weight:800;color:#F0F0F5;margin-bottom:4px;" id="raceNom">Ironman Switzerland Thun</h2>
+          <p style="font-size:0.9rem;color:#8B8FA8;" id="raceDate">5 juillet 2026 · Thun, Suisse</p>
+        </div>
+
+        <!-- Countdown chiffres -->
+        <div style="display:flex;gap:12px;" id="countdown">
+          <!-- injecté JS -->
+        </div>
+      </div>
+
+      <!-- Barre progression vers la course -->
+      <div style="margin-top:1.5rem;">
+        <div style="display:flex;justify-content:space-between;margin-bottom:6px;">
+          <span style="font-size:0.8rem;color:#8B8FA8;">Progression vers la course</span>
+          <span style="font-size:0.8rem;font-weight:700;color:#6C63FF;" id="progressPct">—</span>
+        </div>
+        <div class="progress-bar" style="height:8px;border-radius:4px;">
+          <div class="progress-fill ring-animated" id="raceProgressBar" style="width:0%;background:linear-gradient(90deg,#6C63FF,#00D4AA);border-radius:4px;"></div>
+        </div>
+        <div style="display:flex;justify-content:space-between;margin-top:4px;">
+          <span style="font-size:0.7rem;color:#555870;" id="startLabel">Début plan</span>
+          <span style="font-size:0.7rem;color:#555870;" id="endLabel">Jour J</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCORE DE PRÉPARATION + BENCHMARKS ─── -->
+    <div class="grid gap-6 mb-7" style="grid-template-columns:1fr 1.8fr;">
+
+      <!-- Score préparation -->
+      <div class="card fade-in" style="animation-delay:0.1s;text-align:center;">
+        <p style="font-size:0.78rem;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:12px;">Score de préparation</p>
+        <div style="position:relative;display:inline-flex;align-items:center;justify-content:center;margin-bottom:1rem;">
+          <svg width="130" height="130" style="transform:rotate(-90deg)">
+            <circle cx="65" cy="65" r="54" fill="none" stroke="#2A2D3E" stroke-width="9"/>
+            <circle cx="65" cy="65" r="54" fill="none" stroke="url(#prepGrad)" stroke-width="9"
+              stroke-linecap="round" id="prepRing" class="ring-animated"
+              stroke-dasharray="339" stroke-dashoffset="339"/>
+            <defs>
+              <linearGradient id="prepGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:#6C63FF"/>
+                <stop offset="100%" style="stop-color:#00D4AA"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div style="position:absolute;text-align:center;">
+            <div style="font-size:2.2rem;font-weight:900;color:#F0F0F5;" id="prepScore">—</div>
+            <div style="font-size:0.7rem;color:#8B8FA8;">/100</div>
+          </div>
+        </div>
+        <div id="prepLabel" style="font-size:0.88rem;font-weight:600;margin-bottom:8px;color:#F0F0F5;"></div>
+        <p id="prepMessage" style="font-size:0.8rem;color:#8B8FA8;line-height:1.5;"></p>
+      </div>
+
+      <!-- Benchmarks performance -->
+      <div class="card fade-in" style="animation-delay:0.15s;">
+        <h2 style="font-size:0.82rem;font-weight:600;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:1.25rem;">Benchmarks de performance</h2>
+        <div id="benchmarks" style="display:flex;flex-direction:column;gap:14px;"></div>
+      </div>
+
+    </div>
+
+    <!-- TIMELINE MACRO 11 SEMAINES ─────────── -->
+    <div id="macroCard" class="card mb-7 fade-in" style="animation-delay:0.18s;display:none;">
+      <div class="flex items-center justify-between mb-4">
+        <div>
+          <h2 style="font-size:0.95rem;font-weight:700;">Timeline macro</h2>
+          <p style="font-size:0.78rem;color:#8B8FA8;margin-top:2px;">5 passées → 6 à venir, par phase</p>
+        </div>
+        <div id="macroLegend" style="display:flex;gap:10px;font-size:0.7rem;color:#8B8FA8;flex-wrap:wrap;"></div>
+      </div>
+      <div id="macroTimeline" style="position:relative;padding:8px 0;"></div>
+      <p id="macroNarrative" style="font-size:0.82rem;color:#8B8FA8;margin-top:14px;line-height:1.5;"></p>
+    </div>
+
+    <!-- CHECKLIST J-1 (Lot 45) -->
+    <div id="checklistCard" class="card mb-7 fade-in" style="animation-delay:0.186s;display:none;">
+      <div class="flex items-center justify-between mb-4">
+        <div>
+          <h2 style="font-size:0.95rem;font-weight:700;">Checklist veille de course</h2>
+          <p style="font-size:0.78rem;color:#8B8FA8;margin-top:2px;" id="checklistSub">—</p>
+        </div>
+        <span id="checklistBadge" class="badge">—</span>
+      </div>
+      <div style="margin-bottom:14px;">
+        <div class="progress-bar" style="height:6px;border-radius:3px;">
+          <div class="progress-fill" id="checklistBar" style="width:0%;background:linear-gradient(90deg,#6C63FF,#00D4AA);border-radius:3px;transition:width 0.4s;"></div>
+        </div>
+        <div style="display:flex;justify-content:space-between;margin-top:6px;">
+          <span style="font-size:0.68rem;color:#8B8FA8;" id="checklistProgress">0 / 0</span>
+          <button type="button" id="checklistReset" style="background:transparent;border:none;color:#8B8FA8;font-size:0.68rem;cursor:pointer;text-decoration:underline;">Réinitialiser</button>
+        </div>
+      </div>
+      <div id="checklistGroups" style="display:flex;flex-direction:column;gap:14px;"></div>
+    </div>
+
+    <!-- PLANIF POST-THUN (Lot 48) -->
+    <div id="postRaceCard" class="card mb-7 fade-in" style="animation-delay:0.187s;display:none;">
+      <div class="flex items-center justify-between mb-4">
+        <div>
+          <h2 style="font-size:0.95rem;font-weight:700;">Après Thun — roadmap de récup & projection</h2>
+          <p style="font-size:0.78rem;color:#8B8FA8;margin-top:2px;" id="postRaceSub">—</p>
+        </div>
+        <span id="postRaceBadge" class="badge">—</span>
+      </div>
+      <div id="postRaceTimeline" style="display:flex;flex-direction:column;gap:10px;"></div>
+      <div id="postRaceNextGoals" style="margin-top:18px;padding:14px;background:rgba(108,99,255,0.05);border:1px solid rgba(108,99,255,0.15);border-radius:10px;">
+        <h3 style="font-size:0.82rem;font-weight:700;color:#F0F0F5;margin-bottom:10px;">Prochaine saison — options à explorer</h3>
+        <div id="postRaceNextList" style="display:flex;flex-direction:column;gap:8px;"></div>
+      </div>
+      <p id="postRaceNarrative" style="font-size:0.78rem;color:#8B8FA8;margin-top:14px;line-height:1.55;font-style:italic;"></p>
+    </div>
+
+    <!-- INFOS PARCOURS THUN (Lot 44) -->
+    <div id="courseInfoCard" class="card mb-7 fade-in" style="animation-delay:0.184s;display:none;">
+      <div class="flex items-center justify-between mb-4">
+        <div>
+          <h2 style="font-size:0.95rem;font-weight:700;">Connaître le parcours — Thun</h2>
+          <p style="font-size:0.78rem;color:#8B8FA8;margin-top:2px;">Natation, vélo, course à pied · conditions typiques</p>
+        </div>
+        <span class="badge badge-violet">5 juillet 2026</span>
+      </div>
+
+      <div class="grid gap-3 mb-4" style="grid-template-columns:1fr 1fr 1fr;">
+        <!-- NATATION -->
+        <div style="padding:14px;background:rgba(108,99,255,0.06);border:1px solid rgba(108,99,255,0.18);border-radius:12px;">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+            <span style="font-size:1.3rem;">🏊</span>
+            <span style="font-size:0.82rem;font-weight:700;color:#F0F0F5;">Natation · 3,8 km</span>
+          </div>
+          <ul style="font-size:0.78rem;color:#D0D0E0;line-height:1.6;padding-left:16px;">
+            <li>Lac de Thun — eau claire, 17-20°C en juillet</li>
+            <li>2 boucles, départ en masse rolling</li>
+            <li>Visibilité bonne, peu de courant</li>
+            <li>Combinaison autorisée &lt; 22°C</li>
+          </ul>
+        </div>
+
+        <!-- VÉLO -->
+        <div style="padding:14px;background:rgba(0,212,170,0.06);border:1px solid rgba(0,212,170,0.18);border-radius:12px;">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+            <span style="font-size:1.3rem;">🚴</span>
+            <span style="font-size:0.82rem;font-weight:700;color:#F0F0F5;">Vélo · 180 km</span>
+          </div>
+          <ul style="font-size:0.78rem;color:#D0D0E0;line-height:1.6;padding-left:16px;">
+            <li>D+ ~2 400 m sur 2 boucles</li>
+            <li>2 bosses majeures : Aeschi + Sigriswil</li>
+            <li>Descentes techniques, virages serrés</li>
+            <li>Vent latéral possible en plaine</li>
+          </ul>
+        </div>
+
+        <!-- COURSE -->
+        <div style="padding:14px;background:rgba(255,107,107,0.06);border:1px solid rgba(255,107,107,0.18);border-radius:12px;">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+            <span style="font-size:1.3rem;">🏃</span>
+            <span style="font-size:0.82rem;font-weight:700;color:#F0F0F5;">Course · 42,2 km</span>
+          </div>
+          <ul style="font-size:0.78rem;color:#D0D0E0;line-height:1.6;padding-left:16px;">
+            <li>4 boucles le long de l'Aare</li>
+            <li>Plat à 90%, 1 faux-plat de 800m</li>
+            <li>Ombre limitée — crème solaire</li>
+            <li>Ravitos tous les 2 km</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="grid gap-3 mb-4" style="grid-template-columns:repeat(4,1fr);">
+        <div style="padding:10px;background:rgba(255,255,255,0.02);border-radius:8px;text-align:center;">
+          <div style="font-size:0.66rem;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;">Température</div>
+          <div style="font-size:1.1rem;font-weight:700;color:#F0F0F5;margin-top:2px;">22-28°C</div>
+          <div style="font-size:0.65rem;color:#8B8FA8;">normale juillet</div>
+        </div>
+        <div style="padding:10px;background:rgba(255,255,255,0.02);border-radius:8px;text-align:center;">
+          <div style="font-size:0.66rem;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;">Humidité</div>
+          <div style="font-size:1.1rem;font-weight:700;color:#F0F0F5;margin-top:2px;">55-70%</div>
+          <div style="font-size:0.65rem;color:#8B8FA8;">modérée</div>
+        </div>
+        <div style="padding:10px;background:rgba(255,255,255,0.02);border-radius:8px;text-align:center;">
+          <div style="font-size:0.66rem;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;">Altitude</div>
+          <div style="font-size:1.1rem;font-weight:700;color:#F0F0F5;margin-top:2px;">560-900m</div>
+          <div style="font-size:0.65rem;color:#8B8FA8;">peu d'effet</div>
+        </div>
+        <div style="padding:10px;background:rgba(255,255,255,0.02);border-radius:8px;text-align:center;">
+          <div style="font-size:0.66rem;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;">Départ</div>
+          <div style="font-size:1.1rem;font-weight:700;color:#F0F0F5;margin-top:2px;">06:30</div>
+          <div style="font-size:0.65rem;color:#8B8FA8;">natation</div>
+        </div>
+      </div>
+
+      <div style="padding:12px;background:rgba(255,209,102,0.06);border-left:3px solid #FFD166;border-radius:8px;">
+        <div style="font-size:0.72rem;color:#FFD166;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px;">Points d'attention</div>
+        <ul style="font-size:0.8rem;color:#D0D0E0;line-height:1.55;padding-left:18px;">
+          <li><strong>Eau froide natation</strong> : entrer progressivement, visage immergé 30s avant départ pour calmer le reflexe vagal</li>
+          <li><strong>Descentes vélo</strong> : freiner tôt dans les virages serrés, pas dans le virage</li>
+          <li><strong>Chaleur possible</strong> : sel 800-1000 mg/h si &gt; 25°C, viser 800ml liquides/h</li>
+          <li><strong>4 boucles course</strong> : danger mental, prévoir un découpage en 4 × 10km avec un objectif par boucle</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- PLAN NUTRITION PRE-RACE (Lot 39) -->
+    <div id="raceNutritionCard" class="card mb-7 fade-in" style="animation-delay:0.183s;display:none;">
+      <div class="flex items-center justify-between mb-4">
+        <div>
+          <h2 style="font-size:0.95rem;font-weight:700;">Plan nutrition course</h2>
+          <p style="font-size:0.78rem;color:#8B8FA8;margin-top:2px;" id="raceNutritionSub">—</p>
+        </div>
+        <span id="raceNutritionBadge" class="badge">—</span>
+      </div>
+
+      <div class="grid gap-3 mb-4" style="grid-template-columns:repeat(4,1fr);">
+        <div style="padding:12px;background:rgba(255,209,102,0.06);border:1px solid rgba(255,209,102,0.18);border-radius:10px;">
+          <div style="font-size:0.68rem;color:#FFD166;text-transform:uppercase;letter-spacing:0.05em;font-weight:700;">J-3 → J-1</div>
+          <div style="font-size:0.82rem;color:#F0F0F5;font-weight:700;margin-top:4px;">Carb-loading</div>
+          <div id="raceNutritionCarbload" style="font-size:0.72rem;color:#8B8FA8;margin-top:2px;line-height:1.4;">—</div>
+        </div>
+        <div style="padding:12px;background:rgba(108,99,255,0.06);border:1px solid rgba(108,99,255,0.18);border-radius:10px;">
+          <div style="font-size:0.68rem;color:#A9A3FF;text-transform:uppercase;letter-spacing:0.05em;font-weight:700;">Jour J -3h</div>
+          <div style="font-size:0.82rem;color:#F0F0F5;font-weight:700;margin-top:4px;">Petit-déj</div>
+          <div id="raceNutritionBreakfast" style="font-size:0.72rem;color:#8B8FA8;margin-top:2px;line-height:1.4;">—</div>
+        </div>
+        <div style="padding:12px;background:rgba(0,212,170,0.06);border:1px solid rgba(0,212,170,0.18);border-radius:10px;">
+          <div style="font-size:0.68rem;color:#00D4AA;text-transform:uppercase;letter-spacing:0.05em;font-weight:700;">Pendant</div>
+          <div style="font-size:0.82rem;color:#F0F0F5;font-weight:700;margin-top:4px;">Carburant / h</div>
+          <div id="raceNutritionDuring" style="font-size:0.72rem;color:#8B8FA8;margin-top:2px;line-height:1.4;">—</div>
+        </div>
+        <div style="padding:12px;background:rgba(255,107,107,0.06);border:1px solid rgba(255,107,107,0.18);border-radius:10px;">
+          <div style="font-size:0.68rem;color:#FF6B6B;text-transform:uppercase;letter-spacing:0.05em;font-weight:700;">Hydratation</div>
+          <div style="font-size:0.82rem;color:#F0F0F5;font-weight:700;margin-top:4px;">Sel + liquides</div>
+          <div id="raceNutritionHydra" style="font-size:0.72rem;color:#8B8FA8;margin-top:2px;line-height:1.4;">—</div>
+        </div>
+      </div>
+
+      <div id="raceNutritionTimeline" style="display:flex;flex-direction:column;gap:8px;margin-bottom:14px;"></div>
+
+      <div style="padding:12px;background:rgba(255,255,255,0.02);border-left:3px solid #FFD166;border-radius:8px;margin-bottom:14px;">
+        <div style="font-size:0.72rem;color:#FFD166;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px;">Règles d'or</div>
+        <ul id="raceNutritionRules" style="font-size:0.8rem;color:#D0D0E0;line-height:1.55;padding-left:18px;"></ul>
+      </div>
+
+      <p id="raceNutritionNarrative" style="font-size:0.82rem;color:#8B8FA8;line-height:1.5;"></p>
+    </div>
+
+    <!-- TIMELINE ÉVÉNEMENTS 12 MOIS (Lot 36) -->
+    <div id="eventTimelineCard" class="card mb-7 fade-in" style="animation-delay:0.181s;display:none;">
+      <div class="flex items-center justify-between mb-4">
+        <div>
+          <h2 style="font-size:0.95rem;font-weight:700;">Timeline événements</h2>
+          <p style="font-size:0.78rem;color:#8B8FA8;margin-top:2px;" id="eventTimelineSub">—</p>
+        </div>
+        <div id="eventTimelineLegend" style="display:flex;gap:12px;flex-wrap:wrap;font-size:0.68rem;color:#8B8FA8;"></div>
+      </div>
+      <div id="eventTimelineTrack" style="position:relative;height:90px;margin:8px 0 24px 0;"></div>
+      <p id="eventTimelineNarrative" style="font-size:0.82rem;color:#8B8FA8;line-height:1.5;"></p>
+    </div>
+
+    <!-- OBJECTIFS SMART MENSUELS (Lot 35) -->
+    <div id="smartCard" class="card mb-7 fade-in" style="animation-delay:0.182s;display:none;">
+      <div class="flex items-center justify-between mb-4">
+        <div>
+          <h2 style="font-size:0.95rem;font-weight:700;">Objectifs SMART du mois</h2>
+          <p style="font-size:0.78rem;color:#8B8FA8;margin-top:2px;" id="smartSub">—</p>
+        </div>
+        <span id="smartBadge" class="badge">—</span>
+      </div>
+      <div id="smartList" style="display:flex;flex-direction:column;gap:12px;"></div>
+      <p id="smartNarrative" style="font-size:0.82rem;color:#8B8FA8;margin-top:14px;line-height:1.55;"></p>
+    </div>
+
+    <!-- PLAN D'ATTAQUE 11 SEMAINES (Lot 25) -->
+    <div id="planAttaqueCard" class="card mb-7 fade-in" style="animation-delay:0.185s;display:none;">
+      <div class="flex items-center justify-between mb-4">
+        <div>
+          <h2 style="font-size:0.95rem;font-weight:700;">Plan d'attaque — semaines restantes</h2>
+          <p style="font-size:0.78rem;color:#8B8FA8;margin-top:2px;" id="planAttaqueSub">—</p>
+        </div>
+        <div style="display:flex;gap:6px;background:#13151F;border:1px solid #2A2D3E;border-radius:10px;padding:4px;" id="planAttaqueFilters">
+          <button class="pa-btn active" data-f="tous">Toutes</button>
+          <button class="pa-btn" data-f="venir">À venir</button>
+        </div>
+      </div>
+      <div style="overflow-x:auto;">
+        <table id="planAttaqueTable" style="width:100%;border-collapse:collapse;font-size:0.8rem;min-width:720px;">
+          <thead>
+            <tr style="border-bottom:1px solid #2A2D3E;">
+              <th style="text-align:left;padding:10px 8px;font-weight:600;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;font-size:0.7rem;">Sem</th>
+              <th style="text-align:left;padding:10px 8px;font-weight:600;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;font-size:0.7rem;">Phase</th>
+              <th style="text-align:right;padding:10px 8px;font-weight:600;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;font-size:0.7rem;">Volume</th>
+              <th style="text-align:center;padding:10px 8px;font-weight:600;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;font-size:0.7rem;">Répartition</th>
+              <th style="text-align:left;padding:10px 8px;font-weight:600;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;font-size:0.7rem;">Séance signature</th>
+              <th style="text-align:left;padding:10px 8px;font-weight:600;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;font-size:0.7rem;">Focus</th>
+            </tr>
+          </thead>
+          <tbody id="planAttaqueBody"></tbody>
+        </table>
+      </div>
+      <div id="planAttaqueTotals" style="display:flex;justify-content:space-around;margin-top:16px;padding:14px;background:rgba(108,99,255,0.05);border:1px solid rgba(108,99,255,0.15);border-radius:10px;"></div>
+      <p id="planAttaqueNarrative" style="font-size:0.82rem;color:#8B8FA8;margin-top:14px;line-height:1.55;"></p>
+    </div>
+
+    <style>
+      .pa-btn { padding: 6px 12px; border-radius: 7px; border: none; background: transparent; color: #8B8FA8; font-size: 0.78rem; font-weight: 600; cursor: pointer; transition: all 0.2s; }
+      .pa-btn.active { background: #2A2D3E; color: #F0F0F5; }
+      .pa-btn:hover:not(.active) { color: #F0F0F5; }
+      #planAttaqueTable tbody tr { border-bottom: 1px solid rgba(255,255,255,0.04); transition: background 0.15s; }
+      #planAttaqueTable tbody tr:hover { background: rgba(255,255,255,0.02); }
+      #planAttaqueTable tbody tr.current-week { background: rgba(108,99,255,0.08); }
+      #planAttaqueTable tbody tr.past-week { opacity: 0.55; }
+    </style>
+
+    <!-- PRÉDICTION CHRONO IRONMAN (Lot 26) -->
+    <div id="predictionCard" class="card mb-7 fade-in" style="animation-delay:0.187s;display:none;">
+      <div class="flex items-center justify-between mb-4">
+        <div>
+          <h2 style="font-size:0.95rem;font-weight:700;">Prédiction chrono</h2>
+          <p style="font-size:0.78rem;color:#8B8FA8;margin-top:2px;" id="predictionSub">—</p>
+        </div>
+        <span id="predictionBadge" class="badge">—</span>
+      </div>
+
+      <!-- Temps total prédit -->
+      <div style="display:flex;align-items:baseline;gap:14px;justify-content:center;margin-bottom:22px;padding:18px;background:linear-gradient(135deg,rgba(108,99,255,0.1),rgba(0,212,170,0.06));border:1px solid rgba(108,99,255,0.2);border-radius:14px;">
+        <div style="text-align:center;">
+          <div style="font-size:0.7rem;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;">Chrono estimé (réaliste)</div>
+          <div id="predictionTotal" style="font-size:2.8rem;font-weight:900;background:linear-gradient(135deg,#6C63FF,#00D4AA);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-top:4px;">—</div>
+          <div id="predictionRange" style="font-size:0.82rem;color:#8B8FA8;margin-top:2px;">—</div>
+        </div>
+      </div>
+
+      <!-- Breakdown par discipline -->
+      <div id="predictionSplit" style="display:flex;flex-direction:column;gap:10px;margin-bottom:14px;"></div>
+
+      <!-- Scénarios -->
+      <div class="grid gap-3 mb-4" style="grid-template-columns:repeat(3,1fr);">
+        <div style="padding:12px;background:rgba(0,212,170,0.06);border:1px solid rgba(0,212,170,0.18);border-radius:10px;text-align:center;">
+          <div style="font-size:0.68rem;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;">Optimiste</div>
+          <div id="predictionOpt" style="font-size:1.2rem;font-weight:800;color:#00D4AA;margin-top:4px;">—</div>
+          <div style="font-size:0.66rem;color:#555870;">meilleur jour</div>
+        </div>
+        <div style="padding:12px;background:rgba(108,99,255,0.06);border:1px solid rgba(108,99,255,0.18);border-radius:10px;text-align:center;">
+          <div style="font-size:0.68rem;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;">Réaliste</div>
+          <div id="predictionReal" style="font-size:1.2rem;font-weight:800;color:#6C63FF;margin-top:4px;">—</div>
+          <div style="font-size:0.66rem;color:#555870;">à forme actuelle</div>
+        </div>
+        <div style="padding:12px;background:rgba(255,209,102,0.06);border:1px solid rgba(255,209,102,0.18);border-radius:10px;text-align:center;">
+          <div style="font-size:0.68rem;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;">Pessimiste</div>
+          <div id="predictionPess" style="font-size:1.2rem;font-weight:800;color:#FFD166;margin-top:4px;">—</div>
+          <div style="font-size:0.66rem;color:#555870;">jour difficile</div>
+        </div>
+      </div>
+
+      <!-- Manquants / transparence -->
+      <p id="predictionNote" style="font-size:0.78rem;color:#8B8FA8;line-height:1.5;padding:10px 12px;background:rgba(255,255,255,0.02);border-radius:8px;"></p>
+    </div>
+
+    <!-- BENCHMARKS INTERMÉDIAIRES (Lot 27) ──────── -->
+    <div id="benchmarksTestsCard" class="card mb-7 fade-in" style="animation-delay:0.188s;display:none;">
+      <div class="flex items-center justify-between mb-4">
+        <div>
+          <h2 style="font-size:0.95rem;font-weight:700;">Tests benchmarks</h2>
+          <p style="font-size:0.78rem;color:#8B8FA8;margin-top:2px;" id="benchmarksTestsSub">5 points de vérité avant la course</p>
+        </div>
+        <span id="benchmarksTestsBadge" class="badge">—</span>
+      </div>
+
+      <!-- Timeline des tests -->
+      <div id="benchmarksTestsList" style="display:flex;flex-direction:column;gap:12px;margin-bottom:14px;"></div>
+
+      <!-- Note pédagogique -->
+      <p id="benchmarksTestsNote" style="font-size:0.78rem;color:#8B8FA8;line-height:1.5;padding:10px 12px;background:rgba(255,255,255,0.02);border-radius:8px;">
+        Ces 5 tests servent à calibrer tes zones et nourrir la prédiction chrono. Chaque résultat s'enregistre dans ton profil.
+      </p>
+    </div>
+
+    <!-- SUIVI ÉQUIPEMENT (Lot 29) ──────── -->
+    <div id="equipmentCard" class="card mb-7 fade-in" style="animation-delay:0.189s;display:none;">
+      <div class="flex items-center justify-between mb-4">
+        <div>
+          <h2 style="font-size:0.95rem;font-weight:700;">Suivi équipement</h2>
+          <p style="font-size:0.78rem;color:#8B8FA8;margin-top:2px;" id="equipmentSub">Kilométrage et entretien</p>
+        </div>
+        <span id="equipmentBadge" class="badge">—</span>
+      </div>
+
+      <!-- Totaux YTD -->
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:18px;">
+        <div style="padding:12px;background:rgba(0,212,170,0.06);border:1px solid rgba(0,212,170,0.18);border-radius:10px;text-align:center;">
+          <div style="font-size:0.68rem;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;">🏃 Course YTD</div>
+          <div id="equipYtdRun" style="font-size:1.2rem;font-weight:800;color:#F0F0F5;margin-top:4px;">—</div>
+        </div>
+        <div style="padding:12px;background:rgba(108,99,255,0.06);border:1px solid rgba(108,99,255,0.18);border-radius:10px;text-align:center;">
+          <div style="font-size:0.68rem;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;">🚴 Vélo YTD</div>
+          <div id="equipYtdBike" style="font-size:1.2rem;font-weight:800;color:#F0F0F5;margin-top:4px;">—</div>
+        </div>
+        <div style="padding:12px;background:rgba(255,209,102,0.06);border:1px solid rgba(255,209,102,0.18);border-radius:10px;text-align:center;">
+          <div style="font-size:0.68rem;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;">🏊 Nage YTD</div>
+          <div id="equipYtdSwim" style="font-size:1.2rem;font-weight:800;color:#F0F0F5;margin-top:4px;">—</div>
+        </div>
+      </div>
+
+      <!-- Liste des équipements -->
+      <div id="equipmentList" style="display:flex;flex-direction:column;gap:10px;margin-bottom:14px;"></div>
+
+      <!-- Note -->
+      <p id="equipmentNote" style="font-size:0.78rem;color:#8B8FA8;line-height:1.5;padding:10px 12px;background:rgba(255,255,255,0.02);border-radius:8px;">
+        Les seuils sont indicatifs — adapte selon ton usage et ta marque d'équipement. Les km sont comptabilisés depuis le 1er janvier.
+      </p>
+    </div>
+
+    <!-- SIMULATION « ET SI » (Lot 19) ──────── -->
+    <div id="simulationCard" class="card mb-7 fade-in" style="animation-delay:0.19s;display:none;">
+      <div class="flex items-center justify-between mb-4">
+        <div>
+          <h2 style="font-size:0.95rem;font-weight:700;">Simulation « et si »</h2>
+          <p style="font-size:0.78rem;color:#8B8FA8;margin-top:2px;">Projette l'impact d'un changement de volume sur les 7 prochains jours</p>
+        </div>
+        <span id="simBadge" class="badge">—</span>
+      </div>
+
+      <!-- Slider volume -->
+      <div style="margin-bottom:18px;">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px;">
+          <span style="font-size:0.82rem;color:#D0D0E0;">Variation de volume hebdo</span>
+          <span id="simVolValue" style="font-size:1.1rem;font-weight:800;color:#6C63FF;">+0%</span>
+        </div>
+        <input type="range" id="simVolSlider" min="-30" max="50" value="0" step="5"
+               style="width:100%;accent-color:#6C63FF;cursor:pointer;" />
+        <div style="display:flex;justify-content:space-between;font-size:0.68rem;color:#555870;margin-top:4px;">
+          <span>−30% (délestage)</span>
+          <span>baseline</span>
+          <span>+50% (surcharge)</span>
+        </div>
+      </div>
+
+      <!-- Cartes comparatives -->
+      <div class="grid gap-3 mb-4" style="grid-template-columns:repeat(3,1fr);">
+        <div id="simAcwrCard" style="padding:14px;background:rgba(108,99,255,0.06);border:1px solid rgba(108,99,255,0.18);border-radius:12px;text-align:center;">
+          <div style="font-size:0.68rem;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;">ACWR projeté</div>
+          <div id="simAcwrProj" style="font-size:1.4rem;font-weight:800;color:#F0F0F5;margin-top:4px;">—</div>
+          <div id="simAcwrDelta" style="font-size:0.72rem;color:#8B8FA8;margin-top:2px;">actuel —</div>
+        </div>
+        <div id="simTsbCard" style="padding:14px;background:rgba(0,212,170,0.06);border:1px solid rgba(0,212,170,0.18);border-radius:12px;text-align:center;">
+          <div style="font-size:0.68rem;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;">TSB projeté J+7</div>
+          <div id="simTsbProj" style="font-size:1.4rem;font-weight:800;color:#F0F0F5;margin-top:4px;">—</div>
+          <div id="simTsbDelta" style="font-size:0.72rem;color:#8B8FA8;margin-top:2px;">actuel —</div>
+        </div>
+        <div id="simSigCard" style="padding:14px;background:rgba(255,209,102,0.06);border:1px solid rgba(255,209,102,0.18);border-radius:12px;text-align:center;">
+          <div style="font-size:0.68rem;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;">Signature probable</div>
+          <div id="simSigLabel" style="font-size:0.95rem;font-weight:700;color:#F0F0F5;margin-top:6px;">—</div>
+          <div id="simSigRisk" style="font-size:0.72rem;color:#8B8FA8;margin-top:2px;">—</div>
+        </div>
+      </div>
+
+      <p id="simNarrative" style="font-size:0.84rem;color:#8B8FA8;line-height:1.5;padding:12px;background:rgba(255,255,255,0.02);border-radius:10px;border-left:3px solid #6C63FF;"></p>
+    </div>
+
+    <!-- TIMELINE JALONS ────────────────────── -->
+    <div class="card mb-7 fade-in" style="animation-delay:0.2s;">
+      <div class="flex items-center justify-between mb-5">
+        <h2 style="font-size:0.95rem;font-weight:700;">Jalons clés</h2>
+        <span class="badge badge-violet" id="jalonsRestants">—</span>
+      </div>
+      <div id="timeline" style="position:relative;padding-left:28px;"></div>
+    </div>
+
+    <!-- NOTE COACH ─────────────────────────── -->
+    <div class="alerte-banner alerte-info mb-4 fade-in" style="animation-delay:0.25s;">
+      <span style="font-size:1.4rem;">🤖</span>
+      <div>
+        <div style="font-weight:700;font-size:0.92rem;margin-bottom:3px;">Lecture coach IA</div>
+        <p id="noteCoachGlobal" style="font-size:0.84rem;color:#A0A0C0;line-height:1.55;"></p>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/scoring.js"></script>
+<script src="js/profile.js"></script>
+<script src="js/data-benoit.js" onerror="console.info('data-benoit pas encore généré')"></script>
+<script src="js/observations-strava.js" onerror="console.info('observations-strava pas encore générées')"></script>
+<script src="js/observations-whoop.js" onerror="console.info('observations-whoop pas encore générées')"></script>
+<script src="js/history.js" onerror="console.info('history pas encore généré')"></script>
+<script src="js/plan-generator.js"></script>
+<script src="js/objectifs.js"></script>
+<script src="js/mobile-nav.js"></script>
+</body>
+</html>

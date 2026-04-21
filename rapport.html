@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coach IA 2030 — Rapport hebdo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#6C63FF" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Coach IA" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));
+    }
+  </script>
+  <style>
+    body { background:#0F1117; color:#F0F0F5; font-family:'Inter',sans-serif; }
+    .report { max-width: 800px; margin: 0 auto; padding: 40px 32px; }
+    .rcard { background:#1A1D27; border:1px solid #2A2D3E; border-radius:14px; padding:20px; margin-bottom:18px; }
+    .stat { background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.05); border-radius:10px; padding:12px; text-align:center; }
+    .stat-val { font-size:1.4rem; font-weight:800; color:#F0F0F5; }
+    .stat-label { font-size:0.7rem; color:#8B8FA8; text-transform:uppercase; letter-spacing:0.05em; }
+    .stat-sub { font-size:0.7rem; color:#555870; margin-top:2px; }
+    .day-row { display:flex; align-items:center; gap:14px; padding:10px 12px; border-bottom:1px solid #2A2D3E; }
+    .day-row:last-child { border-bottom:none; }
+    .dot-day { width:32px; height:32px; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:0.7rem; font-weight:700; color:#F0F0F5; flex-shrink:0; }
+
+    .no-print { display: block; }
+    .print-only { display: none; }
+
+    @media print {
+      body { background:white; color:#111; }
+      .report { padding: 0; max-width: none; }
+      .rcard { background:white; border:1px solid #ddd; color:#111; break-inside: avoid; }
+      .stat { background:#f7f7f9; border:1px solid #e4e4e8; }
+      .stat-val, h1, h2, h3 { color:#111 !important; }
+      .stat-label, .stat-sub { color:#444 !important; }
+      .no-print { display: none !important; }
+      .print-only { display: block; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="report fade-in">
+
+  <!-- TOOLBAR -->
+  <div class="no-print" style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;">
+    <a href="historique.html" style="color:#8B8FA8;text-decoration:none;font-size:0.85rem;">← Retour à l'historique</a>
+    <div style="display:flex;gap:8px;">
+      <button onclick="window.print()" style="background:linear-gradient(135deg,#6C63FF,#00D4AA);color:white;border:none;padding:8px 18px;border-radius:10px;font-size:0.85rem;font-weight:600;cursor:pointer;">🖨️ Imprimer / PDF</button>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <div class="rcard" style="text-align:center;">
+    <div style="display:flex;justify-content:center;align-items:center;gap:10px;margin-bottom:8px;">
+      <div style="width:40px;height:40px;background:linear-gradient(135deg,#6C63FF,#00D4AA);border-radius:10px;display:flex;align-items:center;justify-content:center;color:white;font-weight:800;">C</div>
+      <div style="text-align:left;">
+        <div style="font-size:0.95rem;font-weight:800;">Coach IA 2030</div>
+        <div style="font-size:0.72rem;color:#8B8FA8;">Rapport hebdomadaire</div>
+      </div>
+    </div>
+    <h1 id="reportTitle" style="font-size:1.75rem;font-weight:800;margin-top:12px;">—</h1>
+    <p id="reportPeriod" style="font-size:0.9rem;color:#8B8FA8;margin-top:4px;">—</p>
+    <div id="reportSignature" style="margin-top:14px;"></div>
+  </div>
+
+  <!-- SCORE SEMAINE -->
+  <div class="rcard">
+    <h2 style="font-size:0.78rem;font-weight:700;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:12px;">Score de forme moyen</h2>
+    <div style="display:flex;align-items:center;gap:20px;">
+      <div id="reportScoreCircle" style="flex:0 0 100px;height:100px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.8rem;font-weight:900;color:white;background:#6C63FF;">—</div>
+      <div>
+        <div id="reportScoreLabel" style="font-size:1rem;font-weight:700;margin-bottom:4px;">—</div>
+        <div id="reportScoreNarr" style="font-size:0.85rem;color:#8B8FA8;line-height:1.5;">—</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STATS CLÉS -->
+  <div class="rcard">
+    <h2 style="font-size:0.78rem;font-weight:700;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:12px;">Statistiques clés</h2>
+    <div class="grid gap-3" style="grid-template-columns:repeat(4,1fr);" id="reportStats"></div>
+  </div>
+
+  <!-- STRIP 7 JOURS -->
+  <div class="rcard">
+    <h2 style="font-size:0.78rem;font-weight:700;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:12px;">Détail jour par jour</h2>
+    <div id="reportDays"></div>
+  </div>
+
+  <!-- ÉVÉNEMENTS -->
+  <div class="rcard" id="reportEventsCard" style="display:none;">
+    <h2 style="font-size:0.78rem;font-weight:700;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:12px;">Moments clés de la semaine</h2>
+    <div id="reportEvents" style="font-size:0.85rem;line-height:1.6;"></div>
+  </div>
+
+  <!-- NOTE COACH -->
+  <div class="rcard" style="border-left:4px solid #6C63FF;">
+    <h2 style="font-size:0.78rem;font-weight:700;color:#6C63FF;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:12px;">Lecture coach IA</h2>
+    <p id="reportCoachNote" style="font-size:0.9rem;line-height:1.6;color:#D0D0E0;">—</p>
+  </div>
+
+  <!-- FOOTER -->
+  <div style="text-align:center;margin-top:20px;font-size:0.7rem;color:#555870;">
+    Rapport généré le <span id="reportDate">—</span> · Coach IA 2030 · Prototype
+  </div>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/scoring.js"></script>
+<script src="js/profile.js"></script>
+<script src="js/data-benoit.js" onerror="void 0"></script>
+<script src="js/observations-strava.js" onerror="void 0"></script>
+<script src="js/observations-whoop.js" onerror="void 0"></script>
+<script src="js/history.js" onerror="void 0"></script>
+<script src="js/detectors.js" onerror="void 0"></script>
+<script src="js/rapport.js"></script>
+
+</body>
+</html>

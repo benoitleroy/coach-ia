@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coach IA 2030 — Paramètres</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#6C63FF" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Coach IA" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));
+    }
+  </script>
+  <style>
+    .field-row { display:flex; flex-direction:column; gap:6px; }
+    .field-row label { font-size:0.78rem; color:#8B8FA8; font-weight:600; }
+    .field-row input, .field-row select {
+      background:#0F1117; border:1px solid #2A2D3E; border-radius:8px;
+      padding:10px 12px; color:#F0F0F5; font-size:0.9rem; font-family:inherit;
+      transition:border-color 0.15s;
+    }
+    .field-row input:focus, .field-row select:focus {
+      outline:none; border-color:#6C63FF;
+    }
+    .field-row .hint { font-size:0.7rem; color:#555870; }
+    .zone-row {
+      display:flex; align-items:center; gap:10px; padding:10px 12px;
+      border:1px solid rgba(255,255,255,0.05); border-radius:10px;
+      background:rgba(255,255,255,0.02); margin-bottom:6px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="flex min-h-screen">
+
+  <!-- SIDEBAR -->
+  <aside style="width:240px;background:#13151F;border-right:1px solid #2A2D3E;" class="flex flex-col flex-shrink-0 p-5">
+    <div class="mb-8">
+      <a href="accueil.html" style="text-decoration:none;">
+        <div class="flex items-center gap-2 mb-1" style="cursor:pointer;">
+          <div style="width:32px;height:32px;background:linear-gradient(135deg,#6C63FF,#00D4AA);border-radius:8px;display:flex;align-items:center;justify-content:center;">
+            <span style="color:white;font-weight:800;font-size:14px;">C</span>
+          </div>
+          <span style="font-weight:700;font-size:1rem;color:#F0F0F5;">Coach IA</span>
+          <span style="font-size:0.65rem;color:#6C63FF;background:rgba(108,99,255,0.15);padding:2px 6px;border-radius:4px;font-weight:600;">2030</span>
+        </div>
+      </a>
+      <p style="font-size:0.7rem;color:#555870;margin-top:4px;">Niveau Solo Athlete</p>
+      <span style="font-size:0.62rem;color:#FF6B6B;background:rgba(255,107,107,0.1);border:1px solid rgba(255,107,107,0.2);padding:2px 6px;border-radius:4px;font-weight:600;margin-top:4px;display:inline-block;">PROTOTYPE</span>
+    </div>
+    <nav class="flex flex-col gap-1 flex-1">
+      <a href="index.html"      class="nav-link"><span>📊</span> Dashboard</a>
+      <a href="journal.html"    class="nav-link"><span>📝</span> Journal du jour</a>
+      <a href="vue360.html"     class="nav-link"><span>🔭</span> Vue 360°</a>
+      <a href="historique.html" class="nav-link"><span>📈</span> Historique</a>
+      <a href="archive.html"    class="nav-link"><span>📚</span> Mes Semaines</a>
+      <div style="height:1px;background:#2A2D3E;margin:12px 0;"></div>
+      <a href="objectifs.html"  class="nav-link"><span>🎯</span> Objectifs</a>
+      <a href="parametres.html" class="nav-link active"><span>⚙️</span> Paramètres</a>
+    </nav>
+    <div style="border-top:1px solid #2A2D3E;padding-top:16px;">
+      <p style="font-size:0.7rem;color:#555870;margin-bottom:8px;text-transform:uppercase;letter-spacing:0.05em;">Athlète actif</p>
+      <div class="athlete-selector flex-col gap-1">
+        <button class="athlete-btn active" data-athlete="benoit">Benoît L.</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- CONTENU -->
+  <main class="flex-1 overflow-y-auto p-8">
+
+    <div class="mb-6 fade-in">
+      <p style="color:#8B8FA8;font-size:0.85rem;margin-bottom:4px;">Ton profil sportif</p>
+      <h1 style="font-size:1.75rem;font-weight:800;color:#F0F0F5;">Paramètres athlète</h1>
+      <p style="color:#8B8FA8;font-size:0.9rem;margin-top:4px;">Ces données alimentent le scoring, les zones et les recommandations.</p>
+    </div>
+
+    <div class="grid gap-6" style="grid-template-columns:1fr 1fr;">
+
+      <!-- COLONNE GAUCHE : FORMULAIRE -->
+      <form id="profileForm" class="card fade-in" style="animation-delay:0.05s;display:flex;flex-direction:column;gap:18px;">
+        <h2 style="font-size:0.95rem;font-weight:700;">Profil physiologique</h2>
+
+        <div class="grid gap-4" style="grid-template-columns:1fr 1fr;">
+          <div class="field-row">
+            <label>Nom</label>
+            <input type="text" name="nom" placeholder="Benoît Leroy" />
+          </div>
+          <div class="field-row">
+            <label>Date de naissance</label>
+            <input type="date" name="dateNaissance" />
+            <span class="hint">Permet de déduire la FC max théorique</span>
+          </div>
+          <div class="field-row">
+            <label>Poids (kg)</label>
+            <input type="number" name="poids" min="30" max="200" step="0.1" />
+          </div>
+          <div class="field-row">
+            <label>Taille (cm)</label>
+            <input type="number" name="taille" min="100" max="250" step="1" />
+          </div>
+          <div class="field-row">
+            <label>FC max mesurée (bpm)</label>
+            <input type="number" name="fcMax" min="100" max="230" step="1" />
+            <span class="hint" id="fcMaxHint">Si laissé vide : 208 − 0.7 × âge</span>
+          </div>
+          <div class="field-row">
+            <label>FC repos (bpm)</label>
+            <input type="number" name="fcRepos" min="30" max="100" step="1" />
+          </div>
+        </div>
+
+        <h2 style="font-size:0.95rem;font-weight:700;margin-top:8px;">Zones d'entraînement</h2>
+        <div class="grid gap-4" style="grid-template-columns:1fr 1fr 1fr;">
+          <div class="field-row">
+            <label>FTP vélo (W)</label>
+            <input type="number" name="ftp" min="50" max="500" step="1" />
+          </div>
+          <div class="field-row">
+            <label>VMA course (km/h)</label>
+            <input type="number" name="vma" min="8" max="25" step="0.1" />
+          </div>
+          <div class="field-row">
+            <label>SWOLF 100m nage</label>
+            <input type="number" name="swolf100" min="30" max="120" step="1" />
+          </div>
+        </div>
+
+        <h2 style="font-size:0.95rem;font-weight:700;margin-top:8px;">Expérience &amp; meilleurs temps</h2>
+        <div class="grid gap-4" style="grid-template-columns:1fr 1fr;">
+          <div class="field-row">
+            <label>Années de triathlon</label>
+            <input type="number" name="experienceAnnees" min="0" max="60" step="1" />
+          </div>
+          <div class="field-row">
+            <label>Marathon PB</label>
+            <input type="text" name="bestTimes.marathon" placeholder="3h24" />
+          </div>
+          <div class="field-row">
+            <label>Semi PB</label>
+            <input type="text" name="bestTimes.semi" placeholder="1h32" />
+          </div>
+          <div class="field-row">
+            <label>10 km PB</label>
+            <input type="text" name="bestTimes.10k" placeholder="42:10" />
+          </div>
+          <div class="field-row">
+            <label>Half Ironman PB</label>
+            <input type="text" name="bestTimes.halfIronman" placeholder="5h10" />
+          </div>
+          <div class="field-row">
+            <label>Ironman PB</label>
+            <input type="text" name="bestTimes.ironman" placeholder="—" />
+          </div>
+        </div>
+
+        <div style="display:flex;gap:10px;margin-top:8px;">
+          <button type="submit" id="btnSave" class="btn" style="background:#6C63FF;color:white;flex:1;">💾 Enregistrer</button>
+          <button type="button" id="btnReset" class="btn-ghost" style="flex:0 0 auto;">Réinitialiser</button>
+        </div>
+        <div id="saveConfirm" style="display:none;padding:10px 12px;background:rgba(0,212,170,0.1);border:1px solid rgba(0,212,170,0.3);border-radius:8px;color:#00D4AA;font-size:0.8rem;">
+          ✓ Paramètres enregistrés
+        </div>
+      </form>
+
+      <!-- COLONNE DROITE : PREVIEW ZONES -->
+      <div class="card fade-in" style="animation-delay:0.1s;">
+        <h2 style="font-size:0.95rem;font-weight:700;margin-bottom:4px;">Zones calculées</h2>
+        <p style="font-size:0.78rem;color:#8B8FA8;margin-bottom:16px;">Mises à jour en temps réel à la saisie.</p>
+
+        <div style="margin-bottom:20px;">
+          <div style="font-size:0.78rem;font-weight:600;color:#8B8FA8;margin-bottom:8px;text-transform:uppercase;letter-spacing:0.04em;">Zones FC (bpm)</div>
+          <div id="previewHr">—</div>
+        </div>
+
+        <div style="margin-bottom:20px;">
+          <div style="font-size:0.78rem;font-weight:600;color:#8B8FA8;margin-bottom:8px;text-transform:uppercase;letter-spacing:0.04em;">Zones puissance vélo (W)</div>
+          <div id="previewPower">—</div>
+        </div>
+
+        <div>
+          <div style="font-size:0.78rem;font-weight:600;color:#8B8FA8;margin-bottom:8px;text-transform:uppercase;letter-spacing:0.04em;">Zones allure course (min/km)</div>
+          <div id="previewPace">—</div>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+</div>
+
+<script src="js/profile.js"></script>
+<script src="js/parametres.js"></script>
+<script src="js/mobile-nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coach IA 2030 — Journal du jour</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#6C63FF" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Coach IA" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));
+    }
+  </script>
+</head>
+<body>
+
+<div class="flex min-h-screen">
+
+  <!-- ─── SIDEBAR ─── -->
+  <aside style="width:240px;background:#13151F;border-right:1px solid #2A2D3E;" class="flex flex-col flex-shrink-0 p-5">
+    <div class="mb-8">
+      <a href="accueil.html" style="text-decoration:none;">
+        <div class="flex items-center gap-2 mb-1" style="cursor:pointer;">
+          <div style="width:32px;height:32px;background:linear-gradient(135deg,#6C63FF,#00D4AA);border-radius:8px;display:flex;align-items:center;justify-content:center;">
+            <span style="color:white;font-weight:800;font-size:14px;">C</span>
+          </div>
+          <span style="font-weight:700;font-size:1rem;color:#F0F0F5;">Coach IA</span>
+          <span style="font-size:0.65rem;color:#6C63FF;background:rgba(108,99,255,0.15);padding:2px 6px;border-radius:4px;font-weight:600;">2030</span>
+        </div>
+      </a>
+      <p style="font-size:0.7rem;color:#555870;margin-top:4px;">Niveau Solo Athlete</p>
+      <span style="font-size:0.62rem;color:#FF6B6B;background:rgba(255,107,107,0.1);border:1px solid rgba(255,107,107,0.2);padding:2px 6px;border-radius:4px;font-weight:600;margin-top:4px;display:inline-block;">PROTOTYPE</span>
+    </div>
+    <nav class="flex flex-col gap-1 flex-1">
+      <a href="index.html" class="nav-link">
+        <span>📊</span> Dashboard
+      </a>
+      <a href="journal.html" class="nav-link active">
+        <span>📝</span> Journal du jour
+      </a>
+      <a href="vue360.html" class="nav-link">
+        <span>🔭</span> Vue 360°
+      </a>
+      <div style="height:1px;background:#2A2D3E;margin:12px 0;"></div>
+      <a href="historique.html" class="nav-link">
+        <span>📈</span> Historique
+      </a>
+      <a href="archive.html" class="nav-link"><span>📚</span> Mes Semaines</a>
+      <a href="objectifs.html" class="nav-link"><span>🎯</span> Objectifs</a>
+      <a href="parametres.html" class="nav-link"><span>⚙️</span> Paramètres</a>
+    </nav>
+    <div style="border-top:1px solid #2A2D3E;padding-top:16px;">
+      <p style="font-size:0.7rem;color:#555870;margin-bottom:6px;text-transform:uppercase;letter-spacing:0.05em;">Athlète</p>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <div style="width:28px;height:28px;background:linear-gradient(135deg,#6C63FF,#00D4AA);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.65rem;font-weight:700;color:white;">BL</div>
+        <span style="font-size:0.85rem;font-weight:600;color:#F0F0F5;">Benoît L.</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ─── CONTENU PRINCIPAL ─── -->
+  <main class="flex-1 overflow-y-auto p-8" id="mainContent">
+
+    <!-- HEADER -->
+    <div class="flex items-start justify-between mb-8 fade-in">
+      <div>
+        <p style="color:#8B8FA8;font-size:0.85rem;margin-bottom:4px;" id="journalDate">Vendredi 18 avril 2026</p>
+        <h1 style="font-size:1.75rem;font-weight:800;color:#F0F0F5;">Journal du jour</h1>
+        <p style="color:#8B8FA8;font-size:0.9rem;margin-top:4px;">Comment tu vas, vraiment ?</p>
+      </div>
+      <!-- Streak -->
+      <div class="card card-sm text-center" style="min-width:130px;">
+        <div style="font-size:1.8rem;margin-bottom:4px;">🔥</div>
+        <div style="font-size:1.4rem;font-weight:800;color:#FFD166;">7</div>
+        <div style="font-size:0.72rem;color:#8B8FA8;">jours consécutifs</div>
+      </div>
+    </div>
+
+    <!-- PROMPT COACH IA -->
+    <div class="alerte-banner alerte-info mb-6 fade-in" style="animation-delay:0.1s" id="coachPromptBanner">
+      <span style="font-size:1.4rem;" id="coachPromptIcone">🤖</span>
+      <div>
+        <div style="font-weight:700;font-size:0.92rem;margin-bottom:3px;" id="coachPromptTitle">Ce que je veux savoir aujourd'hui</div>
+        <p style="font-size:0.84rem;color:#A0A0C0;line-height:1.5;" id="coachPromptBody">
+          Après ta séance d'hier, comment récupères-tu ? Ton HRV de ce matin était dans ta zone haute — mais les chiffres ne disent pas tout. Prends 3 minutes pour remplir ce journal. C'est toi qui connais ta vérité.
+        </p>
+      </div>
+    </div>
+
+    <!-- BANDEAU QUESTIONS CIBLÉES (ajouté par journal.js) -->
+    <div id="contextQuestions" style="display:none;" class="mb-6 fade-in"></div>
+
+    <div id="formJournal">
+
+      <!-- ════ SECTION 1 : CORPS ════ -->
+      <div class="card mb-5 fade-in" style="animation-delay:0.15s">
+        <div class="flex items-center gap-3 mb-5">
+          <div style="width:36px;height:36px;background:rgba(0,212,170,0.15);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;">💪</div>
+          <div>
+            <h2 style="font-size:1rem;font-weight:700;">Corps & énergie</h2>
+            <p style="font-size:0.78rem;color:#8B8FA8;">Ce que tu ressens physiquement</p>
+          </div>
+        </div>
+
+        <!-- Énergie générale -->
+        <div class="mb-5">
+          <div class="flex justify-between items-center mb-3">
+            <label style="font-size:0.88rem;font-weight:600;">Niveau d'énergie</label>
+            <span id="energieLabel" style="font-size:0.88rem;font-weight:700;color:#6C63FF;">😐 Correct</span>
+          </div>
+          <input type="range" min="1" max="10" value="6" class="slider-custom" id="energieSlider"
+            oninput="majSlider('energie', this.value)" />
+          <div class="flex justify-between mt-1">
+            <span style="font-size:0.72rem;color:#555870;">Vidé</span>
+            <span style="font-size:0.72rem;color:#555870;">En feu</span>
+          </div>
+        </div>
+
+        <!-- Douleurs / courbatures -->
+        <div class="mb-5">
+          <label style="font-size:0.88rem;font-weight:600;display:block;margin-bottom:12px;">Douleurs ou courbatures ?</label>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;" id="douleursBtns">
+            <button class="douleur-btn active" data-val="aucune"   onclick="selectDouleur(this)">✅ Aucune</button>
+            <button class="douleur-btn"        data-val="légères"  onclick="selectDouleur(this)">😅 Légères courbatures</button>
+            <button class="douleur-btn"        data-val="modérées" onclick="selectDouleur(this)">⚠️ Modérées</button>
+            <button class="douleur-btn"        data-val="douleur"  onclick="selectDouleur(this)">🔴 Vraie douleur</button>
+          </div>
+        </div>
+
+        <!-- Zone douloureuse (conditionnelle) -->
+        <div id="zoneDouloureuse" style="display:none;" class="mb-2">
+          <label style="font-size:0.85rem;color:#8B8FA8;display:block;margin-bottom:8px;">Où exactement ?</label>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;" id="zonesBtns">
+            <button class="zone-btn" onclick="toggleZone(this)">🦵 Cuisse</button>
+            <button class="zone-btn" onclick="toggleZone(this)">🦶 Genou</button>
+            <button class="zone-btn" onclick="toggleZone(this)">🦶 Cheville / Achille</button>
+            <button class="zone-btn" onclick="toggleZone(this)">💪 Épaule</button>
+            <button class="zone-btn" onclick="toggleZone(this)">🔙 Dos</button>
+            <button class="zone-btn" onclick="toggleZone(this)">🦴 Hanche</button>
+            <button class="zone-btn" onclick="toggleZone(this)">📍 Autre</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ════ SECTION 2 : SOMMEIL ════ -->
+      <div class="card mb-5 fade-in" style="animation-delay:0.2s">
+        <div class="flex items-center gap-3 mb-5">
+          <div style="width:36px;height:36px;background:rgba(108,99,255,0.15);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;">🌙</div>
+          <div>
+            <h2 style="font-size:1rem;font-weight:700;">Sommeil de la nuit</h2>
+            <p style="font-size:0.78rem;color:#8B8FA8;">La nuit qui vient de se terminer</p>
+          </div>
+        </div>
+
+        <!-- Durée sommeil -->
+        <div class="mb-5">
+          <div class="flex justify-between items-center mb-3">
+            <label style="font-size:0.88rem;font-weight:600;">Durée estimée</label>
+            <span id="sommeilLabel" style="font-size:0.88rem;font-weight:700;color:#6C63FF;">7h</span>
+          </div>
+          <input type="range" min="3" max="11" step="0.5" value="7" class="slider-custom" id="sommeilSlider"
+            oninput="majSlider('sommeil', this.value)" />
+          <div class="flex justify-between mt-1">
+            <span style="font-size:0.72rem;color:#555870;">3h</span>
+            <span style="font-size:0.72rem;color:#555870;">11h</span>
+          </div>
+        </div>
+
+        <!-- Qualité subjective -->
+        <div class="mb-2">
+          <label style="font-size:0.88rem;font-weight:600;display:block;margin-bottom:12px;">Qualité ressentie</label>
+          <div style="display:flex;gap:8px;" id="sommeilQualiteBtns">
+            <button class="qualite-btn" data-val="1" onclick="selectQualite(this)" style="flex:1;">😩<br><span style="font-size:0.7rem;">Horrible</span></button>
+            <button class="qualite-btn" data-val="2" onclick="selectQualite(this)" style="flex:1;">😞<br><span style="font-size:0.7rem;">Mauvais</span></button>
+            <button class="qualite-btn active" data-val="3" onclick="selectQualite(this)" style="flex:1;">😐<br><span style="font-size:0.7rem;">Correct</span></button>
+            <button class="qualite-btn" data-val="4" onclick="selectQualite(this)" style="flex:1;">😊<br><span style="font-size:0.7rem;">Bon</span></button>
+            <button class="qualite-btn" data-val="5" onclick="selectQualite(this)" style="flex:1;">😄<br><span style="font-size:0.7rem;">Excellent</span></button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ════ SECTION 3 : VIE ════ -->
+      <div class="card mb-5 fade-in" style="animation-delay:0.25s">
+        <div class="flex items-center gap-3 mb-5">
+          <div style="width:36px;height:36px;background:rgba(255,107,107,0.15);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;">🌊</div>
+          <div>
+            <h2 style="font-size:1rem;font-weight:700;">Charge de vie</h2>
+            <p style="font-size:0.78rem;color:#8B8FA8;">Ce qui se passe en dehors de l'entraînement</p>
+          </div>
+        </div>
+
+        <!-- Stress professionnel -->
+        <div class="mb-5">
+          <div class="flex justify-between items-center mb-3">
+            <label style="font-size:0.88rem;font-weight:600;">Stress professionnel</label>
+            <span id="stressProLabel" style="font-size:0.88rem;font-weight:700;color:#6C63FF;">5 — Modéré</span>
+          </div>
+          <input type="range" min="1" max="10" value="5" class="slider-custom" id="stressProSlider"
+            oninput="majSlider('stresspro', this.value)" />
+          <div class="flex justify-between mt-1">
+            <span style="font-size:0.72rem;color:#555870;">Tranquille</span>
+            <span style="font-size:0.72rem;color:#555870;">Surchargé</span>
+          </div>
+        </div>
+
+        <!-- Stress personnel -->
+        <div class="mb-5">
+          <div class="flex justify-between items-center mb-3">
+            <label style="font-size:0.88rem;font-weight:600;">Équilibre vie personnelle / famille</label>
+            <span id="stressPersoLabel" style="font-size:0.88rem;font-weight:700;color:#6C63FF;">5 — Équilibré</span>
+          </div>
+          <input type="range" min="1" max="10" value="5" class="slider-custom" id="stressPersoSlider"
+            oninput="majSlider('stressperslo', this.value)" />
+          <div class="flex justify-between mt-1">
+            <span style="font-size:0.72rem;color:#555870;">Tendu</span>
+            <span style="font-size:0.72rem;color:#555870;">Serein</span>
+          </div>
+        </div>
+
+        <!-- Événement notable -->
+        <div>
+          <label style="font-size:0.88rem;font-weight:600;display:block;margin-bottom:8px;">Un événement notable cette semaine ?</label>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;" id="evenementBtns">
+            <button class="event-btn active" data-val="rien"        onclick="selectEvent(this)">Rien de particulier</button>
+            <button class="event-btn"        data-val="voyage"      onclick="selectEvent(this)">✈️ Voyage / déplacement</button>
+            <button class="event-btn"        data-val="maladie"     onclick="selectEvent(this)">🤒 Maladie</button>
+            <button class="event-btn"        data-val="conflit"     onclick="selectEvent(this)">💢 Conflit / tension</button>
+            <button class="event-btn"        data-val="joie"        onclick="selectEvent(this)">🎉 Événement positif</button>
+            <button class="event-btn"        data-val="surmenage"   onclick="selectEvent(this)">😵 Surmenage pro</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ════ SECTION 4 : MOTIVATION ════ -->
+      <div class="card mb-5 fade-in" style="animation-delay:0.3s">
+        <div class="flex items-center gap-3 mb-5">
+          <div style="width:36px;height:36px;background:rgba(255,209,102,0.15);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;">🧠</div>
+          <div>
+            <h2 style="font-size:1rem;font-weight:700;">Tête & motivation</h2>
+            <p style="font-size:0.78rem;color:#8B8FA8;">Ce que tu ressens mentalement</p>
+          </div>
+        </div>
+
+        <!-- Motivation entraînement -->
+        <div class="mb-5">
+          <div class="flex justify-between items-center mb-3">
+            <label style="font-size:0.88rem;font-weight:600;">Envie de m'entraîner aujourd'hui</label>
+            <span id="motivLabel" style="font-size:0.88rem;font-weight:700;color:#6C63FF;">😐 Bof</span>
+          </div>
+          <input type="range" min="1" max="10" value="6" class="slider-custom" id="motivSlider"
+            oninput="majSlider('motiv', this.value)" />
+          <div class="flex justify-between mt-1">
+            <span style="font-size:0.72rem;color:#555870;">Zéro envie</span>
+            <span style="font-size:0.72rem;color:#555870;">Prêt à tout donner</span>
+          </div>
+        </div>
+
+        <!-- Humeur générale -->
+        <div class="mb-2">
+          <label style="font-size:0.88rem;font-weight:600;display:block;margin-bottom:12px;">Humeur générale</label>
+          <div style="display:flex;gap:8px;" id="humeurBtns">
+            <button class="humeur-btn" data-val="1" onclick="selectHumeur(this)" style="flex:1;">😫</button>
+            <button class="humeur-btn" data-val="2" onclick="selectHumeur(this)" style="flex:1;">😕</button>
+            <button class="humeur-btn active" data-val="3" onclick="selectHumeur(this)" style="flex:1;">😐</button>
+            <button class="humeur-btn" data-val="4" onclick="selectHumeur(this)" style="flex:1;">🙂</button>
+            <button class="humeur-btn" data-val="5" onclick="selectHumeur(this)" style="flex:1;">😄</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ════ SECTION 4.4 : CORPS / RESSENTIS (Lot 31) ════ -->
+      <div class="card mb-5 fade-in" style="animation-delay:0.315s">
+        <div class="flex items-center gap-3 mb-5">
+          <div style="width:36px;height:36px;background:rgba(255,107,107,0.15);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;">🫀</div>
+          <div>
+            <h2 style="font-size:1rem;font-weight:700;">Corps — ressentis</h2>
+            <p style="font-size:0.78rem;color:#8B8FA8;">Comment ton corps réagit ce matin</p>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+          <div>
+            <label style="font-size:0.82rem;color:#D0D0E0;display:block;margin-bottom:8px;">🪵 Raideur corporelle <span id="stiffnessLabel" style="font-weight:800;color:#FF6B6B;">3/5</span></label>
+            <input type="range" id="stiffnessSlider" min="1" max="5" value="3" step="1" style="width:100%;accent-color:#FF6B6B;cursor:pointer;" oninput="document.getElementById('stiffnessLabel').textContent=this.value+'/5'"/>
+            <div style="display:flex;justify-content:space-between;font-size:0.65rem;color:#555870;margin-top:4px;">
+              <span>souple</span><span>normal</span><span>bloqué</span>
+            </div>
+          </div>
+          <div>
+            <label style="font-size:0.82rem;color:#D0D0E0;display:block;margin-bottom:8px;">⚡ Récup ressentie <span id="recoveryLabel" style="font-weight:800;color:#00D4AA;">3/5</span></label>
+            <input type="range" id="recoverySlider" min="1" max="5" value="3" step="1" style="width:100%;accent-color:#00D4AA;cursor:pointer;" oninput="document.getElementById('recoveryLabel').textContent=this.value+'/5'"/>
+            <div style="display:flex;justify-content:space-between;font-size:0.65rem;color:#555870;margin-top:4px;">
+              <span>lessivé</span><span>moyen</span><span>pétant</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ════ SECTION 4.5 : NUTRITION ════ -->
+      <div class="card mb-5 fade-in" style="animation-delay:0.32s">
+        <div class="flex items-center gap-3 mb-5">
+          <div style="width:36px;height:36px;background:rgba(108,99,255,0.15);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;">🥗</div>
+          <div>
+            <h2 style="font-size:1rem;font-weight:700;">Nutrition quotidienne</h2>
+            <p style="font-size:0.78rem;color:#8B8FA8;">Comment t'es-tu nourri aujourd'hui ? (rapide)</p>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+          <div>
+            <label style="font-size:0.82rem;color:#D0D0E0;display:block;margin-bottom:8px;">🥩 Protéines <span id="proteinLabel" style="font-weight:800;color:#6C63FF;">3/5</span></label>
+            <input type="range" id="proteinSlider" min="1" max="5" value="3" step="1" style="width:100%;accent-color:#6C63FF;cursor:pointer;" oninput="document.getElementById('proteinLabel').textContent=this.value+'/5'"/>
+            <div style="display:flex;justify-content:space-between;font-size:0.65rem;color:#555870;margin-top:4px;">
+              <span>insuffisant</span><span>correct</span><span>optimal</span>
+            </div>
+          </div>
+          <div>
+            <label style="font-size:0.82rem;color:#D0D0E0;display:block;margin-bottom:8px;">💧 Hydratation <span id="hydrationLabel" style="font-weight:800;color:#00D4AA;">3/5</span></label>
+            <input type="range" id="hydrationSlider" min="1" max="5" value="3" step="1" style="width:100%;accent-color:#00D4AA;cursor:pointer;" oninput="document.getElementById('hydrationLabel').textContent=this.value+'/5'"/>
+            <div style="display:flex;justify-content:space-between;font-size:0.65rem;color:#555870;margin-top:4px;">
+              <span>déshydraté</span><span>correct</span><span>très bien</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ════ SECTION 4.4bis : GUT TRAINING ════ -->
+      <div class="card mb-5 fade-in" style="animation-delay:0.33s">
+        <div class="flex items-center gap-3 mb-5">
+          <div style="width:36px;height:36px;background:rgba(0,212,170,0.15);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;">🥤</div>
+          <div>
+            <h2 style="font-size:1rem;font-weight:700;">Gut training</h2>
+            <p style="font-size:0.78rem;color:#8B8FA8;">Entraîner l'intestin à absorber les glucides en course — cible Ironman : 80 g/h</p>
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <label style="font-size:0.88rem;font-weight:600;display:block;margin-bottom:10px;">Séance longue récente (> 90 min) ?</label>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;" id="gutBtns">
+            <button class="gut-btn active" data-val="non" onclick="selectGut(this)">Pas de séance longue</button>
+            <button class="gut-btn"        data-val="oui" onclick="selectGut(this)">✅ Oui, je logge</button>
+          </div>
+        </div>
+
+        <div id="gutDetails" style="display:none;">
+          <div style="display:flex;gap:12px;margin-bottom:14px;flex-wrap:wrap;">
+            <div style="flex:1;min-width:140px;">
+              <label style="font-size:0.82rem;color:#8B8FA8;display:block;margin-bottom:6px;">Glucides totaux (g)</label>
+              <input type="number" id="gutCarbs" min="0" max="400" placeholder="90" oninput="majGutRate()"
+                style="width:100%;background:rgba(255,255,255,0.03);border:1px solid #2A2D3E;border-radius:10px;padding:10px 12px;color:#F0F0F5;font-size:0.9rem;outline:none;transition:border-color 0.2s;"
+                onfocus="this.style.borderColor='#6C63FF'" onblur="this.style.borderColor='#2A2D3E'" />
+            </div>
+            <div style="flex:1;min-width:140px;">
+              <label style="font-size:0.82rem;color:#8B8FA8;display:block;margin-bottom:6px;">Durée séance (min)</label>
+              <input type="number" id="gutDuration" min="90" max="480" placeholder="120" oninput="majGutRate()"
+                style="width:100%;background:rgba(255,255,255,0.03);border:1px solid #2A2D3E;border-radius:10px;padding:10px 12px;color:#F0F0F5;font-size:0.9rem;outline:none;transition:border-color 0.2s;"
+                onfocus="this.style.borderColor='#6C63FF'" onblur="this.style.borderColor='#2A2D3E'" />
+            </div>
+          </div>
+          <div id="gutRateBox" style="background:rgba(108,99,255,0.08);border:1px solid rgba(108,99,255,0.2);border-radius:10px;padding:12px 14px;display:flex;justify-content:space-between;align-items:center;">
+            <span style="font-size:0.82rem;color:#8B8FA8;">Taux d'absorption</span>
+            <span id="gutRateLabel" style="font-size:1.1rem;font-weight:700;color:#6C63FF;">— g/h</span>
+          </div>
+          <p id="gutRateHint" style="font-size:0.78rem;color:#8B8FA8;margin-top:10px;line-height:1.5;"></p>
+        </div>
+      </div>
+
+      <!-- ════ SECTION 4.6 : ACCLIMATATION CHALEUR ════ -->
+      <div class="card mb-5 fade-in" style="animation-delay:0.34s">
+        <div class="flex items-center gap-3 mb-5">
+          <div style="width:36px;height:36px;background:rgba(255,107,107,0.15);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;">🔥</div>
+          <div>
+            <h2 style="font-size:1rem;font-weight:700;">Acclimatation chaleur</h2>
+            <p style="font-size:0.78rem;color:#8B8FA8;">Thun en juillet = 25-28°C · protocole Périard : 10-14 expos sur 14 jours</p>
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <label style="font-size:0.88rem;font-weight:600;display:block;margin-bottom:10px;">Expo chaleur aujourd'hui ?</label>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;" id="heatBtns">
+            <button class="heat-btn active" data-val="non" onclick="selectHeat(this)">Non</button>
+            <button class="heat-btn"        data-val="oui" onclick="selectHeat(this)">✅ Oui, je logge</button>
+          </div>
+        </div>
+
+        <div id="heatDetails" style="display:none;">
+          <div class="mb-4">
+            <label style="font-size:0.82rem;color:#8B8FA8;display:block;margin-bottom:8px;">Type d'exposition</label>
+            <div style="display:flex;gap:8px;flex-wrap:wrap;" id="heatTypeBtns">
+              <button class="heat-type-btn active" data-val="sortie" onclick="selectHeatType(this)">🏃 Sortie chaleur (>25°C)</button>
+              <button class="heat-type-btn" data-val="sauna" onclick="selectHeatType(this)">🧖 Sauna post-training</button>
+              <button class="heat-type-btn" data-val="bain" onclick="selectHeatType(this)">🛁 Bain chaud 40°C</button>
+            </div>
+          </div>
+          <div>
+            <label style="font-size:0.82rem;color:#8B8FA8;display:block;margin-bottom:6px;">Durée (min)</label>
+            <input type="number" id="heatDuration" min="0" max="180" placeholder="20"
+              style="width:100%;background:rgba(255,255,255,0.03);border:1px solid #2A2D3E;border-radius:10px;padding:10px 12px;color:#F0F0F5;font-size:0.9rem;outline:none;transition:border-color 0.2s;"
+              onfocus="this.style.borderColor='#FF6B6B'" onblur="this.style.borderColor='#2A2D3E'" />
+          </div>
+        </div>
+      </div>
+
+      <!-- ════ SECTION 4.6 : CHECK FRAÎCHEUR MENTALE (Lot 46) ════ -->
+      <div class="card mb-5 fade-in" style="animation-delay:0.345s">
+        <div class="flex items-center gap-3 mb-5">
+          <div style="width:36px;height:36px;background:rgba(169,163,255,0.15);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;">🧠</div>
+          <div>
+            <h2 style="font-size:1rem;font-weight:700;">Fraîcheur mentale</h2>
+            <p style="font-size:0.78rem;color:#8B8FA8;">4 questions rapides — ton rapport à l'effort ce matin</p>
+          </div>
+          <div style="margin-left:auto;text-align:right;">
+            <div id="mentalScore" style="font-size:1.6rem;font-weight:800;color:#A9A3FF;">—</div>
+            <div style="font-size:0.65rem;color:#8B8FA8;">fraîcheur /100</div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+          <div>
+            <label style="font-size:0.82rem;color:#D0D0E0;display:block;margin-bottom:8px;">🔥 Hâte de t'entraîner <span id="hateLabel" style="font-weight:800;color:#FF6B6B;">3/5</span></label>
+            <input type="range" id="hateSlider" min="1" max="5" value="3" step="1" class="mental-slider" style="width:100%;accent-color:#FF6B6B;cursor:pointer;" oninput="document.getElementById('hateLabel').textContent=this.value+'/5';window._updateMentalScore&&window._updateMentalScore()"/>
+            <div style="display:flex;justify-content:space-between;font-size:0.65rem;color:#555870;margin-top:4px;">
+              <span>zéro envie</span><span>normal</span><span>très hâte</span>
+            </div>
+          </div>
+          <div>
+            <label style="font-size:0.82rem;color:#D0D0E0;display:block;margin-bottom:8px;">💡 Clarté mentale <span id="clarityLabel" style="font-weight:800;color:#6C63FF;">3/5</span></label>
+            <input type="range" id="claritySlider" min="1" max="5" value="3" step="1" class="mental-slider" style="width:100%;accent-color:#6C63FF;cursor:pointer;" oninput="document.getElementById('clarityLabel').textContent=this.value+'/5';window._updateMentalScore&&window._updateMentalScore()"/>
+            <div style="display:flex;justify-content:space-between;font-size:0.65rem;color:#555870;margin-top:4px;">
+              <span>brouillard</span><span>correct</span><span>très clair</span>
+            </div>
+          </div>
+          <div>
+            <label style="font-size:0.82rem;color:#D0D0E0;display:block;margin-bottom:8px;">😊 Plaisir à bouger <span id="pleasureLabel" style="font-weight:800;color:#00D4AA;">3/5</span></label>
+            <input type="range" id="pleasureSlider" min="1" max="5" value="3" step="1" class="mental-slider" style="width:100%;accent-color:#00D4AA;cursor:pointer;" oninput="document.getElementById('pleasureLabel').textContent=this.value+'/5';window._updateMentalScore&&window._updateMentalScore()"/>
+            <div style="display:flex;justify-content:space-between;font-size:0.65rem;color:#555870;margin-top:4px;">
+              <span>contrainte</span><span>neutre</span><span>jouissif</span>
+            </div>
+          </div>
+          <div>
+            <label style="font-size:0.82rem;color:#D0D0E0;display:block;margin-bottom:8px;">🎯 Concentration <span id="focusLabel" style="font-weight:800;color:#FFD166;">3/5</span></label>
+            <input type="range" id="focusSlider" min="1" max="5" value="3" step="1" class="mental-slider" style="width:100%;accent-color:#FFD166;cursor:pointer;" oninput="document.getElementById('focusLabel').textContent=this.value+'/5';window._updateMentalScore&&window._updateMentalScore()"/>
+            <div style="display:flex;justify-content:space-between;font-size:0.65rem;color:#555870;margin-top:4px;">
+              <span>dispersé</span><span>normal</span><span>tunnel</span>
+            </div>
+          </div>
+        </div>
+        <div id="mentalFeedback" style="margin-top:14px;padding:10px 12px;background:rgba(169,163,255,0.08);border-left:3px solid #A9A3FF;border-radius:6px;font-size:0.78rem;color:#D0D0E0;line-height:1.5;"></div>
+      </div>
+
+      <!-- ════ SECTION 5 : TEXTE LIBRE ════ -->
+      <div class="card mb-6 fade-in" style="animation-delay:0.35s">
+        <div class="flex items-center gap-3 mb-4">
+          <div style="width:36px;height:36px;background:rgba(108,99,255,0.15);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;">✍️</div>
+          <div>
+            <h2 style="font-size:1rem;font-weight:700;">Ce que tu as envie de dire</h2>
+            <p style="font-size:0.78rem;color:#8B8FA8;">Libre, sans filtre — personne ne juge ici</p>
+          </div>
+        </div>
+        <textarea id="texteLibre" placeholder="Comment tu vas ? Qu'est-ce qui t'a traversé l'esprit ce matin ? Une inquiétude, une envie, quelque chose que tu remarques sur toi…"
+          style="width:100%;background:rgba(255,255,255,0.03);border:1px solid #2A2D3E;border-radius:12px;padding:14px;color:#F0F0F5;font-size:0.88rem;line-height:1.6;resize:vertical;min-height:120px;outline:none;font-family:inherit;transition:border-color 0.2s;"
+          onfocus="this.style.borderColor='#6C63FF'" onblur="this.style.borderColor='#2A2D3E'"></textarea>
+        <div style="text-align:right;font-size:0.72rem;color:#555870;margin-top:4px;" id="charCount">0 / 500</div>
+      </div>
+
+      <!-- ════ SECTION 5b : LOGBOOK — entrées précédentes (Lot 40) ════ -->
+      <div id="logbookCard" class="card mb-6 fade-in" style="animation-delay:0.36s;display:none;">
+        <div class="flex items-center justify-between mb-3">
+          <div class="flex items-center gap-3">
+            <div style="width:36px;height:36px;background:rgba(169,163,255,0.15);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;">📒</div>
+            <div>
+              <h2 style="font-size:1rem;font-weight:700;">Logbook — tes précédentes notes</h2>
+              <p style="font-size:0.78rem;color:#8B8FA8;" id="logbookSub">—</p>
+            </div>
+          </div>
+          <input type="text" id="logbookSearch" placeholder="🔎 Rechercher…" style="background:rgba(255,255,255,0.04);border:1px solid #2A2D3E;border-radius:10px;padding:6px 12px;color:#F0F0F5;font-size:0.78rem;outline:none;width:160px;"/>
+        </div>
+        <div id="logbookTagFilter" style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px;"></div>
+        <div id="logbookList" style="display:flex;flex-direction:column;gap:10px;max-height:360px;overflow-y:auto;"></div>
+        <p id="logbookEmpty" style="display:none;text-align:center;font-size:0.82rem;color:#8B8FA8;padding:20px;">Aucune entrée enregistrée. Écris ton premier ressenti ci-dessus.</p>
+      </div>
+
+      <!-- ─── BOUTON ENREGISTRER ─── -->
+      <div class="fade-in" style="animation-delay:0.4s">
+        <button onclick="enregistrerJournal()" class="btn-primary" style="width:100%;padding:14px;font-size:1rem;border-radius:14px;">
+          Enregistrer mon journal du jour →
+        </button>
+        <p style="text-align:center;font-size:0.75rem;color:#555870;margin-top:10px;">
+          Ces données alimentent ton profil et affinent les recommandations du coach IA.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- ─── CONFIRMATION (caché par défaut) ─── -->
+    <div id="confirmationJournal" style="display:none;" class="fade-in">
+      <div class="card text-center" style="padding:3rem 2rem;">
+        <div style="font-size:3rem;margin-bottom:1rem;">✅</div>
+        <h2 style="font-size:1.3rem;font-weight:800;margin-bottom:8px;">Journal enregistré</h2>
+        <p style="color:#8B8FA8;font-size:0.9rem;margin-bottom:1.5rem;line-height:1.6;" id="confirmMsg">
+          —
+        </p>
+        <!-- Analyse IA -->
+        <div style="background:rgba(108,99,255,0.08);border:1px solid rgba(108,99,255,0.2);border-radius:12px;padding:1.25rem;margin-bottom:1.5rem;text-align:left;">
+          <div style="display:flex;align-items:center;gap:6px;margin-bottom:8px;">
+            <span>🤖</span>
+            <span style="font-size:0.75rem;font-weight:600;color:#6C63FF;text-transform:uppercase;letter-spacing:0.05em;">Lecture du coach IA</span>
+          </div>
+          <p id="iaLecture" style="font-size:0.88rem;color:#D0D0E0;line-height:1.6;font-style:italic;"></p>
+        </div>
+        <div style="display:flex;gap:10px;justify-content:center;">
+          <a href="index.html" class="btn-primary" style="text-decoration:none;display:inline-flex;align-items:center;gap:6px;">📊 Voir mon dashboard</a>
+          <button onclick="nouveauJournal()" class="btn-ghost">Modifier</button>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<!-- ═══ SCRIPTS ═══ -->
+<script src="js/data.js"></script>
+<script src="js/scoring.js"></script>
+<script src="js/profile.js"></script>
+<script src="js/data-benoit.js" onerror="void 0"></script>
+<script src="js/observations-strava.js" onerror="void 0"></script>
+<script src="js/observations-whoop.js" onerror="void 0"></script>
+<script src="js/history.js" onerror="void 0"></script>
+<script src="js/plan-generator.js"></script>
+<script src="js/journal.js"></script>
+
+<style>
+/* Styles spécifiques journal */
+.douleur-btn, .event-btn {
+  padding: 7px 14px;
+  border-radius: 20px;
+  border: 1px solid #2A2D3E;
+  background: transparent;
+  color: #8B8FA8;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.douleur-btn:hover, .event-btn:hover { border-color: #6C63FF; color: #F0F0F5; }
+.douleur-btn.active { background: rgba(108,99,255,0.12); border-color: #6C63FF; color: #6C63FF; }
+.event-btn.active   { background: rgba(108,99,255,0.12); border-color: #6C63FF; color: #6C63FF; }
+
+.zone-btn {
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1px solid #2A2D3E;
+  background: transparent;
+  color: #8B8FA8;
+  font-size: 0.78rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.zone-btn.active { background: rgba(255,107,107,0.12); border-color: #FF6B6B; color: #FF6B6B; }
+
+.gut-btn {
+  padding: 7px 14px;
+  border-radius: 20px;
+  border: 1px solid #2A2D3E;
+  background: transparent;
+  color: #8B8FA8;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.gut-btn:hover { border-color: #00D4AA; color: #F0F0F5; }
+.gut-btn.active { background: rgba(0,212,170,0.12); border-color: #00D4AA; color: #00D4AA; }
+
+.heat-btn, .heat-type-btn {
+  padding: 7px 14px;
+  border-radius: 20px;
+  border: 1px solid #2A2D3E;
+  background: transparent;
+  color: #8B8FA8;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.heat-btn:hover, .heat-type-btn:hover { border-color: #FF6B6B; color: #F0F0F5; }
+.heat-btn.active, .heat-type-btn.active {
+  background: rgba(255,107,107,0.12);
+  border-color: #FF6B6B;
+  color: #FF6B6B;
+}
+
+.qualite-btn, .humeur-btn {
+  padding: 10px 6px;
+  border-radius: 12px;
+  border: 1px solid #2A2D3E;
+  background: transparent;
+  color: #8B8FA8;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: center;
+}
+.qualite-btn:hover, .humeur-btn:hover { border-color: #6C63FF; }
+.qualite-btn.active, .humeur-btn.active {
+  background: rgba(108,99,255,0.15);
+  border-color: #6C63FF;
+  transform: scale(1.08);
+}
+</style>
+<script src="js/mobile-nav.js"></script>
+</body>
+</html>

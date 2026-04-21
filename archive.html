@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coach IA 2030 — Mes Semaines</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#6C63FF" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Coach IA" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));
+    }
+  </script>
+  <style>
+    .week-card {
+      background:#1A1D27; border:1px solid #2A2D3E; border-radius:14px;
+      padding:16px; cursor:pointer; transition:all .2s ease;
+      display:flex; flex-direction:column; gap:10px; position:relative; overflow:hidden;
+    }
+    .week-card:hover { transform:translateY(-2px); border-color:rgba(108,99,255,0.4); }
+    .week-card .sig-band {
+      position:absolute; top:0; left:0; right:0; height:3px;
+    }
+    .day-pill {
+      width:100%; aspect-ratio:1; border-radius:8px;
+      display:flex; flex-direction:column; align-items:center; justify-content:center;
+      font-size:0.62rem; color:#F0F0F5; padding:4px;
+      background:#22263A; border:1px solid #2A2D3E;
+    }
+    .voice-block {
+      background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.06);
+      border-radius:10px; padding:14px;
+    }
+    .voice-dot { width:8px; height:8px; border-radius:50%; display:inline-block; }
+    .det-item {
+      display:flex; gap:8px; align-items:flex-start; padding:8px 0;
+      border-bottom:1px solid rgba(255,255,255,0.04); font-size:0.78rem;
+    }
+    .det-item:last-child { border-bottom:none; }
+    .sev-alert { color:#FF6B6B; }
+    .sev-warn  { color:#FFD166; }
+    .sev-info  { color:#A9A3FF; }
+    .sev-win   { color:#00D4AA; }
+    .sim-card {
+      background:rgba(108,99,255,0.06); border:1px solid rgba(108,99,255,0.2);
+      border-radius:10px; padding:10px; font-size:0.78rem; color:#D0D0E0;
+      cursor:pointer; transition:background .2s ease;
+    }
+    .sim-card:hover { background:rgba(108,99,255,0.12); }
+  </style>
+</head>
+<body>
+
+<div class="flex min-h-screen">
+
+  <!-- ─── SIDEBAR ─── -->
+  <aside style="width:240px;background:#13151F;border-right:1px solid #2A2D3E;" class="flex flex-col flex-shrink-0 p-5">
+    <div class="mb-8">
+      <a href="accueil.html" style="text-decoration:none;">
+        <div class="flex items-center gap-2 mb-1" style="cursor:pointer;">
+          <div style="width:32px;height:32px;background:linear-gradient(135deg,#6C63FF,#00D4AA);border-radius:8px;display:flex;align-items:center;justify-content:center;">
+            <span style="color:white;font-weight:800;font-size:14px;">C</span>
+          </div>
+          <span style="font-weight:700;font-size:1rem;color:#F0F0F5;">Coach IA</span>
+          <span style="font-size:0.65rem;color:#6C63FF;background:rgba(108,99,255,0.15);padding:2px 6px;border-radius:4px;font-weight:600;">2030</span>
+        </div>
+      </a>
+      <p style="font-size:0.7rem;color:#555870;margin-top:4px;">Niveau Solo Athlete</p>
+      <span style="font-size:0.62rem;color:#FF6B6B;background:rgba(255,107,107,0.1);border:1px solid rgba(255,107,107,0.2);padding:2px 6px;border-radius:4px;font-weight:600;margin-top:4px;display:inline-block;">PROTOTYPE</span>
+    </div>
+    <nav class="flex flex-col gap-1 flex-1">
+      <a href="index.html" class="nav-link"><span>📊</span> Dashboard</a>
+      <a href="journal.html" class="nav-link"><span>📝</span> Journal du jour</a>
+      <a href="vue360.html" class="nav-link"><span>🔭</span> Vue 360°</a>
+      <a href="historique.html" class="nav-link"><span>📈</span> Historique</a>
+      <a href="archive.html" class="nav-link active"><span>📚</span> Mes Semaines</a>
+      <div style="height:1px;background:#2A2D3E;margin:12px 0;"></div>
+      <a href="objectifs.html" class="nav-link"><span>🎯</span> Objectifs</a>
+      <a href="parametres.html" class="nav-link"><span>⚙️</span> Paramètres</a>
+    </nav>
+    <div style="border-top:1px solid #2A2D3E;padding-top:16px;">
+      <p style="font-size:0.7rem;color:#555870;margin-bottom:8px;text-transform:uppercase;letter-spacing:0.05em;">Athlète actif</p>
+      <div class="athlete-selector flex-col gap-1">
+        <button class="athlete-btn active" data-athlete="benoit">Benoît L.</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ─── CONTENU ─── -->
+  <main class="flex-1 overflow-y-auto p-8">
+
+    <div class="flex items-start justify-between mb-6 fade-in">
+      <div>
+        <p style="color:#8B8FA8;font-size:0.85rem;margin-bottom:4px;" id="archSubtitle">—</p>
+        <h1 style="font-size:1.75rem;font-weight:800;color:#F0F0F5;">Mes Semaines</h1>
+        <p style="color:#8B8FA8;font-size:0.9rem;margin-top:4px;">Chaque semaine raconte une histoire. Clique pour entrer dans le détail.</p>
+      </div>
+      <div style="display:flex;gap:6px;background:#13151F;border:1px solid #2A2D3E;border-radius:10px;padding:4px;" id="periodeBtns">
+        <button class="periode-btn active" data-n="12">12 sem.</button>
+        <button class="periode-btn" data-n="26">26 sem.</button>
+        <button class="periode-btn" data-n="52">52 sem.</button>
+      </div>
+    </div>
+
+    <!-- Légende signatures -->
+    <div class="card mb-6 fade-in" style="padding:14px 18px;animation-delay:0.1s;">
+      <div style="font-size:0.7rem;font-weight:600;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px;">Signatures</div>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;font-size:0.75rem;color:#D0D0E0;" id="legendSignatures"></div>
+    </div>
+
+    <!-- Grid des semaines -->
+    <div class="grid gap-4 fade-in" style="grid-template-columns:repeat(auto-fill,minmax(220px,1fr));animation-delay:0.15s;" id="weeksGrid">
+      <!-- injecté JS -->
+    </div>
+
+    <!-- Drill-down panel -->
+    <div id="drillPanel" style="display:none;margin-top:28px;" class="fade-in">
+      <div class="card" style="padding:24px;">
+
+        <div class="flex items-start justify-between mb-4">
+          <div>
+            <p id="drillDates" style="color:#8B8FA8;font-size:0.82rem;margin-bottom:2px;">—</p>
+            <h2 id="drillTitle" style="font-size:1.4rem;font-weight:800;color:#F0F0F5;">—</h2>
+            <p id="drillSignature" style="font-size:0.9rem;margin-top:4px;">—</p>
+          </div>
+          <button onclick="fermerDrill()" style="background:transparent;border:1px solid #2A2D3E;color:#8B8FA8;padding:6px 12px;border-radius:8px;cursor:pointer;font-size:0.8rem;">Fermer</button>
+        </div>
+
+        <!-- Metrics row -->
+        <div class="grid gap-3 mb-5" style="grid-template-columns:repeat(auto-fill,minmax(130px,1fr));" id="drillMetrics"></div>
+
+        <!-- Comparaison S vs S-1 -->
+        <div id="drillCompare" style="margin-bottom:22px;display:none;">
+          <div style="font-size:0.72rem;font-weight:700;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px;">Comparée à la semaine précédente</div>
+          <div class="grid gap-2" id="drillCompareGrid" style="grid-template-columns:repeat(auto-fill,minmax(150px,1fr));"></div>
+          <p id="drillCompareNarrative" style="font-size:0.82rem;color:#8B8FA8;margin-top:12px;line-height:1.5;"></p>
+        </div>
+
+        <!-- 7-day strip -->
+        <div style="margin-bottom:22px;">
+          <div style="font-size:0.72rem;font-weight:700;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px;">Strip 7 jours</div>
+          <div class="grid gap-2" style="grid-template-columns:repeat(7,1fr);" id="dayStrip"></div>
+        </div>
+
+        <!-- 3 voix -->
+        <div style="margin-bottom:22px;">
+          <div style="font-size:0.72rem;font-weight:700;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px;">Ce que disent les trois voix</div>
+          <div class="grid gap-3" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr));" id="voicesBlock"></div>
+        </div>
+
+        <!-- Events + Similar -->
+        <div class="grid gap-4" style="grid-template-columns:1fr 1fr;">
+          <div>
+            <div style="font-size:0.72rem;font-weight:700;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px;">Événements</div>
+            <div id="eventsList" style="font-size:0.82rem;color:#D0D0E0;"></div>
+          </div>
+          <div>
+            <div style="font-size:0.72rem;font-weight:700;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px;">Semaines similaires</div>
+            <div id="similarList" class="flex flex-col gap-2"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<!-- Modal drill-down jour -->
+<div id="modalDay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.75);z-index:1000;align-items:center;justify-content:center;padding:20px;">
+  <div style="background:#1A1D27;max-width:520px;width:100%;border-radius:16px;padding:24px;border:1px solid rgba(108,99,255,0.2);max-height:85vh;overflow-y:auto;">
+    <div class="flex items-center justify-between mb-4">
+      <h3 id="modalDayTitle" style="font-size:1rem;font-weight:700;color:#F0F0F5;">—</h3>
+      <button onclick="fermerDay()" style="background:transparent;border:none;color:#8B8FA8;font-size:1.5rem;cursor:pointer;line-height:1;">×</button>
+    </div>
+    <div id="modalDayBody"></div>
+  </div>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/scoring.js"></script>
+<script src="js/profile.js"></script>
+<script src="js/data-benoit.js" onerror="console.info('data-benoit absent')"></script>
+<script src="js/observations-strava.js" onerror="console.info('obs-strava absent')"></script>
+<script src="js/observations-whoop.js" onerror="console.info('obs-whoop absent')"></script>
+<script src="js/history.js" onerror="console.info('history.js absent — run scripts/backfill.js')"></script>
+<script src="js/detectors.js"></script>
+<script src="js/mobile-nav.js"></script>
+<script src="js/archive.js"></script>
+
+</body>
+</html>

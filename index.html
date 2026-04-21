@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coach IA 2030 — Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#6C63FF" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Coach IA" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));
+    }
+  </script>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════
+     LAYOUT PRINCIPAL
+═══════════════════════════════════════ -->
+<div class="flex min-h-screen">
+
+  <!-- ─── SIDEBAR ─── -->
+  <aside style="width:240px; background:#13151F; border-right:1px solid #2A2D3E;" class="flex flex-col flex-shrink-0 p-5">
+
+    <!-- Logo -->
+    <div class="mb-8">
+      <a href="accueil.html" style="text-decoration:none;">
+        <div class="flex items-center gap-2 mb-1" style="cursor:pointer;">
+          <div style="width:32px;height:32px;background:linear-gradient(135deg,#6C63FF,#00D4AA);border-radius:8px;display:flex;align-items:center;justify-content:center;">
+            <span style="color:white;font-weight:800;font-size:14px;">C</span>
+          </div>
+          <span style="font-weight:700;font-size:1rem;color:#F0F0F5;">Coach IA</span>
+          <span style="font-size:0.65rem;color:#6C63FF;background:rgba(108,99,255,0.15);padding:2px 6px;border-radius:4px;font-weight:600;">2030</span>
+        </div>
+      </a>
+      <p style="font-size:0.7rem;color:#555870;margin-top:4px;">Niveau Solo Athlete</p>
+      <span style="font-size:0.62rem;color:#FF6B6B;background:rgba(255,107,107,0.1);border:1px solid rgba(255,107,107,0.2);padding:2px 6px;border-radius:4px;font-weight:600;margin-top:4px;display:inline-block;">PROTOTYPE</span>
+    </div>
+
+    <!-- Nav -->
+    <nav class="flex flex-col gap-1 flex-1">
+      <a href="index.html" class="nav-link active">
+        <span>📊</span> Dashboard
+      </a>
+      <a href="journal.html" class="nav-link">
+        <span>📝</span> Journal du jour
+      </a>
+      <a href="vue360.html" class="nav-link">
+        <span>🔭</span> Vue 360°
+      </a>
+      <div style="height:1px;background:#2A2D3E;margin:12px 0;"></div>
+      <a href="historique.html" class="nav-link">
+        <span>📈</span> Historique
+      </a>
+      <a href="archive.html" class="nav-link"><span>📚</span> Mes Semaines</a>
+      <a href="objectifs.html" class="nav-link"><span>🎯</span> Objectifs</a>
+      <a href="parametres.html" class="nav-link"><span>⚙️</span> Paramètres</a>
+    </nav>
+
+    <!-- Sélecteur athlète -->
+    <div style="border-top:1px solid #2A2D3E;padding-top:16px;">
+      <p style="font-size:0.7rem;color:#555870;margin-bottom:8px;text-transform:uppercase;letter-spacing:0.05em;">Athlète actif</p>
+      <div class="athlete-selector flex-col gap-1" id="athleteSelector">
+        <button class="athlete-btn active" data-athlete="benoit">Benoît L.</button>
+      </div>
+    </div>
+
+  </aside>
+
+  <!-- ─── CONTENU PRINCIPAL ─── -->
+  <main class="flex-1 overflow-y-auto p-8" id="mainContent">
+
+    <!-- HEADER -->
+    <div class="flex items-start justify-between mb-8 fade-in">
+      <div>
+        <p style="color:#8B8FA8;font-size:0.85rem;margin-bottom:4px;" id="headerDate">Vendredi 18 avril 2026</p>
+        <h1 style="font-size:1.75rem;font-weight:800;color:#F0F0F5;" id="headerTitle">Bonjour, Benoît 👋</h1>
+        <p style="color:#8B8FA8;font-size:0.9rem;margin-top:4px;" id="headerObjectif">Objectif : Ironman Switzerland Thun — 5 juillet 2026</p>
+      </div>
+      <!-- Score forme global -->
+      <div class="card card-sm text-center" style="min-width:140px;">
+        <p style="font-size:0.75rem;color:#8B8FA8;margin-bottom:8px;text-transform:uppercase;letter-spacing:0.05em;">Forme du jour</p>
+        <div class="score-ring" style="width:80px;height:80px;margin:0 auto 8px;cursor:pointer;" onclick="ouvrirModalScore()" title="Pourquoi ce score ?">
+          <svg width="80" height="80" id="scoreRingSvg">
+            <circle cx="40" cy="40" r="32" fill="none" stroke="#2A2D3E" stroke-width="6"/>
+            <circle cx="40" cy="40" r="32" fill="none" stroke="#6C63FF" stroke-width="6"
+              stroke-linecap="round" id="scoreRingFill" class="ring-animated"
+              stroke-dasharray="201" stroke-dashoffset="201"/>
+          </svg>
+          <div class="score-text">
+            <div style="font-size:1.4rem;font-weight:800;color:#F0F0F5;" id="scoreValue">—</div>
+          </div>
+        </div>
+        <div id="scoreBadge"></div>
+        <div id="scoreCI" style="font-size:0.68rem;color:#8B8FA8;margin-top:4px;"></div>
+        <div style="font-size:0.65rem;color:#555870;margin-top:6px;cursor:pointer;" onclick="ouvrirModalScore()">Pourquoi ce score ? →</div>
+      </div>
+    </div>
+
+    <!-- BRIEFING MATIN AUTO (Lot 42) -->
+    <div id="morningBriefCard" class="mb-6 fade-in" style="animation-delay:0.07s;display:none;position:relative;overflow:hidden;border-radius:16px;padding:20px 22px;background:linear-gradient(135deg,rgba(108,99,255,0.12),rgba(0,212,170,0.06));border:1px solid rgba(108,99,255,0.22);">
+      <div style="position:absolute;top:-40px;right:-40px;width:160px;height:160px;background:radial-gradient(circle,rgba(108,99,255,0.18),transparent 70%);border-radius:50%;pointer-events:none;"></div>
+      <div style="display:flex;align-items:flex-start;gap:14px;position:relative;">
+        <div style="font-size:1.8rem;line-height:1;" id="morningBriefIcon">☀️</div>
+        <div style="flex:1;">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px;">
+            <span id="morningBriefSalut" style="font-size:0.72rem;font-weight:700;color:#A9A3FF;text-transform:uppercase;letter-spacing:0.06em;">Briefing du matin</span>
+            <span id="morningBriefDate" style="font-size:0.72rem;color:#8B8FA8;">—</span>
+          </div>
+          <h2 style="font-size:1.1rem;font-weight:800;color:#F0F0F5;margin-bottom:8px;" id="morningBriefTitle">—</h2>
+          <p style="font-size:0.88rem;color:#D0D0E0;line-height:1.6;" id="morningBriefBody">—</p>
+          <div id="morningBriefKpis" style="display:flex;gap:14px;margin-top:12px;flex-wrap:wrap;"></div>
+          <div id="morningBriefFocus" style="margin-top:12px;padding:10px 12px;background:rgba(255,255,255,0.04);border-left:3px solid #6C63FF;border-radius:6px;font-size:0.82rem;color:#F0F0F5;line-height:1.5;"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RAPPORT HEBDO AUTO -->
+    <div id="weeklyReviewCard" class="card mb-6 fade-in" style="animation-delay:0.08s;display:none;">
+      <div class="flex items-start justify-between mb-4">
+        <div>
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+            <span style="font-size:1.1rem;">📊</span>
+            <span id="weeklyReviewLabel" style="font-size:0.7rem;font-weight:700;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.08em;">Semaine close</span>
+          </div>
+          <h2 style="font-size:1.1rem;font-weight:800;color:#F0F0F5;" id="weeklyReviewTitle">—</h2>
+          <p style="font-size:0.8rem;color:#8B8FA8;margin-top:4px;" id="weeklyReviewSubtitle">—</p>
+        </div>
+        <span id="weeklyReviewSigBadge" class="badge">—</span>
+      </div>
+      <div class="grid gap-3 mb-4" style="grid-template-columns:repeat(auto-fit,minmax(110px,1fr));" id="weeklyReviewStats"></div>
+      <div id="weeklyReviewPoints" style="display:flex;flex-direction:column;gap:10px;margin-bottom:4px;"></div>
+      <div id="weeklyReviewNext" style="margin-top:14px;padding:12px;background:rgba(108,99,255,0.06);border:1px solid rgba(108,99,255,0.2);border-radius:10px;font-size:0.82rem;color:#D0D0E0;line-height:1.5;"></div>
+    </div>
+
+    <!-- ALERTE INTELLIGENTE -->
+    <div id="alerteBanner" class="alerte-banner mb-6 fade-in" style="animation-delay:0.1s">
+      <div style="font-size:1.5rem;line-height:1;" id="alerteIcone">✅</div>
+      <div class="flex-1">
+        <div style="font-weight:700;font-size:0.95rem;margin-bottom:4px;" id="alerteTitre">—</div>
+        <p style="font-size:0.85rem;color:#8B8FA8;line-height:1.5;" id="alerteMessage">—</p>
+      </div>
+      <button class="btn-ghost" style="white-space:nowrap;font-size:0.8rem;" id="alerteAction">Voir →</button>
+    </div>
+
+    <!-- GRILLE 2 COL -->
+    <div class="grid gap-6" style="grid-template-columns:1fr 1fr;">
+
+      <!-- DERNIÈRE SÉANCE -->
+      <div class="card fade-in" style="animation-delay:0.15s">
+        <div class="flex items-center justify-between mb-4">
+          <h2 style="font-size:0.8rem;font-weight:600;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;">Dernière séance</h2>
+          <span class="badge badge-violet" id="seanceDate">—</span>
+        </div>
+
+        <div class="flex items-center gap-4 mb-4">
+          <div style="width:52px;height:52px;background:rgba(108,99,255,0.15);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;" id="seanceIcone">—</div>
+          <div>
+            <div style="font-size:1.2rem;font-weight:700;" id="seanceType">—</div>
+            <div style="color:#8B8FA8;font-size:0.85rem;" id="seanceStats">—</div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between mb-3">
+          <span style="font-size:0.85rem;color:#8B8FA8;">Ressenti</span>
+          <div class="flex items-center gap-2">
+            <span class="ressenti-stars" id="seanceEtoiles">—</span>
+            <span style="font-size:0.8rem;color:#8B8FA8;" id="seanceRessentLabel">—</span>
+          </div>
+        </div>
+
+        <p style="font-size:0.85rem;color:#8B8FA8;line-height:1.5;border-top:1px solid #2A2D3E;padding-top:12px;" id="seanceNote">—</p>
+      </div>
+
+      <!-- ÉTAT DE FORME -->
+      <div class="card fade-in" style="animation-delay:0.2s">
+        <h2 style="font-size:0.8rem;font-weight:600;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:1rem;">État de forme</h2>
+
+        <div class="grid gap-3" style="grid-template-columns:1fr 1fr;">
+
+          <div style="background:rgba(0,212,170,0.08);border:1px solid rgba(0,212,170,0.2);border-radius:12px;padding:12px;">
+            <div style="font-size:0.75rem;color:#8B8FA8;margin-bottom:4px;">HRV</div>
+            <div style="font-size:1.4rem;font-weight:700;color:#00D4AA;" id="formeHRV">—</div>
+            <div style="font-size:0.72rem;color:#8B8FA8;">ms ce matin</div>
+          </div>
+
+          <div style="background:rgba(108,99,255,0.08);border:1px solid rgba(108,99,255,0.2);border-radius:12px;padding:12px;">
+            <div style="font-size:0.75rem;color:#8B8FA8;margin-bottom:4px;">Sommeil</div>
+            <div style="font-size:1.4rem;font-weight:700;color:#6C63FF;" id="formeSommeil">—</div>
+            <div style="font-size:0.72rem;color:#8B8FA8;" id="formeSommeilQualite">—</div>
+          </div>
+
+          <div style="grid-column:1/-1;">
+            <div class="flex justify-between mb-1">
+              <span style="font-size:0.8rem;color:#8B8FA8;">Charge aiguë / chronique</span>
+              <span style="font-size:0.8rem;font-weight:600;" id="formeRatio">—</span>
+            </div>
+            <div class="flex gap-2 mb-2">
+              <div class="flex-1">
+                <div style="font-size:0.7rem;color:#8B8FA8;margin-bottom:4px;">Aiguë (7j)</div>
+                <div class="progress-bar">
+                  <div class="progress-fill" id="barAigue" style="background:#FF6B6B;width:0%"></div>
+                </div>
+                <div style="font-size:0.75rem;font-weight:600;margin-top:2px;" id="valAigue">—</div>
+              </div>
+              <div class="flex-1">
+                <div style="font-size:0.7rem;color:#8B8FA8;margin-bottom:4px;">Chronique (28j)</div>
+                <div class="progress-bar">
+                  <div class="progress-fill" id="barChronique" style="background:#6C63FF;width:0%"></div>
+                </div>
+                <div style="font-size:0.75rem;font-weight:600;margin-top:2px;" id="valChronique">—</div>
+              </div>
+            </div>
+            <div id="ratioInterpretation" style="font-size:0.8rem;color:#8B8FA8;"></div>
+          </div>
+
+          <!-- Base aérobie (decoupling Friel) — ajouté en P1-a.5 -->
+          <div id="decouplingBlock" style="grid-column:1/-1;border-top:1px solid #2A2D3E;padding-top:12px;display:none;">
+            <div class="flex justify-between mb-1">
+              <span style="font-size:0.8rem;color:#8B8FA8;">Base aérobie (dérive Friel)</span>
+              <span style="font-size:0.8rem;font-weight:600;" id="decouplingValue">—</span>
+            </div>
+            <div id="decouplingInterpretation" style="font-size:0.78rem;color:#8B8FA8;"></div>
+          </div>
+
+          <div id="heatBlock" style="grid-column:1/-1;border-top:1px solid #2A2D3E;padding-top:12px;display:none;">
+            <div class="flex justify-between items-center mb-2">
+              <span style="font-size:0.8rem;color:#8B8FA8;">🔥 Acclimatation chaleur (14j)</span>
+              <span style="font-size:0.8rem;font-weight:700;" id="heatValue">—</span>
+            </div>
+            <div style="height:6px;background:#2A2D3E;border-radius:3px;overflow:hidden;margin-bottom:6px;">
+              <div id="heatProgress" style="height:100%;width:0%;background:linear-gradient(90deg,#FF6B6B,#FFD166,#00D4AA);transition:width 0.4s ease;"></div>
+            </div>
+            <div id="heatInterpretation" style="font-size:0.78rem;color:#8B8FA8;"></div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- PLAN 7 JOURS -->
+    <div class="card mt-6 fade-in" style="animation-delay:0.25s">
+      <div class="flex items-center justify-between mb-3">
+        <h2 style="font-size:0.8rem;font-weight:600;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;">Plan des 7 prochains jours</h2>
+        <div class="flex items-center gap-2">
+          <span id="planModeBadge" class="badge badge-violet" style="display:none;"></span>
+          <button id="planWhyBtn" type="button" aria-label="Pourquoi ce plan" style="background:transparent;border:1px solid rgba(108,99,255,0.35);color:#A9A3FF;font-size:0.68rem;padding:4px 10px;border-radius:12px;cursor:pointer;display:none;">Pourquoi ce plan&nbsp;?</button>
+        </div>
+      </div>
+      <div id="planSubtitle" style="font-size:0.78rem;color:#8B8FA8;margin-bottom:16px;display:none;"></div>
+      <div class="grid gap-3" style="grid-template-columns:repeat(7,1fr);" id="planGrid">
+        <!-- injecté par JS -->
+      </div>
+
+      <!-- Détail séance au survol -->
+      <div id="planDetail" style="margin-top:16px;padding:12px;background:rgba(108,99,255,0.08);border:1px solid rgba(108,99,255,0.2);border-radius:10px;display:none;">
+        <div style="font-size:0.85rem;color:#F0F0F5;" id="planDetailTexte">—</div>
+      </div>
+    </div>
+
+    <!-- PRÉVISION FATIGUE 7J -->
+    <div id="forecastCard" class="card mt-6 fade-in" style="animation-delay:0.28s;display:none;">
+      <div class="flex items-center justify-between mb-3">
+        <div>
+          <h2 style="font-size:0.8rem;font-weight:600;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;">Prévision fatigue &amp; charge J+7</h2>
+          <p style="font-size:0.75rem;color:#8B8FA8;margin-top:4px;" id="forecastSub">Projection si tu suis le plan ci-dessus</p>
+        </div>
+        <span id="forecastBadge" class="badge">—</span>
+      </div>
+      <div style="position:relative;height:160px;">
+        <svg id="forecastChart" width="100%" height="160" style="overflow:visible;"></svg>
+      </div>
+      <div style="display:flex;justify-content:space-between;margin-top:6px;padding:0 4px;font-size:0.7rem;color:#8B8FA8;" id="forecastLabels"></div>
+      <p id="forecastSummary" style="font-size:0.82rem;color:#D0D0E0;margin-top:14px;line-height:1.5;"></p>
+    </div>
+
+    <!-- STREAK TRACKER (Lot 33) -->
+    <div id="streakCard" class="card mt-6 fade-in" style="animation-delay:0.282s;display:none;">
+      <div class="flex items-center justify-between mb-4">
+        <div>
+          <h2 style="font-size:0.8rem;font-weight:600;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;">Streaks</h2>
+          <p style="font-size:0.75rem;color:#8B8FA8;margin-top:4px;">Régularité sur les 30 derniers jours</p>
+        </div>
+      </div>
+      <div class="grid gap-3" style="grid-template-columns:repeat(3,1fr);">
+        <div style="padding:14px;background:rgba(108,99,255,0.06);border:1px solid rgba(108,99,255,0.18);border-radius:12px;">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px;">
+            <span style="font-size:0.8rem;color:#8B8FA8;">🏃 Séances</span>
+            <span id="streakSessionsCount" style="font-size:1.5rem;font-weight:800;color:#6C63FF;">—</span>
+          </div>
+          <div id="streakSessionsSub" style="font-size:0.7rem;color:#8B8FA8;">—</div>
+          <div id="streakSessionsBar" style="display:flex;gap:2px;margin-top:8px;"></div>
+        </div>
+        <div style="padding:14px;background:rgba(0,212,170,0.06);border:1px solid rgba(0,212,170,0.18);border-radius:12px;">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px;">
+            <span style="font-size:0.8rem;color:#8B8FA8;">🌙 Sommeil 7h+</span>
+            <span id="streakSleepCount" style="font-size:1.5rem;font-weight:800;color:#00D4AA;">—</span>
+          </div>
+          <div id="streakSleepSub" style="font-size:0.7rem;color:#8B8FA8;">—</div>
+          <div id="streakSleepBar" style="display:flex;gap:2px;margin-top:8px;"></div>
+        </div>
+        <div style="padding:14px;background:rgba(255,209,102,0.06);border:1px solid rgba(255,209,102,0.18);border-radius:12px;">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px;">
+            <span style="font-size:0.8rem;color:#8B8FA8;">📝 Journal</span>
+            <span id="streakJournalCount" style="font-size:1.5rem;font-weight:800;color:#FFD166;">—</span>
+          </div>
+          <div id="streakJournalSub" style="font-size:0.7rem;color:#8B8FA8;">—</div>
+          <div id="streakJournalBar" style="display:flex;gap:2px;margin-top:8px;"></div>
+        </div>
+      </div>
+      <p id="streakNarrative" style="font-size:0.78rem;color:#8B8FA8;margin-top:14px;line-height:1.5;"></p>
+    </div>
+
+    <!-- RÉSUMÉ HEBDO AUTO (Lot 34) -->
+    <div id="weeklyRecapCard" class="card mt-6 fade-in" style="animation-delay:0.284s;display:none;">
+      <div class="flex items-center justify-between mb-4">
+        <div>
+          <h2 style="font-size:0.8rem;font-weight:600;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;">Résumé de la semaine</h2>
+          <p style="font-size:0.75rem;color:#8B8FA8;margin-top:4px;" id="weeklyRecapSub">—</p>
+        </div>
+        <span id="weeklyRecapBadge" class="badge">—</span>
+      </div>
+      <div class="grid gap-3" style="grid-template-columns:repeat(4,1fr);">
+        <div style="padding:12px;background:rgba(255,255,255,0.02);border-radius:10px;">
+          <div style="font-size:0.7rem;color:#8B8FA8;">Séances</div>
+          <div style="display:flex;align-items:baseline;gap:6px;margin-top:4px;">
+            <span id="weeklyRecapSess" style="font-size:1.35rem;font-weight:800;color:#F0F0F5;">—</span>
+            <span id="weeklyRecapSessDelta" style="font-size:0.7rem;color:#8B8FA8;">—</span>
+          </div>
+        </div>
+        <div style="padding:12px;background:rgba(255,255,255,0.02);border-radius:10px;">
+          <div style="font-size:0.7rem;color:#8B8FA8;">Volume</div>
+          <div style="display:flex;align-items:baseline;gap:6px;margin-top:4px;">
+            <span id="weeklyRecapVol" style="font-size:1.35rem;font-weight:800;color:#F0F0F5;">—</span>
+            <span id="weeklyRecapVolDelta" style="font-size:0.7rem;color:#8B8FA8;">—</span>
+          </div>
+        </div>
+        <div style="padding:12px;background:rgba(255,255,255,0.02);border-radius:10px;">
+          <div style="font-size:0.7rem;color:#8B8FA8;">HRV moy.</div>
+          <div style="display:flex;align-items:baseline;gap:6px;margin-top:4px;">
+            <span id="weeklyRecapHrv" style="font-size:1.35rem;font-weight:800;color:#F0F0F5;">—</span>
+            <span id="weeklyRecapHrvDelta" style="font-size:0.7rem;color:#8B8FA8;">—</span>
+          </div>
+        </div>
+        <div style="padding:12px;background:rgba(255,255,255,0.02);border-radius:10px;">
+          <div style="font-size:0.7rem;color:#8B8FA8;">Sommeil</div>
+          <div style="display:flex;align-items:baseline;gap:6px;margin-top:4px;">
+            <span id="weeklyRecapSleep" style="font-size:1.35rem;font-weight:800;color:#F0F0F5;">—</span>
+            <span id="weeklyRecapSleepDelta" style="font-size:0.7rem;color:#8B8FA8;">—</span>
+          </div>
+        </div>
+      </div>
+      <p id="weeklyRecapNarrative" style="font-size:0.82rem;color:#D0D0E0;margin-top:14px;line-height:1.5;"></p>
+    </div>
+
+    <!-- INSIGHTS AUTOMATIQUES (Lot 41) -->
+    <div id="insightsCard" class="card mt-6 fade-in" style="animation-delay:0.286s;display:none;">
+      <div class="flex items-center justify-between mb-4">
+        <div>
+          <h2 style="font-size:0.8rem;font-weight:600;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;">Insights du moment</h2>
+          <p style="font-size:0.75rem;color:#8B8FA8;margin-top:4px;" id="insightsSub">Ce que l'IA remarque dans tes données</p>
+        </div>
+        <span id="insightsBadge" class="badge">—</span>
+      </div>
+      <div id="insightsList" style="display:flex;flex-direction:column;gap:10px;"></div>
+    </div>
+
+    <!-- TIPS RÉCUP SIGNATURE (Lot 47) -->
+    <div id="recoveryTipsCard" class="card mt-6 fade-in" style="animation-delay:0.287s;display:none;">
+      <div class="flex items-center justify-between mb-4">
+        <div>
+          <h2 style="font-size:0.8rem;font-weight:600;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;">Tips récup — signature de la semaine</h2>
+          <p style="font-size:0.75rem;color:#8B8FA8;margin-top:4px;" id="recoveryTipsSub">—</p>
+        </div>
+        <span id="recoveryTipsBadge" class="badge">—</span>
+      </div>
+      <div id="recoveryTipsList" style="display:flex;flex-direction:column;gap:10px;"></div>
+      <p id="recoveryTipsFooter" style="font-size:0.72rem;color:#8B8FA8;margin-top:14px;font-style:italic;"></p>
+    </div>
+
+    <!-- CENTRE D'ALERTES (Lot 24) -->
+    <div id="alertCenterCard" class="card mt-6 fade-in" style="animation-delay:0.285s;display:none;">
+      <div class="flex items-center justify-between mb-4">
+        <div>
+          <h2 style="font-size:0.8rem;font-weight:600;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;">Centre d'alertes</h2>
+          <p style="font-size:0.75rem;color:#8B8FA8;margin-top:4px;" id="alertCenterSub">—</p>
+        </div>
+        <div style="display:flex;gap:8px;" id="alertCenterCounts"></div>
+      </div>
+      <div id="alertCenterList" style="display:flex;flex-direction:column;gap:8px;"></div>
+      <p id="alertCenterAllOk" style="display:none;padding:18px;text-align:center;color:#00D4AA;font-size:0.88rem;">✓ Aucun signal d'alerte actif — zone verte sur toutes les couches.</p>
+    </div>
+
+    <!-- PRESCRIPTION SÉANCE J+1 (Lot 21) -->
+    <div id="prescriptionCard" class="card mt-6 fade-in" style="animation-delay:0.29s;display:none;">
+      <div class="flex items-center justify-between mb-4">
+        <div>
+          <h2 style="font-size:0.8rem;font-weight:600;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;">Prescription séance</h2>
+          <div id="prescriptionTitle" style="font-size:1.15rem;font-weight:800;color:#F0F0F5;margin-top:6px;">—</div>
+          <p id="prescriptionWhen" style="font-size:0.78rem;color:#8B8FA8;margin-top:2px;">—</p>
+        </div>
+        <div style="text-align:right;">
+          <div style="font-size:0.7rem;color:#8B8FA8;">Charge estimée</div>
+          <div id="prescriptionLoad" style="font-size:1.2rem;font-weight:800;color:#6C63FF;">—</div>
+          <div style="font-size:0.68rem;color:#555870;">strain</div>
+        </div>
+      </div>
+
+      <!-- Blocks (structure de la séance) -->
+      <div id="prescriptionBlocks" style="display:flex;flex-direction:column;gap:8px;margin-bottom:14px;"></div>
+
+      <!-- Zones personnalisées -->
+      <div id="prescriptionZonesWrap" style="margin-bottom:14px;display:none;">
+        <div style="font-size:0.7rem;font-weight:600;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:8px;">Zones cibles</div>
+        <div id="prescriptionZones" style="display:flex;flex-direction:column;gap:6px;"></div>
+      </div>
+
+      <!-- Fueling & hydration -->
+      <div id="prescriptionFueling" style="padding:12px;background:rgba(0,212,170,0.04);border:1px solid rgba(0,212,170,0.15);border-radius:10px;margin-bottom:10px;display:none;">
+        <div style="font-size:0.72rem;font-weight:600;color:#00D4AA;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px;">Nutrition & hydratation</div>
+        <div id="prescriptionFuelingBody" style="font-size:0.82rem;color:#D0D0E0;line-height:1.5;"></div>
+      </div>
+
+      <!-- Tip coach -->
+      <p id="prescriptionTip" style="font-size:0.82rem;color:#8B8FA8;line-height:1.5;padding:10px 12px;background:rgba(108,99,255,0.05);border-left:3px solid #6C63FF;border-radius:6px;"></p>
+    </div>
+
+    <!-- MODAL "POURQUOI CE PLAN ?" -->
+    <div id="modalPlanWhy" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.75);z-index:1000;align-items:center;justify-content:center;padding:20px;">
+      <div style="background:#1A1D27;max-width:560px;width:100%;border-radius:16px;padding:24px;border:1px solid rgba(108,99,255,0.2);max-height:85vh;overflow-y:auto;">
+        <div class="flex items-center justify-between mb-4">
+          <h3 style="font-size:1rem;font-weight:700;color:#F0F0F5;">Pourquoi ce plan&nbsp;?</h3>
+          <button onclick="fermerPlanWhy()" style="background:transparent;border:none;color:#8B8FA8;font-size:1.5rem;cursor:pointer;line-height:1;">×</button>
+        </div>
+        <div id="modalPlanWhyBody" style="font-size:0.85rem;color:#D0D0E0;line-height:1.6;"></div>
+      </div>
+    </div>
+
+    <!-- PHILOSOPHIE FOOTER -->
+    <div class="mt-6 mb-4 fade-in" style="animation-delay:0.3s;text-align:center;">
+      <p style="font-size:0.75rem;color:#555870;font-style:italic;">
+        "L'IA est un miroir, pas un prescripteur. Tu es l'acteur de ta transformation."
+      </p>
+    </div>
+
+  </main>
+</div>
+
+<!-- ═══════════════════════════════════════
+     MODAL SÉANCE PERSONNALISÉE
+═══════════════════════════════════════ -->
+<div id="modalSeance" style="display:none;position:fixed;inset:0;z-index:200;align-items:center;justify-content:center;">
+  <!-- Backdrop -->
+  <div onclick="fermerModal()" style="position:absolute;inset:0;background:rgba(0,0,0,0.7);backdrop-filter:blur(4px);"></div>
+
+  <!-- Contenu modal -->
+  <div style="position:relative;background:#1A1D27;border:1px solid #2A2D3E;border-radius:20px;width:90%;max-width:580px;max-height:88vh;overflow-y:auto;z-index:201;" class="fade-in">
+
+    <!-- Header modal -->
+    <div style="padding:1.5rem;border-bottom:1px solid #2A2D3E;display:flex;align-items:center;gap:1rem;position:sticky;top:0;background:#1A1D27;z-index:1;">
+      <div id="modalIcone" style="width:52px;height:52px;background:rgba(108,99,255,0.15);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex-shrink:0;"></div>
+      <div class="flex-1">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:3px;">
+          <h2 id="modalTitre" style="font-size:1.1rem;font-weight:700;"></h2>
+          <span id="modalBadgeIntens" class="badge"></span>
+        </div>
+        <div id="modalMeta" style="font-size:0.82rem;color:#8B8FA8;"></div>
+      </div>
+      <button onclick="fermerModal()" style="background:none;border:none;color:#8B8FA8;font-size:1.3rem;cursor:pointer;padding:4px;flex-shrink:0;">✕</button>
+    </div>
+
+    <!-- Corps modal -->
+    <div style="padding:1.5rem;display:flex;flex-direction:column;gap:1.25rem;">
+
+      <!-- Note du coach -->
+      <div style="background:rgba(108,99,255,0.08);border:1px solid rgba(108,99,255,0.2);border-radius:12px;padding:1rem;">
+        <div style="display:flex;align-items:center;gap:6px;margin-bottom:8px;">
+          <span>🤖</span>
+          <span style="font-size:0.75rem;font-weight:600;color:#6C63FF;text-transform:uppercase;letter-spacing:0.05em;">Note du coach IA</span>
+        </div>
+        <p id="modalNoteCoach" style="font-size:0.88rem;color:#D0D0E0;line-height:1.6;font-style:italic;"></p>
+      </div>
+
+      <!-- Zones (si dispo) -->
+      <div id="modalZonesSection">
+        <h3 style="font-size:0.78rem;font-weight:600;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px;">Zones d'intensité</h3>
+        <div id="modalZones" style="display:flex;flex-direction:column;gap:8px;"></div>
+      </div>
+
+      <!-- Exercices -->
+      <div>
+        <h3 style="font-size:0.78rem;font-weight:600;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px;">Détail de la séance</h3>
+        <div id="modalExercices" style="display:flex;flex-direction:column;gap:8px;"></div>
+      </div>
+
+      <!-- Ajustement d'intensité -->
+      <div style="border-top:1px solid #2A2D3E;padding-top:1.25rem;">
+        <h3 style="font-size:0.78rem;font-weight:600;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px;">Comment tu te sens pour cette séance ?</h3>
+        <div style="display:flex;gap:8px;" id="modalAjustBtns">
+          <button onclick="ajusterSeance('facile')"   class="btn-ajust" data-val="facile"   style="flex:1;padding:10px;border-radius:10px;border:1px solid #2A2D3E;background:transparent;color:#8B8FA8;cursor:pointer;font-size:0.82rem;font-weight:600;transition:all 0.2s;">😅 Trop facile</button>
+          <button onclick="ajusterSeance('ok')"       class="btn-ajust" data-val="ok"       style="flex:1;padding:10px;border-radius:10px;border:1px solid #2A2D3E;background:transparent;color:#8B8FA8;cursor:pointer;font-size:0.82rem;font-weight:600;transition:all 0.2s;">✅ Ça me convient</button>
+          <button onclick="ajusterSeance('difficile')" class="btn-ajust" data-val="difficile" style="flex:1;padding:10px;border-radius:10px;border:1px solid #2A2D3E;background:transparent;color:#8B8FA8;cursor:pointer;font-size:0.82rem;font-weight:600;transition:all 0.2s;">🔥 Trop dur</button>
+        </div>
+        <div id="modalAjustFeedback" style="margin-top:10px;font-size:0.83rem;color:#8B8FA8;min-height:20px;"></div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ─── FAB CHAT ─── -->
+<button class="fab pulse" id="fabChat" onclick="toggleChat()">
+  <span>💬</span> Parler à mon coach IA
+</button>
+
+<!-- ─── OVERLAY ─── -->
+<div class="overlay" id="overlay" onclick="toggleChat()"></div>
+
+<!-- ─── PANNEAU CHAT ─── -->
+<div class="chat-panel" id="chatPanel">
+  <div style="padding:1.25rem;border-bottom:1px solid #2A2D3E;display:flex;align-items:center;justify-content:between;">
+    <div class="flex items-center gap-3 flex-1">
+      <div style="width:36px;height:36px;background:linear-gradient(135deg,#6C63FF,#00D4AA);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;">🤖</div>
+      <div>
+        <div style="font-weight:700;font-size:0.95rem;">Coach IA</div>
+        <div style="font-size:0.75rem;color:#00D4AA;">● En ligne</div>
+      </div>
+    </div>
+    <button onclick="toggleChat()" style="background:none;border:none;color:#8B8FA8;font-size:1.2rem;cursor:pointer;padding:4px;">✕</button>
+  </div>
+
+  <div class="chat-messages" id="chatMessages">
+    <!-- messages injectés par JS -->
+  </div>
+
+  <div class="chat-input-area">
+    <input type="text" class="chat-input" id="chatInput"
+      placeholder="Pose ta question au coach IA…"
+      onkeydown="if(event.key==='Enter') envoyerMessage()" />
+    <button class="btn-primary" onclick="envoyerMessage()" style="padding:0.6rem 0.9rem;">→</button>
+  </div>
+</div>
+
+<!-- ═══ MODAL SCORE ═══ -->
+<div id="modalScore" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:1000;align-items:center;justify-content:center;padding:16px;">
+  <div style="background:#1A1D27;border:1px solid #2A2D3E;border-radius:20px;width:100%;max-width:460px;max-height:90vh;overflow-y:auto;padding:24px;">
+
+    <!-- Header -->
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;">
+      <div>
+        <div style="font-size:1rem;font-weight:700;color:#F0F0F5;">Pourquoi ce score ?</div>
+        <div style="font-size:0.78rem;color:#8B8FA8;margin-top:2px;" id="scoreExplainSub">—</div>
+      </div>
+      <button onclick="fermerModalScore()" style="background:rgba(255,255,255,0.05);border:none;border-radius:10px;width:32px;height:32px;color:#8B8FA8;font-size:1.1rem;cursor:pointer;">✕</button>
+    </div>
+
+    <!-- Score global -->
+    <div style="display:flex;align-items:center;gap:16px;background:rgba(108,99,255,0.08);border:1px solid rgba(108,99,255,0.2);border-radius:14px;padding:16px;margin-bottom:20px;">
+      <div style="width:56px;height:56px;border-radius:50%;background:rgba(108,99,255,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+        <span style="font-size:1.4rem;font-weight:800;color:#6C63FF;" id="scoreExplainValue">—</span>
+      </div>
+      <div>
+        <div style="font-size:0.82rem;font-weight:600;color:#F0F0F5;margin-bottom:4px;">Score de forme global</div>
+        <div style="font-size:0.75rem;color:#8B8FA8;line-height:1.4;" id="scoreExplainCalib">—</div>
+      </div>
+    </div>
+
+    <!-- Breakdown par couche -->
+    <div style="font-size:0.72rem;font-weight:700;color:#555870;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:10px;">Détail par dimension</div>
+    <div id="scoreExplainLayers" style="display:flex;flex-direction:column;gap:8px;margin-bottom:20px;"></div>
+
+    <!-- Signaux manquants -->
+    <div id="scoreExplainMissingSection" style="display:none;">
+      <div style="font-size:0.72rem;font-weight:700;color:#555870;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:10px;">Données manquantes</div>
+      <div id="scoreExplainMissing" style="font-size:0.8rem;color:#8B8FA8;line-height:1.6;background:rgba(255,255,255,0.03);border-radius:10px;padding:12px;"></div>
+    </div>
+
+    <!-- CTA journal -->
+    <a href="journal.html" style="display:block;text-align:center;padding:12px;background:rgba(108,99,255,0.15);border:1px solid rgba(108,99,255,0.3);border-radius:12px;color:#6C63FF;font-size:0.85rem;font-weight:600;text-decoration:none;margin-top:4px;">
+      Remplir mon journal pour affiner le score →
+    </a>
+
+  </div>
+</div>
+
+<!-- ═══ SCRIPTS ═══ -->
+<script src="js/data.js"></script>
+<script src="js/scoring.js"></script>
+<script src="js/profile.js"></script>
+<!-- Strava sync — generated by scripts/sync.js (absent = pas encore syncé) -->
+<script src="js/data-benoit.js" onerror="console.info('data-benoit.js not yet generated — run sync.command first')"></script>
+<script src="js/observations-strava.js" onerror="console.info('observations-strava.js not yet generated')"></script>
+<script src="js/observations-whoop.js" onerror="console.info('observations-whoop.js not yet generated')"></script>
+<script src="js/history.js" onerror="console.info('history.js not yet generated — run scripts/backfill.js')"></script>
+<script src="js/detectors.js"></script>
+<script src="js/plan-generator.js"></script>
+<script src="js/dashboard.js"></script>
+<script src="js/mobile-nav.js"></script>
+</body>
+</html>
