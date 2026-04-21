@@ -397,45 +397,46 @@ body {
   padding-right: 1rem;
   z-index: 150;
 }
-.mobile-menu-btn {
-  background: none;
-  border: none;
-  color: #F0F0F5;
-  font-size: 1.5rem;
-  cursor: pointer;
-  padding: 10px 14px;
-  border-radius: 8px;
-  min-width: 44px;
-  min-height: 44px;
-  -webkit-tap-highlight-color: rgba(255,255,255,0.1);
-  transition: background 0.2s;
-}
-.mobile-menu-btn:hover { background: rgba(255,255,255,0.08); }
-
-.sidebar-drawer {
+/* ─── BARRE NAVIGATION BAS (style app native) ─── */
+.mobile-bottom-nav {
+  display: none;
   position: fixed;
-  top: 0; left: 0;
-  height: 100vh;
-  width: 260px;
+  bottom: 0; left: 0; right: 0;
   background: #13151F;
-  border-right: 1px solid #2A2D3E;
-  z-index: 200;
-  transform: translateX(-100%);
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  overflow-y: auto;
+  border-top: 1px solid #2A2D3E;
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  z-index: 150;
+  justify-content: space-around;
+  align-items: stretch;
 }
-.sidebar-drawer.open { transform: translateX(0); }
-
-.drawer-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.6);
-  z-index: 199;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s;
+.bottom-nav-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  padding: 8px 4px 6px;
+  text-decoration: none;
+  color: #8B8FA8;
+  font-size: 0.62rem;
+  font-weight: 500;
+  transition: color 0.15s;
+  -webkit-tap-highlight-color: rgba(108,99,255,0.2);
+  min-height: 56px;
 }
-.drawer-overlay.active { opacity: 1; pointer-events: all; }
+.bottom-nav-item.active {
+  color: #6C63FF;
+  font-weight: 600;
+}
+.bottom-nav-icon {
+  font-size: 1.35rem;
+  line-height: 1;
+}
+.bottom-nav-label {
+  font-size: 0.62rem;
+  white-space: nowrap;
+}
 
 @media (max-width: 768px) {
   /* Cacher la sidebar desktop */
@@ -445,9 +446,22 @@ body {
   /* Afficher le header mobile */
   .mobile-header { display: flex; }
 
-  /* Décaler le contenu principal */
+  /* Afficher la barre de nav du bas */
+  .mobile-bottom-nav { display: flex; }
+
+  /* Décaler le contenu principal (top pour header, bottom pour nav) */
   .flex.min-h-screen > main,
-  main { padding-top: calc(72px + env(safe-area-inset-top, 0px)) !important; padding-left: 1rem !important; padding-right: 1rem !important; }
+  main {
+    padding-top: calc(72px + env(safe-area-inset-top, 0px)) !important;
+    padding-bottom: calc(80px + env(safe-area-inset-bottom, 0px)) !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  /* FAB chat repositionné au-dessus de la nav du bas */
+  .fab {
+    bottom: calc(80px + env(safe-area-inset-bottom, 0px)) !important;
+  }
 
   /* Chat panel plein écran */
   .chat-panel { width: 100vw; }
