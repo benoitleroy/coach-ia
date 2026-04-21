@@ -2,7 +2,7 @@
 // Stratégie : "network-first, cache-fallback" pour le HTML (toujours frais quand en ligne)
 //             "cache-first" pour le reste (CSS, JS, images) pour rapidité offline
 
-const CACHE_VERSION = "coach-ia-v1";
+const CACHE_VERSION = "coach-ia-v2";
 
 const PRECACHE_URLS = [
   "./",
