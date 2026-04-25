@@ -138,6 +138,9 @@ function _findLastIllnessEnd(daily) {
     if (d.journal?.illness) inEpisode = true;
     else if (inEpisode) { lastEndTs = d.timestamp; inEpisode = false; }
   }
+  // Override utilisateur ("Je vais mieux") prioritaire s'il est plus récent
+  const override = window.IllnessOverride && window.IllnessOverride.get();
+  if (override && (!lastEndTs || override > lastEndTs)) return override;
   return lastEndTs;
 }
 
@@ -397,6 +400,13 @@ function _renderRecoveryTips(athleteId) {
 
   const W = window.HISTORY.weeks[window.HISTORY.weeks.length - 1];
   const sig = W?.signature;
+
+  // Si signature = Choc immunitaire mais l'athlète a marqué la fin → masquer la carte
+  if (sig === "Choc immunitaire" && window.IllnessOverride && !window.IllnessOverride.isEpisodeOngoing()) {
+    card.style.display = "none";
+    return;
+  }
+
   const cfg = RECOVERY_TIPS[sig];
   if (!cfg) { card.style.display = "none"; return; }
 
@@ -427,6 +437,26 @@ function _renderRecoveryTips(athleteId) {
 
   const footer = document.getElementById("recoveryTipsFooter");
   if (footer) footer.textContent = cfg.footer;
+
+  // Bouton "Je vais mieux" pour signature immunitaire uniquement
+  let endBtn = card.querySelector(".illness-end-btn");
+  if (sig === "Choc immunitaire") {
+    if (!endBtn) {
+      endBtn = document.createElement("button");
+      endBtn.className = "illness-end-btn";
+      endBtn.style.cssText = "margin-top:14px;padding:11px 14px;background:rgba(0,212,170,0.12);border:1px solid rgba(0,212,170,0.35);border-radius:10px;color:#00D4AA;font-weight:600;font-size:0.85rem;cursor:pointer;width:100%;-webkit-tap-highlight-color:rgba(0,212,170,0.2);";
+      endBtn.textContent = "✅ Je vais mieux — marquer la fin de l'épisode";
+      endBtn.onclick = () => {
+        if (confirm("Marquer la fin de l'épisode immunitaire ? Les conseils repartiront en mode normal.")) {
+          window.IllnessOverride.set(Date.now());
+          location.reload();
+        }
+      };
+      card.appendChild(endBtn);
+    }
+  } else if (endBtn) {
+    endBtn.remove();
+  }
 }
 
 // ─── LOT 34 : RÉSUMÉ HEBDO AUTO ─────────────────────────────────

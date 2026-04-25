@@ -12,14 +12,17 @@
 
   // ── HELPERS ─────────────────────────────────────────────────────────────────
   // Compte les jours depuis la dernière entrée illness dans HISTORY.daily
+  // Respecte l'override utilisateur ("Je vais mieux") s'il est défini
   function daysSinceLastIllness() {
     const H = window.HISTORY;
     if (!H || !H.daily) return null;
     const today = Date.now();
+    const override = window.IllnessOverride && window.IllnessOverride.get();
     let lastIllnessTs = null;
     for (let i = H.daily.length - 1; i >= 0; i--) {
       const d = H.daily[i];
       if (d.journal && d.journal.illness) {
+        if (override && d.timestamp <= override) continue;
         lastIllnessTs = d.timestamp;
         break;
       }
@@ -32,7 +35,12 @@
     const H = window.HISTORY;
     if (!H || !H.daily) return 0;
     const cutoff = Date.now() - windowDays * DAY_MS;
-    return H.daily.filter(d => d.timestamp > cutoff && d.journal && d.journal.illness).length;
+    const override = window.IllnessOverride && window.IllnessOverride.get();
+    return H.daily.filter(d =>
+      d.timestamp > cutoff
+      && d.journal && d.journal.illness
+      && (!override || d.timestamp > override)
+    ).length;
   }
 
   // ── ÉTAT COURANT ────────────────────────────────────────────────────────────
@@ -65,8 +73,10 @@
     // Base payload
     const base = { signature: sig, acwr, hrvTrend, flagCount, illnessDaysSince, illnessDaysCount };
 
-    // 1. Illness active (self-report ET frais) → recovery
-    if (journal.illness && journalIsFresh) {
+    // 1. Illness active (self-report ET frais ET pas marqué fini par l'athlète) → recovery
+    const _illnessOverride = window.IllnessOverride && window.IllnessOverride.get();
+    const _illnessOverridden = _illnessOverride && lastDay && lastDay.timestamp <= _illnessOverride;
+    if (journal.illness && journalIsFresh && !_illnessOverridden) {
       return {
         ...base,
         mode: "recovery",

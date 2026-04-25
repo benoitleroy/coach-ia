@@ -100,6 +100,20 @@
 
     <div id="formJournal">
 
+      <!-- BANDEAU FIN D'ÉPISODE IMMUNITAIRE -->
+      <div id="illnessBanner" class="card mb-5 fade-in" style="display:none;background:rgba(255,143,163,0.08);border:1px solid rgba(255,143,163,0.3);">
+        <div style="display:flex;gap:14px;align-items:flex-start;">
+          <span style="font-size:1.6rem;">🤒</span>
+          <div style="flex:1;">
+            <div style="font-weight:700;font-size:0.95rem;color:#FF8FA3;margin-bottom:4px;">Épisode immunitaire en cours</div>
+            <p id="illnessBannerText" style="font-size:0.82rem;color:#D0D0E0;line-height:1.5;margin-bottom:12px;">—</p>
+            <button id="illnessEndBtn" type="button" style="padding:9px 14px;background:rgba(0,212,170,0.12);border:1px solid rgba(0,212,170,0.3);border-radius:10px;color:#00D4AA;font-weight:600;font-size:0.82rem;cursor:pointer;-webkit-tap-highlight-color:rgba(0,212,170,0.2);">
+              ✅ Je vais mieux — marquer la fin
+            </button>
+          </div>
+        </div>
+      </div>
+
       <!-- ════ SECTION 1 : CORPS ════ -->
       <div class="card mb-5 fade-in" style="animation-delay:0.15s">
         <div class="flex items-center gap-3 mb-5">
@@ -535,6 +549,7 @@
 <script src="js/observations-strava.js" onerror="void 0"></script>
 <script src="js/observations-whoop.js" onerror="void 0"></script>
 <script src="js/history.js" onerror="void 0"></script>
+<script src="js/illness-override.js"></script>
 <script src="js/plan-generator.js"></script>
 <script src="js/journal.js"></script>
 

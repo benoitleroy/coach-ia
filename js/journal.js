@@ -11,7 +11,32 @@ document.addEventListener("DOMContentLoaded", () => {
   _renderLogbook();
   _bindLogbookSearch();
   _updateMentalScore();
+  _renderIllnessBanner();
 });
+
+// ─── BANDEAU FIN D'ÉPISODE IMMUNITAIRE ───────────────────────────────
+function _renderIllnessBanner() {
+  const banner = document.getElementById("illnessBanner");
+  const text = document.getElementById("illnessBannerText");
+  const btn = document.getElementById("illnessEndBtn");
+  if (!banner || !text || !btn) return;
+  const Override = window.IllnessOverride;
+  if (!Override || !Override.isEpisodeOngoing()) {
+    banner.style.display = "none";
+    return;
+  }
+  const days = Override.daysSinceActiveIllness();
+  const dStr = days != null ? `J+${days}` : "récente";
+  text.textContent = `Trace de maladie ${dStr}. Si tu te sens revenu·e à la normale (plus de symptômes, énergie OK), marque la fin pour repasser en mode entraînement standard.`;
+  banner.style.display = "block";
+  btn.onclick = () => {
+    if (confirm("Marquer la fin de l'épisode immunitaire ? Les conseils repartiront en mode normal.")) {
+      Override.set(Date.now());
+      banner.style.display = "none";
+      _customizeCoachPrompt();
+    }
+  };
+}
 
 // ─── PREFILL DEPUIS DONNÉES RÉELLES ──────────────────────────────────
 function _buildPrefill() {
