@@ -36,7 +36,6 @@ function rendreAthlète(id) {
   _renderWeeklyRecap(id);
   _renderInsights(id);
   _renderRecoveryTips(id);
-  _renderIllnessBanner(id);
   chargerChatInitial(a);
 }
 
