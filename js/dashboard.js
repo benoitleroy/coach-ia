@@ -322,13 +322,20 @@ function _detectInsights() {
   }
 
   // 4) Sortie d'épisode immunitaire
-  const illnessEnd = daily.slice(0, -1).reverse().findIndex((d, i, arr) => !d.journal?.illness && arr[i - 1]?.journal?.illness);
-  if (illnessEnd >= 0 && illnessEnd <= 14) {
-    const j = illnessEnd;
+  // Override : si l'utilisateur a marqué une endDate, on calcule J+ depuis cette date
+  const _ovWin = window.IllnessOverride && window.IllnessOverride.get();
+  let illnessEndJ = null;
+  if (_ovWin && _ovWin.endDate) {
+    illnessEndJ = Math.floor((Date.now() - _ovWin.endDate) / 86400000);
+  } else {
+    const idx = daily.slice(0, -1).reverse().findIndex((d, i, arr) => !d.journal?.illness && arr[i - 1]?.journal?.illness);
+    if (idx >= 0) illnessEndJ = idx;
+  }
+  if (illnessEndJ !== null && illnessEndJ >= 0 && illnessEndJ <= 14) {
     insights.push({
       icon: "🛡️",
       color: "#A9A3FF",
-      title: `Sortie d'épisode immunitaire — J+${j}`,
+      title: `Sortie d'épisode immunitaire — J+${illnessEndJ}`,
       detail: "Corps encore en reconstitution. Les signaux mettent 10-14 jours à revenir à la normale après une grippe.",
       action: "Charge légère privilégiée, pas de brique avant J+14.",
     });
@@ -1664,9 +1671,15 @@ function _computeDynamicAlert() {
   // Calculer / mettre à jour les alarmes
   const activeAlarms = typeof window.ALARMS !== "undefined" ? window.ALARMS.computeCurrent() : [];
 
-  // 1. Illness active (top priority)
-  if (lastDay.journal && lastDay.journal.illness) {
-    const daysOff = H.daily.slice(-14).filter(d => d.journal && d.journal.illness).length;
+  // 1. Illness active (top priority) — respecte la fenêtre d'override si définie
+  const _illWin = window.IllnessOverride && window.IllnessOverride.get();
+  const _illEnded = _illWin && _illWin.endDate && _illWin.endDate < Date.now();
+  if (lastDay.journal && lastDay.journal.illness && !_illEnded) {
+    const daysOff = H.daily.slice(-14).filter(d =>
+      d.journal && d.journal.illness
+      && (!_illWin?.startDate || d.timestamp >= _illWin.startDate)
+      && (!_illWin?.endDate || d.timestamp <= _illWin.endDate)
+    ).length;
     return {
       type: "surcharge",
       icone: "🤒",

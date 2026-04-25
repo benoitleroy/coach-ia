@@ -123,7 +123,9 @@
     }
 
     // 2. Choc immunitaire récent (semaine en cours ou la précédente)
-    if (sig === "Choc immunitaire" || (prevWeek && prevWeek.signature === "Choc immunitaire")) {
+    //    — sauf si l'utilisateur a marqué la fin d'épisode (endDate dans le passé)
+    const _winEndedInPast = _illnessWin && _illnessWin.endDate && _illnessWin.endDate < Date.now();
+    if (!_winEndedInPast && (sig === "Choc immunitaire" || (prevWeek && prevWeek.signature === "Choc immunitaire"))) {
       const d = illnessDaysSince !== null ? ` (dernière trace il y a ${illnessDaysSince}j)` : "";
       return {
         ...base,
