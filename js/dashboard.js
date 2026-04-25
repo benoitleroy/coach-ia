@@ -40,24 +40,76 @@ function rendreAthlète(id) {
   chargerChatInitial(a);
 }
 
-// ─── BANDEAU FIN D'ÉPISODE IMMUNITAIRE ───────────────────────────
+// ─── PANNEAU ÉPISODE IMMUNITAIRE (fenêtre début/fin) ─────────────
 function _renderIllnessBanner(athleteId) {
   const banner = document.getElementById("illnessBanner");
   const text = document.getElementById("illnessBannerText");
-  const btn = document.getElementById("illnessEndBtn");
-  if (!banner || !text || !btn) return;
+  const startInput = document.getElementById("illnessStartInput");
+  const endInput = document.getElementById("illnessEndInput");
+  const saveBtn = document.getElementById("illnessSaveBtn");
+  const clearBtn = document.getElementById("illnessClearBtn");
+  if (!banner || !text || !startInput || !endInput || !saveBtn || !clearBtn) return;
+
   const Override = window.IllnessOverride;
-  if (athleteId !== "benoit" || !Override || !Override.isEpisodeOngoing()) {
+  if (athleteId !== "benoit" || !Override) {
     banner.style.display = "none";
     return;
   }
-  const days = Override.daysSinceActiveIllness();
-  const dStr = days != null ? `J+${days}` : "récente";
-  text.textContent = `Trace de maladie ${dStr}. Si tu te sens revenu à la normale (plus de symptômes, énergie OK), marque la fin pour repasser en mode entraînement standard.`;
+
+  const win = Override.get();
+  const hasRecentIllness = !!(window.HISTORY?.daily?.slice(-30).some(d => d?.journal?.illness));
+
+  // On affiche le panneau si trace récente OU si l'utilisateur a déjà défini une fenêtre
+  if (!hasRecentIllness && !win) {
+    banner.style.display = "none";
+    return;
+  }
+
   banner.style.display = "block";
-  btn.onclick = () => {
-    if (confirm("Marquer la fin de l'épisode immunitaire ? Les conseils repartiront en mode normal.")) {
-      Override.set(Date.now());
+
+  const fmt = ts => {
+    const d = new Date(ts);
+    const pad = n => String(n).padStart(2, "0");
+    return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+  };
+
+  // Pré-remplir : début = 1er jour de maladie auto-détecté, fin = aujourd'hui
+  const firstIllness = Override.getFirstIllnessTimestampInJournal?.();
+  const lastIllness = Override.getLastIllnessTimestampInJournal?.();
+  startInput.value = win?.startDate ? fmt(win.startDate) : (firstIllness ? fmt(firstIllness) : "");
+  endInput.value = win?.endDate ? fmt(win.endDate) : "";
+
+  // Texte d'état
+  if (win?.endDate && win.endDate < Date.now() - 86400000) {
+    const days = Math.floor((Date.now() - win.endDate) / 86400000);
+    text.innerHTML = `Épisode marqué terminé il y a <strong>${days}j</strong>. Le plan est repassé en mode normal.`;
+  } else if (win?.startDate && win?.endDate) {
+    text.innerHTML = `Fenêtre définie du <strong>${fmt(win.startDate)}</strong> au <strong>${fmt(win.endDate)}</strong>.`;
+  } else if (Override.isEpisodeOngoing()) {
+    const d = Override.daysSinceActiveIllness();
+    text.innerHTML = `Trace de maladie ${d != null ? `J+${d}` : "récente"}. Précise les dates pour ajuster le plan (le coach tiendra compte de la vraie fenêtre).`;
+  } else {
+    text.innerHTML = "Indique les dates de l'épisode pour ajuster le plan.";
+  }
+
+  saveBtn.onclick = () => {
+    const s = startInput.value ? new Date(startInput.value + "T00:00:00").getTime() : null;
+    const e = endInput.value ? new Date(endInput.value + "T23:59:59").getTime() : null;
+    if (!s && !e) {
+      alert("Renseigne au moins une date (début ou fin).");
+      return;
+    }
+    if (s && e && e < s) {
+      alert("La date de fin doit être après la date de début.");
+      return;
+    }
+    Override.setWindow(s, e);
+    location.reload();
+  };
+
+  clearBtn.onclick = () => {
+    if (confirm("Réinitialiser les dates ? L'inférence automatique reprend.")) {
+      Override.clear();
       location.reload();
     }
   };
@@ -162,9 +214,10 @@ function _findLastIllnessEnd(daily) {
     if (d.journal?.illness) inEpisode = true;
     else if (inEpisode) { lastEndTs = d.timestamp; inEpisode = false; }
   }
-  // Override utilisateur ("Je vais mieux") prioritaire s'il est plus récent
-  const override = window.IllnessOverride && window.IllnessOverride.get();
-  if (override && (!lastEndTs || override > lastEndTs)) return override;
+  // Override utilisateur (date de fin manuelle) prioritaire s'il est plus récent
+  const win = window.IllnessOverride && window.IllnessOverride.get();
+  const overrideEnd = win && win.endDate ? win.endDate : null;
+  if (overrideEnd && (!lastEndTs || overrideEnd > lastEndTs)) return overrideEnd;
   return lastEndTs;
 }
 

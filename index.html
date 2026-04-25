@@ -78,17 +78,28 @@
   <!-- ─── CONTENU PRINCIPAL ─── -->
   <main class="flex-1 overflow-y-auto p-8" id="mainContent">
 
-    <!-- BANDEAU FIN D'ÉPISODE IMMUNITAIRE -->
+    <!-- PANNEAU ÉPISODE IMMUNITAIRE (fenêtre début → fin) -->
     <div id="illnessBanner" class="card mb-5 fade-in" style="display:none;background:rgba(255,143,163,0.08);border:1px solid rgba(255,143,163,0.3);">
-      <div style="display:flex;gap:14px;align-items:flex-start;">
+      <div style="display:flex;gap:14px;align-items:flex-start;margin-bottom:14px;">
         <span style="font-size:1.6rem;">🤒</span>
         <div style="flex:1;">
-          <div style="font-weight:700;font-size:0.95rem;color:#FF8FA3;margin-bottom:4px;">Épisode immunitaire détecté</div>
-          <p id="illnessBannerText" style="font-size:0.82rem;color:#D0D0E0;line-height:1.5;margin-bottom:12px;">—</p>
-          <button id="illnessEndBtn" type="button" style="padding:10px 16px;background:rgba(0,212,170,0.12);border:1px solid rgba(0,212,170,0.35);border-radius:10px;color:#00D4AA;font-weight:600;font-size:0.85rem;cursor:pointer;-webkit-tap-highlight-color:rgba(0,212,170,0.2);">
-            ✅ Je vais mieux — marquer la fin de l'épisode
-          </button>
+          <div style="font-weight:700;font-size:0.95rem;color:#FF8FA3;margin-bottom:4px;">Épisode immunitaire</div>
+          <p id="illnessBannerText" style="font-size:0.82rem;color:#D0D0E0;line-height:1.5;">—</p>
         </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px;">
+        <div>
+          <label style="font-size:0.72rem;color:#8B8FA8;display:block;margin-bottom:4px;text-transform:uppercase;letter-spacing:0.04em;">Début</label>
+          <input type="date" id="illnessStartInput" style="width:100%;background:rgba(255,255,255,0.04);border:1px solid #2A2D3E;border-radius:8px;padding:9px 10px;color:#F0F0F5;font-size:0.85rem;outline:none;color-scheme:dark;" />
+        </div>
+        <div>
+          <label style="font-size:0.72rem;color:#8B8FA8;display:block;margin-bottom:4px;text-transform:uppercase;letter-spacing:0.04em;">Fin (je vais mieux depuis)</label>
+          <input type="date" id="illnessEndInput" style="width:100%;background:rgba(255,255,255,0.04);border:1px solid #2A2D3E;border-radius:8px;padding:9px 10px;color:#F0F0F5;font-size:0.85rem;outline:none;color-scheme:dark;" />
+        </div>
+      </div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;">
+        <button id="illnessSaveBtn" type="button" style="flex:1;min-width:140px;padding:10px;background:rgba(0,212,170,0.12);border:1px solid rgba(0,212,170,0.35);border-radius:10px;color:#00D4AA;font-weight:600;font-size:0.85rem;cursor:pointer;-webkit-tap-highlight-color:rgba(0,212,170,0.2);">💾 Enregistrer les dates</button>
+        <button id="illnessClearBtn" type="button" style="padding:10px 14px;background:transparent;border:1px solid #2A2D3E;border-radius:10px;color:#8B8FA8;font-weight:500;font-size:0.82rem;cursor:pointer;">Réinitialiser</button>
       </div>
     </div>
 
@@ -617,6 +628,7 @@
 <script src="js/history.js" onerror="console.info('history.js not yet generated — run scripts/backfill.js')"></script>
 <script src="js/detectors.js"></script>
 <script src="js/illness-override.js"></script>
+<script src="js/manual-activities.js"></script>
 <script src="js/plan-generator.js"></script>
 <script src="js/dashboard.js"></script>
 <script src="js/mobile-nav.js"></script>

@@ -13,16 +13,40 @@
   // ── HELPERS ─────────────────────────────────────────────────────────────────
   // Compte les jours depuis la dernière entrée illness dans HISTORY.daily
   // Respecte l'override utilisateur ("Je vais mieux") s'il est défini
+  // Récupère la fenêtre d'override : { startDate, endDate } ou null
+  function _getIllnessWindow() {
+    const win = window.IllnessOverride && window.IllnessOverride.get();
+    if (!win) return null;
+    return {
+      startDate: win.startDate || null,
+      endDate: win.endDate || null,
+    };
+  }
+
+  // Un jour de maladie compte si :
+  //  - pas de fenêtre définie → toujours
+  //  - sinon il doit être DANS la fenêtre [startDate, endDate]
+  function _illnessDayCounts(dayTs) {
+    const win = _getIllnessWindow();
+    if (!win) return true;
+    if (win.startDate && dayTs < win.startDate) return false;
+    if (win.endDate && dayTs > win.endDate) return false;
+    return true;
+  }
+
   function daysSinceLastIllness() {
     const H = window.HISTORY;
     if (!H || !H.daily) return null;
     const today = Date.now();
-    const override = window.IllnessOverride && window.IllnessOverride.get();
+    const win = _getIllnessWindow();
+    // Si l'utilisateur a défini une date de fin → on compte depuis cette date
+    if (win && win.endDate) {
+      return Math.max(0, Math.floor((today - win.endDate) / DAY_MS));
+    }
     let lastIllnessTs = null;
     for (let i = H.daily.length - 1; i >= 0; i--) {
       const d = H.daily[i];
-      if (d.journal && d.journal.illness) {
-        if (override && d.timestamp <= override) continue;
+      if (d.journal && d.journal.illness && _illnessDayCounts(d.timestamp)) {
         lastIllnessTs = d.timestamp;
         break;
       }
@@ -35,11 +59,10 @@
     const H = window.HISTORY;
     if (!H || !H.daily) return 0;
     const cutoff = Date.now() - windowDays * DAY_MS;
-    const override = window.IllnessOverride && window.IllnessOverride.get();
     return H.daily.filter(d =>
       d.timestamp > cutoff
       && d.journal && d.journal.illness
-      && (!override || d.timestamp > override)
+      && _illnessDayCounts(d.timestamp)
     ).length;
   }
 
@@ -74,8 +97,8 @@
     const base = { signature: sig, acwr, hrvTrend, flagCount, illnessDaysSince, illnessDaysCount };
 
     // 1. Illness active (self-report ET frais ET pas marqué fini par l'athlète) → recovery
-    const _illnessOverride = window.IllnessOverride && window.IllnessOverride.get();
-    const _illnessOverridden = _illnessOverride && lastDay && lastDay.timestamp <= _illnessOverride;
+    const _illnessWin = _getIllnessWindow();
+    const _illnessOverridden = _illnessWin && _illnessWin.endDate && lastDay && lastDay.timestamp <= _illnessWin.endDate;
     if (journal.illness && journalIsFresh && !_illnessOverridden) {
       return {
         ...base,

@@ -12,30 +12,224 @@ document.addEventListener("DOMContentLoaded", () => {
   _bindLogbookSearch();
   _updateMentalScore();
   _renderIllnessBanner();
+  _renderManualActivities();
 });
 
-// ─── BANDEAU FIN D'ÉPISODE IMMUNITAIRE ───────────────────────────────
+// ─── PANNEAU ÉPISODE IMMUNITAIRE ─────────────────────────────────────
 function _renderIllnessBanner() {
   const banner = document.getElementById("illnessBanner");
   const text = document.getElementById("illnessBannerText");
-  const btn = document.getElementById("illnessEndBtn");
-  if (!banner || !text || !btn) return;
+  const startInput = document.getElementById("illnessStartInput");
+  const endInput = document.getElementById("illnessEndInput");
+  const saveBtn = document.getElementById("illnessSaveBtn");
+  const clearBtn = document.getElementById("illnessClearBtn");
+  if (!banner || !text || !startInput || !endInput || !saveBtn || !clearBtn) return;
   const Override = window.IllnessOverride;
-  if (!Override || !Override.isEpisodeOngoing()) {
-    banner.style.display = "none";
-    return;
-  }
-  const days = Override.daysSinceActiveIllness();
-  const dStr = days != null ? `J+${days}` : "récente";
-  text.textContent = `Trace de maladie ${dStr}. Si tu te sens revenu·e à la normale (plus de symptômes, énergie OK), marque la fin pour repasser en mode entraînement standard.`;
+  if (!Override) { banner.style.display = "none"; return; }
+
+  const win = Override.get();
+  const hasRecentIllness = !!(window.HISTORY?.daily?.slice(-30).some(d => d?.journal?.illness));
+  if (!hasRecentIllness && !win) { banner.style.display = "none"; return; }
+
   banner.style.display = "block";
-  btn.onclick = () => {
-    if (confirm("Marquer la fin de l'épisode immunitaire ? Les conseils repartiront en mode normal.")) {
-      Override.set(Date.now());
-      banner.style.display = "none";
-      _customizeCoachPrompt();
+
+  const fmt = ts => {
+    const d = new Date(ts);
+    const pad = n => String(n).padStart(2, "0");
+    return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+  };
+
+  const firstIllness = Override.getFirstIllnessTimestampInJournal?.();
+  startInput.value = win?.startDate ? fmt(win.startDate) : (firstIllness ? fmt(firstIllness) : "");
+  endInput.value = win?.endDate ? fmt(win.endDate) : "";
+
+  if (win?.endDate && win.endDate < Date.now() - 86400000) {
+    const days = Math.floor((Date.now() - win.endDate) / 86400000);
+    text.innerHTML = `Épisode marqué terminé il y a <strong>${days}j</strong>. Le plan est repassé en mode normal.`;
+  } else if (win?.startDate && win?.endDate) {
+    text.innerHTML = `Fenêtre du <strong>${fmt(win.startDate)}</strong> au <strong>${fmt(win.endDate)}</strong>.`;
+  } else if (Override.isEpisodeOngoing()) {
+    const d = Override.daysSinceActiveIllness();
+    text.innerHTML = `Trace de maladie ${d != null ? `J+${d}` : "récente"}. Précise début + fin pour ajuster le plan.`;
+  } else {
+    text.innerHTML = "Indique les dates de l'épisode.";
+  }
+
+  saveBtn.onclick = () => {
+    const s = startInput.value ? new Date(startInput.value + "T00:00:00").getTime() : null;
+    const e = endInput.value ? new Date(endInput.value + "T23:59:59").getTime() : null;
+    if (!s && !e) { alert("Renseigne au moins une date."); return; }
+    if (s && e && e < s) { alert("La date de fin doit être après la date de début."); return; }
+    Override.setWindow(s, e);
+    location.reload();
+  };
+
+  clearBtn.onclick = () => {
+    if (confirm("Réinitialiser les dates ?")) {
+      Override.clear();
+      location.reload();
     }
   };
+}
+
+// ─── SÉANCES MANUELLES ───────────────────────────────────────────────
+function _renderManualActivities() {
+  const card = document.getElementById("manualActivitiesCard");
+  const list = document.getElementById("manualActList");
+  const empty = document.getElementById("manualActEmpty");
+  const form = document.getElementById("manualActForm");
+  const addBtn = document.getElementById("addManualActBtn");
+  if (!card || !list || !addBtn || !form) return;
+  const Manual = window.ManualActivities;
+  if (!Manual) return;
+
+  function _fmtDate(ts) {
+    const d = new Date(ts);
+    return d.toLocaleDateString("fr-FR", { weekday: "short", day: "numeric", month: "short" });
+  }
+
+  function _renderList() {
+    const all = Manual.getAll().slice().sort((a, b) => b.date - a.date);
+    list.innerHTML = "";
+    if (!all.length) {
+      empty.style.display = "block";
+      return;
+    }
+    empty.style.display = "none";
+    // 14 derniers jours
+    const cutoff = Date.now() - 14 * 86400000;
+    const recent = all.filter(a => a.date >= cutoff);
+    recent.forEach(a => {
+      const cfg = Manual.TYPES[a.type] || { label: a.type, icon: "📝" };
+      const row = document.createElement("div");
+      row.style.cssText = "display:flex;align-items:center;gap:12px;padding:10px 12px;background:rgba(255,255,255,0.02);border-radius:8px;border-left:3px solid #FFD166;";
+      row.innerHTML = `
+        <div style="font-size:1.3rem;">${cfg.icon}</div>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:0.85rem;font-weight:600;color:#F0F0F5;">${cfg.label}</div>
+          <div style="font-size:0.72rem;color:#8B8FA8;">${_fmtDate(a.date)} · ${a.duration_min}min · RPE ${a.rpe}/10${a.comment ? ` · « ${a.comment.slice(0, 40)}${a.comment.length > 40 ? '…' : ''} »` : ""}</div>
+        </div>
+        <button data-id="${a.id}" class="manual-del-btn" type="button" style="background:transparent;border:none;color:#555870;font-size:1rem;cursor:pointer;padding:4px 8px;">✕</button>
+      `;
+      list.appendChild(row);
+    });
+    list.querySelectorAll(".manual-del-btn").forEach(btn => {
+      btn.onclick = () => {
+        const id = btn.dataset.id;
+        if (confirm("Supprimer cette séance ?")) {
+          Manual.remove(id);
+          _renderList();
+        }
+      };
+    });
+  }
+
+  function _renderForm() {
+    const today = (() => {
+      const d = new Date();
+      const pad = n => String(n).padStart(2, "0");
+      return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+    })();
+
+    const cats = ["cardio", "force", "recovery"];
+    const buttonsHTML = cats.map(cat => {
+      const types = Object.entries(Manual.TYPES).filter(([_, v]) => v.cat === cat);
+      return `
+        <div style="margin-bottom:12px;">
+          <div style="font-size:0.72rem;color:#8B8FA8;text-transform:uppercase;letter-spacing:0.04em;font-weight:600;margin-bottom:6px;">${Manual.CAT_LABEL[cat]}</div>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;">
+            ${types.map(([id, v]) => `<button type="button" class="manual-type-btn" data-type="${id}" style="padding:7px 11px;border-radius:18px;border:1px solid #2A2D3E;background:transparent;color:#D0D0E0;font-size:0.78rem;cursor:pointer;transition:all 0.2s;">${v.icon} ${v.label}</button>`).join("")}
+          </div>
+        </div>
+      `;
+    }).join("");
+
+    form.innerHTML = `
+      ${buttonsHTML}
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px;">
+        <div>
+          <label style="font-size:0.75rem;color:#8B8FA8;display:block;margin-bottom:4px;">Date</label>
+          <input type="date" id="manualActDate" value="${today}" style="width:100%;background:rgba(255,255,255,0.04);border:1px solid #2A2D3E;border-radius:8px;padding:8px 10px;color:#F0F0F5;font-size:0.85rem;outline:none;color-scheme:dark;" />
+        </div>
+        <div>
+          <label style="font-size:0.75rem;color:#8B8FA8;display:block;margin-bottom:4px;">Durée (min)</label>
+          <input type="number" id="manualActDuration" min="5" max="360" placeholder="45" style="width:100%;background:rgba(255,255,255,0.04);border:1px solid #2A2D3E;border-radius:8px;padding:8px 10px;color:#F0F0F5;font-size:0.85rem;outline:none;" />
+        </div>
+      </div>
+      <div style="margin-top:12px;">
+        <div style="display:flex;justify-content:space-between;margin-bottom:4px;">
+          <label style="font-size:0.75rem;color:#8B8FA8;">Intensité ressentie (RPE)</label>
+          <span id="manualActRpeLabel" style="font-size:0.78rem;font-weight:700;color:#FFD166;">5/10 — Modéré</span>
+        </div>
+        <input type="range" id="manualActRpe" min="1" max="10" value="5" style="width:100%;accent-color:#FFD166;cursor:pointer;" />
+        <div style="display:flex;justify-content:space-between;font-size:0.65rem;color:#555870;margin-top:2px;">
+          <span>très facile</span><span>moyen</span><span>max</span>
+        </div>
+      </div>
+      <div style="margin-top:12px;">
+        <label style="font-size:0.75rem;color:#8B8FA8;display:block;margin-bottom:4px;">Commentaire (optionnel)</label>
+        <input type="text" id="manualActComment" maxlength="120" placeholder="Ex: WOD AMRAP 20min + filler" style="width:100%;background:rgba(255,255,255,0.04);border:1px solid #2A2D3E;border-radius:8px;padding:8px 10px;color:#F0F0F5;font-size:0.85rem;outline:none;" />
+      </div>
+      <div style="display:flex;gap:8px;margin-top:14px;">
+        <button id="manualActSave" type="button" style="flex:1;padding:10px;background:rgba(0,212,170,0.12);border:1px solid rgba(0,212,170,0.35);border-radius:10px;color:#00D4AA;font-weight:600;font-size:0.85rem;cursor:pointer;">Enregistrer la séance</button>
+        <button id="manualActCancel" type="button" style="padding:10px 14px;background:transparent;border:1px solid #2A2D3E;border-radius:10px;color:#8B8FA8;font-weight:500;font-size:0.82rem;cursor:pointer;">Annuler</button>
+      </div>
+    `;
+
+    let selectedType = null;
+    form.querySelectorAll(".manual-type-btn").forEach(btn => {
+      btn.onclick = () => {
+        form.querySelectorAll(".manual-type-btn").forEach(b => {
+          b.style.borderColor = "#2A2D3E";
+          b.style.background = "transparent";
+          b.style.color = "#D0D0E0";
+        });
+        btn.style.borderColor = "#FFD166";
+        btn.style.background = "rgba(255,209,102,0.12)";
+        btn.style.color = "#FFD166";
+        selectedType = btn.dataset.type;
+      };
+    });
+
+    const rpeSlider = document.getElementById("manualActRpe");
+    const rpeLabel = document.getElementById("manualActRpeLabel");
+    const rpeText = v => {
+      v = Number(v);
+      if (v <= 2) return "Très facile";
+      if (v <= 4) return "Facile";
+      if (v <= 6) return "Modéré";
+      if (v <= 8) return "Soutenu";
+      return "Max";
+    };
+    rpeSlider.oninput = () => { rpeLabel.textContent = `${rpeSlider.value}/10 — ${rpeText(rpeSlider.value)}`; };
+
+    document.getElementById("manualActSave").onclick = () => {
+      if (!selectedType) { alert("Choisis un type de séance."); return; }
+      const dur = Number(document.getElementById("manualActDuration").value);
+      if (!dur || dur < 5) { alert("Saisis une durée d'au moins 5 minutes."); return; }
+      const rpe = Number(rpeSlider.value);
+      const dateStr = document.getElementById("manualActDate").value;
+      const date = dateStr ? new Date(dateStr + "T12:00:00").getTime() : Date.now();
+      const comment = document.getElementById("manualActComment").value.trim();
+      Manual.add({ type: selectedType, duration_min: dur, rpe, date, comment });
+      form.style.display = "none";
+      _renderList();
+    };
+    document.getElementById("manualActCancel").onclick = () => {
+      form.style.display = "none";
+    };
+  }
+
+  addBtn.onclick = () => {
+    if (form.style.display === "none" || !form.innerHTML) {
+      _renderForm();
+      form.style.display = "block";
+    } else {
+      form.style.display = "none";
+    }
+  };
+
+  _renderList();
 }
 
 // ─── PREFILL DEPUIS DONNÉES RÉELLES ──────────────────────────────────
