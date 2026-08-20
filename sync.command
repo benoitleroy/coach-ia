@@ -7,7 +7,7 @@ cd "$(dirname "$0")"
 
 echo ""
 echo "╔══════════════════════════════════════╗"
-echo "║   Coach IA 2030 — Sync Strava 🚴    ║"
+echo "║   Coach IA — Carnet · Sync Strava 🚴 ║"
 echo "╚══════════════════════════════════════╝"
 echo ""
 
@@ -30,17 +30,17 @@ fi
 # Lancer le script de sync Strava
 node scripts/sync.js
 
-# Lancer le sync Whoop via API (tokens auto-gérés)
-echo ""
-node scripts/whoop-sync.js
+# Whoop débranché depuis le recentrage "Carnet" (20/08/2026).
+# Pour le réactiver : décommenter la ligne ci-dessous.
+# node scripts/whoop-sync.js
 
 echo ""
 
 # Push automatique vers GitHub Pages si des données ont changé
 if [ -d .git ]; then
-  if ! git diff --quiet js/data-benoit.js js/observations-strava.js js/observations-whoop.js 2>/dev/null; then
+  if ! git diff --quiet js/data-benoit.js js/observations-strava.js js/carnet-data.js 2>/dev/null; then
     echo "📤 Push des nouvelles données vers GitHub Pages…"
-    git add js/data-benoit.js js/observations-strava.js js/observations-whoop.js
+    git add js/data-benoit.js js/observations-strava.js js/carnet-data.js
     git -c user.email="benoit@coach-ia.local" -c user.name="Benoit Leroy" \
       commit -m "Sync auto $(date +%Y-%m-%d)" >/dev/null
     git push origin main >/dev/null 2>&1 && echo "   → en ligne dans ~1min" || echo "   ⚠️  push échoué (vérifie ta connexion)"

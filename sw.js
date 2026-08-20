@@ -2,11 +2,14 @@
 // Stratégie : "network-first, cache-fallback" pour le HTML (toujours frais quand en ligne)
 //             "cache-first" pour le reste (CSS, JS, images) pour rapidité offline
 
-const CACHE_VERSION = "coach-ia-v9";
+const CACHE_VERSION = "coach-ia-v10";
 
 const PRECACHE_URLS = [
   "./",
   "./index.html",
+  "./dashboard.html",
+  "./css/carnet.css",
+  "./js/carnet.js",
   "./accueil.html",
   "./journal.html",
   "./vue360.html",
@@ -52,8 +55,10 @@ self.addEventListener("fetch", (event) => {
 
   const url = new URL(req.url);
   const isHTML = req.mode === "navigate" || req.headers.get("accept")?.includes("text/html");
+  // Fichiers de données régénérés à chaque sync : toujours frais quand en ligne
+  const isData = /\/js\/(carnet-data|data-benoit|observations-[a-z]+|history)\.js$/.test(url.pathname);
 
-  if (isHTML) {
+  if (isHTML || isData) {
     event.respondWith(
       fetch(req)
         .then((resp) => {
