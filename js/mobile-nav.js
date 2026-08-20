@@ -4,7 +4,8 @@
   const page = location.pathname.split("/").pop() || "accueil.html";
 
   const navItems = [
-    { href: "index.html",      icone: "📊", label: "Dashboard" },
+    { href: "index.html",      icone: "📒", label: "Carnet" },
+    { href: "dashboard.html",  icone: "📊", label: "Dashboard" },
     { href: "journal.html",    icone: "📝", label: "Journal" },
     { href: "vue360.html",     icone: "🔭", label: "Vue 360°" },
     { href: "historique.html", icone: "📈", label: "Historique" },

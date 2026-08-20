@@ -1,12 +1,12 @@
 {
   "name": "Coach IA 2030",
   "short_name": "Coach IA",
-  "description": "Dashboard coaching triathlon/endurance — données temps réel",
+  "description": "Carnet d'entraînement Strava — volume, charge, intensité, régularité",
   "start_url": "./index.html",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#0F1117",
-  "theme_color": "#6C63FF",
+  "theme_color": "#0F1117",
   "icons": [
     {
       "src": "./icons/icon-192.png",

@@ -9,6 +9,7 @@ import { fileURLToPath } from "url";
 import { fetchRecentActivities, fetchAthlete, fetchActivityDetail } from "./strava.js";
 import { computeDecoupling } from "./decoupling.js";
 import { buildWhoopObservations } from "./whoop.js";
+import { buildCarnet, writeCarnet } from "./carnet.js";
 
 const __dirname   = path.dirname(fileURLToPath(import.meta.url));
 const OUTPUT      = path.join(__dirname, "../js/data-benoit.js");
@@ -621,6 +622,15 @@ async function main() {
 
   fs.writeFileSync(OUTPUT, output);
   console.log(`\n📝 Fichier généré : js/data-benoit.js`);
+
+  // ── Carnet (page principale) : 5 facteurs lisibles → js/carnet-data.js ──
+  try {
+    const carnet = buildCarnet(activities, new Date());
+    writeCarnet(carnet);
+    console.log(`📝 Carnet         : js/carnet-data.js (${carnet.semaine.label} · ratio ${carnet.charge.ratio ?? "—"} · ${carnet.charge.statut})`);
+  } catch (e) {
+    console.warn("⚠️  Carnet non généré :", e.message);
+  }
 
   // ── Write observations for scoring engine ──
   // The browser can't access localStorage from Node, so we write a JS file
