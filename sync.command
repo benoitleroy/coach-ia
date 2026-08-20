@@ -35,6 +35,21 @@ echo ""
 node scripts/whoop-sync.js
 
 echo ""
+
+# Push automatique vers GitHub Pages si des données ont changé
+if [ -d .git ]; then
+  if ! git diff --quiet js/data-benoit.js js/observations-strava.js js/observations-whoop.js 2>/dev/null; then
+    echo "📤 Push des nouvelles données vers GitHub Pages…"
+    git add js/data-benoit.js js/observations-strava.js js/observations-whoop.js
+    git -c user.email="benoit@coach-ia.local" -c user.name="Benoit Leroy" \
+      commit -m "Sync auto $(date +%Y-%m-%d)" >/dev/null
+    git push origin main >/dev/null 2>&1 && echo "   → en ligne dans ~1min" || echo "   ⚠️  push échoué (vérifie ta connexion)"
+  else
+    echo "ℹ️  Aucune nouvelle donnée à publier."
+  fi
+fi
+
+echo ""
 # Pause uniquement si lancé manuellement (TTY) — pas en mode launchd
 if [ -t 0 ]; then
   read -p "✅ Sync terminée. Appuie sur Entrée pour fermer cette fenêtre..."
