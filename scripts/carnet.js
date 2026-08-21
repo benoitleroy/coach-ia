@@ -149,7 +149,8 @@ function emptyWeek() {
   return w;
 }
 
-export function buildCarnet(activities, now = new Date(), nWeeks = 12) {
+// `extras` : { [activityId]: { photo, contenu } } produit par scripts/photos.js (optionnel)
+export function buildCarnet(activities, now = new Date(), nWeeks = 12, extras = {}) {
   const acts = [...activities].sort((a, b) => new Date(b.start_date) - new Date(a.start_date));
   const today = startOfDay(now);
   const curStart = isoWeekStart(today);
@@ -223,6 +224,8 @@ export function buildCarnet(activities, now = new Date(), nWeeks = 12) {
     hr: a.average_heartrate ? Math.round(a.average_heartrate) : null,
     watts: a.average_watts ? Math.round(a.average_watts) : null,
     effort: effortScore(a),
+    photo: extras[a.id]?.photo || null,
+    contenu: extras[a.id]?.contenu || null,
   });
   const recentes = acts.slice(0, 10).map(fmt);
   const derniere = acts[0] ? fmt(acts[0]) : null;

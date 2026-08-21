@@ -114,3 +114,15 @@ h2 { font-family: var(--display); font-size: 1.05rem; font-weight: 600; text-tra
 .foot a { color: var(--faint); text-decoration: none; }
 .foot a:hover { color: var(--muted); }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+
+/* Contenu de séance lu sur la photo Strava (scripts/photos.js) */
+.contenu { flex-basis: 100%; margin-top: .4rem; font-size: .85rem; }
+.contenu summary { cursor: pointer; color: var(--muted); list-style: none; }
+.contenu summary::-webkit-details-marker { display: none; }
+.contenu[open] summary { color: inherit; }
+.contenu .c-body { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: .4rem; align-items: flex-start; }
+.contenu .c-txt { flex: 1 1 14rem; margin: 0; white-space: pre-wrap; font: inherit; font-size: .85rem; line-height: 1.45; }
+.contenu .c-photo img { width: 7rem; max-width: 100%; border-radius: .4rem; border: 1px solid var(--line); display: block; }
+.contenu .c-none { color: var(--muted); }
+.recentes .contenu { font-size: .8rem; }
+.recentes .contenu .c-photo img { width: 5rem; }

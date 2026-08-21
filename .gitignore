@@ -8,6 +8,7 @@ scripts/.cert/
 scripts/sync.log
 scripts/sync.err.log
 scripts/.activities.cache.json
+scripts/.photos/
 
 # Dossier Whoop CSV historique (remplacé par API v2)
 my_whoop_data_2026_04_16/

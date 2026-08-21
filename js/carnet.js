@@ -109,6 +109,14 @@
   const feels = (() => { try { return JSON.parse(localStorage.getItem(FEEL_KEY) || "{}"); } catch { return {}; } })();
   const saveFeel = (id, v) => { feels[id] = v; localStorage.setItem(FEEL_KEY, JSON.stringify(feels)); };
   const FEEL_ICO = { 1: "😫", 2: "😐", 3: "💪" };
+  const esc = t => String(t).replace(/[&<>]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]));
+  // Contenu de séance lu sur la photo Strava (tableau WOD…) — ouvert pour la dernière séance, replié ailleurs
+  const contenuHtml = (a, open) => {
+    if (!a.contenu && !a.photo) return "";
+    const img = a.photo ? `<a class="c-photo" href="${a.photo}" target="_blank" rel="noopener"><img src="${a.photo}" alt="photo de la séance" loading="lazy"></a>` : "";
+    const txt = a.contenu ? `<pre class="c-txt">${esc(a.contenu)}</pre>` : `<span class="c-none">photo sans contenu lisible</span>`;
+    return `<details class="contenu"${open ? " open" : ""}><summary>📋 Contenu de la séance</summary><div class="c-body">${txt}${img}</div></details>`;
+  };
 
   const d = C.derniere;
   if (d) {
@@ -116,7 +124,8 @@
     $("der-quand").textContent = j === 0 ? "aujourd'hui" : j === 1 ? "hier" : `il y a ${j} jours`;
     const meta = [fmtH(d.sec), d.km ? fmtKm(d.km) : null, d.hr ? d.hr + " bpm" : null, d.watts ? d.watts + " W" : null].filter(Boolean).join(" · ");
     const label = d.disc === "autre" ? (d.typeLabel || d.type) : DISC[d.disc].label;
-    $("derniere").innerHTML = `<span class="d-ico">${DISC[d.disc].ico}</span><span class="d-main">${label}</span><span class="d-meta">${meta}</span><span class="d-meta">${fmtDate(d.date)}${d.name ? " · " + d.name : ""}</span>`;
+    $("derniere").innerHTML = `<span class="d-ico">${DISC[d.disc].ico}</span><span class="d-main">${label}</span><span class="d-meta">${meta}</span><span class="d-meta">${fmtDate(d.date)}${d.name ? " · " + d.name : ""}</span>`
+      + contenuHtml(d, true);
     const btns = $("ressenti").querySelectorAll("button");
     const paint = () => btns.forEach(b => b.classList.toggle("on", feels[d.id] === Number(b.dataset.val)));
     btns.forEach(b => b.addEventListener("click", () => { saveFeel(d.id, Number(b.dataset.val)); paint(); renderRecentes(); }));
@@ -143,7 +152,7 @@
       const label = a.disc === "autre" ? (a.typeLabel || a.type) : DISC[a.disc].label;
       const meta = [fmtH(a.sec), a.km && a.disc !== "autre" ? fmtKm(a.km) : null, a.hr ? a.hr + " bpm" : null].filter(Boolean).join(" · ");
       const feel = feels[a.id] ? `<span class="r-feel">${FEEL_ICO[feels[a.id]]}</span>` : "";
-      return `<li><span>${DISC[a.disc].ico}</span><span>${label}${feel}<br><span class="r-date">${fmtDate(a.date)}${a.name ? " · " + a.name : ""}</span></span><span class="r-meta">${meta}</span></li>`;
+      return `<li><span>${DISC[a.disc].ico}</span><span>${label}${feel}<br><span class="r-date">${fmtDate(a.date)}${a.name ? " · " + a.name : ""}</span>${contenuHtml(a, false)}</span><span class="r-meta">${meta}</span></li>`;
     }).join("");
   }
   renderRecentes();

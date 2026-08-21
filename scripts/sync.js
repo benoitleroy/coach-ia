@@ -10,6 +10,7 @@ import { fetchRecentActivities, fetchAthlete, fetchActivityDetail } from "./stra
 import { computeDecoupling } from "./decoupling.js";
 import { buildWhoopObservations } from "./whoop.js";
 import { buildCarnet, writeCarnet } from "./carnet.js";
+import { enrichWithPhotos } from "./photos.js";
 
 const __dirname   = path.dirname(fileURLToPath(import.meta.url));
 const OUTPUT      = path.join(__dirname, "../js/data-benoit.js");
@@ -625,7 +626,11 @@ async function main() {
 
   // ── Carnet (page principale) : 5 facteurs lisibles → js/carnet-data.js ──
   try {
-    const carnet = buildCarnet(activities, new Date());
+    // Photos Strava (tableau de WOD, etc.) → lues par Claude, mises en cache
+    let extras = {};
+    try { extras = await enrichWithPhotos(activities); }
+    catch (e) { console.warn("⚠️  Photos non traitées :", e.message); }
+    const carnet = buildCarnet(activities, new Date(), 12, extras);
     writeCarnet(carnet);
     console.log(`📝 Carnet         : js/carnet-data.js (${carnet.semaine.label} · ratio ${carnet.charge.ratio ?? "—"} · ${carnet.charge.statut})`);
   } catch (e) {
