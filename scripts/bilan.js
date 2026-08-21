@@ -29,7 +29,7 @@ const MOIS = ["janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.", "août"
 export const PROFIL = {
   prenom: "Benoît", age: 42, fcMax: 190,
   objectif: "devenir un athlète hybride : endurance (course, vélo, natation) + force (CrossFit, charges lourdes)",
-  contexte: "pratique CrossFit en box, Pilates régulier, historique triathlon/Ironman ; reprise après un creux mai→août 2026",
+  contexte: "pratique CrossFit en box, Pilates régulier, historique triathlon/Ironman. Préparait l'Ironman Switzerland (Thun, 5 juillet 2026) — ANNULÉ volontairement pour accompagner son fils à une compétition d'échecs : le creux mai→août 2026 est un choix familial assumé, pas un abandon ni une blessure. Reprise fin août 2026 avec un nouvel objectif hybride.",
 };
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
