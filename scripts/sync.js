@@ -11,6 +11,7 @@ import { computeDecoupling } from "./decoupling.js";
 import { buildWhoopObservations } from "./whoop.js";
 import { buildCarnet, writeCarnet } from "./carnet.js";
 import { enrichWithPhotos } from "./photos.js";
+import { computeBilan, coachBilan, writeBilan } from "./bilan.js";
 
 const __dirname   = path.dirname(fileURLToPath(import.meta.url));
 const OUTPUT      = path.join(__dirname, "../js/data-benoit.js");
@@ -633,6 +634,14 @@ async function main() {
     const carnet = buildCarnet(activities, new Date(), 12, extras);
     writeCarnet(carnet);
     console.log(`📝 Carnet         : js/carnet-data.js (${carnet.semaine.label} · ratio ${carnet.charge.ratio ?? "—"} · ${carnet.charge.statut})`);
+
+    // Bilan 12 mois + bilan coach (Claude, régénéré seulement si nouvelle activité ou nouvelle semaine)
+    try {
+      const bilan = computeBilan(activities, new Date());
+      bilan.coach = await coachBilan(bilan, carnet, activities);
+      writeBilan(bilan);
+      console.log(`📝 Bilan          : js/bilan-data.js (${bilan.total.h} h sur 12 mois${bilan.coach ? " · coach OK" : " · sans coach"})`);
+    } catch (e) { console.warn("⚠️  Bilan non généré :", e.message); }
   } catch (e) {
     console.warn("⚠️  Carnet non généré :", e.message);
   }

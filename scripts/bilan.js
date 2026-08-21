@@ -1,0 +1,243 @@
+// scripts/bilan.js
+// BILAN auto du carnet : 12 mois d'activités Strava → tableau mensuel, marqueurs
+// d'efficacité (allure/FC en course, W/FC à vélo), puis bilan coach rédigé par
+// Claude (efficacité, ce qui manque pour devenir hybride, semaine suivante).
+//
+//   import { computeBilan, coachBilan, writeBilan } from "./bilan.js";
+//   const bilan = computeBilan(activities, new Date());
+//   bilan.coach = await coachBilan(bilan, carnet);   // mis en cache, best-effort
+//   writeBilan(bilan);                                // → js/bilan-data.js
+//
+// Lancé directement : node scripts/bilan.js [--force]  → relit le cache Strava local.
+
+import fs from "fs";
+import os from "os";
+import path from "path";
+import { execFileSync } from "child_process";
+import { fileURLToPath } from "url";
+import { loadPhotoCache } from "./photos.js";
+
+const __dirname  = path.dirname(fileURLToPath(import.meta.url));
+const ACT_CACHE  = path.join(__dirname, ".activities.cache.json");
+const COACH_CACHE= path.join(__dirname, ".bilan.cache.json");
+const OUTPUT     = path.join(__dirname, "../js/bilan-data.js");
+
+const DAY = 86400 * 1000;
+const MOIS = ["janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.", "août", "sept.", "oct.", "nov.", "déc."];
+
+// ─── Profil athlète (à ajuster ici tant qu'il n'y a pas de page profil) ──────
+export const PROFIL = {
+  prenom: "Benoît", age: 42, fcMax: 190,
+  objectif: "devenir un athlète hybride : endurance (course, vélo, natation) + force (CrossFit, charges lourdes)",
+  contexte: "pratique CrossFit en box, Pilates régulier, historique triathlon/Ironman ; reprise après un creux mai→août 2026",
+};
+
+// ─── Helpers ─────────────────────────────────────────────────────────────────
+
+const disciplineOf = a => {
+  const t = a.sport_type || a.type;
+  if (t === "Swim") return "nat";
+  if (["Ride", "VirtualRide", "GravelRide", "MountainBikeRide"].includes(t)) return "velo";
+  if (["Run", "VirtualRun", "TrailRun"].includes(t)) return "run";
+  return "autre";
+};
+
+// Doublons Garmin + Strava (même jour, même type, durée ±10 %, départ < 1 h d'écart)
+export function dedupe(activities) {
+  const sorted = [...activities].sort((a, b) => new Date(a.start_date) - new Date(b.start_date));
+  const kept = [];
+  for (const a of sorted) {
+    const dup = kept.find(k => (k.sport_type || k.type) === (a.sport_type || a.type)
+      && Math.abs(new Date(k.start_date) - new Date(a.start_date)) < 3600e3
+      && Math.abs((k.moving_time || 0) - (a.moving_time || 0)) <= 0.1 * Math.max(k.moving_time || 1, a.moving_time || 1));
+    if (dup) { // garde la version la plus riche (FC / watts)
+      const score = x => (x.average_heartrate ? 1 : 0) + (x.average_watts ? 1 : 0) + (x.suffer_score ? 1 : 0);
+      if (score(a) > score(dup)) kept[kept.indexOf(dup)] = a;
+      continue;
+    }
+    kept.push(a);
+  }
+  return kept;
+}
+
+const pace = a => a.distance > 0 ? a.moving_time / (a.distance / 1000) : null; // s/km
+const fmtPace = s => s == null ? null : `${Math.floor(s / 60)}:${String(Math.round(s % 60)).padStart(2, "0")}`;
+
+// ─── Calcul ──────────────────────────────────────────────────────────────────
+
+export function computeBilan(activities, now = new Date(), nMonths = 12) {
+  const acts = dedupe(activities);
+  const months = [];
+  for (let i = nMonths - 1; i >= 0; i--) {
+    const d = new Date(now.getFullYear(), now.getMonth() - i, 1);
+    const key = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}`;
+    months.push({ key, label: `${MOIS[d.getMonth()]} ${String(d.getFullYear()).slice(2)}`, sec: 0, n: 0, jours: new Set(), re: 0,
+      disc: { nat: { sec: 0, km: 0, n: 0 }, velo: { sec: 0, km: 0, n: 0 }, run: { sec: 0, km: 0, n: 0 }, autre: { sec: 0, km: 0, n: 0 } }, types: {} });
+  }
+  const byKey = Object.fromEntries(months.map(m => [m.key, m]));
+
+  acts.forEach(a => {
+    const key = (a.start_date_local || a.start_date).slice(0, 7);
+    const m = byKey[key]; if (!m) return;
+    const d = disciplineOf(a), sec = a.moving_time || 0, km = (a.distance || 0) / 1000;
+    m.sec += sec; m.n += 1; m.re += a.suffer_score || 0; m.jours.add((a.start_date_local || a.start_date).slice(0, 10));
+    m.disc[d].sec += sec; m.disc[d].km += km; m.disc[d].n += 1;
+    const t = a.sport_type || a.type; m.types[t] = (m.types[t] || 0) + 1;
+  });
+
+  const mois = months.map(m => ({
+    key: m.key, label: m.label, h: Math.round(m.sec / 360) / 10, n: m.n, jours: m.jours.size, re: m.re,
+    disc: Object.fromEntries(Object.entries(m.disc).map(([k, v]) => [k, { h: Math.round(v.sec / 360) / 10, km: Math.round(v.km), n: v.n }])),
+    types: m.types,
+  }));
+
+  // Marqueurs d'efficacité
+  const since = now.getTime() - 365 * DAY;
+  const recent = acts.filter(a => new Date(a.start_date).getTime() >= since);
+  const course = recent.filter(a => disciplineOf(a) === "run" && a.distance >= 8000 && a.average_heartrate)
+    .map(a => ({ date: (a.start_date_local || a.start_date).slice(0, 10), km: Math.round(a.distance / 100) / 10, pace: fmtPace(pace(a)), paceSec: Math.round(pace(a)), hr: Math.round(a.average_heartrate), dplus: Math.round(a.total_elevation_gain || 0) }));
+  const velo = recent.filter(a => disciplineOf(a) === "velo" && a.moving_time >= 3600 && a.average_watts && a.average_heartrate)
+    .map(a => ({ date: (a.start_date_local || a.start_date).slice(0, 10), min: Math.round(a.moving_time / 60), w: Math.round(a.weighted_average_watts || a.average_watts), hr: Math.round(a.average_heartrate), km: Math.round(a.distance / 1000) }));
+
+  // Indice d'efficacité course = allure à FC normalisée (s/km × 140/FC), moyenne par trimestre
+  const quarter = d => { const dt = new Date(d); return `${dt.getFullYear()}-T${Math.floor(dt.getMonth() / 3) + 1}`; };
+  const effQ = {};
+  course.forEach(c => { const q = quarter(c.date); (effQ[q] ??= []).push(c.paceSec * 140 / c.hr); });
+  const efficaciteCourse = Object.entries(effQ).map(([q, arr]) => ({ trimestre: q, paceA140: fmtPace(arr.reduce((s, v) => s + v, 0) / arr.length), n: arr.length }));
+  const effV = {};
+  velo.forEach(v => { const q = quarter(v.date); (effV[q] ??= []).push(v.w * 140 / v.hr); });
+  const efficaciteVelo = Object.entries(effV).map(([q, arr]) => ({ trimestre: q, wA140: Math.round(arr.reduce((s, v) => s + v, 0) / arr.length), n: arr.length }));
+
+  const total = mois.reduce((s, m) => s + m.h, 0);
+  return {
+    generatedAt: now.toISOString(),
+    mois, total: { h: Math.round(total * 10) / 10, n: mois.reduce((s, m) => s + m.n, 0), jours: mois.reduce((s, m) => s + m.jours, 0) },
+    efficacite: { course, velo, courseTrim: efficaciteCourse, veloTrim: efficaciteVelo },
+    lastActivityId: acts.length ? acts[acts.length - 1].id : null,
+  };
+}
+
+// ─── Bilan coach (Claude CLI) ────────────────────────────────────────────────
+
+const CLAUDE_CANDIDATES = ["claude", path.join(os.homedir(), ".npm-global/bin/claude"), path.join(os.homedir(), ".claude/local/claude"), "/usr/local/bin/claude", "/opt/homebrew/bin/claude"];
+function findClaude() {
+  for (const c of CLAUDE_CANDIDATES) { try { execFileSync(c, ["--version"], { stdio: "ignore" }); return c; } catch {} }
+  return null;
+}
+
+function isoWeekLabel(d) {
+  const dt = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
+  const day = dt.getUTCDay() || 7; dt.setUTCDate(dt.getUTCDate() + 4 - day);
+  const ys = new Date(Date.UTC(dt.getUTCFullYear(), 0, 1));
+  return `${dt.getUTCFullYear()}-S${Math.ceil(((dt - ys) / DAY + 1) / 7)}`;
+}
+
+function digest(bilan, carnet, activities) {
+  const lines = [];
+  lines.push("TABLEAU MENSUEL (12 mois) — h totales · séances · jours actifs · nat h(km) · vélo h(km) · course h(km) · renfo/autre h · effort relatif Strava · types");
+  bilan.mois.forEach(m => lines.push(`${m.label}: ${m.h}h · ${m.n} · ${m.jours}j · nat ${m.disc.nat.h}h(${m.disc.nat.km}) · vélo ${m.disc.velo.h}h(${m.disc.velo.km}) · course ${m.disc.run.h}h(${m.disc.run.km}) · autre ${m.disc.autre.h}h · RE ${m.re} · ${JSON.stringify(m.types)}`));
+  lines.push("\nEFFICACITÉ COURSE (sorties ≥ 8 km) : date · km · allure · FC moy · D+");
+  bilan.efficacite.course.forEach(c => lines.push(`${c.date} ${c.km}km ${c.pace}/km ${c.hr}bpm D+${c.dplus}`));
+  lines.push("Allure normalisée à 140 bpm par trimestre : " + bilan.efficacite.courseTrim.map(q => `${q.trimestre} ${q.paceA140}/km (n=${q.n})`).join(" · "));
+  lines.push("\nEFFICACITÉ VÉLO (≥ 1 h avec W et FC) : date · min · W · FC");
+  bilan.efficacite.velo.forEach(v => lines.push(`${v.date} ${v.min}min ${v.w}W ${v.hr}bpm`));
+  lines.push("W normalisés à 140 bpm par trimestre : " + bilan.efficacite.veloTrim.map(q => `${q.trimestre} ${q.wA140}W (n=${q.n})`).join(" · "));
+
+  // 6 dernières semaines en détail
+  const since = Date.now() - 42 * DAY;
+  lines.push("\nDÉTAIL 6 DERNIÈRES SEMAINES : date · type · durée · km · FC moy · FC max · W · effort relatif · nom");
+  dedupe(activities).filter(a => new Date(a.start_date).getTime() >= since).forEach(a => {
+    const photo = loadPhotoCache(a.id);
+    lines.push(`${(a.start_date_local || a.start_date).slice(0, 10)} ${a.sport_type || a.type} ${Math.round((a.moving_time || 0) / 60)}min ${a.distance ? (a.distance / 1000).toFixed(1) + "km" : ""} ${a.average_heartrate ? Math.round(a.average_heartrate) + "bpm" : ""} ${a.max_heartrate ? "max" + Math.round(a.max_heartrate) : ""} ${a.average_watts ? Math.round(a.average_watts) + "W" : ""} ${a.suffer_score ? "RE" + a.suffer_score : ""} | ${a.name || ""}`);
+    if (photo?.contenu) lines.push("   CONTENU DE SÉANCE (photo) :\n" + photo.contenu.split("\n").map(l => "   " + l).join("\n"));
+  });
+
+  if (carnet) {
+    lines.push(`\nCARNET SEMAINE ${carnet.semaine.label} : ${(carnet.semaine.sec / 3600).toFixed(1)} h · ${carnet.semaine.count} séances · charge 7j ${carnet.charge.aigue} vs 28j ${carnet.charge.chronique} (ratio ${carnet.charge.ratio}, ${carnet.charge.statut}) · intensité easy/hard ${carnet.intensite.easy}/${carnet.intensite.hard} % · ${carnet.regularite.seancesParSemaine} séances/sem · ${carnet.regularite.joursOff28} jours off/28`);
+  }
+  return lines.join("\n");
+}
+
+const COACH_PROMPT = (bilan, carnet, activities, now) => `Tu es un coach sportif avec une solide formation en physiologie de l'exercice (endurance, force, athlète hybride, périodisation, prévention des blessures après 40 ans). Tu écris en français, tu tutoies, ton ton est direct, concret, bienveillant, sans jargon inutile ni enthousiasme artificiel. Tu t'appuies UNIQUEMENT sur les données ci-dessous (Strava) — ne suppose pas de données que tu n'as pas ; si quelque chose manque (sommeil, nutrition, blessure), dis-le en une ligne.
+
+ATHLÈTE : ${PROFIL.prenom}, ${PROFIL.age} ans, FC max ~${PROFIL.fcMax} bpm. Objectif : ${PROFIL.objectif}. Contexte : ${PROFIL.contexte}.
+DATE DU JOUR : ${now.toISOString().slice(0, 10)} (semaine ${isoWeekLabel(now)}). La semaine à planifier est la PROCHAINE semaine (lundi → dimanche).
+
+DONNÉES :
+${digest(bilan, carnet, activities)}
+
+Réponds UNIQUEMENT avec un objet JSON valide (pas de markdown, pas de texte autour) de la forme :
+{
+ "verdict": "3 à 5 phrases : l'entraînement est-il efficace, avec 1-2 preuves chiffrées tirées des données (allure/FC, W/FC, régularité) et la tendance récente",
+ "forts": ["2 à 4 points forts, chacun une phrase courte avec un chiffre"],
+ "manques": ["2 à 4 choses qui manquent pour l'objectif hybride, chacune une phrase courte et actionnable"],
+ "vigilance": "1 phrase sur le risque principal du moment (blessure, surcharge, décrochage) ou \\"\\" si rien",
+ "semaine": {
+   "titre": "objectif de la semaine prochaine en quelques mots",
+   "volumeCible": "ex. ~4 h 30",
+   "jours": [
+     {"jour": "Lun", "ico": "🏃", "seance": "titre court", "detail": "contenu précis (durées, FC cibles, séries × reps, charges relatives)", "gardefou": "1 règle d'arrêt ou d'ajustement"}
+   ]
+ },
+ "regle": "1 phrase : quelle séance sauter en priorité si la semaine déborde, laquelle ne jamais sauter"
+}
+Contraintes pour la semaine : 7 entrées (Lun→Dim, un jour de repos a ico "😴" et detail court), progressive par rapport à ce qui a réellement été fait les 4 dernières semaines (pas plus de +20 à +30 % de volume), 2 séances de force si objectif hybride, au moins 1 séance d'endurance vraiment facile (FC < 140) et au plus 1 séance intense en course, tenir compte des séances CrossFit lues sur photo quand il y en a.`;
+
+export async function coachBilan(bilan, carnet, activities, opts = {}) {
+  const { force = false, log = true, now = new Date() } = opts;
+  const key = `${bilan.lastActivityId}|${isoWeekLabel(now)}`;
+  if (!force) {
+    try {
+      const c = JSON.parse(fs.readFileSync(COACH_CACHE, "utf8"));
+      if (c.key === key) { if (log) console.log("🧠 Bilan coach : inchangé (cache)"); return c.coach; }
+    } catch {}
+  }
+  const bin = findClaude();
+  if (!bin) { if (log) console.warn("⚠️  Claude CLI introuvable — bilan coach non généré."); return null; }
+
+  if (log) console.log("🧠 Bilan coach : génération (Claude)…");
+  let out;
+  try {
+    out = execFileSync(bin, ["-p", "--model", "opus"], {
+      input: COACH_PROMPT(bilan, carnet, activities, now), encoding: "utf8", timeout: 300_000,
+      stdio: ["pipe", "pipe", "pipe"], env: { ...process.env, CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC: "1" },
+    }).trim();
+  } catch (e) {
+    if (log) console.warn("⚠️  Bilan coach échoué :", (e.stderr || e.message).toString().trim().split("\n").pop());
+    return null;
+  }
+  let coach;
+  try {
+    const json = out.replace(/^```(?:json)?\s*/i, "").replace(/\s*```$/, "");
+    coach = JSON.parse(json.slice(json.indexOf("{"), json.lastIndexOf("}") + 1));
+  } catch {
+    if (log) console.warn("⚠️  Bilan coach : réponse non JSON, conservée en texte brut.");
+    coach = { verdict: out, forts: [], manques: [], vigilance: "", semaine: null, regle: "" };
+  }
+  coach.generatedAt = now.toISOString();
+  coach.semaineLabel = isoWeekLabel(new Date(now.getTime() + 7 * DAY));
+  fs.writeFileSync(COACH_CACHE, JSON.stringify({ key, coach }, null, 2));
+  return coach;
+}
+
+export function writeBilan(bilan, outPath = OUTPUT) {
+  fs.writeFileSync(outPath, `// AUTO-GENERATED by scripts/bilan.js — ${bilan.generatedAt}
+// Ne pas éditer : relancer sync.command.
+window.BILAN = ${JSON.stringify(bilan, null, 1)};
+`);
+}
+
+// ─── CLI ─────────────────────────────────────────────────────────────────────
+if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+  const acts = JSON.parse(fs.readFileSync(ACT_CACHE, "utf8"));
+  const force = process.argv.includes("--force");
+  const bilan = computeBilan(acts, new Date());
+  let carnet = null;
+  try { const s = fs.readFileSync(path.join(__dirname, "../js/carnet-data.js"), "utf8"); carnet = JSON.parse(s.slice(s.indexOf("{"), s.lastIndexOf("}") + 1)); } catch {}
+  bilan.coach = await coachBilan(bilan, carnet, acts, { force });
+  writeBilan(bilan);
+  console.log(`📊 Bilan 12 mois : ${bilan.total.h} h · ${bilan.total.n} séances · ${bilan.total.jours} jours actifs`);
+  bilan.mois.forEach(m => console.log(`   ${m.label.padEnd(9)} ${String(m.h).padStart(5)} h · ${String(m.n).padStart(3)} · ${String(m.jours).padStart(2)} j`));
+  if (bilan.coach) console.log("\n🧠 " + bilan.coach.verdict + "\n" + (bilan.coach.semaine ? JSON.stringify(bilan.coach.semaine, null, 1) : ""));
+  console.log("📝 js/bilan-data.js écrit");
+}

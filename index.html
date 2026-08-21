@@ -82,6 +82,25 @@
     </div>
   </section>
 
+  <!-- Bilan coach -->
+  <section class="bloc" id="bloc-coach" hidden>
+    <div class="bloc-head"><h2>Bilan coach</h2><span class="hint" id="coach-date"></span></div>
+    <p class="coach-verdict" id="coach-verdict"></p>
+    <div class="coach-cols">
+      <div><div class="coach-sub">✅ Points forts</div><ul class="coach-list" id="coach-forts"></ul></div>
+      <div><div class="coach-sub">🧩 Ce qui manque (hybride)</div><ul class="coach-list" id="coach-manques"></ul></div>
+    </div>
+    <p class="coach-vigilance" id="coach-vigilance" hidden></p>
+  </section>
+
+  <!-- Semaine prochaine -->
+  <section class="bloc" id="bloc-semaine" hidden>
+    <div class="bloc-head"><h2 id="sem-titre">Semaine prochaine</h2><span class="hint" id="sem-volume"></span></div>
+    <p class="sem-objectif" id="sem-objectif"></p>
+    <ol class="plan" id="plan"></ol>
+    <p class="sem-regle" id="sem-regle"></p>
+  </section>
+
   <!-- 12 semaines -->
   <section class="bloc" id="bloc-semaines">
     <div class="bloc-head"><h2>12 dernières semaines</h2><span class="hint">heures · séances</span></div>
@@ -98,12 +117,21 @@
     <ul class="recentes" id="recentes"></ul>
   </section>
 
+  <!-- 12 mois -->
+  <section class="bloc" id="bloc-annee" hidden>
+    <div class="bloc-head"><h2>12 derniers mois</h2><span class="hint" id="annee-total"></span></div>
+    <div class="table-wrap"><table class="mois" id="mois"></table></div>
+    <div class="eff" id="eff"></div>
+  </section>
+
   <footer class="foot">
     <a href="dashboard.html">Ancienne version complète →</a>
   </footer>
 </main>
 
 <script src="js/carnet-data.js" onerror="document.getElementById('sync').textContent='Pas encore de données — lance sync.command'"></script>
+<script src="js/bilan-data.js" onerror="void 0"></script>
 <script src="js/carnet.js"></script>
+<script src="js/bilan.js"></script>
 </body>
 </html>
