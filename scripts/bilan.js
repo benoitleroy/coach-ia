@@ -223,9 +223,10 @@ Contraintes pour la semaine : 7 entrées (Lun→Dim, un jour de repos a ico "�
 
 export async function coachBilan(bilan, carnet, activities, opts = {}) {
   const { force = false, log = true, now = new Date() } = opts;
-  let lastNight = "";
-  try { const g = JSON.parse(fs.readFileSync(GARMIN_CACHE, "utf8")); lastNight = (g.jours || []).filter(j => j.sommeil).map(j => j.date).sort().pop() || ""; } catch {}
-  const key = `${bilan.lastActivityId}|${isoWeekLabel(now)}|${lastNight}`;
+  // Clé de cache = semaine ISO uniquement : le plan d'entraînement, les repas et les recettes
+  // restent stables toute la semaine (courses faites le week-end). Régénération : nouvelle
+  // semaine, ou `node scripts/bilan.js --force`.
+  const key = isoWeekLabel(now);
   if (!force) {
     try {
       const c = JSON.parse(fs.readFileSync(COACH_CACHE, "utf8"));
