@@ -17,6 +17,16 @@
     if ("serviceWorker" in navigator) {
       window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));
     }
+    // Rafraîchissement auto : quand l'app revient au premier plan (iPhone, PWA)
+    // après plus de 2 min, on recharge pour afficher les données de la dernière sync.
+    (function () {
+      const SEUIL = 2 * 60 * 1000;
+      let depuis = Date.now();
+      const refresh = () => { if (navigator.onLine !== false && Date.now() - depuis > SEUIL) location.reload(); };
+      document.addEventListener("visibilitychange", () => { if (document.visibilityState === "visible") refresh(); else depuis = Date.now(); });
+      window.addEventListener("pageshow", e => { if (e.persisted) refresh(); });
+      window.addEventListener("focus", refresh);
+    })();
   </script>
 </head>
 <body>

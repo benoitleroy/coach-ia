@@ -1,8 +1,9 @@
 // Coach IA 2030 — Service Worker
-// Stratégie : "network-first, cache-fallback" pour le HTML (toujours frais quand en ligne)
-//             "cache-first" pour le reste (CSS, JS, images) pour rapidité offline
+// Stratégie : "network-first, cache-fallback" pour tout ce qui vient du site (HTML, JS, CSS,
+//             données de sync) → toujours frais quand en ligne, offline possible.
+//             "cache-first" uniquement pour icônes/images/polices.
 
-const CACHE_VERSION = "coach-ia-v10";
+const CACHE_VERSION = "coach-ia-v11";
 
 const PRECACHE_URLS = [
   "./",
@@ -10,6 +11,7 @@ const PRECACHE_URLS = [
   "./dashboard.html",
   "./css/carnet.css",
   "./js/carnet.js",
+  "./js/bilan.js",
   "./accueil.html",
   "./journal.html",
   "./vue360.html",
@@ -55,10 +57,12 @@ self.addEventListener("fetch", (event) => {
 
   const url = new URL(req.url);
   const isHTML = req.mode === "navigate" || req.headers.get("accept")?.includes("text/html");
-  // Fichiers de données régénérés à chaque sync : toujours frais quand en ligne
-  const isData = /\/js\/(carnet-data|data-benoit|observations-[a-z]+|history)\.js$/.test(url.pathname);
+  // Tout le code et les données du site (régénérées à chaque sync) : réseau d'abord.
+  // Seuls icônes / images / polices restent cache-first.
+  const isStatic = /\.(png|jpg|jpeg|svg|ico|woff2?|ttf)$/i.test(url.pathname);
+  const isOwn = url.origin === self.location.origin;
 
-  if (isHTML || isData) {
+  if (isHTML || (isOwn && !isStatic)) {
     event.respondWith(
       fetch(req)
         .then((resp) => {
