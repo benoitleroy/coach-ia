@@ -208,12 +208,16 @@ Réponds UNIQUEMENT avec un objet JSON valide (pas de markdown, pas de texte aut
  "nutrition": {
    "principe": "2-3 phrases : la logique de la semaine (protéines réparties, glucides autour des séances dures, jours légers), avec les repères chiffrés (g de protéines/jour, portions) adaptés au poids",
    "batch": ["4 à 7 préparations à faire le week-end (dimanche), chacune : quoi + quantité pour la semaine + conservation, ex. \"Cuire 1 kg de poulet mariné au four → 5 portions, 4 j frigo\""],
+   "recettes": [
+     {"nom": "nom court", "usage": "batch dimanche / dîner mardi / boîte chantier…", "portions": "ex. 6 portions", "temps": "ex. 10 min prépa + 25 min four", "ingredients": ["quantité + ingrédient, un par entrée"], "etapes": ["étape numérotée, une action par étape, précise (température, durée, texture attendue)"], "conservation": "ex. 4 j au frigo, se congèle"}
+   ],
    "courses": [{"rayon": "Protéines", "items": ["liste courte avec quantités"]}, {"rayon": "Féculents & légumineuses", "items": []}, {"rayon": "Légumes & fruits", "items": []}, {"rayon": "Produits laitiers & œufs", "items": []}, {"rayon": "Épicerie", "items": []}],
    "jours": [
      {"jour": "Lun", "type": "ex. jour force / endurance facile / repos", "petitDej": "\"Habituel\" ou \"Habituel + …\" (ajout justifié seulement)", "dejeuner": "boîte chantier froide/tiède, précise", "collation": "ce qu'on mange AUTOUR de la séance (avant/après) ou \"—\"", "diner": "…"}
    ]
  }
 }
+Contraintes pour les recettes : TOUTES les préparations du batch ET tous les dîners/boîtes qui demandent une cuisson doivent avoir leur recette complète (8 à 12 recettes), écrites pour quelqu'un qui cuisine peu : quantités exactes en g/ml/pièces, étapes numérotées courtes, températures et durées, ce qu'on doit voir/sentir pour savoir que c'est cuit, et la conservation. Les recettes réutilisent le batch (pas de recette qui refait cuire du riz ou du poulet déjà préparés). Les ingrédients des recettes et la liste de courses doivent correspondre exactement (mêmes produits, quantités totales cohérentes, arrondies au conditionnement du supermarché : boîte, paquet, barquette).
 Contraintes pour la nutrition : 7 entrées (Lun→Dim) alignées sur la séance du jour (jour force = plus de protéines et glucides au dîner, jour endurance longue = glucides la veille au soir et au petit-déj, repos = assiette plus légère, légumes dominants) ; repas RÉALISTES de semaine : 3 à 5 recettes de base déclinées, réutilisant les préparations du batch, cuisson ≤ 20 min le soir ; quantités en unités simples (1 poing, 1 paume, 150 g, 2 œufs) ; petit-déjeuners répétitifs acceptés ; la liste de courses doit couvrir exactement les repas proposés, groupée par rayon, avec quantités pour 1 personne / 7 jours.
 Contraintes pour la semaine : 7 entrées (Lun→Dim, un jour de repos a ico "😴" et detail court), progressive par rapport à ce qui a réellement été fait les 4 dernières semaines (pas plus de +20 à +30 % de volume), 2 séances de force si objectif hybride, au moins 1 séance d'endurance vraiment facile (FC < 140) et au plus 1 séance intense en course, tenir compte des séances CrossFit lues sur photo quand il y en a.`;
 

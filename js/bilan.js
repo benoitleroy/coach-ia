@@ -43,6 +43,8 @@
     $("repas").innerHTML = n.jours.map(j => `<li><div class="rp-head"><span class="p-jour">${esc(j.jour)}</span><span class="rp-type">${esc(j.type || "")}</span></div><dl class="rp-meals">${[["Matin", j.petitDej], ["Midi", j.dejeuner], ["Séance", j.collation], ["Soir", j.diner]].filter(([, v]) => v && v !== "—").map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`).join("")}</dl></li>`).join("");
     const batch = (n.batch || []).map(b => `<li>${esc(b)}</li>`).join("");
     $("batch").innerHTML = batch; $("batch-wrap").hidden = !batch;
+    const recettes = (n.recettes || []).map(r => `<details class="recette"><summary>${esc(r.nom)} <small>${esc([r.usage, r.portions, r.temps].filter(Boolean).join(" · "))}</small></summary><div class="rc-body"><div class="coach-sub">Ingrédients</div><ul class="coach-list">${(r.ingredients || []).map(i => `<li>${esc(i)}</li>`).join("")}</ul><div class="coach-sub">Étapes</div><ol class="rc-steps">${(r.etapes || []).map(e => `<li>${esc(e)}</li>`).join("")}</ol>${r.conservation ? `<div class="rc-keep">🧊 ${esc(r.conservation)}</div>` : ""}</div></details>`).join("");
+    $("recettes").innerHTML = recettes; $("recettes-wrap").hidden = !recettes;
     const courses = (n.courses || []).filter(r => r.items && r.items.length).map(r => `<div class="course-rayon"><div class="coach-sub">${esc(r.rayon)}</div><ul class="course-list">${r.items.map(i => `<li><label><input type="checkbox"> ${esc(i)}</label></li>`).join("")}</ul></div>`).join("");
     $("courses").innerHTML = courses; $("courses-wrap").hidden = !courses;
   }

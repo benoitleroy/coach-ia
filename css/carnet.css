@@ -196,3 +196,15 @@ details.sub > *:not(summary) { margin-top: .5rem; }
 .course-list label { display: flex; gap: .4rem; align-items: flex-start; cursor: pointer; }
 .course-list input { margin-top: .2rem; accent-color: var(--accent); }
 .course-list input:checked + * , .course-list label:has(input:checked) { color: var(--faint); text-decoration: line-through; }
+
+/* Recettes */
+details.recette { border-bottom: 1px solid var(--line); padding: .4rem 0; }
+details.recette:last-child { border-bottom: 0; }
+details.recette summary { cursor: pointer; list-style: none; font-weight: 600; }
+details.recette summary::-webkit-details-marker { display: none; }
+details.recette summary small { display: block; font-weight: 400; color: var(--muted); font-size: .78rem; }
+details.recette .rc-body { padding: .4rem 0 .2rem .2rem; }
+details.recette .rc-body .coach-sub { margin-top: .4rem; }
+.rc-steps { margin: 0; padding-left: 1.2rem; font-size: .88rem; line-height: 1.45; }
+.rc-steps li { margin-bottom: .25rem; }
+.rc-keep { margin-top: .4rem; font-size: .8rem; color: var(--muted); }
