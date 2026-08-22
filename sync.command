@@ -28,7 +28,7 @@ if [ ! -f "scripts/.env.local" ]; then
 fi
 
 # Sommeil / HRV / FC repos Garmin Connect (avant la sync Strava : le bilan coach les utilise)
-if [ -x scripts/.venv/bin/python ] && grep -q "^GARMIN_EMAIL=" scripts/.env.local 2>/dev/null; then
+if [ -x scripts/.venv/bin/python ] && [ -d scripts/.garmin.tokens ]; then
   scripts/.venv/bin/python -W ignore scripts/garmin.py < /dev/null || echo "⚠️  Import Garmin échoué (sommeil non mis à jour)"
 fi
 

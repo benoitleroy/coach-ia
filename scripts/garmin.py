@@ -2,9 +2,8 @@
 """
 scripts/garmin.py — Sommeil / HRV / FC repos / Body Battery depuis Garmin Connect.
 
-Bibliothèque non officielle `garminconnect` (garth). Identifiants dans scripts/.env.local :
-    GARMIN_EMAIL=...
-    GARMIN_PASSWORD=...
+Bibliothèque non officielle `garminconnect` (garth). Premier login interactif (email + mot de passe
+demandés à l'écran, ou GARMIN_EMAIL / GARMIN_PASSWORD dans scripts/.env.local si présents).
 Les tokens de session sont gardés dans scripts/.garmin.tokens/ (gitignoré) → après le
 premier login, le mot de passe n'est plus utilisé (tokens valables ~1 an).
 
@@ -47,7 +46,12 @@ def connect(force_login=False):
         except Exception as e:  # tokens périmés → relogin
             print(f"   tokens Garmin invalides ({e.__class__.__name__}), nouveau login…")
     if not email or not pwd:
-        sys.exit("❌ GARMIN_EMAIL / GARMIN_PASSWORD absents de scripts/.env.local")
+        if not sys.stdin.isatty():
+            sys.exit("❌ Pas de tokens Garmin et pas de terminal pour se connecter : lance `scripts/.venv/bin/python scripts/garmin.py --login` à la main.")
+        import getpass
+        print("🔐 Connexion Garmin Connect (une seule fois — les jetons seront gardés dans scripts/.garmin.tokens/)")
+        email = email or input("   Email Garmin : ").strip()
+        pwd = pwd or getpass.getpass("   Mot de passe Garmin (masqué) : ")
     g = Garmin(email, pwd)
     g.login()  # peut demander le code MFA sur stdin
     TOKENS.mkdir(exist_ok=True)
