@@ -27,6 +27,11 @@ if [ ! -f "scripts/.env.local" ]; then
   exit 1
 fi
 
+# Sommeil / HRV / FC repos Garmin Connect (avant la sync Strava : le bilan coach les utilise)
+if [ -x scripts/.venv/bin/python ] && grep -q "^GARMIN_EMAIL=" scripts/.env.local 2>/dev/null; then
+  scripts/.venv/bin/python -W ignore scripts/garmin.py < /dev/null || echo "⚠️  Import Garmin échoué (sommeil non mis à jour)"
+fi
+
 # Lancer le script de sync Strava
 node scripts/sync.js
 
@@ -38,9 +43,9 @@ echo ""
 
 # Push automatique vers GitHub Pages si des données ont changé
 if [ -d .git ]; then
-  if ! git diff --quiet js/data-benoit.js js/observations-strava.js js/carnet-data.js js/bilan-data.js 2>/dev/null; then
+  if ! git diff --quiet js/data-benoit.js js/observations-strava.js js/carnet-data.js js/bilan-data.js js/sommeil-data.js 2>/dev/null; then
     echo "📤 Push des nouvelles données vers GitHub Pages…"
-    git add js/data-benoit.js js/observations-strava.js js/carnet-data.js js/bilan-data.js
+    git add js/data-benoit.js js/observations-strava.js js/carnet-data.js js/bilan-data.js js/sommeil-data.js
     git -c user.email="benoit@coach-ia.local" -c user.name="Benoit Leroy" \
       commit -m "Sync auto $(date +%Y-%m-%d)" >/dev/null
     git push origin main >/dev/null 2>&1 && echo "   → en ligne dans ~1min" || echo "   ⚠️  push échoué (vérifie ta connexion)"

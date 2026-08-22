@@ -162,3 +162,16 @@ table.mois td.zero { color: var(--faint); }
 .eff .eff-row { display: flex; justify-content: space-between; font-variant-numeric: tabular-nums; }
 .eff .eff-row span:last-child { font-weight: 600; }
 .eff .eff-note { color: var(--faint); font-size: .72rem; margin-top: .25rem; }
+
+/* Sommeil / récupération (js/sommeil.js) */
+.phases { display: flex; height: .55rem; border-radius: 4px; overflow: hidden; background: var(--card-2); margin: .5rem 0 .25rem; }
+.phases i { display: block; height: 100%; }
+.phases .profond { background: #3A4FD8; } .phases .leger { background: #6C63FF; } .phases .paradoxal { background: #4CC9F0; } .phases .eveil { background: #FF6B6B; }
+.phases-txt { font-size: .75rem; color: var(--muted); margin-bottom: .6rem; }
+.tiles4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: .5rem; }
+@media (max-width: 480px) { .tiles4 { grid-template-columns: repeat(2, 1fr); } }
+.nuits { list-style: none; margin: .8rem 0 0; padding: 0; display: flex; gap: 3px; height: 3.2rem; align-items: flex-end; }
+.nuits li { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; }
+.nuits li i { display: block; width: 100%; border-radius: 3px 3px 0 0; background: var(--faint); min-height: 2px; }
+.nuits li i.good { background: var(--accent); } .nuits li i.fair { background: var(--warn); } .nuits li i.poor { background: var(--alert); }
+.nuits li span { font-size: .6rem; color: var(--faint); margin-top: .15rem; }

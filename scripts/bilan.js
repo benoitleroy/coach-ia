@@ -21,6 +21,7 @@ const __dirname  = path.dirname(fileURLToPath(import.meta.url));
 const ACT_CACHE  = path.join(__dirname, ".activities.cache.json");
 const COACH_CACHE= path.join(__dirname, ".bilan.cache.json");
 const OUTPUT     = path.join(__dirname, "../js/bilan-data.js");
+const GARMIN_CACHE = path.join(__dirname, ".garmin.cache.json");
 
 const DAY = 86400 * 1000;
 const MOIS = ["janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.", "août", "sept.", "oct.", "nov.", "déc."];
@@ -152,13 +153,30 @@ function digest(bilan, carnet, activities) {
     if (photo?.contenu) lines.push("   CONTENU DE SÉANCE (photo) :\n" + photo.contenu.split("\n").map(l => "   " + l).join("\n"));
   });
 
+  // Sommeil / récupération Garmin (28 derniers jours) si disponible
+  try {
+    const g = JSON.parse(fs.readFileSync(GARMIN_CACHE, "utf8"));
+    const since28 = Date.now() - 28 * DAY;
+    const jours = (g.jours || []).filter(j => new Date(j.date + "T12:00:00").getTime() >= since28 && j.sommeil);
+    if (jours.length) {
+      lines.push("\nSOMMEIL / RÉCUPÉRATION GARMIN (28 derniers jours) : date · durée · score · profond · HRV nuit (statut) · FC repos · Body Battery réveil/max · stress moy · readiness");
+      jours.forEach(j => {
+        const s = j.sommeil, bb = j.body_battery || {};
+        lines.push(`${j.date} ${Math.floor(s.total_min / 60)}h${String(s.total_min % 60).padStart(2, "0")} score ${s.score ?? "—"} profond ${s.profond_min}min · HRV ${j.hrv_nuit ?? "—"}${j.hrv_statut ? " (" + j.hrv_statut + ")" : ""} · FC repos ${j.fc_repos ?? "—"} · BB ${bb.reveil ?? "—"}/${bb.max ?? "—"} · stress ${j.stress_moy ?? "—"} · readiness ${j.readiness?.score ?? "—"}`);
+      });
+      const avg = arr => arr.length ? Math.round(arr.reduce((a, b) => a + b, 0) / arr.length) : null;
+      const d7 = jours.slice(-7);
+      lines.push(`Moyennes 7 nuits : sommeil ${avg(d7.map(j => j.sommeil.total_min))} min · HRV ${avg(d7.map(j => j.hrv_nuit).filter(Boolean)) ?? "—"} · FC repos ${avg(d7.map(j => j.fc_repos).filter(Boolean)) ?? "—"} — 28 nuits : sommeil ${avg(jours.map(j => j.sommeil.total_min))} min · HRV ${avg(jours.map(j => j.hrv_nuit).filter(Boolean)) ?? "—"} · FC repos ${avg(jours.map(j => j.fc_repos).filter(Boolean)) ?? "—"}`);
+    }
+  } catch {}
+
   if (carnet) {
     lines.push(`\nCARNET SEMAINE ${carnet.semaine.label} : ${(carnet.semaine.sec / 3600).toFixed(1)} h · ${carnet.semaine.count} séances · charge 7j ${carnet.charge.aigue} vs 28j ${carnet.charge.chronique} (ratio ${carnet.charge.ratio}, ${carnet.charge.statut}) · intensité easy/hard ${carnet.intensite.easy}/${carnet.intensite.hard} % · ${carnet.regularite.seancesParSemaine} séances/sem · ${carnet.regularite.joursOff28} jours off/28`);
   }
   return lines.join("\n");
 }
 
-const COACH_PROMPT = (bilan, carnet, activities, now) => `Tu es un coach sportif avec une solide formation en physiologie de l'exercice (endurance, force, athlète hybride, périodisation, prévention des blessures après 40 ans). Tu écris en français, tu tutoies, ton ton est direct, concret, bienveillant, sans jargon inutile ni enthousiasme artificiel. Tu t'appuies UNIQUEMENT sur les données ci-dessous (Strava) — ne suppose pas de données que tu n'as pas ; si quelque chose manque (sommeil, nutrition, blessure), dis-le en une ligne.
+const COACH_PROMPT = (bilan, carnet, activities, now) => `Tu es un coach sportif avec une solide formation en physiologie de l'exercice (endurance, force, athlète hybride, périodisation, prévention des blessures après 40 ans). Tu écris en français, tu tutoies, ton ton est direct, concret, bienveillant, sans jargon inutile ni enthousiasme artificiel. Tu t'appuies UNIQUEMENT sur les données ci-dessous (Strava, et Garmin Connect pour le sommeil/HRV/FC repos quand la section existe) — ne suppose pas de données que tu n'as pas ; si quelque chose manque (sommeil, nutrition, blessure), dis-le en une ligne. Quand le sommeil/HRV est présent, intègre-le dans le verdict et adapte la semaine (ex. HRV sous la base ou sommeil < 6 h 30 → moins d'intensité).
 
 ATHLÈTE : ${PROFIL.prenom}, ${PROFIL.age} ans, FC max ~${PROFIL.fcMax} bpm. Objectif : ${PROFIL.objectif}. Contexte : ${PROFIL.contexte}.
 DATE DU JOUR : ${now.toISOString().slice(0, 10)} (semaine ${isoWeekLabel(now)}). La semaine à planifier est la PROCHAINE semaine (lundi → dimanche).
@@ -185,7 +203,9 @@ Contraintes pour la semaine : 7 entrées (Lun→Dim, un jour de repos a ico "�
 
 export async function coachBilan(bilan, carnet, activities, opts = {}) {
   const { force = false, log = true, now = new Date() } = opts;
-  const key = `${bilan.lastActivityId}|${isoWeekLabel(now)}`;
+  let lastNight = "";
+  try { const g = JSON.parse(fs.readFileSync(GARMIN_CACHE, "utf8")); lastNight = (g.jours || []).filter(j => j.sommeil).map(j => j.date).sort().pop() || ""; } catch {}
+  const key = `${bilan.lastActivityId}|${isoWeekLabel(now)}|${lastNight}`;
   if (!force) {
     try {
       const c = JSON.parse(fs.readFileSync(COACH_CACHE, "utf8"));

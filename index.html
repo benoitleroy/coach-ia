@@ -92,6 +92,22 @@
     </div>
   </section>
 
+  <!-- Sommeil / récupération (Garmin) -->
+  <section class="bloc" id="bloc-sommeil" hidden>
+    <div class="bloc-head"><h2>Sommeil · récupération</h2><span class="hint" id="som-quand"></span></div>
+    <div class="big"><span id="som-duree">—</span> <span class="big-sub" id="som-score"></span></div>
+    <div class="phases" id="som-phases"></div>
+    <div class="phases-txt" id="som-phases-txt"></div>
+    <div class="tiles4">
+      <div class="tile" id="som-hrv"><small>HRV nuit</small><b>—</b><span class="tile-sub"></span></div>
+      <div class="tile" id="som-fc"><small>FC repos</small><b>—</b><span class="tile-sub"></span></div>
+      <div class="tile" id="som-bb"><small>Body Battery</small><b>—</b><span class="tile-sub"></span></div>
+      <div class="tile" id="som-moy"><small>Sommeil moy.</small><b>—</b><span class="tile-sub"></span></div>
+    </div>
+    <ol class="nuits" id="som-nuits"></ol>
+    <p class="explain" id="som-explain"></p>
+  </section>
+
   <!-- Bilan coach -->
   <section class="bloc" id="bloc-coach" hidden>
     <div class="bloc-head"><h2>Bilan coach</h2><span class="hint" id="coach-date"></span></div>
@@ -141,7 +157,9 @@
 
 <script src="js/carnet-data.js" onerror="document.getElementById('sync').textContent='Pas encore de données — lance sync.command'"></script>
 <script src="js/bilan-data.js" onerror="void 0"></script>
+<script src="js/sommeil-data.js" onerror="void 0"></script>
 <script src="js/carnet.js"></script>
 <script src="js/bilan.js"></script>
+<script src="js/sommeil.js"></script>
 </body>
 </html>
