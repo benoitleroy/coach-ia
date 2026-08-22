@@ -29,7 +29,7 @@ const MOIS = ["janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.", "août"
 // ─── Profil athlète (à ajuster ici tant qu'il n'y a pas de page profil) ──────
 export const PROFIL = {
   prenom: "Benoît", age: 42, fcMax: 190,
-  poidsKg: null,   // à renseigner — tant que null, le coach suppose ~80 kg et le dit
+  poidsKg: 77.5,   // estimation Benoît 22/08/2026 : « 75/80 kg » — à affiner avec une pesée
   tailleCm: null,
   nutrition: "PETIT-DÉJEUNER FIXE, ne pas le modifier : 3 œufs à la coque + 500 ml d'eau + vitamine D + K1 + complexe vitamine B (Pillar). Le coach peut seulement proposer un AJOUT (ex. banane, flocons, pain) avant une séance longue ou intense du matin, et le dire explicitement. MIDI : toujours sur chantier → boîte transportable, qui se mange froide ou tiède (pas de micro-ondes garanti), préparée la veille ou issue du batch. SOIR : repas maison ≤ 20 min, c'est là que se joue l'ajustement glucides/protéines selon la séance. Veut des repas concrets calés sur les séances, achetés le week-end et préparés à l'avance (batch cooking du dimanche). Pas de comptage de calories. Aucune contrainte alimentaire connue.",
 
