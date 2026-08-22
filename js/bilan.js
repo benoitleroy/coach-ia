@@ -35,6 +35,18 @@
     }
   }
 
+  // ── Repas de la semaine + courses ──
+  const n = c && c.nutrition;
+  if (n && Array.isArray(n.jours) && n.jours.length) {
+    $("bloc-repas").hidden = false;
+    $("repas-principe").textContent = n.principe || "";
+    $("repas").innerHTML = n.jours.map(j => `<li><div class="rp-head"><span class="p-jour">${esc(j.jour)}</span><span class="rp-type">${esc(j.type || "")}</span></div><dl class="rp-meals">${[["Matin", j.petitDej], ["Midi", j.dejeuner], ["Séance", j.collation], ["Soir", j.diner]].filter(([, v]) => v && v !== "—").map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`).join("")}</dl></li>`).join("");
+    const batch = (n.batch || []).map(b => `<li>${esc(b)}</li>`).join("");
+    $("batch").innerHTML = batch; $("batch-wrap").hidden = !batch;
+    const courses = (n.courses || []).filter(r => r.items && r.items.length).map(r => `<div class="course-rayon"><div class="coach-sub">${esc(r.rayon)}</div><ul class="course-list">${r.items.map(i => `<li><label><input type="checkbox"> ${esc(i)}</label></li>`).join("")}</ul></div>`).join("");
+    $("courses").innerHTML = courses; $("courses-wrap").hidden = !courses;
+  }
+
   // ── 12 mois ──
   if (B.mois && B.mois.length) {
     $("bloc-annee").hidden = false;

@@ -29,6 +29,9 @@ const MOIS = ["janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.", "août"
 // ─── Profil athlète (à ajuster ici tant qu'il n'y a pas de page profil) ──────
 export const PROFIL = {
   prenom: "Benoît", age: 42, fcMax: 190,
+  poidsKg: null,   // à renseigner — tant que null, le coach suppose ~80 kg et le dit
+  tailleCm: null,
+  nutrition: "Veut des repas concrets calés sur les séances, à acheter le week-end et préparer à l'avance (batch cooking). Pas de comptage de calories. Horaires de chantier → repas simples, transportables, réchauffables. Aucune contrainte alimentaire connue.",
   objectif: "devenir un athlète hybride : endurance (course, vélo, natation) + force (CrossFit, charges lourdes)",
   contexte: "pratique CrossFit en box, Pilates régulier, historique triathlon/Ironman. Préparait l'Ironman Switzerland (Thun, 5 juillet 2026) — ANNULÉ volontairement pour accompagner son fils à une compétition d'échecs : le creux mai→août 2026 est un choix familial assumé, pas un abandon ni une blessure. Reprise fin août 2026 avec un nouvel objectif hybride.",
 };
@@ -178,7 +181,8 @@ function digest(bilan, carnet, activities) {
 
 const COACH_PROMPT = (bilan, carnet, activities, now) => `Tu es un coach sportif avec une solide formation en physiologie de l'exercice (endurance, force, athlète hybride, périodisation, prévention des blessures après 40 ans). Tu écris en français, tu tutoies, ton ton est direct, concret, bienveillant, sans jargon inutile ni enthousiasme artificiel. Tu t'appuies UNIQUEMENT sur les données ci-dessous (Strava, et Garmin Connect pour le sommeil/HRV/FC repos quand la section existe) — ne suppose pas de données que tu n'as pas ; si quelque chose manque (sommeil, nutrition, blessure), dis-le en une ligne. Quand le sommeil/HRV est présent, intègre-le dans le verdict et adapte la semaine (ex. HRV sous la base ou sommeil < 6 h 30 → moins d'intensité).
 
-ATHLÈTE : ${PROFIL.prenom}, ${PROFIL.age} ans, FC max ~${PROFIL.fcMax} bpm. Objectif : ${PROFIL.objectif}. Contexte : ${PROFIL.contexte}.
+ATHLÈTE : ${PROFIL.prenom}, ${PROFIL.age} ans, FC max ~${PROFIL.fcMax} bpm${PROFIL.poidsKg ? `, ${PROFIL.poidsKg} kg` : " (poids non renseigné : suppose ~80 kg et précise-le)"}${PROFIL.tailleCm ? `, ${PROFIL.tailleCm} cm` : ""}. Objectif : ${PROFIL.objectif}. Contexte : ${PROFIL.contexte}.
+NUTRITION : ${PROFIL.nutrition}
 DATE DU JOUR : ${now.toISOString().slice(0, 10)} (semaine ${isoWeekLabel(now)}). La semaine à planifier est la PROCHAINE semaine (lundi → dimanche).
 
 DONNÉES :
@@ -197,8 +201,17 @@ Réponds UNIQUEMENT avec un objet JSON valide (pas de markdown, pas de texte aut
      {"jour": "Lun", "ico": "🏃", "seance": "titre court", "detail": "contenu précis (durées, FC cibles, séries × reps, charges relatives)", "gardefou": "1 règle d'arrêt ou d'ajustement"}
    ]
  },
- "regle": "1 phrase : quelle séance sauter en priorité si la semaine déborde, laquelle ne jamais sauter"
+ "regle": "1 phrase : quelle séance sauter en priorité si la semaine déborde, laquelle ne jamais sauter",
+ "nutrition": {
+   "principe": "2-3 phrases : la logique de la semaine (protéines réparties, glucides autour des séances dures, jours légers), avec les repères chiffrés (g de protéines/jour, portions) adaptés au poids",
+   "batch": ["4 à 7 préparations à faire le week-end (dimanche), chacune : quoi + quantité pour la semaine + conservation, ex. \"Cuire 1 kg de poulet mariné au four → 5 portions, 4 j frigo\""],
+   "courses": [{"rayon": "Protéines", "items": ["liste courte avec quantités"]}, {"rayon": "Féculents & légumineuses", "items": []}, {"rayon": "Légumes & fruits", "items": []}, {"rayon": "Produits laitiers & œufs", "items": []}, {"rayon": "Épicerie", "items": []}],
+   "jours": [
+     {"jour": "Lun", "type": "ex. jour force / endurance facile / repos", "petitDej": "…", "dejeuner": "…", "collation": "ce qu'on mange AUTOUR de la séance (avant/après) ou \"—\"", "diner": "…"}
+   ]
+ }
 }
+Contraintes pour la nutrition : 7 entrées (Lun→Dim) alignées sur la séance du jour (jour force = plus de protéines et glucides au dîner, jour endurance longue = glucides la veille au soir et au petit-déj, repos = assiette plus légère, légumes dominants) ; repas RÉALISTES de semaine : 3 à 5 recettes de base déclinées, réutilisant les préparations du batch, cuisson ≤ 20 min le soir ; quantités en unités simples (1 poing, 1 paume, 150 g, 2 œufs) ; petit-déjeuners répétitifs acceptés ; la liste de courses doit couvrir exactement les repas proposés, groupée par rayon, avec quantités pour 1 personne / 7 jours.
 Contraintes pour la semaine : 7 entrées (Lun→Dim, un jour de repos a ico "😴" et detail court), progressive par rapport à ce qui a réellement été fait les 4 dernières semaines (pas plus de +20 à +30 % de volume), 2 séances de force si objectif hybride, au moins 1 séance d'endurance vraiment facile (FC < 140) et au plus 1 séance intense en course, tenir compte des séances CrossFit lues sur photo quand il y en a.`;
 
 export async function coachBilan(bilan, carnet, activities, opts = {}) {

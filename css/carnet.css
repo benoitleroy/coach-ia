@@ -175,3 +175,24 @@ table.mois td.zero { color: var(--faint); }
 .nuits li i { display: block; width: 100%; border-radius: 3px 3px 0 0; background: var(--faint); min-height: 2px; }
 .nuits li i.good { background: var(--accent); } .nuits li i.fair { background: var(--warn); } .nuits li i.poor { background: var(--alert); }
 .nuits li span { font-size: .6rem; color: var(--faint); margin-top: .15rem; }
+
+/* Repas de la semaine (js/bilan.js) */
+.repas { list-style: none; margin: 0; padding: 0; }
+.repas li { padding: .55rem 0; border-bottom: 1px solid var(--line); font-size: .88rem; }
+.repas li:last-child { border-bottom: 0; }
+.repas .rp-head { display: flex; gap: .6rem; align-items: baseline; margin-bottom: .2rem; }
+.repas .rp-type { color: var(--muted); font-size: .78rem; }
+.repas .rp-meals { display: grid; grid-template-columns: 3.2rem 1fr; gap: .15rem .5rem; margin: 0; }
+.repas .rp-meals dt { color: var(--faint); font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; padding-top: .15rem; }
+.repas .rp-meals dd { margin: 0; line-height: 1.4; }
+details.sub { margin-top: .7rem; border-top: 1px dashed var(--line); padding-top: .5rem; font-size: .88rem; }
+details.sub summary { cursor: pointer; font-weight: 600; list-style: none; }
+details.sub summary::-webkit-details-marker { display: none; }
+details.sub > *:not(summary) { margin-top: .5rem; }
+.courses { display: grid; grid-template-columns: 1fr 1fr; gap: .6rem; }
+@media (max-width: 480px) { .courses { grid-template-columns: 1fr; } }
+.course-list { list-style: none; margin: 0; padding: 0; }
+.course-list li { padding: .15rem 0; }
+.course-list label { display: flex; gap: .4rem; align-items: flex-start; cursor: pointer; }
+.course-list input { margin-top: .2rem; accent-color: var(--accent); }
+.course-list input:checked + * , .course-list label:has(input:checked) { color: var(--faint); text-decoration: line-through; }
