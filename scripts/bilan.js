@@ -31,7 +31,8 @@ export const PROFIL = {
   prenom: "Benoît", age: 42, fcMax: 190,
   poidsKg: null,   // à renseigner — tant que null, le coach suppose ~80 kg et le dit
   tailleCm: null,
-  nutrition: "Veut des repas concrets calés sur les séances, à acheter le week-end et préparer à l'avance (batch cooking). Pas de comptage de calories. Horaires de chantier → repas simples, transportables, réchauffables. Aucune contrainte alimentaire connue.",
+  nutrition: "PETIT-DÉJEUNER FIXE, ne pas le modifier : 3 œufs à la coque + 500 ml d'eau + vitamine D + K1 + complexe vitamine B (Pillar). Le coach peut seulement proposer un AJOUT (ex. banane, flocons, pain) avant une séance longue ou intense du matin, et le dire explicitement. MIDI : toujours sur chantier → boîte transportable, qui se mange froide ou tiède (pas de micro-ondes garanti), préparée la veille ou issue du batch. SOIR : repas maison ≤ 20 min, c'est là que se joue l'ajustement glucides/protéines selon la séance. Veut des repas concrets calés sur les séances, achetés le week-end et préparés à l'avance (batch cooking du dimanche). Pas de comptage de calories. Aucune contrainte alimentaire connue.",
+
   objectif: "devenir un athlète hybride : endurance (course, vélo, natation) + force (CrossFit, charges lourdes)",
   contexte: "pratique CrossFit en box, Pilates régulier, historique triathlon/Ironman. Préparait l'Ironman Switzerland (Thun, 5 juillet 2026) — ANNULÉ volontairement pour accompagner son fils à une compétition d'échecs : le creux mai→août 2026 est un choix familial assumé, pas un abandon ni une blessure. Reprise fin août 2026 avec un nouvel objectif hybride.",
 };
@@ -207,7 +208,7 @@ Réponds UNIQUEMENT avec un objet JSON valide (pas de markdown, pas de texte aut
    "batch": ["4 à 7 préparations à faire le week-end (dimanche), chacune : quoi + quantité pour la semaine + conservation, ex. \"Cuire 1 kg de poulet mariné au four → 5 portions, 4 j frigo\""],
    "courses": [{"rayon": "Protéines", "items": ["liste courte avec quantités"]}, {"rayon": "Féculents & légumineuses", "items": []}, {"rayon": "Légumes & fruits", "items": []}, {"rayon": "Produits laitiers & œufs", "items": []}, {"rayon": "Épicerie", "items": []}],
    "jours": [
-     {"jour": "Lun", "type": "ex. jour force / endurance facile / repos", "petitDej": "…", "dejeuner": "…", "collation": "ce qu'on mange AUTOUR de la séance (avant/après) ou \"—\"", "diner": "…"}
+     {"jour": "Lun", "type": "ex. jour force / endurance facile / repos", "petitDej": "\"Habituel\" ou \"Habituel + …\" (ajout justifié seulement)", "dejeuner": "boîte chantier froide/tiède, précise", "collation": "ce qu'on mange AUTOUR de la séance (avant/après) ou \"—\"", "diner": "…"}
    ]
  }
 }
