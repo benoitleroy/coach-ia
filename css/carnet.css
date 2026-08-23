@@ -208,3 +208,5 @@ details.recette .rc-body .coach-sub { margin-top: .4rem; }
 .rc-steps { margin: 0; padding-left: 1.2rem; font-size: .88rem; line-height: 1.45; }
 .rc-steps li { margin-bottom: .25rem; }
 .rc-keep { margin-top: .4rem; font-size: .8rem; color: var(--muted); }
+
+.contenu .c-note { flex-basis: 100%; margin-top: .4rem; padding: .35rem .6rem; border-left: 3px solid var(--accent); background: var(--accent-dim); border-radius: 0 6px 6px 0; font-size: .85rem; }

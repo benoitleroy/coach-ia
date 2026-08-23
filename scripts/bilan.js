@@ -16,6 +16,7 @@ import path from "path";
 import { execFileSync } from "child_process";
 import { fileURLToPath } from "url";
 import { loadPhotoCache } from "./photos.js";
+import { loadNotes } from "./note.js";
 
 const __dirname  = path.dirname(fileURLToPath(import.meta.url));
 const ACT_CACHE  = path.join(__dirname, ".activities.cache.json");
@@ -153,10 +154,12 @@ function digest(bilan, carnet, activities) {
   // 6 dernières semaines en détail
   const since = Date.now() - 42 * DAY;
   lines.push("\nDÉTAIL 6 DERNIÈRES SEMAINES : date · type · durée · km · FC moy · FC max · W · effort relatif · nom");
+  const notes = loadNotes();
   dedupe(activities).filter(a => new Date(a.start_date).getTime() >= since).forEach(a => {
     const photo = loadPhotoCache(a.id);
     lines.push(`${(a.start_date_local || a.start_date).slice(0, 10)} ${a.sport_type || a.type} ${Math.round((a.moving_time || 0) / 60)}min ${a.distance ? (a.distance / 1000).toFixed(1) + "km" : ""} ${a.average_heartrate ? Math.round(a.average_heartrate) + "bpm" : ""} ${a.max_heartrate ? "max" + Math.round(a.max_heartrate) : ""} ${a.average_watts ? Math.round(a.average_watts) + "W" : ""} ${a.suffer_score ? "RE" + a.suffer_score : ""} | ${a.name || ""}`);
     if (photo?.contenu) lines.push("   CONTENU DE SÉANCE (photo) :\n" + photo.contenu.split("\n").map(l => "   " + l).join("\n"));
+    if (notes[a.id]) lines.push(`   NOTE DE BENOÎT : ${notes[a.id].note}`);
   });
 
   // Sommeil / récupération Garmin (28 derniers jours) si disponible

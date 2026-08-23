@@ -12,6 +12,7 @@ import { buildWhoopObservations } from "./whoop.js";
 import { buildCarnet, writeCarnet } from "./carnet.js";
 import { enrichWithPhotos } from "./photos.js";
 import { computeBilan, coachBilan, writeBilan } from "./bilan.js";
+import { loadNotes } from "./note.js";
 
 const __dirname   = path.dirname(fileURLToPath(import.meta.url));
 const OUTPUT      = path.join(__dirname, "../js/data-benoit.js");
@@ -631,6 +632,8 @@ async function main() {
     let extras = {};
     try { extras = await enrichWithPhotos(activities); }
     catch (e) { console.warn("⚠️  Photos non traitées :", e.message); }
+    // Notes de séance (scripts/notes.json) → extras.note
+    try { for (const [id, n] of Object.entries(loadNotes())) extras[id] = { ...(extras[id] || {}), note: n.note }; } catch {}
     const carnet = buildCarnet(activities, new Date(), 12, extras);
     writeCarnet(carnet);
     console.log(`📝 Carnet         : js/carnet-data.js (${carnet.semaine.label} · ratio ${carnet.charge.ratio ?? "—"} · ${carnet.charge.statut})`);

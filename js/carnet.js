@@ -112,10 +112,11 @@
   const esc = t => String(t).replace(/[&<>]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]));
   // Contenu de séance lu sur la photo Strava (tableau WOD…) — ouvert pour la dernière séance, replié ailleurs
   const contenuHtml = (a, open) => {
-    if (!a.contenu && !a.photo) return "";
+    if (!a.contenu && !a.photo && !a.note) return "";
     const img = a.photo ? `<a class="c-photo" href="${a.photo}" target="_blank" rel="noopener"><img src="${a.photo}" alt="photo de la séance" loading="lazy"></a>` : "";
-    const txt = a.contenu ? `<pre class="c-txt">${esc(a.contenu)}</pre>` : `<span class="c-none">photo sans contenu lisible</span>`;
-    return `<details class="contenu"${open ? " open" : ""}><summary>📋 Contenu de la séance</summary><div class="c-body">${txt}${img}</div></details>`;
+    const txt = a.contenu ? `<pre class="c-txt">${esc(a.contenu)}</pre>` : (a.photo ? `<span class="c-none">photo sans contenu lisible</span>` : "");
+    const note = a.note ? `<div class="c-note">✍️ ${esc(a.note)}</div>` : "";
+    return `<details class="contenu"${open ? " open" : ""}><summary>📋 Contenu de la séance</summary><div class="c-body">${txt}${img}</div>${note}</details>`;
   };
 
   const d = C.derniere;
