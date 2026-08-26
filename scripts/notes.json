@@ -12,5 +12,12 @@
   "type": "Run",
   "note": "Sortie d'accompagnement avec ma copine — allure facile, pas une séance d'entraînement",
   "updatedAt": "2026-08-23T19:35:10.850Z"
+ },
+ "19895371470": {
+  "date": "2026-08-25T17:42:26Z",
+  "name": "Entraînement dans l'après-midi",
+  "type": "Workout",
+  "note": "Séance Force pure du plan S36 (prévue mardi, faite lundi soir) : back squat 5×5 ~70 %, développé/dips, rowing, gainage",
+  "updatedAt": "2026-08-26T12:11:37.128Z"
  }
 }
