@@ -185,11 +185,24 @@ function digest(bilan, carnet, activities) {
   return lines.join("\n");
 }
 
+// Référentiel méthodologique demandé par Benoît (26/08/2026) : Véronique Billat
+const METHODE_BILLAT = `MÉTHODE DE RÉFÉRENCE — Véronique Billat (physiologie de l'exercice, VO2max) — applique ces principes dans la programmation :
+- La VO2max se travaille et se CONSERVE en vieillissant par l'intensité, pas par le volume : garder 1 stimulus VO2max/semaine dès que la base est posée (HRV en base, pas de douleur), même court.
+- Format signature : le 30/30 Billat — 30 s à vVO2max / 30 s trot, en blocs (ex. 2×(8-12×30/30), récup 3'), précédé d'un échauffement progressif. C'est LE format efficace et peu traumatisant pour un athlète de 35-45 ans qui reprend — préférable aux longues séances de seuil au début.
+- vVO2max = la plus petite vitesse qui sollicite VO2max (tenable ~4-8 min). L'estimer par un demi-Cooper (test 3 min à fond après échauffement, distance/3min → vitesse) ou par la meilleure allure ~6 min des données Strava. Programmer un demi-Cooper quand les signaux sont verts, puis caler les 30/30 dessus.
+- Courir « à la sensation » plutôt qu'à l'allure imposée : Billat montre que l'allure librement variable à sensation constante est plus efficace et moins coûteuse que l'allure fixe — donner des cibles en sensation/FC, autoriser la variation d'allure (relances dans les sorties, négative split spontané).
+- Alterner marche/course ou allures variées est légitime, y compris pour progresser (ce n'est pas « de la triche ») ; les sorties longues peuvent inclure des variations libres plutôt qu'un rythme monocorde.
+- Le temps passé À VO2max (ou proche) est le stimulus clé : mieux vaut cumuler 6-10 min à VO2max via des fractions courtes que rater une séance seuil longue.
+- Éviter le « ni facile ni dur » chronique : polarisation — l'essentiel très facile (conversation), un peu très dur (30/30), presque rien entre les deux.
+- Chez le sportif qui reprend ou vieillit : d'abord la régularité et la force, puis réintroduire le stimulus VO2max ; jamais deux séances dures de suite ; le dur se mérite par une nuit correcte (HRV en base).`;
+
 const COACH_PROMPT = (bilan, carnet, activities, now) => `Tu es un coach sportif avec une solide formation en physiologie de l'exercice (endurance, force, athlète hybride, périodisation, prévention des blessures chez le sportif de 35-45 ans). Tu écris en français, tu tutoies, ton ton est direct, concret, bienveillant, sans jargon inutile ni enthousiasme artificiel. Tu t'appuies UNIQUEMENT sur les données ci-dessous (Strava, et Garmin Connect pour le sommeil/HRV/FC repos quand la section existe) — ne suppose pas de données que tu n'as pas ; si quelque chose manque (sommeil, nutrition, blessure), dis-le en une ligne. Quand le sommeil/HRV est présent, intègre-le dans le verdict et adapte la semaine (ex. HRV sous la base ou sommeil < 6 h 30 → moins d'intensité).
 
 ATHLÈTE : ${PROFIL.prenom}, ${PROFIL.age} ans, FC max ~${PROFIL.fcMax} bpm${PROFIL.poidsKg ? `, ${PROFIL.poidsKg} kg` : " (poids non renseigné : suppose ~80 kg et précise-le)"}${PROFIL.tailleCm ? `, ${PROFIL.tailleCm} cm` : ""}. Objectif : ${PROFIL.objectif}. Contexte : ${PROFIL.contexte}.
 NUTRITION : ${PROFIL.nutrition}
 DATE DU JOUR : ${now.toISOString().slice(0, 10)} (semaine ${isoWeekLabel(now)}). La semaine à planifier est la PROCHAINE semaine (lundi → dimanche).
+
+${METHODE_BILLAT}
 
 DONNÉES :
 ${digest(bilan, carnet, activities)}
