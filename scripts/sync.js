@@ -12,7 +12,7 @@ import { computeDecoupling } from "./decoupling.js";
 import { buildWhoopObservations } from "./whoop.js";
 import { buildCarnet, writeCarnet } from "./carnet.js";
 import { enrichWithPhotos } from "./photos.js";
-import { computeBilan, coachBilan, writeBilan } from "./bilan.js";
+import { computeBilan, coachBilan, writeBilan, planEnCache, semaineCible } from "./bilan.js";
 import { loadNotes } from "./note.js";
 import { writeProgramme } from "./programme.js";
 import { loadNST } from "./nst.js";
@@ -675,6 +675,10 @@ async function main() {
     try {
       const bilan = computeBilan(activities, new Date());
       bilan.coach = await coachBilan(bilan, carnet, activities);
+      // Semaine suivante déjà écrite → consultable dans l'app sans attendre dimanche
+      const suivante = semaineCible(new Date(Date.now() + 7 * 86400000));
+      const planSuivant = planEnCache(suivante.label);
+      if (planSuivant && suivante.label !== bilan.coach?.semaineLabel) bilan.coachSuivant = planSuivant;
       writeBilan(bilan);
       writeProgramme(path.join(__dirname, "../js/programme-data.js"));
       try { execFileSync(process.execPath, [path.join(__dirname, "wods-index.js")], { stdio: "ignore" }); } catch {}

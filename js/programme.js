@@ -53,7 +53,9 @@
     }
   }
 
-  // ── Semaine (plan du coach) ──
+  // ── Semaine (plan du coach) : semaine en cours, et la suivante si elle est déjà écrite ──
+  const CS = (window.BILAN && window.BILAN.coachSuivant) || null;
+  let vue = C;                       // plan affiché dans l'onglet Semaine
   const sem = C && C.semaine;
   const jourIndexAuj = (today.getDay() + 6) % 7;   // 0 = lundi
   if (sem && Array.isArray(sem.jours)) {
@@ -70,15 +72,32 @@
       const et = etapesDe(s);
       return `<div class="s-item">${moment ? `<span class="s-moment">${moment}</span>` : ""}<span class="p-ico">${esc(s.ico || "")}</span><span><div class="p-titre">${esc(s.titre)}${s.intention ? ` <em class="s-int">${esc(s.intention)}</em>` : ""}</div><div class="p-detail">${esc(s.detail || "")}</div>${et.length ? `<ul class="etapes">${et.map(e => `<li>${esc(e)}</li>`).join("")}</ul>` : ""}${s.gardefou ? `<div class="p-garde">${esc(s.gardefou)}</div>` : ""}${blocMvts((s.detail || "") + " " + et.join(" "))}</span></div>`;
     };
-    $("sem-plan").innerHTML = sem.jours.map((j, i) => {
-      const d = lundi ? new Date(lundi.getTime() + i * 86400000) : null;
-      const key = d ? d.toISOString().slice(0, 10) : null;
-      const fait = key ? S.filter(s => s.date.slice(0, 10) === key).length : 0;
-      const cur = i === jourIndexAuj;
-      const items = seancesDe(j);
-      return `<li class="jour${items.length ? "" : " repos"}${cur ? " cur" : ""}"><div class="j-head"><span class="p-jour">${esc(j.jour)}${d ? `<small>${d.getDate()}</small>` : ""}</span>${fait ? `<span class="j-fait">✅ ${fait}</span>` : ""}</div>${items.length ? items.map(ligneSeance).join("") : `<div class="s-item"><span class="p-ico">😴</span><span class="p-titre">Repos</span></div>`}</li>`;
-    }).join("");
-    $("sem-regle2").textContent = (C.regle || "") + (C.figeLe ? ` — plan figé le ${fmtDate(C.figeLe.slice(0, 10))}, prochaine mise à jour dimanche soir.` : "");
+    const rendreSemaine = () => {
+      const S2 = vue.semaine;
+      const courante = vue === C;
+      $("sem-label").textContent = vue.semaineDebut ? `${fmtDate(vue.semaineDebut)} → ${fmtDate(vue.semaineFin)}` : "Semaine";
+      $("sem-vol").textContent = [S2.volumeCible, S2.doubles ? `${S2.doubles} doublés` : ""].filter(Boolean).join(" · ");
+      $("sem-obj").textContent = S2.titre || "";
+      const l0 = vue.semaineDebut ? new Date(vue.semaineDebut + "T12:00:00") : null;
+      $("sem-plan").innerHTML = S2.jours.map((j, i) => {
+        const d = l0 ? new Date(l0.getTime() + i * 86400000) : null;
+        const key = d ? d.toISOString().slice(0, 10) : null;
+        const fait = key ? S.filter(x => x.date.slice(0, 10) === key).length : 0;
+        const cur = courante && i === jourIndexAuj;
+        const items = seancesDe(j);
+        return `<li class="jour${items.length ? "" : " repos"}${cur ? " cur" : ""}"><div class="j-head"><span class="p-jour">${esc(j.jour)}${d ? `<small>${d.getDate()}</small>` : ""}</span>${fait ? `<span class="j-fait">✅ ${fait}</span>` : ""}</div>${items.length ? items.map(ligneSeance).join("") : `<div class="s-item"><span class="p-ico">😴</span><span class="p-titre">Repos</span></div>`}</li>`;
+      }).join("");
+      $("sem-regle2").textContent = (vue.regle || "") + (vue.figeLe ? ` — plan figé le ${fmtDate(vue.figeLe.slice(0, 10))}.` : "");
+    };
+    if (CS) {
+      $("sem-choix").hidden = false;
+      document.querySelectorAll("#sem-choix button").forEach(b => b.addEventListener("click", () => {
+        vue = b.dataset.s === "suivante" ? CS : C;
+        document.querySelectorAll("#sem-choix button").forEach(x => x.classList.toggle("on", x === b));
+        rendreSemaine(); window.scrollTo(0, 0);
+      }));
+    }
+    rendreSemaine();
 
     // ── Aujourd'hui ──
     const j = sem.jours[jourIndexAuj];
