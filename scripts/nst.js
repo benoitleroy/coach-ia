@@ -1,4 +1,5 @@
-// scripts/nst.js — Semaine NST (NoShortcuts Training) : la programmation PRIORITAIRE de Benoît.
+// scripts/nst.js — Semaine NST (NoShortcuts Training, livré via la plateforme FITR Training) :
+// la programmation PRIORITAIRE de Benoît.
 // Le coach ne la modifie pas, il construit autour (endurance, VO2max, récupération, nutrition).
 //
 // Alimenter la semaine :
