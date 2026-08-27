@@ -6,11 +6,11 @@ window.PROGRAMME = {
  "objectif": "Devenir hybride : tenir une heure de course en aisance ET des charges propres en CrossFit, sans blessure.",
  "cible": {
   "date": "2026-11-21",
-  "libelle": "Test hybride maison (samedi 21/11) : 10 km en aisance sous 55 min (FC moyenne < 155) le matin, puis l'après-midi 5 tractions strictes enchaînées + back squat 5 reps à 1× poids de corps + 500 m rameur."
+  "libelle": "Test hybride maison (samedi 21/11) : 10 km en aisance sous 55 min (FC moyenne < 155) le matin, puis l'après-midi 5 tractions strictes enchaînées + back squat 5 reps à 1,2× poids de corps (≈ 95 kg) + 500 m rameur."
  },
  "depart": {
   "course": "12,2 km en 1h19 à 130 bpm (26/08) ; allure normalisée à 140 bpm : 5:52/km",
-  "force": "WOD à 30 kg (hang squat clean / thrusters) ; strict pull-ups en finisher",
+  "force": "Back squat 80 kg sur 5 reps (27/08) ; WOD à 30 kg (hang squat clean / thrusters) ; strict pull-ups en finisher",
   "volume": "≈ 4 h/semaine sur 3 mois creux, remontée à 5-6 h fin août",
   "physio": "HRV base 38 ms, FC repos 49-50, sommeil 7 h 30-8 h"
  },
@@ -53,7 +53,7 @@ window.PROGRAMME = {
     "Bi-quotidien : 4 doublés puis 5 (matin aérobie ou skill, soir qualité) — plafond 5 tant que le HRV n'est pas stable dans sa base",
     "1 séance VO2max/semaine en 30/30 calés sur la vVO2max mesurée (2×(8→12)×30/30, récup 3')",
     "Volume 6 h → 7 h, sortie longue 1 h 15 → 1 h 30 à sensation (variations libres autorisées)",
-    "Force : passer en 5×5 progressif (+2,5 kg quand les 5 reps sortent propres), viser back squat 5 reps à 0,9× poids de corps",
+    "Force : 5×5 progressif (+2,5 kg par semaine quand les 5 reps sortent propres), viser 87,5-90 kg en fin de bloc",
     "Polarisation stricte : viser 80 % du temps sous 140 bpm, 20 % très dur, rien entre les deux",
     "Jamais deux séances dures consécutives ; le dur se mérite par une nuit correcte (HRV en base)"
    ],
@@ -75,7 +75,7 @@ window.PROGRAMME = {
     "Bi-quotidien stabilisé à 5 doublés, réduit à 2 la semaine du test",
     "Maintenir 1 séance VO2max/semaine (30/30 ou 3×3 min à vVO2max)",
     "1 séance combinée par semaine (course en aisance puis force dans la journée) pour préparer le test",
-    "Force : chercher le back squat 5 reps à 1× poids de corps et 5 tractions strictes enchaînées",
+    "Force : chercher le back squat 5 reps à 1,2× poids de corps (≈ 95 kg) et 5 tractions strictes enchaînées",
     "Volume stable 6 h 30-7 h, dernière semaine allégée de 40 % avant le test",
     "Semaine 12 : test hybride le samedi 21/11"
    ],
@@ -95,7 +95,7 @@ window.PROGRAMME = {
   "objectif": "Devenir hybride : tenir une heure de course en aisance ET des charges propres en CrossFit, sans blessure.",
   "cible": {
    "date": "2026-11-21",
-   "libelle": "Test hybride maison (samedi 21/11) : 10 km en aisance sous 55 min (FC moyenne < 155) le matin, puis l'après-midi 5 tractions strictes enchaînées + back squat 5 reps à 1× poids de corps + 500 m rameur."
+   "libelle": "Test hybride maison (samedi 21/11) : 10 km en aisance sous 55 min (FC moyenne < 155) le matin, puis l'après-midi 5 tractions strictes enchaînées + back squat 5 reps à 1,2× poids de corps (≈ 95 kg) + 500 m rameur."
   },
   "semaineDansCycle": 0,
   "totalSemaines": 12,
@@ -127,5 +127,5 @@ window.PROGRAMME = {
   "debut": "2026-08-31",
   "termine": false
  },
- "generatedAt": "2026-08-27T14:59:23.162Z"
+ "generatedAt": "2026-08-27T17:15:30.498Z"
 };

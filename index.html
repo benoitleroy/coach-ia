@@ -17,6 +17,12 @@
     if ("serviceWorker" in navigator) {
       window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));
     }
+    if ("serviceWorker" in navigator) {
+      let recharge = false;
+      navigator.serviceWorker.addEventListener("controllerchange", () => {
+        if (recharge) return; recharge = true; location.reload();     // évite un mélange ancienne page / nouveau code
+      });
+    }
     // Rafraîchissement auto : quand l'app revient au premier plan (iPhone, PWA)
     // après plus de 2 min, on recharge pour afficher les données de la dernière sync.
     (function () {

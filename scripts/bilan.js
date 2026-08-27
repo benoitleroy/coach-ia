@@ -34,7 +34,8 @@ const NAISSANCE = new Date("1987-05-30");
 const ageAt = d => { let a = d.getFullYear() - NAISSANCE.getFullYear(); const m = d.getMonth() - NAISSANCE.getMonth(); if (m < 0 || (m === 0 && d.getDate() < NAISSANCE.getDate())) a--; return a; };
 export const PROFIL = {
   prenom: "Benoît", get age() { return ageAt(new Date()); }, naissance: "1987-05-30", fcMax: 190,
-  poidsKg: 77.5,   // estimation Benoît 22/08/2026 : « 75/80 kg » — à affiner avec une pesée
+  poidsKg: 77.5,
+  forceRef: "Back squat : 80 kg (référence donnée par Benoît le 27/08/2026 — charge de travail sur 5 reps). Le cycle 5×5 du bloc Fondation part de cette charge, pas d'une estimation.",   // estimation Benoît 22/08/2026 : « 75/80 kg » — à affiner avec une pesée
   tailleCm: null,
   nutrition: "PETIT-DÉJEUNER FIXE, ne pas le modifier : 3 œufs à la coque + 500 ml d'eau + vitamine D + K1 + complexe vitamine B (Pillar). Le coach peut seulement proposer un AJOUT (ex. banane, flocons, pain) avant une séance longue ou intense du matin, et le dire explicitement. MIDI : toujours sur chantier → boîte transportable, qui se mange froide ou tiède (pas de micro-ondes garanti), préparée la veille ou issue du batch. SOIR : repas maison ≤ 20 min, c'est là que se joue l'ajustement glucides/protéines selon la séance. Veut des repas concrets calés sur les séances, achetés le week-end et préparés à l'avance (batch cooking du dimanche). Pas de comptage de calories. Aucune contrainte alimentaire connue.",
 
@@ -238,6 +239,8 @@ const COACH_PROMPT = (bilan, carnet, activities, now) => `Tu es un coach sportif
 
 ${texteProgramme(now)}
 ${texteNST(semaineCible(now).label) || "PROGRAMMATION NST : pas encore fournie pour cette semaine — prévoir des créneaux \"box ou NST\" et le préciser."}
+
+RÉFÉRENCES DE FORCE : ${PROFIL.forceRef}
 
 ATHLÈTE : ${PROFIL.prenom}, ${PROFIL.age} ans, FC max ~${PROFIL.fcMax} bpm${PROFIL.poidsKg ? `, ${PROFIL.poidsKg} kg` : " (poids non renseigné : suppose ~80 kg et précise-le)"}${PROFIL.tailleCm ? `, ${PROFIL.tailleCm} cm` : ""}. Objectif : ${PROFIL.objectif}. Contexte : ${PROFIL.contexte}.
 BOX : ${PROFIL.box}

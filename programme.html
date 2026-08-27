@@ -14,6 +14,12 @@
   <link rel="apple-touch-icon" href="icons/icon-192.png" />
   <script>
     if ("serviceWorker" in navigator) window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));
+    if ("serviceWorker" in navigator) {
+      let recharge = false;
+      navigator.serviceWorker.addEventListener("controllerchange", () => {
+        if (recharge) return; recharge = true; location.reload();     // évite un mélange ancienne page / nouveau code
+      });
+    }
     (function () { const S = 2 * 60 * 1000; let d = Date.now();
       const r = () => { if (navigator.onLine !== false && Date.now() - d > S) location.reload(); };
       document.addEventListener("visibilitychange", () => { if (document.visibilityState === "visible") r(); else d = Date.now(); });

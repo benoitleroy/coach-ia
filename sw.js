@@ -3,7 +3,7 @@
 //             données de sync) → toujours frais quand en ligne, offline possible.
 //             "cache-first" uniquement pour icônes/images/polices.
 
-const CACHE_VERSION = "coach-ia-v26";
+const CACHE_VERSION = "coach-ia-v27";
 
 const PRECACHE_URLS = [
   "./",
