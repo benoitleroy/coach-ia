@@ -288,14 +288,19 @@ Contraintes pour la nutrition : 7 entrées (Lun→Dim) alignées sur la séance 
 Contraintes pour la semaine : 7 entrées (Lun→Dim). Chaque jour a un objet "matin" ET un objet "soir" ; quand il n'y a rien, mets {"ico": "—", "titre": "Rien", "intention": "repos", "detail": "", "gardefou": ""}. Respecte le nombre de doublés prévu par le bloc et la règle « jamais deux séances dures le même jour ni deux jours durs consécutifs », progressive par rapport à ce qui a réellement été fait les 4 dernières semaines (pas plus de +20 à +30 % de volume), 2 séances de force si objectif hybride, au moins 1 séance d'endurance vraiment facile (FC < 140) et au plus 1 séance intense en course, tenir compte des séances CrossFit lues sur photo quand il y en a.`;
 
 export async function coachBilan(bilan, carnet, activities, opts = {}) {
-  const { force = false, log = true, now = new Date() } = opts;
+  const { force = false, replan = false, log = true, now = new Date() } = opts;
   // Clé de cache = semaine ISO uniquement : le plan d'entraînement, les repas et les recettes
   // restent stables toute la semaine (courses faites le week-end). Régénération : nouvelle
   // semaine, ou `node scripts/bilan.js --force`.
   const key = semaineCible(now).label;
   const cache = (() => { try { return JSON.parse(fs.readFileSync(COACH_CACHE, "utf8")); } catch { return {}; } })();
   const semaines = cache.semaines || (cache.key ? { [cache.key]: cache.coach } : {});   // migre l'ancien format
-  if (!force && semaines[key]) { if (log) console.log("🧠 Bilan coach : inchangé (cache)"); return semaines[key]; }
+  // Le plan de la semaine est FIGÉ une fois écrit : il ne change plus jusqu'au dimanche suivant.
+  // Seul `--replan` (décision explicite) le réécrit — la stabilité prime sur l'optimisation.
+  if (semaines[key] && !replan) {
+    if (log) console.log(`🧠 Plan de la semaine ${key} : figé${semaines[key].figeLe ? " le " + semaines[key].figeLe.slice(0, 10) : ""} — inchangé`);
+    return semaines[key];
+  }
   const bin = findClaude();
   if (!bin) { if (log) console.warn("⚠️  Claude CLI introuvable — bilan coach non généré."); return null; }
 
@@ -319,6 +324,7 @@ export async function coachBilan(bilan, carnet, activities, opts = {}) {
     coach = { verdict: out, forts: [], manques: [], vigilance: "", semaine: null, regle: "" };
   }
   coach.generatedAt = now.toISOString();
+  coach.figeLe = now.toISOString();
   const sc = semaineCible(now);
   coach.programme = blocCourant(sc.lundi);
   coach.semaineLabel = sc.label;
@@ -341,10 +347,12 @@ window.BILAN = ${JSON.stringify(bilan, null, 1)};
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const acts = JSON.parse(fs.readFileSync(ACT_CACHE, "utf8"));
   const force = process.argv.includes("--force");
+  const replan = process.argv.includes("--replan");
+  if (force && !replan) console.log("ℹ️  --force ne réécrit plus un plan déjà figé. Utilise --replan si tu veux vraiment le remplacer.");
   const bilan = computeBilan(acts, new Date());
   let carnet = null;
   try { const s = fs.readFileSync(path.join(__dirname, "../js/carnet-data.js"), "utf8"); carnet = JSON.parse(s.slice(s.indexOf("{"), s.lastIndexOf("}") + 1)); } catch {}
-  bilan.coach = await coachBilan(bilan, carnet, acts, { force });
+  bilan.coach = await coachBilan(bilan, carnet, acts, { force, replan });
   writeBilan(bilan);
   console.log(`📊 Bilan 12 mois : ${bilan.total.h} h · ${bilan.total.n} séances · ${bilan.total.jours} jours actifs`);
   bilan.mois.forEach(m => console.log(`   ${m.label.padEnd(9)} ${String(m.h).padStart(5)} h · ${String(m.n).padStart(3)} · ${String(m.jours).padStart(2)} j`));

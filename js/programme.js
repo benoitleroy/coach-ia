@@ -58,6 +58,7 @@
   const jourIndexAuj = (today.getDay() + 6) % 7;   // 0 = lundi
   if (sem && Array.isArray(sem.jours)) {
     $("sem-label").textContent = C.semaineDebut ? `${fmtDate(C.semaineDebut)} → ${fmtDate(C.semaineFin)}` : "Semaine";
+    if (C.figeLe) $("sem-vol").title = "Plan figé le " + fmtDate(C.figeLe.slice(0, 10));
     $("sem-vol").textContent = sem.volumeCible || "";
     $("sem-obj").textContent = sem.titre || "";
     const lundi = C.semaineDebut ? new Date(C.semaineDebut + "T12:00:00") : null;
@@ -77,7 +78,7 @@
       const items = seancesDe(j);
       return `<li class="jour${items.length ? "" : " repos"}${cur ? " cur" : ""}"><div class="j-head"><span class="p-jour">${esc(j.jour)}${d ? `<small>${d.getDate()}</small>` : ""}</span>${fait ? `<span class="j-fait">✅ ${fait}</span>` : ""}</div>${items.length ? items.map(ligneSeance).join("") : `<div class="s-item"><span class="p-ico">😴</span><span class="p-titre">Repos</span></div>`}</li>`;
     }).join("");
-    $("sem-regle2").textContent = C.regle || "";
+    $("sem-regle2").textContent = (C.regle || "") + (C.figeLe ? ` — plan figé le ${fmtDate(C.figeLe.slice(0, 10))}, prochaine mise à jour dimanche soir.` : "");
 
     // ── Aujourd'hui ──
     const j = sem.jours[jourIndexAuj];
