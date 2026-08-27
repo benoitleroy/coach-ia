@@ -1,0 +1,28 @@
+// scripts/benchmarks.js — les "Girls" et benchmarks classiques (repères de test).
+// Servent à mesurer la progression : on les refait toutes les 8-12 semaines.
+export const BENCHMARKS = [
+  { nom: "Fran", wod: ["21-15-9 reps for time of:", "Thrusters (43/30 kg)", "Pull-ups"] },
+  { nom: "Grace", wod: ["For time:", "30 clean and jerks (61/43 kg)"] },
+  { nom: "Isabel", wod: ["For time:", "30 snatches (61/43 kg)"] },
+  { nom: "Diane", wod: ["21-15-9 reps for time of:", "Deadlifts (102/70 kg)", "Handstand push-ups"] },
+  { nom: "Elizabeth", wod: ["21-15-9 reps for time of:", "Cleans (61/43 kg)", "Ring dips"] },
+  { nom: "Helen", wod: ["3 rounds for time of:", "Run 400 meters", "21 kettlebell swings (24/16 kg)", "12 pull-ups"] },
+  { nom: "Cindy", wod: ["Complete as many rounds and reps as possible in 20 minutes of:", "5 pull-ups", "10 push-ups", "15 air squats"] },
+  { nom: "Mary", wod: ["Complete as many rounds and reps as possible in 20 minutes of:", "5 handstand push-ups", "10 pistols", "15 pull-ups"] },
+  { nom: "Angie", wod: ["For time:", "100 pull-ups", "100 push-ups", "100 sit-ups", "100 air squats"] },
+  { nom: "Barbara", wod: ["5 rounds for time of:", "20 pull-ups", "30 push-ups", "40 sit-ups", "50 air squats", "Rest 3 minutes between rounds"] },
+  { nom: "Chelsea", wod: ["Every minute on the minute for 30 minutes:", "5 pull-ups", "10 push-ups", "15 air squats"] },
+  { nom: "Annie", wod: ["50-40-30-20-10 reps for time of:", "Double-unders", "Sit-ups"] },
+  { nom: "Karen", wod: ["For time:", "150 wall-ball shots (9/6 kg)"] },
+  { nom: "Jackie", wod: ["For time:", "1,000-meter row", "50 thrusters (20 kg)", "30 pull-ups"] },
+  { nom: "Kelly", wod: ["5 rounds for time of:", "Run 400 meters", "30 box jumps (61/51 cm)", "30 wall-ball shots (9/6 kg)"] },
+  { nom: "Nancy", wod: ["5 rounds for time of:", "Run 400 meters", "15 overhead squats (43/30 kg)"] },
+  { nom: "Linda", wod: ["10-9-8-7-6-5-4-3-2-1 reps for time of:", "Deadlifts (1.5x bodyweight)", "Bench presses (bodyweight)", "Cleans (0.75x bodyweight)"] },
+  { nom: "Nicole", wod: ["Complete as many rounds as possible in 20 minutes of:", "Run 400 meters", "Max-rep pull-ups"] },
+  { nom: "Amanda", wod: ["9-7-5 reps for time of:", "Ring muscle-ups", "Squat snatches (61/43 kg)"] },
+  { nom: "Eva", wod: ["5 rounds for time of:", "Run 800 meters", "30 kettlebell swings (32/24 kg)", "30 pull-ups"] },
+  { nom: "Lynne", wod: ["5 rounds for max reps of:", "Bench presses (bodyweight)", "Pull-ups"] },
+  { nom: "Nasty Girls", wod: ["3 rounds for time of:", "50 air squats", "7 muscle-ups", "10 hang power cleans (61/43 kg)"] },
+  { nom: "Fight Gone Bad", wod: ["3 rounds for max reps, 1 minute per station, 1 minute rest between rounds:", "Wall-ball shots (9/6 kg)", "Sumo deadlift high pulls (34/25 kg)", "Box jumps (51 cm)", "Push presses (34/25 kg)", "Row (calories)"] },
+  { nom: "Filthy Fifty", wod: ["For time:", "50 box jumps (61 cm)", "50 jumping pull-ups", "50 kettlebell swings (16/12 kg)", "50 walking lunges", "50 knees-to-elbows", "50 push presses (20/14 kg)", "50 back extensions", "50 wall-ball shots (9/6 kg)", "50 burpees", "50 double-unders"] },
+];

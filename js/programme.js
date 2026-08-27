@@ -114,6 +114,7 @@
   let bqSrc = "tout", bqDuree = "tout", bqN = 20, bqQ = "";
   const bqFiltre = () => W.filter(w => {
     if (bqSrc === "hero" && w.source !== "Hero WOD") return false;
+    if (bqSrc === "bench" && w.source !== "Benchmark") return false;
     if (bqSrc === "cf" && w.source !== "CrossFit.com") return false;
     if (bqDuree !== "tout" && w.duree > +bqDuree) return false;
     if (bqQ) {

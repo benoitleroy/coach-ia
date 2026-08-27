@@ -6,6 +6,7 @@ import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 import { traduireWod, mouvementsDe } from "./mouvements.js";
+import { BENCHMARKS } from "./benchmarks.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const BASE = path.join(__dirname, ".wod-base.json");
@@ -59,6 +60,15 @@ for (const [date, w] of Object.entries(db.daily || {})) {
     materiel: materielDe(fr),
     stimulusFr: w.stimulus ? traduireWod([w.stimulus.slice(0, 400)])[0] : "",
     scaling: { int: traduireWod(w.intermediate), deb: traduireWod(w.beginner) },
+  });
+}
+for (const b of BENCHMARKS) {
+  const fr = traduireWod(b.wod);
+  entrees.push({
+    id: "bench-" + b.nom.toLowerCase().replace(/[^a-z]/g, ""), source: "Benchmark", nom: b.nom,
+    en: b.wod, fr, format: format(b.wod), duree: dureeEstimee(b.wod),
+    mouvements: mouvementsDe(b.wod).map(m => ({ en: m.en, fr: m.fr, schema: m.schema || null })),
+    materiel: materielDe(fr), stimulusFr: "Repère de test : à refaire toutes les 8 à 12 semaines pour mesurer la progression.", scaling: { int: [], deb: [] },
   });
 }
 for (const h of db.heroes || []) {

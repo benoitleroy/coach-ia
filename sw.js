@@ -3,7 +3,7 @@
 //             données de sync) → toujours frais quand en ligne, offline possible.
 //             "cache-first" uniquement pour icônes/images/polices.
 
-const CACHE_VERSION = "coach-ia-v21";
+const CACHE_VERSION = "coach-ia-v22";
 
 const PRECACHE_URLS = [
   "./",
@@ -65,6 +65,21 @@ self.addEventListener("fetch", (event) => {
   // Seuls icônes / images / polices restent cache-first.
   const isStatic = /\.(png|jpg|jpeg|svg|ico|woff2?|ttf)$/i.test(url.pathname);
   const isOwn = url.origin === self.location.origin;
+
+  // Banque de séances (~400 ko, change au plus une fois par jour) : cache d'abord,
+  // mise à jour silencieuse en arrière-plan → ouverture instantanée à la box, même en 4G faible.
+  if (/\/js\/wods-data\.js$/.test(url.pathname)) {
+    event.respondWith(
+      caches.match(req).then(cached => {
+        const reseau = fetch(req).then(resp => {
+          if (resp.ok) caches.open(CACHE_VERSION).then(c => c.put(req, resp.clone()));
+          return resp;
+        }).catch(() => cached);
+        return cached || reseau;
+      })
+    );
+    return;
+  }
 
   if (isHTML || (isOwn && !isStatic)) {
     event.respondWith(
