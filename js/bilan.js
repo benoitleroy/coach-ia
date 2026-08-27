@@ -15,7 +15,7 @@
   if (pg && pg.bloc) {
     $("bloc-programme").hidden = false;
     $("pg-nom").textContent = pg.programme;
-    $("pg-semaine").textContent = `semaine ${pg.semaineDansCycle}/${pg.totalSemaines}`;
+    $("pg-semaine").textContent = pg.avantDebut ? `démarre le ${pg.debut}` : `semaine ${pg.semaineDansCycle}/${pg.totalSemaines}`;
     $("pg-bloc").textContent = `Bloc ${pg.bloc.id} · ${pg.bloc.nom}${pg.decharge ? " · décharge" : ""}`;
     $("pg-but").textContent = pg.bloc.but;
     $("pg-cible").textContent = pg.cible ? "🎯 " + pg.cible.libelle : "";

@@ -17,7 +17,7 @@ import { execFileSync } from "child_process";
 import { fileURLToPath } from "url";
 import { loadPhotoCache } from "./photos.js";
 import { loadNotes } from "./note.js";
-import { texteProgramme, blocAPlanifier, PROGRAMME } from "./programme.js";
+import { texteProgramme, blocCourant, PROGRAMME } from "./programme.js";
 
 const __dirname  = path.dirname(fileURLToPath(import.meta.url));
 const ACT_CACHE  = path.join(__dirname, ".activities.cache.json");
@@ -135,6 +135,17 @@ function findClaude() {
   return null;
 }
 
+// Semaine à planifier : celle qui est EN COURS, sauf le dimanche où l'on prépare celle qui commence demain.
+const ymd = d => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+export function semaineCible(now = new Date()) {
+  const d = new Date(now);
+  if (d.getDay() === 0) d.setDate(d.getDate() + 1);      // dimanche → semaine qui démarre lundi
+  const lundi = new Date(d); const jour = lundi.getDay() || 7;
+  lundi.setDate(lundi.getDate() - (jour - 1)); lundi.setHours(0, 0, 0, 0);
+  const dimanche = new Date(lundi); dimanche.setDate(dimanche.getDate() + 6);
+  return { label: isoWeekLabel(lundi), lundi, dimanche, debut: ymd(lundi), fin: ymd(dimanche) };
+}
+
 function isoWeekLabel(d) {
   const dt = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
   const day = dt.getUTCDay() || 7; dt.setUTCDate(dt.getUTCDate() + 4 - day);
@@ -205,7 +216,7 @@ ${texteProgramme(now)}
 ATHLÈTE : ${PROFIL.prenom}, ${PROFIL.age} ans, FC max ~${PROFIL.fcMax} bpm${PROFIL.poidsKg ? `, ${PROFIL.poidsKg} kg` : " (poids non renseigné : suppose ~80 kg et précise-le)"}${PROFIL.tailleCm ? `, ${PROFIL.tailleCm} cm` : ""}. Objectif : ${PROFIL.objectif}. Contexte : ${PROFIL.contexte}.
 BOX : ${PROFIL.box}
 NUTRITION : ${PROFIL.nutrition}
-DATE DU JOUR : ${now.toISOString().slice(0, 10)} (semaine ${isoWeekLabel(now)}). La semaine à planifier est la PROCHAINE semaine (lundi → dimanche).
+DATE DU JOUR : ${now.toISOString().slice(0, 10)}. La semaine à planifier est celle du LUNDI ${semaineCible(now).debut} au DIMANCHE ${semaineCible(now).fin} (${semaineCible(now).label}). Si des séances de cette semaine ont déjà été faites (voir les données), tiens-en compte : ne les reprogramme pas, ajuste les jours restants.
 
 ${METHODE_BILLAT}
 
@@ -247,7 +258,7 @@ export async function coachBilan(bilan, carnet, activities, opts = {}) {
   // Clé de cache = semaine ISO uniquement : le plan d'entraînement, les repas et les recettes
   // restent stables toute la semaine (courses faites le week-end). Régénération : nouvelle
   // semaine, ou `node scripts/bilan.js --force`.
-  const key = isoWeekLabel(now);
+  const key = semaineCible(now).label;
   if (!force) {
     try {
       const c = JSON.parse(fs.readFileSync(COACH_CACHE, "utf8"));
@@ -277,8 +288,11 @@ export async function coachBilan(bilan, carnet, activities, opts = {}) {
     coach = { verdict: out, forts: [], manques: [], vigilance: "", semaine: null, regle: "" };
   }
   coach.generatedAt = now.toISOString();
-  coach.programme = blocAPlanifier(now);
-  coach.semaineLabel = isoWeekLabel(new Date(now.getTime() + 7 * DAY));
+  const sc = semaineCible(now);
+  coach.programme = blocCourant(sc.lundi);
+  coach.semaineLabel = sc.label;
+  coach.semaineDebut = sc.debut;
+  coach.semaineFin = sc.fin;
   fs.writeFileSync(COACH_CACHE, JSON.stringify({ key, coach }, null, 2));
   return coach;
 }

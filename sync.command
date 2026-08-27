@@ -43,9 +43,9 @@ echo ""
 
 # Push automatique vers GitHub Pages si des données ont changé
 if [ -d .git ]; then
-  if ! git diff --quiet js/data-benoit.js js/observations-strava.js js/carnet-data.js js/bilan-data.js js/sommeil-data.js 2>/dev/null; then
+  if ! git diff --quiet js/data-benoit.js js/observations-strava.js js/carnet-data.js js/bilan-data.js js/sommeil-data.js js/seances-data.js js/programme-data.js 2>/dev/null; then
     echo "📤 Push des nouvelles données vers GitHub Pages…"
-    git add js/data-benoit.js js/observations-strava.js js/carnet-data.js js/bilan-data.js js/sommeil-data.js
+    git add js/data-benoit.js js/observations-strava.js js/carnet-data.js js/bilan-data.js js/sommeil-data.js js/seances-data.js js/programme-data.js
     git -c user.email="benoit@coach-ia.local" -c user.name="Benoit Leroy" \
       commit -m "Sync auto $(date +%Y-%m-%d)" >/dev/null
     git push origin main >/dev/null 2>&1 && echo "   → en ligne dans ~1min" || echo "   ⚠️  push échoué (vérifie ta connexion)"

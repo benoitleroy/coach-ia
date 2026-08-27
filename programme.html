@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Programme — Coach IA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/carnet.css" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#0F1117" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <script>
+    if ("serviceWorker" in navigator) window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));
+    (function () { const S = 2 * 60 * 1000; let d = Date.now();
+      const r = () => { if (navigator.onLine !== false && Date.now() - d > S) location.reload(); };
+      document.addEventListener("visibilitychange", () => { if (document.visibilityState === "visible") r(); else d = Date.now(); });
+      window.addEventListener("pageshow", e => { if (e.persisted) r(); }); window.addEventListener("focus", r); })();
+  </script>
+</head>
+<body>
+<main class="carnet" id="prog">
+  <header class="top">
+    <div>
+      <div class="eyebrow" id="pg-cycle">Coach IA · Programme</div>
+      <h1 id="pg-titre">Programme</h1>
+    </div>
+    <div class="sync"><a href="index.html">← Carnet</a></div>
+  </header>
+
+  <nav class="tabs" id="tabs">
+    <button data-tab="jour" class="on">Aujourd'hui</button>
+    <button data-tab="semaine">Semaine</button>
+    <button data-tab="cycle">Cycle</button>
+    <button data-tab="histo">Historique</button>
+  </nav>
+
+  <!-- AUJOURD'HUI -->
+  <section class="tabpane on" id="tab-jour">
+    <section class="bloc" id="jour-bloc">
+      <div class="bloc-head"><h2 id="jour-date">—</h2><span class="hint" id="jour-etat"></span></div>
+      <div class="jour-seance" id="jour-seance">—</div>
+      <p class="p-detail" id="jour-detail"></p>
+      <p class="p-garde" id="jour-garde"></p>
+    </section>
+    <section class="bloc" id="jour-repas-bloc" hidden>
+      <div class="bloc-head"><h2>Repas du jour</h2><span class="hint" id="jour-repas-type"></span></div>
+      <dl class="rp-meals" id="jour-repas"></dl>
+    </section>
+    <section class="bloc" id="jour-ref-bloc" hidden>
+      <div class="bloc-head"><h2>Dernière séance box</h2><span class="hint" id="jour-ref-quand"></span></div>
+      <div id="jour-ref"></div>
+    </section>
+  </section>
+
+  <!-- SEMAINE -->
+  <section class="tabpane" id="tab-semaine">
+    <section class="bloc">
+      <div class="bloc-head"><h2 id="sem-label">Semaine</h2><span class="hint" id="sem-vol"></span></div>
+      <p class="sem-objectif" id="sem-obj"></p>
+      <ol class="plan" id="sem-plan"></ol>
+      <p class="sem-regle" id="sem-regle2"></p>
+    </section>
+  </section>
+
+  <!-- CYCLE -->
+  <section class="tabpane" id="tab-cycle">
+    <section class="bloc">
+      <div class="bloc-head"><h2 id="cy-nom">Cycle</h2><span class="hint" id="cy-dates"></span></div>
+      <div class="pg-bar" id="cy-bar"></div>
+      <p class="pg-but" id="cy-objectif"></p>
+      <p class="pg-cible" id="cy-cible"></p>
+    </section>
+    <div id="cy-blocs"></div>
+    <section class="bloc">
+      <div class="bloc-head"><h2>Règles permanentes</h2></div>
+      <ul class="coach-list" id="cy-regles"></ul>
+    </section>
+  </section>
+
+  <!-- HISTORIQUE -->
+  <section class="tabpane" id="tab-histo">
+    <section class="bloc">
+      <div class="bloc-head"><h2>Séances</h2><span class="hint" id="hi-count"></span></div>
+      <div class="filtres" id="hi-filtres">
+        <button data-f="box" class="on">Box &amp; renfo</button>
+        <button data-f="course">Course</button>
+        <button data-f="autre">Vélo &amp; nat</button>
+        <button data-f="tout">Tout</button>
+      </div>
+      <ul class="histo" id="hi-list"></ul>
+    </section>
+  </section>
+
+  <footer class="foot"><a href="index.html">← Retour au carnet</a></footer>
+</main>
+
+<script src="js/programme-data.js" onerror="void 0"></script>
+<script src="js/bilan-data.js" onerror="void 0"></script>
+<script src="js/seances-data.js" onerror="void 0"></script>
+<script src="js/programme.js"></script>
+</body>
+</html>
