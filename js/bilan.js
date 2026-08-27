@@ -10,6 +10,23 @@
   const fmtD = iso => { const d = new Date(iso); return `${JOURS[d.getDay()]} ${d.getDate()} ${MOIS[d.getMonth()]}`; };
   const fmtH = h => String(h).replace(".", ",") + " h";
 
+  // ── Programme (macro-cycle) ──
+  const pg = c && c.programme;
+  if (pg && pg.bloc) {
+    $("bloc-programme").hidden = false;
+    $("pg-nom").textContent = pg.programme;
+    $("pg-semaine").textContent = `semaine ${pg.semaineDansCycle}/${pg.totalSemaines}`;
+    $("pg-bloc").textContent = `Bloc ${pg.bloc.id} · ${pg.bloc.nom}${pg.decharge ? " · décharge" : ""}`;
+    $("pg-but").textContent = pg.bloc.but;
+    $("pg-cible").textContent = pg.cible ? "🎯 " + pg.cible.libelle : "";
+    $("pg-prios").innerHTML = (pg.bloc.priorites || []).map(x => `<li>${esc(x)}</li>`).join("");
+    $("pg-bar").innerHTML = Array.from({ length: pg.totalSemaines }, (_, i) => {
+      const n = i + 1, done = n < pg.semaineDansCycle, cur = n === pg.semaineDansCycle;
+      const blocId = n <= 4 ? 1 : n <= 8 ? 2 : 3;
+      return `<i class="b${blocId}${done ? " done" : ""}${cur ? " cur" : ""}" title="semaine ${n}"></i>`;
+    }).join("");
+  }
+
   // ── Bilan coach ──
   const c = B.coach;
   if (c && c.verdict) {

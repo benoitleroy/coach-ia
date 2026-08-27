@@ -17,6 +17,7 @@ import { execFileSync } from "child_process";
 import { fileURLToPath } from "url";
 import { loadPhotoCache } from "./photos.js";
 import { loadNotes } from "./note.js";
+import { texteProgramme, blocAPlanifier, PROGRAMME } from "./programme.js";
 
 const __dirname  = path.dirname(fileURLToPath(import.meta.url));
 const ACT_CACHE  = path.join(__dirname, ".activities.cache.json");
@@ -37,6 +38,7 @@ export const PROFIL = {
   nutrition: "PETIT-DÉJEUNER FIXE, ne pas le modifier : 3 œufs à la coque + 500 ml d'eau + vitamine D + K1 + complexe vitamine B (Pillar). Le coach peut seulement proposer un AJOUT (ex. banane, flocons, pain) avant une séance longue ou intense du matin, et le dire explicitement. MIDI : toujours sur chantier → boîte transportable, qui se mange froide ou tiède (pas de micro-ondes garanti), préparée la veille ou issue du batch. SOIR : repas maison ≤ 20 min, c'est là que se joue l'ajustement glucides/protéines selon la séance. Veut des repas concrets calés sur les séances, achetés le week-end et préparés à l'avance (batch cooking du dimanche). Pas de comptage de calories. Aucune contrainte alimentaire connue.",
 
   objectif: "devenir un athlète hybride : endurance (course, vélo, natation) + force (CrossFit, charges lourdes)",
+  box: "Les séances CrossFit suivent la programmation NST (NoShortcuts Training) de sa box : programmation externe déjà équilibrée (WOD, force, gymnastique, endurance, haltéro), avec niveaux 1/2/3 au lieu du scaling classique. Le contenu exact de chaque séance est lu sur la photo du tableau. Le coach construit AUTOUR de ces séances : il ne double jamais une journée lourde de la box, et place ses propres séances (endurance, VO2max, force complémentaire) sur les jours où la box est légère ou absente.",
   contexte: "pratique CrossFit en box, Pilates régulier, historique triathlon/Ironman. Préparait l'Ironman Switzerland (Thun, 5 juillet 2026) — ANNULÉ volontairement pour accompagner son fils à une compétition d'échecs : le creux mai→août 2026 est un choix familial assumé, pas un abandon ni une blessure. Reprise fin août 2026 avec un nouvel objectif hybride.",
 };
 
@@ -198,7 +200,10 @@ const METHODE_BILLAT = `MÉTHODE DE RÉFÉRENCE — Véronique Billat (physiolog
 
 const COACH_PROMPT = (bilan, carnet, activities, now) => `Tu es un coach sportif avec une solide formation en physiologie de l'exercice (endurance, force, athlète hybride, périodisation, prévention des blessures chez le sportif de 35-45 ans). Tu écris en français, tu tutoies, ton ton est direct, concret, bienveillant, sans jargon inutile ni enthousiasme artificiel. Tu t'appuies UNIQUEMENT sur les données ci-dessous (Strava, et Garmin Connect pour le sommeil/HRV/FC repos quand la section existe) — ne suppose pas de données que tu n'as pas ; si quelque chose manque (sommeil, nutrition, blessure), dis-le en une ligne. Quand le sommeil/HRV est présent, intègre-le dans le verdict et adapte la semaine (ex. HRV sous la base ou sommeil < 6 h 30 → moins d'intensité).
 
+${texteProgramme(now)}
+
 ATHLÈTE : ${PROFIL.prenom}, ${PROFIL.age} ans, FC max ~${PROFIL.fcMax} bpm${PROFIL.poidsKg ? `, ${PROFIL.poidsKg} kg` : " (poids non renseigné : suppose ~80 kg et précise-le)"}${PROFIL.tailleCm ? `, ${PROFIL.tailleCm} cm` : ""}. Objectif : ${PROFIL.objectif}. Contexte : ${PROFIL.contexte}.
+BOX : ${PROFIL.box}
 NUTRITION : ${PROFIL.nutrition}
 DATE DU JOUR : ${now.toISOString().slice(0, 10)} (semaine ${isoWeekLabel(now)}). La semaine à planifier est la PROCHAINE semaine (lundi → dimanche).
 
@@ -272,6 +277,7 @@ export async function coachBilan(bilan, carnet, activities, opts = {}) {
     coach = { verdict: out, forts: [], manques: [], vigilance: "", semaine: null, regle: "" };
   }
   coach.generatedAt = now.toISOString();
+  coach.programme = blocAPlanifier(now);
   coach.semaineLabel = isoWeekLabel(new Date(now.getTime() + 7 * DAY));
   fs.writeFileSync(COACH_CACHE, JSON.stringify({ key, coach }, null, 2));
   return coach;
