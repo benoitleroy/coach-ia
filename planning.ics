@@ -1,0 +1,189 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Coach IA//Carnet//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Coach IA — entraînement
+BEGIN:VEVENT
+UID:2026-S35-4-matin@coach-ia
+DTSTAMP:20260827T195800Z
+DTSTART:20260828T033000Z
+DTEND:20260828T043000Z
+SUMMARY:🏊 Natation technique
+DESCRIPTION:30 min : 300 m échauffement\, 8×50 m éducatifs (rattrapé\, poings fermés\, 6-1-6) avec 20 s de récup\, 200 m souple. Aucune notion de chrono — on réveille l'appui\, c'est tout.\n⚑ Si le créneau saute (chantier)\, remplace par 15 min de gainage à la maison\, pas par une course.\n\nCoach IA — 2026-S35
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🏊 Natation technique
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S35-4-soir@coach-ia
+DTSTAMP:20260827T195800Z
+DTSTART:20260828T163000Z
+DTEND:20260828T174500Z
+SUMMARY:🏋️ Box ou NST — séance de qualité de la semaine
+DESCRIPTION:WOD du club. Deux règles : (1) évite tout ce qui charge lourd en hang squat clean ou thruster — tu en as fait dimanche à 30 kg ; (2) évite les tractions et wall walks\, coudes et épaules ont déjà pris cette semaine. Si le WOD du jour empile les deux\, fais l'échauffement + le skill et scale le métcon à 60 % de l'intensité. Cible : 12-15 min d'effort dur\, pas 30.\n⚑ Si le HRV du matin repasse LOW ou que tu dors moins de 6 h 30 jeudi soir → tu fais l'échauffement et le skill\, tu sautes le WOD.\n\nCoach IA — 2026-S35
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🏋️ Box ou NST — séance de qualité de la semaine
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S35-5-matin@coach-ia
+DTSTAMP:20260827T195800Z
+DTSTART:20260829T033000Z
+DTEND:20260829T043000Z
+SUMMARY:🏃 Footing en aisance + relances libres
+DESCRIPTION:50-55 min\, FC < 140 bpm\, allure libre (autour de 6:20-6:40/km). Sur les 15 dernières minutes\, place 4-5 relances de 20-30 s à la sensation « je force un peu »\, retour au calme immédiat. Pas de chrono\, pas de cible d'allure : tu varies à sensation constante.\n⚑ Les relances sont optionnelles : si la FC ne redescend pas sous 140 en 1 min après la relance\, tu arrêtes les relances et tu finis en trottinant.\n\nCoach IA — 2026-S35
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🏃 Footing en aisance + relances libres
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S35-6-matin@coach-ia
+DTSTAMP:20260827T195800Z
+DTSTART:20260830T033000Z
+DTEND:20260830T043000Z
+SUMMARY:— Repos complet
+DESCRIPTION:Journée off intégrale. C'est elle qui rend possible le bloc « Hybride Automne » qui démarre lundi 31/08.\n⚑ Pas de « petite sortie pour bouger ». Repos = repos.\n\nCoach IA — 2026-S35
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:— Repos complet
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S35-6-soir@coach-ia
+DTSTAMP:20260827T195800Z
+DTSTART:20260830T163000Z
+DTEND:20260830T174500Z
+SUMMARY:🛒 Batch cooking
+DESCRIPTION:1 h 30 de cuisine pour la semaine (voir la partie nutrition). C'est ta séance de dimanche.\n\nCoach IA — 2026-S35
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🛒 Batch cooking
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S36-0-matin@coach-ia
+DTSTAMP:20260827T195800Z
+DTSTART:20260831T033000Z
+DTEND:20260831T043000Z
+SUMMARY:🏃 Footing d'ouverture 35 min
+DESCRIPTION:Première sortie de la semaine\, très facile : tu dois pouvoir parler en phrases complètes tout du long. L'objectif est de réveiller les tendons\, pas de faire une performance.\n• 5 min de marche rapide + 10 montées de genoux et 10 talons-fesses\n• 30 min de course continue\, FC sous 140 bpm (marche 30 s si ça monte)\n• 3 min de marche pour finir\n• Étirements mollets contre un mur\, 2×45 s par jambe\n⚑ Si la FC dépasse 140 sans que tu accélères\, tu ralentis ou tu marches — l'allure n'a aucune importance cette semaine.\n\nCoach IA — 2026-S36
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🏃 Footing d'ouverture 35 min
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S36-0-soir@coach-ia
+DTSTAMP:20260827T195800Z
+DTSTART:20260831T163000Z
+DTEND:20260831T174500Z
+SUMMARY:🏋️ Force — Squat 5×5\, semaine 1 du cycle
+DESCRIPTION:Séance de force pure\, c'est le point de départ chiffré de ton cycle de 4 semaines. On part volontairement sous ta charge de référence (80 kg) pour construire proprement et monter de 2\,5 kg par semaine.\n• Échauffement : 5 min rameur souple + 15 squats à vide + 10 fentes par jambe\n• Back squat (barre sur le haut du dos\, descendre cuisses parallèles au sol) : 2 séries de 5 à vide puis 5 à 50 kg\n• Back squat 5×5 à 70 kg — 2 min 30 de récup entre chaque série\n• Tractions strictes (sans élan\, menton au-dessus de la barre) : 6 séries de 2\, très reposé\, 90 s entre séries\n• Rowing barre (buste penché à 45°\, tirer la barre vers le nombril\, dos plat) : 4×8 à 40 kg\n• Gainage planche ventrale 3×45 s\, coudes sous les épaules\n⚑ Si la 4e ou 5e rep du squat perd le dos droit ou les talons décollent\, tu arrêtes la série là et tu baisses de 5 kg.\n\nCoach IA — 2026-S36
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🏋️ Force — Squat 5×5\, semaine 1 du cycle
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S36-1-matin@coach-ia
+DTSTAMP:20260827T195800Z
+DTSTART:20260901T033000Z
+DTEND:20260901T043000Z
+SUMMARY:🚴 Vélo facile 45 min
+DESCRIPTION:Réintroduction du vélo comme volume sans impact\, le lendemain d'une séance de jambes. Ça fait circuler le sang dans les cuisses sans taper sur les tendons.\n• 10 min de mise en route à petit braquet\, cadence 90 tr/min\n• 30 min en continu\, FC sous 135 bpm\, cadence souple 85-95 tr/min\n• 5 min de retour au calme très léger\n⚑ Si les cuisses sont encore raides du squat\, tu réduis à 30 min — c'est de la récupération active\, jamais un effort.\n\nCoach IA — 2026-S36
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🚴 Vélo facile 45 min
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S36-2-soir@coach-ia
+DTSTAMP:20260827T195800Z
+DTSTART:20260902T163000Z
+DTEND:20260902T174500Z
+SUMMARY:📦 Box ou NST — WOD du club
+DESCRIPTION:Créneau à faire avec la programmation de ta box (ou le module NST dès que tu l'as). C'est ta séance dure de la semaine : un métcon de 10 à 15 min\, effort soutenu mais avec de la technique conservée.\n• Suivre l'échauffement du coach de la box\n• Faire le travail technique/skill AVANT le WOD\, jamais après\n• WOD du tableau : prendre la version Int\, ou Sc si les charges dépassent 35 kg\n• Sur les mouvements avec barre : rester à 30 kg maximum cette semaine\n• 5 min de vélo ou rameur très souple pour redescendre\n⚑ Si le WOD du jour contient plus de 100 sauts (double-unders\, box jumps)\, tu scales de moitié : tes tendons sortent de 3 mois de creux.\n\nCoach IA — 2026-S36
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:📦 Box ou NST — WOD du club
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S36-3-matin@coach-ia
+DTSTAMP:20260827T195800Z
+DTSTART:20260903T033000Z
+DTEND:20260903T043000Z
+SUMMARY:🏊 Natation 30 min
+DESCRIPTION:Le lendemain de la box\, on décharge complètement : de l'eau\, pas d'impact\, les épaules qui s'ouvrent. Tu n'as fait que 11 min de natation en août\, on repart doucement.\n• 200 m crawl souple pour se mettre dedans\n• 6 × 50 m crawl avec 20 s de repos\, allure tranquille\n• 4 × 50 m avec planche (jambes seules) ou pull-buoy (bras seuls) en alternance\n• 200 m souple dos ou crawl pour finir\n⚑ Aucune notion de chrono : si tu es essoufflé\, tu allonges le repos à 30 s.\n\nCoach IA — 2026-S36
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🏊 Natation 30 min
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S36-4-matin@coach-ia
+DTSTAMP:20260827T195800Z
+DTSTART:20260904T033000Z
+DTEND:20260904T043000Z
+SUMMARY:🧘 Pilates + mobilité 30 min
+DESCRIPTION:Séance courte de gainage et mobilité\, la veille d'une journée avec box le soir. C'est ce qui protège ton dos sur les squats et tes hanches sur la course.\n• 10 min de mobilité : chevilles\, hanches\, épaules\n• Ta séance Pilates habituelle\, 20 min\n• Finir par 3×30 s de gainage latéral de chaque côté\n⚑ Rien de forcé en amplitude : on cherche de l'aisance\, pas du gain de souplesse à l'arrache.\n\nCoach IA — 2026-S36
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🧘 Pilates + mobilité 30 min
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S36-4-soir@coach-ia
+DTSTAMP:20260827T195800Z
+DTSTART:20260904T163000Z
+DTEND:20260904T174500Z
+SUMMARY:📦 Box ou NST — séance légère
+DESCRIPTION:Deuxième créneau box de la semaine. Si le WOD du jour est un gros morceau (plus de 20 min)\, tu ne fais que la partie force/skill et tu passes ton tour sur le métcon — on ne fait pas deux séances dures rapprochées en semaine 1.\n• Échauffement du coach\n• Partie force/technique du jour\, charges modérées (technique avant charge)\n• Métcon uniquement s'il fait moins de 10 min\n• Finisher : 20 tractions strictes cumulées en séries de 2-3\, jamais jusqu'à l'échec\n• 5 min de retour au calme\n⚑ Si le WOD du club fait plus de 20 min ou tape encore les jambes\, tu sautes le métcon — dis-le au coach\, c'est une semaine de reprise.\n\nCoach IA — 2026-S36
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:📦 Box ou NST — séance légère
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S36-5-matin@coach-ia
+DTSTAMP:20260827T195800Z
+DTSTART:20260905T033000Z
+DTEND:20260905T043000Z
+SUMMARY:🏃 Sortie longue 1 h 05
+DESCRIPTION:La séance clé de la semaine : la durée\, pas la vitesse. Tu peux varier librement l'allure selon les sensations et le terrain\, tant que la FC reste sous 140.\n• 5 min de marche rapide puis 10 min de course très lente\n• 50 min en aisance stricte\, FC sous 140 bpm\, allure libre selon les sensations\n• Sur les 10 dernières minutes\, si les jambes le veulent\, 3 relances de 30 s un peu plus vite puis retour au calme\n• 5 min de marche + étirements mollets et ischio-jambiers\n⚑ Toute douleur au tendon d'Achille ou au genou = tu t'arrêtes sur-le-champ et tu passes en marche\, pas de négociation.\n\nCoach IA — 2026-S36
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🏃 Sortie longue 1 h 05
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S36-6-soir@coach-ia
+DTSTAMP:20260827T195800Z
+DTSTART:20260906T163000Z
+DTEND:20260906T174500Z
+SUMMARY:— Rien — repos complet
+DESCRIPTION:Journée off totale\, c'est prévu et ça fait partie du plan. Tu profites pour faire ton batch cooking de la semaine.\n\nCoach IA — 2026-S36
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:— Rien — repos complet
+END:VALARM
+END:VEVENT
+END:VCALENDAR

@@ -87,6 +87,19 @@
         const items = seancesDe(j);
         return `<li class="jour${items.length ? "" : " repos"}${cur ? " cur" : ""}"><div class="j-head"><span class="p-jour">${esc(j.jour)}${d ? `<small>${d.getDate()}</small>` : ""}</span>${fait ? `<span class="j-fait">✅ ${fait}</span>` : ""}</div>${items.length ? items.map(ligneSeance).join("") : `<div class="s-item"><span class="p-ico">😴</span><span class="p-titre">Repos</span></div>`}</li>`;
       }).join("");
+      // Grille planning : 7 jours × matin/soir, pour caler avec l'agenda
+      const H = { Matin: "5 h 30", Soir: "18 h 30" };
+      $("grille").innerHTML = `<thead><tr><th></th><th>Matin<br><small>${H.Matin}</small></th><th>Soir<br><small>${H.Soir}</small></th></tr></thead><tbody>` +
+        S2.jours.map((j, i) => {
+          const cell = s2 => {
+            if (!s2 || !s2.titre || /^(rien|repos|—|-)$/i.test(String(s2.titre).trim())) return `<td class="off">—</td>`;
+            const dur = (String(s2.detail || "") + " " + (s2.etapes || []).join(" ")).match(/(\d+)\s*(?:h|min)/i);
+            return `<td><span class="g-ico">${esc(s2.ico || "")}</span> ${esc(s2.titre.replace(/\s*[—-]\s*.*$/, ""))}${s2.intention ? `<br><small>${esc(s2.intention)}</small>` : ""}</td>`;
+          };
+          const cur = courante && i === jourIndexAuj;
+          return `<tr class="${cur ? "cur" : ""}"><th>${esc(j.jour)}</th>${cell(j.matin)}${cell(j.soir)}</tr>`;
+        }).join("") + "</tbody>";
+      $("grille-note").textContent = `Horaires indicatifs (matin ${H.Matin}, soir ${H.Soir}) — l'export agenda place les séances à ces heures, tu les déplaces ensuite selon tes chantiers.`;
       $("sem-regle2").textContent = (vue.regle || "") + (vue.figeLe ? ` — plan figé le ${fmtDate(vue.figeLe.slice(0, 10))}.` : "");
     };
     if (CS) {

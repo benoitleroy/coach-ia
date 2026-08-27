@@ -15,6 +15,7 @@ import { enrichWithPhotos } from "./photos.js";
 import { computeBilan, coachBilan, writeBilan, planEnCache, semaineCible } from "./bilan.js";
 import { loadNotes } from "./note.js";
 import { writeProgramme } from "./programme.js";
+import { genererIcs } from "./ics.js";
 import { loadNST } from "./nst.js";
 import { traduireWod, MOUVEMENTS } from "./mouvements.js";
 
@@ -680,6 +681,8 @@ async function main() {
       const planSuivant = planEnCache(suivante.label);
       if (planSuivant && suivante.label !== bilan.coach?.semaineLabel) bilan.coachSuivant = planSuivant;
       writeBilan(bilan);
+      // Planning exportable vers l'agenda de l'iPhone
+      fs.writeFileSync(path.join(__dirname, "../planning.ics"), genererIcs([bilan.coach, bilan.coachSuivant]));
       writeProgramme(path.join(__dirname, "../js/programme-data.js"));
       try { execFileSync(process.execPath, [path.join(__dirname, "wods-index.js")], { stdio: "ignore" }); } catch {}
       fs.writeFileSync(path.join(__dirname, "../js/mouvements-data.js"),
