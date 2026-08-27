@@ -254,3 +254,8 @@ details.recette .rc-body .coach-sub { margin-top: .4rem; }
 #jour-ref .c-txt { white-space: pre-wrap; font: inherit; font-size: .84rem; line-height: 1.45; margin: .3rem 0 0; overflow-x: auto; }
 #jour-ref .c-note { margin-bottom: .3rem; padding: .35rem .6rem; border-left: 3px solid var(--accent); background: var(--accent-dim); border-radius: 0 6px 6px 0; font-size: .85rem; }
 .tabs { overflow-x: auto; }
+
+.ref-ligne { font-size: .9rem; margin-bottom: .3rem; }
+.ref-wod summary { cursor: pointer; color: var(--muted); font-size: .85rem; list-style: none; }
+.ref-wod summary::-webkit-details-marker { display: none; }
+.ref-lien { display: inline-block; margin-top: .5rem; font-size: .82rem; color: var(--accent); text-decoration: none; }

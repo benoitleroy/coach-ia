@@ -71,7 +71,13 @@
   if (derniereBox) {
     $("jour-ref-bloc").hidden = false;
     $("jour-ref-quand").textContent = fmtDate(derniereBox.date);
-    $("jour-ref").innerHTML = `${derniereBox.note ? `<div class="c-note">✍️ ${esc(derniereBox.note)}</div>` : ""}${derniereBox.contenu ? `<pre class="c-txt">${esc(derniereBox.contenu)}</pre>` : ""}`;
+    $("jour-ref").innerHTML =
+      `<div class="ref-ligne">${esc(derniereBox.name || derniereBox.type)} · ${fmtH(derniereBox.sec)}${derniereBox.hr ? " · " + derniereBox.hr + " bpm" : ""}</div>`
+      + (derniereBox.note ? `<div class="c-note">✍️ ${esc(derniereBox.note)}</div>` : "")
+      + (derniereBox.contenu ? `<details class="ref-wod"><summary>Voir le tableau du WOD</summary><pre class="c-txt">${esc(derniereBox.contenu)}</pre></details>` : "")
+      + `<a class="ref-lien" href="#" data-goto="histo">Tout l'historique →</a>`;
+    const lien = $("jour-ref").querySelector("[data-goto]");
+    if (lien) lien.addEventListener("click", e => { e.preventDefault(); document.querySelector('#tabs button[data-tab="histo"]').click(); });
   }
 
   // ── Cycle ──
