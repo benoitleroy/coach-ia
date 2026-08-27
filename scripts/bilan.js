@@ -209,6 +209,8 @@ const PRINCIPES = `PRINCIPES DE PROGRAMMATION — construis la semaine avec ces 
 - PROGRESSION MESURABLE : même séance, plus de charge OU moins de temps. Dis explicitement ce qui doit progresser par rapport à la semaine précédente.
 - LES BENCHMARKS SONT DES TESTS, pas de l'entraînement : n'en programme un (Fran, Helen, Cindy, Grace…) que comme test ponctuel, en semaine de décharge ou fin de bloc, jamais deux dans la même semaine.
 - VARIÉTÉ CONTRÔLÉE : ne reprogramme pas un mouvement lourd ou un WOD déjà fait dans les 10 derniers jours (voir l'historique). La variété sert la progression, elle ne la remplace pas.
+- ÉTAPES COCHABLES : chaque séance (matin comme soir) doit avoir un tableau "etapes" de 3 à 8 lignes courtes, dans l'ordre chronologique, que Benoît coche une par une pendant la séance. Une ligne = une action complète et autonome (ex. "Back squat 5×5 à 65 kg — 2 min de récup entre séries"), jamais un titre vague.
+- VOCABULAIRE CLAIR : Benoît ne lit pas bien l'anglais et ne connaît pas tous les noms d'exercices. Dans "detail", nomme chaque exercice en français ET explique en quelques mots le geste la première fois qu'il apparaît dans la semaine — ex. "rowing barre (buste penché, tirer la barre vers le nombril, dos plat) 4×8". Évite les abréviations et les termes anglais non expliqués.
 - ÉQUILIBRE HEBDO CIBLE pour un objectif hybride : ~60-70 % du temps en aisance (conversation possible), 10-20 % très dur, le reste en force/skill.`;
 
 // Organisation bi-quotidienne demandée par Benoît (27/08/2026)
@@ -262,7 +264,7 @@ Réponds UNIQUEMENT avec un objet JSON valide (pas de markdown, pas de texte aut
    "volumeCible": "ex. ~6 h 30",
    "doubles": "nombre de journées à deux séances cette semaine, ex. 3",
    "jours": [
-     {"jour": "Lun", "matin": {"ico": "🏃", "titre": "titre court", "intention": "aisance | force | filière courte | filière moyenne | filière longue | skill | récup | repos", "detail": "contenu précis (durées, FC cibles, séries × reps, charges chiffrées)", "gardefou": "1 règle d'arrêt ou d'ajustement"}, "soir": {"ico": "🏋️", "titre": "…", "intention": "…", "detail": "…", "gardefou": "…"}}
+     {"jour": "Lun", "matin": {"ico": "🏃", "titre": "titre court", "intention": "aisance | force | filière courte | filière moyenne | filière longue | skill | récup | repos", "detail": "1 à 2 phrases : l'intention de la séance et comment elle doit se sentir", "etapes": ["chaque bloc de la séance sur une ligne, dans l'ordre, prêt à cocher pendant la séance : échauffement, exercice avec séries × reps ET charge chiffrée, récup entre séries, retour au calme"], "gardefou": "1 règle d'arrêt ou d'ajustement"}, "soir": {"ico": "🏋️", "titre": "…", "intention": "…", "detail": "…", "gardefou": "…"}}
    ]
  },
  "regle": "1 phrase : quelle séance sauter en priorité si la semaine déborde, laquelle ne jamais sauter",

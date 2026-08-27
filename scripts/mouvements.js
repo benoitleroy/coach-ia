@@ -77,7 +77,7 @@ export const MOUVEMENTS = [
   { en: "abmat sit-up", fr: "relevé de buste sur AbMat", cat: "gym", desc: "Relevé de buste avec le coussin AbMat sous les lombaires.", schema: "situp" },
   { en: "v-up", fr: "V-up", cat: "gym", desc: "Allongé, monter simultanément jambes et buste en V." },
   { en: "hollow rock", fr: "balancement gainé (hollow)", cat: "gym", desc: "Sur le dos, corps en creux, se balancer en gardant le gainage." },
-  { en: "plank", fr: "planche (gainage)", cat: "gym", desc: "Position de gainage sur les avant-bras, corps aligné." },
+  { en: "plank", fr: "gainage (planche)", cat: "gym", desc: "Position de gainage sur les avant-bras, corps aligné." },
   { en: "lunge", fr: "fente", cat: "gym", desc: "Grand pas avant, genou arrière au sol, puis se relever.", schema: "lunge" },
   { en: "walking lunge", fr: "fentes marchées", cat: "gym", desc: "Fentes en avançant.", schema: "lunge" },
   { en: "front rack lunge", fr: "fente barre devant (front rack)", cat: "barre", desc: "Fente avec la barre posée sur les épaules devant.", schema: "lunge" },
@@ -108,6 +108,23 @@ export const MOUVEMENTS = [
   { en: "run", fr: "course à pied", cat: "cardio", desc: "", schema: "run" },
   { en: "shuttle run", fr: "navette (aller-retour)", cat: "cardio", desc: "Courses courtes en aller-retour entre deux lignes.", schema: "run" },
   { en: "swim", fr: "natation", cat: "cardio", desc: "" },
+  // ── Renfo classique employé par le coach (vocabulaire français) ────────────
+  { en: "barbell row", fr: "rowing barre", cat: "barre", alias: ["rowing barre", "rowing"], schema: "row-barre",
+    desc: "Buste penché à 45°, dos plat : tirer la barre vers le nombril en serrant les omoplates, puis redescendre lentement. Travaille le dos." },
+  { en: "dumbbell row", fr: "rowing haltère", cat: "haltère", alias: ["rowing haltère", "rowing haltere", "tirage haltère"], schema: "row-barre",
+    desc: "Un genou et une main sur un banc, dos plat : tirer l'haltère le long du corps jusqu'à la hanche, un bras à la fois." },
+  { en: "military press", fr: "développé militaire", cat: "barre", alias: ["développé militaire", "developpe militaire", "développé épaules"], schema: "press",
+    desc: "Debout, barre (ou haltères) au niveau des clavicules : pousser droit au-dessus de la tête sans aide des jambes, fessiers et abdos serrés. Travaille les épaules." },
+  { en: "incline press", fr: "développé incliné", cat: "haltère", alias: ["développé incliné"], schema: "press", desc: "Développé sur un banc incliné à 30-45°." },
+  { en: "core", fr: "gainage", cat: "gym", alias: ["gainage", "planche", "planche latérale", "plank"], schema: "plank",
+    desc: "Corps aligné en appui sur les avant-bras (ou sur un côté pour la planche latérale) : ne pas creuser le bas du dos, respirer normalement." },
+  { en: "bird dog", fr: "bird-dog", cat: "gym", alias: ["bird-dog", "bird dog"], desc: "À quatre pattes : tendre en même temps le bras droit et la jambe gauche, sans bouger le bassin, puis inverser." },
+  { en: "hip thrust", fr: "hip thrust (pont fessier)", cat: "gym", alias: ["hip thrust", "pont fessier"], desc: "Dos appuyé sur un banc, charge sur les hanches : monter le bassin jusqu'à l'alignement, serrer les fessiers en haut." },
+  { en: "calf raise", fr: "extensions mollets", cat: "gym", alias: ["mollets", "extension mollets", "extensions mollets"], desc: "Debout, monter sur la pointe des pieds puis redescendre lentement (3 s) — protège l'Achille en reprise de course." },
+  { en: "step-up", fr: "montée sur marche", cat: "gym", alias: ["montée sur marche", "step-up"], schema: "box", desc: "Monter sur une marche ou une box une jambe après l'autre, en poussant sur la jambe du dessus." },
+  { en: "strides", fr: "lignes droites (accélérations)", cat: "cardio", alias: ["lignes droites", "éducatifs", "accélérations", "relances"], schema: "run",
+    desc: "Accélérations courtes de 15-20 s en restant relâché, sans jamais forcer — technique et vitesse de jambes, pas une séance dure." },
+  { en: "mobility", fr: "mobilité", cat: "récup", alias: ["mobilité", "étirements"], desc: "Travail d'amplitude articulaire (hanches, chevilles, épaules, thoracique) sans douleur." },
 ];
 
 // ── Vocabulaire de format / unités ─────────────────────────────────────────
@@ -210,6 +227,22 @@ export function traduireLigne(ligne) {
 }
 
 export function traduireWod(lignes) { return (lignes || []).map(traduireLigne).filter(Boolean); }
+
+// Mouvements cités dans un texte FRANÇAIS (les séances écrites par le coach)
+export function detecterFr(texte) {
+  const t = " " + String(texte || "").toLowerCase() + " ";
+  const out = [];
+  const cand = [...MOUVEMENTS].sort((a, b) => (b.fr.length) - (a.fr.length));
+  const cle = m => m.fr.replace(/\s*\(.*\)/, "").toLowerCase().trim();
+  for (const m of cand) {
+    const formes = [cle(m), ...(m.alias || [])];
+    if (!formes.some(f => f.length > 3 && t.includes(" " + f.toLowerCase()))) continue;
+    const k = cle(m);
+    if (out.some(x => cle(x) === k || cle(x).includes(k) || k.includes(cle(x)))) continue;   // pas de doublon
+    out.push(m);
+  }
+  return out.slice(0, 8);
+}
 
 // Mouvements présents dans un WOD (pour les schémas et l'index)
 export function mouvementsDe(lignes) {

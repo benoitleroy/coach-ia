@@ -1,6 +1,30 @@
 // js/programme.js — page Programme : séance du jour, semaine, cycle, historique des séances.
 (function () {
   const P = window.PROGRAMME, C = (window.BILAN && window.BILAN.coach) || null, S = window.SEANCES || [];
+  const MVT = window.MOUVEMENTS || [];
+  const cleMvt = m => m.fr.replace(/\s*\(.*\)/, "").toLowerCase().trim();
+  const detecte = texte => {
+    const t = " " + String(texte || "").toLowerCase() + " ";
+    const out = [];
+    [...MVT].sort((a, b) => b.fr.length - a.fr.length).forEach(m => {
+      const formes = [cleMvt(m), ...(m.alias || [])];
+      if (!formes.some(f => f.length > 3 && t.includes(" " + f.toLowerCase()))) return;
+      const k = cleMvt(m);
+      if (out.some(x => cleMvt(x) === k || cleMvt(x).includes(k) || k.includes(cleMvt(x)))) return;
+      out.push(m);
+    });
+    return out.slice(0, 8);
+  };
+  const blocMvts = texte => {
+    const l = detecte(texte);
+    if (!l.length) return "";
+    return `<details class="mvt-aide"><summary>❔ Les exercices expliqués (${l.length})</summary>${l.map(m =>
+      `<div class="mv-row"><div class="mv-sch">${m.schema && window.SCHEMA ? window.SCHEMA(m.schema) : "<span class='mv-none'>—</span>"}</div>
+       <div><div class="mv-en">${esc(m.fr)}</div><div class="mv-desc">${esc(m.desc || "")}</div><div class="mv-n">en anglais : ${esc(m.en)}</div></div></div>`).join("")}</details>`;
+  };
+  // Checklist : étapes fournies par le coach, sinon découpage du détail
+  const etapesDe = s => (s.etapes && s.etapes.length) ? s.etapes
+    : String(s.detail || "").split(/(?<=[.;])\s+(?=[A-ZÉÈÀ0-9])/).map(x => x.trim()).filter(x => x.length > 3);
   const $ = id => document.getElementById(id);
   const esc = t => String(t ?? "").replace(/[&<>]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]));
   const JOURS = ["dim.", "lun.", "mar.", "mer.", "jeu.", "ven.", "sam."];
@@ -41,7 +65,10 @@
     const seancesDe = j => j.matin || j.soir
       ? [["Matin", j.matin], ["Soir", j.soir]].filter(([, s]) => !vide(s))
       : (j.seance ? [["", { ico: j.ico, titre: j.seance, detail: j.detail, gardefou: j.gardefou }]] : []);
-    const ligneSeance = ([moment, s]) => `<div class="s-item">${moment ? `<span class="s-moment">${moment}</span>` : ""}<span class="p-ico">${esc(s.ico || "")}</span><span><div class="p-titre">${esc(s.titre)}${s.intention ? ` <em class="s-int">${esc(s.intention)}</em>` : ""}</div><div class="p-detail">${esc(s.detail || "")}</div>${s.gardefou ? `<div class="p-garde">${esc(s.gardefou)}</div>` : ""}</span></div>`;
+    const ligneSeance = ([moment, s]) => {
+      const et = etapesDe(s);
+      return `<div class="s-item">${moment ? `<span class="s-moment">${moment}</span>` : ""}<span class="p-ico">${esc(s.ico || "")}</span><span><div class="p-titre">${esc(s.titre)}${s.intention ? ` <em class="s-int">${esc(s.intention)}</em>` : ""}</div><div class="p-detail">${esc(s.detail || "")}</div>${et.length ? `<ul class="etapes">${et.map(e => `<li>${esc(e)}</li>`).join("")}</ul>` : ""}${s.gardefou ? `<div class="p-garde">${esc(s.gardefou)}</div>` : ""}${blocMvts((s.detail || "") + " " + et.join(" "))}</span></div>`;
+    };
     $("sem-plan").innerHTML = sem.jours.map((j, i) => {
       const d = lundi ? new Date(lundi.getTime() + i * 86400000) : null;
       const key = d ? d.toISOString().slice(0, 10) : null;
@@ -64,9 +91,26 @@
         $("jour-detail").textContent = "Journée sans entraînement.";
         $("jour-garde").textContent = "";
       } else {
-        $("jour-seance").innerHTML = items.map(([moment, s]) =>
-          `<div class="j-seance"><div class="j-titre"><span class="d-ico">${esc(s.ico || "")}</span> <span class="d-main">${esc(s.titre)}</span>${moment ? `<span class="s-moment">${moment}</span>` : ""}</div>
-           <div class="p-detail">${esc(s.detail || "")}</div>${s.gardefou ? `<div class="p-garde">${esc(s.gardefou)}</div>` : ""}</div>`).join("");
+        const KEY = "carnet.check." + todayKey;
+        const coches = (() => { try { return JSON.parse(localStorage.getItem(KEY) || "{}"); } catch { return {}; } })();
+        $("jour-seance").innerHTML = items.map(([moment, s], mi) => {
+          const et = etapesDe(s);
+          const texte = (s.detail || "") + " " + et.join(" ");
+          return `<div class="j-seance"><div class="j-titre"><span class="d-ico">${esc(s.ico || "")}</span> <span class="d-main">${esc(s.titre)}</span>${moment ? `<span class="s-moment">${moment}</span>` : ""}</div>
+           ${s.detail ? `<div class="p-detail">${esc(s.detail)}</div>` : ""}
+           <ul class="check">${et.map((e, i) => {
+             const id = mi + "-" + i;
+             return `<li><label><input type="checkbox" data-k="${id}"${coches[id] ? " checked" : ""}> <span>${esc(e)}</span></label></li>`;
+           }).join("")}</ul>
+           ${s.gardefou ? `<div class="p-garde">${esc(s.gardefou)}</div>` : ""}
+           ${blocMvts(texte)}</div>`;
+        }).join("");
+        $("jour-seance").querySelectorAll("input[type=checkbox]").forEach(cb => cb.addEventListener("change", () => {
+          coches[cb.dataset.k] = cb.checked;
+          try { localStorage.setItem(KEY, JSON.stringify(coches)); } catch {}
+          cb.closest("li").classList.toggle("ok", cb.checked);
+        }));
+        $("jour-seance").querySelectorAll("input:checked").forEach(cb => cb.closest("li").classList.add("ok"));
         $("jour-detail").textContent = ""; $("jour-garde").textContent = "";
       }
     }

@@ -64,6 +64,9 @@
     dip:       [`<svg viewBox="0 0 100 120" class="schema">${bonhomme({ t: [50, 26], e: [50, 38], h: [50, 66], g: [56, 88], c: [56, 108], co: [50, 40], m: [50, 52] })}<line x1="30" y1="52" x2="70" y2="52" class="ob"/></svg>`,
                 `<svg viewBox="0 0 100 120" class="schema">${bonhomme({ t: [50, 40], e: [50, 52], h: [50, 78], g: [58, 98], c: [58, 114], co: [40, 46], m: [50, 52] })}<line x1="30" y1="52" x2="70" y2="52" class="ob"/></svg>`],
     carry:     [pose("debout", OBJ.kb(30, 60) + OBJ.kb(70, 60)), ""],
+    "row-barre": [`<svg viewBox="0 0 100 120" class="schema">${bonhomme({ t: [70, 40], e: [62, 46], h: [40, 56], g: [38, 82], c: [40, 106], co: [62, 62], m: [62, 82] }, OBJ.barre(62, 84))}</svg>`,
+                  `<svg viewBox="0 0 100 120" class="schema">${bonhomme({ t: [70, 40], e: [62, 46], h: [40, 56], g: [38, 82], c: [40, 106], co: [70, 58], m: [58, 58] }, OBJ.barre(58, 60))}</svg>`],
+    plank:     [`<svg viewBox="0 0 100 120" class="schema">${bonhomme({ t: [20, 62], e: [30, 66], h: [58, 70], g: [78, 74], c: [94, 78], co: [26, 78], m: [34, 80] })}</svg>`, ""],
   };
   window.SCHEMA = nom => (SCHEMAS[nom] || []).filter(Boolean).join('<span class="schema-fleche">→</span>');
 })();

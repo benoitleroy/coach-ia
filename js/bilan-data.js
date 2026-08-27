@@ -914,22 +914,22 @@ window.BILAN = {
  },
  "lastActivityId": 19910337185,
  "coach": {
-  "verdict": "L'entraînement redevient efficace, mais il repart de très bas : 5,3 h en juillet contre 30 h en mars, et 11 h en août — la remontée est réelle mais la base tendineuse ne l'est pas encore. Le signal encourageant est l'efficacité : 6:27/km à 130 bpm le 26/08 sur 12,2 km, soit une allure normalisée à 140 bpm de 6:57/km contre 5:52/km au printemps — tu as perdu environ 1 min/km d'économie de course, ce qui est exactement ce qu'on attend après 3 mois creux et ce qui revient le plus vite. Côté CrossFit, 30 kg sur hang squat clean/thrusters sur un AMRAP 30' en team, c'est une base honnête pour construire. La récupération est en train de se réparer : le trou du 16→24/08 (HRV LOW, FC repos 55-56, readiness 11-31) est refermé, dernière nuit à 9h15, HRV 39 BALANCED, FC repos 50 — retour dans ta base de 38 ms. Le ratio de charge 7j/28j à 1,43 confirme que tu montes vite : c'est le moment d'être discipliné sur l'intensité, pas ambitieux.",
+  "verdict": "L'entraînement redémarre bien, mais la base est encore mince : 11,1 h en août contre 30 h/mois en hiver, et seulement 10 jours actifs sur le mois. La preuve chiffrée la plus parlante est l'allure normalisée à 140 bpm : 5:52/km au 2e trimestre, 6:57/km sur ce trimestre — tu as perdu environ 1 min/km d'efficacité en trois mois creux, c'est normal et récupérable. Bonne nouvelle : la sortie du 26/08 (12,2 km à 130 bpm) montre que la filière aérobie répond déjà, tu tiens 1h19 à FC très basse. Côté force, le WOD du 23/08 à 30 kg (entre Sc et Int) et les strict pull-ups en finisher confirment que la charge n'a pas fondu. Le HRV est remonté à 39 ms (BALANCED) le 25/08 après une semaine LOW du 18 au 22 — le feu est vert, mais fraîchement.",
   "forts": [
-   "Économie de course qui remonte déjà : 12,2 km à 130 bpm seulement, avec 86 m D+, une semaine après la reprise.",
-   "Sommeil solide : 8h11 de moyenne sur 28 nuits et 9h15 la dernière — c'est ton meilleur atout, la plupart des gens de 39 ans n'ont pas ça.",
-   "HRV revenu en base (39 ms vs base 38) et FC repos redescendue de 56 à 50 en 8 jours : le système nerveux encaisse la reprise.",
-   "Régularité déjà retrouvée : 5 séances et 3,8 h sur S35 après un juillet à 11 séances au total."
+   "12,2 km en 1h19 à 130 bpm le 26/08 : la capacité aérobie de fond est intacte malgré 3 mois creux.",
+   "WOD à 30 kg sur hang squat clean et thrusters, au-dessus du Scaled — la force n'a pas décroché.",
+   "Sommeil solide : 8h11 de moyenne sur 28 nuits, 491 min sur les 7 dernières — le levier récup est déjà en place.",
+   "Reprise franche : 5 séances et 3,8 h sur S35 contre 2,8 séances/semaine sur le mois, ratio de charge 1,43 en remontée assumée."
   ],
   "manques": [
-   "Aucun cycle de force écrit : la seule séance chiffrée est le back squat 5×5 du 25/08 — il faut deux créneaux force fixes par semaine avec des charges qui montent de 2,5 kg.",
-   "Volume trop bas pour l'objectif 10 km sous 55 min : 4,4 h de course en août, il faut viser 2h30-3h de course/semaine d'ici novembre.",
-   "Vélo et natation quasi absents (0,9 h et 0,2 h en août) : ce sont tes heures de volume sans impact, indispensables pendant que les tendons se refont.",
-   "Aucune donnée de nutrition ni de poids suivi, et aucune mention de douleur — je pars du principe qu'il n'y a rien à signaler, dis-le si c'est faux."
+   "Pas de séance de force structurée et chiffrée dans l'historique : le back squat du 25/08 est un premier pas, il faut un cycle écrit avec des charges qui montent.",
+   "Le volume course est trop faible et trop irrégulier (4,4 h en août) : il faut 3 sorties/semaine dont une longue de 1h15 pour tenir 10 km sous 55 min en novembre.",
+   "Vélo et natation ont quasi disparu (0,9 h et 0,2 h en août) : ce sont tes soupapes sans impact, à réintroduire 1×/semaine chacune.",
+   "Aucune donnée nutrition ni suivi de douleur : rien dans les données ne me dit si un tendon tire, c'est à toi de me le signaler."
   ],
-  "vigilance": "Le risque n°1 cette semaine est tendineux (Achille/genou) : tu passes de 2,8 séances/semaine à 6 jours actifs avec 3 doublés, et le ratio de charge est déjà à 1,43 — la course reste strictement en aisance, aucune intensité, sinon la blessure arrive avant la progression.",
+  "vigilance": "Le risque n°1 c'est le tendon d'Achille et le genou : tu passes de 10 jours actifs en août à 6 jours actifs par semaine, et c'est exactement le profil de la tendinopathie de reprise — d'où zéro intensité en course ce mois-ci.",
   "semaine": {
-   "titre": "Poser la régularité : 6 jours actifs, tout en aisance, 2 forces",
+   "titre": "Poser la régularité : 6 jours actifs, tout en aisance, 2 séances de force",
    "volumeCible": "~5 h 30",
    "doubles": "3",
    "jours": [
@@ -937,27 +937,17 @@ window.BILAN = {
      "jour": "Lun",
      "matin": {
       "ico": "🏃",
-      "titre": "Course en aisance",
+      "titre": "Course en aisance 40 min",
       "intention": "aisance",
-      "detail": "40 min course très facile, FC < 140, terrain plat. Tu dois pouvoir parler en phrases complètes. Allure attendue autour de 6:30-7:00/km — ne regarde pas l'allure, regarde la FC.",
-      "gardefou": "Si la FC dépasse 140 sans que tu accélères, tu marches 1 min et tu repars. Toute douleur au tendon d'Achille = tu rentres à pied."
-     },
-     "soir": {
-      "ico": "🏋️",
-      "titre": "Force pure — semaine 1/4 du cycle",
-      "intention": "force",
-      "detail": "Back squat 5×5 à la charge où les 2 dernières reps sortent propres (repère : ~70-75 % de ton max, tu étais à 5×5 le 25/08 → reprends la même charge, pas plus). Puis développé militaire 4×6, rowing barre 4×8, gainage 3×45 s planche + 3×30 s par côté. Repos 2 min entre séries lourdes.",
-      "gardefou": "Si la technique se dégrade (dos qui s'arrondit, genoux qui rentrent), tu enlèves 5 kg et tu finis les séries. La charge se mérite la semaine 2."
-     }
-    },
-    {
-     "jour": "Mar",
-     "matin": {
-      "ico": "🚴",
-      "titre": "Vélo facile / home-trainer",
-      "intention": "aisance",
-      "detail": "45 min à FC 120-135, cadence 85-95 rpm, puissance libre (autour de 140-160 W vu ton Zwift du 22/08). Zéro relance, zéro bosse à fond. Objectif : faire tourner les jambes après le squat.",
-      "gardefou": "Jambes lourdes = tu réduis à 30 min, c'est de la récup active, pas une séance."
+      "detail": "Première sortie de la semaine, très facile. Tu dois pouvoir parler en phrases complètes du début à la fin — si tu es essoufflé, tu marches.",
+      "etapes": [
+       "10 min de marche rapide puis trot très lent pour réveiller les tendons",
+       "30 min de course continue en gardant la FC sous 140 bpm",
+       "Si la FC monte au-dessus de 140 : marcher 1 min, repartir",
+       "5 min de marche pour finir",
+       "Mobilité chevilles : 20 flexions genou-mur par jambe"
+      ],
+      "gardefou": "Toute douleur au tendon d'Achille ou au genou = tu t'arrêtes et tu passes en vélo demain."
      },
      "soir": {
       "ico": "—",
@@ -968,32 +958,68 @@ window.BILAN = {
      }
     },
     {
-     "jour": "Mer",
+     "jour": "Mar",
      "matin": {
       "ico": "🧘",
-      "titre": "Pilates / mobilité",
-      "intention": "skill",
-      "detail": "30-40 min Pilates comme d'habitude, en insistant sur hanches et chevilles (mobilité de cheville = condition du squat propre et de la course sans douleur).",
-      "gardefou": "Aucun."
+      "titre": "Pilates / mobilité 30 min",
+      "intention": "récup",
+      "detail": "Séance légère avant la journée de chantier. On ouvre les hanches et les épaules pour préparer le squat du soir.",
+      "etapes": [
+       "5 min de respiration et gainage au sol (planche 3×30 s)",
+       "15 min de Pilates habituel",
+       "10 min d'ouverture de hanches : fentes en position basse 1 min par côté, pigeon 1 min par côté"
+      ],
+      "gardefou": "Si tu as mal dormi (moins de 6 h 30), tu sautes cette séance et tu gardes le soir."
+     },
+     "soir": {
+      "ico": "🏋️",
+      "titre": "Force pure — semaine 1 du cycle 5×5",
+      "intention": "force",
+      "detail": "C'est le début d'un cycle de force écrit sur 4 semaines : 5 séries de 5 répétitions, charge modérée, technique irréprochable. Cette semaine on pose la charge de départ, on ne cherche pas le maximum.",
+      "etapes": [
+       "Échauffement : 5 min de rameur facile + 20 air squats (squats au poids de corps) + 10 rotations d'épaules",
+       "Back squat (barre sur le haut du dos, descendre jusqu'à ce que les hanches passent sous les genoux) : 5×5 à 62,5 kg — 2 min 30 de récup entre séries",
+       "Développé couché ou dips (pompes sur barres parallèles, corps vertical) : 4×6 — 2 min de récup",
+       "Rowing barre (buste penché à 45°, dos plat, tirer la barre vers le nombril) : 4×8 à 40 kg — 90 s de récup",
+       "Gainage : 3× planche 45 s + 3× planche latérale 30 s par côté",
+       "5 min d'étirements quadriceps et fessiers"
+      ],
+      "gardefou": "Si les 2 dernières reps d'une série de squat sortent mal (dos qui s'arrondit, genoux qui rentrent), tu baisses de 5 kg pour les séries suivantes."
+     }
+    },
+    {
+     "jour": "Mer",
+     "matin": {
+      "ico": "🚴",
+      "titre": "Vélo facile 45 min",
+      "intention": "aisance",
+      "detail": "Volume sans impact, jambes qui tournent après le squat de la veille. Rien de dur, tu récupères en pédalant.",
+      "etapes": [
+       "10 min d'échauffement progressif à petite braquet, cadence 90 tr/min",
+       "30 min en aisance : FC sous 135 bpm, puissance vers 140-150 W",
+       "Toutes les 10 min : 30 s à cadence 100-105 tr/min sans forcer sur la puissance",
+       "5 min de retour au calme très facile"
+      ],
+      "gardefou": "Si les cuisses sont vraiment raides, tu réduis à 30 min — l'objectif c'est de dérouiller, pas de charger."
      },
      "soir": {
       "ico": "🏋️",
       "titre": "Box CrossFit ou NST",
       "intention": "filière moyenne",
-      "detail": "Séance de la box (WOD au tableau). Tu prends le niveau Int en réduisant la charge : 30 kg maximum sur tout ce qui est barre, comme dimanche 23/08. Skill en début de séance si le coach en propose. Vise un WOD de 8-15 min, pas un AMRAP 30'.",
-      "gardefou": "Si le WOD du jour est du squat lourd ou du soulevé de terre lourd, tu fais la version légère : tu as déjà squatté lundi. Si c'est un chipper > 20 min, tu coupes à 20 min."
+      "detail": "Séance de qualité du milieu de semaine : le WOD de ta box (ou la séance NST quand tu l'auras). Tu prends le tableau au niveau intermédiaire ou scaled, pas Rx.",
+      "etapes": [
+       "Échauffement complet du coach (ne le raccourcis pas)",
+       "Skill / technique : fais-le à fond, c'est là que tu progresses — jamais en fin de séance",
+       "WOD au format proposé, en visant un rythme régulier sur toute la durée plutôt qu'un départ rapide",
+       "Charge : reste autour de 30 kg comme le 23/08, technique avant charge",
+       "10 min de retour au calme : rameur très facile + étirements"
+      ],
+      "gardefou": "Si le WOD du jour contient des hang squat clean ou thrusters lourds, tu scales à 25-30 kg — pas de nouveau record cette semaine."
      }
     },
     {
      "jour": "Jeu",
      "matin": {
-      "ico": "🏊",
-      "titre": "Natation facile",
-      "intention": "aisance",
-      "detail": "30 min bassin : 200 m échauffement, puis 8×50 m souple avec 20 s de repos, 200 m avec pull-buoy, 200 m retour au calme. Technique et respiration, pas de chrono.",
-      "gardefou": "Si tu n'as pas accès au bassin, remplace par 30 min de vélo facile — surtout pas par de la course."
-     },
-     "soir": {
       "ico": "—",
       "titre": "Rien",
       "intention": "repos",
@@ -1004,28 +1030,48 @@ window.BILAN = {
     {
      "jour": "Ven",
      "matin": {
-      "ico": "🏃",
-      "titre": "Course en aisance + éducatifs",
+      "ico": "🏊",
+      "titre": "Natation 30 min",
       "intention": "aisance",
-      "detail": "35 min FC < 140. Après 20 min, insère 6×20 s de foulées légères en accélération progressive (pas de sprint), 40 s de trot entre chaque, puis termine facile. Objectif : réveiller la fréquence de foulée sans créer de fatigue.",
-      "gardefou": "Les foulées se font en aisance mécanique : si tu forces ou si tu sens un tiraillement au mollet, tu les sautes et tu finis en trot."
+      "detail": "Reprise douce de la natation : volume sans impact et travail d'épaules. On ne chronomètre rien.",
+      "etapes": [
+       "200 m de nage libre très lente pour s'échauffer",
+       "6×50 m crawl en aisance, 20 s de repos entre chaque",
+       "4×50 m avec planche (jambes seules) pour relâcher le haut du corps",
+       "200 m de nage souple pour finir"
+      ],
+      "gardefou": "Si l'épaule tire, tu passes en dos crawlé ou tu sors de l'eau."
      },
      "soir": {
       "ico": "🏋️",
       "titre": "Box CrossFit ou NST",
-      "intention": "filière courte",
-      "detail": "Séance de la box. Cherche un format court et intense (< 8 min type EMOM ou for time court), avec du tirage et de la poussée plutôt que du squat. Ajoute en début de séance, frais : 5×3 strict pull-ups (ou excentriques 5 s si les 3 ne sortent pas propres) — c'est ta cible du test de novembre, on la travaille dès maintenant.",
-      "gardefou": "Jamais deux séances dures d'affilée : si tu sors cassé de mercredi ou si le sommeil est descendu sous 6h30, tu remplaces par 30 min de rameur facile."
+      "intention": "skill",
+      "detail": "Deuxième créneau box de la semaine. Priorité au travail technique : tractions strictes, wall walk, gestes d'haltérophilie à charge légère.",
+      "etapes": [
+       "Échauffement du coach en entier",
+       "Skill à froid : 5×3 tractions strictes (ou négatives lentes de 5 s si les 3 ne sortent pas)",
+       "WOD du tableau au niveau intermédiaire/scaled",
+       "Finisher si prévu : cumule les tractions strictes par petites séries de 3, jamais jusqu'à l'échec",
+       "Étirements dorsaux et épaules 5 min"
+      ],
+      "gardefou": "Si tu as déjà les avant-bras cuits du mercredi, tu remplaces le finisher tractions par du gainage."
      }
     },
     {
      "jour": "Sam",
      "matin": {
       "ico": "🏃",
-      "titre": "Sortie longue en aisance",
-      "intention": "filière longue",
-      "detail": "1 h 05 à 1 h 15 de course, FC strictement < 140, allure libre à la sensation (Billat : laisse l'allure varier, ne la fige pas). Terrain roulant, D+ modéré. Vise 10-11 km sans forcer. Emporte de l'eau.",
-      "gardefou": "C'est la séance clé de la semaine : si tu dois en sauter une, ce n'est pas celle-là. Mais si la FC dérive au-dessus de 145 sur la deuxième moitié, tu écourtes à 55 min."
+      "titre": "Sortie longue 1 h 05",
+      "intention": "aisance",
+      "detail": "La sortie clé de la semaine, et la seule un peu longue. Tout en aisance stricte, FC sous 140 : c'est elle qui construit ta capacité à tenir 10 km en novembre.",
+      "etapes": [
+       "10 min de trot très lent pour lancer la machine",
+       "50 min de course continue, FC sous 140 bpm, allure libre — tu peux accélérer un peu en descente si ça vient tout seul",
+       "Si la FC dérive au-dessus de 140 : marcher 1 min et repartir, c'est légitime",
+       "5 min de marche",
+       "Étirements mollets et ischio-jambiers 5 min"
+      ],
+      "gardefou": "Si le mollet ou l'Achille chauffe, tu coupes à 45 min — cette sortie doit rester sans douleur, on la rallongera la semaine prochaine."
      },
      "soir": {
       "ico": "—",
@@ -1046,51 +1092,51 @@ window.BILAN = {
      },
      "soir": {
       "ico": "—",
-      "titre": "Repos complet",
+      "titre": "Rien",
       "intention": "repos",
-      "detail": "Journée off totale. Marche, famille, batch cooking. C'est ce jour qui rend la semaine 2 possible.",
-      "gardefou": "Pas de « petite sortie pour le plaisir ». Le repos est programmé, il se respecte comme une séance."
+      "detail": "",
+      "gardefou": ""
      }
     }
    ]
   },
-  "regle": "Si la semaine déborde, tu sautes en priorité le vélo du mardi matin, puis la natation du jeudi — ce sont du volume de confort. Tu ne sautes jamais la sortie longue du samedi ni la force du lundi soir : ce sont les deux piliers de tout le bloc.",
+  "regle": "Si la semaine déborde, tu sautes en priorité la natation du vendredi matin ; tu ne sautes jamais la sortie longue du samedi ni la séance de force du mardi soir — ce sont les deux piliers du bloc.",
   "nutrition": {
-   "principe": "À 77,5 kg avec deux séances certains jours, vise 130-155 g de protéines par jour, réparties sur 3-4 prises d'environ 35-40 g (une paume de viande/poisson, 3 œufs, 200 g de fromage blanc), plutôt que concentrées le soir — c'est la répartition qui répare les tendons, pas le total. Les glucides se calent sur la séance : dîner copieux en féculents les soirs de force (lundi) et la veille de la sortie longue (vendredi), assiette dominée par les légumes le dimanche off et le jeudi léger. Aucun comptage : tu ajustes la portion de féculents entre 1 poing (jour léger) et 2 poings (jour force ou veille de longue).",
+   "principe": "À 77,5 kg avec deux séances de force par semaine, vise environ 130 à 150 g de protéines par jour, réparties sur 4 prises (petit-déj, midi, collation, dîner) — c'est la répartition qui compte plus que le total. Les glucides se concentrent autour des jours durs : mardi soir (force), mercredi soir (box), vendredi soir (box) et vendredi soir avant la sortie longue du samedi. Les jours calmes (jeudi, dimanche) : assiette dominée par les légumes, une paume de protéine, un demi-poing de féculent. Pas de comptage, juste des poings et des paumes.",
    "batch": [
-    "Cuire 1,2 kg de blanc de poulet mariné au four → 6 portions, 4 j au frigo (congeler 2 portions)",
-    "Cuire 500 g de riz basmati cru → environ 1,3 kg cuit, 6 portions, 4 j au frigo",
-    "Cuire 400 g de lentilles vertes cru → environ 1 kg cuit, 5 portions, 5 j au frigo",
-    "Rôtir 1,5 kg de légumes (courgettes, poivrons, patate douce) au four → 6 portions, 4 j au frigo",
-    "Cuire 12 œufs durs → collations et boîtes, 7 j au frigo",
-    "Préparer 700 ml de sauce yaourt-citron-herbes → assaisonne toutes les boîtes, 5 j au frigo",
-    "Portionner 5 boîtes chantier complètes le dimanche soir (poulet + féculent + légumes + sauce à part)"
+    "Cuire 1,2 kg de blancs de poulet marinés au four → 6 portions de 200 g, 4 jours au frigo (congeler 2 portions)",
+    "Cuire 500 g de riz basmati cru → ~1,4 kg cuit, 6 portions, 4 jours au frigo",
+    "Cuire 400 g de lentilles vertes cru → ~900 g cuit, 5 portions, 5 jours au frigo",
+    "Rôtir 1,5 kg de légumes (courgettes, poivrons, oignons) au four → 6 portions, 4 jours au frigo",
+    "Cuire 12 œufs durs → collations et boîtes, 7 jours au frigo",
+    "Préparer 500 ml de sauce yaourt-citron-herbes → assaisonne toutes les boîtes, 5 jours au frigo",
+    "Portionner 6 boîtes chantier le dimanche soir (riz ou lentilles + poulet + légumes) → prêtes à emporter"
    ],
    "recettes": [
     {
      "nom": "Poulet mariné au four (base de la semaine)",
      "usage": "batch dimanche",
-     "portions": "6 portions",
+     "portions": "6 portions de 200 g",
      "temps": "10 min prépa + 25 min four",
      "ingredients": [
       "1,2 kg de blancs de poulet",
       "4 cuillères à soupe d'huile d'olive",
-      "2 cuillères à café de paprika fumé",
+      "2 cuillères à café de paprika",
       "2 cuillères à café d'ail en poudre",
-      "1 cuillère à café de cumin",
-      "2 cuillères à café de sel",
-      "1 citron (jus)"
+      "1 cuillère à café de sel",
+      "Poivre",
+      "Jus d'1 citron"
      ],
      "etapes": [
-      "Préchauffe le four à 200 °C chaleur tournante.",
-      "Dans un grand saladier, mélange l'huile, le paprika, l'ail, le cumin, le sel et le jus de citron.",
-      "Coupe les blancs de poulet en deux dans l'épaisseur s'ils font plus de 3 cm — ils cuiront plus vite et resteront moelleux.",
-      "Mets le poulet dans le saladier et mélange à la main pendant 1 min pour que tout soit enrobé.",
-      "Étale sur une plaque avec papier cuisson, sans que les morceaux se touchent.",
-      "Enfourne 22 à 25 min. C'est cuit quand le jus qui sort est clair (pas rosé) et que la chair se sépare facilement à la fourchette.",
-      "Laisse refroidir 20 min à découvert avant de mettre en boîte, sinon ça transpire et ça se conserve moins bien."
+      "Préchauffer le four à 200 °C chaleur tournante.",
+      "Couper les blancs de poulet en deux dans l'épaisseur s'ils font plus de 3 cm — sinon le centre reste cru.",
+      "Dans un grand saladier, mélanger huile, paprika, ail, sel, poivre et jus de citron.",
+      "Ajouter le poulet, mélanger à la main pour tout enrober. Laisser 10 min pendant que le four chauffe.",
+      "Étaler sur une plaque recouverte de papier cuisson, sans que les morceaux se touchent.",
+      "Enfourner 22 à 25 min. C'est cuit quand le jus qui sort en piquant au couteau est totalement clair, jamais rosé.",
+      "Laisser refroidir 20 min à l'air libre avant de mettre au frigo (sinon ça transpire et ça se conserve mal)."
      ],
-     "conservation": "4 j au frigo en boîte fermée, se congèle très bien en portions individuelles"
+     "conservation": "4 jours au frigo en boîte fermée, se congèle très bien en portions individuelles"
     },
     {
      "nom": "Riz basmati batch",
@@ -1100,245 +1146,239 @@ window.BILAN = {
      "ingredients": [
       "500 g de riz basmati cru",
       "900 ml d'eau",
-      "1 cuillère à café de sel",
-      "1 cuillère à soupe d'huile d'olive"
+      "1 cuillère à café de sel"
      ],
      "etapes": [
-      "Rince le riz sous l'eau froide dans une passoire jusqu'à ce que l'eau sorte à peu près claire (environ 30 s).",
-      "Mets le riz, l'eau et le sel dans une casserole. Porte à ébullition à feu vif, sans couvercle.",
-      "Dès que ça bout, baisse au minimum, couvre et laisse 11 min sans jamais soulever le couvercle.",
-      "Coupe le feu, laisse reposer 5 min couvert.",
-      "Ouvre, ajoute l'huile et aère les grains à la fourchette. Les grains doivent être séparés, pas collants.",
-      "Étale sur un plat pour refroidir 15 min avant de mettre en boîte."
+      "Rincer le riz sous l'eau froide dans une passoire jusqu'à ce que l'eau soit à peu près claire (environ 30 s).",
+      "Mettre le riz, l'eau et le sel dans une casserole, couvrir.",
+      "Porter à ébullition à feu vif, puis baisser au minimum dès que ça bout.",
+      "Laisser cuire 11 min à couvert sans jamais soulever le couvercle.",
+      "Couper le feu, laisser reposer 5 min à couvert, puis aérer à la fourchette.",
+      "Étaler dans un plat large pour refroidir vite, puis mettre au frigo."
      ],
-     "conservation": "4 j au frigo, à réchauffer ou à manger froid en salade"
+     "conservation": "4 jours au frigo, à réchauffer ou à manger froid en salade"
     },
     {
-     "nom": "Lentilles vertes à la tomate",
-     "usage": "batch dimanche / boîte chantier",
+     "nom": "Lentilles vertes batch",
+     "usage": "batch dimanche",
      "portions": "5 portions",
      "temps": "5 min prépa + 25 min cuisson",
      "ingredients": [
-      "400 g de lentilles vertes crues",
+      "400 g de lentilles vertes sèches",
+      "1,2 l d'eau",
       "1 oignon",
-      "2 gousses d'ail",
-      "1 boîte de tomates concassées (400 g)",
-      "2 cuillères à soupe d'huile d'olive",
-      "1 cuillère à café de thym",
-      "1 cuillère à café de sel",
-      "1,2 L d'eau"
+      "1 feuille de laurier",
+      "1 cuillère à café de sel (à la fin seulement)"
      ],
      "etapes": [
-      "Émince l'oignon et écrase les gousses d'ail.",
-      "Fais chauffer l'huile dans une grande casserole à feu moyen, ajoute l'oignon et fais-le blondir 5 min en remuant.",
-      "Ajoute l'ail, les lentilles rincées, les tomates, le thym et l'eau.",
-      "Porte à ébullition puis baisse à petits bouillons et laisse 22 à 25 min sans couvercle.",
-      "C'est prêt quand une lentille s'écrase facilement entre deux doigts mais garde sa forme. Sale en fin de cuisson.",
-      "S'il reste beaucoup de liquide, laisse 3 min de plus à feu vif pour épaissir."
+      "Rincer les lentilles à l'eau froide.",
+      "Les mettre dans une casserole avec l'eau froide, l'oignon coupé en deux et le laurier. Ne pas saler maintenant, ça durcit la peau.",
+      "Porter à ébullition puis baisser à frémissement.",
+      "Cuire 22 à 25 min : elles sont prêtes quand elles s'écrasent entre deux doigts sans être en purée.",
+      "Saler, égoutter, retirer l'oignon et le laurier.",
+      "Laisser tiédir puis mettre au frigo."
      ],
-     "conservation": "5 j au frigo, se congèle"
+     "conservation": "5 jours au frigo, se congèle"
     },
     {
      "nom": "Légumes rôtis au four",
-     "usage": "batch dimanche",
+     "usage": "batch dimanche (cuit en même temps que le poulet)",
      "portions": "6 portions",
-     "temps": "12 min prépa + 30 min four",
+     "temps": "10 min prépa + 30 min four",
      "ingredients": [
-      "500 g de courgettes",
-      "500 g de poivrons (2-3 pièces)",
-      "500 g de patate douce",
-      "4 cuillères à soupe d'huile d'olive",
-      "2 cuillères à café d'herbes de Provence",
-      "1,5 cuillère à café de sel"
+      "3 courgettes (environ 600 g)",
+      "3 poivrons (environ 500 g)",
+      "2 oignons rouges",
+      "3 cuillères à soupe d'huile d'olive",
+      "1 cuillère à café d'herbes de Provence",
+      "Sel, poivre"
      ],
      "etapes": [
-      "Préchauffe le four à 210 °C chaleur tournante.",
-      "Coupe la patate douce en cubes de 2 cm, les courgettes en demi-rondelles de 1,5 cm, les poivrons en lanières larges.",
-      "Mets tout dans un saladier, verse l'huile, les herbes et le sel, mélange bien à la main.",
-      "Étale sur deux plaques — si tu entasses, ça cuit à la vapeur au lieu de rôtir.",
-      "Enfourne 30 min, mélange à mi-cuisson.",
-      "C'est prêt quand les bords sont dorés et qu'un couteau traverse la patate douce sans résistance.",
-      "Laisse tiédir 15 min avant la mise en boîte."
+      "Préchauffer le four à 200 °C (le même que le poulet, sur la grille du dessous).",
+      "Couper les courgettes en rondelles épaisses de 1,5 cm, les poivrons en lanières, les oignons en quartiers.",
+      "Mettre le tout dans un saladier, verser l'huile, les herbes, le sel et le poivre, mélanger à la main.",
+      "Étaler sur une plaque en une seule couche — s'ils sont empilés, ils cuisent à la vapeur au lieu de rôtir.",
+      "Enfourner 30 min. Remuer à mi-cuisson. C'est prêt quand les bords des courgettes sont dorés et que les poivrons sont souples.",
+      "Laisser refroidir avant de mettre en boîte."
      ],
-     "conservation": "4 j au frigo, se mange froid ou tiède"
+     "conservation": "4 jours au frigo, se mange froid ou tiède"
     },
     {
-     "nom": "Sauce yaourt citron-herbes",
-     "usage": "batch dimanche — assaisonne les boîtes chantier",
-     "portions": "7 portions (700 ml)",
+     "nom": "Sauce yaourt-citron-herbes",
+     "usage": "batch dimanche — assaisonne toutes les boîtes",
+     "portions": "5 à 6 utilisations",
      "temps": "5 min",
      "ingredients": [
-      "500 g de yaourt grec nature",
-      "1 citron (jus + zeste)",
-      "3 cuillères à soupe d'huile d'olive",
-      "1 gousse d'ail râpée",
-      "1 bouquet de persil ou coriandre ciselé",
-      "1 cuillère à café de sel",
-      "poivre"
+      "400 g de yaourt grec nature",
+      "Jus d'1 citron",
+      "2 cuillères à soupe d'huile d'olive",
+      "1 gousse d'ail écrasée",
+      "1 poignée de persil ou de menthe ciselée",
+      "Sel, poivre"
      ],
      "etapes": [
-      "Verse le yaourt dans un bol.",
-      "Ajoute le jus et le zeste du citron, l'huile, l'ail râpé fin.",
-      "Cisèle les herbes et incorpore-les.",
-      "Sale, poivre, mélange 30 s. La texture doit napper une cuillère sans couler.",
-      "Mets en pot fermé au frigo."
+      "Mettre le yaourt dans un bol.",
+      "Ajouter le jus de citron, l'huile, l'ail écrasé.",
+      "Ciseler les herbes finement et les ajouter.",
+      "Saler, poivrer, mélanger au fouet jusqu'à texture lisse et nappante.",
+      "Verser dans un pot fermé."
      ],
-     "conservation": "5 j au frigo, à transporter dans un petit pot séparé"
+     "conservation": "5 jours au frigo"
     },
     {
      "nom": "Œufs durs batch",
-     "usage": "batch dimanche — collation et boîtes",
+     "usage": "batch dimanche — collations et boîtes",
      "portions": "12 œufs",
      "temps": "12 min",
      "ingredients": [
       "12 œufs"
      ],
      "etapes": [
-      "Mets les œufs dans une casserole et couvre d'eau froide à 2 cm au-dessus.",
-      "Porte à ébullition à feu vif.",
-      "Dès l'ébullition, baisse à frémissement et compte 9 min exactement.",
-      "Égoutte et plonge immédiatement dans un saladier d'eau très froide 5 min — c'est ce qui rend l'écalage facile.",
-      "Laisse les coquilles jusqu'au moment de manger."
+      "Porter une grande casserole d'eau à ébullition.",
+      "Descendre les œufs dans l'eau avec une cuillère, doucement, pour ne pas les fêler.",
+      "Cuire exactement 9 min à frémissement pour un jaune ferme mais pas crayeux.",
+      "Transvaser immédiatement dans un saladier d'eau très froide, laisser 5 min — c'est ce choc qui rend l'écalage facile.",
+      "Garder en coquille au frigo, écaler au moment de manger."
      ],
-     "conservation": "7 j au frigo avec la coquille"
+     "conservation": "7 jours au frigo en coquille"
     },
     {
      "nom": "Boîte chantier poulet-riz-légumes",
-     "usage": "boîte chantier lundi, mardi, mercredi",
-     "portions": "1 portion (× 3 dans la semaine)",
-     "temps": "5 min d'assemblage",
+     "usage": "boîte chantier lundi, mercredi, vendredi",
+     "portions": "1 portion (à monter × 3 le dimanche)",
+     "temps": "5 min de montage",
      "ingredients": [
       "200 g de poulet mariné du batch",
-      "200 g de riz cuit du batch",
-      "250 g de légumes rôtis du batch",
-      "100 ml de sauce yaourt (pot séparé)",
-      "1 poignée de noix (30 g)"
+      "1 poing de riz basmati du batch (environ 200 g cuit)",
+      "1 grosse portion de légumes rôtis du batch (environ 200 g)",
+      "2 cuillères à soupe de sauce yaourt",
+      "Une poignée de roquette"
      ],
      "etapes": [
-      "Dans une boîte hermétique, mets le riz au fond.",
-      "Coupe le poulet en lamelles et pose-le sur le riz.",
-      "Ajoute les légumes rôtis par-dessus.",
-      "Mets la sauce dans un petit pot à part — versée la veille, elle détrempe tout.",
-      "Les noix dans un coin ou un sachet séparé pour qu'elles restent croquantes.",
-      "Se mange froid tel quel, ou tiède si tu as accès à un micro-ondes."
+      "Mettre le riz au fond de la boîte.",
+      "Poser les légumes rôtis dessus.",
+      "Couper le poulet en lanières et le disposer par-dessus.",
+      "Mettre la sauce dans un petit pot séparé (sinon ça détrempe tout d'ici midi).",
+      "Ajouter la roquette au dernier moment le matin.",
+      "Se mange froid ou tiède, aucune cuisson nécessaire."
      ],
-     "conservation": "3 j au frigo une fois assemblée — assemble mardi soir celles de la fin de semaine"
+     "conservation": "3 jours au frigo une fois montée"
     },
     {
-     "nom": "Boîte chantier lentilles-œufs-feta",
-     "usage": "boîte chantier jeudi et vendredi",
-     "portions": "1 portion (× 2)",
-     "temps": "5 min d'assemblage",
+     "nom": "Boîte chantier lentilles-œufs",
+     "usage": "boîte chantier mardi et jeudi",
+     "portions": "1 portion (à monter × 2)",
+     "temps": "5 min de montage",
      "ingredients": [
-      "300 g de lentilles à la tomate du batch",
+      "1 grosse portion de lentilles du batch (environ 200 g cuit)",
       "2 œufs durs du batch",
-      "50 g de feta",
-      "150 g de légumes rôtis du batch",
-      "1 cuillère à soupe d'huile d'olive"
+      "1 portion de légumes rôtis (environ 150 g)",
+      "1 cuillère à soupe d'huile d'olive",
+      "1 cuillère à café de moutarde",
+      "Sel, poivre"
      ],
      "etapes": [
-      "Mets les lentilles froides au fond de la boîte.",
-      "Ajoute les légumes rôtis.",
-      "Écale les œufs le matin même, coupe-les en deux et pose-les dessus.",
-      "Émiette la feta par-dessus, arrose d'un filet d'huile.",
-      "Se mange parfaitement froid — c'est la boîte idéale les jours où tu n'as pas de micro-ondes."
+      "Mélanger l'huile d'olive, la moutarde, le sel et le poivre au fond de la boîte.",
+      "Ajouter les lentilles et remuer pour qu'elles s'imprègnent.",
+      "Ajouter les légumes rôtis par-dessus.",
+      "Poser les 2 œufs durs entiers en coquille sur le côté, à écaler sur place.",
+      "Se mange froid, c'est même meilleur ainsi."
      ],
-     "conservation": "2 j au frigo assemblée"
+     "conservation": "3 jours au frigo"
     },
     {
-     "nom": "Poêlée poulet-patate douce express",
-     "usage": "dîner lundi (jour force)",
-     "portions": "2 portions",
+     "nom": "Poêlée saumon-riz express",
+     "usage": "dîner mardi (jour force)",
+     "portions": "1 portion",
      "temps": "5 min prépa + 12 min cuisson",
      "ingredients": [
-      "300 g de poulet du batch",
-      "250 g de légumes rôtis du batch",
-      "150 g de riz cuit du batch",
+      "180 g de pavé de saumon",
+      "1 gros poing de riz du batch (environ 250 g cuit)",
+      "150 g d'épinards frais",
       "1 cuillère à soupe d'huile d'olive",
-      "1 cuillère à soupe de sauce soja",
-      "1 gousse d'ail",
-      "100 g d'épinards frais"
+      "Jus d'un demi-citron",
+      "Sel, poivre"
      ],
      "etapes": [
-      "Fais chauffer l'huile dans une grande poêle à feu vif.",
-      "Ajoute l'ail écrasé et fais-le revenir 20 s, sans le brûler.",
-      "Ajoute les légumes rôtis et le riz, remue 3 min pour bien réchauffer.",
-      "Ajoute le poulet coupé en morceaux et la sauce soja, remue 2 min.",
-      "Jette les épinards par-dessus, couvre 1 min : ils doivent tomber et devenir vert foncé.",
-      "Mélange une dernière fois et sers immédiatement."
-     ],
-     "conservation": "À manger le soir même, la 2e portion tient 2 j au frigo"
-    },
-    {
-     "nom": "Saumon au four et légumes",
-     "usage": "dîner mercredi et samedi",
-     "portions": "2 portions",
-     "temps": "5 min prépa + 15 min four",
-     "ingredients": [
-      "300 g de pavés de saumon (2 pièces)",
-      "300 g de légumes rôtis du batch",
-      "1 citron",
-      "1 cuillère à soupe d'huile d'olive",
-      "sel, poivre",
-      "150 g de riz cuit du batch (samedi seulement)"
-     ],
-     "etapes": [
-      "Préchauffe le four à 200 °C.",
-      "Pose les pavés de saumon sur du papier cuisson, peau en dessous.",
-      "Arrose d'huile, sale, poivre, pose 2 rondelles de citron sur chaque pavé.",
-      "Enfourne 13 à 15 min. C'est cuit quand la chair devient opaque rosé clair et se sépare en lamelles sous la fourchette — ne dépasse pas 15 min, ça devient sec.",
-      "Pendant ce temps, réchauffe les légumes (et le riz le samedi) 3 min à la poêle ou 2 min au micro-ondes.",
-      "Sers avec un trait de jus de citron."
-     ],
-     "conservation": "À manger le soir même"
-    },
-    {
-     "nom": "Omelette aux légumes et fromage blanc",
-     "usage": "dîner jeudi et dimanche (jours légers)",
-     "portions": "1 portion",
-     "temps": "3 min prépa + 7 min cuisson",
-     "ingredients": [
-      "4 œufs",
-      "150 g de légumes rôtis du batch",
-      "30 g de fromage râpé",
-      "1 cuillère à café d'huile d'olive",
-      "sel, poivre",
-      "salade verte + 1 cuillère à soupe de vinaigrette"
-     ],
-     "etapes": [
-      "Bats les 4 œufs à la fourchette avec sel et poivre pendant 20 s.",
-      "Chauffe l'huile dans une poêle à feu moyen, ajoute les légumes rôtis et réchauffe-les 2 min.",
-      "Verse les œufs par-dessus, laisse prendre 2 min sans toucher.",
-      "Ramène les bords vers le centre avec une spatule et incline la poêle pour que l'œuf liquide coule sur les bords.",
-      "Parsème le fromage, plie l'omelette en deux et coupe le feu. Le centre doit rester légèrement baveux — il finit de cuire dans l'assiette.",
-      "Sers avec la salade."
+      "Chauffer l'huile dans une poêle à feu moyen-vif.",
+      "Poser le saumon côté peau, cuire 5 min sans y toucher — la peau doit être croustillante et se décoller seule.",
+      "Retourner, cuire 3 min de plus. Le centre doit rester légèrement rosé.",
+      "Retirer le saumon, mettre les épinards dans la même poêle avec un peu de sel : ils fondent en 2 min.",
+      "Ajouter le riz du batch dans la poêle, réchauffer 2 min en remuant.",
+      "Servir, arroser de jus de citron."
      ],
      "conservation": "À manger immédiatement"
     },
     {
-     "nom": "Pâtes thon-tomate d'avant-longue",
-     "usage": "dîner vendredi (veille de sortie longue)",
-     "portions": "2 portions",
-     "temps": "5 min prépa + 12 min cuisson",
+     "nom": "Omelette légumes et fromage frais",
+     "usage": "dîner jeudi et dimanche (jours légers)",
+     "portions": "1 portion",
+     "temps": "3 min prépa + 8 min cuisson",
      "ingredients": [
-      "200 g de pâtes complètes crues",
-      "2 boîtes de thon au naturel (2×140 g)",
-      "400 g de tomates concassées (1 boîte)",
+      "4 œufs",
+      "1 portion de légumes rôtis du batch (environ 150 g)",
+      "50 g de fromage frais type ricotta ou chèvre",
+      "1 cuillère à café d'huile d'olive",
+      "Sel, poivre",
+      "1 grosse poignée de salade verte"
+     ],
+     "etapes": [
+      "Battre les œufs à la fourchette avec du sel et du poivre pendant 20 s.",
+      "Chauffer l'huile dans une poêle à feu moyen.",
+      "Verser les œufs, laisser prendre 1 min sans remuer.",
+      "Répartir les légumes rôtis et le fromage frais sur une moitié.",
+      "Baisser le feu, couvrir, cuire 4 min : le dessus doit être juste pris, plus liquide mais encore moelleux.",
+      "Replier en deux avec une spatule, glisser dans l'assiette.",
+      "Servir avec la salade verte."
+     ],
+     "conservation": "À manger immédiatement"
+    },
+    {
+     "nom": "Pâtes bolognaise dinde express",
+     "usage": "dîner vendredi (veille de sortie longue)",
+     "portions": "2 portions (une pour le soir, une pour le lendemain)",
+     "temps": "5 min prépa + 15 min cuisson",
+     "ingredients": [
+      "250 g de haché de dinde",
+      "150 g de pâtes complètes crues",
+      "400 g de tomates concassées en boîte",
       "1 oignon",
-      "2 cuillères à soupe d'huile d'olive",
+      "1 cuillère à soupe d'huile d'olive",
       "1 cuillère à café d'origan",
-      "sel, poivre",
+      "Sel, poivre",
       "30 g de parmesan râpé"
      ],
      "etapes": [
-      "Fais bouillir une grande casserole d'eau salée et lance les pâtes selon le temps du paquet (environ 10 min).",
-      "Pendant ce temps, émince l'oignon et fais-le revenir 4 min dans l'huile à feu moyen jusqu'à ce qu'il devienne translucide.",
-      "Ajoute les tomates et l'origan, laisse mijoter 6 min à petits bouillons — la sauce doit épaissir et ne plus être liquide.",
-      "Égoutte le thon et ajoute-le à la sauce, remue 1 min sans l'écraser complètement.",
-      "Égoutte les pâtes en gardant une louche d'eau de cuisson, mélange-les à la sauce avec un peu de cette eau.",
-      "Sers avec le parmesan. Portion généreuse ce soir : c'est le carburant de samedi matin."
+      "Mettre l'eau des pâtes à bouillir et lancer la cuisson selon le paquet (environ 10 min).",
+      "Émincer l'oignon, le faire revenir 3 min dans l'huile à feu moyen jusqu'à ce qu'il devienne translucide.",
+      "Ajouter le haché de dinde, écraser à la cuillère, cuire 5 min jusqu'à ce qu'il n'y ait plus de rose.",
+      "Verser les tomates concassées, l'origan, sel et poivre. Laisser mijoter 7 min à feu doux — la sauce doit épaissir et ne plus être liquide.",
+      "Égoutter les pâtes, mélanger à la sauce.",
+      "Servir avec le parmesan râpé."
      ],
-     "conservation": "2 j au frigo, se mange froid en salade de pâtes"
+     "conservation": "3 jours au frigo pour la 2e portion"
+    },
+    {
+     "nom": "Bowl récup post-box",
+     "usage": "dîner mercredi (soir de box)",
+     "portions": "1 portion",
+     "temps": "10 min de montage, sans cuisson",
+     "ingredients": [
+      "200 g de poulet du batch",
+      "1 gros poing de riz du batch (environ 250 g cuit)",
+      "1 portion de légumes rôtis (environ 150 g)",
+      "1 avocat",
+      "2 cuillères à soupe de sauce yaourt du batch",
+      "Sel, poivre"
+     ],
+     "etapes": [
+      "Réchauffer le riz et les légumes 90 s à la poêle avec un filet d'eau (ou les manger froids si tu rentres tard).",
+      "Couper le poulet en lanières et le poser dessus.",
+      "Ajouter l'avocat coupé en tranches.",
+      "Napper de sauce yaourt, saler, poivrer.",
+      "Manger dans l'heure qui suit la séance : c'est la fenêtre où la récup est la plus efficace."
+     ],
+     "conservation": "À manger immédiatement"
     }
    ],
    "courses": [
@@ -1346,114 +1386,122 @@ window.BILAN = {
      "rayon": "Protéines",
      "items": [
       "1,2 kg de blancs de poulet",
-      "2 pavés de saumon (300 g)",
-      "2 boîtes de thon au naturel (2×140 g)"
+      "250 g de haché de dinde",
+      "180 g de pavé de saumon",
+      "1 boîte de thon nature (dépannage)"
      ]
     },
     {
      "rayon": "Féculents & légumineuses",
      "items": [
-      "1 paquet de riz basmati (1 kg)",
-      "1 paquet de lentilles vertes (500 g)",
-      "1 paquet de pâtes complètes (500 g)",
-      "1 sachet de noix (200 g)"
+      "500 g de riz basmati",
+      "400 g de lentilles vertes sèches",
+      "150 g de pâtes complètes",
+      "1 paquet de pain complet",
+      "500 g de flocons d'avoine"
      ]
     },
     {
      "rayon": "Légumes & fruits",
      "items": [
-      "500 g de courgettes",
-      "3 poivrons (environ 500 g)",
-      "500 g de patate douce",
-      "2 oignons",
-      "1 tête d'ail",
-      "2 citrons",
-      "1 sachet d'épinards frais (150 g)",
+      "3 courgettes",
+      "3 poivrons",
+      "2 oignons rouges",
+      "2 oignons jaunes",
+      "300 g d'épinards frais",
+      "1 sachet de roquette",
       "1 sachet de salade verte",
-      "1 bouquet de persil ou coriandre",
-      "6 bananes",
-      "1 barquette de fruits rouges ou 4 pommes"
+      "1 avocat",
+      "7 bananes",
+      "3 citrons",
+      "1 pomme de terre douce (dépannage)",
+      "1 boîte de 400 g de tomates concassées",
+      "1 gousse d'ail",
+      "1 bouquet de persil"
      ]
     },
     {
      "rayon": "Produits laitiers & œufs",
      "items": [
-      "24 œufs (2 boîtes de 12) + 12 œufs pour les petits-déjeuners = 3 boîtes de 12",
-      "500 g de yaourt grec nature",
-      "1 grand pot de fromage blanc (1 kg)",
-      "1 bloc de feta (200 g)",
-      "1 sachet de fromage râpé (200 g)",
-      "1 sachet de parmesan râpé (100 g)"
+      "30 œufs (21 pour le petit-déj + 12 durs, prends 2 boîtes de 20)",
+      "400 g de yaourt grec nature",
+      "4 yaourts grecs individuels (collations)",
+      "50 g de ricotta ou fromage de chèvre frais",
+      "30 g de parmesan râpé"
      ]
     },
     {
      "rayon": "Épicerie",
      "items": [
-      "2 boîtes de tomates concassées (2×400 g)",
-      "1 bouteille d'huile d'olive (50 cl)",
-      "1 petite bouteille de sauce soja",
-      "paprika fumé, ail en poudre, cumin, thym, origan, herbes de Provence",
-      "1 paquet de flocons d'avoine (500 g)",
-      "1 pot de miel"
+      "1 bouteille d'huile d'olive",
+      "Paprika",
+      "Ail en poudre",
+      "Herbes de Provence",
+      "Origan",
+      "Laurier",
+      "Moutarde",
+      "200 g d'amandes",
+      "1 pot de miel",
+      "1 pot de beurre de cacahuète"
      ]
     }
    ],
    "jours": [
     {
      "jour": "Lun",
-     "type": "jour force (course facile matin + force soir)",
-     "petitDej": "Habituel + 1 banane (tu cours avant 6 h, la banane évite de partir complètement à vide sur 40 min)",
-     "dejeuner": "Boîte chantier poulet-riz-légumes : 200 g poulet, 200 g riz, 250 g légumes rôtis, sauce yaourt à part, 30 g de noix",
-     "collation": "Après la force : 200 g de fromage blanc + 1 cuillère à soupe de miel + 1 banane, dans l'heure qui suit",
-     "diner": "Poêlée poulet-patate douce express (300 g poulet, 250 g légumes, 150 g riz, épinards) — portion généreuse, c'est le soir qui répare le squat"
+     "type": "endurance facile (course 40 min matin)",
+     "petitDej": "Habituel",
+     "dejeuner": "Boîte chantier poulet-riz-légumes, sauce à part, roquette ajoutée le matin",
+     "collation": "1 yaourt grec + 1 poignée d'amandes vers 16 h",
+     "diner": "Bowl simple : lentilles du batch + 2 œufs durs + légumes rôtis + filet d'huile d'olive, grosse salade verte"
     },
     {
      "jour": "Mar",
-     "type": "jour léger (vélo facile matin)",
+     "type": "jour force (back squat le soir)",
      "petitDej": "Habituel",
-     "dejeuner": "Boîte chantier poulet-riz-légumes (2e boîte)",
-     "collation": "1 pomme + 2 œufs durs du batch en milieu d'après-midi",
-     "diner": "Grande assiette de lentilles à la tomate (300 g) + 150 g de légumes rôtis + salade verte. Peu de féculents supplémentaires, le vélo était facile"
+     "dejeuner": "Boîte chantier lentilles-œufs",
+     "collation": "1 banane + 1 cuillère de beurre de cacahuète 45 min avant la séance du soir",
+     "diner": "Poêlée saumon-riz express (gros poing de riz — c'est le repas qui reconstruit après le squat)"
     },
     {
      "jour": "Mer",
-     "type": "jour box (Pilates matin + CrossFit soir)",
-     "petitDej": "Habituel",
-     "dejeuner": "Boîte chantier poulet-riz-légumes (3e boîte)",
-     "collation": "Avant la box (vers 17 h) : 1 banane + une poignée de noix. Après : 200 g de fromage blanc",
-     "diner": "Saumon au four (150 g) + 300 g de légumes rôtis + salade. Rapide et digeste après un WOD tardif"
+     "type": "jour box (vélo facile matin, WOD le soir)",
+     "petitDej": "Habituel + 1 banane avant le vélo",
+     "dejeuner": "Boîte chantier poulet-riz-légumes",
+     "collation": "1 tranche de pain complet + miel, 1 h avant la box",
+     "diner": "Bowl récup post-box (poulet + riz + légumes + avocat + sauce yaourt), dans l'heure après la séance"
     },
     {
      "jour": "Jeu",
-     "type": "jour léger (natation matin)",
+     "type": "repos complet",
      "petitDej": "Habituel",
-     "dejeuner": "Boîte chantier lentilles-œufs-feta (froide, parfaite sans micro-ondes)",
-     "collation": "—",
-     "diner": "Omelette 4 œufs aux légumes rôtis + fromage râpé + salade verte. Assiette légère, journée calme"
+     "dejeuner": "Boîte chantier lentilles-œufs",
+     "collation": "1 pomme + 1 poignée d'amandes",
+     "diner": "Omelette légumes et fromage frais + grosse salade verte — assiette légère, pas de féculent ce soir"
     },
     {
      "jour": "Ven",
-     "type": "veille de sortie longue (course matin + box soir)",
-     "petitDej": "Habituel + 1 banane",
-     "dejeuner": "Boîte chantier lentilles-œufs-feta (2e boîte)",
-     "collation": "Avant la box : 1 banane. Après : 200 g de fromage blanc + miel",
-     "diner": "Pâtes thon-tomate, grosse assiette (100 g de pâtes crues pour toi) + parmesan. C'est le repas qui remplit les réserves pour samedi"
+     "type": "natation matin, box le soir, veille de sortie longue",
+     "petitDej": "Habituel",
+     "dejeuner": "Boîte chantier poulet-riz-légumes",
+     "collation": "1 banane avant la box",
+     "diner": "Pâtes bolognaise dinde express — c'est le repas glucides de la veille de sortie longue, ne le rate pas"
     },
     {
      "jour": "Sam",
-     "type": "sortie longue (1 h 05 à 1 h 15 le matin)",
-     "petitDej": "Habituel + 60 g de flocons d'avoine avec un peu de miel, 1 h avant de partir (sur 1 h 15 de course, tu as besoin d'un peu plus que 3 œufs)",
-     "dejeuner": "Au retour : reste de pâtes thon-tomate froid + 2 œufs durs + fruits rouges",
-     "collation": "Dans les 30 min après la sortie : 1 banane + 200 g de fromage blanc",
-     "diner": "Saumon au four (150 g) + 300 g de légumes rôtis + 150 g de riz du batch"
+     "type": "sortie longue 1 h 05 le matin",
+     "petitDej": "Habituel + 40 g de flocons d'avoine avec 1 banane écrasée, 1 h avant la sortie (ajout justifié : 1 h 05 à jeun sur une reprise, c'est trop juste)",
+     "dejeuner": "2e portion de pâtes bolognaise réchauffée + salade verte, dans les 90 min après la sortie",
+     "collation": "1 yaourt grec + miel",
+     "diner": "Poulet du batch réchauffé + patate douce au four + épinards fondus à la poêle"
     },
     {
      "jour": "Dim",
      "type": "repos complet + batch cooking",
      "petitDej": "Habituel",
-     "dejeuner": "Ce que tu goûtes pendant le batch : poulet du four + légumes rôtis tièdes + salade",
+     "dejeuner": "Restes du batch en cours de préparation : poulet + légumes rôtis sortis du four, grosse salade",
      "collation": "—",
-     "diner": "Omelette 4 œufs aux légumes + grande salade verte. Assiette légère, légumes dominants, journée sans séance"
+     "diner": "Omelette légumes et fromage frais + salade — léger, et tu as les mains dans le batch de toute façon"
     }
    ]
   },
