@@ -31,14 +31,23 @@ function format(lignes) {
 
 function dureeEstimee(lignes) {
   const t = lignes.join(" ");
-  const m = t.match(/(\d+)\s*minutes?/i);
-  if (m) return parseInt(m[1], 10);
-  const km = [...t.matchAll(/(\d+)\s*(?:-)?\s*(?:meter|m\b)/gi)].reduce((s, x) => s + parseInt(x[1], 10), 0);
-  const miles = [...t.matchAll(/(\d+)\s*(?:-)?\s*mile/gi)].reduce((s, x) => s + parseInt(x[1], 10), 0);
-  const rounds = parseInt((t.match(/^(\d+)\s*rounds?/i) || [])[1] || 1, 10);
-  const reps = [...t.matchAll(/\b(\d{1,3})\s+[a-zA-Z]/g)].reduce((s, x) => s + parseInt(x[1], 10), 0);
-  const est = Math.round((km / 200) + miles * 8 + (rounds * reps) / 22);
-  return Math.max(4, Math.min(60, est || 12));
+  const cap = t.match(/in (\d+)\s*minutes?|(\d+)-minute/i);          // AMRAP / EMOM / time cap = durée exacte
+  if (cap) return parseInt(cap[1] || cap[2], 10);
+  const rounds = parseInt((t.match(/(\d+)\s*rounds?/i) || [])[1] || 1, 10);
+  // distances (par tour)
+  let minDist = 0;
+  for (const m of t.matchAll(/(\d[\d,]*)\s*(?:-)?\s*(?:meter|metre|m)\b/gi)) minDist += parseInt(m[1].replace(/,/g, ""), 10) / 210;
+  for (const m of t.matchAll(/(\d+)\s*(?:-)?\s*mile/gi)) minDist += parseInt(m[1], 10) * 8;
+  for (const m of t.matchAll(/(\d+)\s*(?:-)?\s*calorie/gi)) minDist += parseInt(m[1], 10) / 14;
+  // répétitions : uniquement les nombres < 100 qui ne sont ni des charges ni des distances
+  let reps = 0;
+  for (const m of t.matchAll(/\b(\d{1,3})\s+(?![\d,]*\s*(?:kg|lb|m\b|meter|mile|calorie|inch|cm|minute|second))([A-Za-z][A-Za-z-]+)/g)) {
+    const n = parseInt(m[1], 10);
+    if (n <= 100) reps += n;
+  }
+  const serie = t.match(/(\d+)-(\d+)-(\d+)(-(\d+))*\s*reps?/i);       // 21-15-9 : reps déjà toutes comptées
+  const est = minDist * rounds + (reps * (serie ? 1 : rounds)) / 20;
+  return Math.max(3, Math.min(75, Math.round(est) || 12));
 }
 
 function materielDe(fr) {
