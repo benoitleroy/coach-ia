@@ -35,6 +35,8 @@
     <button data-tab="semaine">Semaine</button>
     <button data-tab="cycle">Cycle</button>
     <button data-tab="histo">Historique</button>
+    <button data-tab="banque">Séances</button>
+    <button data-tab="mvt">Mouvements</button>
   </nav>
 
   <!-- AUJOURD'HUI -->
@@ -98,6 +100,27 @@
     </section>
   </section>
 
+  <!-- BANQUE DE SÉANCES -->
+  <section class="tabpane" id="tab-banque">
+    <section class="bloc">
+      <div class="bloc-head"><h2>Banque de séances</h2><span class="hint" id="bq-count"></span></div>
+      <input type="search" id="bq-q" placeholder="Chercher (nom, mouvement, ex. « traction »)" class="rech" />
+      <div class="filtres" id="bq-src"><button data-f="tout" class="on">Tout</button><button data-f="hero">Hero WODs</button><button data-f="cf">CrossFit.com</button></div>
+      <div class="filtres" id="bq-duree"><button data-d="tout" class="on">Toutes durées</button><button data-d="10">≤ 10 min</button><button data-d="20">≤ 20 min</button><button data-d="40">≤ 40 min</button></div>
+      <ul class="histo" id="bq-list"></ul>
+      <button class="plus" id="bq-plus" hidden>Voir plus</button>
+    </section>
+  </section>
+
+  <!-- MOUVEMENTS -->
+  <section class="tabpane" id="tab-mvt">
+    <section class="bloc">
+      <div class="bloc-head"><h2>Mouvements</h2><span class="hint">anglais → français</span></div>
+      <input type="search" id="mv-q" placeholder="Chercher un mouvement" class="rech" />
+      <div id="mv-list"></div>
+    </section>
+  </section>
+
   <footer class="foot"><a href="index.html">← Retour au carnet</a></footer>
 </main>
 
@@ -105,6 +128,8 @@
 <script src="js/bilan-data.js" onerror="void 0"></script>
 <script src="js/seances-data.js" onerror="void 0"></script>
 <script src="js/nst-data.js" onerror="void 0"></script>
+<script src="js/wods-data.js" onerror="void 0"></script>
+<script src="js/schemas.js"></script>
 <script src="js/programme.js"></script>
 </body>
 </html>

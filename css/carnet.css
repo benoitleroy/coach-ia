@@ -261,3 +261,28 @@ details.recette .rc-body .coach-sub { margin-top: .4rem; }
 .ref-lien { display: inline-block; margin-top: .5rem; font-size: .82rem; color: var(--accent); text-decoration: none; }
 
 #nst-jours .c-txt { white-space: pre-wrap; font: inherit; font-size: .84rem; line-height: 1.4; margin: .2rem 0 0; }
+
+/* Banque de séances + mouvements */
+.rech { width: 100%; padding: .5rem .7rem; margin-bottom: .5rem; border-radius: 8px; border: 1px solid var(--line);
+  background: var(--card-2); color: var(--ink); font: inherit; font-size: .9rem; }
+.plus { width: 100%; margin-top: .6rem; padding: .5rem; border-radius: 8px; border: 1px solid var(--line);
+  background: var(--card-2); color: var(--muted); font: inherit; cursor: pointer; }
+.wod-fr { font-size: .92rem; line-height: 1.5; margin: .2rem 0 .4rem; }
+.wod-fr div:first-child { font-weight: 600; }
+.wod-stim { font-size: .85rem; color: var(--muted); margin: .4rem 0 0; }
+.sub-en { margin-top: .3rem; }
+.sub-en summary { cursor: pointer; color: var(--faint); font-size: .8rem; list-style: none; }
+.sub-en summary::-webkit-details-marker { display: none; }
+.mvts { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: .6rem; }
+.mv { margin: 0; text-align: center; font-size: .72rem; color: var(--muted); width: 5.6rem; }
+.mv-sch { display: flex; align-items: center; gap: .15rem; justify-content: center; }
+.schema { width: 2.3rem; height: 2.8rem; }
+.schema .bh { stroke: var(--ink); stroke-width: 5; fill: none; stroke-linecap: round; }
+.schema circle.bh { fill: none; }
+.schema .ob { stroke: var(--accent); stroke-width: 4; fill: none; }
+.schema-fleche { color: var(--faint); font-size: .7rem; }
+.mv-row { display: grid; grid-template-columns: 5.4rem 1fr; gap: .6rem; align-items: center; padding: .45rem 0; border-bottom: 1px solid var(--line); }
+.mv-en { font-weight: 600; font-size: .88rem; }
+.mv-fr { font-size: .85rem; color: var(--accent); }
+.mv-n { font-size: .72rem; color: var(--faint); }
+.mv-none { color: var(--faint); }

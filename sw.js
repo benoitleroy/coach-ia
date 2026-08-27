@@ -3,7 +3,7 @@
 //             données de sync) → toujours frais quand en ligne, offline possible.
 //             "cache-first" uniquement pour icônes/images/polices.
 
-const CACHE_VERSION = "coach-ia-v20";
+const CACHE_VERSION = "coach-ia-v21";
 
 const PRECACHE_URLS = [
   "./",
@@ -14,6 +14,7 @@ const PRECACHE_URLS = [
   "./js/bilan.js",
   "./programme.html",
   "./js/programme.js",
+  "./js/schemas.js",
   "./js/sommeil.js",
   "./accueil.html",
   "./journal.html",

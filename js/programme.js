@@ -109,6 +109,58 @@
     $("cy-regles").innerHTML = (P.reglesPermanentes || []).map(r => `<li>${esc(r)}</li>`).join("");
   }
 
+  // ── Banque de séances ──
+  const W = window.WODS || [];
+  let bqSrc = "tout", bqDuree = "tout", bqN = 20, bqQ = "";
+  const bqFiltre = () => W.filter(w => {
+    if (bqSrc === "hero" && w.source !== "Hero WOD") return false;
+    if (bqSrc === "cf" && w.source !== "CrossFit.com") return false;
+    if (bqDuree !== "tout" && w.duree > +bqDuree) return false;
+    if (bqQ) {
+      const t = ((w.nom || "") + " " + w.en.join(" ") + " " + w.fr.join(" ") + " " + w.mouvements.map(m => m.fr + " " + m.en).join(" ")).toLowerCase();
+      if (!t.includes(bqQ)) return false;
+    }
+    return true;
+  });
+  const carteWod = w => {
+    const titre = w.nom || (w.date ? fmtDate(w.date) : "Séance");
+    const meta = [w.format, w.duree + " min env.", ...(w.materiel || [])].filter(Boolean).join(" · ");
+    const sch = (w.mouvements || []).filter(m => m.schema).map(m => `<figure class="mv"><div class="mv-sch">${window.SCHEMA ? window.SCHEMA(m.schema) : ""}</div><figcaption>${esc(m.fr)}<br><small>${esc(m.en)}</small></figcaption></figure>`).join("");
+    return `<li><details><summary><b>${esc(titre)}</b> <small>${esc(meta)}</small></summary><div class="hi-body">
+      <div class="wod-fr">${w.fr.map(l => `<div>${esc(l)}</div>`).join("")}</div>
+      <details class="sub-en"><summary>version anglaise (celle du tableau)</summary><pre class="c-txt">${esc(w.en.join("\n"))}</pre></details>
+      ${w.stimulusFr ? `<p class="wod-stim">🎯 ${esc(w.stimulusFr)}</p>` : ""}
+      ${(w.scaling && w.scaling.int.length) ? `<details class="sub-en"><summary>option intermédiaire</summary><pre class="c-txt">${esc(w.scaling.int.join("\n"))}</pre></details>` : ""}
+      ${(w.scaling && w.scaling.deb.length) ? `<details class="sub-en"><summary>option débutant</summary><pre class="c-txt">${esc(w.scaling.deb.join("\n"))}</pre></details>` : ""}
+      ${sch ? `<div class="mvts">${sch}</div>` : ""}
+    </div></details></li>`;
+  };
+  const rendreBanque = () => {
+    const list = bqFiltre();
+    $("bq-count").textContent = `${list.length} séances`;
+    $("bq-list").innerHTML = list.slice(0, bqN).map(carteWod).join("") || "<li class='plain'>Rien trouvé.</li>";
+    $("bq-plus").hidden = list.length <= bqN;
+  };
+  if (W.length) {
+    document.querySelectorAll("#bq-src button").forEach(b => b.addEventListener("click", () => { bqSrc = b.dataset.f; bqN = 20; document.querySelectorAll("#bq-src button").forEach(x => x.classList.toggle("on", x === b)); rendreBanque(); }));
+    document.querySelectorAll("#bq-duree button").forEach(b => b.addEventListener("click", () => { bqDuree = b.dataset.d; bqN = 20; document.querySelectorAll("#bq-duree button").forEach(x => x.classList.toggle("on", x === b)); rendreBanque(); }));
+    $("bq-q").addEventListener("input", e => { bqQ = e.target.value.trim().toLowerCase(); bqN = 20; rendreBanque(); });
+    $("bq-plus").addEventListener("click", () => { bqN += 20; rendreBanque(); });
+    rendreBanque();
+
+    // ── Glossaire des mouvements ──
+    const vus = new Map();
+    W.forEach(w => (w.mouvements || []).forEach(m => { if (!vus.has(m.en)) vus.set(m.en, { ...m, n: 0 }); vus.get(m.en).n++; }));
+    const mvts = [...vus.values()].sort((a, b) => b.n - a.n);
+    const rendreMvts = (q = "") => {
+      $("mv-list").innerHTML = mvts.filter(m => !q || (m.fr + " " + m.en).toLowerCase().includes(q)).map(m =>
+        `<div class="mv-row"><div class="mv-sch">${m.schema && window.SCHEMA ? window.SCHEMA(m.schema) : "<span class='mv-none'>—</span>"}</div>
+         <div><div class="mv-en">${esc(m.en)}</div><div class="mv-fr">${esc(m.fr)}</div><div class="mv-n">${m.n} séance${m.n > 1 ? "s" : ""}</div></div></div>`).join("");
+    };
+    $("mv-q").addEventListener("input", e => rendreMvts(e.target.value.trim().toLowerCase()));
+    rendreMvts();
+  }
+
   // ── Historique ──
   const groupe = s => estBox(s) ? "box" : /Run|TrailRun|VirtualRun/i.test(s.type) ? "course" : "autre";
   let filtre = "box";
