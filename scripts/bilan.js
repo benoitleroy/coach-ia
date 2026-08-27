@@ -18,6 +18,7 @@ import { fileURLToPath } from "url";
 import { loadPhotoCache } from "./photos.js";
 import { loadNotes } from "./note.js";
 import { texteProgramme, blocCourant, PROGRAMME } from "./programme.js";
+import { texteNST } from "./nst.js";
 
 const __dirname  = path.dirname(fileURLToPath(import.meta.url));
 const ACT_CACHE  = path.join(__dirname, ".activities.cache.json");
@@ -38,7 +39,7 @@ export const PROFIL = {
   nutrition: "PETIT-DÉJEUNER FIXE, ne pas le modifier : 3 œufs à la coque + 500 ml d'eau + vitamine D + K1 + complexe vitamine B (Pillar). Le coach peut seulement proposer un AJOUT (ex. banane, flocons, pain) avant une séance longue ou intense du matin, et le dire explicitement. MIDI : toujours sur chantier → boîte transportable, qui se mange froide ou tiède (pas de micro-ondes garanti), préparée la veille ou issue du batch. SOIR : repas maison ≤ 20 min, c'est là que se joue l'ajustement glucides/protéines selon la séance. Veut des repas concrets calés sur les séances, achetés le week-end et préparés à l'avance (batch cooking du dimanche). Pas de comptage de calories. Aucune contrainte alimentaire connue.",
 
   objectif: "devenir un athlète hybride : endurance (course, vélo, natation) + force (CrossFit, charges lourdes)",
-  box: "Benoît va au CrossFit dans sa box : la programmation est celle du club (WOD affiché au tableau, avec Rx / Int / Sc), lue chaque fois sur la photo — ce n'est PAS une programmation NST. Il prévoit de prendre en plus le module NST (NoShortcuts Training) via le parrainage d'un ami : quand ce sera fait, ses séances NST seront fournies au coach. Le coach construit AUTOUR des séances de box : il ne double jamais une journée lourde au club, et place ses propres séances (endurance, VO2max, force complémentaire) sur les jours légers ou sans box.",
+  box: "PRIORITÉ N°1 : le programme NST (NoShortcuts Training), auquel Benoît s'abonne via le parrainage d'un ami — c'est la colonne vertébrale de sa semaine dès qu'il est fourni (section PROGRAMMATION NST ci-dessous). Le coach ne le réécrit pas : il le reprend tel quel et construit autour (endurance facile, VO2max si le bloc le prévoit et que NST n'en contient pas, récupération, nutrition). PRIORITÉ N°2 : les WOD de sa box CrossFit (programmation du club, tableau Rx/Int/Sc lu sur photo) — ils s'ajoutent seulement les jours où NST est léger ou absent, jamais en doublon d'une journée NST lourde. Tant qu'aucune semaine NST n'est fournie, construire la semaine normalement en gardant 2 créneaux 'box ou NST'.",
   contexte: "pratique CrossFit en box, Pilates régulier, historique triathlon/Ironman. Préparait l'Ironman Switzerland (Thun, 5 juillet 2026) — ANNULÉ volontairement pour accompagner son fils à une compétition d'échecs : le creux mai→août 2026 est un choix familial assumé, pas un abandon ni une blessure. Reprise fin août 2026 avec un nouvel objectif hybride.",
 };
 
@@ -212,6 +213,7 @@ const METHODE_BILLAT = `MÉTHODE DE RÉFÉRENCE — Véronique Billat (physiolog
 const COACH_PROMPT = (bilan, carnet, activities, now) => `Tu es un coach sportif avec une solide formation en physiologie de l'exercice (endurance, force, athlète hybride, périodisation, prévention des blessures chez le sportif de 35-45 ans). Tu écris en français, tu tutoies, ton ton est direct, concret, bienveillant, sans jargon inutile ni enthousiasme artificiel. Tu t'appuies UNIQUEMENT sur les données ci-dessous (Strava, et Garmin Connect pour le sommeil/HRV/FC repos quand la section existe) — ne suppose pas de données que tu n'as pas ; si quelque chose manque (sommeil, nutrition, blessure), dis-le en une ligne. Quand le sommeil/HRV est présent, intègre-le dans le verdict et adapte la semaine (ex. HRV sous la base ou sommeil < 6 h 30 → moins d'intensité).
 
 ${texteProgramme(now)}
+${texteNST(semaineCible(now).label) || "PROGRAMMATION NST : pas encore fournie pour cette semaine — prévoir des créneaux \"box ou NST\" et le préciser."}
 
 ATHLÈTE : ${PROFIL.prenom}, ${PROFIL.age} ans, FC max ~${PROFIL.fcMax} bpm${PROFIL.poidsKg ? `, ${PROFIL.poidsKg} kg` : " (poids non renseigné : suppose ~80 kg et précise-le)"}${PROFIL.tailleCm ? `, ${PROFIL.tailleCm} cm` : ""}. Objectif : ${PROFIL.objectif}. Contexte : ${PROFIL.contexte}.
 BOX : ${PROFIL.box}

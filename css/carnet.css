@@ -259,3 +259,5 @@ details.recette .rc-body .coach-sub { margin-top: .4rem; }
 .ref-wod summary { cursor: pointer; color: var(--muted); font-size: .85rem; list-style: none; }
 .ref-wod summary::-webkit-details-marker { display: none; }
 .ref-lien { display: inline-block; margin-top: .5rem; font-size: .82rem; color: var(--accent); text-decoration: none; }
+
+#nst-jours .c-txt { white-space: pre-wrap; font: inherit; font-size: .84rem; line-height: 1.4; margin: .2rem 0 0; }

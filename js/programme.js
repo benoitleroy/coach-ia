@@ -65,6 +65,15 @@
     }
   }
 
+  // ── NST de la semaine (prioritaire) ──
+  const nstAll = window.NST || {};
+  const nst = C && C.semaineLabel ? nstAll[C.semaineLabel] : null;
+  if (nst && (nst.jours || []).length) {
+    $("nst-bloc").hidden = false;
+    $("nst-src").textContent = nst.source || "NST";
+    $("nst-jours").innerHTML = nst.jours.map(j => `<li${(JJ[today.getDay()] === j.jour) ? ' class="cur"' : ""}><span class="p-jour">${esc(j.jour)}</span><span class="p-ico">🅽</span><span><div class="p-titre">${esc(j.titre || "Séance NST")}</div><pre class="c-txt">${esc(j.contenu || "")}</pre></span></li>`).join("");
+  }
+
   // ── Dernière séance box (référence de charges) ──
   const estBox = s => /Workout|WeightTraining|Crossfit|HighIntensityIntervalTraining/i.test(s.type) || /crossfit|wod|renfo|force/i.test(s.name);
   const derniereBox = S.filter(estBox).find(s => s.contenu || s.note);

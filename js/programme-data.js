@@ -63,6 +63,7 @@ window.PROGRAMME = {
  ],
  "reglesPermanentes": [
   "La semaine de décharge (4e de chaque bloc) : -40 % de volume, on garde la fréquence et un rappel d'intensité court.",
+  "Hiérarchie des séances : 1) programme NST (prioritaire, non modifiable), 2) WOD de la box du club, 3) séances ajoutées par le coach (endurance, VO2max, récup).",
   "Les séances CrossFit viennent de la programmation du club (WOD au tableau, lu sur photo) : le coach construit AUTOUR, il ne rajoute jamais une séance de force le lendemain d'un jour lourd à la box. Le module NST arrivera en complément (parrainage) — à intégrer quand Benoît l'aura.",
   "Si HRV en statut LOW deux matins de suite, ou FC repos > base +5 bpm : la séance dure de la semaine saute, remplacée par de l'aisance.",
   "Toute douleur tendineuse (Achille, genou) = arrêt de la course, vélo/natation à la place, jusqu'à disparition complète.",
@@ -98,5 +99,5 @@ window.PROGRAMME = {
   "debut": "2026-08-31",
   "termine": false
  },
- "generatedAt": "2026-08-27T11:44:57.802Z"
+ "generatedAt": "2026-08-27T11:49:38.662Z"
 };
