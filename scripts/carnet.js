@@ -226,6 +226,7 @@ export function buildCarnet(activities, now = new Date(), nWeeks = 12, extras = 
     effort: effortScore(a),
     photo: extras[a.id]?.photo || null,
     contenu: extras[a.id]?.contenu || null,
+    contenuFr: extras[a.id]?.contenuFr || null,
     note: extras[a.id]?.note || null,
   });
   const recentes = acts.slice(0, 10).map(fmt);

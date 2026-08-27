@@ -97,7 +97,8 @@
     $("jour-ref").innerHTML =
       `<div class="ref-ligne">${esc(derniereBox.name || derniereBox.type)} · ${fmtH(derniereBox.sec)}${derniereBox.hr ? " · " + derniereBox.hr + " bpm" : ""}</div>`
       + (derniereBox.note ? `<div class="c-note">✍️ ${esc(derniereBox.note)}</div>` : "")
-      + (derniereBox.contenu ? `<details class="ref-wod"><summary>Voir le tableau du WOD</summary><pre class="c-txt">${esc(derniereBox.contenu)}</pre></details>` : "")
+      + (derniereBox.contenuFr || derniereBox.contenu
+          ? `<details class="ref-wod"><summary>Voir le tableau du WOD</summary><pre class="c-txt">${esc(derniereBox.contenuFr || derniereBox.contenu)}</pre>${derniereBox.contenuFr ? `<details class="sub-en"><summary>version anglaise</summary><pre class="c-txt">${esc(derniereBox.contenu)}</pre></details>` : ""}</details>` : "")
       + `<a class="ref-lien" href="#" data-goto="histo">Tout l'historique →</a>`;
     const lien = $("jour-ref").querySelector("[data-goto]");
     if (lien) lien.addEventListener("click", e => { e.preventDefault(); document.querySelector('#tabs button[data-tab="histo"]').click(); });
@@ -184,7 +185,7 @@
     $("hi-count").textContent = `${list.length} sur 6 mois`;
     $("hi-list").innerHTML = list.map(s => {
       const meta = [fmtH(s.sec), s.km ? s.km + " km" : null, s.hr ? s.hr + " bpm" : null, s.hrMax ? "max " + s.hrMax : null].filter(Boolean).join(" · ");
-      const corps = `${s.note ? `<div class="c-note">✍️ ${esc(s.note)}</div>` : ""}${s.contenu ? `<pre class="c-txt">${esc(s.contenu)}</pre>` : ""}${s.photo ? `<a class="c-photo" href="${s.photo}" target="_blank" rel="noopener"><img src="${s.photo}" alt="" loading="lazy"></a>` : ""}`;
+      const corps = `${s.note ? `<div class="c-note">✍️ ${esc(s.note)}</div>` : ""}${(s.contenuFr || s.contenu) ? `<pre class="c-txt">${esc(s.contenuFr || s.contenu)}</pre>` : ""}${s.contenuFr ? `<details class="sub-en"><summary>version anglaise</summary><pre class="c-txt">${esc(s.contenu)}</pre></details>` : ""}${s.photo ? `<a class="c-photo" href="${s.photo}" target="_blank" rel="noopener"><img src="${s.photo}" alt="" loading="lazy"></a>` : ""}`;
       return corps
         ? `<li><details><summary><b>${fmtDate(s.date)}</b> · ${esc(s.name || s.type)}<br><small>${meta}</small></summary><div class="hi-body">${corps}</div></details></li>`
         : `<li class="plain"><b>${fmtDate(s.date)}</b> · ${esc(s.name || s.type)}<br><small>${meta}</small></li>`;

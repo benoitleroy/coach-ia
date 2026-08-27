@@ -114,7 +114,9 @@
   const contenuHtml = (a, open) => {
     if (!a.contenu && !a.photo && !a.note) return "";
     const img = a.photo ? `<a class="c-photo" href="${a.photo}" target="_blank" rel="noopener"><img src="${a.photo}" alt="photo de la séance" loading="lazy"></a>` : "";
-    const txt = a.contenu ? `<pre class="c-txt">${esc(a.contenu)}</pre>` : (a.photo ? `<span class="c-none">photo sans contenu lisible</span>` : "");
+    const txt = a.contenuFr
+      ? `<pre class="c-txt">${esc(a.contenuFr)}</pre><details class="sub-en"><summary>version anglaise (le tableau)</summary><pre class="c-txt">${esc(a.contenu)}</pre></details>`
+      : (a.contenu ? `<pre class="c-txt">${esc(a.contenu)}</pre>` : (a.photo ? `<span class="c-none">photo sans contenu lisible</span>` : ""));
     const note = a.note ? `<div class="c-note">✍️ ${esc(a.note)}</div>` : "";
     return `<details class="contenu"${open ? " open" : ""}><summary>📋 Contenu de la séance</summary><div class="c-body">${txt}${img}</div>${note}</details>`;
   };

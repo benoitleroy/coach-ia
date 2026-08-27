@@ -288,12 +288,9 @@ export async function coachBilan(bilan, carnet, activities, opts = {}) {
   // restent stables toute la semaine (courses faites le week-end). Régénération : nouvelle
   // semaine, ou `node scripts/bilan.js --force`.
   const key = semaineCible(now).label;
-  if (!force) {
-    try {
-      const c = JSON.parse(fs.readFileSync(COACH_CACHE, "utf8"));
-      if (c.key === key) { if (log) console.log("🧠 Bilan coach : inchangé (cache)"); return c.coach; }
-    } catch {}
-  }
+  const cache = (() => { try { return JSON.parse(fs.readFileSync(COACH_CACHE, "utf8")); } catch { return {}; } })();
+  const semaines = cache.semaines || (cache.key ? { [cache.key]: cache.coach } : {});   // migre l'ancien format
+  if (!force && semaines[key]) { if (log) console.log("🧠 Bilan coach : inchangé (cache)"); return semaines[key]; }
   const bin = findClaude();
   if (!bin) { if (log) console.warn("⚠️  Claude CLI introuvable — bilan coach non généré."); return null; }
 
@@ -322,7 +319,9 @@ export async function coachBilan(bilan, carnet, activities, opts = {}) {
   coach.semaineLabel = sc.label;
   coach.semaineDebut = sc.debut;
   coach.semaineFin = sc.fin;
-  fs.writeFileSync(COACH_CACHE, JSON.stringify({ key, coach }, null, 2));
+  semaines[key] = coach;
+  const gardees = Object.keys(semaines).sort().slice(-6);                                // on garde 6 semaines
+  fs.writeFileSync(COACH_CACHE, JSON.stringify({ semaines: Object.fromEntries(gardees.map(k => [k, semaines[k]])) }, null, 1));
   return coach;
 }
 

@@ -46,6 +46,8 @@ export const MOUVEMENTS = [
 
   // ── Gymnastique ─────────────────────────────────────────────────────────
   { en: "pull-up", fr: "traction", cat: "gym", desc: "Se hisser à la barre jusqu'à passer le menton au-dessus.", schema: "pullup" },
+  { en: "eccentric pull-up", fr: "traction excentrique (descente lente)", cat: "gym", desc: "Monter aidé, descendre le plus lentement possible.", schema: "pullup" },
+  { en: "excentric pull-up", fr: "traction excentrique (descente lente)", cat: "gym", desc: "Monter aidé, descendre lentement.", schema: "pullup" },
   { en: "strict pull-up", fr: "traction stricte", cat: "gym", desc: "Traction sans élan, corps immobile.", schema: "pullup" },
   { en: "chest-to-bar pull-up", fr: "traction poitrine à la barre", cat: "gym", desc: "Traction où la poitrine touche la barre.", schema: "pullup" },
   { en: "kipping pull-up", fr: "traction avec élan (kipping)", cat: "gym", desc: "Traction utilisant un balancier du corps.", schema: "pullup" },
@@ -97,6 +99,8 @@ export const MOUVEMENTS = [
 
   // ── Cardio / monostructurel ─────────────────────────────────────────────
   { en: "row", fr: "rameur", cat: "cardio", desc: "Rameur Concept2 : poussée des jambes, puis tirage.", schema: "row" },
+  { en: "ski-erg", fr: "ski erg", cat: "cardio", desc: "Machine SkiErg.", schema: "ski" },
+  { en: "skierg", fr: "ski erg", cat: "cardio", desc: "Machine SkiErg.", schema: "ski" },
   { en: "ski", fr: "ski erg", cat: "cardio", desc: "Machine SkiErg : tirage vertical des bras avec le tronc.", schema: "ski" },
   { en: "assault bike", fr: "vélo assault (Echo/Assault)", cat: "cardio", desc: "Vélo à air, bras et jambes.", schema: "bike" },
   { en: "echo bike", fr: "vélo Echo", cat: "cardio", desc: "Vélo à air Rogue Echo.", schema: "bike" },
@@ -124,7 +128,19 @@ const EXPR = [
   [/(\d+)-(\d+)-(\d+)(-(\d+))?\s*reps? for time of:?/gi, "$1-$2-$3$4 répétitions le plus vite possible :"],
   [/reps? for time of:?/gi, "répétitions le plus vite possible :"],
   [/in (\d+) minutes?,?/gi, "en $1 minutes,"],
+  [/\brest (\d+)\s*'/gi, "récupération $1 min"],
+  [/\brest (\d+)\s*"/gi, "récupération $1 s"],
   [/\brest (\d+) minutes?\b/gi, "récupération $1 minutes"],
+  [/\brest\b(?! day)/gi, "récupération"],
+  [/\bswitch\b/gi, "on change"],
+  [/\bwarm[- ]?up\b/gi, "échauffement"],
+  [/\bfinisher\b/gi, "finisher (fin de séance)"],
+  [/\bskill\b/gi, "technique"],
+  [/\breview\b/gi, "revoir"],
+  [/\bcumuler\b/gi, "cumuler"],
+  [/\bshoulder taps?\b/gi, "touches d'épaule"],
+  [/\binchworm\b/gi, "chenille (inchworm)"],
+  [/\bup (?:n|and|&) down\b/gi, "up & down (planche ↔ pompes sur les mains)"],
   [/\brest as needed\b/gi, "récupération libre"],
   [/\brest day\b/gi, "jour de repos"],
   [/\bthen,?\b/gi, "puis"],
@@ -166,19 +182,29 @@ const TRI = [...MOUVEMENTS].sort((a, b) => b.en.length - a.en.length);
 
 // Accord au pluriel : "5 traction" → "5 tractions"
 function accorde(t) {
+  const FEM = /^(traction|pompe|fente|montée|série|planche|course|marche)$/i;
+  t = t.replace(/\b(\d+)([-\d]*)\s+(traction|pompe|squat|burpee|fente|montée|relevé|saut|série|tour|planche)s?\s+(strict|stricte|lourd|marché|marchée|complet|excentrique|profond)e?s?\b/gi,
+    (m, n, suite, nom, adj) => {
+      const fem = FEM.test(nom);
+      const base = adj.replace(/e$/, "").replace(/ée$/, "é");
+      const acc = fem ? (/é$/.test(base) ? base + "es" : base + "es") : base + "s";
+      return `${n}${suite} ${nom}s ${acc}`;
+    });
   return t.replace(/(\b[2-9]\d*|\b1\d+)\s+(\p{L}+)/gu, (m, n, mot) =>
-    /s$|x$/.test(mot) || /^(de|du|des|en|le|la|les|au|aux|par|pour|sur|m|km|min|kg|calories|minutes|secondes|tours|répétitions|séries|miles|pouces|pieds|yards|jour|maximum|wall|box|double|simple|ski|bike|erg|assault|echo)$/i.test(mot)
+    /^\p{Lu}/u.test(mot) || /s$|x$/.test(mot) || /^(de|du|des|en|le|la|les|au|aux|par|pour|sur|m|km|min|kg|calories|minutes|secondes|tours|répétitions|séries|miles|pouces|pieds|yards|jour|maximum|wall|box|double|simple|ski|bike|erg|assault|echo)$/i.test(mot)
       ? m : `${n} ${mot}s`);
 }
 
 export function traduireLigne(ligne) {
   let t = " " + ligne + " ";
+  const jetons = [];
   for (const m of TRI) {
     const base = m.en.replace(/[-\s]/g, "[-\\s]");
     const re = new RegExp(`\\b${base}(s|es)?\\b`, "gi");
-    t = t.replace(re, m.fr);
+    t = t.replace(re, () => { jetons.push(m.fr); return `\u0001${jetons.length - 1}\u0001`; });
   }
   for (const [re, rep] of EXPR) t = t.replace(re, rep);
+  t = t.replace(/\u0001(\d+)\u0001/g, (_, i) => jetons[+i]);
   t = t.replace(/♀/g, "F :").replace(/♂/g, "H :");
   return accorde(t.replace(/\s+/g, " ").trim());
 }

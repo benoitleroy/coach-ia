@@ -11,6 +11,7 @@ window.SEANCES = [
   "hrMax": 160,
   "effort": 13,
   "contenu": "Mercredi 26 Août\n\nWarm up\n200m Run\n1min : inchworm + push-ups\n200m Run\n1min : up & down\n200m Run\n1min : plank shoulder taps\n200m Run\n1min : burpees\n\nSkill\nReview wall walk\nWOD prep :\n100m + 2 wall walk\n30s\n2 WW + 100m\n\nWOD\nAMRAP 15min\n300m Ski-Erg\n5 wall walk\nRest 1' -> switch 5 wall walk + 300m Ski-Erg\n\nFinisher\nCumuler 25-30 strict pull-ups\nou\nCumuler 15 excentric pull-ups",
+  "contenuFr": "Mercredi 26 Août\néchauffement\n200m course à pied\n1min : chenille (inchworm) + pompe\n200m course à pied\n1min : up & down (planche ↔ pompes sur les mains)\n200m course à pied\n1min : planche (gainage) touches d'épaule\n200m course à pied\n1min : burpee\ntechnique\nrevoir montée au mur (wall walk)\nWOD prep :\n100m + 2 montées au mur (wall walk)\n30s\n2 WW + 100m\nWOD\nAMRAP (maximum de tours) 15min\n300m ski erg\n5 montées au mur (wall walk)\nrécupération 1 min -> on change 5 montées au mur (wall walk) + 300m ski erg\nfinisher (fin de séance)\ncumuler 25-30 tractions strictes\nou\ncumuler 15 tractions excentriques (descente lente)",
   "note": null,
   "photo": "https://dgtzuqphqg23d.cloudfront.net/W-65VKI367Ko2PoqqRLTjjj437YbvW_r4AfTwEmCaPA-2048x1536.jpg"
  },
@@ -25,6 +26,7 @@ window.SEANCES = [
   "hrMax": 151,
   "effort": 22,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -39,6 +41,7 @@ window.SEANCES = [
   "hrMax": 170,
   "effort": 12,
   "contenu": null,
+  "contenuFr": null,
   "note": "Séance Force pure du plan S36 (prévue mardi, faite lundi soir) : back squat 5×5 ~70 %, développé/dips, rowing, gainage",
   "photo": null
  },
@@ -53,6 +56,7 @@ window.SEANCES = [
   "hrMax": 134,
   "effort": 7,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -67,6 +71,7 @@ window.SEANCES = [
   "hrMax": 150,
   "effort": 16,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -81,6 +86,7 @@ window.SEANCES = [
   "hrMax": 154,
   "effort": 24,
   "contenu": null,
+  "contenuFr": null,
   "note": "Sortie d'accompagnement avec ma copine — allure facile, pas une séance d'entraînement",
   "photo": null
  },
@@ -95,6 +101,7 @@ window.SEANCES = [
   "hrMax": 171,
   "effort": 39,
   "contenu": "Dimanche 23 août\n\nWarm up\n2' Erg (1'/30\"/30\")\n2 rounds\n10 Air Squat\n10 Up n Down\n10 Lunges\n1 round\n10 P.V.C Front Squat\n10 Burpees\n\nWOD : Team of 2\nAMRAP 30' : You go I go\n12 Hang Squat Clean\n12 Cal Row\n12 Front Rack Lunges\n12 Burpees Over the Bar\n\nAfter 8 rounds : MAX\n10 Thruster\n10 Cal Bike (Echo) — to share\n\nRx : 45/30\nInt : 35/20\nSc : 20/15",
+  "contenuFr": "Dimanche 23 aoûts\néchauffement\n2' Erg (1'/30\"/30\")\n2 tours\n10 squats au poids du corps\n10 ups & down (planche ↔ pompes sur les mains)\n10 fentes\n1 tour\n10 P.V.C squat avant (barre devant)\n10 burpees\nWOD : Team of 2\nAMRAP (maximum de tours) 30' : You go I go\n12 épaulés en squat depuis les cuisses\n12 Cal rameur\n12 fentes barre devant (front rack)\n12 burpees Over the Bar\nAfter 8 tours : MAX\n10 thrusters (squat + poussée)\n10 Cal Bike (Echo) — to share\nRx : 45/30\nInt : 35/20\nSc : 20/15",
   "note": "Travaillé à 30 kg sur le WOD (hang squat clean / front rack lunges / thrusters) — entre Sc 20 et Int 35",
   "photo": "https://dgtzuqphqg23d.cloudfront.net/QNMZR_EGWvu1UBoNJ9uZhj8HRR2xFepOH314m8lvhMU-2048x1536.jpg"
  },
@@ -109,6 +116,7 @@ window.SEANCES = [
   "hrMax": 151,
   "effort": 22,
   "contenu": "Zwift - Parcours Casse-Pattes (France / Mont Saint-Michel)\n\nCapture 1 (16:29)\nPuissance 177 W\nCadence 76 RPM\nFC 131 BPM\nPuissance moyenne 140 W\nDépense 113 KJ\nGear 14\nVitesse 29 KM/H\nDistance 6.6 KM\nDénivelé 7 M\nTemps écoulé 13:22\nPente -2 %\nPosition parcours Casse-Pattes 17.3 KM\nB.Leroy 2.5 w/kg 6.6 KM\n\nCapture 2 (16:56)\nPuissance 163 W\nCadence 69 RPM\nFC 135 BPM\nPuissance moyenne 162 W\nDépense 392 KJ\nGear 9\nVitesse 12 KM/H\nDistance 19.2 KM\nDénivelé 122 M\nTemps écoulé 40:18\nPente 6 % (segment 5.9 %)\nSegment Petit KOM 4.0% 2.7 KM - temps de référence 7:50\nPosition parcours Casse-Pattes 4.7 KM\nB.Leroy 2.3 w/kg 19.2 KM\n\nCapture 3 (17:03)\nPuissance 143 W\nCadence 96 RPM\nFC 124 BPM\nPuissance moyenne 159 W\nDépense 451 KJ\nGear 14\nVitesse 57 KM/H\nDistance 22.6 KM\nDénivelé 155 M\nTemps écoulé 47:03\nPente -5 %\nSegment Marina Sprint Reverse 0.0% 0.19 KM - RP 90 jours 26.47 (il y a 44 min)\nPosition parcours Casse-Pattes 1.2 KM\nB.Leroy 2.0 w/kg 22.6 KM\nObjectif hebdomadaire atteint 2:00 heures",
+  "contenuFr": "Zwift - Parcours Casse-Pattes (France / Mont Saint-Michel)\nCapture 1 (16:29)\nPuissance 177 W\nCadence 76 RPM\nFC 131 BPM\nPuissance moyenne 140 W\nDépense 113 KJ\nGear 14\nVitesse 29 KM/H\nDistance 6.6 KM\nDénivelé 7 M\nTemps écoulé 13:22\nPente -2 %\nPosition parcours Casse-Pattes 17.3 KM\nB.Leroy 2.5 ws/kg 6.6 KM\nCapture 2 (16:56)\nPuissance 163 W\nCadence 69 RPM\nFC 135 BPM\nPuissance moyenne 162 W\nDépense 392 KJ\nGear 9\nVitesse 12 KM/H\nDistance 19.2 KM\nDénivelé 122 M\nTemps écoulé 40:18\nPente 6 % (segment 5.9 %)\nSegment Petit KOM 4.0% 2.7 KM - temps de référence 7:50\nPosition parcours Casse-Pattes 4.7 KM\nB.Leroy 2.3 ws/kg 19.2 KM\nCapture 3 (17:03)\nPuissance 143 W\nCadence 96 RPM\nFC 124 BPM\nPuissance moyenne 159 W\nDépense 451 KJ\nGear 14\nVitesse 57 KM/H\nDistance 22.6 KM\nDénivelé 155 M\nTemps écoulé 47:03\nPente -5 %\nSegment Marina Sprint Reverse 0.0% 0.19 KM - RP 90 jours 26.47 (il y a 44 min)\nPosition parcours Casse-Pattes 1.2 KM\nB.Leroy 2.0 w/kg 22.6 KM\nObjectif hebdomadaire atteint 2:00 heures",
   "note": null,
   "photo": "https://dgtzuqphqg23d.cloudfront.net/Y99-VN-xYCQOEnrbpRfDtWyhucgt_cRvLS9fv7J_bvA-2048x1430.jpg"
  },
@@ -123,6 +131,7 @@ window.SEANCES = [
   "hrMax": 128,
   "effort": 4,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -137,6 +146,7 @@ window.SEANCES = [
   "hrMax": 185,
   "effort": 23,
   "contenu": "Vendredi 21 août\n\nWarm up\n3 sets\n:30 easy\n:20 moderate\n:10 hard\n\n1 set\n:30 band pull apart\n10 pvc reach through\n10 HRPU\n10 ring row\n50m farmer carry\n\n1 set\n:30 band pull apart\n:30 pass through\n10 burpees\n5 strict pull up / ring row\n50m farmer carry\n\nWOD : for time 15'\n400m farmer carry 2x 22,5/15\nthen\n6 rounds\n5 burpees\n1 rope climb\n\nPost workout : 3 sets\n12/12 single leg KB deadlift\nInt 17,5/12,5\nSc 15/10",
+  "contenuFr": "Vendredi 21 aoûts\néchauffement\n3 séries\n:30 easys\n:20 moderates\n:10 hards\n1 séries\n:30 bands pull apart\n10 pvcs reach through\n10 HRPU\n10 tirages horizontal aux anneaux\n50m portage fermier\n1 séries\n:30 bands pull apart\n:30 pass through\n10 burpees\n5 tractions strictes / tirage horizontal aux anneaux\n50m portage fermier\nWOD : le plus vite possible : 15'\n400m portage fermier 2x 22,5/15\npuis\n6 tours\n5 burpees\n1 montée à la corde\nPost workout : 3 séries\n12/12 singles leg KB soulevé de terre\nInt 17,5/12,5\nSc 15/10",
   "note": null,
   "photo": "https://dgtzuqphqg23d.cloudfront.net/P6Ln8fVG5YJOZW0GRwTCIoPqMEmEsx6nyZRr4C_Zto0-2048x1536.jpg"
  },
@@ -151,6 +161,7 @@ window.SEANCES = [
   "hrMax": 165,
   "effort": 44,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -165,6 +176,7 @@ window.SEANCES = [
   "hrMax": 170,
   "effort": 39,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -179,6 +191,7 @@ window.SEANCES = [
   "hrMax": 163,
   "effort": 52,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -193,6 +206,7 @@ window.SEANCES = [
   "hrMax": 145,
   "effort": 7,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -207,6 +221,7 @@ window.SEANCES = [
   "hrMax": 140,
   "effort": 6,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -221,6 +236,7 @@ window.SEANCES = [
   "hrMax": 126,
   "effort": 2,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -235,6 +251,7 @@ window.SEANCES = [
   "hrMax": 138,
   "effort": 7,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -249,6 +266,7 @@ window.SEANCES = [
   "hrMax": 166,
   "effort": 48,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -263,6 +281,7 @@ window.SEANCES = [
   "hrMax": 140,
   "effort": 2,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -277,6 +296,7 @@ window.SEANCES = [
   "hrMax": 100,
   "effort": 3,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -291,6 +311,7 @@ window.SEANCES = [
   "hrMax": 162,
   "effort": 5,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": "https://dgtzuqphqg23d.cloudfront.net/FpuiWGgJxn6WEFQplzhjJqZ9ICdZehfqx9UieJjgaII-2048x1536.jpg"
  },
@@ -305,6 +326,7 @@ window.SEANCES = [
   "hrMax": 175,
   "effort": 22,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -319,6 +341,7 @@ window.SEANCES = [
   "hrMax": 125,
   "effort": 3,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -333,6 +356,7 @@ window.SEANCES = [
   "hrMax": 150,
   "effort": 8,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -347,6 +371,7 @@ window.SEANCES = [
   "hrMax": 102,
   "effort": null,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -361,6 +386,7 @@ window.SEANCES = [
   "hrMax": 163,
   "effort": 6,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -375,6 +401,7 @@ window.SEANCES = [
   "hrMax": 138,
   "effort": 4,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -389,6 +416,7 @@ window.SEANCES = [
   "hrMax": 159,
   "effort": 3,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -403,6 +431,7 @@ window.SEANCES = [
   "hrMax": 147,
   "effort": 24,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -417,6 +446,7 @@ window.SEANCES = [
   "hrMax": 169,
   "effort": 36,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -431,6 +461,7 @@ window.SEANCES = [
   "hrMax": 139,
   "effort": 5,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -445,6 +476,7 @@ window.SEANCES = [
   "hrMax": 178,
   "effort": 4,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -459,6 +491,7 @@ window.SEANCES = [
   "hrMax": 120,
   "effort": 3,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -473,6 +506,7 @@ window.SEANCES = [
   "hrMax": 161,
   "effort": 19,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -487,6 +521,7 @@ window.SEANCES = [
   "hrMax": 152,
   "effort": 4,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -501,6 +536,7 @@ window.SEANCES = [
   "hrMax": 137,
   "effort": 3,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -515,6 +551,7 @@ window.SEANCES = [
   "hrMax": 152,
   "effort": 18,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -529,6 +566,7 @@ window.SEANCES = [
   "hrMax": 154,
   "effort": 26,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -543,6 +581,7 @@ window.SEANCES = [
   "hrMax": 143,
   "effort": 12,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -557,6 +596,7 @@ window.SEANCES = [
   "hrMax": 164,
   "effort": 3,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -571,6 +611,7 @@ window.SEANCES = [
   "hrMax": 151,
   "effort": 13,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -585,6 +626,7 @@ window.SEANCES = [
   "hrMax": 129,
   "effort": null,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -599,6 +641,7 @@ window.SEANCES = [
   "hrMax": 190,
   "effort": 66,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -613,6 +656,7 @@ window.SEANCES = [
   "hrMax": 113,
   "effort": null,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -627,6 +671,7 @@ window.SEANCES = [
   "hrMax": null,
   "effort": null,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -641,6 +686,7 @@ window.SEANCES = [
   "hrMax": 156,
   "effort": 7,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -655,6 +701,7 @@ window.SEANCES = [
   "hrMax": 156,
   "effort": 3,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -669,6 +716,7 @@ window.SEANCES = [
   "hrMax": 162,
   "effort": 15,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -683,6 +731,7 @@ window.SEANCES = [
   "hrMax": 151,
   "effort": 16,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -697,6 +746,7 @@ window.SEANCES = [
   "hrMax": 164,
   "effort": 8,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -711,6 +761,7 @@ window.SEANCES = [
   "hrMax": 142,
   "effort": 9,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -725,6 +776,7 @@ window.SEANCES = [
   "hrMax": 159,
   "effort": 28,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -739,6 +791,7 @@ window.SEANCES = [
   "hrMax": 136,
   "effort": 4,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -753,6 +806,7 @@ window.SEANCES = [
   "hrMax": 138,
   "effort": 3,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -767,6 +821,7 @@ window.SEANCES = [
   "hrMax": 145,
   "effort": 12,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -781,6 +836,7 @@ window.SEANCES = [
   "hrMax": 122,
   "effort": 3,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -795,6 +851,7 @@ window.SEANCES = [
   "hrMax": 113,
   "effort": 3,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -809,6 +866,7 @@ window.SEANCES = [
   "hrMax": 120,
   "effort": 3,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -823,6 +881,7 @@ window.SEANCES = [
   "hrMax": 84,
   "effort": 1,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -837,6 +896,7 @@ window.SEANCES = [
   "hrMax": 181,
   "effort": 39,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -851,6 +911,7 @@ window.SEANCES = [
   "hrMax": 180,
   "effort": 6,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -865,6 +926,7 @@ window.SEANCES = [
   "hrMax": 171,
   "effort": 23,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -879,6 +941,7 @@ window.SEANCES = [
   "hrMax": 142,
   "effort": 8,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -893,6 +956,7 @@ window.SEANCES = [
   "hrMax": 145,
   "effort": 8,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -907,6 +971,7 @@ window.SEANCES = [
   "hrMax": 149,
   "effort": 10,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -921,6 +986,7 @@ window.SEANCES = [
   "hrMax": 151,
   "effort": 33,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -935,6 +1001,7 @@ window.SEANCES = [
   "hrMax": 151,
   "effort": 44,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -949,6 +1016,7 @@ window.SEANCES = [
   "hrMax": 175,
   "effort": 11,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -963,6 +1031,7 @@ window.SEANCES = [
   "hrMax": 138,
   "effort": 4,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -977,6 +1046,7 @@ window.SEANCES = [
   "hrMax": 154,
   "effort": 55,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -991,6 +1061,7 @@ window.SEANCES = [
   "hrMax": 181,
   "effort": 2,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -1005,6 +1076,7 @@ window.SEANCES = [
   "hrMax": 175,
   "effort": 7,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -1019,6 +1091,7 @@ window.SEANCES = [
   "hrMax": 169,
   "effort": 37,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -1033,6 +1106,7 @@ window.SEANCES = [
   "hrMax": 158,
   "effort": 6,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -1047,6 +1121,7 @@ window.SEANCES = [
   "hrMax": 186,
   "effort": 53,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -1061,6 +1136,7 @@ window.SEANCES = [
   "hrMax": 168,
   "effort": 42,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -1075,6 +1151,7 @@ window.SEANCES = [
   "hrMax": 126,
   "effort": 4,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -1089,6 +1166,7 @@ window.SEANCES = [
   "hrMax": 160,
   "effort": 41,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -1103,6 +1181,7 @@ window.SEANCES = [
   "hrMax": 128,
   "effort": 4,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -1117,6 +1196,7 @@ window.SEANCES = [
   "hrMax": 181,
   "effort": 42,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -1131,6 +1211,7 @@ window.SEANCES = [
   "hrMax": 134,
   "effort": null,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -1145,6 +1226,7 @@ window.SEANCES = [
   "hrMax": 148,
   "effort": 20,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -1159,6 +1241,7 @@ window.SEANCES = [
   "hrMax": 124,
   "effort": 4,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -1173,6 +1256,7 @@ window.SEANCES = [
   "hrMax": 152,
   "effort": 32,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -1187,6 +1271,7 @@ window.SEANCES = [
   "hrMax": 125,
   "effort": 4,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -1201,6 +1286,7 @@ window.SEANCES = [
   "hrMax": 169,
   "effort": 82,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -1215,6 +1301,7 @@ window.SEANCES = [
   "hrMax": 164,
   "effort": 37,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -1229,6 +1316,7 @@ window.SEANCES = [
   "hrMax": 151,
   "effort": 11,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -1243,6 +1331,7 @@ window.SEANCES = [
   "hrMax": 151,
   "effort": 21,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -1257,6 +1346,7 @@ window.SEANCES = [
   "hrMax": 146,
   "effort": 19,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -1271,6 +1361,7 @@ window.SEANCES = [
   "hrMax": 149,
   "effort": 39,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -1285,6 +1376,7 @@ window.SEANCES = [
   "hrMax": 166,
   "effort": 123,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -1299,6 +1391,7 @@ window.SEANCES = [
   "hrMax": 159,
   "effort": 25,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -1313,6 +1406,7 @@ window.SEANCES = [
   "hrMax": 113,
   "effort": 2,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -1327,6 +1421,7 @@ window.SEANCES = [
   "hrMax": 151,
   "effort": 20,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -1341,6 +1436,7 @@ window.SEANCES = [
   "hrMax": 148,
   "effort": 20,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -1355,6 +1451,7 @@ window.SEANCES = [
   "hrMax": 160,
   "effort": 36,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -1369,6 +1466,7 @@ window.SEANCES = [
   "hrMax": 158,
   "effort": 32,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -1383,6 +1481,7 @@ window.SEANCES = [
   "hrMax": 117,
   "effort": 2,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -1397,6 +1496,7 @@ window.SEANCES = [
   "hrMax": 166,
   "effort": 30,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -1411,6 +1511,7 @@ window.SEANCES = [
   "hrMax": 145,
   "effort": 18,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -1425,6 +1526,7 @@ window.SEANCES = [
   "hrMax": 168,
   "effort": 17,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -1439,6 +1541,7 @@ window.SEANCES = [
   "hrMax": 145,
   "effort": 9,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -1453,6 +1556,7 @@ window.SEANCES = [
   "hrMax": 138,
   "effort": 13,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -1467,6 +1571,7 @@ window.SEANCES = [
   "hrMax": 148,
   "effort": 44,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -1481,6 +1586,7 @@ window.SEANCES = [
   "hrMax": 145,
   "effort": 21,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -1495,6 +1601,7 @@ window.SEANCES = [
   "hrMax": 164,
   "effort": 109,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -1509,6 +1616,7 @@ window.SEANCES = [
   "hrMax": 148,
   "effort": 31,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -1523,6 +1631,7 @@ window.SEANCES = [
   "hrMax": 88,
   "effort": 1,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -1537,6 +1646,7 @@ window.SEANCES = [
   "hrMax": 168,
   "effort": 53,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -1551,6 +1661,7 @@ window.SEANCES = [
   "hrMax": 156,
   "effort": 18,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -1565,6 +1676,7 @@ window.SEANCES = [
   "hrMax": 170,
   "effort": 26,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -1579,6 +1691,7 @@ window.SEANCES = [
   "hrMax": 143,
   "effort": 2,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -1593,6 +1706,7 @@ window.SEANCES = [
   "hrMax": 147,
   "effort": 21,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -1607,6 +1721,7 @@ window.SEANCES = [
   "hrMax": 168,
   "effort": 37,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -1621,6 +1736,7 @@ window.SEANCES = [
   "hrMax": 151,
   "effort": 20,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -1635,6 +1751,7 @@ window.SEANCES = [
   "hrMax": 171,
   "effort": 15,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -1649,6 +1766,7 @@ window.SEANCES = [
   "hrMax": 148,
   "effort": 29,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -1663,6 +1781,7 @@ window.SEANCES = [
   "hrMax": 152,
   "effort": 24,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -1677,6 +1796,7 @@ window.SEANCES = [
   "hrMax": 184,
   "effort": 20,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -1691,6 +1811,7 @@ window.SEANCES = [
   "hrMax": 150,
   "effort": 39,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -1705,6 +1826,7 @@ window.SEANCES = [
   "hrMax": 132,
   "effort": 19,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -1719,6 +1841,7 @@ window.SEANCES = [
   "hrMax": 165,
   "effort": 51,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -1733,6 +1856,7 @@ window.SEANCES = [
   "hrMax": 160,
   "effort": 85,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -1747,6 +1871,7 @@ window.SEANCES = [
   "hrMax": 156,
   "effort": 16,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -1761,6 +1886,7 @@ window.SEANCES = [
   "hrMax": 145,
   "effort": 16,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -1775,6 +1901,7 @@ window.SEANCES = [
   "hrMax": 142,
   "effort": 21,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -1789,6 +1916,7 @@ window.SEANCES = [
   "hrMax": 174,
   "effort": 9,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -1803,6 +1931,7 @@ window.SEANCES = [
   "hrMax": 147,
   "effort": 26,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -1817,6 +1946,7 @@ window.SEANCES = [
   "hrMax": 181,
   "effort": 12,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  },
@@ -1831,6 +1961,7 @@ window.SEANCES = [
   "hrMax": 155,
   "effort": 34,
   "contenu": null,
+  "contenuFr": null,
   "note": null,
   "photo": null
  }

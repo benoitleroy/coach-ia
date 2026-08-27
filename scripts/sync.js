@@ -16,6 +16,7 @@ import { computeBilan, coachBilan, writeBilan } from "./bilan.js";
 import { loadNotes } from "./note.js";
 import { writeProgramme } from "./programme.js";
 import { loadNST } from "./nst.js";
+import { traduireWod } from "./mouvements.js";
 
 const __dirname   = path.dirname(fileURLToPath(import.meta.url));
 const OUTPUT      = path.join(__dirname, "../js/data-benoit.js");
@@ -503,6 +504,7 @@ function writeSeances(activities, extras) {
       hrMax: a.max_heartrate ? Math.round(a.max_heartrate) : null,
       effort: a.suffer_score || null,
       contenu: extras[a.id]?.contenu || null,
+      contenuFr: extras[a.id]?.contenu ? traduireWod(extras[a.id].contenu.split("\n")).join("\n") : null,
       note: extras[a.id]?.note || null,
       photo: extras[a.id]?.photo || null,
     }));
@@ -661,6 +663,10 @@ async function main() {
     catch (e) { console.warn("⚠️  Photos non traitées :", e.message); }
     // Notes de séance (scripts/notes.json) → extras.note
     try { for (const [id, n] of Object.entries(loadNotes())) extras[id] = { ...(extras[id] || {}), note: n.note }; } catch {}
+    // Version française des tableaux de WOD lus sur photo (Benoît lit mal l'anglais)
+    for (const [id, e] of Object.entries(extras)) {
+      if (e && e.contenu) e.contenuFr = traduireWod(e.contenu.split("\n")).join("\n");
+    }
     const carnet = buildCarnet(activities, new Date(), 12, extras);
     writeCarnet(carnet);
     console.log(`📝 Carnet         : js/carnet-data.js (${carnet.semaine.label} · ratio ${carnet.charge.ratio ?? "—"} · ${carnet.charge.statut})`);
