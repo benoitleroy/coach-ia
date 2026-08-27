@@ -21,8 +21,15 @@ window.PROGRAMME = {
    "semaines": 4,
    "debut": "2026-08-31",
    "but": "Reposer la régularité et la tolérance tendineuse. Aucune intensité en course.",
+   "doubles": [
+    3,
+    3,
+    4,
+    2
+   ],
    "priorites": [
-    "5 jours actifs par semaine, volume 5 h → 6 h 30, progression max +15 %/semaine",
+    "Bi-quotidien progressif : 3 doublés en semaine 1 et 2, 4 en semaine 3, 2 en semaine de décharge (matin aérobie facile, soir qualité)",
+    "6 jours actifs par semaine, volume 5 h → 7 h, progression max +15 %/semaine",
     "Toute la course en aisance stricte (FC < 140), sortie longue jusqu'à 1 h 15",
     "2 séances de force par semaine (dont la box NST), charges modérées, technique avant charge",
     "Réintroduire vélo (1×/sem) et natation (1×/sem) comme volume sans impact",
@@ -36,7 +43,14 @@ window.PROGRAMME = {
    "semaines": 4,
    "debut": "2026-09-28",
    "but": "Installer le stimulus VO2max façon Billat et monter la force.",
+   "doubles": [
+    4,
+    5,
+    5,
+    3
+   ],
    "priorites": [
+    "Bi-quotidien : 4 doublés puis 5 (matin aérobie ou skill, soir qualité) — plafond 5 tant que le HRV n'est pas stable dans sa base",
     "1 séance VO2max/semaine en 30/30 calés sur la vVO2max mesurée (2×(8→12)×30/30, récup 3')",
     "Volume 6 h → 7 h, sortie longue 1 h 15 → 1 h 30 à sensation (variations libres autorisées)",
     "Force : passer en 5×5 progressif (+2,5 kg quand les 5 reps sortent propres), viser back squat 5 reps à 0,9× poids de corps",
@@ -51,7 +65,14 @@ window.PROGRAMME = {
    "semaines": 4,
    "debut": "2026-10-26",
    "but": "Rendre la forme utilisable : combiner endurance et force dans la même journée.",
+   "doubles": [
+    5,
+    5,
+    4,
+    2
+   ],
    "priorites": [
+    "Bi-quotidien stabilisé à 5 doublés, réduit à 2 la semaine du test",
     "Maintenir 1 séance VO2max/semaine (30/30 ou 3×3 min à vVO2max)",
     "1 séance combinée par semaine (course en aisance puis force dans la journée) pour préparer le test",
     "Force : chercher le back squat 5 reps à 1× poids de corps et 5 tractions strictes enchaînées",
@@ -84,8 +105,15 @@ window.PROGRAMME = {
    "semaines": 4,
    "debut": "2026-08-31",
    "but": "Reposer la régularité et la tolérance tendineuse. Aucune intensité en course.",
+   "doubles": [
+    3,
+    3,
+    4,
+    2
+   ],
    "priorites": [
-    "5 jours actifs par semaine, volume 5 h → 6 h 30, progression max +15 %/semaine",
+    "Bi-quotidien progressif : 3 doublés en semaine 1 et 2, 4 en semaine 3, 2 en semaine de décharge (matin aérobie facile, soir qualité)",
+    "6 jours actifs par semaine, volume 5 h → 7 h, progression max +15 %/semaine",
     "Toute la course en aisance stricte (FC < 140), sortie longue jusqu'à 1 h 15",
     "2 séances de force par semaine (dont la box NST), charges modérées, technique avant charge",
     "Réintroduire vélo (1×/sem) et natation (1×/sem) comme volume sans impact",
@@ -99,5 +127,5 @@ window.PROGRAMME = {
   "debut": "2026-08-31",
   "termine": false
  },
- "generatedAt": "2026-08-27T11:49:38.662Z"
+ "generatedAt": "2026-08-27T13:48:00.506Z"
 };

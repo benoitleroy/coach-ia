@@ -37,12 +37,18 @@
     $("sem-vol").textContent = sem.volumeCible || "";
     $("sem-obj").textContent = sem.titre || "";
     const lundi = C.semaineDebut ? new Date(C.semaineDebut + "T12:00:00") : null;
+    const vide = s => !s || !s.titre || /^(rien|repos|—|-)$/i.test(s.titre.trim());
+    const seancesDe = j => j.matin || j.soir
+      ? [["Matin", j.matin], ["Soir", j.soir]].filter(([, s]) => !vide(s))
+      : (j.seance ? [["", { ico: j.ico, titre: j.seance, detail: j.detail, gardefou: j.gardefou }]] : []);
+    const ligneSeance = ([moment, s]) => `<div class="s-item">${moment ? `<span class="s-moment">${moment}</span>` : ""}<span class="p-ico">${esc(s.ico || "")}</span><span><div class="p-titre">${esc(s.titre)}${s.intention ? ` <em class="s-int">${esc(s.intention)}</em>` : ""}</div><div class="p-detail">${esc(s.detail || "")}</div>${s.gardefou ? `<div class="p-garde">${esc(s.gardefou)}</div>` : ""}</span></div>`;
     $("sem-plan").innerHTML = sem.jours.map((j, i) => {
       const d = lundi ? new Date(lundi.getTime() + i * 86400000) : null;
       const key = d ? d.toISOString().slice(0, 10) : null;
-      const fait = key ? S.some(s => s.date.slice(0, 10) === key) : false;
+      const fait = key ? S.filter(s => s.date.slice(0, 10) === key).length : 0;
       const cur = i === jourIndexAuj;
-      return `<li class="${/😴/.test(j.ico || "") ? "repos " : ""}${cur ? "cur" : ""}"><span class="p-jour">${esc(j.jour)}${d ? `<small>${d.getDate()}</small>` : ""}</span><span class="p-ico">${fait ? "✅" : esc(j.ico || "")}</span><span><div class="p-titre">${esc(j.seance)}</div><div class="p-detail">${esc(j.detail || "")}</div>${j.gardefou ? `<div class="p-garde">${esc(j.gardefou)}</div>` : ""}</span></li>`;
+      const items = seancesDe(j);
+      return `<li class="jour${items.length ? "" : " repos"}${cur ? " cur" : ""}"><div class="j-head"><span class="p-jour">${esc(j.jour)}${d ? `<small>${d.getDate()}</small>` : ""}</span>${fait ? `<span class="j-fait">✅ ${fait}</span>` : ""}</div>${items.length ? items.map(ligneSeance).join("") : `<div class="s-item"><span class="p-ico">😴</span><span class="p-titre">Repos</span></div>`}</li>`;
     }).join("");
     $("sem-regle2").textContent = C.regle || "";
 
@@ -52,9 +58,17 @@
     const faitAuj = S.filter(s => s.date.slice(0, 10) === todayKey);
     $("jour-etat").textContent = faitAuj.length ? `✅ ${faitAuj.length} séance${faitAuj.length > 1 ? "s" : ""} enregistrée${faitAuj.length > 1 ? "s" : ""}` : "à faire";
     if (j) {
-      $("jour-seance").innerHTML = `<span class="d-ico">${esc(j.ico || "")}</span> <span class="d-main">${esc(j.seance)}</span>`;
-      $("jour-detail").textContent = j.detail || "";
-      $("jour-garde").textContent = j.gardefou && j.gardefou !== "—" ? "⚑ " + j.gardefou : "";
+      const items = seancesDe(j);
+      if (!items.length) {
+        $("jour-seance").innerHTML = `<span class="d-ico">😴</span> <span class="d-main">Repos</span>`;
+        $("jour-detail").textContent = "Journée sans entraînement.";
+        $("jour-garde").textContent = "";
+      } else {
+        $("jour-seance").innerHTML = items.map(([moment, s]) =>
+          `<div class="j-seance"><div class="j-titre"><span class="d-ico">${esc(s.ico || "")}</span> <span class="d-main">${esc(s.titre)}</span>${moment ? `<span class="s-moment">${moment}</span>` : ""}</div>
+           <div class="p-detail">${esc(s.detail || "")}</div>${s.gardefou ? `<div class="p-garde">${esc(s.gardefou)}</div>` : ""}</div>`).join("");
+        $("jour-detail").textContent = ""; $("jour-garde").textContent = "";
+      }
     }
     const rep = C.nutrition && (C.nutrition.jours || []).find(x => (x.jour || "").toLowerCase().startsWith(JJ[today.getDay()].toLowerCase()));
     if (rep) {

@@ -286,3 +286,15 @@ details.recette .rc-body .coach-sub { margin-top: .4rem; }
 .mv-fr { font-size: .85rem; color: var(--accent); }
 .mv-n { font-size: .72rem; color: var(--faint); }
 .mv-none { color: var(--faint); }
+
+/* Semaine bi-quotidienne */
+.plan li.jour { display: block; }
+.plan .j-head { display: flex; align-items: baseline; gap: .5rem; margin-bottom: .2rem; }
+.plan .j-fait { font-size: .78rem; color: var(--accent); }
+.plan .s-item { display: grid; grid-template-columns: 3.2rem 1.6rem 1fr; gap: .4rem; align-items: start; padding: .25rem 0; }
+.plan .s-moment { font-size: .7rem; text-transform: uppercase; letter-spacing: .05em; color: var(--faint); padding-top: .15rem; }
+.plan .s-int { font-style: normal; font-size: .72rem; color: var(--faint); }
+.j-seance { margin-bottom: .8rem; }
+.j-seance:last-child { margin-bottom: 0; }
+.j-titre { display: flex; align-items: baseline; gap: .4rem; flex-wrap: wrap; }
+.j-titre .s-moment { font-size: .7rem; text-transform: uppercase; letter-spacing: .05em; color: var(--faint); }

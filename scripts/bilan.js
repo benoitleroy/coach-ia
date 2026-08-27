@@ -199,6 +199,28 @@ function digest(bilan, carnet, activities) {
   return lines.join("\n");
 }
 
+// Principes de construction d'une semaine (programmation d'athlète)
+const PRINCIPES = `PRINCIPES DE PROGRAMMATION — construis la semaine avec ces règles de métier :
+- UNE SÉANCE = UNE INTENTION. Chaque séance a une seule cible : force lourde / filière courte (<5 min, tout-out) / filière moyenne (8-15 min, très dur) / filière longue (20-40 min, aérobie soutenu) / endurance facile / skill-gym / récupération. On n'empile pas force lourde + gros métcon dans la même séance.
+- CYCLE DE FORCE CHIFFRÉ : la force suit une progression écrite (5×5 → 5×3 → 3×3 sur le cycle, charges qui montent de 2,5 kg quand les reps sortent propres, décharge la 4e semaine). Donne toujours une cible chiffrée (% approximatif ou repère « la charge où les 2 dernières reps restent propres »).
+- ROTATION DES FILIÈRES sur la semaine : chaque filière touchée 1 à 2 fois maximum, jamais trois métcons moyens d'affilée. Une semaine type contient 1 court, 1 moyen, 1 long.
+- ROTATION DES PATTERNS MOTEURS : squat / charnière (soulevé, swing) / poussée / tirage / gainage / monostructurel (course, rameur, vélo). Équilibre sur la semaine, pas dans la séance. Ne programme pas deux jours de suite le même pattern lourd.
+- LE SKILL SE TRAVAILLE FRAIS : gymnastique et technique avant le WOD, jamais en fin de séance épuisé.
+- PROGRESSION MESURABLE : même séance, plus de charge OU moins de temps. Dis explicitement ce qui doit progresser par rapport à la semaine précédente.
+- LES BENCHMARKS SONT DES TESTS, pas de l'entraînement : n'en programme un (Fran, Helen, Cindy, Grace…) que comme test ponctuel, en semaine de décharge ou fin de bloc, jamais deux dans la même semaine.
+- VARIÉTÉ CONTRÔLÉE : ne reprogramme pas un mouvement lourd ou un WOD déjà fait dans les 10 derniers jours (voir l'historique). La variété sert la progression, elle ne la remplace pas.
+- ÉQUILIBRE HEBDO CIBLE pour un objectif hybride : ~60-70 % du temps en aisance (conversation possible), 10-20 % très dur, le reste en force/skill.`;
+
+// Organisation bi-quotidienne demandée par Benoît (27/08/2026)
+const BI_QUOTIDIEN = `ORGANISATION DE SES JOURNÉES — Benoît s'entraîne DEUX FOIS PAR JOUR dès la fin de la semaine de reprise :
+- MATIN, avant 6 h (donc à jeun ou juste après son petit-déjeuner fixe) : séance AÉROBIE FACILE ou technique — course en aisance (FC < 140), vélo, natation, mobilité, gainage. JAMAIS d'intensité forte le matin sur une reprise : le corps est froid, les tendons aussi, et il enchaîne une journée de chantier.
+- SOIR : la séance de QUALITÉ — box CrossFit, force, ou la séance dure du bloc.
+- RÈGLE ABSOLUE : jamais deux séances dures dans la même journée, ni deux jours durs consécutifs. Si le soir est dur, le matin suivant est facile ou repos.
+- MONTÉE PROGRESSIVE du nombre de doublés : semaine 1 du bloc = 3 doublés maximum, +1 par semaine, plafond 5 doublés/semaine tant que le HRV n'est pas stabilisé dans sa base. Le reste des jours = une seule séance.
+- Toujours au moins UNE journée complète sans rien dans la semaine.
+- Précise pour chaque jour ce qui se passe le MATIN et ce qui se passe le SOIR (ou « — » si rien).
+- Le sommeil devient le facteur limitant : si le sommeil moyen sur 7 nuits descend sous 6 h 45, réduis d'un doublé et dis-le.`;
+
 // Référentiel méthodologique demandé par Benoît (26/08/2026) : Véronique Billat
 const METHODE_BILLAT = `MÉTHODE DE RÉFÉRENCE — Véronique Billat (physiologie de l'exercice, VO2max) — applique ces principes dans la programmation :
 - La VO2max se travaille et se CONSERVE en vieillissant par l'intensité, pas par le volume : garder 1 stimulus VO2max/semaine dès que la base est posée (HRV en base, pas de douleur), même court.
@@ -220,7 +242,11 @@ BOX : ${PROFIL.box}
 NUTRITION : ${PROFIL.nutrition}
 DATE DU JOUR : ${now.toISOString().slice(0, 10)}. La semaine à planifier est celle du LUNDI ${semaineCible(now).debut} au DIMANCHE ${semaineCible(now).fin} (${semaineCible(now).label}). Si des séances de cette semaine ont déjà été faites (voir les données), tiens-en compte : ne les reprogramme pas, ajuste les jours restants.
 
+${PRINCIPES}
+
 ${METHODE_BILLAT}
+
+${BI_QUOTIDIEN}
 
 DONNÉES :
 ${digest(bilan, carnet, activities)}
@@ -232,10 +258,11 @@ Réponds UNIQUEMENT avec un objet JSON valide (pas de markdown, pas de texte aut
  "manques": ["2 à 4 choses qui manquent pour l'objectif hybride, chacune une phrase courte et actionnable"],
  "vigilance": "1 phrase sur le risque principal du moment (blessure, surcharge, décrochage) ou \\"\\" si rien",
  "semaine": {
-   "titre": "objectif de la semaine prochaine en quelques mots",
-   "volumeCible": "ex. ~4 h 30",
+   "titre": "objectif de la semaine en quelques mots",
+   "volumeCible": "ex. ~6 h 30",
+   "doubles": "nombre de journées à deux séances cette semaine, ex. 3",
    "jours": [
-     {"jour": "Lun", "ico": "🏃", "seance": "titre court", "detail": "contenu précis (durées, FC cibles, séries × reps, charges relatives)", "gardefou": "1 règle d'arrêt ou d'ajustement"}
+     {"jour": "Lun", "matin": {"ico": "🏃", "titre": "titre court", "intention": "aisance | force | filière courte | filière moyenne | filière longue | skill | récup | repos", "detail": "contenu précis (durées, FC cibles, séries × reps, charges chiffrées)", "gardefou": "1 règle d'arrêt ou d'ajustement"}, "soir": {"ico": "🏋️", "titre": "…", "intention": "…", "detail": "…", "gardefou": "…"}}
    ]
  },
  "regle": "1 phrase : quelle séance sauter en priorité si la semaine déborde, laquelle ne jamais sauter",
@@ -253,7 +280,7 @@ Réponds UNIQUEMENT avec un objet JSON valide (pas de markdown, pas de texte aut
 }
 Contraintes pour les recettes : TOUTES les préparations du batch ET tous les dîners/boîtes qui demandent une cuisson doivent avoir leur recette complète (8 à 12 recettes), écrites pour quelqu'un qui cuisine peu : quantités exactes en g/ml/pièces, étapes numérotées courtes, températures et durées, ce qu'on doit voir/sentir pour savoir que c'est cuit, et la conservation. Les recettes réutilisent le batch (pas de recette qui refait cuire du riz ou du poulet déjà préparés). Les ingrédients des recettes et la liste de courses doivent correspondre exactement (mêmes produits, quantités totales cohérentes, arrondies au conditionnement du supermarché : boîte, paquet, barquette).
 Contraintes pour la nutrition : 7 entrées (Lun→Dim) alignées sur la séance du jour (jour force = plus de protéines et glucides au dîner, jour endurance longue = glucides la veille au soir et au petit-déj, repos = assiette plus légère, légumes dominants) ; repas RÉALISTES de semaine : 3 à 5 recettes de base déclinées, réutilisant les préparations du batch, cuisson ≤ 20 min le soir ; quantités en unités simples (1 poing, 1 paume, 150 g, 2 œufs) ; petit-déjeuners répétitifs acceptés ; la liste de courses doit couvrir exactement les repas proposés, groupée par rayon, avec quantités pour 1 personne / 7 jours.
-Contraintes pour la semaine : 7 entrées (Lun→Dim, un jour de repos a ico "😴" et detail court), progressive par rapport à ce qui a réellement été fait les 4 dernières semaines (pas plus de +20 à +30 % de volume), 2 séances de force si objectif hybride, au moins 1 séance d'endurance vraiment facile (FC < 140) et au plus 1 séance intense en course, tenir compte des séances CrossFit lues sur photo quand il y en a.`;
+Contraintes pour la semaine : 7 entrées (Lun→Dim). Chaque jour a un objet "matin" ET un objet "soir" ; quand il n'y a rien, mets {"ico": "—", "titre": "Rien", "intention": "repos", "detail": "", "gardefou": ""}. Respecte le nombre de doublés prévu par le bloc et la règle « jamais deux séances dures le même jour ni deux jours durs consécutifs », progressive par rapport à ce qui a réellement été fait les 4 dernières semaines (pas plus de +20 à +30 % de volume), 2 séances de force si objectif hybride, au moins 1 séance d'endurance vraiment facile (FC < 140) et au plus 1 séance intense en course, tenir compte des séances CrossFit lues sur photo quand il y en a.`;
 
 export async function coachBilan(bilan, carnet, activities, opts = {}) {
   const { force = false, log = true, now = new Date() } = opts;

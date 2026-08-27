@@ -31,8 +31,10 @@ export const PROGRAMME = {
     {
       id: 1, nom: "Fondation", semaines: 4, debut: "2026-08-31",
       but: "Reposer la régularité et la tolérance tendineuse. Aucune intensité en course.",
+      doubles: [3, 3, 4, 2],
       priorites: [
-        "5 jours actifs par semaine, volume 5 h → 6 h 30, progression max +15 %/semaine",
+        "Bi-quotidien progressif : 3 doublés en semaine 1 et 2, 4 en semaine 3, 2 en semaine de décharge (matin aérobie facile, soir qualité)",
+        "6 jours actifs par semaine, volume 5 h → 7 h, progression max +15 %/semaine",
         "Toute la course en aisance stricte (FC < 140), sortie longue jusqu'à 1 h 15",
         "2 séances de force par semaine (dont la box NST), charges modérées, technique avant charge",
         "Réintroduire vélo (1×/sem) et natation (1×/sem) comme volume sans impact",
@@ -43,7 +45,9 @@ export const PROGRAMME = {
     {
       id: 2, nom: "Développement", semaines: 4, debut: "2026-09-28",
       but: "Installer le stimulus VO2max façon Billat et monter la force.",
+      doubles: [4, 5, 5, 3],
       priorites: [
+        "Bi-quotidien : 4 doublés puis 5 (matin aérobie ou skill, soir qualité) — plafond 5 tant que le HRV n'est pas stable dans sa base",
         "1 séance VO2max/semaine en 30/30 calés sur la vVO2max mesurée (2×(8→12)×30/30, récup 3')",
         "Volume 6 h → 7 h, sortie longue 1 h 15 → 1 h 30 à sensation (variations libres autorisées)",
         "Force : passer en 5×5 progressif (+2,5 kg quand les 5 reps sortent propres), viser back squat 5 reps à 0,9× poids de corps",
@@ -55,7 +59,9 @@ export const PROGRAMME = {
     {
       id: 3, nom: "Expression", semaines: 4, debut: "2026-10-26",
       but: "Rendre la forme utilisable : combiner endurance et force dans la même journée.",
+      doubles: [5, 5, 4, 2],
       priorites: [
+        "Bi-quotidien stabilisé à 5 doublés, réduit à 2 la semaine du test",
         "Maintenir 1 séance VO2max/semaine (30/30 ou 3×3 min à vVO2max)",
         "1 séance combinée par semaine (course en aisance puis force dans la journée) pour préparer le test",
         "Force : chercher le back squat 5 reps à 1× poids de corps et 5 tractions strictes enchaînées",
@@ -120,6 +126,7 @@ export function texteProgramme(now = new Date()) {
     `Point de départ (26/08) : ${Object.values(PROGRAMME.depart).join(" · ")}`,
     `La semaine à écrire est la SEMAINE ${c.semaineDansCycle}/${c.totalSemaines} du cycle — bloc ${c.bloc.id} « ${c.bloc.nom} », semaine ${c.semaineDansBloc}/${c.bloc.semaines}${c.decharge ? " → SEMAINE DE DÉCHARGE (-40 % de volume, fréquence maintenue)" : ""}.`,
     `But du bloc : ${c.bloc.but}`,
+    `Journées à DEUX séances cette semaine : ${c.bloc.doubles ? c.bloc.doubles[Math.max(0, (c.semaineDansBloc || 1) - 1)] : 3} (les autres jours : une seule séance, et au moins un jour complet sans rien).`,
     `Priorités du bloc :`, ...c.bloc.priorites.map(p => `  - ${p}`),
     `Test prévu dans ce bloc : ${c.bloc.test}`,
     `Règles permanentes :`, ...PROGRAMME.reglesPermanentes.map(r => `  - ${r}`),

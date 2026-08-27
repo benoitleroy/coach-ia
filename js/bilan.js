@@ -43,9 +43,13 @@
       $("sem-titre").textContent = "Semaine prochaine" + (c.semaineLabel ? " · " + c.semaineLabel.split("-")[1] : "");
       $("sem-volume").textContent = s.volumeCible || "";
       $("sem-objectif").textContent = s.titre || "";
+      const vide = x => !x || !x.titre || /^(rien|repos|—|-)$/i.test(String(x.titre).trim());
       $("plan").innerHTML = s.jours.map(j => {
-        const repos = /😴/.test(j.ico || "");
-        return `<li class="${repos ? "repos" : ""}"><span class="p-jour">${esc(j.jour)}</span><span class="p-ico">${esc(j.ico || "")}</span><span><div class="p-titre">${esc(j.seance)}</div>${j.detail ? `<div class="p-detail">${esc(j.detail)}</div>` : ""}${j.gardefou ? `<div class="p-garde">${esc(j.gardefou)}</div>` : ""}</span></li>`;
+        const items = (j.matin || j.soir)
+          ? [["Matin", j.matin], ["Soir", j.soir]].filter(([, x]) => !vide(x))
+          : (j.seance ? [["", { ico: j.ico, titre: j.seance, detail: j.detail, gardefou: j.gardefou }]] : []);
+        if (!items.length) return `<li class="repos"><span class="p-jour">${esc(j.jour)}</span><span class="p-ico">😴</span><span class="p-titre">Repos</span></li>`;
+        return items.map(([moment, x], k) => `<li><span class="p-jour">${k === 0 ? esc(j.jour) : ""}</span><span class="p-ico">${esc(x.ico || "")}</span><span><div class="p-titre">${moment ? `<em class="s-moment">${moment}</em> ` : ""}${esc(x.titre)}</div>${x.detail ? `<div class="p-detail">${esc(x.detail)}</div>` : ""}${x.gardefou ? `<div class="p-garde">${esc(x.gardefou)}</div>` : ""}</span></li>`).join("");
       }).join("");
       $("sem-regle").textContent = c.regle || "";
       $("sem-regle").hidden = !c.regle;
