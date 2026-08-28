@@ -89,6 +89,7 @@
       }).join("");
       // Grille planning : 7 jours × matin/soir, pour caler avec l'agenda
       const H = { Matin: "5 h 30", Soir: "18 h 30" };
+      const G = window.GARDE || {};
       $("grille").innerHTML = `<thead><tr><th></th><th>Matin<br><small>${H.Matin}</small></th><th>Soir<br><small>${H.Soir}</small></th></tr></thead><tbody>` +
         S2.jours.map((j, i) => {
           const cell = s2 => {
@@ -97,9 +98,17 @@
             return `<td><span class="g-ico">${esc(s2.ico || "")}</span> ${esc(s2.titre.replace(/\s*[—-]\s*.*$/, ""))}${s2.intention ? `<br><small>${esc(s2.intention)}</small>` : ""}</td>`;
           };
           const cur = courante && i === jourIndexAuj;
-          return `<tr class="${cur ? "cur" : ""}"><th>${esc(j.jour)}</th>${cell(j.matin)}${cell(j.soir)}</tr>`;
+          const d0 = l0 ? new Date(l0.getTime() + i * 86400000) : null;
+          const k0 = d0 ? `${d0.getFullYear()}-${String(d0.getMonth() + 1).padStart(2, "0")}-${String(d0.getDate()).padStart(2, "0")}` : null;
+          const enf = k0 && G[k0] === true;
+          return `<tr class="${cur ? "cur" : ""}"><th>${esc(j.jour)}${enf ? `<span class="g-enf" title="avec les enfants : matin à la maison">👨‍👧</span>` : ""}</th>${cell(j.matin)}${cell(j.soir)}</tr>`;
         }).join("") + "</tbody>";
-      $("grille-note").textContent = `Horaires indicatifs (matin ${H.Matin}, soir ${H.Soir}) — l'export agenda place les séances à ces heures, tu les déplaces ensuite selon tes chantiers.`;
+      const nEnf = S2.jours.filter((_, i) => {
+        const d0 = l0 ? new Date(l0.getTime() + i * 86400000) : null;
+        const k0 = d0 ? `${d0.getFullYear()}-${String(d0.getMonth() + 1).padStart(2, "0")}-${String(d0.getDate()).padStart(2, "0")}` : null;
+        return k0 && G[k0] === true;
+      }).length;
+      $("grille-note").textContent = (nEnf ? `👨‍👧 ${nEnf} jour${nEnf > 1 ? "s" : ""} avec les enfants : le matin reste à la maison (home-trainer, Pilates, gainage), la course revient dès la bascule du vendredi. ` : "") + `Horaires indicatifs (matin ${H.Matin}, soir ${H.Soir}) — l'export agenda place les séances à ces heures, tu les déplaces ensuite selon tes chantiers.`;
       $("sem-regle2").textContent = (vue.regle || "") + (vue.figeLe ? ` — plan figé le ${fmtDate(vue.figeLe.slice(0, 10))}.` : "");
     };
     if (CS) {

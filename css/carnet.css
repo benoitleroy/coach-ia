@@ -330,3 +330,5 @@ table.grille tr.cur { background: var(--accent-dim); }
 table.grille small { color: var(--faint); font-size: .68rem; }
 .g-ico { font-size: .95rem; }
 .ical { font-size: .8rem; color: var(--accent); text-decoration: none; white-space: nowrap; }
+
+.g-enf { font-size: .7rem; display: block; opacity: .8; }

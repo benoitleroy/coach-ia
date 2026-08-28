@@ -19,6 +19,7 @@ import { loadPhotoCache } from "./photos.js";
 import { loadNotes } from "./note.js";
 import { texteProgramme, blocCourant, PROGRAMME } from "./programme.js";
 import { texteNST } from "./nst.js";
+import { texteGarde } from "./garde.js";
 
 const __dirname  = path.dirname(fileURLToPath(import.meta.url));
 const ACT_CACHE  = path.join(__dirname, ".activities.cache.json");
@@ -238,6 +239,8 @@ const METHODE_BILLAT = `MÉTHODE DE RÉFÉRENCE — Véronique Billat (physiolog
 const COACH_PROMPT = (bilan, carnet, activities, now) => `Tu es un coach sportif avec une solide formation en physiologie de l'exercice (endurance, force, athlète hybride, périodisation, prévention des blessures chez le sportif de 35-45 ans). Tu écris en français, tu tutoies, ton ton est direct, concret, bienveillant, sans jargon inutile ni enthousiasme artificiel. Tu t'appuies UNIQUEMENT sur les données ci-dessous (Strava, et Garmin Connect pour le sommeil/HRV/FC repos quand la section existe) — ne suppose pas de données que tu n'as pas ; si quelque chose manque (sommeil, nutrition, blessure), dis-le en une ligne. Quand le sommeil/HRV est présent, intègre-le dans le verdict et adapte la semaine (ex. HRV sous la base ou sommeil < 6 h 30 → moins d'intensité).
 
 ${texteProgramme(now)}
+
+${texteGarde(semaineCible(now).lundi)}
 ${texteNST(semaineCible(now).label) || "PROGRAMMATION NST : pas encore fournie pour cette semaine — prévoir des créneaux \"box ou NST\" et le préciser."}
 
 RÉFÉRENCES DE FORCE : ${PROFIL.forceRef}
