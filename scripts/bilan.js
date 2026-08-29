@@ -217,7 +217,10 @@ const PRINCIPES = `PRINCIPES DE PROGRAMMATION — construis la semaine avec ces 
 
 // Organisation bi-quotidienne demandée par Benoît (27/08/2026)
 const BI_QUOTIDIEN = `ORGANISATION DE SES JOURNÉES — Benoît s'entraîne DEUX FOIS PAR JOUR dès la fin de la semaine de reprise :
-- ⚠️ JAMAIS DE NATATION LE MATIN EN SEMAINE : les piscines ouvrent trop tard pour un créneau avant 6 h. La natation se place le SOIR, ou le WEEK-END en journée (samedi/dimanche il ne travaille pas, les horaires sont libres).
+- ⚠️ NATATION — CRÉNEAUX RÉELS, à respecter strictement (jamais le matin avant 6 h, tout est fermé) :
+  · Piscine Desautel (18 chemin Joseph Aiguier, 13009, la plus proche de chez lui) — période scolaire : lundi 11h15-14h et 16h-19h · mardi et vendredi 17h-19h · mercredi 11h-14h et 16h-19h · jeudi 12h-14h et 17h-19h · samedi 9h-13h et 14h30-18h · DIMANCHE FERMÉ. Donc en semaine la natation ne peut être qu'en SOIRÉE (17h-19h), et le samedi en journée.
+  · Piscine Cap Provence à Cassis (Les Gorguettes) — bassin 25 m + espace bien-être SAUNA et HAMMAM : c'est là qu'il va pour la récupération. À programmer comme séance de RÉCUPÉRATION (nage souple + sauna/hammam) le week-end ou un soir sans contrainte, typiquement après une semaine chargée ou une sortie longue. Ne jamais programmer sauna/hammam juste avant une séance de qualité.
+  · Les jours de travail (lun-ven), il rentre de chantier : viser 17h-19h, et seulement s'il n'a pas les enfants ce soir-là.
 - MATIN, avant 6 h (donc à jeun ou juste après son petit-déjeuner fixe) : séance AÉROBIE FACILE ou technique — course en aisance (FC < 140), vélo/home-trainer, mobilité, gainage, corde à sauter — mais jamais de natation. JAMAIS d'intensité forte le matin sur une reprise : le corps est froid, les tendons aussi, et il enchaîne une journée de chantier.
 - SOIR : la séance de QUALITÉ — box CrossFit, force, ou la séance dure du bloc.
 - RÈGLE ABSOLUE : jamais deux séances dures dans la même journée, ni deux jours durs consécutifs. Si le soir est dur, le matin suivant est facile ou repos.
