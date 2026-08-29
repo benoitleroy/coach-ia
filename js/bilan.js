@@ -9,6 +9,7 @@
   const MOIS  = ["janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.", "août", "sept.", "oct.", "nov.", "déc."];
   const fmtD = iso => { const d = new Date(iso); return `${JOURS[d.getDay()]} ${d.getDate()} ${MOIS[d.getMonth()]}`; };
   const fmtH = h => String(h).replace(".", ",") + " h";
+  const c = B.coach;                     // plan de la semaine (déclaré avant tout usage)
 
   // ── Programme (macro-cycle) ──
   const pg = c && c.programme;
@@ -28,7 +29,6 @@
   }
 
   // ── Bilan coach ──
-  const c = B.coach;
   if (c && c.verdict) {
     $("bloc-coach").hidden = false;
     $("coach-date").textContent = c.generatedAt ? "généré " + fmtD(c.generatedAt) : "";

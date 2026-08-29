@@ -116,7 +116,7 @@
       document.querySelectorAll("#sem-choix button").forEach(b => b.addEventListener("click", () => {
         vue = b.dataset.s === "suivante" ? CS : C;
         document.querySelectorAll("#sem-choix button").forEach(x => x.classList.toggle("on", x === b));
-        rendreSemaine(); window.scrollTo(0, 0);
+        rendreSemaine(); rendreRepas(vue); window.scrollTo(0, 0);
       }));
     }
     rendreSemaine();
@@ -209,6 +209,39 @@
     }).join("");
     $("cy-regles").innerHTML = (P.reglesPermanentes || []).map(r => `<li>${esc(r)}</li>`).join("");
   }
+
+  // ── Repas de la semaine (même source que le carnet) ──
+  const rendreRepas = (src) => {
+    const n = src && src.nutrition;
+    if (!n || !(n.jours || []).length) return;
+    $("rp-semaine").textContent = src.semaineDebut ? `${fmtDate(src.semaineDebut)} → ${fmtDate(src.semaineFin)}` : "";
+    $("rp-principe").textContent = n.principe || "";
+    $("rp-jours").innerHTML = (n.jours || []).map(j => {
+      const cur = JJ[today.getDay()].toLowerCase() === (j.jour || "").toLowerCase().slice(0, 3);
+      return `<li${cur ? ' class="cur"' : ""}><div class="rp-head"><span class="p-jour">${esc(j.jour)}</span><span class="rp-type">${esc(j.type || "")}</span></div>
+        <dl class="rp-meals">${[["Matin", j.petitDej], ["Midi", j.dejeuner], ["Séance", j.collation], ["Soir", j.diner]]
+          .filter(([, v]) => v && v !== "—").map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`).join("")}</dl></li>`;
+    }).join("");
+    $("rp-batch").innerHTML = (n.batch || []).map(b => `<li>${esc(b)}</li>`).join("");
+    $("rp-batch-bloc").hidden = !(n.batch || []).length;
+    const KEYC = "carnet.courses." + (src.semaineLabel || "");
+    const coch = (() => { try { return JSON.parse(localStorage.getItem(KEYC) || "{}"); } catch { return {}; } })();
+    $("rp-courses").innerHTML = (n.courses || []).filter(r => (r.items || []).length).map((r, ri) =>
+      `<div class="course-rayon"><div class="coach-sub">${esc(r.rayon)}</div><ul class="course-list">${r.items.map((i, ii) =>
+        `<li><label><input type="checkbox" data-k="${ri}-${ii}"${coch[ri + "-" + ii] ? " checked" : ""}> <span>${esc(i)}</span></label></li>`).join("")}</ul></div>`).join("");
+    $("rp-courses-bloc").hidden = !(n.courses || []).length;
+    $("rp-courses").querySelectorAll("input").forEach(cb => cb.addEventListener("change", () => {
+      coch[cb.dataset.k] = cb.checked;
+      try { localStorage.setItem(KEYC, JSON.stringify(coch)); } catch {}
+    }));
+    $("rp-recettes").innerHTML = (n.recettes || []).map(r =>
+      `<details class="recette"><summary>${esc(r.nom)} <small>${esc([r.usage, r.portions, r.temps].filter(Boolean).join(" · "))}</small></summary>
+       <div class="rc-body"><div class="coach-sub">Ingrédients</div><ul class="coach-list">${(r.ingredients || []).map(i => `<li>${esc(i)}</li>`).join("")}</ul>
+       <div class="coach-sub">Étapes</div><ol class="rc-steps">${(r.etapes || []).map(e => `<li>${esc(e)}</li>`).join("")}</ol>
+       ${r.conservation ? `<div class="rc-keep">🧊 ${esc(r.conservation)}</div>` : ""}</div></details>`).join("");
+    $("rp-recettes-bloc").hidden = !(n.recettes || []).length;
+  };
+  rendreRepas(C);
 
   // ── Banque de séances ──
   const W = window.WODS || [];

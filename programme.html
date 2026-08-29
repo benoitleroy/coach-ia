@@ -41,6 +41,7 @@
     <button data-tab="semaine">Semaine</button>
     <button data-tab="cycle">Cycle</button>
     <button data-tab="histo">Historique</button>
+    <button data-tab="repas">Repas</button>
     <button data-tab="banque">Séances</button>
     <button data-tab="mvt">Mouvements</button>
   </nav>
@@ -112,6 +113,27 @@
         <button data-f="tout">Tout</button>
       </div>
       <ul class="histo" id="hi-list"></ul>
+    </section>
+  </section>
+
+  <!-- REPAS -->
+  <section class="tabpane" id="tab-repas">
+    <section class="bloc">
+      <div class="bloc-head"><h2>Repas de la semaine</h2><span class="hint" id="rp-semaine"></span></div>
+      <p class="sem-objectif" id="rp-principe"></p>
+      <ol class="repas" id="rp-jours"></ol>
+    </section>
+    <section class="bloc" id="rp-batch-bloc">
+      <div class="bloc-head"><h2>🍳 Batch du dimanche</h2></div>
+      <ul class="coach-list" id="rp-batch"></ul>
+    </section>
+    <section class="bloc" id="rp-courses-bloc">
+      <div class="bloc-head"><h2>🛒 Liste de courses</h2><span class="hint">à cocher</span></div>
+      <div class="courses" id="rp-courses"></div>
+    </section>
+    <section class="bloc" id="rp-recettes-bloc">
+      <div class="bloc-head"><h2>📖 Recettes</h2></div>
+      <div id="rp-recettes"></div>
     </section>
   </section>
 
