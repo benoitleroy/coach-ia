@@ -6,7 +6,7 @@ METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
 UID:2026-S35-6-matin@coach-ia
-DTSTAMP:20260829T051100Z
+DTSTAMP:20260829T054200Z
 DTSTART:20260830T033000Z
 DTEND:20260830T043000Z
 SUMMARY:— Repos complet
@@ -19,7 +19,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S35-6-soir@coach-ia
-DTSTAMP:20260829T051100Z
+DTSTAMP:20260829T054200Z
 DTSTART:20260830T163000Z
 DTEND:20260830T174500Z
 SUMMARY:🛒 Batch cooking
@@ -32,7 +32,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-0-matin@coach-ia
-DTSTAMP:20260829T051100Z
+DTSTAMP:20260829T054200Z
 DTSTART:20260831T033000Z
 DTEND:20260831T043000Z
 SUMMARY:🚴 Home-trainer facile 40 min
@@ -45,7 +45,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-0-soir@coach-ia
-DTSTAMP:20260829T051100Z
+DTSTAMP:20260829T054200Z
 DTSTART:20260831T163000Z
 DTEND:20260831T174500Z
 SUMMARY:🏋️ Force lourde — squat et poussée (semaine 1/4 du cycle 5×5)
@@ -58,7 +58,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-1-matin@coach-ia
-DTSTAMP:20260829T051100Z
+DTSTAMP:20260829T054200Z
 DTSTART:20260901T033000Z
 DTEND:20260901T043000Z
 SUMMARY:🧘 Pilates / mobilité 25 min
@@ -71,7 +71,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-2-matin@coach-ia
-DTSTAMP:20260829T051100Z
+DTSTAMP:20260829T054200Z
 DTSTART:20260902T033000Z
 DTEND:20260902T043000Z
 SUMMARY:🤸 Gainage + corde à sauter 20 min
@@ -84,7 +84,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-2-soir@coach-ia
-DTSTAMP:20260829T051100Z
+DTSTAMP:20260829T054200Z
 DTSTART:20260902T163000Z
 DTEND:20260902T174500Z
 SUMMARY:🏋️ Box CrossFit ou NST — WOD du club
@@ -97,7 +97,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-3-soir@coach-ia
-DTSTAMP:20260829T051100Z
+DTSTAMP:20260829T054200Z
 DTSTART:20260903T163000Z
 DTEND:20260903T174500Z
 SUMMARY:— Repos complet
@@ -110,7 +110,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-4-matin@coach-ia
-DTSTAMP:20260829T051100Z
+DTSTAMP:20260829T054200Z
 DTSTART:20260904T033000Z
 DTEND:20260904T043000Z
 SUMMARY:🚴 Home-trainer facile 40 min
@@ -123,7 +123,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-4-soir@coach-ia
-DTSTAMP:20260829T051100Z
+DTSTAMP:20260829T054200Z
 DTSTART:20260904T163000Z
 DTEND:20260904T174500Z
 SUMMARY:🏋️ Force 2 — charnière de hanche et tirage
@@ -136,7 +136,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-5-matin@coach-ia
-DTSTAMP:20260829T051100Z
+DTSTAMP:20260829T054200Z
 DTSTART:20260905T033000Z
 DTEND:20260905T043000Z
 SUMMARY:🏃 Sortie longue 1 h 15 en aisance
@@ -149,20 +149,20 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-6-matin@coach-ia
-DTSTAMP:20260829T051100Z
+DTSTAMP:20260829T054200Z
 DTSTART:20260906T033000Z
 DTEND:20260906T043000Z
-SUMMARY:🏊 Natation récup 30 min + mobilité
-DESCRIPTION:Volume aérobie sans aucun impact\, le lendemain de la sortie longue. Tu nages tranquille\, tu ne cherches ni le chrono ni la distance : c'est une séance de circulation et de décompression des épaules.\n• 200 m de nage souple en crawl pour se mettre dedans\n• 8 × 50 m crawl en aisance\, 20 s de repos entre chaque — respiration tous les 3 temps\n• 200 m avec planche (jambes seules) tranquille\n• 100 m de dos crawlé très souple pour ouvrir les épaules\n• 10 min de mobilité à la maison : hanches\, chevilles\, thoracique\n⚑ Si le bassin n'est pas accessible\, remplace par 40 min de home-trainer très souple\, FC sous 125 bpm.\n\nCoach IA — 2026-S36
+SUMMARY:🏊 Natation récup 30 min (à l'ouverture de la piscine)
+DESCRIPTION:Séance de récupération sans impact\, à caler en fin de matinée quand la piscine ouvre — pas avant 6 h\, c'est fermé. Objectif : faire circuler après la sortie longue de la veille\, aucune notion de chrono.\n• 200 m de crawl souple pour se mettre dedans\n• 8 × 50 m crawl en aisance\, 20 s de repos\, respiration tous les 3 temps\n• 200 m avec planche\, jambes tranquilles\n• 100 m dos ou brasse très souple pour finir\n• 5 min de mobilité épaules au bord du bassin\n⚑ Si la piscine est fermée ou trop chargée : 30 min de home-trainer très facile à la place\, surtout pas une course.\n\nCoach IA — 2026-S36
 BEGIN:VALARM
 TRIGGER:-PT30M
 ACTION:DISPLAY
-DESCRIPTION:🏊 Natation récup 30 min + mobilité
+DESCRIPTION:🏊 Natation récup 30 min (à l'ouverture de la piscine)
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-6-soir@coach-ia
-DTSTAMP:20260829T051100Z
+DTSTAMP:20260829T054200Z
 DTSTART:20260906T163000Z
 DTEND:20260906T174500Z
 SUMMARY:🍲 Batch cooking (pas une séance)

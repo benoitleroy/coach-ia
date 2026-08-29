@@ -217,7 +217,8 @@ const PRINCIPES = `PRINCIPES DE PROGRAMMATION — construis la semaine avec ces 
 
 // Organisation bi-quotidienne demandée par Benoît (27/08/2026)
 const BI_QUOTIDIEN = `ORGANISATION DE SES JOURNÉES — Benoît s'entraîne DEUX FOIS PAR JOUR dès la fin de la semaine de reprise :
-- MATIN, avant 6 h (donc à jeun ou juste après son petit-déjeuner fixe) : séance AÉROBIE FACILE ou technique — course en aisance (FC < 140), vélo, natation, mobilité, gainage. JAMAIS d'intensité forte le matin sur une reprise : le corps est froid, les tendons aussi, et il enchaîne une journée de chantier.
+- ⚠️ JAMAIS DE NATATION LE MATIN EN SEMAINE : les piscines ouvrent trop tard pour un créneau avant 6 h. La natation se place le SOIR, ou le WEEK-END en journée (samedi/dimanche il ne travaille pas, les horaires sont libres).
+- MATIN, avant 6 h (donc à jeun ou juste après son petit-déjeuner fixe) : séance AÉROBIE FACILE ou technique — course en aisance (FC < 140), vélo/home-trainer, mobilité, gainage, corde à sauter — mais jamais de natation. JAMAIS d'intensité forte le matin sur une reprise : le corps est froid, les tendons aussi, et il enchaîne une journée de chantier.
 - SOIR : la séance de QUALITÉ — box CrossFit, force, ou la séance dure du bloc.
 - RÈGLE ABSOLUE : jamais deux séances dures dans la même journée, ni deux jours durs consécutifs. Si le soir est dur, le matin suivant est facile ou repos.
 - MONTÉE PROGRESSIVE du nombre de doublés : semaine 1 du bloc = 3 doublés maximum, +1 par semaine, plafond 5 doublés/semaine tant que le HRV n'est pas stabilisé dans sa base. Le reste des jours = une seule séance.
