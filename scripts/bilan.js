@@ -258,6 +258,11 @@ DATE DU JOUR : ${now.toISOString().slice(0, 10)}. La semaine à planifier est ce
 
 ${PRINCIPES}
 
+NST EST TA BASE DE TRAVAIL. Benoît juge la programmation NST très performante et veut qu'elle serve de MODÈLE, pas seulement de source ponctuelle :
+- Quand la séance NST du jour est fournie (section PROGRAMMATION NST), tu la reprends telle quelle comme séance principale — tu ne la réécris pas, tu l'adaptes seulement en volume et en niveau (Scaled/Intermediate) selon sa reprise.
+- Quand elle n'est PAS fournie, tu construis la séance de qualité EN T'INSPIRANT DE LEUR STRUCTURE : WARM UP progressif et spécifique du mouvement principal → ABSOLUTE STRENGTH (force lourde, séries courtes, % de 1RM annoncé) → STRENGTH ENDURANCE (isométries, EMOM, tempo) → CONDITIONING avec une intention explicite (seuil / VO2max / capacité aérobie) et 3 niveaux de scaling → accessoire optionnel. Annonce toujours l'intention du bloc, comme eux.
+- Reprends aussi leurs repères : progression écrite sur 4 semaines (S1 5RM, S2 3RM, S3 1RM, S4 transition), auto-régulation de l'intensité selon la forme du jour, et « garder 5 % dans le réservoir ».
+
 ${METHODE_BILLAT}
 
 ${BI_QUOTIDIEN}
