@@ -73,6 +73,21 @@ if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.me
     console.log(`📝 NST ${label} : ${jours.length} jours enregistrés (${jours.map(j => j.jour).join(", ")})`);
     process.exit(0);
   }
+  if (cmd === "dossier") {
+    // node scripts/nst.js dossier 2026-S36 ~/Desktop/nst   → lit toutes les images du dossier
+    const [label, dossier] = args;
+    const dir = path.resolve(dossier.replace(/^~/, os.homedir()));
+    const imgs = fs.readdirSync(dir).filter(f => /\.(png|jpe?g|heic|webp)$/i.test(f)).sort()
+      .map(f => path.join(dir, f));
+    if (!imgs.length) { console.error("Aucune image dans " + dir); process.exit(1); }
+    console.log(`📖 Lecture de ${imgs.length} capture(s) : ${imgs.map(f => path.basename(f)).join(", ")}`);
+    const txt = lirePhoto(imgs);
+    const jours = parseTexte(txt);
+    all[label] = { source: "NST (captures)", importedAt: new Date().toISOString(), jours, brut: txt };
+    fs.writeFileSync(FILE, JSON.stringify(all, null, 1));
+    console.log(txt + `\n\n📝 NST ${label} : ${jours.length} jours enregistrés (${jours.map(j => j.jour).join(", ")})`);
+    process.exit(0);
+  }
   if (cmd === "photo") {
     const [label, ...fichiers] = args;
     const txt = lirePhoto(fichiers.map(f => path.resolve(f)));
@@ -82,5 +97,5 @@ if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.me
     console.log(txt + `\n\n📝 NST ${label} : ${jours.length} jours enregistrés`);
     process.exit(0);
   }
-  console.log("Usage : node scripts/nst.js set <2026-S36> [fichier.txt] | photo <2026-S36> <img…> | show");
+  console.log("Usage : node scripts/nst.js set <2026-S36> [fichier.txt] | photo <2026-S36> <img…> | dossier <2026-S36> <dossier> | show");
 }
