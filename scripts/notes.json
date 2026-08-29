@@ -19,5 +19,12 @@
   "type": "Workout",
   "note": "Séance Force pure du plan S36 (prévue mardi, faite lundi soir) : back squat 5×5 ~70 %, développé/dips, rowing, gainage",
   "updatedAt": "2026-08-26T12:11:37.128Z"
+ },
+ "19945359558": {
+  "date": "2026-08-29T09:20:49Z",
+  "name": "Crossfit",
+  "type": "Workout",
+  "note": "Team of 3 fait à 30 kg (entre Déb 30 et Sc 40). Difficulté sur les overhead squats : manque de mobilité épaules/thoracique/chevilles à travailler.",
+  "updatedAt": "2026-08-29T14:46:15.467Z"
  }
 }
