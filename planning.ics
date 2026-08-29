@@ -6,7 +6,7 @@ METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
 UID:2026-S35-6-matin@coach-ia
-DTSTAMP:20260829T050500Z
+DTSTAMP:20260829T051100Z
 DTSTART:20260830T033000Z
 DTEND:20260830T043000Z
 SUMMARY:— Repos complet
@@ -19,7 +19,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S35-6-soir@coach-ia
-DTSTAMP:20260829T050500Z
+DTSTAMP:20260829T051100Z
 DTSTART:20260830T163000Z
 DTEND:20260830T174500Z
 SUMMARY:🛒 Batch cooking
@@ -32,7 +32,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-0-matin@coach-ia
-DTSTAMP:20260829T050500Z
+DTSTAMP:20260829T051100Z
 DTSTART:20260831T033000Z
 DTEND:20260831T043000Z
 SUMMARY:🚴 Home-trainer facile 40 min
@@ -45,7 +45,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-0-soir@coach-ia
-DTSTAMP:20260829T050500Z
+DTSTAMP:20260829T051100Z
 DTSTART:20260831T163000Z
 DTEND:20260831T174500Z
 SUMMARY:🏋️ Force lourde — squat et poussée (semaine 1/4 du cycle 5×5)
@@ -58,7 +58,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-1-matin@coach-ia
-DTSTAMP:20260829T050500Z
+DTSTAMP:20260829T051100Z
 DTSTART:20260901T033000Z
 DTEND:20260901T043000Z
 SUMMARY:🧘 Pilates / mobilité 25 min
@@ -71,7 +71,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-2-matin@coach-ia
-DTSTAMP:20260829T050500Z
+DTSTAMP:20260829T051100Z
 DTSTART:20260902T033000Z
 DTEND:20260902T043000Z
 SUMMARY:🤸 Gainage + corde à sauter 20 min
@@ -84,7 +84,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-2-soir@coach-ia
-DTSTAMP:20260829T050500Z
+DTSTAMP:20260829T051100Z
 DTSTART:20260902T163000Z
 DTEND:20260902T174500Z
 SUMMARY:🏋️ Box CrossFit ou NST — WOD du club
@@ -97,7 +97,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-3-soir@coach-ia
-DTSTAMP:20260829T050500Z
+DTSTAMP:20260829T051100Z
 DTSTART:20260903T163000Z
 DTEND:20260903T174500Z
 SUMMARY:— Repos complet
@@ -110,20 +110,20 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-4-matin@coach-ia
-DTSTAMP:20260829T050500Z
+DTSTAMP:20260829T051100Z
 DTSTART:20260904T033000Z
 DTEND:20260904T043000Z
-SUMMARY:🏃 Course en aisance stricte 40 min
-DESCRIPTION:Premier matin sans les enfants : c'est le créneau course. Aisance stricte\, FC sous 140 bpm — sur ton niveau actuel ça veut dire environ 6:20-6:40/km\, et tu laisses l'allure varier librement selon la sensation\, sans jamais dépasser le seuil de la conversation.\n• 5 min de marche rapide puis 5 min de trot très lent pour lancer la machine\n• 30 min de course continue à FC 130-138 bpm — tu dois pouvoir parler en phrases complètes\n• Si la FC monte toute seule en fin de sortie\, ralentis ou marche 1 min : c'est la FC qui commande\, pas le chrono\n• 5 min de marche de retour au calme\n• Étirement mollets et ischio-jambiers\, 30 s par position\n⚑ Toute douleur au tendon d'Achille ou au genou qui ne part pas après 10 min d'échauffement : tu arrêtes et tu passes sur le home-trainer.\n\nCoach IA — 2026-S36
+SUMMARY:🚴 Home-trainer facile 40 min
+DESCRIPTION:Les garçons sont encore à la maison ce matin (ils partent chez leur mère dans la matinée) : séance à la maison. Objectif inchangé — faire tourner les jambes en aisance stricte avant la journée de chantier.\n• 10 min de pédalage souple\, cadence 85-90 tours/min\, FC sous 120 bpm\n• 25 min en aisance : FC 125-135 bpm\, tu dois pouvoir parler tout du long\n• 3 × 20 s à cadence rapide (100-105) sans monter la résistance\, 1 min souple entre chaque\n• 5 min de retour au calme + 5 min de mobilité hanches et chevilles\n⚑ Si les jambes sont lourdes de la semaine\, coupe à 30 min — cette séance ne doit jamais être dure.\n\nCoach IA — 2026-S36
 BEGIN:VALARM
 TRIGGER:-PT30M
 ACTION:DISPLAY
-DESCRIPTION:🏃 Course en aisance stricte 40 min
+DESCRIPTION:🚴 Home-trainer facile 40 min
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-4-soir@coach-ia
-DTSTAMP:20260829T050500Z
+DTSTAMP:20260829T051100Z
 DTSTART:20260904T163000Z
 DTEND:20260904T174500Z
 SUMMARY:🏋️ Force 2 — charnière de hanche et tirage
@@ -136,11 +136,11 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-5-matin@coach-ia
-DTSTAMP:20260829T050500Z
+DTSTAMP:20260829T051100Z
 DTSTART:20260905T033000Z
 DTEND:20260905T043000Z
 SUMMARY:🏃 Sortie longue 1 h 15 en aisance
-DESCRIPTION:Week-end sans les enfants : c'est la séance clé de la semaine\, celle qui reconstruit la tolérance tendineuse et la base aérobie. Une seule règle : FC sous 140 bpm du début à la fin\, quitte à marcher dans les montées.\n• 10 min de trot très lent en échauffement\, FC sous 125 bpm\n• 60 min de course continue à FC 130-140 bpm\, allure libre selon la sensation — marche 1 min dès que la FC dépasse 142\n• Sur les 15 dernières minutes\, si la FC est basse et que les jambes sont bonnes\, laisse l'allure accélérer spontanément sans dépasser 140 bpm\n• 5 min de marche de retour au calme\n• Boire 500 ml d'eau et manger dans les 30 min qui suivent\n• 5 min d'étirements mollets\, ischio-jambiers\, fessiers\n⚑ Si tu n'es plus capable de tenir la FC sous 140 en courant\, tu termines en marche/course alternée — le temps passé en aisance compte\, pas la continuité.\n\nCoach IA — 2026-S36
+DESCRIPTION:Week-end sans les enfants : c'est la séance clé de la semaine\, celle qui reconstruit la tolérance tendineuse et la base aérobie. Une seule règle : FC sous 140 bpm du début à la fin\, quitte à marcher dans les montées. Les garçons sont partis vendredi matin : le week-end est libre\, c'est la séance clé de la semaine.\n• 10 min de trot très lent en échauffement\, FC sous 125 bpm\n• 60 min de course continue à FC 130-140 bpm\, allure libre selon la sensation — marche 1 min dès que la FC dépasse 142\n• Sur les 15 dernières minutes\, si la FC est basse et que les jambes sont bonnes\, laisse l'allure accélérer spontanément sans dépasser 140 bpm\n• 5 min de marche de retour au calme\n• Boire 500 ml d'eau et manger dans les 30 min qui suivent\n• 5 min d'étirements mollets\, ischio-jambiers\, fessiers\n⚑ Si tu n'es plus capable de tenir la FC sous 140 en courant\, tu termines en marche/course alternée — le temps passé en aisance compte\, pas la continuité.\n\nCoach IA — 2026-S36
 BEGIN:VALARM
 TRIGGER:-PT30M
 ACTION:DISPLAY
@@ -149,7 +149,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-6-matin@coach-ia
-DTSTAMP:20260829T050500Z
+DTSTAMP:20260829T051100Z
 DTSTART:20260906T033000Z
 DTEND:20260906T043000Z
 SUMMARY:🏊 Natation récup 30 min + mobilité
@@ -162,7 +162,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-6-soir@coach-ia
-DTSTAMP:20260829T050500Z
+DTSTAMP:20260829T051100Z
 DTSTART:20260906T163000Z
 DTEND:20260906T174500Z
 SUMMARY:🍲 Batch cooking (pas une séance)

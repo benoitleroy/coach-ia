@@ -13,44 +13,34 @@
 const DAY = 86400 * 1000;
 
 // SOURCE DE VÉRITÉ : l'agenda Google « Family » de Benoît (leroy.torrentt@gmail.com),
-// événements « Benoit enfants » / « Caro enfants ». Relu le 29/08/2026, à resynchroniser
-// quand de nouvelles périodes sont ajoutées (demander à Claude : « mets à jour la garde »).
-// Chaque période va du vendredi au vendredi ; la bascule se fait le VENDREDI SOIR.
-export const PERIODES = [
-  { du: "2026-08-28", au: "2026-09-04", moi: true },
-  { du: "2026-09-04", au: "2026-09-11", moi: false },
-  { du: "2026-09-11", au: "2026-09-18", moi: true },
-  { du: "2026-09-18", au: "2026-09-25", moi: false },
-  { du: "2026-09-25", au: "2026-10-02", moi: true },
-  { du: "2026-10-02", au: "2026-10-09", moi: false },
-  { du: "2026-10-09", au: "2026-10-16", moi: true },
+// événements « Benoit enfants » / « Caro enfants », complété par les horaires réels de bascule.
+// Par défaut la bascule se fait le VENDREDI SOIR (le vendredi matin il a encore les garçons).
+// Quand une bascule est décalée, l'inscrire ici avec sa date ET son heure réelles.
+// Relu le 29/08/2026 — pour resynchroniser : demander à Claude « mets à jour la garde ».
+export const BASCULES = [
+  { quand: "2026-08-28T20:00:00", moi: false },   // semaine Caro
+  { quand: "2026-08-30T12:00:00", moi: true },    // ⚠️ décalé : Benoît récupère le dimanche midi
+  { quand: "2026-09-04T08:00:00", moi: false },   // ⚠️ décalé : rendus le vendredi matin
+  { quand: "2026-09-11T20:00:00", moi: true },
+  { quand: "2026-09-18T20:00:00", moi: false },
+  { quand: "2026-09-25T20:00:00", moi: true },
+  { quand: "2026-10-02T20:00:00", moi: false },
+  { quand: "2026-10-09T20:00:00", moi: true },
+  { quand: "2026-10-16T20:00:00", moi: false },
 ];
-
-// Bascules décalées ponctuellement : { "date prévue (AAAA-MM-JJ)": "date réelle" }
-export const DECALAGES = {
-};
-
-const ymd = d => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
-
-// Début réel d'une période (en tenant compte d'un décalage ponctuel), bascule à 20 h
-const debutReel = p => new Date((DECALAGES[p.du] || p.du) + "T20:00:00");
 
 /**
  * @param {Date} date  jour concerné
- * @param {"matin"|"soir"} moment  la bascule a lieu le soir : le matin appartient encore à la période précédente
- * @returns {boolean|null} null si la date sort des périodes connues (agenda à resynchroniser)
+ * @param {"matin"|"soir"} moment  le matin est évalué à 7 h, le soir à 21 h
+ * @returns {boolean|null} null au-delà des bascules connues (agenda à resynchroniser)
  */
 export function avecEnfants(date = new Date(), moment = "matin") {
   const d = new Date(date);
   d.setHours(moment === "soir" ? 21 : 7, 0, 0, 0);
-  if (d < debutReel(PERIODES[0])) return !PERIODES[0].moi;      // avant la première période connue
-  let etat = null;
-  for (const p of PERIODES) {
-    if (debutReel(p) <= d) etat = p.moi;
-  }
-  const derniere = PERIODES[PERIODES.length - 1];
-  if (d > new Date((DECALAGES[derniere.au] || derniere.au) + "T20:00:00")) return null;   // au-delà de l'agenda connu
-  return etat;
+  const passees = BASCULES.filter(b => new Date(b.quand) <= d);
+  if (!passees.length) return !BASCULES[0].moi;
+  if (d > new Date(BASCULES[BASCULES.length - 1].quand)) return null;
+  return passees[passees.length - 1].moi;
 }
 
 const JOURS = ["Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"];
