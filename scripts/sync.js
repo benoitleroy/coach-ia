@@ -550,9 +550,9 @@ async function main() {
   // P0-BIS §3.2 — Si aucune activité récente + signaux autonomiques élevés,
   // override le statut pour ne pas déclencher "sous-charge" pile quand Benoît
   // est en phase de récup post-maladie.
+  // Whoop débranché depuis le recentrage « Carnet » (20/08/2026) : on n'appelle plus l'API,
+  // les signaux de récupération viennent de Garmin (scripts/garmin.py).
   let whoopObs = [];
-  try { whoopObs = buildWhoopObservations(); }
-  catch (e) { console.warn("⚠️  Whoop illness detector indisponible :", e.message); }
 
   const recovery = detectRecoveryPhase(whoopObs);
   if (recovery.in_recovery && (load.statut === "no-recent-activity" || load.statut === "sous-charge")) {
