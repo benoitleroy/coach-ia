@@ -1964,20 +1964,5 @@ window.SEANCES = [
   "contenuFr": null,
   "note": null,
   "photo": null
- },
- {
-  "id": 17572271388,
-  "date": "2026-03-02T04:37:26Z",
-  "type": "VirtualRide",
-  "name": "Zwift - #1 Find Your Rhythm - Long on Volcano Flat in Watopia",
-  "sec": 4581,
-  "km": 40.5,
-  "hr": 124,
-  "hrMax": 147,
-  "effort": 26,
-  "contenu": null,
-  "contenuFr": null,
-  "note": null,
-  "photo": null
  }
 ];

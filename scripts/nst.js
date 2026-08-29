@@ -36,7 +36,7 @@ function parseTexte(txt) {
   const lignes = txt.split("\n");
   const jours = []; let cur = null;
   for (const l of lignes) {
-    const m = l.trim().match(/^(lun|mar|mer|jeu|ven|sam|dim)[a-zéû]*\.?\s*(?:[-—:]\s*(.*))?$/i);
+    const m = l.trim().match(/^(lun|mar|mer|jeu|ven|sam|dim)[a-zéû]*\.?\s*(?:\d{1,2}[\/.]\d{1,2}(?:[\/.]\d{2,4})?)?\s*(?:[-—:·]\s*(.*))?$/i);
     if (m) { cur = { jour: JOURS[["lun", "mar", "mer", "jeu", "ven", "sam", "dim"].indexOf(m[1].toLowerCase())], titre: (m[2] || "").trim(), contenu: "" }; jours.push(cur); continue; }
     if (cur) cur.contenu += (cur.contenu ? "\n" : "") + l.replace(/\s+$/, "");
   }
