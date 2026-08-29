@@ -1,4 +1,4 @@
-// scripts/garde.js — garde alternée des enfants : contraintes sur les séances du MATIN et du week-end.
+// scripts/garde.js — garde alternée des enfants (Mathis, 12 ans · Louis, 8 ans) : contraintes sur les séances du MATIN et du week-end.
 //
 // Règle donnée par Benoît (28/08/2026) :
 //   - la bascule se fait le VENDREDI MATIN (une semaine sur deux) ;
