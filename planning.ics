@@ -6,145 +6,145 @@ METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
 UID:2026-S36-0-matin@coach-ia
-DTSTAMP:20260830T190000Z
+DTSTAMP:20260830T192700Z
 DTSTART:20260831T033000Z
 DTEND:20260831T043000Z
-SUMMARY:🚴 Home-trainer facile 40 min
-DESCRIPTION:Tu es avec les enfants\, donc tout se passe à la maison. Objectif : faire tourner les jambes et réveiller le système sans aucune contrainte — tu dois pouvoir parler tout du long.\n• 10 min de pédalage très souple\, FC sous 120 bpm\, cadence 85-90 tours/min\n• 25 min en aisance : FC 125-135 bpm\, cadence libre\, tu peux tenir une conversation\n• 3× 20 secondes de cadence rapide (100-105 tours/min) sans monter la résistance\, 1 min souple entre\n• 5 min de retour au calme très souple\n• 2 min d'étirement mollets + quadriceps debout\n⚑ Si la FC dépasse 140 bpm sans que tu forces\, baisse la résistance : le matin\, on ne négocie pas l'aisance.\n\nCoach IA — 2026-S36
+SUMMARY:🧘 Mobilité + gainage (nuit courte)
+DESCRIPTION:Tu sors d'une nuit à 3h34 avec un HRV à 25 ms : on ne court pas\, on réveille le corps sans le charger. Séance à la maison\, enfants présents\, pas de sortie. Focus mobilité épaules/thoracique/chevilles — c'est ce qui bloque ton overhead squat.\n• 5 min de respiration nasale + rotations d'épaules et de bassin\, debout\n• Dislocations à l'élastique (bras tendus\, l'élastique passe de devant à derrière la tête) 2×10\, lentement\n• Sots press au PVC (barre en plastique au-dessus de la tête\, on s'accroupit sous la barre) 2×8\n• Overhead squat au PVC : 3× tenir 30 s en position basse\, barre au-dessus de la tête\, bras tendus\n• Mobilité chevilles genou-mur : 2×10 par jambe (genou avance vers le mur\, talon collé au sol)\n• Gainage : planche ventrale 3×40 s + planche latérale 2×30 s par côté\n• 5 min étirement des fléchisseurs de hanche (fente genou au sol\, bassin qui rentre)\n⚑ Si tu te sens vidé après 15 min\, tu arrêtes — cette séance ne doit rien coûter.\n\nCoach IA — 2026-S36
 BEGIN:VALARM
 TRIGGER:-PT30M
 ACTION:DISPLAY
-DESCRIPTION:🚴 Home-trainer facile 40 min
+DESCRIPTION:🧘 Mobilité + gainage (nuit courte)
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-0-soir@coach-ia
-DTSTAMP:20260830T190000Z
+DTSTAMP:20260830T192700Z
 DTSTART:20260831T163000Z
 DTEND:20260831T174500Z
-SUMMARY:🏋️ Force lourde — squat et poussée (semaine 1/4 du cycle 5×5)
-DESCRIPTION:C'est la séance dure de la journée et le point de départ chiffré de ton cycle de force : 80 kg au back squat\, la charge que tu as validée le 27/08. Technique avant charge\, les deux dernières reps de chaque série doivent rester propres.\n• Échauffement 8 min : 3 min rameur souple\, puis 10 squats à vide\, 10 fentes par jambe\, 10 rotations d'épaules\n• Montée en charge au back squat (barre sur le haut du dos) : 10 reps à vide\, 5 à 40 kg\, 5 à 60 kg\, 3 à 70 kg\n• Back squat 5 séries de 5 reps à 80 kg — 2 min 30 de récupération entre les séries\n• Développé couché ou pompes lestées 4 séries de 8 reps — charge où la 8e sort propre\, 1 min 30 de récup\n• Rowing barre (buste penché à 45°\, dos plat\, tirer la barre vers le nombril) 4 séries de 8 reps à 40 kg\, 1 min 30 de récup\n• Gainage : 3 × 45 secondes de planche ventrale + 3 × 30 secondes de planche latérale par côté\n• 5 min de vélo souple ou marche pour redescendre\n⚑ Si une rep du squat te fait pencher le buste en avant ou décoller les talons\, tu arrêtes la série et tu baisses de 5 kg — cette semaine\, on installe la technique\, pas le record.\n\nCoach IA — 2026-S36
+SUMMARY:🏋️ NST — Haut du corps (Press)\, niveau Intermédiaire
+DESCRIPTION:Séance NST du jour\, reprise telle quelle mais coupée à ~70 min : on garde échauffement + force absolue + endurance de force + conditionnement\, on saute l'accessoire optionnel. Charges légères à modérées\, technique parfaite\, vitesse à la remontée. Tu gardes 5 % dans le réservoir.\n• Échauffement : 60/60 s étirement dynamique pectoraux + 60/60 s dorsaux\, puis 4 min rameur (20 s facile / 10 s dur)\n• Puis 40 close grip bench press à la barre à vide (développé couché prise serrée\, mains à largeur d'épaules) + 20 ring rows prise serrée (tirage suspendu aux anneaux\, corps gainé) + 20 bench press léger + 20 ring rows\n• Montée en charge progressive au développé couché prise serrée jusqu'à la charge de travail (~45-55 % de ton max\, soit une charge où 10 reps sortent faciles)\n• FORCE : 4 séries de 10 développés couchés prise serrée — 75 s de repos — 5 pompes explosives mains qui décollent du sol (bench plyo push-ups) — 75 s de repos\n• ENDURANCE DE FORCE : EMOM 12 min — minute impaire 20 s suspension menton au-dessus de la barre (pronation\, élastique ou appui box autorisé) · minute paire 20 s maintien bras tendus en haut des dips aux anneaux\n• CONDITIONING seuil (niveau Scaled) : AMRAP 20 min — 6 tractions kipping / 6 HSPU kipping (pompes en équilibre contre le mur) / 12-9 cal rameur\, 1 min de repos entre les tours\, ordre inversé à chaque tour\n• Retour au calme : 5 min rameur très facile + étirement pectoraux au mur\n⚑ Vu la nuit blanche\, si la FC monte au-dessus de 165 bpm sur le conditioning\, tu passes à 4 tours et tu arrêtes.\n\nCoach IA — 2026-S36
 BEGIN:VALARM
 TRIGGER:-PT30M
 ACTION:DISPLAY
-DESCRIPTION:🏋️ Force lourde — squat et poussée (semaine 1/4 du cycle 5×5)
+DESCRIPTION:🏋️ NST — Haut du corps (Press)\, niveau Intermédiaire
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-1-matin@coach-ia
-DTSTAMP:20260830T190000Z
+DTSTAMP:20260830T192700Z
 DTSTART:20260901T033000Z
 DTEND:20260901T043000Z
-SUMMARY:🧘 Pilates / mobilité 25 min
-DESCRIPTION:Lendemain de force lourde : on fait circuler\, on ne charge rien. Séance courte à la maison\, respiration ample\, aucune douleur recherchée.\n• 5 min de respiration et mobilisation du bassin allongé sur le dos\n• 10 min de mobilité hanches et chevilles : fentes en pas de course tenues 30 s par côté\, accroupi profond tenu 1 min × 2\n• 8 min de gainage doux : planche 3 × 30 s\, pont fessier 3 × 12 reps\n• 3 min d'étirement quadriceps\, ischio-jambiers et mollets\n⚑ Si les cuisses sont très raides du squat de la veille\, remplace le gainage par 10 min de marche — pas d'étirement forcé sur un muscle courbaturé.\n\nCoach IA — 2026-S36
+SUMMARY:🚴 Home-trainer aisance stricte
+DESCRIPTION:Enfants à la maison\, donc pas de sortie : 45 min sur le home-trainer\, conversation possible du début à la fin. C'est du volume sans impact pour les tendons\, exactement ce qui manque en ce moment.\n• 10 min d'échauffement progressif\, cadence 85-90 rpm\, FC qui monte doucement vers 120 bpm\n• 30 min en aisance stricte : FC 125-135 bpm\, jamais au-dessus de 140\, cadence libre entre 85 et 95 rpm\n• 3× 20 s de relance à cadence 105 rpm sans forcer sur la puissance\, réparties dans les 30 min\n• 5 min de retour au calme\, cadence 80 rpm\, résistance minimale\n⚑ Si la FC dépasse 140 bpm sans que tu forces\, tu raccourcis à 30 min — c'est un signe de fatigue résiduelle.\n\nCoach IA — 2026-S36
 BEGIN:VALARM
 TRIGGER:-PT30M
 ACTION:DISPLAY
-DESCRIPTION:🧘 Pilates / mobilité 25 min
+DESCRIPTION:🚴 Home-trainer aisance stricte
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S36-1-soir@coach-ia
+DTSTAMP:20260830T192700Z
+DTSTART:20260901T163000Z
+DTEND:20260901T174500Z
+SUMMARY:🏋️ NST — Bas du corps (Front Squat)\, niveau Intermédiaire
+DESCRIPTION:Séance NST du jour\, coupée à ~70 min. Attention : c'est un jour lourd bas du corps\, donc mercredi matin sera facile. Tempo contrôlé sur les front squats\, l'explosivité vient à la remontée.\n• Échauffement : 60/60 s étirement dynamique de la hanche antérieure\, puis 1800 m sur vélo/rameur en 30 s facile / 30 s modéré\n• Puis mini-bande : 3× (5 squats + 5 s de maintien à la parallèle sur la dernière rep) et 3× (5 ponts fessiers + 5 s en haut sur la dernière rep) — sans élastique : 30 s wall sit + 10 good-mornings à la barre à vide + 5 kang squats\n• Montée en charge aux front squats (squat barre devant\, coudes hauts) jusqu'à ~40-50 % du max\, charge légère\n• FORCE : 4 séries de 10 front squats sur banc ou box basse — tempo 21X1 (2 s de descente\, 1 s de pause assis\, remontée explosive) — 75 s de repos — 3 seated box jumps (sauts sur box depuis la position assise) — 75 s de repos\n• ENDURANCE DE FORCE : 3 séries de 10/10 soulevés de terre roumains à une jambe avec haltère de 17\,5 kg (jambe libre en appui\, descente contrôlée\, arrêt avant que l'haltère touche le sol) — 2 min de repos entre séries\n• CONDITIONING VO2max (niveau Intermédiaire) : EMOM jusqu'à l'échec\, 20 min max — 4 toes-to-bar / 4 power cleans à 40 kg / 4 burpees face à la barre. Note ton nombre de tours complets.\n• Retour au calme : 5 min de marche + étirement quadriceps et fessiers\n⚑ Sur l'EMOM\, dès que tu ne finis plus le tour dans la minute\, tu arrêtes — c'est le score\, pas un échec.\n\nCoach IA — 2026-S36
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🏋️ NST — Bas du corps (Front Squat)\, niveau Intermédiaire
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-2-matin@coach-ia
-DTSTAMP:20260830T190000Z
+DTSTAMP:20260830T192700Z
 DTSTART:20260902T033000Z
 DTEND:20260902T043000Z
-SUMMARY:🤸 Gainage + corde à sauter 20 min
-DESCRIPTION:Avec les enfants\, donc maison. Séance courte de coordination et de raideur de cheville — c'est ce qui protège ton Achille quand tu remontes le volume de course.\n• 3 min d'échauffement : montées de genoux sur place\, cercles de chevilles\, talons-fesses\n• Corde à sauter : 6 séries de 40 secondes\, 40 secondes de repos — pieds proches du sol\, contact court\n• Gainage : 3 tours de 30 s planche + 12 mountain climbers + 12 pont fessier\n• 2 min d'étirement mollets contre le mur\, 30 s par jambe × 2\n⚑ Si les mollets brûlent avant la 4e série de corde\, arrête là : la corde est un outil de raideur\, pas une séance de cardio.\n\nCoach IA — 2026-S36
+SUMMARY:🧘 Pilates + mobilité overhead
+DESCRIPTION:Lendemain de jour lourd bas du corps : rien qui charge. Pilates à la maison (enfants présents) avec la même dose de mobilité épaules qu'hier matin — c'est la répétition quotidienne qui débloquera l'overhead squat\, pas une grosse séance.\n• 5 min de respiration et mobilisation de la colonne (chat-vache\, roulés de dos)\n• Bloc mobilité overhead : dislocations à l'élastique 2×10 + overhead squat au PVC 3×30 s en position basse + mobilité chevilles genou-mur 2×10 par jambe\n• 25 min de Pilates : gainage dynamique\, travail des transverses\, hanches et chaîne postérieure\n• 5 min d'étirements passifs : ischio-jambiers\, quadriceps\, psoas\n⚑ Aucune douleur ne doit apparaître dans les cuisses — si ça tire fort\, tu réduis à de la simple mobilité.\n\nCoach IA — 2026-S36
 BEGIN:VALARM
 TRIGGER:-PT30M
 ACTION:DISPLAY
-DESCRIPTION:🤸 Gainage + corde à sauter 20 min
+DESCRIPTION:🧘 Pilates + mobilité overhead
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:2026-S36-2-soir@coach-ia
-DTSTAMP:20260830T190000Z
-DTSTART:20260902T163000Z
-DTEND:20260902T174500Z
-SUMMARY:🏋️ Box CrossFit ou NST — WOD du club
-DESCRIPTION:Séance dure de la semaine. Tu prends le WOD au tableau tel qu'il est. Tant que le programme NST n'est pas fourni\, ce créneau est « box ou NST » : si tu as le NST d'ici là\, c'est lui qui passe en priorité et tu ignores le WOD.\n• Échauffement de la box en entier\, sans le zapper\n• Travail de skill / technique proposé par le coach — c'est là que tu progresses\, tu le fais frais\n• WOD au niveau Sc ou Int : vise la même charge que le 23/08 (30 kg sur les mouvements barre)\, pas plus\n• Finisher seulement si tu as encore de la marge : 15 à 20 tractions strictes cumulées\n• 5 min de vélo ou rameur très souple pour redescendre\n⚑ Si le WOD contient du squat lourd ou du soulevé lourd\, tu réduis la charge de 20 % : tu as déjà squatté lourd lundi.\n\nCoach IA — 2026-S36
+UID:2026-S36-3-matin@coach-ia
+DTSTAMP:20260830T192700Z
+DTSTART:20260903T033000Z
+DTEND:20260903T043000Z
+SUMMARY:🚴 Home-trainer facile + corde à sauter
+DESCRIPTION:Enfants à la maison\, séance courte à domicile. Volume aérobie sans impact plus un peu de rebond pour réveiller les mollets avant la course du week-end.\n• 10 min home-trainer en montée progressive\, FC vers 120 bpm\n• 25 min home-trainer en aisance stricte\, FC 125-135 bpm\, conversation possible\n• 5 min de retour au calme sur le vélo\n• Corde à sauter : 6×30 s de sauts simples\, 30 s de repos entre les séries\, atterrissage sur l'avant du pied\, souple\n⚑ Si les mollets ou l'Achille tirent sur la corde à sauter\, tu arrêtes immédiatement la corde et tu gardes le vélo.\n\nCoach IA — 2026-S36
 BEGIN:VALARM
 TRIGGER:-PT30M
 ACTION:DISPLAY
-DESCRIPTION:🏋️ Box CrossFit ou NST — WOD du club
+DESCRIPTION:🚴 Home-trainer facile + corde à sauter
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-3-soir@coach-ia
-DTSTAMP:20260830T190000Z
+DTSTAMP:20260830T192700Z
 DTSTART:20260903T163000Z
 DTEND:20260903T174500Z
-SUMMARY:— Repos complet
-DESCRIPTION:C'est ta journée sans rien de la semaine\, et elle est volontaire : elle tombe après le WOD et avant les trois jours les plus chargés. Marche si tu veux\, rien d'autre.\n\nCoach IA — 2026-S36
+SUMMARY:🏊 Natation aisance — piscine Desautel
+DESCRIPTION:Créneau Desautel jeudi 17h-19h\, tu n'as pas les enfants ce soir-là ? Si si — tu les as\, donc à caler seulement si l'organisation le permet ; sinon on la déplace au samedi (voir samedi). Nage souple\, technique\, zéro intensité : c'est du volume sans impact et un travail d'épaules utile pour ta mobilité.\n• 300 m nage souple en crawl\, respiration tous les 3 temps\n• 6×50 m éducatifs : rattrapé\, poings fermés\, une main devant — 20 s de repos\n• 400 m crawl continu en aisance\, allure conversation\n• 200 m dos crawlé souple pour ouvrir les épaules\n• 100 m retour au calme\n⚑ Si tu ne peux pas te libérer avec les enfants\, cette séance saute — elle est reportée au samedi matin\, pas ajoutée ailleurs.\n\nCoach IA — 2026-S36
 BEGIN:VALARM
 TRIGGER:-PT30M
 ACTION:DISPLAY
-DESCRIPTION:— Repos complet
+DESCRIPTION:🏊 Natation aisance — piscine Desautel
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-4-matin@coach-ia
-DTSTAMP:20260830T190000Z
+DTSTAMP:20260830T192700Z
 DTSTART:20260904T033000Z
 DTEND:20260904T043000Z
-SUMMARY:🚴 Home-trainer facile 40 min
-DESCRIPTION:Les garçons sont encore à la maison ce matin (ils partent chez leur mère dans la matinée) : séance à la maison. Objectif inchangé — faire tourner les jambes en aisance stricte avant la journée de chantier.\n• 10 min de pédalage souple\, cadence 85-90 tours/min\, FC sous 120 bpm\n• 25 min en aisance : FC 125-135 bpm\, tu dois pouvoir parler tout du long\n• 3 × 20 s à cadence rapide (100-105) sans monter la résistance\, 1 min souple entre chaque\n• 5 min de retour au calme + 5 min de mobilité hanches et chevilles\n⚑ Si les jambes sont lourdes de la semaine\, coupe à 30 min — cette séance ne doit jamais être dure.\n\nCoach IA — 2026-S36
+SUMMARY:🧘 Mobilité courte
+DESCRIPTION:Enfants le matin\, et haltéro le soir : on garde le matin très léger\, uniquement de la préparation articulaire pour la séance technique du soir.\n• 5 min de mobilisation générale : rotations d'épaules\, bassin\, chevilles\n• Dislocations à l'élastique 2×10 + sots press au PVC 2×8\n• Accroupi profond tenu : 3×45 s\, talons au sol\, coudes qui écartent les genoux\n• Mobilité chevilles genou-mur 2×10 par jambe\n⚑ Séance de 15 min maximum\, on ne fatigue rien avant l'haltéro.\n\nCoach IA — 2026-S36
 BEGIN:VALARM
 TRIGGER:-PT30M
 ACTION:DISPLAY
-DESCRIPTION:🚴 Home-trainer facile 40 min
+DESCRIPTION:🧘 Mobilité courte
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-4-soir@coach-ia
-DTSTAMP:20260830T190000Z
+DTSTAMP:20260830T192700Z
 DTSTART:20260904T163000Z
 DTEND:20260904T174500Z
-SUMMARY:🏋️ Force 2 — charnière de hanche et tirage
-DESCRIPTION:Deuxième séance de force de la semaine\, sur le pattern qui te manque : la charnière de hanche (le mouvement où le bassin recule et le dos reste plat). Charges modérées\, on cherche le geste propre\, pas la performance.\n• Échauffement 8 min : 3 min rameur\, 15 ponts fessiers\, 15 good-mornings à vide (barre sur les épaules\, buste qui descend en gardant le dos plat)\n• Soulevé de terre roumain (barre le long des jambes\, bassin qui recule\, on descend jusqu'à mi-tibia) 4 séries de 6 reps à 60 kg — 2 min de récup\n• Tractions strictes : 5 séries de 3 reps (ou tractions excentriques\, 5 s à la descente\, si les 3 ne sortent pas) — 2 min de récup\n• Fentes marchées avec haltères 3 séries de 10 pas par jambe\, 12 kg par main\, 90 s de récup\n• Gainage anti-rotation : 3 × 30 s de planche latérale par côté\n• 5 min de marche ou vélo souple\n⚑ Au premier arrondi du bas du dos sur le soulevé roumain\, tu termines la série et tu baisses à 50 kg — le dos plat est non négociable.\n\nCoach IA — 2026-S36
+SUMMARY:🏋️ Haltérophilie technique — box (rendez-vous fixe)
+DESCRIPTION:Ton rendez-vous hebdomadaire non négociable. Technique d'arraché et d'épaulé-jeté à charge légère : le skill se travaille frais\, pas épuisé. Aucune recherche de charge maximale ce soir.\n• Échauffement barre à vide : 10 tirages nuque\, 10 overhead squats au PVC\, 10 good-mornings\n• Arraché décomposé : 3×5 tirages hauts + 3×5 arrachés depuis les cuisses (hang snatch)\, barre à vide puis 30 kg maximum\n• Épaulé-jeté : 4×3 épaulés debout (power clean) + 1 jeté fente\, charge où la technique reste parfaite (30-40 kg)\n• Travail de position basse : 3×5 overhead squats au PVC uniquement\, pas de charge\n• Gainage court : 3×30 s planche + 3×10 hollow rocks\n• Retour au calme : 5 min de mobilité épaules\n⚑ Interdiction absolue d'overhead squat chargé tant que la position basse au PVC n'est pas stable.\n\nCoach IA — 2026-S36
 BEGIN:VALARM
 TRIGGER:-PT30M
 ACTION:DISPLAY
-DESCRIPTION:🏋️ Force 2 — charnière de hanche et tirage
+DESCRIPTION:🏋️ Haltérophilie technique — box (rendez-vous fixe)
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-5-matin@coach-ia
-DTSTAMP:20260830T190000Z
+DTSTAMP:20260830T192700Z
 DTSTART:20260905T033000Z
 DTEND:20260905T043000Z
-SUMMARY:🏃 Sortie longue 1 h 15 en aisance
-DESCRIPTION:Week-end sans les enfants : c'est la séance clé de la semaine\, celle qui reconstruit la tolérance tendineuse et la base aérobie. Une seule règle : FC sous 140 bpm du début à la fin\, quitte à marcher dans les montées. Les garçons sont partis vendredi matin : le week-end est libre\, c'est la séance clé de la semaine.\n• 10 min de trot très lent en échauffement\, FC sous 125 bpm\n• 60 min de course continue à FC 130-140 bpm\, allure libre selon la sensation — marche 1 min dès que la FC dépasse 142\n• Sur les 15 dernières minutes\, si la FC est basse et que les jambes sont bonnes\, laisse l'allure accélérer spontanément sans dépasser 140 bpm\n• 5 min de marche de retour au calme\n• Boire 500 ml d'eau et manger dans les 30 min qui suivent\n• 5 min d'étirements mollets\, ischio-jambiers\, fessiers\n⚑ Si tu n'es plus capable de tenir la FC sous 140 en courant\, tu termines en marche/course alternée — le temps passé en aisance compte\, pas la continuité.\n\nCoach IA — 2026-S36
+SUMMARY:🏃 Sortie longue en aisance stricte
+DESCRIPTION:Enfants partis\, c'est LE créneau de la semaine pour la course. 1 h 15 maximum\, FC sous 140 bpm du début à la fin\, allure librement variable à sensation constante — tu peux relancer dans les descentes et lever le pied dans les côtes\, l'important est la sensation\, pas le chrono.\n• 10 min de marche rapide puis trot très lent pour amorcer\, FC qui monte progressivement\n• 55 min de course en aisance stricte : FC 125-138 bpm\, conversation possible en permanence\n• Dans la deuxième moitié\, 4× 30 s de relance libre sur terrain plat\, sans dépasser 145 bpm\, retour au trot ensuite\n• 10 min de trot très lent puis marche pour finir\n• Étirements légers mollets et ischio-jambiers au retour\n⚑ Toute douleur à l'Achille ou au genou = arrêt de la sortie et remplacement par du vélo la semaine prochaine.\n\nCoach IA — 2026-S36
 BEGIN:VALARM
 TRIGGER:-PT30M
 ACTION:DISPLAY
-DESCRIPTION:🏃 Sortie longue 1 h 15 en aisance
+DESCRIPTION:🏃 Sortie longue en aisance stricte
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:2026-S36-6-matin@coach-ia
-DTSTAMP:20260830T190000Z
-DTSTART:20260906T033000Z
-DTEND:20260906T043000Z
-SUMMARY:🚶 Marche + mobilité 40 min
-DESCRIPTION:Desautel est fermée le dimanche : on remplace la natation par de la récupération active à la maison ou dehors\, au lendemain de la sortie longue. Rien de cardio\, on fait circuler.\n• 30 min de marche tranquille (ou 20 min de home-trainer très souple si tu préfères rester à la maison)\n• 10 min de mobilité : hanches\, chevilles\, thoracique\n• 3 × 12 extensions de mollets lentes à la descente\, pour l'Achille\n• Étirements ischios et quadriceps\, 30 s par côté\n⚑ Aucune intensité aujourd'hui\, même si tu te sens bien : c'est ce qui permet d'enchaîner la semaine 2.\n\nCoach IA — 2026-S36
+UID:2026-S36-5-soir@coach-ia
+DTSTAMP:20260830T192700Z
+DTSTART:20260905T163000Z
+DTEND:20260905T174500Z
+SUMMARY:🏊 Natation récup + sauna — Cap Provence Cassis
+DESCRIPTION:Si la natation de jeudi n'a pas pu se faire\, c'est ici qu'elle se rattrape. Nage très souple puis sauna/hammam : semaine de reprise chargée\, on referme avec de la récupération active.\n• 600 m de nage souple alternant crawl et dos\, aucune recherche de vitesse\n• 4×50 m battements avec planche\, tranquille\n• 200 m de nage libre très lente pour finir\n• 15 min de sauna ou hammam\, en sortant dès que c'est inconfortable\n• Grand verre d'eau + 5 min d'étirements doux au calme\n⚑ Pas de sauna si tu te sens déjà déshydraté après la sortie longue — dans ce doute\, uniquement la nage.\n\nCoach IA — 2026-S36
 BEGIN:VALARM
 TRIGGER:-PT30M
 ACTION:DISPLAY
-DESCRIPTION:🚶 Marche + mobilité 40 min
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:2026-S36-6-soir@coach-ia
-DTSTAMP:20260830T190000Z
-DTSTART:20260906T163000Z
-DTEND:20260906T174500Z
-SUMMARY:🍲 Batch cooking (pas une séance)
-DESCRIPTION:Préparation des repas de la semaine.\n\nCoach IA — 2026-S36
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🍲 Batch cooking (pas une séance)
+DESCRIPTION:🏊 Natation récup + sauna — Cap Provence Cassis
 END:VALARM
 END:VEVENT
 END:VCALENDAR

@@ -36,6 +36,7 @@ const ageAt = d => { let a = d.getFullYear() - NAISSANCE.getFullYear(); const m 
 export const PROFIL = {
   prenom: "Benoît", get age() { return ageAt(new Date()); }, naissance: "1987-05-30", fcMax: 190,
   poidsKg: 77.5,
+  rituels: "SÉANCE FIXE DU VENDREDI SOIR : haltérophilie (technique d'arraché/épaulé-jeté, à la box). C'est un rendez-vous hebdomadaire non négociable — le coach le place chaque vendredi soir, ne programme rien de lourd en bas du corps le samedi matin qui suivrait, et n'ajoute jamais d'autre séance d'haltéro dans la semaine.",
   limitesTechniques: "OVERHEAD SQUAT (squat barre au-dessus de la tête) : Benoît a du mal à le réaliser correctement (constaté le 29/08/2026, WOD à 30 kg). C'est une limitation de MOBILITÉ (épaules, thoracique, chevilles), pas de force. À traiter systématiquement : inclure 5-10 min de mobilité ciblée dans les séances du matin type Pilates/mobilité (dislocations à l'élastique ou au PVC, sots press, overhead squat au PVC tenu 30 s en bas, accroupi profond tenu, mobilité chevilles genou-mur), et proposer les progressions en séance (PVC → barre à vide → charge légère). Ne jamais lui programmer de l'overhead squat chargé tant que la position basse n'est pas stable au PVC.",
   forceRef: "Back squat : 80 kg (référence donnée par Benoît le 27/08/2026 — charge de travail sur 5 reps). Le cycle 5×5 du bloc Fondation part de cette charge, pas d'une estimation.",   // estimation Benoît 22/08/2026 : « 75/80 kg » — à affiner avec une pesée
   tailleCm: null,
@@ -249,6 +250,7 @@ ${texteGarde(semaineCible(now).lundi)}
 ${texteNST(semaineCible(now).label) || "PROGRAMMATION NST : pas encore fournie pour cette semaine — prévoir des créneaux \"box ou NST\" et le préciser."}
 
 RÉFÉRENCES DE FORCE : ${PROFIL.forceRef}
+RENDEZ-VOUS FIXES : ${PROFIL.rituels}
 LIMITATION TECHNIQUE À TRAVAILLER : ${PROFIL.limitesTechniques}
 
 ATHLÈTE : ${PROFIL.prenom}, ${PROFIL.age} ans, FC max ~${PROFIL.fcMax} bpm${PROFIL.poidsKg ? `, ${PROFIL.poidsKg} kg` : " (poids non renseigné : suppose ~80 kg et précise-le)"}${PROFIL.tailleCm ? `, ${PROFIL.tailleCm} cm` : ""}. Objectif : ${PROFIL.objectif}. Contexte : ${PROFIL.contexte}.
