@@ -137,15 +137,15 @@ h2 { font-family: var(--display); font-size: 1.05rem; font-weight: 600; text-tra
 .coach-vigilance { margin: .7rem 0 0; padding: .5rem .7rem; border-radius: 8px; background: var(--warn-dim); color: var(--warn); font-size: .85rem; }
 .sem-objectif { margin: 0 0 .6rem; font-size: .9rem; color: var(--muted); }
 .plan { list-style: none; margin: 0; padding: 0; }
-.plan li { display: grid; grid-template-columns: 2.4rem 1.6rem 1fr; gap: .5rem; padding: .5rem 0; border-bottom: 1px solid var(--line); font-size: .88rem; }
-.plan li:last-child { border-bottom: 0; }
+.plan > li { display: grid; grid-template-columns: 2.4rem 1.6rem 1fr; gap: .5rem; padding: .5rem 0; border-bottom: 1px solid var(--line); font-size: .88rem; }
+.plan > li:last-child { border-bottom: 0; }
 .plan .p-jour { font-family: var(--display); font-weight: 600; font-size: 1rem; color: var(--muted); }
 .plan .p-ico { font-size: 1.1rem; }
 .plan .p-titre { font-weight: 600; }
 .plan .p-detail { color: var(--ink); opacity: .9; line-height: 1.4; margin-top: .1rem; }
 .plan .p-garde { color: var(--muted); font-size: .8rem; margin-top: .2rem; }
 .plan .p-garde::before { content: "⚑ "; color: var(--warn); }
-.plan li.repos .p-titre { color: var(--muted); font-weight: 400; }
+.plan > li.repos .p-titre { color: var(--muted); font-weight: 400; }
 .sem-regle { margin: .7rem 0 0; font-size: .85rem; color: var(--muted); border-top: 1px dashed var(--line); padding-top: .5rem; }
 .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 0 -1rem; padding: 0 1rem; }
 table.mois { border-collapse: collapse; font-size: .8rem; white-space: nowrap; font-variant-numeric: tabular-nums; width: 100%; }
@@ -235,7 +235,7 @@ details.recette .rc-body .coach-sub { margin-top: .4rem; }
 .jour-seance .d-main { font-family: var(--display); font-size: 1.6rem; font-weight: 600; }
 #jour-detail { margin: .2rem 0; font-size: .95rem; line-height: 1.5; }
 #jour-garde { margin: .5rem 0 0; font-size: .85rem; color: var(--warn); }
-.plan li.cur { background: var(--accent-dim); border-radius: 8px; padding-left: .4rem; padding-right: .4rem; }
+.plan > li.cur { background: var(--accent-dim); border-radius: 8px; padding-left: .4rem; padding-right: .4rem; }
 .plan .p-jour small { display: block; font-size: .7rem; color: var(--faint); font-weight: 400; }
 .filtres { display: flex; gap: .3rem; margin-bottom: .6rem; flex-wrap: wrap; }
 .filtres button { padding: .3rem .55rem; border: 1px solid var(--line); background: var(--card-2); color: var(--muted);
@@ -288,7 +288,7 @@ details.recette .rc-body .coach-sub { margin-top: .4rem; }
 .mv-none { color: var(--faint); }
 
 /* Semaine bi-quotidienne */
-.plan li.jour { display: block; }
+.plan > li.jour { display: block; }
 .plan .j-head { display: flex; align-items: baseline; gap: .5rem; margin-bottom: .2rem; }
 .plan .j-fait { font-size: .78rem; color: var(--accent); }
 .plan .s-item { display: grid; grid-template-columns: 3.2rem 1.6rem 1fr; gap: .4rem; align-items: start; padding: .25rem 0; }
@@ -307,7 +307,7 @@ details.recette .rc-body .coach-sub { margin-top: .4rem; }
 .check input { margin-top: .25rem; width: 1.1rem; height: 1.1rem; accent-color: var(--accent); flex: none; }
 .check li.ok span { color: var(--faint); text-decoration: line-through; }
 .etapes { list-style: none; margin: .3rem 0 0; padding: 0; }
-.etapes li { font-size: .85rem; color: var(--ink); opacity: .85; padding: .12rem 0 .12rem .8rem; position: relative; }
+.etapes li { display: block; font-size: .85rem; color: var(--ink); opacity: .85; padding: .12rem 0 .12rem .8rem; position: relative; }
 .etapes li::before { content: "·"; position: absolute; left: .1rem; color: var(--faint); }
 .mvt-aide { margin-top: .5rem; }
 .mvt-aide summary { cursor: pointer; font-size: .82rem; color: var(--accent); list-style: none; }
