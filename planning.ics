@@ -5,21 +5,8 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
-UID:2026-S36-0-matin@coach-ia
-DTSTAMP:20260831T040000Z
-DTSTART:20260831T033000Z
-DTEND:20260831T043000Z
-SUMMARY:🧘 Mobilité + gainage (nuit courte)
-DESCRIPTION:Tu sors d'une nuit à 3h34 avec un HRV à 25 ms : on ne court pas\, on réveille le corps sans le charger. Séance à la maison\, enfants présents\, pas de sortie. Focus mobilité épaules/thoracique/chevilles — c'est ce qui bloque ton overhead squat.\n• 5 min de respiration nasale + rotations d'épaules et de bassin\, debout\n• Dislocations à l'élastique (bras tendus\, l'élastique passe de devant à derrière la tête) 2×10\, lentement\n• Sots press au PVC (barre en plastique au-dessus de la tête\, on s'accroupit sous la barre) 2×8\n• Overhead squat au PVC : 3× tenir 30 s en position basse\, barre au-dessus de la tête\, bras tendus\n• Mobilité chevilles genou-mur : 2×10 par jambe (genou avance vers le mur\, talon collé au sol)\n• Gainage : planche ventrale 3×40 s + planche latérale 2×30 s par côté\n• 5 min étirement des fléchisseurs de hanche (fente genou au sol\, bassin qui rentre)\n⚑ Si tu te sens vidé après 15 min\, tu arrêtes — cette séance ne doit rien coûter.\n\nCoach IA — 2026-S36
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🧘 Mobilité + gainage (nuit courte)
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-S36-0-soir@coach-ia
-DTSTAMP:20260831T040000Z
+DTSTAMP:20260831T050000Z
 DTSTART:20260831T163000Z
 DTEND:20260831T174500Z
 SUMMARY:🏋️ NST — Haut du corps (Press)\, niveau Intermédiaire
@@ -32,7 +19,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-1-matin@coach-ia
-DTSTAMP:20260831T040000Z
+DTSTAMP:20260831T050000Z
 DTSTART:20260901T033000Z
 DTEND:20260901T043000Z
 SUMMARY:🚴 Home-trainer aisance stricte
@@ -45,7 +32,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-1-soir@coach-ia
-DTSTAMP:20260831T040000Z
+DTSTAMP:20260831T050000Z
 DTSTART:20260901T163000Z
 DTEND:20260901T174500Z
 SUMMARY:🏋️ NST — Bas du corps (Front Squat)\, niveau Intermédiaire
@@ -58,7 +45,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-2-matin@coach-ia
-DTSTAMP:20260831T040000Z
+DTSTAMP:20260831T050000Z
 DTSTART:20260902T033000Z
 DTEND:20260902T043000Z
 SUMMARY:🧘 Pilates + mobilité overhead
@@ -71,7 +58,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-3-matin@coach-ia
-DTSTAMP:20260831T040000Z
+DTSTAMP:20260831T050000Z
 DTSTART:20260903T033000Z
 DTEND:20260903T043000Z
 SUMMARY:🚴 Home-trainer facile + corde à sauter
@@ -84,7 +71,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-3-soir@coach-ia
-DTSTAMP:20260831T040000Z
+DTSTAMP:20260831T050000Z
 DTSTART:20260903T163000Z
 DTEND:20260903T174500Z
 SUMMARY:🏊 Natation aisance — piscine Desautel
@@ -97,7 +84,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-4-matin@coach-ia
-DTSTAMP:20260831T040000Z
+DTSTAMP:20260831T050000Z
 DTSTART:20260904T033000Z
 DTEND:20260904T043000Z
 SUMMARY:🧘 Mobilité courte
@@ -110,7 +97,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-4-soir@coach-ia
-DTSTAMP:20260831T040000Z
+DTSTAMP:20260831T050000Z
 DTSTART:20260904T163000Z
 DTEND:20260904T174500Z
 SUMMARY:🏋️ Haltérophilie technique — box (rendez-vous fixe)
@@ -123,7 +110,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-5-matin@coach-ia
-DTSTAMP:20260831T040000Z
+DTSTAMP:20260831T050000Z
 DTSTART:20260905T033000Z
 DTEND:20260905T043000Z
 SUMMARY:🏃 Sortie longue en aisance stricte
@@ -136,7 +123,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-5-soir@coach-ia
-DTSTAMP:20260831T040000Z
+DTSTAMP:20260831T050000Z
 DTSTART:20260905T163000Z
 DTEND:20260905T174500Z
 SUMMARY:🏊 Natation récup + sauna — Cap Provence Cassis
