@@ -5,21 +5,8 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
-UID:2026-S36-0-soir@coach-ia
-DTSTAMP:20260831T172400Z
-DTSTART:20260831T163000Z
-DTEND:20260831T174500Z
-SUMMARY:🏋️ NST — Haut du corps (Press)\, niveau Intermédiaire
-DESCRIPTION:Séance NST du jour\, reprise telle quelle mais coupée à ~70 min : on garde échauffement + force absolue + endurance de force + conditionnement\, on saute l'accessoire optionnel. Charges légères à modérées\, technique parfaite\, vitesse à la remontée. Tu gardes 5 % dans le réservoir.\n• Échauffement : 60/60 s étirement dynamique pectoraux + 60/60 s dorsaux\, puis 4 min rameur (20 s facile / 10 s dur)\n• Puis 40 close grip bench press à la barre à vide (développé couché prise serrée\, mains à largeur d'épaules) + 20 ring rows prise serrée (tirage suspendu aux anneaux\, corps gainé) + 20 bench press léger + 20 ring rows\n• Montée en charge progressive au développé couché prise serrée jusqu'à la charge de travail (~45-55 % de ton max\, soit une charge où 10 reps sortent faciles)\n• FORCE : 4 séries de 10 développés couchés prise serrée — 75 s de repos — 5 pompes explosives mains qui décollent du sol (bench plyo push-ups) — 75 s de repos\n• ENDURANCE DE FORCE : EMOM 12 min — minute impaire 20 s suspension menton au-dessus de la barre (pronation\, élastique ou appui box autorisé) · minute paire 20 s maintien bras tendus en haut des dips aux anneaux\n• CONDITIONING seuil (niveau Scaled) : AMRAP 20 min — 6 tractions kipping / 6 HSPU kipping (pompes en équilibre contre le mur) / 12-9 cal rameur\, 1 min de repos entre les tours\, ordre inversé à chaque tour\n• Retour au calme : 5 min rameur très facile + étirement pectoraux au mur\n⚑ Vu la nuit blanche\, si la FC monte au-dessus de 165 bpm sur le conditioning\, tu passes à 4 tours et tu arrêtes.\n\nCoach IA — 2026-S36
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🏋️ NST — Haut du corps (Press)\, niveau Intermédiaire
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-S36-1-matin@coach-ia
-DTSTAMP:20260831T172400Z
+DTSTAMP:20260831T180000Z
 DTSTART:20260901T033000Z
 DTEND:20260901T043000Z
 SUMMARY:🚴 Home-trainer aisance stricte
@@ -32,7 +19,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-1-soir@coach-ia
-DTSTAMP:20260831T172400Z
+DTSTAMP:20260831T180000Z
 DTSTART:20260901T163000Z
 DTEND:20260901T174500Z
 SUMMARY:🏋️ NST — Bas du corps (Front Squat)\, niveau Intermédiaire
@@ -45,7 +32,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-2-matin@coach-ia
-DTSTAMP:20260831T172400Z
+DTSTAMP:20260831T180000Z
 DTSTART:20260902T033000Z
 DTEND:20260902T043000Z
 SUMMARY:🧘 Pilates + mobilité overhead
@@ -58,7 +45,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-3-matin@coach-ia
-DTSTAMP:20260831T172400Z
+DTSTAMP:20260831T180000Z
 DTSTART:20260903T033000Z
 DTEND:20260903T043000Z
 SUMMARY:🚴 Home-trainer facile + corde à sauter
@@ -71,7 +58,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-3-soir@coach-ia
-DTSTAMP:20260831T172400Z
+DTSTAMP:20260831T180000Z
 DTSTART:20260903T163000Z
 DTEND:20260903T174500Z
 SUMMARY:🏊 Natation aisance — piscine Desautel
@@ -84,7 +71,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-4-matin@coach-ia
-DTSTAMP:20260831T172400Z
+DTSTAMP:20260831T180000Z
 DTSTART:20260904T033000Z
 DTEND:20260904T043000Z
 SUMMARY:🧘 Mobilité courte
@@ -97,7 +84,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-4-soir@coach-ia
-DTSTAMP:20260831T172400Z
+DTSTAMP:20260831T180000Z
 DTSTART:20260904T163000Z
 DTEND:20260904T174500Z
 SUMMARY:🏋️ Haltérophilie technique — box (rendez-vous fixe)
@@ -110,7 +97,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-5-matin@coach-ia
-DTSTAMP:20260831T172400Z
+DTSTAMP:20260831T180000Z
 DTSTART:20260905T033000Z
 DTEND:20260905T043000Z
 SUMMARY:🏃 Sortie longue en aisance stricte
@@ -123,7 +110,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-5-soir@coach-ia
-DTSTAMP:20260831T172400Z
+DTSTAMP:20260831T180000Z
 DTSTART:20260905T163000Z
 DTEND:20260905T174500Z
 SUMMARY:🏊 Natation récup + sauna — Cap Provence Cassis
