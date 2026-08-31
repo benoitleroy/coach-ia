@@ -1964,20 +1964,5 @@ window.SEANCES = [
   "contenuFr": null,
   "note": null,
   "photo": null
- },
- {
-  "id": 17596490553,
-  "date": "2026-03-04T04:00:00Z",
-  "type": "VirtualRide",
-  "name": "Zwift - Hudson Hustle in New York",
-  "sec": 3700,
-  "km": 33.2,
-  "hr": 128,
-  "hrMax": 142,
-  "effort": 21,
-  "contenu": null,
-  "contenuFr": null,
-  "note": null,
-  "photo": null
  }
 ];
