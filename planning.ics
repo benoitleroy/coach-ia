@@ -6,20 +6,20 @@ METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
 UID:2026-S36-1-soir@coach-ia
-DTSTAMP:20260901T110000Z
+DTSTAMP:20260901T120000Z
 DTSTART:20260901T163000Z
 DTEND:20260901T174500Z
-SUMMARY:🏋️ NST — Bas du corps (Front Squat)\, niveau Intermédiaire
-DESCRIPTION:Séance NST du jour\, coupée à ~70 min. Attention : c'est un jour lourd bas du corps\, donc mercredi matin sera facile. Tempo contrôlé sur les front squats\, l'explosivité vient à la remontée.\n• Échauffement : 60/60 s étirement dynamique de la hanche antérieure\, puis 1800 m sur vélo/rameur en 30 s facile / 30 s modéré\n• Puis mini-bande : 3× (5 squats + 5 s de maintien à la parallèle sur la dernière rep) et 3× (5 ponts fessiers + 5 s en haut sur la dernière rep) — sans élastique : 30 s wall sit + 10 good-mornings à la barre à vide + 5 kang squats\n• Montée en charge aux front squats (squat barre devant\, coudes hauts) jusqu'à ~40-50 % du max\, charge légère\n• FORCE : 4 séries de 10 front squats sur banc ou box basse — tempo 21X1 (2 s de descente\, 1 s de pause assis\, remontée explosive) — 75 s de repos — 3 seated box jumps (sauts sur box depuis la position assise) — 75 s de repos\n• ENDURANCE DE FORCE : 3 séries de 10/10 soulevés de terre roumains à une jambe avec haltère de 17\,5 kg (jambe libre en appui\, descente contrôlée\, arrêt avant que l'haltère touche le sol) — 2 min de repos entre séries\n• CONDITIONING VO2max (niveau Intermédiaire) : EMOM jusqu'à l'échec\, 20 min max — 4 toes-to-bar / 4 power cleans à 40 kg / 4 burpees face à la barre. Note ton nombre de tours complets.\n• Retour au calme : 5 min de marche + étirement quadriceps et fessiers\n⚑ Sur l'EMOM\, dès que tu ne finis plus le tour dans la minute\, tu arrêtes — c'est le score\, pas un échec.\n\nCoach IA — 2026-S36
+SUMMARY:🏋️ NST maison version courte — Bas du corps (35 min)
+DESCRIPTION:Adaptation semaine avec les enfants + ratio de charge à 1.61 (surcharge) : on garde l'essentiel de la séance NST (force + unilatéral)\, on supprime le conditioning VO2max. Faisable dans le salon pendant que les enfants sont là.\n• Échauffement 5 min : 30 s wall sit + 10 good-mornings barre à vide + 5 kang squats\, 2 tours\n• Montée en charge aux front squats jusqu'à ~40-50 % du max\n• FORCE : 4 séries de 10 front squats tempo 21X1 (2 s descente\, 1 s pause\, remontée explosive) — 75 s de repos\n• 3 seated box jumps entre les séries si une box est dispo\, sinon 3 squat jumps\n• UNILATÉRAL : 3 séries de 10/10 soulevés de terre roumains à une jambe\, haltère 17\,5 kg — 90 s de repos\n• Gainage : 3×40 s planche + 2×30 s planche latérale par côté\n⚑ Pas de conditioning ce soir : le ratio est à 1.61\, la séance s'arrête après le gainage même si tu te sens bien.\n\nCoach IA — 2026-S36
 BEGIN:VALARM
 TRIGGER:-PT30M
 ACTION:DISPLAY
-DESCRIPTION:🏋️ NST — Bas du corps (Front Squat)\, niveau Intermédiaire
+DESCRIPTION:🏋️ NST maison version courte — Bas du corps (35 min)
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-2-matin@coach-ia
-DTSTAMP:20260901T110000Z
+DTSTAMP:20260901T120000Z
 DTSTART:20260902T033000Z
 DTEND:20260902T043000Z
 SUMMARY:🧘 Pilates + mobilité overhead
@@ -32,7 +32,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-3-matin@coach-ia
-DTSTAMP:20260901T110000Z
+DTSTAMP:20260901T120000Z
 DTSTART:20260903T033000Z
 DTEND:20260903T043000Z
 SUMMARY:🚴 Home-trainer facile + corde à sauter
@@ -45,20 +45,20 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-3-soir@coach-ia
-DTSTAMP:20260901T110000Z
+DTSTAMP:20260901T120000Z
 DTSTART:20260903T163000Z
 DTEND:20260903T174500Z
-SUMMARY:🏊 Natation aisance — piscine Desautel
-DESCRIPTION:Créneau Desautel jeudi 17h-19h\, tu n'as pas les enfants ce soir-là ? Si si — tu les as\, donc à caler seulement si l'organisation le permet ; sinon on la déplace au samedi (voir samedi). Nage souple\, technique\, zéro intensité : c'est du volume sans impact et un travail d'épaules utile pour ta mobilité.\n• 300 m nage souple en crawl\, respiration tous les 3 temps\n• 6×50 m éducatifs : rattrapé\, poings fermés\, une main devant — 20 s de repos\n• 400 m crawl continu en aisance\, allure conversation\n• 200 m dos crawlé souple pour ouvrir les épaules\n• 100 m retour au calme\n⚑ Si tu ne peux pas te libérer avec les enfants\, cette séance saute — elle est reportée au samedi matin\, pas ajoutée ailleurs.\n\nCoach IA — 2026-S36
+SUMMARY:— Rien (natation déplacée au samedi)
+DESCRIPTION:Enfants ce soir : la natation Desautel saute et part au samedi soir à Cap Provence\, comme prévu par le plan de repli. Soirée off — c'est cohérent avec la surcharge détectée (ratio 1.61).\n\nCoach IA — 2026-S36
 BEGIN:VALARM
 TRIGGER:-PT30M
 ACTION:DISPLAY
-DESCRIPTION:🏊 Natation aisance — piscine Desautel
+DESCRIPTION:— Rien (natation déplacée au samedi)
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-4-matin@coach-ia
-DTSTAMP:20260901T110000Z
+DTSTAMP:20260901T120000Z
 DTSTART:20260904T033000Z
 DTEND:20260904T043000Z
 SUMMARY:🧘 Mobilité courte
@@ -71,7 +71,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-4-soir@coach-ia
-DTSTAMP:20260901T110000Z
+DTSTAMP:20260901T120000Z
 DTSTART:20260904T163000Z
 DTEND:20260904T174500Z
 SUMMARY:🏋️ Haltérophilie technique — box (rendez-vous fixe)
@@ -84,7 +84,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-5-matin@coach-ia
-DTSTAMP:20260901T110000Z
+DTSTAMP:20260901T120000Z
 DTSTART:20260905T033000Z
 DTEND:20260905T043000Z
 SUMMARY:🏃 Sortie longue en aisance stricte
@@ -97,11 +97,11 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-5-soir@coach-ia
-DTSTAMP:20260901T110000Z
+DTSTAMP:20260901T120000Z
 DTSTART:20260905T163000Z
 DTEND:20260905T174500Z
 SUMMARY:🏊 Natation récup + sauna — Cap Provence Cassis
-DESCRIPTION:Si la natation de jeudi n'a pas pu se faire\, c'est ici qu'elle se rattrape. Nage très souple puis sauna/hammam : semaine de reprise chargée\, on referme avec de la récupération active.\n• 600 m de nage souple alternant crawl et dos\, aucune recherche de vitesse\n• 4×50 m battements avec planche\, tranquille\n• 200 m de nage libre très lente pour finir\n• 15 min de sauna ou hammam\, en sortant dès que c'est inconfortable\n• Grand verre d'eau + 5 min d'étirements doux au calme\n⚑ Pas de sauna si tu te sens déjà déshydraté après la sortie longue — dans ce doute\, uniquement la nage.\n\nCoach IA — 2026-S36
+DESCRIPTION:La natation de jeudi n'a pas pu se faire (enfants) : c'est donc ICI la séance natation de la semaine. Nage très souple puis sauna/hammam : semaine chargée\, on referme avec de la récupération active.\n• 600 m de nage souple alternant crawl et dos\, aucune recherche de vitesse\n• 4×50 m battements avec planche\, tranquille\n• 200 m de nage libre très lente pour finir\n• 15 min de sauna ou hammam\, en sortant dès que c'est inconfortable\n• Grand verre d'eau + 5 min d'étirements doux au calme\n⚑ Pas de sauna si tu te sens déjà déshydraté après la sortie longue — dans ce doute\, uniquement la nage.\n\nCoach IA — 2026-S36
 BEGIN:VALARM
 TRIGGER:-PT30M
 ACTION:DISPLAY
