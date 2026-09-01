@@ -5,21 +5,8 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
-UID:2026-S36-1-matin@coach-ia
-DTSTAMP:20260901T040000Z
-DTSTART:20260901T033000Z
-DTEND:20260901T043000Z
-SUMMARY:🚴 Home-trainer aisance stricte
-DESCRIPTION:Enfants à la maison\, donc pas de sortie : 45 min sur le home-trainer\, conversation possible du début à la fin. C'est du volume sans impact pour les tendons\, exactement ce qui manque en ce moment.\n• 10 min d'échauffement progressif\, cadence 85-90 rpm\, FC qui monte doucement vers 120 bpm\n• 30 min en aisance stricte : FC 125-135 bpm\, jamais au-dessus de 140\, cadence libre entre 85 et 95 rpm\n• 3× 20 s de relance à cadence 105 rpm sans forcer sur la puissance\, réparties dans les 30 min\n• 5 min de retour au calme\, cadence 80 rpm\, résistance minimale\n⚑ Si la FC dépasse 140 bpm sans que tu forces\, tu raccourcis à 30 min — c'est un signe de fatigue résiduelle.\n\nCoach IA — 2026-S36
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🚴 Home-trainer aisance stricte
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-S36-1-soir@coach-ia
-DTSTAMP:20260901T040000Z
+DTSTAMP:20260901T050000Z
 DTSTART:20260901T163000Z
 DTEND:20260901T174500Z
 SUMMARY:🏋️ NST — Bas du corps (Front Squat)\, niveau Intermédiaire
@@ -32,7 +19,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-2-matin@coach-ia
-DTSTAMP:20260901T040000Z
+DTSTAMP:20260901T050000Z
 DTSTART:20260902T033000Z
 DTEND:20260902T043000Z
 SUMMARY:🧘 Pilates + mobilité overhead
@@ -45,7 +32,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-3-matin@coach-ia
-DTSTAMP:20260901T040000Z
+DTSTAMP:20260901T050000Z
 DTSTART:20260903T033000Z
 DTEND:20260903T043000Z
 SUMMARY:🚴 Home-trainer facile + corde à sauter
@@ -58,7 +45,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-3-soir@coach-ia
-DTSTAMP:20260901T040000Z
+DTSTAMP:20260901T050000Z
 DTSTART:20260903T163000Z
 DTEND:20260903T174500Z
 SUMMARY:🏊 Natation aisance — piscine Desautel
@@ -71,7 +58,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-4-matin@coach-ia
-DTSTAMP:20260901T040000Z
+DTSTAMP:20260901T050000Z
 DTSTART:20260904T033000Z
 DTEND:20260904T043000Z
 SUMMARY:🧘 Mobilité courte
@@ -84,7 +71,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-4-soir@coach-ia
-DTSTAMP:20260901T040000Z
+DTSTAMP:20260901T050000Z
 DTSTART:20260904T163000Z
 DTEND:20260904T174500Z
 SUMMARY:🏋️ Haltérophilie technique — box (rendez-vous fixe)
@@ -97,7 +84,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-5-matin@coach-ia
-DTSTAMP:20260901T040000Z
+DTSTAMP:20260901T050000Z
 DTSTART:20260905T033000Z
 DTEND:20260905T043000Z
 SUMMARY:🏃 Sortie longue en aisance stricte
@@ -110,7 +97,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-5-soir@coach-ia
-DTSTAMP:20260901T040000Z
+DTSTAMP:20260901T050000Z
 DTSTART:20260905T163000Z
 DTEND:20260905T174500Z
 SUMMARY:🏊 Natation récup + sauna — Cap Provence Cassis
