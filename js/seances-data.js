@@ -1979,20 +1979,5 @@ window.SEANCES = [
   "contenuFr": null,
   "note": null,
   "photo": null
- },
- {
-  "id": 17620991288,
-  "date": "2026-03-06T05:12:27Z",
-  "type": "VirtualRide",
-  "name": "Zwift - Emily's Short Mix",
-  "sec": 2117,
-  "km": 20.2,
-  "hr": 129,
-  "hrMax": 156,
-  "effort": 16,
-  "contenu": null,
-  "contenuFr": null,
-  "note": null,
-  "photo": null
  }
 ];
