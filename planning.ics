@@ -5,21 +5,8 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
-UID:2026-S36-2-matin@coach-ia
-DTSTAMP:20260902T040000Z
-DTSTART:20260902T033000Z
-DTEND:20260902T043000Z
-SUMMARY:🧘 Pilates + mobilité overhead
-DESCRIPTION:Lendemain de jour lourd bas du corps : rien qui charge. Pilates à la maison (enfants présents) avec la même dose de mobilité épaules qu'hier matin — c'est la répétition quotidienne qui débloquera l'overhead squat\, pas une grosse séance.\n• 5 min de respiration et mobilisation de la colonne (chat-vache\, roulés de dos)\n• Bloc mobilité overhead : dislocations à l'élastique 2×10 + overhead squat au PVC 3×30 s en position basse + mobilité chevilles genou-mur 2×10 par jambe\n• 25 min de Pilates : gainage dynamique\, travail des transverses\, hanches et chaîne postérieure\n• 5 min d'étirements passifs : ischio-jambiers\, quadriceps\, psoas\n⚑ Aucune douleur ne doit apparaître dans les cuisses — si ça tire fort\, tu réduis à de la simple mobilité.\n\nCoach IA — 2026-S36
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🧘 Pilates + mobilité overhead
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-S36-3-matin@coach-ia
-DTSTAMP:20260902T040000Z
+DTSTAMP:20260902T050000Z
 DTSTART:20260903T033000Z
 DTEND:20260903T043000Z
 SUMMARY:🚴 Home-trainer facile + corde à sauter
@@ -32,7 +19,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-3-soir@coach-ia
-DTSTAMP:20260902T040000Z
+DTSTAMP:20260902T050000Z
 DTSTART:20260903T163000Z
 DTEND:20260903T174500Z
 SUMMARY:— Rien (natation déplacée au samedi)
@@ -45,7 +32,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-4-matin@coach-ia
-DTSTAMP:20260902T040000Z
+DTSTAMP:20260902T050000Z
 DTSTART:20260904T033000Z
 DTEND:20260904T043000Z
 SUMMARY:🧘 Mobilité courte
@@ -58,7 +45,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-4-soir@coach-ia
-DTSTAMP:20260902T040000Z
+DTSTAMP:20260902T050000Z
 DTSTART:20260904T163000Z
 DTEND:20260904T174500Z
 SUMMARY:🏋️ Haltérophilie technique — box (rendez-vous fixe)
@@ -71,7 +58,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-5-matin@coach-ia
-DTSTAMP:20260902T040000Z
+DTSTAMP:20260902T050000Z
 DTSTART:20260905T033000Z
 DTEND:20260905T043000Z
 SUMMARY:🏃 Sortie longue en aisance stricte
@@ -84,7 +71,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-5-soir@coach-ia
-DTSTAMP:20260902T040000Z
+DTSTAMP:20260902T050000Z
 DTSTART:20260905T163000Z
 DTEND:20260905T174500Z
 SUMMARY:🏊 Natation récup + sauna — Cap Provence Cassis
