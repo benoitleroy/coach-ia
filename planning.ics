@@ -5,21 +5,8 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
-UID:2026-S36-3-matin@coach-ia
-DTSTAMP:20260903T040000Z
-DTSTART:20260903T033000Z
-DTEND:20260903T043000Z
-SUMMARY:🚴 Home-trainer facile + corde à sauter
-DESCRIPTION:Enfants à la maison\, séance courte à domicile. Volume aérobie sans impact plus un peu de rebond pour réveiller les mollets avant la course du week-end.\n• 10 min home-trainer en montée progressive\, FC vers 120 bpm\n• 25 min home-trainer en aisance stricte\, FC 125-135 bpm\, conversation possible\n• 5 min de retour au calme sur le vélo\n• Corde à sauter : 6×30 s de sauts simples\, 30 s de repos entre les séries\, atterrissage sur l'avant du pied\, souple\n⚑ Si les mollets ou l'Achille tirent sur la corde à sauter\, tu arrêtes immédiatement la corde et tu gardes le vélo.\n\nCoach IA — 2026-S36
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🚴 Home-trainer facile + corde à sauter
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-S36-3-soir@coach-ia
-DTSTAMP:20260903T040000Z
+DTSTAMP:20260903T050000Z
 DTSTART:20260903T163000Z
 DTEND:20260903T174500Z
 SUMMARY:— Rien (natation déplacée au samedi)
@@ -32,7 +19,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-4-matin@coach-ia
-DTSTAMP:20260903T040000Z
+DTSTAMP:20260903T050000Z
 DTSTART:20260904T033000Z
 DTEND:20260904T043000Z
 SUMMARY:🧘 Mobilité courte
@@ -45,7 +32,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-4-soir@coach-ia
-DTSTAMP:20260903T040000Z
+DTSTAMP:20260903T050000Z
 DTSTART:20260904T163000Z
 DTEND:20260904T174500Z
 SUMMARY:🏋️ Haltérophilie technique — box (rendez-vous fixe)
@@ -58,7 +45,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-5-matin@coach-ia
-DTSTAMP:20260903T040000Z
+DTSTAMP:20260903T050000Z
 DTSTART:20260905T033000Z
 DTEND:20260905T043000Z
 SUMMARY:🏃 Sortie longue en aisance stricte
@@ -71,7 +58,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-5-soir@coach-ia
-DTSTAMP:20260903T040000Z
+DTSTAMP:20260903T050000Z
 DTSTART:20260905T163000Z
 DTEND:20260905T174500Z
 SUMMARY:🏊 Natation récup + sauna — Cap Provence Cassis
