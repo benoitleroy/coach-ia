@@ -4,7 +4,7 @@ window.SEANCES = [
   "id": 20030829525,
   "date": "2026-09-04T10:27:52Z",
   "type": "Workout",
-  "name": "Entraînement le matin",
+  "name": "Séance altero",
   "sec": 4111,
   "km": 0,
   "hr": 107,
