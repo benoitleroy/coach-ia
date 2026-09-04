@@ -5,21 +5,8 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
-UID:2026-S36-4-soir@coach-ia
-DTSTAMP:20260904T170000Z
-DTSTART:20260904T163000Z
-DTEND:20260904T174500Z
-SUMMARY:🏋️ Haltérophilie technique — box (rendez-vous fixe)
-DESCRIPTION:Ton rendez-vous hebdomadaire non négociable. Technique d'arraché et d'épaulé-jeté à charge légère : le skill se travaille frais\, pas épuisé. Aucune recherche de charge maximale ce soir.\n• Échauffement barre à vide : 10 tirages nuque\, 10 overhead squats au PVC\, 10 good-mornings\n• Arraché décomposé : 3×5 tirages hauts + 3×5 arrachés depuis les cuisses (hang snatch)\, barre à vide puis 30 kg maximum\n• Épaulé-jeté : 4×3 épaulés debout (power clean) + 1 jeté fente\, charge où la technique reste parfaite (30-40 kg)\n• Travail de position basse : 3×5 overhead squats au PVC uniquement\, pas de charge\n• Gainage court : 3×30 s planche + 3×10 hollow rocks\n• Retour au calme : 5 min de mobilité épaules\n⚑ Interdiction absolue d'overhead squat chargé tant que la position basse au PVC n'est pas stable.\n\nCoach IA — 2026-S36
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🏋️ Haltérophilie technique — box (rendez-vous fixe)
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-S36-5-matin@coach-ia
-DTSTAMP:20260904T170000Z
+DTSTAMP:20260904T180000Z
 DTSTART:20260905T033000Z
 DTEND:20260905T043000Z
 SUMMARY:🏃 Sortie longue en aisance stricte
@@ -32,7 +19,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-5-soir@coach-ia
-DTSTAMP:20260904T170000Z
+DTSTAMP:20260904T180000Z
 DTSTART:20260905T163000Z
 DTEND:20260905T174500Z
 SUMMARY:🏊 Natation récup + sauna — Cap Provence Cassis
