@@ -5,21 +5,8 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
-UID:2026-S36-4-matin@coach-ia
-DTSTAMP:20260904T040000Z
-DTSTART:20260904T033000Z
-DTEND:20260904T043000Z
-SUMMARY:🧘 Mobilité courte
-DESCRIPTION:Enfants le matin\, et haltéro le soir : on garde le matin très léger\, uniquement de la préparation articulaire pour la séance technique du soir.\n• 5 min de mobilisation générale : rotations d'épaules\, bassin\, chevilles\n• Dislocations à l'élastique 2×10 + sots press au PVC 2×8\n• Accroupi profond tenu : 3×45 s\, talons au sol\, coudes qui écartent les genoux\n• Mobilité chevilles genou-mur 2×10 par jambe\n⚑ Séance de 15 min maximum\, on ne fatigue rien avant l'haltéro.\n\nCoach IA — 2026-S36
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🧘 Mobilité courte
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-S36-4-soir@coach-ia
-DTSTAMP:20260904T040000Z
+DTSTAMP:20260904T050000Z
 DTSTART:20260904T163000Z
 DTEND:20260904T174500Z
 SUMMARY:🏋️ Haltérophilie technique — box (rendez-vous fixe)
@@ -32,7 +19,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-5-matin@coach-ia
-DTSTAMP:20260904T040000Z
+DTSTAMP:20260904T050000Z
 DTSTART:20260905T033000Z
 DTEND:20260905T043000Z
 SUMMARY:🏃 Sortie longue en aisance stricte
@@ -45,7 +32,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S36-5-soir@coach-ia
-DTSTAMP:20260904T040000Z
+DTSTAMP:20260904T050000Z
 DTSTART:20260905T163000Z
 DTEND:20260905T174500Z
 SUMMARY:🏊 Natation récup + sauna — Cap Provence Cassis
