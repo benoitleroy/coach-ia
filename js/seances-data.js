@@ -4,7 +4,7 @@ window.SEANCES = [
   "id": 20034525453,
   "date": "2026-09-04T15:04:48Z",
   "type": "Workout",
-  "name": "Entraînement dans l'après-midi",
+  "name": "NTS entraînement",
   "sec": 6573,
   "km": 0,
   "hr": 124,
@@ -25,10 +25,10 @@ window.SEANCES = [
   "hr": 107,
   "hrMax": 143,
   "effort": 12,
-  "contenu": null,
-  "contenuFr": null,
+  "contenu": "Benoit\n\nTest mobilité\n- chaîne post\n- hanches\n- adducteurs\n- rotation thoraciques\n- épaules\n- chevilles\n- wall squat\n\nDéveloppé nuque (demi squat ?)\n5 x 5 rest 1'\n\nHigh hang snatch pull\nHang snatch pull\nHang power snatch\nHang power + squat ?\n\nSi le temps, revoir le clean",
+  "contenuFr": "Benoit\nTest mobilité\n- chaîne post\n- hanches\n- adducteurs\n- rotation thoraciques\n- épaules\n- chevilles\n- wall squat\nDéveloppé nuque (demi squat ?)\n5 x 5 récupérations 1 min\nHigh hang arraché pull\nHang arraché pull\nHang arraché debout\nHang power + squat ?\nSi le temps, revoir le épaulé",
   "note": null,
-  "photo": null
+  "photo": "https://dgtzuqphqg23d.cloudfront.net/N4Y8YRSNC2IP4PyU45oDyXAzH9pPMHuwfLWBH7vd0LY-2048x1536.jpg"
  },
  {
   "id": 19985028094,
