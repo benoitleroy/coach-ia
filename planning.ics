@@ -6,7 +6,7 @@ METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
 UID:2026-S36-5-soir@coach-ia
-DTSTAMP:20260905T060000Z
+DTSTAMP:20260905T063200Z
 DTSTART:20260905T163000Z
 DTEND:20260905T174500Z
 SUMMARY:🏊 Natation récup + sauna — Cap Provence Cassis
@@ -15,6 +15,149 @@ BEGIN:VALARM
 TRIGGER:-PT30M
 ACTION:DISPLAY
 DESCRIPTION:🏊 Natation récup + sauna — Cap Provence Cassis
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S37-0-matin@coach-ia
+DTSTAMP:20260905T063200Z
+DTSTART:20260907T033000Z
+DTEND:20260907T043000Z
+SUMMARY:🏃 Footing en aisance 45 min
+DESCRIPTION:Tu es sans les enfants\, c'est le créneau à prendre pour courir. Objectif unique : rester sous 140 bpm du début à la fin\, tu dois pouvoir parler en phrases complètes. Après une nuit à 4h43 samedi\, on ne cherche rien d'autre que du volume facile.\n• 10 min de marche rapide puis trot très lent pour monter la FC progressivement\n• 35 min de course continue en aisance stricte\, FC sous 140 bpm — si ça monte\, tu marches 1 min\n• Terminer par 5 min de trot très lent puis marche\n• Étirement des fléchisseurs de hanche (fente genou au sol\, bassin qui rentre) 2×45 s par jambe\n⚑ Si la FC dépasse 145 bpm alors que tu ne forces pas\, tu coupes à 30 min : c'est la fatigue du week-end\, pas une mauvaise journée.\n\nCoach IA — 2026-S37
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🏃 Footing en aisance 45 min
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S37-0-soir@coach-ia
+DTSTAMP:20260905T063200Z
+DTSTART:20260907T163000Z
+DTEND:20260907T174500Z
+SUMMARY:🏋️ Force lourde — Back squat 5×5 (semaine 1 du cycle)
+DESCRIPTION:Séance charpente de la semaine\, une seule intention : la force absolue sur le squat. On repart de tes 80 kg du 27/08 et on lance le cycle écrit : 5×5 cette semaine\, 5×3 la semaine prochaine\, 3×3 en semaine 3\, décharge en semaine 4. Garde 5 % dans le réservoir : les deux dernières reps de chaque série doivent rester propres\, sans que les genoux rentrent.\n• Échauffement : 5 min de rameur progressif\, puis 10 squats à vide\, 10 fentes\, 10 rotations de bassin\n• Back squat (barre sur les trapèzes\, on descend hanches sous les genoux) : montée en charge 8 reps à vide\, 5 à 40 kg\, 5 à 60 kg\n• Back squat 5 séries de 5 reps à 72\,5 kg — 2 min 30 de récup entre séries\n• Rowing barre (buste penché à 45°\, tirer la barre vers le nombril\, dos plat) 4 séries de 8 à 40 kg — 90 s de récup\n• Développé militaire debout (barre des épaules vers le plafond\, fessiers serrés) 4 séries de 8 à 30 kg — 90 s de récup\n• Gainage : planche ventrale 3×45 s + planche latérale 2×30 s par côté\n⚑ Si la 4e série de squat sort avec le dos qui s'arrondit ou les genoux qui rentrent\, tu enlèves 5 kg pour la 5e — on ne finit jamais une série en dégradant la technique.\n\nCoach IA — 2026-S37
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🏋️ Force lourde — Back squat 5×5 (semaine 1 du cycle)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S37-1-matin@coach-ia
+DTSTAMP:20260905T063200Z
+DTSTART:20260908T033000Z
+DTEND:20260908T043000Z
+SUMMARY:🧘 Mobilité ciblée overhead squat + gainage
+DESCRIPTION:Séance courte et technique\, zéro fatigue ajoutée après le squat de la veille. Toute l'attention va sur ce qui bloque ta position barre au-dessus de la tête : épaules\, haut du dos\, chevilles. Tu dois sentir de l'amplitude gagnée\, jamais de douleur.\n• 5 min de respiration nasale + rotations d'épaules et de bassin\, debout\n• Dislocations à l'élastique (bras tendus\, l'élastique passe de devant à derrière la tête) 3×10\, lentement\n• Sots press au PVC (barre plastique au-dessus de la tête\, on s'accroupit sous la barre) 3×8\n• Overhead squat au PVC : 4× tenir 30 s en position basse\, bras tendus\, barre au-dessus des oreilles\n• Mobilité chevilles genou-mur (genou avance vers le mur\, talon collé au sol) 2×10 par jambe\n• Accroupi profond tenu 3×45 s\, coudes à l'intérieur des genoux\n⚑ Aucune charge au-dessus de la tête tant que tu ne tiens pas 30 s stable au PVC talons au sol.\n\nCoach IA — 2026-S37
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🧘 Mobilité ciblée overhead squat + gainage
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S37-1-soir@coach-ia
+DTSTAMP:20260905T063200Z
+DTSTART:20260908T163000Z
+DTEND:20260908T174500Z
+SUMMARY:🤸 Box ou NST — jour gymnastique / conditionnement
+DESCRIPTION:La programmation NST de la semaine n'a pas été fournie : si tu as la séance du jour sur FITR\, tu la fais en niveau Scaled ou Intermediate\, coupée à 60-75 min (échauffement + force principale + le conditionnement\, on saute l'accessoire et la partie Team). Sinon\, le WOD de ta box. À défaut des deux\, la trame ci-dessous : intention filière moyenne\, 12 min très dur mais régulier\, pas de sprint au premier round.\n• Échauffement 10 min : 2 min rameur en 30s facile/20s moyen/10s dur ×3\, puis 10 scapular pull-ups (suspendu\, on rapproche les omoplates sans plier les bras) + 10 fentes + 10 pompes\n• Technique à froid : 3×5 tractions strictes (ou tractions excentriques 5 s à la descente si les strictes ne sortent pas)\n• Conditionnement AMRAP 12 min (max de tours) : 250 m rameur + 10 kettlebell swings 16 kg + 10 pompes\n• Objectif : garder le même temps au tour du début à la fin\, tu dois pouvoir parler en 3 mots max\n• Retour au calme : 5 min de vélo très souple + étirement dorsal\n⚑ Si un tour prend plus de 30 s de plus que le premier\, tu réduis les reps de moitié pour finir propre.\n\nCoach IA — 2026-S37
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🤸 Box ou NST — jour gymnastique / conditionnement
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S37-2-matin@coach-ia
+DTSTAMP:20260905T063200Z
+DTSTART:20260909T033000Z
+DTEND:20260909T043000Z
+SUMMARY:🏃 Footing en aisance 50 min
+DESCRIPTION:Deuxième dose d'endurance de la semaine\, toujours sous 140 bpm. Tu peux laisser l'allure varier librement selon la sensation (relances douces en descente\, ralentir en côte) : c'est plus efficace qu'un rythme monocorde imposé.\n• 10 min de trot très lent\, respiration nasale si possible\n• 40 min en aisance stricte\, FC sous 140 bpm\, allure libre à sensation constante\n• Terminer les 5 dernières minutes en marche\n• 4×20 s de montées de genoux souples sur herbe ou stabilisé\, récup marche 40 s\n• Étirements mollets et fléchisseurs de hanche\, 5 min\n⚑ Toute gêne à l'Achille ou au genou = tu arrêtes la course sur le champ et tu bascules sur home-trainer jusqu'à disparition complète.\n\nCoach IA — 2026-S37
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🏃 Footing en aisance 50 min
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S37-2-soir@coach-ia
+DTSTAMP:20260905T063200Z
+DTSTART:20260909T163000Z
+DTEND:20260909T174500Z
+SUMMARY:🏊 Natation volume sans impact 40 min
+DESCRIPTION:Piscine Desautel\, créneau 16h-19h le mercredi. Séance de volume aérobie sans impact pour laisser souffler les tendons : on nage souple\, on travaille la longueur de coup de bras\, aucune performance recherchée.\n• 300 m crawl très souple pour se mettre en route\n• 6×50 m éducatif (rattrapé\, poings fermés) avec 20 s de repos\n• 8×50 m crawl en aisance\, 20 s de repos\, respiration tous les 3 temps\n• 200 m dos ou brasse souple pour relâcher les épaules\n• 100 m très lent en retour au calme\n⚑ Si les épaules tirent après la séance d'hier\, tu remplaces le crawl par du dos et de la brasse.\n\nCoach IA — 2026-S37
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🏊 Natation volume sans impact 40 min
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S37-3-soir@coach-ia
+DTSTAMP:20260905T063200Z
+DTSTART:20260910T163000Z
+DTEND:20260910T174500Z
+SUMMARY:🏋️ Force n°2 — charnière et tirage (box ou NST)
+DESCRIPTION:Deuxième séance de force de la semaine\, sur un autre pattern que lundi : on travaille la charnière de hanche (soulevé de terre) et le tirage\, pas le squat. Si la séance NST du jour est dispo\, tu la prends en Scaled/Intermediate coupée à 70 min et tu ignores la trame ci-dessous.\n• Échauffement : 5 min rameur + 10 good morning à vide (buste qui descend\, jambes quasi tendues\, dos plat) + 10 ring rows\n• Soulevé de terre (barre au sol\, on pousse dans les talons\, dos plat) : 5 à 40 kg\, 5 à 60 kg puis 4 séries de 5 reps à 85 kg — 2 min 30 de récup\n• Tractions strictes : 5 séries de 3 reps\, ou tractions à l'élastique si les 3 ne sortent pas — 90 s de récup\n• Fentes bulgares (pied arrière surélevé) 3×8 par jambe au poids de corps ou 2×10 kg\n• Gainage anti-rotation : planche latérale 3×30 s par côté\n⚑ Le dos doit rester plat sur chaque rep de soulevé : première rep qui s'arrondit\, tu arrêtes la série et tu baisses de 10 kg.\n\nCoach IA — 2026-S37
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🏋️ Force n°2 — charnière et tirage (box ou NST)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S37-4-matin@coach-ia
+DTSTAMP:20260905T063200Z
+DTSTART:20260911T033000Z
+DTEND:20260911T043000Z
+SUMMARY:🚴 Home-trainer en aisance 40 min
+DESCRIPTION:Tu n'as pas encore les enfants ce matin\, mais la séance du soir est technique et lourde : on reste sur du vélo sans impact\, pédalage souple et cadence élevée pour dégourdir les jambes après le soulevé d'hier.\n• 10 min d'échauffement progressif de 100 à 140 W\n• 3×5 min à 150 W à cadence 95-100 tr/min\, récup 3 min à 110 W entre les blocs\n• 5 min à 130 W\, cadence libre\n• 5 min de retour au calme à 100 W\n• Mobilité chevilles genou-mur 2×10 par jambe en descendant du vélo\n⚑ FC sous 140 bpm sur toute la séance : si ça monte\, tu baisses la puissance\, pas la cadence.\n\nCoach IA — 2026-S37
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🚴 Home-trainer en aisance 40 min
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S37-4-soir@coach-ia
+DTSTAMP:20260905T063200Z
+DTSTART:20260911T163000Z
+DTEND:20260911T174500Z
+SUMMARY:🏋️ Haltérophilie technique — rendez-vous fixe
+DESCRIPTION:Ton rendez-vous hebdomadaire non négociable à la box : technique d'arraché et d'épaulé-jeté. Une seule intention : le geste. On reste léger\, on cherche la position et la vitesse\, jamais la charge maximale. C'est aussi ton meilleur outil pour débloquer la position bras au-dessus de la tête.\n• Échauffement barre à vide : 10 tirages nuque larges + 10 sots press + 10 overhead squats au PVC\n• Arraché depuis la hanche (tirage puis passage sous la barre) : 5 séries de 3 reps à 25-30 kg — technique avant charge\n• Épaulé debout depuis la hanche : 5 séries de 3 reps à 35-40 kg\n• Jeté fente : 4 séries de 3 reps à 35 kg\, on cherche la stabilité bras tendus 2 s\n• Développé nuque en demi-squat : 4 séries de 5 reps à 30 kg\n• Fin de séance : 3×30 s de suspension à la barre pour étirer les épaules\n⚑ Aucune montée en charge si le passage sous la barre n'est pas net : tu restes à la charge où le geste est propre\, c'est le but de la séance.\n\nCoach IA — 2026-S37
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🏋️ Haltérophilie technique — rendez-vous fixe
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S37-5-matin@coach-ia
+DTSTAMP:20260905T063200Z
+DTSTART:20260912T033000Z
+DTEND:20260912T043000Z
+SUMMARY:🚴 Home-trainer long 1 h 05 en aisance
+DESCRIPTION:Tu as les enfants\, donc pas de sortie longue en course : on transfère le volume aérobie sur le home-trainer\, et c'est aussi plus doux pour les tendons au lendemain de l'haltéro. Intention : capacité aérobie\, tu dois pouvoir parler tout du long.\n• 15 min d'échauffement progressif de 100 à 140 W\n• 40 min continu entre 145 et 160 W\, FC sous 140 bpm\, cadence 85-90 tr/min\n• Dans les 40 min : 5 relances de 1 min à 180 W à cadence 100\, une toutes les 8 min\, sans laisser la FC dépasser 150\n• 10 min de retour au calme sous 110 W\n• Gainage : planche ventrale 3×45 s\n⚑ Si la FC dérive au-dessus de 145 bpm à puissance constante après 30 min\, tu coupes à 50 min : c'est le signe que la semaine a été bien chargée.\n\nCoach IA — 2026-S37
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🚴 Home-trainer long 1 h 05 en aisance
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S37-6-soir@coach-ia
+DTSTAMP:20260905T063200Z
+DTSTART:20260913T163000Z
+DTEND:20260913T174500Z
+SUMMARY:— Rien — journée complète off
+DESCRIPTION:Journée complète sans rien\, avec les enfants. C'est la séance la plus importante de la semaine : ta moyenne de sommeil est à 7h11 sur 7 nuits et deux nuits sont passées sous 5 h — c'est là que l'adaptation se fait. Batch cooking l'après-midi.\n⚑ Si tu as envie de bouger\, marche avec les enfants\, rien de plus.\n\nCoach IA — 2026-S37
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:— Rien — journée complète off
 END:VALARM
 END:VEVENT
 END:VCALENDAR
