@@ -5,21 +5,8 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
-UID:2026-S36-5-matin@coach-ia
-DTSTAMP:20260905T040000Z
-DTSTART:20260905T033000Z
-DTEND:20260905T043000Z
-SUMMARY:🏃 Sortie longue en aisance stricte
-DESCRIPTION:Enfants partis\, c'est LE créneau de la semaine pour la course. 1 h 15 maximum\, FC sous 140 bpm du début à la fin\, allure librement variable à sensation constante — tu peux relancer dans les descentes et lever le pied dans les côtes\, l'important est la sensation\, pas le chrono.\n• 10 min de marche rapide puis trot très lent pour amorcer\, FC qui monte progressivement\n• 55 min de course en aisance stricte : FC 125-138 bpm\, conversation possible en permanence\n• Dans la deuxième moitié\, 4× 30 s de relance libre sur terrain plat\, sans dépasser 145 bpm\, retour au trot ensuite\n• 10 min de trot très lent puis marche pour finir\n• Étirements légers mollets et ischio-jambiers au retour\n⚑ Toute douleur à l'Achille ou au genou = arrêt de la sortie et remplacement par du vélo la semaine prochaine.\n\nCoach IA — 2026-S36
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🏃 Sortie longue en aisance stricte
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-S36-5-soir@coach-ia
-DTSTAMP:20260905T040000Z
+DTSTAMP:20260905T050000Z
 DTSTART:20260905T163000Z
 DTEND:20260905T174500Z
 SUMMARY:🏊 Natation récup + sauna — Cap Provence Cassis
