@@ -4,16 +4,16 @@ window.SEANCES = [
   "id": 20043723574,
   "date": "2026-09-05T09:29:42Z",
   "type": "Workout",
-  "name": "Entraînement le matin",
+  "name": "Crossfit",
   "sec": 7478,
   "km": 0,
   "hr": 129,
   "hrMax": 184,
   "effort": 61,
-  "contenu": null,
-  "contenuFr": null,
+  "contenu": "Samedi 05 septembre\n\nWarm up\n200m Run\n10 Up n Down\n10 Air Squat\n200m Run\n10 Push up\n10 PVC Front Squat\n200m Run\n10 Burpees\n10 PVC Hang Power Clean\n\nWOD\nTeam of 3\nE2MOM 30'\n1-2 : 24 Burpees Over The Bar @2 + 30/24 Cal Bike @1\n3-4 : 200m Run @3 + Max Squat Clean @2\n5 : Rest @3\n\nRx\nRounds 1-2 : 50/35\nRounds 3-4 : 70/45\nRounds 5 : 90/60\n\nInt\nRds 1-2 : 50/35\nRds 3-4 : 60/40\nRds 5 : 70/45\n\nSc : Add + 5kg\n\nStrength Endurance (Press/Pull) — Semaine de transition\na. 3 sets\n12 Alt. Archer Ring Rows\nRest 90 sec\n12 Alt. Top Down Seated DB Strict press\nRest 90 sec\n\nAbsolute Strength (Pull) — Semaine de transition\na. 4 sets\nMax Commando Pull ups (changer main haute à chaque set)\nRest 75 sec\n10 Banded Bent over rows (charges légères-modérées pour garder de la vitesse)\nRest 75 sec\nUpscale : Max Single arm pull ups avec une main sur le poignet\nDownscale : Version aidée d'un élastique\nProgression S1 : 5RM Chin-up + 5/5/5+ à 85% du 5RM\nProgression S2 : 3RM Chin-up + 3/3/3+ à 85% du 3RM\nProgression S3 : 1RM Chin-up + 1/1/1+ à 85% du 1RM",
+  "contenuFr": "Samedi 05 septembre\néchauffement\n200m course à pied\n10 ups & down (planche ↔ pompes sur les mains)\n10 squats au poids du corps\n200m course à pied\n10 pompes\n10 PVC squat avant (barre devant)\n200m course à pied\n10 burpees\n10 PVC épaulé debout depuis les cuisses\nWOD\nTeam of 3\nE2MOM 30'\n1-2 : 24 burpees Over The Bar @2 + 30/24 Cal Bike @1\n3-4 : 200m course à pied @3 + Max épaulé en squat @2\n5 : récupération @3\nRx\ntours 1-2 : 50/35\ntours 3-4 : 70/45\ntours 5 : 90/60\nInt\nRds 1-2 : 50/35\nRds 3-4 : 60/40\nRds 5 : 70/45\nSc : Add + 5kg\nStrength Endurance (Press/Pull) — Semaine de transition\na. 3 séries\n12 Alt. Archer tirage horizontal aux anneaux\nrécupération 90 secs\n12 Alt. Top Down Seated DB Strict press\nrécupération 90 secs\nAbsolute Strength (Pull) — Semaine de transition\na. 4 séries\nMax Commando traction (changer main haute à chaque séries)\nrécupération 75 secs\n10 Banded Bent over rameur (charges légères-modérées pour garder de la vitesse)\nrécupération 75 secs\nUpscale : Max Single arm traction avec une main sur le poignet\nDownscale : Version aidée d'un élastique\nProgression S1 : 5RM Chin-up + 5/5/5+ à 85% du 5RM\nProgression S2 : 3RM Chin-up + 3/3/3+ à 85% du 3RM\nProgression S3 : 1RM Chin-up + 1/1/1+ à 85% du 1RM",
   "note": null,
-  "photo": null
+  "photo": "https://dgtzuqphqg23d.cloudfront.net/NrqZjTYXA_7SjAtxZp0sDtd8dbaHqKZpR_H7gki6QiY-2048x1536.jpg"
  },
  {
   "id": 20041504805,
