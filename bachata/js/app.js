@@ -34,6 +34,11 @@
   function loadRM() { try { return JSON.parse(localStorage.getItem("bachata_1rm")) || {}; } catch (e) { return {}; } }
   function saveRM(rm) { try { localStorage.setItem("bachata_1rm", JSON.stringify(rm)); } catch (e) { /* privé */ } }
   let RM = loadRM();
+  // RM de la séance : saisi dans le bloc de force, vit tant que l'app est ouverte, non sauvegardé.
+  function loadRMS() { try { return JSON.parse(sessionStorage.getItem("bachata_1rm_session")) || {}; } catch (e) { return {}; } }
+  let RM_S = loadRMS();
+  function saveRMS() { try { sessionStorage.setItem("bachata_1rm_session", JSON.stringify(RM_S)); } catch (e) { /* privé */ } }
+  function effRM(id) { return RM_S[id] != null ? RM_S[id] : RM[id]; }
 
   function renderCharges() {
     const box = el("charges-liste");
@@ -75,9 +80,9 @@
       return line.replace(/(\d+)(?:\s*[-–]\s*(\d+))?\s*%/g, (m, p1, p2) => {
         const after = plain.slice(plain.indexOf(m) + m.length);
         const lift = (has1RM && liftFor(after.slice(0, 60).replace(/^[^A-Za-z]*(du\s*)?1\s*RM/i, ""))) || ctxLift || liftFor(plain);
-        if (!lift || !RM[lift.id]) return m;
-        const a = roundKg(RM[lift.id] * p1 / 100);
-        const b = p2 ? roundKg(RM[lift.id] * p2 / 100) : null;
+        if (!lift || !effRM(lift.id)) return m;
+        const a = roundKg(effRM(lift.id) * p1 / 100);
+        const b = p2 ? roundKg(effRM(lift.id) * p2 / 100) : null;
         return m + " <span class='kg-calc'>→ " + a + (b ? "–" + b : "") + " kg</span>";
       });
     }).join("\n");
@@ -136,6 +141,7 @@
       div.className = "section" + (idx === 0 ? " open" : "");
       div.style.setProperty("--sec-color", type.color);
       const timer = detectTimer(s.body);
+      const lift = /%/.test(s.body.normalize("NFKC")) ? liftFor(s.title) : null;
       div.innerHTML =
         "<button class='section-head' aria-expanded='" + (idx === 0) + "'>" +
         "<svg class='ic'><use href='#" + type.ic + "'/></svg>" +
@@ -143,7 +149,18 @@
         "<svg class='ic chev'><use href='#i-chev'/></svg></button>" +
         "<div class='section-body'>" +
         (timer ? "<button class='go-inline'><svg class='ic' style='width:16px;height:16px'><use href='#i-play'/></svg>GO " + timer.label + "</button>" : "") +
-        computePercents(linkify(s.body), s.title) + "</div>";
+        (lift ? "<div class='rm-inline'><span>1RM " + escapeHtml(lift.label) + "</span>" +
+          "<input type='number' inputmode='decimal' step='0.5' value='" + (effRM(lift.id) || "") + "' placeholder='max' aria-label='1RM " + lift.label + " du jour'>" +
+          "<span class='unit'>kg</span><small>saisie du jour — non mémorisée</small></div>" : "") +
+        "<div class='sec-content'>" + computePercents(linkify(s.body), s.title) + "</div></div>";
+      if (lift) {
+        div.querySelector(".rm-inline input").addEventListener("input", e => {
+          const v = parseFloat(e.target.value);
+          if (v > 0) RM_S[lift.id] = v; else delete RM_S[lift.id];
+          saveRMS();
+          div.querySelector(".sec-content").innerHTML = computePercents(linkify(s.body), s.title);
+        });
+      }
       div.querySelector(".section-head").addEventListener("click", () => {
         div.classList.toggle("open");
         div.querySelector(".section-head").setAttribute("aria-expanded", div.classList.contains("open"));

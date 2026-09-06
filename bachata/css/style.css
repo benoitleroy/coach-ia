@@ -198,6 +198,24 @@ svg.ic { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-wid
 }
 .wod-card .lines { white-space: pre-wrap; font-size: .9rem; line-height: 1.45; margin: .55rem 0; color: #D6DAE6; }
 
+/* Saisie 1RM du jour dans un bloc de force */
+.rm-inline {
+  display: flex; align-items: center; gap: .55rem; flex-wrap: wrap;
+  background: var(--card2); border: 1px dashed var(--border); border-radius: 10px;
+  padding: .55rem .8rem; margin: .2rem 0 .8rem;
+}
+.rm-inline > span:first-child {
+  font-family: var(--condensed); font-weight: 700; font-size: 1rem;
+  text-transform: uppercase; letter-spacing: .04em; color: var(--orange2);
+}
+.rm-inline input {
+  width: 78px; background: var(--bg); border: 1px solid var(--border); color: var(--text);
+  border-radius: 8px; padding: .45rem; text-align: center;
+  font-family: var(--condensed); font-size: 1.25rem; font-weight: 700;
+}
+.rm-inline .unit { color: var(--muted); font-size: .85rem; }
+.rm-inline small { flex-basis: 100%; color: var(--muted); font-size: .68rem; }
+
 /* ═══ Charges (1RM) ═══ */
 .charge-row {
   display: flex; align-items: center; gap: .8rem;
