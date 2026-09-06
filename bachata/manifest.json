@@ -1,0 +1,9 @@
+{
+  "name": "Bachata N.S.T",
+  "short_name": "Bachata NST",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#0F1117",
+  "theme_color": "#0F1117",
+  "icons": [{ "src": "icon.png", "sizes": "512x512", "type": "image/png" }]
+}

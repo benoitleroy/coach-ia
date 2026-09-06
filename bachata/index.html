@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#0F1117">
+<title>Bachata N.S.T</title>
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ═══ PAGE AUJOURD'HUI ═══ -->
+<main id="page-jour" class="page">
+  <header class="topbar">
+    <button id="btn-prev" class="navbtn">←</button>
+    <div class="topbar-title">
+      <div id="jour-date">…</div>
+      <div id="jour-titre" class="muted">…</div>
+    </div>
+    <button id="btn-next" class="navbtn">→</button>
+  </header>
+  <div id="jour-contenu"></div>
+</main>
+
+<!-- ═══ PAGE CHRONO ═══ -->
+<main id="page-chrono" class="page" hidden>
+  <div id="chrono-setup">
+    <h1>Chrono</h1>
+    <div class="mode-grid">
+      <button class="mode-btn" data-mode="fortime">FOR TIME<span>compte en avant</span></button>
+      <button class="mode-btn" data-mode="amrap">AMRAP<span>compte à rebours</span></button>
+      <button class="mode-btn" data-mode="emom">EMOM<span>minutes qui tournent</span></button>
+      <button class="mode-btn" data-mode="tabata">TABATA<span>20s / 10s × 8</span></button>
+      <button class="mode-btn wide" data-mode="custom">INTERVALLES<span>travail / repos / tours</span></button>
+    </div>
+    <div id="chrono-params"></div>
+    <button id="btn-start" class="go-big" hidden>GO</button>
+  </div>
+  <div id="chrono-run" hidden>
+    <div id="run-phase">&nbsp;</div>
+    <div id="run-time">0:00</div>
+    <div id="run-sub">&nbsp;</div>
+    <div class="run-controls">
+      <button id="btn-pause">⏸ Pause</button>
+      <button id="btn-stop">■ Stop</button>
+    </div>
+  </div>
+</main>
+
+<!-- ═══ PAGE WODS ═══ -->
+<main id="page-wods" class="page" hidden>
+  <h1>Base WOD</h1>
+  <div class="wod-filters">
+    <input id="wod-search" type="search" placeholder="Rechercher (rameur, burpees…)">
+    <div id="wod-sources"></div>
+  </div>
+  <div id="wod-liste"></div>
+</main>
+
+<!-- ═══ BOTTOM NAV ═══ -->
+<nav class="bottomnav">
+  <button data-page="jour" class="active"><span>📋</span>Aujourd'hui</button>
+  <button data-page="chrono"><span>⏱</span>Chrono</button>
+  <button data-page="wods"><span>📚</span>WODs</button>
+</nav>
+
+<script src="js/nst-data.js"></script>
+<script src="js/wods-data.js" onerror="console.info('wods absents')"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
