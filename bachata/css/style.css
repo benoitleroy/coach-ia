@@ -120,6 +120,13 @@ svg.ic { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-wid
   margin: .4rem .45rem .4rem 0; min-height: 44px;
 }
 .vid-link .ic { width: 17px; height: 17px; color: var(--red); }
+a.demo {
+  display: inline-grid; place-items: center; vertical-align: -3px;
+  width: 26px; height: 26px; margin-left: .3rem;
+  background: rgba(249,115,22,.14); border: 1px solid rgba(249,115,22,.45);
+  border-radius: 7px; color: var(--orange2);
+}
+a.demo .ic { width: 12px; height: 12px; fill: currentColor; }
 .vid-link.insta .ic { color: var(--orange2); }
 
 /* ═══ Chrono setup ═══ */

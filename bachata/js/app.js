@@ -206,7 +206,31 @@
     h = h.replace(/^([a-d]\.)\s/gm, "<strong class='step'>$1</strong> ");
     h = h.replace(/^(Charges?|Tempo|Score|Intention|Note|Flow|Progression|Intensite|Intensité)\s*(\([^)]*\))?\s*:/gm,
       (m) => "<span class='kw'>" + m + "</span>");
+    // Chaque ligne d'exercice reçoit un bouton ▶ vers sa démo vidéo YouTube
+    h = h.replace(/^((?:Sets? [\d, +-]+:\s*\d*\s*|\d[\d\/x×.: -]*|Max |Une série [^ ]+ de )\s*)([A-Za-z][^<\n]*)$/gm, (m, pre, rest) => {
+      if (/^\d+\.\s*$/.test(pre)) return m; // "1. " = titre numéroté, pas un exercice
+      const name = exerciseName(rest);
+      if (!name) return m;
+      const q = encodeURIComponent(name + " exercise demo");
+      return pre + rest + " <a class='demo' href='https://www.youtube.com/results?search_query=" + q +
+        "' target='_blank' rel='noopener' aria-label='Démo vidéo : " + name.replace(/'/g, "’") + "'>" +
+        "<svg class='ic'><use href='#i-play'/></svg></a>";
+    });
     return h;
+  }
+
+  /* Extrait le nom du mouvement d'une ligne d'exercice ("10 Cuban Press (2x7.5kg)" → "Cuban Press") */
+  function exerciseName(rest) {
+    let n = rest.replace(/\([^)]*\)/g, "")            // parenthèses
+      .replace(/\s*[-–—⎸│].*$/, "")                    // suites après tiret/barre
+      .replace(/^(sets? (de|of) |min |sec |m |reps? |rounds? (de|of|for)[^:]*:?)/i, "")
+      .replace(/\b(entre les sets|par côté|chacun|à la fin.*|dans le temps restant)\b.*$/i, "")
+      .trim();
+    if (!/[A-Za-z]{4}/.test(n) || n.length < 5 || n.length > 60) return null;
+    if (/^(rest|repos|rounds?|sets?|minutes?|calories|cal\b|performé|intensité)/i.test(n)) return null;
+    // pas de prose française (notes du coach) ni de titres numérotés
+    if (/\b(notre|nous|vous|pourquoi|cette|quelque|les|des|dans|pour|avec un|avoir)\b/i.test(n)) return null;
+    return n;
   }
 
   el("btn-prev").addEventListener("click", () => move(-1));
