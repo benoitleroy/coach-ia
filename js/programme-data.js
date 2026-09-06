@@ -97,7 +97,7 @@ window.PROGRAMME = {
    "date": "2026-11-21",
    "libelle": "Test hybride maison (samedi 21/11) : 10 km en aisance sous 55 min (FC moyenne < 155) le matin, puis l'après-midi 5 tractions strictes enchaînées + back squat 5 reps à 1,2× poids de corps (≈ 95 kg) + 500 m rameur."
   },
-  "semaineDansCycle": 1,
+  "semaineDansCycle": 2,
   "totalSemaines": 12,
   "bloc": {
    "id": 1,
@@ -121,11 +121,11 @@ window.PROGRAMME = {
    ],
    "test": "Semaine 4 (décharge) : demi-Cooper (3 min à fond après échauffement) pour mesurer vVO2max, si HRV en base."
   },
-  "semaineDansBloc": 1,
+  "semaineDansBloc": 2,
   "decharge": false,
   "avantDebut": false,
   "debut": "2026-08-31",
   "termine": false
  },
- "generatedAt": "2026-09-05T20:00:21.721Z"
+ "generatedAt": "2026-09-06T04:00:24.200Z"
 };
