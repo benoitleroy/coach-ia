@@ -31,6 +31,7 @@
     { id: "splitjerk",  label: "Split Jerk",   keys: /jerk/i },
     { id: "chinup",     label: "Chin-Up lesté", hint: "poids ajouté", keys: /chin.?up|pull.?up/i },
   ];
+  const NOTE_RE = /^(SEMAINE DE TRANSITION|IMPORTANT|MAJ|BLOC D.ENTRAINEMENT|VIDEO EXPLICATIVE)/i;
   function loadRM() { try { return JSON.parse(localStorage.getItem("bachata_1rm")) || {}; } catch (e) { return {}; } }
   function saveRM(rm) { try { localStorage.setItem("bachata_1rm", JSON.stringify(rm)); } catch (e) { /* privé */ } }
   let RM = loadRM();
@@ -99,8 +100,11 @@
     { re: /TEAM VERSION/i,                       ic: "i-users", color: "#8B92A6", lbl: "Version équipe" },
     { re: /^FULL REST|^REPOS/i,                  ic: "i-moon",  color: "#00D4AA", lbl: "Repos" },
     { re: /^OPTIONAL EXTRA/i,                    ic: "i-run",   color: "#EF4444", lbl: "Extra optionnel" },
+    { re: NOTE_RE,                               ic: "i-note",  color: "#4A5266", lbl: "Note du coach" },
   ];
-  const TITLE_PREFIXES = /^(WARM.?UP|ABSOLUTE STRENGTH|STRENGTH ENDURANCE|STRENGTH.?SPEED|RELATIVE STRENGTH|CONDITIONING|OPTION \d|.?OPTIONAL.?\)? ?(STRENGTH ACCESSORY|CONDITIONING)|\(?TEAM VERSION|FULL REST DAY|OPTIONAL EXTRA|SEMAINE DE TRANSITION|BLOC S?\d)/i;
+  // Sensible à la casse : les titres de sections FITR sont en MAJUSCULES,
+  // les sous-titres ("Strength-Speed / Power…") ne doivent pas matcher.
+  const TITLE_PREFIXES = /^(WARM.?UP|ABSOLUTE STRENGTH|STRENGTH ENDURANCE|STRENGTH.?SPEED|RELATIVE STRENGTH|CONDITIONING|OPTION \d|\(?OPTIONAL\)? ?(STRENGTH ACCESSORY|CONDITIONING)|\(?TEAM VERSION|FULL REST DAY|OPTIONAL EXTRA|SEMAINE DE TRANSITION|IMPORTANT|MAJ$|BLOC D.ENTRAINEMENT|VIDEO EXPLICATIVE)/;
 
   function typeOf(title) {
     const t = title.normalize("NFKC");
@@ -128,17 +132,12 @@
     el("jour-titre").textContent = NST[cur].titre;
     cont.innerHTML = "";
 
-    const { banner, sections } = splitSections(NST[cur].contenu);
-    if (banner) {
-      const b = document.createElement("div");
-      b.className = "bloc-banner";
-      b.innerHTML = escapeHtml(banner.title) + (banner.body ? "<span class='muted'>" + linkify(banner.body) + "</span>" : "");
-      cont.appendChild(b);
-    }
+    const { sections } = splitSections(NST[cur].contenu);
+    const firstWorkout = Math.max(0, sections.findIndex(s => !NOTE_RE.test(s.title)));
     sections.forEach((s, idx) => {
       const type = typeOf(s.title);
       const div = document.createElement("div");
-      div.className = "section" + (idx === 0 ? " open" : "");
+      div.className = "section" + (idx === firstWorkout ? " open" : "");
       div.style.setProperty("--sec-color", type.color);
       const timer = detectTimer(s.body);
       const lift = /%/.test(s.body.normalize("NFKC")) ? liftFor(s.title) : null;
@@ -171,27 +170,21 @@
     });
   }
 
-  /* Découpe : bannière de bloc (1re ligne SEMAINE/BLOC) + sections par mots-clés */
+  /* Découpe en sections par mots-clés. Tout est normalisé NFKC (le gras Unicode
+     de FITR redevient du texte normal, bien plus lisible). */
   function splitSections(txt) {
-    const lines = txt.split("\n");
-    let banner = null;
+    const lines = txt.normalize("NFKC").split("\n");
     const out = []; let curSec = null;
     for (const raw of lines) {
-      const l = raw.normalize("NFKC").trim();
-      if (!banner && !out.length && /^(SEMAINE DE TRANSITION|BLOC)/i.test(l)) {
-        banner = { title: l.replace(/^𝐒/, "S"), body: "" };
-        continue;
-      }
-      if (TITLE_PREFIXES.test(l) && !/^(SEMAINE|BLOC)/i.test(l)) {
+      const l = raw.trim();
+      if (TITLE_PREFIXES.test(l) && l.length < 90) {
         curSec = { title: l, body: "" };
         out.push(curSec);
       } else if (curSec) curSec.body += raw + "\n";
-      else if (banner) banner.body += raw + "\n";
       else { curSec = { title: "Note du coach", body: raw + "\n" }; out.push(curSec); }
     }
     out.forEach(s => s.body = s.body.trim());
-    if (banner) banner.body = banner.body.trim();
-    return { banner, sections: out.filter(s => s.body) };
+    return { banner: null, sections: out.filter(s => s.body) };
   }
 
   function cleanTitle(t) {
@@ -207,8 +200,12 @@
       return "<a class='vid-link" + (insta ? " insta" : "") + "' href='" + url + "' target='_blank' rel='noopener'>" +
         "<svg class='ic'><use href='#i-video'/></svg>" + lbl + "</a>";
     });
-    h = h.replace(/^(𝐄𝐥𝐢𝐭𝐞|𝐑𝐗|𝐑𝐱|𝐈𝐧𝐭𝐞𝐫𝐦𝐞𝐝𝐢𝐚𝐭𝐞|𝐒𝐜𝐚𝐥𝐞𝐝|Elite|RX|Rx|Intermediate|Scaled)( ?\(Opt \d\))?\s*:/gm,
-      m => "<strong class='lvl'>" + m.normalize("NFKC") + "</strong>");
+    h = h.replace(/^(Elite\/?R?[Xx]?|RX|Rx|Intermediate|Scaled)\b( ?\((Option #?)?\d\))?\s*:?/gm,
+      m => "<strong class='lvl'>" + m + "</strong>");
+    // marqueurs d'étapes a. b. c. et labels-clés en évidence
+    h = h.replace(/^([a-d]\.)\s/gm, "<strong class='step'>$1</strong> ");
+    h = h.replace(/^(Charges?|Tempo|Score|Intention|Note|Flow|Progression|Intensite|Intensité)\s*(\([^)]*\))?\s*:/gm,
+      (m) => "<span class='kw'>" + m + "</span>");
     return h;
   }
 
