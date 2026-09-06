@@ -6,7 +6,7 @@
   function escapeHtml(s) { return String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c])); }
 
   /* ═══ Navigation entre pages ═══ */
-  const pages = { jour: el("page-jour"), chrono: el("page-chrono"), wods: el("page-wods") };
+  const pages = { jour: el("page-jour"), chrono: el("page-chrono"), wods: el("page-wods"), charges: el("page-charges") };
   document.querySelectorAll(".bottomnav button").forEach(b => {
     b.addEventListener("click", () => {
       document.querySelectorAll(".bottomnav button").forEach(x => x.classList.remove("active"));
@@ -15,6 +15,73 @@
       window.scrollTo(0, 0);
     });
   });
+
+  /* ═══ Charges maxi (1RM) ═══ */
+  const LIFTS = [
+    { id: "backsquat",  label: "Back Squat",   keys: /back squat|(?<!front |overhead )squat(?! clean| snatch)/i },
+    { id: "frontsquat", label: "Front Squat",  keys: /front squat/i },
+    { id: "deadlift",   label: "Deadlift",     keys: /deadlift/i },
+    { id: "bench",      label: "Bench Press",  keys: /bench/i },
+    { id: "strictpress",label: "Strict Press", keys: /strict press/i },
+    { id: "pushpress",  label: "Push Press",   keys: /push press/i },
+    { id: "powersnatch",label: "Power Snatch", keys: /power snatch/i },
+    { id: "squatsnatch",label: "Squat Snatch", hint: "arraché complet", keys: /squat snatch|(?<!power |muscle )snatch(?! pull)/i },
+    { id: "powerclean", label: "Power Clean",  keys: /power clean/i },
+    { id: "squatclean", label: "Squat Clean",  hint: "épaulé complet", keys: /squat clean|(?<!power |muscle |hang power )clean(?! (&|and) jerk)/i },
+    { id: "splitjerk",  label: "Split Jerk",   keys: /jerk/i },
+    { id: "chinup",     label: "Chin-Up lesté", hint: "poids ajouté", keys: /chin.?up|pull.?up/i },
+  ];
+  function loadRM() { try { return JSON.parse(localStorage.getItem("bachata_1rm")) || {}; } catch (e) { return {}; } }
+  function saveRM(rm) { try { localStorage.setItem("bachata_1rm", JSON.stringify(rm)); } catch (e) { /* privé */ } }
+  let RM = loadRM();
+
+  function renderCharges() {
+    const box = el("charges-liste");
+    box.innerHTML = "";
+    LIFTS.forEach(l => {
+      const row = document.createElement("div");
+      row.className = "charge-row";
+      row.innerHTML = "<span class='lift'>" + l.label + (l.hint ? "<small>" + l.hint + "</small>" : "") + "</span>" +
+        "<input type='number' inputmode='decimal' step='0.5' id='rm-" + l.id + "' value='" + (RM[l.id] || "") + "' placeholder='—' aria-label='1RM " + l.label + "'>" +
+        "<span class='unit'>kg</span>";
+      row.querySelector("input").addEventListener("change", e => {
+        const v = parseFloat(e.target.value);
+        if (v > 0) RM[l.id] = v; else delete RM[l.id];
+        saveRM(RM);
+        renderJour();
+      });
+      box.appendChild(row);
+    });
+  }
+
+  /* Trouve le lift correspondant à un texte (nom après "1RM", sinon titre de section) */
+  function liftFor(name) {
+    if (!name) return null;
+    const n = name.normalize("NFKC");
+    return LIFTS.find(l => l.keys.test(n)) || null;
+  }
+  function roundKg(v) { return Math.round(v * 2) / 2; }
+
+  /* Ajoute "→ XXkg" après les pourcentages de 1RM si le maxi est connu.
+     Une ligne est éligible si elle mentionne "1RM", ou si elle dit "à N%" / "reps à N%"
+     dans une section dont le titre désigne un lift. Jamais sur "% effort" ni "% du FTP". */
+  function computePercents(html, sectionTitle) {
+    const ctxLift = liftFor(sectionTitle);
+    return html.split("\n").map(line => {
+      const plain = line.normalize("NFKC");
+      if (!/%/.test(plain) || /effort|FTP/i.test(plain)) return line;
+      const has1RM = /1\s*RM/i.test(plain);
+      if (!has1RM && !(ctxLift && (/à\s*\d+\s*%/i.test(plain) || /\d+\s*%\s*\(/.test(plain)))) return line;
+      return line.replace(/(\d+)(?:\s*[-–]\s*(\d+))?\s*%/g, (m, p1, p2) => {
+        const after = plain.slice(plain.indexOf(m) + m.length);
+        const lift = (has1RM && liftFor(after.slice(0, 60).replace(/^[^A-Za-z]*(du\s*)?1\s*RM/i, ""))) || ctxLift || liftFor(plain);
+        if (!lift || !RM[lift.id]) return m;
+        const a = roundKg(RM[lift.id] * p1 / 100);
+        const b = p2 ? roundKg(RM[lift.id] * p2 / 100) : null;
+        return m + " <span class='kg-calc'>→ " + a + (b ? "–" + b : "") + " kg</span>";
+      });
+    }).join("\n");
+  }
 
   /* ═══ Types de sections : icône + couleur ═══ */
   const SECTION_TYPES = [
@@ -76,7 +143,7 @@
         "<svg class='ic chev'><use href='#i-chev'/></svg></button>" +
         "<div class='section-body'>" +
         (timer ? "<button class='go-inline'><svg class='ic' style='width:16px;height:16px'><use href='#i-play'/></svg>GO " + timer.label + "</button>" : "") +
-        linkify(s.body) + "</div>";
+        computePercents(linkify(s.body), s.title) + "</div>";
       div.querySelector(".section-head").addEventListener("click", () => {
         div.classList.toggle("open");
         div.querySelector(".section-head").setAttribute("aria-expanded", div.classList.contains("open"));
@@ -343,5 +410,6 @@
   }
   renderWods();
 
+  renderCharges();
   renderJour();
 })();

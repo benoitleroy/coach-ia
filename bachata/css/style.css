@@ -198,6 +198,28 @@ svg.ic { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-wid
 }
 .wod-card .lines { white-space: pre-wrap; font-size: .9rem; line-height: 1.45; margin: .55rem 0; color: #D6DAE6; }
 
+/* ═══ Charges (1RM) ═══ */
+.charge-row {
+  display: flex; align-items: center; gap: .8rem;
+  background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+  margin: .5rem 1rem; padding: .6rem .9rem; min-height: 56px;
+}
+.charge-row .lift {
+  flex: 1; font-family: var(--condensed); font-weight: 700; font-size: 1.1rem;
+  text-transform: uppercase; letter-spacing: .03em;
+}
+.charge-row .lift small { display: block; font-family: "Barlow"; font-weight: 400; font-size: .72rem; color: var(--muted); text-transform: none; letter-spacing: 0; }
+.charge-row input {
+  width: 84px; background: var(--card2); border: 1px solid var(--border); color: var(--text);
+  border-radius: 10px; padding: .55rem; text-align: center;
+  font-family: var(--condensed); font-size: 1.35rem; font-weight: 700;
+}
+.charge-row .unit { color: var(--muted); font-size: .85rem; width: 20px; }
+.kg-calc {
+  color: var(--green); font-weight: 700; white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
 /* ═══ Bottom nav ═══ */
 .bottomnav {
   position: fixed; bottom: 0; left: 0; right: 0; z-index: 40;
