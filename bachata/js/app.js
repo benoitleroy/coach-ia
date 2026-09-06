@@ -1,6 +1,9 @@
-/* NST Timer — Aujourd'hui / Chrono / WODs */
+/* Bachata N.S.T — Aujourd'hui / Chrono / WODs */
 (function () {
   "use strict";
+
+  function el(id) { return document.getElementById(id); }
+  function escapeHtml(s) { return String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c])); }
 
   /* ═══ Navigation entre pages ═══ */
   const pages = { jour: el("page-jour"), chrono: el("page-chrono"), wods: el("page-wods") };
@@ -12,81 +15,135 @@
       window.scrollTo(0, 0);
     });
   });
-  function el(id) { return document.getElementById(id); }
 
-  /* ═══ AUJOURD'HUI — séance NST du jour + navigation ═══ */
+  /* ═══ Types de sections : icône + couleur ═══ */
+  const SECTION_TYPES = [
+    { re: /^WARM.?UP/i,                          ic: "i-flame", color: "#00D4AA", lbl: "Warm Up" },
+    { re: /^(ABSOLUTE STRENGTH|.?RELATIVE.? STRENGTH(?! ENDURANCE))/i, ic: "i-bar", color: "#F97316", lbl: "Force" },
+    { re: /^STRENGTH.?SPEED/i,                   ic: "i-bar",   color: "#F97316", lbl: "Haltéro" },
+    { re: /^(STRENGTH ENDURANCE|RELATIVE STRENGTH ENDURANCE)/i, ic: "i-bar", color: "#FB923C", lbl: "Endurance de force" },
+    { re: /CONDITIONING|^OPTION \d/i,            ic: "i-heart", color: "#EF4444", lbl: "Conditioning" },
+    { re: /^.?OPTIONAL.?\)? ?STRENGTH ACCESSORY/i, ic: "i-plus", color: "#8B92A6", lbl: "Accessoire (optionnel)" },
+    { re: /TEAM VERSION/i,                       ic: "i-users", color: "#8B92A6", lbl: "Version équipe" },
+    { re: /^FULL REST|^REPOS/i,                  ic: "i-moon",  color: "#00D4AA", lbl: "Repos" },
+    { re: /^OPTIONAL EXTRA/i,                    ic: "i-run",   color: "#EF4444", lbl: "Extra optionnel" },
+  ];
+  const TITLE_PREFIXES = /^(WARM.?UP|ABSOLUTE STRENGTH|STRENGTH ENDURANCE|STRENGTH.?SPEED|RELATIVE STRENGTH|CONDITIONING|OPTION \d|.?OPTIONAL.?\)? ?(STRENGTH ACCESSORY|CONDITIONING)|\(?TEAM VERSION|FULL REST DAY|OPTIONAL EXTRA|SEMAINE DE TRANSITION|BLOC S?\d)/i;
+
+  function typeOf(title) {
+    const t = title.normalize("NFKC");
+    return SECTION_TYPES.find(s => s.re.test(t)) || { ic: "i-note", color: "#8B92A6", lbl: "" };
+  }
+
+  /* ═══ AUJOURD'HUI ═══ */
   const NST = window.NST_JOURS || {};
   const dates = Object.keys(NST).sort();
   const JOURS_FR = ["dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"];
   const MOIS_FR = ["janv.", "févr.", "mars", "avril", "mai", "juin", "juil.", "août", "sept.", "oct.", "nov.", "déc."];
 
-  let cur = todayKey();
-  if (!NST[cur]) cur = dates[dates.length - 1] || null;
-
   function todayKey() {
     const d = new Date();
     return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
   }
+  let cur = NST[todayKey()] ? todayKey() : dates[dates.length - 1] || null;
 
   function renderJour() {
     const cont = el("jour-contenu");
     if (!cur || !NST[cur]) { cont.innerHTML = "<p class='muted' style='margin:1rem'>Aucune séance en base.</p>"; return; }
     const d = new Date(cur + "T12:00:00");
-    el("jour-date").textContent = JOURS_FR[d.getDay()] + " " + d.getDate() + " " + MOIS_FR[d.getMonth()] +
-      (cur === todayKey() ? " · aujourd'hui" : "");
+    el("jour-date").innerHTML = escapeHtml(JOURS_FR[d.getDay()] + " " + d.getDate() + " " + MOIS_FR[d.getMonth()]) +
+      (cur === todayKey() ? "<span class='today-tag'>aujourd'hui</span>" : "");
     el("jour-titre").textContent = NST[cur].titre;
     cont.innerHTML = "";
-    // Découpe le contenu en sections (lignes-titres en MAJUSCULES connues)
-    const sections = splitSections(NST[cur].contenu);
+
+    const { banner, sections } = splitSections(NST[cur].contenu);
+    if (banner) {
+      const b = document.createElement("div");
+      b.className = "bloc-banner";
+      b.innerHTML = escapeHtml(banner.title) + (banner.body ? "<span class='muted'>" + linkify(banner.body) + "</span>" : "");
+      cont.appendChild(b);
+    }
     sections.forEach((s, idx) => {
+      const type = typeOf(s.title);
       const div = document.createElement("div");
       div.className = "section" + (idx === 0 ? " open" : "");
+      div.style.setProperty("--sec-color", type.color);
       const timer = detectTimer(s.body);
       div.innerHTML =
-        "<button class='section-head'>" + escapeHtml(s.title) + "<span class='chev'>›</span></button>" +
+        "<button class='section-head' aria-expanded='" + (idx === 0) + "'>" +
+        "<svg class='ic'><use href='#" + type.ic + "'/></svg>" +
+        "<span class='lbl'>" + escapeHtml(cleanTitle(s.title)) + (type.lbl ? "<span class='sub'>" + escapeHtml(type.lbl) + "</span>" : "") + "</span>" +
+        "<svg class='ic chev'><use href='#i-chev'/></svg></button>" +
         "<div class='section-body'>" +
-        (timer ? "<button class='go-inline' data-timer='" + encodeURIComponent(JSON.stringify(timer)) + "'>▶ GO " + timer.label + "</button>" : "") +
-        escapeHtml(s.body) + "</div>";
-      div.querySelector(".section-head").addEventListener("click", () => div.classList.toggle("open"));
+        (timer ? "<button class='go-inline'><svg class='ic' style='width:16px;height:16px'><use href='#i-play'/></svg>GO " + timer.label + "</button>" : "") +
+        linkify(s.body) + "</div>";
+      div.querySelector(".section-head").addEventListener("click", () => {
+        div.classList.toggle("open");
+        div.querySelector(".section-head").setAttribute("aria-expanded", div.classList.contains("open"));
+      });
       const go = div.querySelector(".go-inline");
-      if (go) go.addEventListener("click", e => { e.stopPropagation(); launchFromSpec(JSON.parse(decodeURIComponent(go.dataset.timer))); });
+      if (go) go.addEventListener("click", e => { e.stopPropagation(); launchFromSpec(timer); });
       cont.appendChild(div);
     });
   }
 
+  /* Découpe : bannière de bloc (1re ligne SEMAINE/BLOC) + sections par mots-clés */
   function splitSections(txt) {
     const lines = txt.split("\n");
+    let banner = null;
     const out = []; let curSec = null;
-    const isTitle = raw => {
+    for (const raw of lines) {
       const l = raw.normalize("NFKC").trim();
-      return l.length > 3 && l.length < 90 && !/^\d/.test(l) &&
-        l === l.toUpperCase() && (l.match(/[A-Z]/g) || []).length >= 4;
-    };
-    for (const l of lines) {
-      if (isTitle(l)) { curSec = { title: l.trim(), body: "" }; out.push(curSec); }
-      else if (curSec) curSec.body += l + "\n";
-      else { curSec = { title: "Note du coach", body: l + "\n" }; out.push(curSec); }
+      if (!banner && !out.length && /^(SEMAINE DE TRANSITION|BLOC)/i.test(l)) {
+        banner = { title: l.replace(/^𝐒/, "S"), body: "" };
+        continue;
+      }
+      if (TITLE_PREFIXES.test(l) && !/^(SEMAINE|BLOC)/i.test(l)) {
+        curSec = { title: l, body: "" };
+        out.push(curSec);
+      } else if (curSec) curSec.body += raw + "\n";
+      else if (banner) banner.body += raw + "\n";
+      else { curSec = { title: "Note du coach", body: raw + "\n" }; out.push(curSec); }
     }
     out.forEach(s => s.body = s.body.trim());
-    return out.filter(s => s.body);
+    if (banner) banner.body = banner.body.trim();
+    return { banner, sections: out.filter(s => s.body) };
+  }
+
+  function cleanTitle(t) {
+    return t.normalize("NFKC").replace(/\s*—.*$/, "").replace(/^\((OPTIONAL|Optionnel)\)\s*/i, "").trim();
+  }
+
+  /* URLs → boutons vidéo ; niveaux Elite/RX → gras orange */
+  function linkify(txt) {
+    let h = escapeHtml(txt);
+    h = h.replace(/(https?:\/\/[^\s<]+)/g, url => {
+      const yt = /youtu/.test(url), insta = /instagram/.test(url);
+      const lbl = yt ? "Vidéo YouTube" : insta ? "Tips Instagram" : "Lien";
+      return "<a class='vid-link" + (insta ? " insta" : "") + "' href='" + url + "' target='_blank' rel='noopener'>" +
+        "<svg class='ic'><use href='#i-video'/></svg>" + lbl + "</a>";
+    });
+    h = h.replace(/^(𝐄𝐥𝐢𝐭𝐞|𝐑𝐗|𝐑𝐱|𝐈𝐧𝐭𝐞𝐫𝐦𝐞𝐝𝐢𝐚𝐭𝐞|𝐒𝐜𝐚𝐥𝐞𝐝|Elite|RX|Rx|Intermediate|Scaled)( ?\(Opt \d\))?\s*:/gm,
+      m => "<strong class='lvl'>" + m.normalize("NFKC") + "</strong>");
+    return h;
   }
 
   el("btn-prev").addEventListener("click", () => move(-1));
   el("btn-next").addEventListener("click", () => move(1));
   function move(dir) {
-    const i = dates.indexOf(cur);
-    const n = i + dir;
-    if (n >= 0 && n < dates.length) { cur = dates[n]; renderJour(); }
+    const i = dates.indexOf(cur), n = i + dir;
+    if (n >= 0 && n < dates.length) { cur = dates[n]; renderJour(); window.scrollTo(0, 0); }
   }
 
-  /* Détection du format de chrono dans un texte de bloc */
-  function detectTimer(t) {
+  /* Détection du format de chrono */
+  function detectTimer(t0) {
+    const t = t0.normalize("NFKC");
     let m;
     if ((m = t.match(/(\d+)\s*min(?:ute)?\s*AMRAP|AMRAP\s*(\d+)/i))) {
       const min = parseInt(m[1] || m[2]);
       return { mode: "amrap", min, label: "AMRAP " + min + "'" };
     }
-    if ((m = t.match(/EMOM.*?(\d+)\s*(?:min|rounds)/i)) || (m = t.match(/(\d+)\s*min(?:ute)?\s*EMOM/i))) {
+    if ((m = t.match(/(\d+)\s*min(?:ute)?\s*EMOM/i)) || (m = t.match(/EMOM[^.\n]*?(\d+)\s*(?:min|rounds)/i))) {
       const min = parseInt(m[1]);
       return { mode: "emom", min, label: "EMOM " + min + "'" };
     }
@@ -110,9 +167,8 @@
     document.querySelectorAll(".mode-btn").forEach(x => x.classList.remove("sel"));
     b.classList.add("sel");
     selMode = b.dataset.mode;
-    const box = el("chrono-params");
-    box.innerHTML = PARAMS[selMode].map(([k, lab, dv]) =>
-      "<div class='param'><label>" + lab + "</label><input type='number' inputmode='numeric' id='p-" + k + "' value='" + dv + "'></div>").join("");
+    el("chrono-params").innerHTML = PARAMS[selMode].map(([k, lab, dv]) =>
+      "<div class='param'><label for='p-" + k + "'>" + lab + "</label><input type='number' inputmode='numeric' id='p-" + k + "' value='" + dv + "'></div>").join("");
     el("btn-start").hidden = false;
   }));
 
@@ -129,7 +185,7 @@
     startTimer(spec.mode, p);
   }
 
-  /* Sons via WebAudio */
+  /* Sons */
   let AC = null;
   function beep(freq, dur, when) {
     try {
@@ -142,13 +198,13 @@
     } catch (e) { /* silencieux */ }
   }
 
-  /* Wake lock — l'écran ne s'éteint pas pendant le WOD */
+  /* Wake lock */
   let wakeLock = null;
   async function keepAwake(on) {
     try {
       if (on && "wakeLock" in navigator) wakeLock = await navigator.wakeLock.request("screen");
       else if (wakeLock) { wakeLock.release(); wakeLock = null; }
-    } catch (e) { /* pas supporté */ }
+    } catch (e) { /* non supporté */ }
   }
 
   let tick = null, paused = false, state = null;
@@ -157,10 +213,9 @@
     el("chrono-setup").hidden = true;
     el("chrono-run").hidden = false;
     keepAwake(true);
-    // Compte à rebours 10s (armement) puis 3-2-1 bips
     state = { mode, p, phase: "countdown", t: 10, elapsed: 0, round: 1, inWork: true };
     paused = false;
-    el("btn-pause").textContent = "⏸ Pause";
+    setPauseLabel(false);
     render();
     clearInterval(tick);
     tick = setInterval(step, 1000);
@@ -188,14 +243,13 @@
         if (state.round > p.min) return finish();
         beep(1100, .3);
       } else if (state.elapsed % 60 >= 57) beep(880, .12);
-    } else { // tabata / custom
+    } else {
       const len = state.inWork ? p.work : p.rest;
       if (state.elapsed >= len) {
         state.elapsed = 0;
-        if (state.inWork) { state.inWork = false; if (p.rest > 0) beep(440, .4); }
+        if (state.inWork && p.rest > 0) { state.inWork = false; beep(440, .4); }
         else { state.inWork = true; state.round++; beep(1320, .3); }
         if (state.round > p.rounds) return finish();
-        if (state.inWork === false && p.rest === 0) { state.inWork = true; state.round++; }
       } else if ((len - state.elapsed) <= 3) beep(880, .12);
     }
     render();
@@ -217,11 +271,11 @@
       phase = "AMRAP " + p.min + "'"; time = fmt(Math.max(0, p.min * 60 - state.elapsed)); sub = "écoulé " + fmt(state.elapsed);
       run.classList.add("work");
     } else if (mode === "emom") {
-      phase = "EMOM — MINUTE " + state.round + " / " + p.min;
+      phase = "EMOM · MINUTE " + state.round + " / " + p.min;
       time = fmt(60 - (state.elapsed % 60)); sub = "total " + fmt(state.elapsed);
       run.classList.add(state.round % 2 ? "work" : "rest");
     } else {
-      phase = (state.inWork ? "TRAVAIL" : "REPOS") + " — TOUR " + Math.min(state.round, p.rounds) + " / " + p.rounds;
+      phase = (state.inWork ? "TRAVAIL" : "REPOS") + " · TOUR " + Math.min(state.round, p.rounds) + " / " + p.rounds;
       time = fmt(Math.max(0, (state.inWork ? p.work : p.rest) - state.elapsed));
       run.classList.add(state.inWork ? "work" : "rest");
     }
@@ -233,16 +287,14 @@
   function finish() {
     clearInterval(tick);
     beep(1320, .3); beep(1320, .3, .4); beep(1760, .8, .8);
-    el("run-phase").textContent = "TERMINÉ 💪";
-    el("run-sub").textContent = "";
+    el("run-phase").textContent = "TERMINÉ";
+    el("run-sub").textContent = "beau travail, guerrier";
     state = null;
     keepAwake(false);
   }
 
-  el("btn-pause").addEventListener("click", () => {
-    paused = !paused;
-    el("btn-pause").textContent = paused ? "▶ Reprendre" : "⏸ Pause";
-  });
+  function setPauseLabel(p) { el("btn-pause").querySelector("span").textContent = p ? "Reprendre" : "Pause"; }
+  el("btn-pause").addEventListener("click", () => { paused = !paused; setPauseLabel(paused); });
   el("btn-stop").addEventListener("click", () => {
     clearInterval(tick); state = null; keepAwake(false);
     el("chrono-run").hidden = true;
@@ -252,9 +304,8 @@
   /* ═══ WODS ═══ */
   const WODS = window.WODS || [];
   let srcFilter = null;
-  const sources = [...new Set(WODS.map(w => w.source))];
   const srcBox = el("wod-sources");
-  sources.forEach(s => {
+  [...new Set(WODS.map(w => w.source))].forEach(s => {
     const b = document.createElement("button");
     b.textContent = s;
     b.addEventListener("click", () => {
@@ -273,8 +324,7 @@
     const match = WODS.filter(w => {
       if (srcFilter && w.source !== srcFilter) return false;
       if (!q) return true;
-      const blob = ((w.name || "") + " " + (w.fr || w.en || []).join(" ")).toLowerCase();
-      return blob.includes(q);
+      return ((w.name || "") + " " + (w.fr || w.en || []).join(" ")).toLowerCase().includes(q);
     }).slice(0, 60);
     match.forEach(w => {
       const lines = (w.fr && w.fr.length ? w.fr : w.en || []).join("\n");
@@ -284,7 +334,7 @@
       card.innerHTML = "<h3>" + escapeHtml(w.name || w.date || w.id) + "</h3>" +
         "<div class='muted'>" + escapeHtml(w.source + (w.date ? " · " + w.date : "")) + "</div>" +
         "<div class='lines'>" + escapeHtml(lines) + "</div>" +
-        (timer ? "<button class='go-inline'>▶ GO " + timer.label + "</button>" : "");
+        (timer ? "<button class='go-inline'><svg class='ic' style='width:16px;height:16px'><use href='#i-play'/></svg>GO " + timer.label + "</button>" : "");
       const go = card.querySelector(".go-inline");
       if (go) go.addEventListener("click", () => launchFromSpec(timer));
       list.appendChild(card);
@@ -292,8 +342,6 @@
     if (!match.length) list.innerHTML = "<p class='muted' style='margin:1rem'>Aucun WOD trouvé.</p>";
   }
   renderWods();
-
-  function escapeHtml(s) { return String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c])); }
 
   renderJour();
 })();
