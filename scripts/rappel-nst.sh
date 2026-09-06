@@ -1,3 +1,6 @@
 #!/bin/bash
-# Rappel : vérifier si de nouvelles séances NST (FITR) sont publiées, pour les récupérer dans le carnet.
-osascript -e 'display notification "Ouvre FITR et regarde si les nouvelles séances sont publiées, puis demande à Claude de les récupérer." with title "Coach IA — programme NST" subtitle "Séances à récupérer" sound name "Glass"'
+# Rappel hebdo (fin de semaine) : la nouvelle semaine NST est publiée sur FITR.
+# → Ouvrir Claude Code et dire « aspire NST » : il ouvre FITR dans Chrome, aspire les
+#   séances de la semaine (texte intégral + liens vidéo), met à jour Bachata N.S.T et le
+#   carnet, et le 1er du mois récupère la facture FITR pour Pennylane.
+osascript -e 'display notification "Nouvelle semaine NST publiée ? Ouvre Claude et dis : « aspire NST » (5 min, tout se met à jour)." with title "Bachata N.S.T — programme" subtitle "Mise à jour hebdo" sound name "Glass"'
