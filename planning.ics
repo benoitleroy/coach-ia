@@ -5,21 +5,8 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
-UID:2026-S37-0-matin@coach-ia
-DTSTAMP:20260907T040000Z
-DTSTART:20260907T033000Z
-DTEND:20260907T043000Z
-SUMMARY:🏃 Footing en aisance 45 min
-DESCRIPTION:Tu es sans les enfants\, c'est le créneau à prendre pour courir. Objectif unique : rester sous 140 bpm du début à la fin\, tu dois pouvoir parler en phrases complètes. Après une nuit à 4h43 samedi\, on ne cherche rien d'autre que du volume facile.\n• 10 min de marche rapide puis trot très lent pour monter la FC progressivement\n• 35 min de course continue en aisance stricte\, FC sous 140 bpm — si ça monte\, tu marches 1 min\n• Terminer par 5 min de trot très lent puis marche\n• Étirement des fléchisseurs de hanche (fente genou au sol\, bassin qui rentre) 2×45 s par jambe\n⚑ Si la FC dépasse 145 bpm alors que tu ne forces pas\, tu coupes à 30 min : c'est la fatigue du week-end\, pas une mauvaise journée.\n\nCoach IA — 2026-S37
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🏃 Footing en aisance 45 min
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-S37-0-soir@coach-ia
-DTSTAMP:20260907T040000Z
+DTSTAMP:20260907T050000Z
 DTSTART:20260907T163000Z
 DTEND:20260907T174500Z
 SUMMARY:🏋️ Force lourde — Back squat 5×5 (semaine 1 du cycle)
@@ -32,7 +19,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S37-1-matin@coach-ia
-DTSTAMP:20260907T040000Z
+DTSTAMP:20260907T050000Z
 DTSTART:20260908T033000Z
 DTEND:20260908T043000Z
 SUMMARY:🧘 Mobilité ciblée overhead squat + gainage
@@ -45,7 +32,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S37-1-soir@coach-ia
-DTSTAMP:20260907T040000Z
+DTSTAMP:20260907T050000Z
 DTSTART:20260908T163000Z
 DTEND:20260908T174500Z
 SUMMARY:🤸 Box ou NST — jour gymnastique / conditionnement
@@ -58,7 +45,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S37-2-matin@coach-ia
-DTSTAMP:20260907T040000Z
+DTSTAMP:20260907T050000Z
 DTSTART:20260909T033000Z
 DTEND:20260909T043000Z
 SUMMARY:🏃 Footing en aisance 50 min
@@ -71,7 +58,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S37-2-soir@coach-ia
-DTSTAMP:20260907T040000Z
+DTSTAMP:20260907T050000Z
 DTSTART:20260909T163000Z
 DTEND:20260909T174500Z
 SUMMARY:🏊 Natation volume sans impact 40 min
@@ -84,7 +71,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S37-3-soir@coach-ia
-DTSTAMP:20260907T040000Z
+DTSTAMP:20260907T050000Z
 DTSTART:20260910T163000Z
 DTEND:20260910T174500Z
 SUMMARY:🏋️ Force n°2 — charnière et tirage (box ou NST)
@@ -97,7 +84,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S37-4-matin@coach-ia
-DTSTAMP:20260907T040000Z
+DTSTAMP:20260907T050000Z
 DTSTART:20260911T033000Z
 DTEND:20260911T043000Z
 SUMMARY:🚴 Home-trainer en aisance 40 min
@@ -110,7 +97,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S37-4-soir@coach-ia
-DTSTAMP:20260907T040000Z
+DTSTAMP:20260907T050000Z
 DTSTART:20260911T163000Z
 DTEND:20260911T174500Z
 SUMMARY:🏋️ Haltérophilie technique — rendez-vous fixe
@@ -123,7 +110,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S37-5-matin@coach-ia
-DTSTAMP:20260907T040000Z
+DTSTAMP:20260907T050000Z
 DTSTART:20260912T033000Z
 DTEND:20260912T043000Z
 SUMMARY:🚴 Home-trainer long 1 h 05 en aisance
@@ -136,7 +123,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S37-6-soir@coach-ia
-DTSTAMP:20260907T040000Z
+DTSTAMP:20260907T050000Z
 DTSTART:20260913T163000Z
 DTEND:20260913T174500Z
 SUMMARY:— Rien — journée complète off
