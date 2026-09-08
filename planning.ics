@@ -5,21 +5,8 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
-UID:2026-S37-1-matin@coach-ia
-DTSTAMP:20260908T040000Z
-DTSTART:20260908T033000Z
-DTEND:20260908T043000Z
-SUMMARY:🧘 Mobilité ciblée overhead squat + gainage
-DESCRIPTION:Séance courte et technique\, zéro fatigue ajoutée après le squat de la veille. Toute l'attention va sur ce qui bloque ta position barre au-dessus de la tête : épaules\, haut du dos\, chevilles. Tu dois sentir de l'amplitude gagnée\, jamais de douleur.\n• 5 min de respiration nasale + rotations d'épaules et de bassin\, debout\n• Dislocations à l'élastique (bras tendus\, l'élastique passe de devant à derrière la tête) 3×10\, lentement\n• Sots press au PVC (barre plastique au-dessus de la tête\, on s'accroupit sous la barre) 3×8\n• Overhead squat au PVC : 4× tenir 30 s en position basse\, bras tendus\, barre au-dessus des oreilles\n• Mobilité chevilles genou-mur (genou avance vers le mur\, talon collé au sol) 2×10 par jambe\n• Accroupi profond tenu 3×45 s\, coudes à l'intérieur des genoux\n⚑ Aucune charge au-dessus de la tête tant que tu ne tiens pas 30 s stable au PVC talons au sol.\n\nCoach IA — 2026-S37
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🧘 Mobilité ciblée overhead squat + gainage
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-S37-1-soir@coach-ia
-DTSTAMP:20260908T040000Z
+DTSTAMP:20260908T050000Z
 DTSTART:20260908T163000Z
 DTEND:20260908T174500Z
 SUMMARY:🤸 Box ou NST — jour gymnastique / conditionnement
@@ -32,7 +19,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S37-2-matin@coach-ia
-DTSTAMP:20260908T040000Z
+DTSTAMP:20260908T050000Z
 DTSTART:20260909T033000Z
 DTEND:20260909T043000Z
 SUMMARY:🏃 Footing en aisance 50 min
@@ -45,7 +32,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S37-2-soir@coach-ia
-DTSTAMP:20260908T040000Z
+DTSTAMP:20260908T050000Z
 DTSTART:20260909T163000Z
 DTEND:20260909T174500Z
 SUMMARY:🏊 Natation volume sans impact 40 min
@@ -58,7 +45,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S37-3-soir@coach-ia
-DTSTAMP:20260908T040000Z
+DTSTAMP:20260908T050000Z
 DTSTART:20260910T163000Z
 DTEND:20260910T174500Z
 SUMMARY:🏋️ Force n°2 — charnière et tirage (box ou NST)
@@ -71,7 +58,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S37-4-matin@coach-ia
-DTSTAMP:20260908T040000Z
+DTSTAMP:20260908T050000Z
 DTSTART:20260911T033000Z
 DTEND:20260911T043000Z
 SUMMARY:🚴 Home-trainer en aisance 40 min
@@ -84,7 +71,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S37-4-soir@coach-ia
-DTSTAMP:20260908T040000Z
+DTSTAMP:20260908T050000Z
 DTSTART:20260911T163000Z
 DTEND:20260911T174500Z
 SUMMARY:🏋️ Haltérophilie technique — rendez-vous fixe
@@ -97,7 +84,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S37-5-matin@coach-ia
-DTSTAMP:20260908T040000Z
+DTSTAMP:20260908T050000Z
 DTSTART:20260912T033000Z
 DTEND:20260912T043000Z
 SUMMARY:🚴 Home-trainer long 1 h 05 en aisance
@@ -110,7 +97,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S37-6-soir@coach-ia
-DTSTAMP:20260908T040000Z
+DTSTAMP:20260908T050000Z
 DTSTART:20260913T163000Z
 DTEND:20260913T174500Z
 SUMMARY:— Rien — journée complète off
