@@ -5,21 +5,8 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
-UID:2026-S37-2-soir@coach-ia
-DTSTAMP:20260909T170000Z
-DTSTART:20260909T163000Z
-DTEND:20260909T174500Z
-SUMMARY:🏊 Natation volume sans impact 40 min
-DESCRIPTION:Piscine Desautel\, créneau 16h-19h le mercredi. Séance de volume aérobie sans impact pour laisser souffler les tendons : on nage souple\, on travaille la longueur de coup de bras\, aucune performance recherchée.\n• 300 m crawl très souple pour se mettre en route\n• 6×50 m éducatif (rattrapé\, poings fermés) avec 20 s de repos\n• 8×50 m crawl en aisance\, 20 s de repos\, respiration tous les 3 temps\n• 200 m dos ou brasse souple pour relâcher les épaules\n• 100 m très lent en retour au calme\n⚑ Si les épaules tirent après la séance d'hier\, tu remplaces le crawl par du dos et de la brasse.\n\nCoach IA — 2026-S37
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🏊 Natation volume sans impact 40 min
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-S37-3-soir@coach-ia
-DTSTAMP:20260909T170000Z
+DTSTAMP:20260909T180100Z
 DTSTART:20260910T163000Z
 DTEND:20260910T174500Z
 SUMMARY:🏋️ Force n°2 — charnière et tirage (box ou NST)
@@ -32,7 +19,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S37-4-matin@coach-ia
-DTSTAMP:20260909T170000Z
+DTSTAMP:20260909T180100Z
 DTSTART:20260911T033000Z
 DTEND:20260911T043000Z
 SUMMARY:🚴 Home-trainer en aisance 40 min
@@ -45,7 +32,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S37-4-soir@coach-ia
-DTSTAMP:20260909T170000Z
+DTSTAMP:20260909T180100Z
 DTSTART:20260911T163000Z
 DTEND:20260911T174500Z
 SUMMARY:🏋️ Haltérophilie technique — rendez-vous fixe
@@ -58,7 +45,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S37-5-matin@coach-ia
-DTSTAMP:20260909T170000Z
+DTSTAMP:20260909T180100Z
 DTSTART:20260912T033000Z
 DTEND:20260912T043000Z
 SUMMARY:🚴 Home-trainer long 1 h 05 en aisance
@@ -71,7 +58,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S37-6-soir@coach-ia
-DTSTAMP:20260909T170000Z
+DTSTAMP:20260909T180100Z
 DTSTART:20260913T163000Z
 DTEND:20260913T174500Z
 SUMMARY:— Rien — journée complète off
