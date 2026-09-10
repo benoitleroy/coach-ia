@@ -1994,20 +1994,5 @@ window.SEANCES = [
   "contenuFr": null,
   "note": null,
   "photo": null
- },
- {
-  "id": 17714795930,
-  "date": "2026-03-14T04:34:24Z",
-  "type": "VirtualRide",
-  "name": "Zwift - Peaky Pavé in France",
-  "sec": 3788,
-  "km": 31,
-  "hr": 130,
-  "hrMax": 148,
-  "effort": 29,
-  "contenu": null,
-  "contenuFr": null,
-  "note": null,
-  "photo": null
  }
 ];
