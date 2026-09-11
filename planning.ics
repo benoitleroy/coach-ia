@@ -5,21 +5,8 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
-UID:2026-S37-4-soir@coach-ia
-DTSTAMP:20260911T170000Z
-DTSTART:20260911T163000Z
-DTEND:20260911T174500Z
-SUMMARY:🏋️ Haltérophilie technique — rendez-vous fixe
-DESCRIPTION:Ton rendez-vous hebdomadaire non négociable à la box : technique d'arraché et d'épaulé-jeté. Une seule intention : le geste. On reste léger\, on cherche la position et la vitesse\, jamais la charge maximale. C'est aussi ton meilleur outil pour débloquer la position bras au-dessus de la tête.\n• Échauffement barre à vide : 10 tirages nuque larges + 10 sots press + 10 overhead squats au PVC\n• Arraché depuis la hanche (tirage puis passage sous la barre) : 5 séries de 3 reps à 25-30 kg — technique avant charge\n• Épaulé debout depuis la hanche : 5 séries de 3 reps à 35-40 kg\n• Jeté fente : 4 séries de 3 reps à 35 kg\, on cherche la stabilité bras tendus 2 s\n• Développé nuque en demi-squat : 4 séries de 5 reps à 30 kg\n• Fin de séance : 3×30 s de suspension à la barre pour étirer les épaules\n⚑ Aucune montée en charge si le passage sous la barre n'est pas net : tu restes à la charge où le geste est propre\, c'est le but de la séance.\n\nCoach IA — 2026-S37
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🏋️ Haltérophilie technique — rendez-vous fixe
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-S37-5-matin@coach-ia
-DTSTAMP:20260911T170000Z
+DTSTAMP:20260911T180000Z
 DTSTART:20260912T033000Z
 DTEND:20260912T043000Z
 SUMMARY:🚴 Home-trainer long 1 h 05 en aisance
@@ -32,7 +19,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S37-6-soir@coach-ia
-DTSTAMP:20260911T170000Z
+DTSTAMP:20260911T180000Z
 DTSTART:20260913T163000Z
 DTEND:20260913T174500Z
 SUMMARY:— Rien — journée complète off
