@@ -5,21 +5,8 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
-UID:2026-S37-4-matin@coach-ia
-DTSTAMP:20260911T040000Z
-DTSTART:20260911T033000Z
-DTEND:20260911T043000Z
-SUMMARY:🚴 Home-trainer en aisance 40 min
-DESCRIPTION:Tu n'as pas encore les enfants ce matin\, mais la séance du soir est technique et lourde : on reste sur du vélo sans impact\, pédalage souple et cadence élevée pour dégourdir les jambes après le soulevé d'hier.\n• 10 min d'échauffement progressif de 100 à 140 W\n• 3×5 min à 150 W à cadence 95-100 tr/min\, récup 3 min à 110 W entre les blocs\n• 5 min à 130 W\, cadence libre\n• 5 min de retour au calme à 100 W\n• Mobilité chevilles genou-mur 2×10 par jambe en descendant du vélo\n⚑ FC sous 140 bpm sur toute la séance : si ça monte\, tu baisses la puissance\, pas la cadence.\n\nCoach IA — 2026-S37
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🚴 Home-trainer en aisance 40 min
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-S37-4-soir@coach-ia
-DTSTAMP:20260911T040000Z
+DTSTAMP:20260911T050000Z
 DTSTART:20260911T163000Z
 DTEND:20260911T174500Z
 SUMMARY:🏋️ Haltérophilie technique — rendez-vous fixe
@@ -32,7 +19,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S37-5-matin@coach-ia
-DTSTAMP:20260911T040000Z
+DTSTAMP:20260911T050000Z
 DTSTART:20260912T033000Z
 DTEND:20260912T043000Z
 SUMMARY:🚴 Home-trainer long 1 h 05 en aisance
@@ -45,7 +32,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S37-6-soir@coach-ia
-DTSTAMP:20260911T040000Z
+DTSTAMP:20260911T050000Z
 DTSTART:20260913T163000Z
 DTEND:20260913T174500Z
 SUMMARY:— Rien — journée complète off
