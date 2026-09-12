@@ -6,7 +6,7 @@ METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
 UID:2026-S37-6-soir@coach-ia
-DTSTAMP:20260912T110000Z
+DTSTAMP:20260912T113100Z
 DTSTART:20260913T163000Z
 DTEND:20260913T174500Z
 SUMMARY:— Rien — journée complète off
@@ -15,6 +15,136 @@ BEGIN:VALARM
 TRIGGER:-PT30M
 ACTION:DISPLAY
 DESCRIPTION:— Rien — journée complète off
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S38-0-matin@coach-ia
+DTSTAMP:20260912T113100Z
+DTSTART:20260914T033000Z
+DTEND:20260914T043000Z
+SUMMARY:🚲 Home-trainer aisance + mobilité épaules
+DESCRIPTION:Tu as les garçons\, donc tout se fait à la maison : 40 min de vélo d'intérieur en conversation possible\, puis la mobilité qui débloque l'overhead squat. Ça doit finir plus frais que ça a commencé.\n• 10 min de vélo très facile\, 90 tours/min\, FC sous 120 bpm\n• 25 min en aisance stricte\, FC 120-135 bpm\, tu peux parler en phrases entières\n• 5 min de retour au calme très souple\n• Dislocations à l'élastique (bras tendus\, l'élastique passe de devant à derrière la tête) 2×10\, lentement\n• Overhead squat au PVC (barre plastique bras tendus au-dessus de la tête) : 3× tenir 30 s en position basse\n• Mobilité chevilles genou-mur : 2×10 par jambe\, talon collé au sol\n⚑ Si la FC dépasse 140 bpm sans que tu forces\, tu lèves le pied : c'est un jour de mise en route\, pas un test.\n\nCoach IA — 2026-S38
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🚲 Home-trainer aisance + mobilité épaules
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S38-0-soir@coach-ia
+DTSTAMP:20260912T113100Z
+DTSTART:20260914T163000Z
+DTEND:20260914T174500Z
+SUMMARY:🏋️ NST maison courte — force bas du corps
+DESCRIPTION:Version maison de 35-40 min\, sans conditioning\, parce que les enfants sont là. C'est la semaine 3 du cycle : on passe du 5×5 au format 5×3 plus lourd\, technique avant charge.\n• Échauffement : 8 min — 2×(15 air squats\, 10 fentes alternées\, 30 s planche)\, puis back squat à vide 2×8\n• Back squat 5×3 à 75 kg (la charge où la 3e rep reste propre\, environ 88 % de ton 80 kg sur 5) — 2 min 30 de récup entre séries\n• Montée de charge avant : 1×5 à 50 kg\, 1×3 à 62\,5 kg\, puis les 5 séries de travail\n• Fentes bulgares haltères (pied arrière sur une chaise\, descente contrôlée) 3×8 par jambe\, 12 kg par main — 90 s de récup\n• Soulevé de terre jambes tendues à la barre (dos plat\, barre qui frôle les cuisses) 3×10 à 45 kg — 90 s de récup\n• Gainage : planche ventrale 3×45 s + planche latérale 2×30 s par côté\n• 5 min d'étirement des fléchisseurs de hanche (fente genou au sol\, bassin qui rentre)\n⚑ Si la 2e rep d'une série part en avant (talons qui se lèvent\, dos qui s'arrondit)\, tu enlèves 5 kg et tu finis les séries restantes à cette charge.\n\nCoach IA — 2026-S38
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🏋️ NST maison courte — force bas du corps
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S38-1-soir@coach-ia
+DTSTAMP:20260912T113100Z
+DTSTART:20260915T163000Z
+DTEND:20260915T174500Z
+SUMMARY:🤸 NST maison courte — tirage et gainage
+DESCRIPTION:Séance unique aujourd'hui\, en dominante haut du corps pour laisser les jambes récupérer du squat de la veille. Travail de tirage frais\, jamais épuisé\, avec du tempo lent — tu dois finir en te disant que tu aurais pu en faire un peu plus.\n• Échauffement : 3 min corde à sauter en continu souple\, puis 2×(10 rotations d'épaules\, 10 scap pull-ups = suspendu bras tendus\, tu rentres juste les omoplates)\n• Tractions strictes (paumes vers l'avant\, menton au-dessus de la barre\, sans élan) 5 séries de 3 reps en descente lente 3 s — 2 min de récup\n• Rowing barre buste penché (dos plat\, tu tires la barre vers le nombril) 4×8 à 40 kg — 90 s de récup\n• Développé haltères debout (des épaules jusqu'à bras tendus au-dessus de la tête) 3×10 à 14 kg par main — 90 s de récup\n• Gainage anti-rotation : planche avec tapes d'épaule 3×20 tapes\, bassin immobile\n• 5 min de mobilité thoracique : 10 rotations allongé sur le côté par côté + 1 min de suspension passive à la barre\n⚑ Si la 3e traction d'une série se fait avec un coup de reins\, tu passes en traction aidée d'un élastique : on cherche le geste strict\, pas le nombre.\n\nCoach IA — 2026-S38
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🤸 NST maison courte — tirage et gainage
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S38-2-matin@coach-ia
+DTSTAMP:20260912T113100Z
+DTSTART:20260916T033000Z
+DTEND:20260916T043000Z
+SUMMARY:🚲 Home-trainer aisance longue
+DESCRIPTION:45 min de vélo à la maison\, les enfants sont là. C'est ton volume aérobie sans impact de la semaine : rien ne doit brûler\, tu dois avoir envie de continuer à la fin.\n• 10 min progressif\, cadence 85-95 tours/min\, FC qui monte doucement vers 120 bpm\n• 30 min en aisance stricte à FC 125-135 bpm\, allure librement variable — tu peux relancer 1 min si l'envie vient\, sans jamais passer 145 bpm\n• 5 min de retour au calme\, grande cadence\, petit braquet\n• Étirement mollets et quadriceps\, 3 min\n⚑ Si tu as dormi moins de 6 h\, tu raccourcis à 30 min au total : le sommeil est le facteur limitant cette semaine.\n\nCoach IA — 2026-S38
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🚲 Home-trainer aisance longue
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S38-2-soir@coach-ia
+DTSTAMP:20260912T113100Z
+DTSTART:20260916T163000Z
+DTEND:20260916T174500Z
+SUMMARY:🔥 NST maison courte — filière moyenne
+DESCRIPTION:Le seul vrai moment dur de la semaine\, à la maison\, sur 12 min de travail : ça doit être franchement inconfortable mais tu gardes 5 % dans le réservoir. Aucun mouvement lourd\, que du poids de corps et de l'haltère léger pour ne pas empiler avec le squat de lundi.\n• Échauffement : 2 rounds de (1 min corde à sauter\, 10 up n down = passage debout/planche\, 10 air squats\, 5 burpees souples)\n• Préparation : 1 round du WOD à allure facile pour caler les positions\n• WOD — AMRAP 12 min (tu enchaînes le plus de tours possible) : 10 swings kettlebell 16 kg (balancement hanches\, la cloche monte à hauteur des yeux) + 10 burpees + 15 fentes alternées + 20 mountain climbers\n• Note ton nombre de tours : objectif 6 à 7 tours en gardant un rythme régulier\, sans t'arrêter plus de 10 s\n• Retour au calme : 5 min de marche sur place + respiration nasale allongé\, jambes contre le mur\n⚑ Si tu dois t'arrêter plus de 20 s à mi-parcours\, tu passes à 8 reps par mouvement et tu finis les 12 min en mouvement continu — le but est la continuité\, pas le score.\n\nCoach IA — 2026-S38
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🔥 NST maison courte — filière moyenne
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S38-4-matin@coach-ia
+DTSTAMP:20260912T113100Z
+DTSTART:20260918T033000Z
+DTEND:20260918T043000Z
+SUMMARY:🧘 Mobilité overhead + gainage court
+DESCRIPTION:30 min à la maison avec les garçons\, en préparation directe de l'haltéro du soir : on ouvre les épaules et les chevilles pour que l'arraché soit propre. Aucune fatigue recherchée.\n• 5 min de respiration nasale + rotations d'épaules et de bassin\, debout\n• Dislocations à l'élastique 2×12\, lentement\n• Sots press au PVC (barre au-dessus de la tête\, tu t'accroupis sous la barre) 3×8\n• Overhead squat au PVC : 4× tenir 30 s en position basse\, bras tendus\n• Mobilité chevilles genou-mur 2×12 par jambe + accroupi profond tenu 2×45 s\n• Gainage : planche ventrale 2×45 s + planche latérale 2×30 s par côté\n⚑ Si une épaule pince en position haute\, tu réduis l'amplitude à la zone sans douleur — jamais forcer une articulation froide.\n\nCoach IA — 2026-S38
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🧘 Mobilité overhead + gainage court
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S38-4-soir@coach-ia
+DTSTAMP:20260912T113100Z
+DTSTART:20260918T163000Z
+DTEND:20260918T174500Z
+SUMMARY:🏋️ Haltérophilie à la box (rendez-vous fixe)
+DESCRIPTION:Ta séance technique hebdomadaire non négociable : arraché et épaulé-jeté. On reste à charge légère-modérée\, l'objectif est la position\, pas le kilo — c'est le prolongement direct du travail de mobilité du matin.\n• Échauffement : 5 min rameur progressif\, puis 2 rounds de (10 scorpions = allongé sur le ventre\, talon vers la main opposée\, 10 tirages barre à vide)\n• Technique arraché à la barre vide : 3×5 tirage nuque haut (high hang snatch pull) + 3×3 arraché puissance depuis le haut des cuisses\n• Arraché puissance 5×3 à 35 kg — 2 min de récup\, tu montes de 2\,5 kg seulement si les 3 reps sortent identiques\n• Épaulé puissance 5×2 à 45 kg — 2 min de récup\, réception stable\, pieds qui ne bougent pas\n• Jeté (position haute\, impulsion jambes\, réception bras tendus) 4×3 à 40 kg\n• Overhead squat au PVC en finition 3×5 lents — pas de charge tant que la position basse n'est pas stable\n• 5 min d'étirement poignets\, épaules\, chevilles\n⚑ Aucune montée de charge si la réception bouge ou si les coudes tombent : tu restes à la charge où les 3 reps se ressemblent.\n\nCoach IA — 2026-S38
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🏋️ Haltérophilie à la box (rendez-vous fixe)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S38-5-matin@coach-ia
+DTSTAMP:20260912T113100Z
+DTSTART:20260919T033000Z
+DTEND:20260919T043000Z
+SUMMARY:🏃 Sortie longue en aisance stricte — 1 h 15
+DESCRIPTION:La séance clé de la semaine\, et la première longue depuis le 28/08 : tu es sans les enfants\, c'est le créneau. FC sous 140 bpm du début à la fin\, allure libre et variable — tu marches dans les montées s'il faut\, ça ne change rien au bénéfice.\n• 10 min de marche rapide puis trot très facile\, FC sous 125 bpm\n• 55 min en aisance stricte\, FC 125-138 bpm — tu dois pouvoir tenir une conversation complète tout du long\n• Autorisé : 3 relances libres de 1 min en milieu de sortie si les jambes le demandent\, sans dépasser 148 bpm\n• 10 min de trot très léger puis marche pour redescendre\n• Étirement mollets et chaîne postérieure\, 5 min\n• Objectif de progression : 1 h 15 en continu à FC moyenne ≤ 138 bpm\, contre 1 h 06 à 134 bpm le 05/09\n⚑ Toute douleur au tendon d'Achille ou au genou = tu arrêtes la course sur le champ et tu remplaces par du vélo\, jusqu'à disparition complète.\n\nCoach IA — 2026-S38
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🏃 Sortie longue en aisance stricte — 1 h 15
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S38-5-soir@coach-ia
+DTSTAMP:20260912T113100Z
+DTSTART:20260919T163000Z
+DTEND:20260919T174500Z
+SUMMARY:🏊 Nage souple + sauna à Cap Provence (Cassis)
+DESCRIPTION:40 min de récupération active dans l'après-midi (le bassin est ouvert de 14h30 à 18h) : nage lente\, sans chrono\, puis sauna ou hammam. C'est la contrepartie de la sortie longue\, pas une séance.\n• 10 min de nage très souple\, respiration tous les 3 mouvements\n• 6×50 m crawl lent avec 30 s de repos\, sensation glisse\, jamais essoufflé\n• 5 min de battements avec planche\, jambes relâchées\n• 5 min de nage libre au feeling pour finir\n• 10-12 min de sauna ou hammam\, puis douche fraîche\n⚑ Pas de série rapide ni de chrono : si tu t'essouffles\, tu ralentis — cette séance doit te laisser plus frais qu'à l'arrivée.\n\nCoach IA — 2026-S38
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🏊 Nage souple + sauna à Cap Provence (Cassis)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S38-6-matin@coach-ia
+DTSTAMP:20260912T113100Z
+DTSTART:20260920T033000Z
+DTEND:20260920T043000Z
+SUMMARY:🏋️ Séance NST ou WOD de la box — force haut du corps
+DESCRIPTION:La programmation NST de la semaine ne m'a pas été fournie : si tu l'as\, prends-la telle quelle en Scaled ou Intermediate et coupe à 70 min (échauffement + force absolue + le conditioning principal\, sans accessoire ni version Team). Sinon\, voilà la séance\, en dominante haut du corps puisque les jambes ont travaillé samedi.\n• Échauffement 10 min : 3 min rameur progressif\, puis 2 rounds de (10 band pull apart = écarter un élastique bras tendus devant\, 10 pompes\, 10 ring rows = tirage suspendu aux anneaux)\n• Force absolue — développé couché ou développé militaire barre 5×3 à la charge où la 3e rep reste propre (environ 45-50 kg au militaire) — 2 min 30 de récup\n• Endurance de force — 3 séries de : 10 tractions aidées d'élastique + 12 rowing haltère un bras par côté à 16 kg — 90 s de récup entre séries\n• Conditioning\, intention capacité aérobie (pas tout-out) — 3 rounds pour le temps : 400 m rameur + 15 pompes + 20 cal vélo\, récup 90 s entre rounds\, cible 14-16 min au total\n• Retour au calme : 5 min de vélo très souple + étirement pectoraux et dorsaux\n⚑ Deuxième jour actif d'affilée : si la FC de repos du matin dépasse 55 bpm ou que le HRV est en LOW\, tu remplaces tout par 45 min de vélo en aisance.\n\nCoach IA — 2026-S38
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🏋️ Séance NST ou WOD de la box — force haut du corps
 END:VALARM
 END:VEVENT
 END:VCALENDAR
