@@ -1994,20 +1994,5 @@ window.SEANCES = [
   "contenuFr": null,
   "note": null,
   "photo": null
- },
- {
-  "id": 17738645460,
-  "date": "2026-03-16T05:16:45Z",
-  "type": "VirtualRide",
-  "name": "Zwift - Climb Portal: Coll d'Ordino at 100% Elevation in Watopia",
-  "sec": 2681,
-  "km": 14.9,
-  "hr": 137,
-  "hrMax": 168,
-  "effort": 37,
-  "contenu": null,
-  "contenuFr": null,
-  "note": null,
-  "photo": null
  }
 ];
