@@ -5,21 +5,8 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
-UID:2026-S37-5-matin@coach-ia
-DTSTAMP:20260912T040000Z
-DTSTART:20260912T033000Z
-DTEND:20260912T043000Z
-SUMMARY:🚴 Home-trainer long 1 h 05 en aisance
-DESCRIPTION:Tu as les enfants\, donc pas de sortie longue en course : on transfère le volume aérobie sur le home-trainer\, et c'est aussi plus doux pour les tendons au lendemain de l'haltéro. Intention : capacité aérobie\, tu dois pouvoir parler tout du long.\n• 15 min d'échauffement progressif de 100 à 140 W\n• 40 min continu entre 145 et 160 W\, FC sous 140 bpm\, cadence 85-90 tr/min\n• Dans les 40 min : 5 relances de 1 min à 180 W à cadence 100\, une toutes les 8 min\, sans laisser la FC dépasser 150\n• 10 min de retour au calme sous 110 W\n• Gainage : planche ventrale 3×45 s\n⚑ Si la FC dérive au-dessus de 145 bpm à puissance constante après 30 min\, tu coupes à 50 min : c'est le signe que la semaine a été bien chargée.\n\nCoach IA — 2026-S37
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🚴 Home-trainer long 1 h 05 en aisance
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-S37-6-soir@coach-ia
-DTSTAMP:20260912T040000Z
+DTSTAMP:20260912T050000Z
 DTSTART:20260913T163000Z
 DTEND:20260913T174500Z
 SUMMARY:— Rien — journée complète off
