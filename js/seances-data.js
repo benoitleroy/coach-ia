@@ -1979,20 +1979,5 @@ window.SEANCES = [
   "contenuFr": null,
   "note": null,
   "photo": null
- },
- {
-  "id": 17769390310,
-  "date": "2026-03-18T17:34:36Z",
-  "type": "VirtualRide",
-  "name": "Test HRM600",
-  "sec": 293,
-  "km": 2.8,
-  "hr": 125,
-  "hrMax": 143,
-  "effort": 2,
-  "contenu": null,
-  "contenuFr": null,
-  "note": null,
-  "photo": null
  }
 ];
