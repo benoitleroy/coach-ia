@@ -1979,20 +1979,5 @@ window.SEANCES = [
   "contenuFr": null,
   "note": null,
   "photo": null
- },
- {
-  "id": 17762562404,
-  "date": "2026-03-18T04:46:23Z",
-  "type": "VirtualRide",
-  "name": "Zwift - Southern Coast Cruise in Watopia",
-  "sec": 2563,
-  "km": 24.1,
-  "hr": 129,
-  "hrMax": 147,
-  "effort": 21,
-  "contenu": null,
-  "contenuFr": null,
-  "note": null,
-  "photo": null
  }
 ];
