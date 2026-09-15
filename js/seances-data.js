@@ -1964,20 +1964,5 @@ window.SEANCES = [
   "contenuFr": null,
   "note": null,
   "photo": null
- },
- {
-  "id": 17775008975,
-  "date": "2026-03-19T05:03:13Z",
-  "type": "VirtualRide",
-  "name": "Zwift - The Double Borough in New York",
-  "sec": 1949,
-  "km": 18.2,
-  "hr": 134,
-  "hrMax": 156,
-  "effort": 18,
-  "contenu": null,
-  "contenuFr": null,
-  "note": null,
-  "photo": null
  }
 ];
