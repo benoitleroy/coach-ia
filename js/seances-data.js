@@ -1949,20 +1949,5 @@ window.SEANCES = [
   "contenuFr": null,
   "note": null,
   "photo": null
- },
- {
-  "id": 17779345202,
-  "date": "2026-03-19T14:24:31Z",
-  "type": "Run",
-  "name": "Course à pied dans l'après-midi",
-  "sec": 2123,
-  "km": 7.4,
-  "hr": 153,
-  "hrMax": 168,
-  "effort": 53,
-  "contenu": null,
-  "contenuFr": null,
-  "note": null,
-  "photo": null
  }
 ];
