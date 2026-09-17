@@ -1934,20 +1934,5 @@ window.SEANCES = [
   "contenuFr": null,
   "note": null,
   "photo": null
- },
- {
-  "id": 17802212305,
-  "date": "2026-03-21T09:24:40Z",
-  "type": "Ride",
-  "name": "Sortie vélo le matin",
-  "sec": 13482,
-  "km": 86.9,
-  "hr": 131,
-  "hrMax": 164,
-  "effort": 109,
-  "contenu": null,
-  "contenuFr": null,
-  "note": null,
-  "photo": null
  }
 ];
