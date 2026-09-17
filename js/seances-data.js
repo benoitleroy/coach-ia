@@ -1919,20 +1919,5 @@ window.SEANCES = [
   "contenuFr": null,
   "note": null,
   "photo": null
- },
- {
-  "id": 17810868852,
-  "date": "2026-03-21T15:13:32Z",
-  "type": "Swim",
-  "name": "Natation dans l'après-midi",
-  "sec": 1334,
-  "km": 1,
-  "hr": 129,
-  "hrMax": 145,
-  "effort": 21,
-  "contenu": null,
-  "contenuFr": null,
-  "note": null,
-  "photo": null
  }
 ];
