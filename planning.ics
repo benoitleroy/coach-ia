@@ -5,21 +5,8 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
-UID:2026-S38-4-soir@coach-ia
-DTSTAMP:20260918T170000Z
-DTSTART:20260918T163000Z
-DTEND:20260918T174500Z
-SUMMARY:🏋️ Haltérophilie à la box (rendez-vous fixe)
-DESCRIPTION:Ta séance technique hebdomadaire non négociable : arraché et épaulé-jeté. On reste à charge légère-modérée\, l'objectif est la position\, pas le kilo — c'est le prolongement direct du travail de mobilité du matin.\n• Échauffement : 5 min rameur progressif\, puis 2 rounds de (10 scorpions = allongé sur le ventre\, talon vers la main opposée\, 10 tirages barre à vide)\n• Technique arraché à la barre vide : 3×5 tirage nuque haut (high hang snatch pull) + 3×3 arraché puissance depuis le haut des cuisses\n• Arraché puissance 5×3 à 35 kg — 2 min de récup\, tu montes de 2\,5 kg seulement si les 3 reps sortent identiques\n• Épaulé puissance 5×2 à 45 kg — 2 min de récup\, réception stable\, pieds qui ne bougent pas\n• Jeté (position haute\, impulsion jambes\, réception bras tendus) 4×3 à 40 kg\n• Overhead squat au PVC en finition 3×5 lents — pas de charge tant que la position basse n'est pas stable\n• 5 min d'étirement poignets\, épaules\, chevilles\n⚑ Aucune montée de charge si la réception bouge ou si les coudes tombent : tu restes à la charge où les 3 reps se ressemblent.\n\nCoach IA — 2026-S38
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🏋️ Haltérophilie à la box (rendez-vous fixe)
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-S38-5-matin@coach-ia
-DTSTAMP:20260918T170000Z
+DTSTAMP:20260918T180000Z
 DTSTART:20260919T033000Z
 DTEND:20260919T043000Z
 SUMMARY:🏃 Sortie longue en aisance stricte — 1 h 15
@@ -32,7 +19,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S38-5-soir@coach-ia
-DTSTAMP:20260918T170000Z
+DTSTAMP:20260918T180000Z
 DTSTART:20260919T163000Z
 DTEND:20260919T174500Z
 SUMMARY:🏊 Nage souple + sauna à Cap Provence (Cassis)
@@ -45,7 +32,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S38-6-matin@coach-ia
-DTSTAMP:20260918T170000Z
+DTSTAMP:20260918T180000Z
 DTSTART:20260920T033000Z
 DTEND:20260920T043000Z
 SUMMARY:🏋️ Séance NST ou WOD de la box — force haut du corps
