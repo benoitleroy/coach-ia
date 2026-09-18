@@ -5,21 +5,8 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
-UID:2026-S38-4-matin@coach-ia
-DTSTAMP:20260918T040000Z
-DTSTART:20260918T033000Z
-DTEND:20260918T043000Z
-SUMMARY:🧘 Mobilité overhead + gainage court
-DESCRIPTION:30 min à la maison avec les garçons\, en préparation directe de l'haltéro du soir : on ouvre les épaules et les chevilles pour que l'arraché soit propre. Aucune fatigue recherchée.\n• 5 min de respiration nasale + rotations d'épaules et de bassin\, debout\n• Dislocations à l'élastique 2×12\, lentement\n• Sots press au PVC (barre au-dessus de la tête\, tu t'accroupis sous la barre) 3×8\n• Overhead squat au PVC : 4× tenir 30 s en position basse\, bras tendus\n• Mobilité chevilles genou-mur 2×12 par jambe + accroupi profond tenu 2×45 s\n• Gainage : planche ventrale 2×45 s + planche latérale 2×30 s par côté\n⚑ Si une épaule pince en position haute\, tu réduis l'amplitude à la zone sans douleur — jamais forcer une articulation froide.\n\nCoach IA — 2026-S38
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🧘 Mobilité overhead + gainage court
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-S38-4-soir@coach-ia
-DTSTAMP:20260918T040000Z
+DTSTAMP:20260918T050000Z
 DTSTART:20260918T163000Z
 DTEND:20260918T174500Z
 SUMMARY:🏋️ Haltérophilie à la box (rendez-vous fixe)
@@ -32,7 +19,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S38-5-matin@coach-ia
-DTSTAMP:20260918T040000Z
+DTSTAMP:20260918T050000Z
 DTSTART:20260919T033000Z
 DTEND:20260919T043000Z
 SUMMARY:🏃 Sortie longue en aisance stricte — 1 h 15
@@ -45,7 +32,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S38-5-soir@coach-ia
-DTSTAMP:20260918T040000Z
+DTSTAMP:20260918T050000Z
 DTSTART:20260919T163000Z
 DTEND:20260919T174500Z
 SUMMARY:🏊 Nage souple + sauna à Cap Provence (Cassis)
@@ -58,7 +45,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S38-6-matin@coach-ia
-DTSTAMP:20260918T040000Z
+DTSTAMP:20260918T050000Z
 DTSTART:20260920T033000Z
 DTEND:20260920T043000Z
 SUMMARY:🏋️ Séance NST ou WOD de la box — force haut du corps
