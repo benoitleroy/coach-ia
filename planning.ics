@@ -5,21 +5,8 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
-UID:2026-S38-5-matin@coach-ia
-DTSTAMP:20260919T040000Z
-DTSTART:20260919T033000Z
-DTEND:20260919T043000Z
-SUMMARY:🏃 Sortie longue en aisance stricte — 1 h 15
-DESCRIPTION:La séance clé de la semaine\, et la première longue depuis le 28/08 : tu es sans les enfants\, c'est le créneau. FC sous 140 bpm du début à la fin\, allure libre et variable — tu marches dans les montées s'il faut\, ça ne change rien au bénéfice.\n• 10 min de marche rapide puis trot très facile\, FC sous 125 bpm\n• 55 min en aisance stricte\, FC 125-138 bpm — tu dois pouvoir tenir une conversation complète tout du long\n• Autorisé : 3 relances libres de 1 min en milieu de sortie si les jambes le demandent\, sans dépasser 148 bpm\n• 10 min de trot très léger puis marche pour redescendre\n• Étirement mollets et chaîne postérieure\, 5 min\n• Objectif de progression : 1 h 15 en continu à FC moyenne ≤ 138 bpm\, contre 1 h 06 à 134 bpm le 05/09\n⚑ Toute douleur au tendon d'Achille ou au genou = tu arrêtes la course sur le champ et tu remplaces par du vélo\, jusqu'à disparition complète.\n\nCoach IA — 2026-S38
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🏃 Sortie longue en aisance stricte — 1 h 15
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-S38-5-soir@coach-ia
-DTSTAMP:20260919T040000Z
+DTSTAMP:20260919T050000Z
 DTSTART:20260919T163000Z
 DTEND:20260919T174500Z
 SUMMARY:🏊 Nage souple + sauna à Cap Provence (Cassis)
@@ -32,7 +19,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S38-6-matin@coach-ia
-DTSTAMP:20260919T040000Z
+DTSTAMP:20260919T050000Z
 DTSTART:20260920T033000Z
 DTEND:20260920T043000Z
 SUMMARY:🏋️ Séance NST ou WOD de la box — force haut du corps
