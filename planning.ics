@@ -5,21 +5,8 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
-UID:2026-S38-5-soir@coach-ia
-DTSTAMP:20260919T170000Z
-DTSTART:20260919T163000Z
-DTEND:20260919T174500Z
-SUMMARY:🏊 Nage souple + sauna à Cap Provence (Cassis)
-DESCRIPTION:40 min de récupération active dans l'après-midi (le bassin est ouvert de 14h30 à 18h) : nage lente\, sans chrono\, puis sauna ou hammam. C'est la contrepartie de la sortie longue\, pas une séance.\n• 10 min de nage très souple\, respiration tous les 3 mouvements\n• 6×50 m crawl lent avec 30 s de repos\, sensation glisse\, jamais essoufflé\n• 5 min de battements avec planche\, jambes relâchées\n• 5 min de nage libre au feeling pour finir\n• 10-12 min de sauna ou hammam\, puis douche fraîche\n⚑ Pas de série rapide ni de chrono : si tu t'essouffles\, tu ralentis — cette séance doit te laisser plus frais qu'à l'arrivée.\n\nCoach IA — 2026-S38
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🏊 Nage souple + sauna à Cap Provence (Cassis)
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-S38-6-matin@coach-ia
-DTSTAMP:20260919T170000Z
+DTSTAMP:20260919T180000Z
 DTSTART:20260920T033000Z
 DTEND:20260920T043000Z
 SUMMARY:🏋️ Séance NST ou WOD de la box — force haut du corps
