@@ -5,16 +5,120 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
-UID:2026-S38-6-matin@coach-ia
-DTSTAMP:20260919T200000Z
-DTSTART:20260920T033000Z
-DTEND:20260920T043000Z
-SUMMARY:🏋️ Séance NST ou WOD de la box — force haut du corps
-DESCRIPTION:La programmation NST de la semaine ne m'a pas été fournie : si tu l'as\, prends-la telle quelle en Scaled ou Intermediate et coupe à 70 min (échauffement + force absolue + le conditioning principal\, sans accessoire ni version Team). Sinon\, voilà la séance\, en dominante haut du corps puisque les jambes ont travaillé samedi.\n• Échauffement 10 min : 3 min rameur progressif\, puis 2 rounds de (10 band pull apart = écarter un élastique bras tendus devant\, 10 pompes\, 10 ring rows = tirage suspendu aux anneaux)\n• Force absolue — développé couché ou développé militaire barre 5×3 à la charge où la 3e rep reste propre (environ 45-50 kg au militaire) — 2 min 30 de récup\n• Endurance de force — 3 séries de : 10 tractions aidées d'élastique + 12 rowing haltère un bras par côté à 16 kg — 90 s de récup entre séries\n• Conditioning\, intention capacité aérobie (pas tout-out) — 3 rounds pour le temps : 400 m rameur + 15 pompes + 20 cal vélo\, récup 90 s entre rounds\, cible 14-16 min au total\n• Retour au calme : 5 min de vélo très souple + étirement pectoraux et dorsaux\n⚑ Deuxième jour actif d'affilée : si la FC de repos du matin dépasse 55 bpm ou que le HRV est en LOW\, tu remplaces tout par 45 min de vélo en aisance.\n\nCoach IA — 2026-S38
+UID:2026-S39-0-soir@coach-ia
+DTSTAMP:20260920T040300Z
+DTSTART:20260921T163000Z
+DTEND:20260921T174500Z
+SUMMARY:🧘 Mobilité ciblée overhead + gainage (30 min)
+DESCRIPTION:Séance courte à la maison pour préparer les séances de la semaine et travailler la mobilité qui te bloque en overhead squat. Rien de fatigant\, tout doit rester facile et propre.\n• 5 min respiration nasale + rotations d'épaules et de bassin debout\n• Dislocations à l'élastique (bras tendus\, l'élastique passe de devant à derrière) 2×10 lentement\n• Sots press au PVC (barre plastique au-dessus de la tête\, on s'accroupit sous) 2×8\n• Overhead squat au PVC : 3× tenir 30 s en position basse\, bras tendus au-dessus\n• Mobilité chevilles genou-mur : 2×10 par jambe\n• Gainage planche ventrale 3×40 s + planche latérale 2×30 s par côté\n• 5 min étirement fléchisseurs de hanche (fente genou au sol)\n⚑ Si tension dans une épaule\, on baisse l'amplitude\, on ne force jamais sous barre.\n\nCoach IA — 2026-S39
 BEGIN:VALARM
 TRIGGER:-PT30M
 ACTION:DISPLAY
-DESCRIPTION:🏋️ Séance NST ou WOD de la box — force haut du corps
+DESCRIPTION:🧘 Mobilité ciblée overhead + gainage (30 min)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S39-1-matin@coach-ia
+DTSTAMP:20260920T040300Z
+DTSTART:20260922T033000Z
+DTEND:20260922T043000Z
+SUMMARY:🏃 Demi-Cooper (test vVO2max) — 35 min
+DESCRIPTION:Le test Billat pour caler tes futures séances de 30/30. Un seul effort court à fond\, très ciblé. Tu cours 3 minutes le plus vite possible sur du plat\, mesures la distance : ta vVO2max = distance/3 min.\n• Échauffement 15 min course très facile FC < 130\n• 4×30 s en accélération progressive (finir à 90 %)\, 1 min trot entre\n• 3 min de récup marchée\n• 3 min tout-out sur du plat\, régulier — pars vite mais tenable\, note la distance\n• Retour au calme 8 min trot lent + marche\n⚑ Si FC ne monte pas > 170 pendant les 3 min\, c'est que tu n'es pas allé assez vite : ne rejoue pas le test\, on prendra la donnée.\n\nCoach IA — 2026-S39
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🏃 Demi-Cooper (test vVO2max) — 35 min
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S39-1-soir@coach-ia
+DTSTAMP:20260920T040300Z
+DTSTART:20260922T163000Z
+DTEND:20260922T174500Z
+SUMMARY:🏋️ Haltérophilie technique (décalée du vendredi) — 60 min
+DESCRIPTION:Ta séance haltéro hebdo\, décalée car vendredi soir = bascule enfants + resto. On garde la technique arraché/épaulé\, charges légères\, pas de max.\n• Échauffement 8 min : rameur 3 min + mobilité épaules/hanches\n• Snatch pull en 3 positions (haut cuisse / genou / sol) : 5×3 à 30 kg\n• Hang power snatch : 5×2 à 30-35 kg\, technique avant charge\n• Overhead squat au PVC entre chaque série (5 reps profondes)\n• Clean pull + hang power clean : 4×(3+2) à 40 kg\n• Retour au calme mobilité épaules 5 min\n⚑ Si un rep sort moche\, on ne monte pas la charge. Priorité geste propre.\n\nCoach IA — 2026-S39
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🏋️ Haltérophilie technique (décalée du vendredi) — 60 min
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S39-2-matin@coach-ia
+DTSTAMP:20260920T040300Z
+DTSTART:20260923T033000Z
+DTEND:20260923T043000Z
+SUMMARY:🚴 Home-trainer très facile — 40 min
+DESCRIPTION:Volume aérobie sans impact\, jambes qui tournent après le test d'hier. FC < 130 tout du long\, tu dois pouvoir tenir une conversation.\n• 10 min montée progressive 100→130 W\n• 25 min continu à 130-140 W\, cadence 85-90 rpm\n• 5 min retour au calme < 100 W\n⚑ Si FC dépasse 140 sans raison\, tu descends la puissance. C'est de la récup active.\n\nCoach IA — 2026-S39
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🚴 Home-trainer très facile — 40 min
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S39-2-soir@coach-ia
+DTSTAMP:20260920T040300Z
+DTSTART:20260923T163000Z
+DTEND:20260923T174500Z
+SUMMARY:🤸 WOD box (Scaled/Intermediate) — 60 min
+DESCRIPTION:Séance NST/box du jour\, tu prends ce qui est au tableau au niveau Scaled ou Intermediate. On reste sur 60 min max\, on saute l'accessoire optionnel. Intention : conditionnement modéré\, pas la mort.\n• Suivre l'échauffement de la box\n• Absolute strength du jour au niveau Scaled/Intermediate — garder 5 % dans le réservoir\n• Conditioning principal — allure tenue\, pas d'explosion\n• Zapper l'accessoire optionnel et le bloc Team\n• Retour au calme 5 min + mobilité épaules\n⚑ Si FC max dépasse 175 sur plusieurs pics\, tu ralentis. Décharge = pas de tout-out.\n\nCoach IA — 2026-S39
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🤸 WOD box (Scaled/Intermediate) — 60 min
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S39-3-matin@coach-ia
+DTSTAMP:20260920T040300Z
+DTSTART:20260924T033000Z
+DTEND:20260924T043000Z
+SUMMARY:🏃 Sortie longue aisance stricte — 1 h 10
+DESCRIPTION:La séance clé de la semaine : la sortie longue. FC < 140 tout du long\, conversation possible en permanence. Autorise-toi des variations libres d'allure à sensation constante (Billat)\, mais jamais au-dessus de 140.\n• 10 min échauffement très lent FC < 130\n• 55 min continu FC 130-140\, allure libre selon les sensations\n• 5 min retour au calme + marche\n• Étirements mollets/ischios 5 min\n⚑ Si FC dérive au-dessus de 145 sans raison ou si un tendon parle (Achille\, genou)\, tu passes en marche/course et tu écourtes.\n\nCoach IA — 2026-S39
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🏃 Sortie longue aisance stricte — 1 h 10
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S39-4-soir@coach-ia
+DTSTAMP:20260920T040300Z
+DTSTART:20260925T163000Z
+DTEND:20260925T174500Z
+SUMMARY:👨‍👦‍👦 Bascule enfants + resto
+DESCRIPTION:Tu récupères Mathis et Louis\, dîner au resto. Aucune séance ce soir.\n\nCoach IA — 2026-S39
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:👨‍👦‍👦 Bascule enfants + resto
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S39-5-matin@coach-ia
+DTSTAMP:20260920T040300Z
+DTSTART:20260926T033000Z
+DTEND:20260926T043000Z
+SUMMARY:🚴 Home-trainer facile — 45 min (enfants à la maison)
+DESCRIPTION:Volume aérobie tranquille à la maison. Les garçons peuvent être autour\, c'est du très facile.\n• 10 min échauffement progressif 100→140 W\n• 30 min continu 130-150 W\, cadence libre 80-90 rpm\n• 5 min retour au calme\n⚑ Rien de dur. Si sensation lourde\, tu coupes à 30 min.\n\nCoach IA — 2026-S39
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🚴 Home-trainer facile — 45 min (enfants à la maison)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S39-6-matin@coach-ia
+DTSTAMP:20260920T040300Z
+DTSTART:20260927T033000Z
+DTEND:20260927T043000Z
+SUMMARY:🧘 Pilates + mobilité overhead (35 min\, maison)
+DESCRIPTION:Récup active à la maison avec les garçons. Focus mobilité chevilles/épaules pour progresser sur l'overhead squat.\n• 5 min respiration nasale + rotations\n• Chaîne postérieure : cat-cow 2×10\, chien tête en bas 3×30 s\n• Overhead squat au PVC 3×5 reps lentes\n• Genou-mur chevilles 2×10 par jambe\n• Gainage : planche 3×45 s + side-plank 2×30 s/côté\n• Étirements fléchisseurs hanches + pectoraux 5 min\n⚑ Aucune charge. Rien qui provoque une douleur.\n\nCoach IA — 2026-S39
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🧘 Pilates + mobilité overhead (35 min\, maison)
 END:VALARM
 END:VEVENT
 END:VCALENDAR
