@@ -5,21 +5,8 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
-UID:2026-S39-0-soir@coach-ia
-DTSTAMP:20260921T170000Z
-DTSTART:20260921T163000Z
-DTEND:20260921T174500Z
-SUMMARY:🧘 Mobilité ciblée overhead + gainage (30 min)
-DESCRIPTION:Séance courte à la maison pour préparer les séances de la semaine et travailler la mobilité qui te bloque en overhead squat. Rien de fatigant\, tout doit rester facile et propre.\n• 5 min respiration nasale + rotations d'épaules et de bassin debout\n• Dislocations à l'élastique (bras tendus\, l'élastique passe de devant à derrière) 2×10 lentement\n• Sots press au PVC (barre plastique au-dessus de la tête\, on s'accroupit sous) 2×8\n• Overhead squat au PVC : 3× tenir 30 s en position basse\, bras tendus au-dessus\n• Mobilité chevilles genou-mur : 2×10 par jambe\n• Gainage planche ventrale 3×40 s + planche latérale 2×30 s par côté\n• 5 min étirement fléchisseurs de hanche (fente genou au sol)\n⚑ Si tension dans une épaule\, on baisse l'amplitude\, on ne force jamais sous barre.\n\nCoach IA — 2026-S39
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🧘 Mobilité ciblée overhead + gainage (30 min)
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-S39-1-matin@coach-ia
-DTSTAMP:20260921T170000Z
+DTSTAMP:20260921T180000Z
 DTSTART:20260922T033000Z
 DTEND:20260922T043000Z
 SUMMARY:🏃 Demi-Cooper (test vVO2max) — 35 min
@@ -32,7 +19,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S39-1-soir@coach-ia
-DTSTAMP:20260921T170000Z
+DTSTAMP:20260921T180000Z
 DTSTART:20260922T163000Z
 DTEND:20260922T174500Z
 SUMMARY:🏋️ Haltérophilie technique (décalée du vendredi) — 60 min
@@ -45,7 +32,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S39-2-matin@coach-ia
-DTSTAMP:20260921T170000Z
+DTSTAMP:20260921T180000Z
 DTSTART:20260923T033000Z
 DTEND:20260923T043000Z
 SUMMARY:🚴 Home-trainer très facile — 40 min
@@ -58,7 +45,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S39-2-soir@coach-ia
-DTSTAMP:20260921T170000Z
+DTSTAMP:20260921T180000Z
 DTSTART:20260923T163000Z
 DTEND:20260923T174500Z
 SUMMARY:🤸 WOD box (Scaled/Intermediate) — 60 min
@@ -71,7 +58,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S39-3-matin@coach-ia
-DTSTAMP:20260921T170000Z
+DTSTAMP:20260921T180000Z
 DTSTART:20260924T033000Z
 DTEND:20260924T043000Z
 SUMMARY:🏃 Sortie longue aisance stricte — 1 h 10
@@ -84,7 +71,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S39-4-soir@coach-ia
-DTSTAMP:20260921T170000Z
+DTSTAMP:20260921T180000Z
 DTSTART:20260925T163000Z
 DTEND:20260925T174500Z
 SUMMARY:👨‍👦‍👦 Bascule enfants + resto
@@ -97,7 +84,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S39-5-matin@coach-ia
-DTSTAMP:20260921T170000Z
+DTSTAMP:20260921T180000Z
 DTSTART:20260926T033000Z
 DTEND:20260926T043000Z
 SUMMARY:🚴 Home-trainer facile — 45 min (enfants à la maison)
@@ -110,7 +97,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S39-6-matin@coach-ia
-DTSTAMP:20260921T170000Z
+DTSTAMP:20260921T180000Z
 DTSTART:20260927T033000Z
 DTEND:20260927T043000Z
 SUMMARY:🧘 Pilates + mobilité overhead (35 min\, maison)
