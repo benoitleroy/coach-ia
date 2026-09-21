@@ -4,7 +4,7 @@ window.SEANCES = [
   "id": 20262736389,
   "date": "2026-09-21T05:49:59Z",
   "type": "Pilates",
-  "name": "Pilates le matin",
+  "name": "Discipline",
   "sec": 1533,
   "km": 0,
   "hr": 97,
