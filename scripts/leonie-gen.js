@@ -155,36 +155,36 @@ const GYM = [
 [
 `RELATIVE STRENGTH ENDURANCE · Gymnastique (25')
 Léonie :
-a. DU — 3 × 30 single-unders rythmés en sautant plus haut, puis 10 × (5 singles + 1 tentative de DU). Corde : poignées aux aisselles, poignets seuls.
-b. T2B progression — 3 × 10 kip swings (hollow ↔ arch, corps gainé, épaules actives)
-c. Pull-up progression — 3 × 8 ring rows tempo 3 s en descente
+a. 3 × 30 single-unders rythmés en sautant plus haut, puis 10 × (5 singles + 1 tentative de DU). Corde : poignées aux aisselles, poignets seuls.
+b. 3 × 10 kip swings (hollow ↔ arch, corps gainé, épaules actives)
+c. 3 × 8 ring rows tempo 3 s en descente
 Benoît :
 a. EMOM 6' : 8 toes-to-bar
 b. EMOM 6' : 5 HSPU (strict ou sur box si besoin)
 c. 3 × 8 kipping pull-ups`,
 `RELATIVE STRENGTH ENDURANCE · Gymnastique (25')
 Léonie :
-a. DU — 5 × :30 singles « hauts et souples », repos :30, puis 15 essais « single-single-DOUBLE »
-b. T2B — 3 × 10 hanging knee raises lents (genoux à la poitrine, sans balancer)
-c. Pull-up — 3 × 5 tractions avec élastique (strict), + 3 × :20 dead hang
+a. 5 × :30 singles « hauts et souples », repos :30, puis 15 essais « single-single-DOUBLE »
+b. 3 × 10 hanging knee raises lents (genoux à la poitrine, sans balancer)
+c. 3 × 5 tractions avec élastique (strict), + 3 × :20 dead hang
 Benoît :
 a. 4 × 30 DU sans casser, repos 1'
 b. 4 × 8 T2B, repos 1'
 c. 3 × 10 push-ups sur anneaux`,
 `RELATIVE STRENGTH ENDURANCE · Gymnastique (25')
 Léonie :
-a. DU — 20 essais single-single-double, puis 5 essais de 2 DU d'affilée
-b. T2B — 3 × 8 kip swings + 3 × 8 knee raises en kip (utiliser le balancement)
-c. Pull-up — 3 × 10 kip swings sur barre (hollow/arch amples), 3 × 6 ring rows pieds surélevés
+a. 20 essais single-single-double, puis 5 essais de 2 DU d'affilée
+b. 3 × 8 kip swings + 3 × 8 knee raises en kip (utiliser le balancement)
+c. 3 × 10 kip swings sur barre (hollow/arch amples), 3 × 6 ring rows pieds surélevés
 Benoît :
 a. 5 × 5 HSPU strict (ou pike push-ups pieds sur box)
 b. 3 × 10 kipping pull-ups
 c. 3 × :30 hollow hold + :30 arch hold`,
 `RELATIVE STRENGTH ENDURANCE · Gymnastique (25')
 Léonie :
-a. DU — 4 × :45 « single-single-double » en continu, repos 1'
-b. T2B — 3 × 6 knees-to-elbow en kip
-c. Pull-up — 3 × 5 jumping pull-ups descente lente 3 s, + 3 × 5 tractions élastique
+a. 4 × :45 « single-single-double » en continu, repos 1'
+b. 3 × 6 knees-to-elbow en kip
+c. 3 × 5 jumping pull-ups descente lente 3 s, + 3 × 5 tractions élastique
 Benoît :
 a. Tabata DU (20 s / 10 s × 8) : compter le total
 b. 3 × 6 HSPU kipping
@@ -194,36 +194,36 @@ c. 3 × 8 T2B`,
 [
 `RELATIVE STRENGTH ENDURANCE · Gymnastique (25')
 Léonie :
-a. DU — 10 essais de 3 DU d'affilée, puis 3 × :40 singles/doubles mélangés
-b. T2B — 3 × 8 knees-to-elbow en kip, puis 5 essais de vraies T2B (pointes à la barre)
-c. Pull-up — 3 × 5 kipping pull-ups avec élastique fin
+a. 10 essais de 3 DU d'affilée, puis 3 × :40 singles/doubles mélangés
+b. 3 × 8 knees-to-elbow en kip, puis 5 essais de vraies T2B (pointes à la barre)
+c. 3 × 5 kipping pull-ups avec élastique fin
 Benoît :
 a. 5 × 40 DU, repos 1'
 b. 5 × 6 HSPU, repos 1'
 c. 3 × 10 T2B`,
 `RELATIVE STRENGTH ENDURANCE · Gymnastique (25')
 Léonie :
-a. DU — objectif du jour : 5 DU d'affilée, 10 essais max
-b. T2B — EMOM 5' : 5 knees-to-elbow ou 3 T2B
-c. Pull-up — 5 × 3 kipping pull-ups (élastique si besoin), repos 1'
+a. objectif du jour : 5 DU d'affilée, 10 essais max
+b. EMOM 5' : 5 knees-to-elbow ou 3 T2B
+c. 5 × 3 kipping pull-ups (élastique si besoin), repos 1'
 Benoît :
 a. EMOM 8' : 6 T2B + 3 HSPU
 b. 3 × 12 push-ups sur anneaux
 c. 3 × 10 kipping pull-ups`,
 `RELATIVE STRENGTH ENDURANCE · Gymnastique (25')
 Léonie :
-a. DU — 5 × max DU d'affilée, repos 1', noter le meilleur
-b. T2B — 4 × 5 T2B (ou knees-to-elbow si pas encore), repos 1'
-c. Pull-up — 4 × 4 kipping pull-ups, repos 1'
+a. 5 × max DU d'affilée, repos 1', noter le meilleur
+b. 4 × 5 T2B (ou knees-to-elbow si pas encore), repos 1'
+c. 4 × 4 kipping pull-ups, repos 1'
 Benoît :
 a. 4 × 50 DU, repos 1'
 b. 4 × 8 T2B enchaînés, repos 1'
 c. 4 × 6 HSPU`,
 `RELATIVE STRENGTH ENDURANCE · Gymnastique (25')
 Léonie :
-a. DU — EMOM 6' : 5 DU (ou 20 singles si ça casse)
-b. T2B — 3 × 6 T2B en kip (knee raises si besoin)
-c. Pull-up — 3 × 5 kipping pull-ups
+a. EMOM 6' : 5 DU (ou 20 singles si ça casse)
+b. 3 × 6 T2B en kip (knee raises si besoin)
+c. 3 × 5 kipping pull-ups
 Benoît :
 a. EMOM 6' : 20 DU + 4 HSPU
 b. 3 × 10 kipping pull-ups
@@ -233,9 +233,9 @@ c. 3 × 10 T2B`,
 [
 `RELATIVE STRENGTH ENDURANCE · Gymnastique (25')
 Léonie :
-a. DU — 5 × 10 DU (ou max), repos 1'
-b. T2B — 4 × 5 T2B, repos 1'
-c. Pull-up — 4 × 5 kipping pull-ups, repos 1'
+a. 5 × 10 DU (ou max), repos 1'
+b. 4 × 5 T2B, repos 1'
+c. 4 × 5 kipping pull-ups, repos 1'
 Benoît :
 a. 3 × 60 DU, repos 1'
 b. 3 × 10 HSPU, repos 1'

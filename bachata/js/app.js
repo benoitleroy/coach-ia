@@ -207,11 +207,9 @@
     h = h.replace(/^(Elite\/?R?[Xx]?|RX|Rx|Intermediate|Scaled)\b( ?\((Option #?)?\d\))?\s*:?/gm,
       m => "<strong class='lvl'>" + m + "</strong>");
     // marqueurs d'étapes a. b. c. et labels-clés en évidence
-    h = h.replace(/^([a-d]\.)\s/gm, "<strong class='step'>$1</strong> ");
-    h = h.replace(/^(Charges?|Tempo|Score|Intention|Note|Flow|Progression|Intensite|Intensité)\s*(\([^)]*\))?\s*:/gm,
-      (m) => "<span class='kw'>" + m + "</span>");
     // Chaque ligne d'exercice reçoit un bouton ▶ vers sa démo vidéo YouTube
-    h = h.replace(/^((?:Sets? [\d, +-]+:\s*\d*\s*|\d[\d\/x×.: -]*|Max |Une série [^ ]+ de )\s*)([A-Za-z][^<\n]*)$/gm, (m, pre, rest) => {
+    // (accepte un marqueur a./b./c. et un préfixe EMOM/Tabata/Toutes les… devant)
+    h = h.replace(/^((?:[a-d]\.\s+)?(?:(?:EMOM|AMRAP|Tabata|Toutes les)[^:\n]*:\s*)?(?:Sets? [\d, +-]+:\s*\d*\s*|\d[\d\/x×.: -]*|Max |Une série [^ ]+ de )\s*)([A-Za-z][^<\n]*)$/gm, (m, pre, rest) => {
       if (/^\d+\.\s*$/.test(pre)) return m; // "1. " = titre numéroté, pas un exercice
       const name = exerciseName(rest);
       if (!name) return m;
@@ -220,16 +218,29 @@
         "' target='_blank' rel='noopener' aria-label='Démo vidéo : " + name.replace(/'/g, "’") + "'>" +
         "<svg class='ic'><use href='#i-play'/></svg></a>";
     });
+    h = h.replace(/^([a-d]\.)\s/gm, "<strong class='step'>$1</strong> ");
+    h = h.replace(/^(Charges?|Tempo|Score|Intention|Note|Flow|Progression|Intensite|Intensité)\s*(\([^)]*\))?\s*:/gm,
+      (m) => "<span class='kw'>" + m + "</span>");
     return h;
+  }
+
+  /* Abréviations CrossFit → nom complet pour la recherche YouTube */
+  const ABBR = { du: "double unders", dus: "double unders", t2b: "toes to bar", hspu: "handstand push up", pu: "pull ups", "c&j": "clean and jerk", kb: "kettlebell", db: "dumbbell", ghd: "GHD sit up", su: "single unders", hrpu: "hand release push up", ohs: "overhead squat", "k2e": "knees to elbow" };
+  function expandAbbr(name) {
+    // seules les abréviations en MAJUSCULES sont développées ("DU" oui, "du corps" non)
+    return name.split(/\s+/).map(w => (w === w.toUpperCase() && ABBR[w.toLowerCase()]) || w).join(" ");
   }
 
   /* Extrait le nom du mouvement d'une ligne d'exercice ("10 Cuban Press (2x7.5kg)" → "Cuban Press") */
   function exerciseName(rest) {
+    if (/:\s*$/.test(rest)) return null;              // "3 tours tranquilles :" = en-tête
     let n = rest.replace(/\([^)]*\)/g, "")            // parenthèses
-      .replace(/\s*[-–—⎸│].*$/, "")                    // suites après tiret/barre
-      .replace(/^(sets? (de|of) |min |sec |m |reps? |rounds? (de|of|for)[^:]*:?)/i, "")
-      .replace(/\b(entre les sets|par côté|chacun|à la fin.*|dans le temps restant)\b.*$/i, "")
+      .replace(/(\s[-–—]|[⎸│]).*$/, "")               // suites après " — " (pas les mots composés)
+      .replace(/^(sets? (de|of) |séries? de \d+ |min |sec |m |reps? |rounds? (de|of|for)[^:]*:?)/i, "")
+      .replace(/\b(entre les sets|par côté|chacun|à la fin.*|dans le temps restant|repos|partagé(e)?s?|synchro|sans casser|en kip|strict)\b.*$/i, "")
+      .replace(/,.*$/, "")                             // ", repos 1'" etc.
       .trim();
+    n = expandAbbr(n);
     if (!/[A-Za-z]{4}/.test(n) || n.length < 5 || n.length > 60) return null;
     if (/^(rest|repos|rounds?|sets?|minutes?|calories|cal\b|performé|intensité)/i.test(n)) return null;
     // pas de prose française (notes du coach) ni de titres numérotés
