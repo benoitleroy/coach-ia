@@ -6,7 +6,7 @@
   function escapeHtml(s) { return String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c])); }
 
   /* ═══ Navigation entre pages ═══ */
-  const pages = { jour: el("page-jour"), chrono: el("page-chrono"), wods: el("page-wods"), charges: el("page-charges") };
+  const pages = { jour: el("page-jour"), chrono: el("page-chrono"), wods: el("page-wods"), charges: el("page-charges"), leonie: el("page-leonie") };
   document.querySelectorAll(".bottomnav button").forEach(b => {
     b.addEventListener("click", () => {
       document.querySelectorAll(".bottomnav button").forEach(x => x.classList.remove("active"));
@@ -132,7 +132,11 @@
     el("jour-titre").textContent = NST[cur].titre;
     cont.innerHTML = "";
 
-    const { sections } = splitSections(NST[cur].contenu);
+    renderSections(cont, NST[cur].contenu);
+  }
+
+  function renderSections(cont, contenu) {
+    const { sections } = splitSections(contenu);
     const firstWorkout = Math.max(0, sections.findIndex(s => !NOTE_RE.test(s.title)));
     sections.forEach((s, idx) => {
       const type = typeOf(s.title);
@@ -447,6 +451,55 @@
     if (!match.length) list.innerHTML = "<p class='muted' style='margin:1rem'>Aucun WOD trouvé.</p>";
   }
   renderWods();
+
+  /* ═══ LÉONIE — banque de séances duo ═══ */
+  const LEO = window.LEONIE || [];
+  let leoCur = 0;
+  function loadDone() { try { return JSON.parse(localStorage.getItem("bachata_leonie_done")) || {}; } catch (e) { return {}; } }
+  function saveDone(d) { try { localStorage.setItem("bachata_leonie_done", JSON.stringify(d)); } catch (e) { /* privé */ } }
+  function renderLeonieListe() {
+    const list = el("leonie-liste");
+    if (!list) return;
+    list.innerHTML = "";
+    if (!LEO.length) { list.innerHTML = "<p class='muted' style='margin:1rem'>Aucune séance.</p>"; return; }
+    const done = loadDone();
+    let lastPhase = null;
+    LEO.forEach((s, i) => {
+      if (s.phase !== lastPhase) {
+        lastPhase = s.phase;
+        const h = document.createElement("div");
+        h.className = "leo-phase";
+        h.textContent = s.phase;
+        list.appendChild(h);
+      }
+      const row = document.createElement("div");
+      row.className = "leo-row" + (done[s.n] ? " done" : "");
+      row.innerHTML = "<input type='checkbox' aria-label='faite'" + (done[s.n] ? " checked" : "") + ">" +
+        "<button class='leo-open'><span class='num'>" + s.n + "</span><span class='ttl'>" + escapeHtml(s.titre.replace(/^Séance \d+ · /, "")) + "</span>" +
+        "<svg class='ic chev'><use href='#i-chev'/></svg></button>";
+      row.querySelector("input").addEventListener("change", e => {
+        const d = loadDone(); if (e.target.checked) d[s.n] = Date.now(); else delete d[s.n]; saveDone(d);
+        row.classList.toggle("done", e.target.checked);
+      });
+      row.querySelector(".leo-open").addEventListener("click", () => { leoCur = i; renderLeonieSeance(); });
+      list.appendChild(row);
+    });
+  }
+  function renderLeonieSeance() {
+    const s = LEO[leoCur]; if (!s) return;
+    el("leonie-liste-vue").hidden = true;
+    el("leonie-seance-vue").hidden = false;
+    el("leonie-num").textContent = "Séance " + s.n + " / " + LEO.length + " · " + s.phase;
+    el("leonie-titre").textContent = s.titre.replace(/^Séance \d+ · /, "");
+    renderSections(el("leonie-contenu"), s.contenu);
+    window.scrollTo(0, 0);
+  }
+  if (el("page-leonie")) {
+    el("leonie-retour").addEventListener("click", () => { el("leonie-seance-vue").hidden = true; el("leonie-liste-vue").hidden = false; renderLeonieListe(); window.scrollTo(0, 0); });
+    el("leonie-prev").addEventListener("click", () => { if (leoCur > 0) { leoCur--; renderLeonieSeance(); } });
+    el("leonie-next").addEventListener("click", () => { if (leoCur < LEO.length - 1) { leoCur++; renderLeonieSeance(); } });
+    renderLeonieListe();
+  }
 
   renderCharges();
   renderJour();

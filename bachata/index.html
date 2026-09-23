@@ -89,15 +89,38 @@
   <div id="charges-liste"></div>
 </main>
 
+<!-- ═══ PAGE LÉONIE ═══ -->
+<main id="page-leonie" class="page" hidden>
+  <div id="leonie-liste-vue">
+    <h1>Léonie · Massilia Contest</h1>
+    <p class="muted" style="margin:0 1rem .8rem">38 séances duo dans l'ordre, ~2 h chacune. Coche celles qui sont faites, le planning c'est toi.</p>
+    <div id="leonie-liste"></div>
+  </div>
+  <div id="leonie-seance-vue" hidden>
+    <header class="topbar">
+      <button id="leonie-prev" class="navbtn" aria-label="Séance précédente"><svg class="ic" style="transform:rotate(180deg)"><use href="#i-chev"/></svg></button>
+      <div class="topbar-title">
+        <div id="leonie-num">…</div>
+        <div id="leonie-titre" class="muted">…</div>
+      </div>
+      <button id="leonie-next" class="navbtn" aria-label="Séance suivante"><svg class="ic"><use href="#i-chev"/></svg></button>
+    </header>
+    <button id="leonie-retour" class="go-inline" style="margin:.6rem 1rem">← Liste des séances</button>
+    <div id="leonie-contenu"></div>
+  </div>
+</main>
+
 <!-- ═══ BOTTOM NAV ═══ -->
 <nav class="bottomnav">
   <button data-page="jour" class="active"><svg class="ic"><use href="#i-cal"/></svg>Aujourd'hui</button>
   <button data-page="chrono"><svg class="ic"><use href="#i-timer"/></svg>Chrono</button>
   <button data-page="wods"><svg class="ic"><use href="#i-lib"/></svg>WODs</button>
   <button data-page="charges"><svg class="ic"><use href="#i-bar"/></svg>Charges</button>
+  <button data-page="leonie"><svg class="ic"><use href="#i-users"/></svg>Léonie</button>
 </nav>
 
 <script src="js/nst-data.js"></script>
+<script src="js/leonie-data.js" onerror="console.info('leonie absent')"></script>
 <script src="js/wods-data.js" onerror="console.info('wods absents')"></script>
 <script src="js/app.js"></script>
 </body>
