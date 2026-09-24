@@ -5,21 +5,8 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
-UID:2026-S39-3-matin@coach-ia
-DTSTAMP:20260924T040000Z
-DTSTART:20260924T033000Z
-DTEND:20260924T043000Z
-SUMMARY:🏃 Sortie longue aisance stricte — 1 h 10
-DESCRIPTION:La séance clé de la semaine : la sortie longue. FC < 140 tout du long\, conversation possible en permanence. Autorise-toi des variations libres d'allure à sensation constante (Billat)\, mais jamais au-dessus de 140.\n• 10 min échauffement très lent FC < 130\n• 55 min continu FC 130-140\, allure libre selon les sensations\n• 5 min retour au calme + marche\n• Étirements mollets/ischios 5 min\n⚑ Si FC dérive au-dessus de 145 sans raison ou si un tendon parle (Achille\, genou)\, tu passes en marche/course et tu écourtes.\n\nCoach IA — 2026-S39
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🏃 Sortie longue aisance stricte — 1 h 10
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-S39-4-soir@coach-ia
-DTSTAMP:20260924T040000Z
+DTSTAMP:20260924T050000Z
 DTSTART:20260925T163000Z
 DTEND:20260925T174500Z
 SUMMARY:👨‍👦‍👦 Bascule enfants + resto
@@ -32,7 +19,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S39-5-matin@coach-ia
-DTSTAMP:20260924T040000Z
+DTSTAMP:20260924T050000Z
 DTSTART:20260926T033000Z
 DTEND:20260926T043000Z
 SUMMARY:🚴 Home-trainer facile — 45 min (enfants à la maison)
@@ -45,7 +32,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S39-6-matin@coach-ia
-DTSTAMP:20260924T040000Z
+DTSTAMP:20260924T050000Z
 DTSTART:20260927T033000Z
 DTEND:20260927T043000Z
 SUMMARY:🧘 Pilates + mobilité overhead (35 min\, maison)
