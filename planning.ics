@@ -5,21 +5,8 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
-UID:2026-S39-5-matin@coach-ia
-DTSTAMP:20260926T040000Z
-DTSTART:20260926T033000Z
-DTEND:20260926T043000Z
-SUMMARY:🚴 Home-trainer facile — 45 min (enfants à la maison)
-DESCRIPTION:Volume aérobie tranquille à la maison. Les garçons peuvent être autour\, c'est du très facile.\n• 10 min échauffement progressif 100→140 W\n• 30 min continu 130-150 W\, cadence libre 80-90 rpm\n• 5 min retour au calme\n⚑ Rien de dur. Si sensation lourde\, tu coupes à 30 min.\n\nCoach IA — 2026-S39
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🚴 Home-trainer facile — 45 min (enfants à la maison)
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-S39-6-matin@coach-ia
-DTSTAMP:20260926T040000Z
+DTSTAMP:20260926T050000Z
 DTSTART:20260927T033000Z
 DTEND:20260927T043000Z
 SUMMARY:🧘 Pilates + mobilité overhead (35 min\, maison)
