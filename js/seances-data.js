@@ -1964,20 +1964,5 @@ window.SEANCES = [
   "contenuFr": null,
   "note": null,
   "photo": null
- },
- {
-  "id": 17908298664,
-  "date": "2026-03-30T03:49:40Z",
-  "type": "VirtualRide",
-  "name": "Zwift - Flat Out Fast in Watopia",
-  "sec": 2126,
-  "km": 22.2,
-  "hr": 139,
-  "hrMax": 166,
-  "effort": 30,
-  "contenu": null,
-  "contenuFr": null,
-  "note": null,
-  "photo": null
  }
 ];
