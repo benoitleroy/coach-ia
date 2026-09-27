@@ -97,35 +97,35 @@ window.PROGRAMME = {
    "date": "2026-11-21",
    "libelle": "Test hybride maison (samedi 21/11) : 10 km en aisance sous 55 min (FC moyenne < 155) le matin, puis l'après-midi 5 tractions strictes enchaînées + back squat 5 reps à 1,2× poids de corps (≈ 95 kg) + 500 m rameur."
   },
-  "semaineDansCycle": 4,
+  "semaineDansCycle": 5,
   "totalSemaines": 12,
   "bloc": {
-   "id": 1,
-   "nom": "Fondation",
+   "id": 2,
+   "nom": "Développement",
    "semaines": 4,
-   "debut": "2026-08-31",
-   "but": "Reposer la régularité et la tolérance tendineuse. Aucune intensité en course.",
+   "debut": "2026-09-28",
+   "but": "Installer le stimulus VO2max façon Billat et monter la force.",
    "doubles": [
-    3,
-    3,
     4,
-    2
+    5,
+    5,
+    3
    ],
    "priorites": [
-    "Bi-quotidien progressif : 3 doublés en semaine 1 et 2, 4 en semaine 3, 2 en semaine de décharge (matin aérobie facile, soir qualité)",
-    "6 jours actifs par semaine, volume 5 h → 7 h, progression max +15 %/semaine",
-    "Toute la course en aisance stricte (FC < 140), sortie longue jusqu'à 1 h 15",
-    "2 séances de force par semaine (dont la box NST), charges modérées, technique avant charge",
-    "Réintroduire vélo (1×/sem) et natation (1×/sem) comme volume sans impact",
-    "Aucune séance de fractionné course — le corps encaisse encore la reprise"
+    "Bi-quotidien : 4 doublés puis 5 (matin aérobie ou skill, soir qualité) — plafond 5 tant que le HRV n'est pas stable dans sa base",
+    "1 séance VO2max/semaine en 30/30 calés sur la vVO2max mesurée (2×(8→12)×30/30, récup 3')",
+    "Volume 6 h → 7 h, sortie longue 1 h 15 → 1 h 30 à sensation (variations libres autorisées)",
+    "Force : 5×5 progressif (+2,5 kg par semaine quand les 5 reps sortent propres), viser 87,5-90 kg en fin de bloc",
+    "Polarisation stricte : viser 80 % du temps sous 140 bpm, 20 % très dur, rien entre les deux",
+    "Jamais deux séances dures consécutives ; le dur se mérite par une nuit correcte (HRV en base)"
    ],
-   "test": "Semaine 4 (décharge) : demi-Cooper (3 min à fond après échauffement) pour mesurer vVO2max, si HRV en base."
+   "test": "Semaine 8 (décharge) : refaire le demi-Cooper et comparer ; test tractions strictes max."
   },
-  "semaineDansBloc": 4,
-  "decharge": true,
+  "semaineDansBloc": 1,
+  "decharge": false,
   "avantDebut": false,
   "debut": "2026-08-31",
   "termine": false
  },
- "generatedAt": "2026-09-26T20:00:21.004Z"
+ "generatedAt": "2026-09-27T04:03:50.927Z"
 };

@@ -1934,20 +1934,5 @@ window.SEANCES = [
   "contenuFr": null,
   "note": null,
   "photo": null
- },
- {
-  "id": 17920424363,
-  "date": "2026-03-31T03:32:46Z",
-  "type": "VirtualRide",
-  "name": "Zwift - Mayan San Remo in Watopia",
-  "sec": 3698,
-  "km": 31,
-  "hr": 131,
-  "hrMax": 158,
-  "effort": 32,
-  "contenu": null,
-  "contenuFr": null,
-  "note": null,
-  "photo": null
  }
 ];
