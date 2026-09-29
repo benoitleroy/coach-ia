@@ -1904,20 +1904,5 @@ window.SEANCES = [
   "contenuFr": null,
   "note": null,
   "photo": null
- },
- {
-  "id": 17945660364,
-  "date": "2026-04-02T03:58:54Z",
-  "type": "VirtualRide",
-  "name": "Zwift - Sand And Sequoias in Watopia",
-  "sec": 2453,
-  "km": 23.3,
-  "hr": 130,
-  "hrMax": 148,
-  "effort": 20,
-  "contenu": null,
-  "contenuFr": null,
-  "note": null,
-  "photo": null
  }
 ];
