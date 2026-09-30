@@ -1919,20 +1919,5 @@ window.SEANCES = [
   "contenuFr": null,
   "note": null,
   "photo": null
- },
- {
-  "id": 17957554110,
-  "date": "2026-04-03T03:54:40Z",
-  "type": "VirtualRide",
-  "name": "Zwift - Hilltop Hustle in Watopia",
-  "sec": 2299,
-  "km": 16.1,
-  "hr": 130,
-  "hrMax": 151,
-  "effort": 20,
-  "contenu": null,
-  "contenuFr": null,
-  "note": null,
-  "photo": null
  }
 ];
