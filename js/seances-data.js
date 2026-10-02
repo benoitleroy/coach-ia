@@ -1859,20 +1859,5 @@ window.SEANCES = [
   "contenuFr": null,
   "note": null,
   "photo": null
- },
- {
-  "id": 17990942942,
-  "date": "2026-04-05T18:15:14Z",
-  "type": "Ride",
-  "name": "Sortie vélo en soirée",
-  "sec": 4771,
-  "km": 28.3,
-  "hr": 133,
-  "hrMax": 149,
-  "effort": 39,
-  "contenu": null,
-  "contenuFr": null,
-  "note": null,
-  "photo": null
  }
 ];
