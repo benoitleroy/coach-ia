@@ -1874,20 +1874,5 @@ window.SEANCES = [
   "contenuFr": null,
   "note": null,
   "photo": null
- },
- {
-  "id": 17988817359,
-  "date": "2026-04-05T14:03:49Z",
-  "type": "Ride",
-  "name": "Sortie vélo dans l'après-midi",
-  "sec": 9608,
-  "km": 59.1,
-  "hr": 140,
-  "hrMax": 166,
-  "effort": 123,
-  "contenu": null,
-  "contenuFr": null,
-  "note": null,
-  "photo": null
  }
 ];
