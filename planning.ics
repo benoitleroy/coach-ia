@@ -5,21 +5,8 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
-UID:2026-S40-5-matin@coach-ia
-DTSTAMP:20261003T040000Z
-DTSTART:20261003T033000Z
-DTEND:20261003T043000Z
-SUMMARY:🏃 Sortie longue 1 h 15 aisance
-DESCRIPTION:LA sortie longue du week-end sans enfants — créneau à ne pas louper. Allure à la sensation Billat : tu peux varier librement\, relances autorisées dans les descentes\, mais FC moyenne <140. C'est le pilier volume du bloc.\n• 10 min course très facile FC<130 pour se mettre en route\n• 55 min à sensation confortable\, FC 130-140\, variations d'allure libres\n• 10 min retour au calme + étirement mollets\, ischios\, psoas\n• Boire 500 ml pendant la sortie\n• Noter la distance et la FC moyenne pour tracer la progression @140\n⚑ Si FC dérive au-dessus de 145 sans que la sensation change\, tu ralentis (signal fatigue). Douleur Achille/genou = arrêt immédiat.\n\nCoach IA — 2026-S40
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🏃 Sortie longue 1 h 15 aisance
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-S40-6-matin@coach-ia
-DTSTAMP:20261003T040000Z
+DTSTAMP:20261003T050000Z
 DTSTART:20261004T033000Z
 DTEND:20261004T043000Z
 SUMMARY:🏊 Récup Cap Provence — nage souple + sauna
