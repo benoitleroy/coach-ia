@@ -4,17 +4,4 @@ PRODID:-//Coach IA//Carnet//FR
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
-BEGIN:VEVENT
-UID:2026-S40-6-matin@coach-ia
-DTSTAMP:20261003T200000Z
-DTSTART:20261004T033000Z
-DTEND:20261004T043000Z
-SUMMARY:🏊 Récup Cap Provence — nage souple + sauna
-DESCRIPTION:Séance récupération : nage très facile 20-25 min pour drainer\, puis sauna/hammam. Piscine Desautel fermée le dimanche\, donc Cap Provence à Cassis.\n• 20-25 min nage souple\, respiration tranquille\, pas de séries\n• 10-15 min sauna\n• 10 min hammam\n• Douche fraîche finale\n• Batch cooking l'après-midi (voir liste)\n⚑ Pas de séries chronométrées\, pas de crawl à fond — c'est de la récupération.\n\nCoach IA — 2026-S40
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🏊 Récup Cap Provence — nage souple + sauna
-END:VALARM
-END:VEVENT
 END:VCALENDAR
