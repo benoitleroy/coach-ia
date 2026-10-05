@@ -1874,20 +1874,5 @@ window.SEANCES = [
   "contenuFr": null,
   "note": null,
   "photo": null
- },
- {
-  "id": 18027497836,
-  "date": "2026-04-08T13:09:28Z",
-  "type": "VirtualRide",
-  "name": "Zwift - London Uprising in London",
-  "sec": 3627,
-  "km": 28.1,
-  "hr": 128,
-  "hrMax": 151,
-  "effort": 21,
-  "contenu": null,
-  "contenuFr": null,
-  "note": null,
-  "photo": null
  }
 ];
