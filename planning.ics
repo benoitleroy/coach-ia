@@ -4,4 +4,82 @@ PRODID:-//Coach IA//Carnet//FR
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
+BEGIN:VEVENT
+UID:2026-S41-3-matin@coach-ia
+DTSTAMP:20261007T070500Z
+DTSTART:20261008T033000Z
+DTEND:20261008T043000Z
+SUMMARY:🏃 Footing aisance 30 min
+DESCRIPTION:Courir doucement pour faire circuler le sang\, sans rien chercher. Tu dois pouvoir parler en phrases complètes. L'allure est libre et peut varier selon les sensations.\n• 5 min de marche rapide\, puis trot très lent\n• 25 min de course en aisance\, FC sous 135\, conversation possible\n• 5 min de marche + mobilité chevilles genou-mur\, 10 par jambe (genou qui avance vers le mur\, talon collé au sol)\n⚑ Si le HRV est encore LOW ce matin ou la FC repos à 56 ou plus : pas de course\, 20 min de mobilité à la place. Douleur à l'Achille ou au genou : arrêt immédiat.\n\nCoach IA — 2026-S41
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🏃 Footing aisance 30 min
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S41-3-soir@coach-ia
+DTSTAMP:20261007T070500Z
+DTSTART:20261008T163000Z
+DTEND:20261008T174500Z
+SUMMARY:🏋️ Box ou NST : squat + tirage (Scaled)
+DESCRIPTION:Séance de force uniquement\, 60 min maximum. Le back squat (barre posée sur le haut du dos\, tu descends les fesses sous le niveau des genoux\, dos droit) se fait à 80 kg\, sans augmenter cette semaine : on consolide et on garde 5 % dans le réservoir. Si NST publie la séance du jour\, prends sa partie force en Scaled et remplace son conditioning par les 12 min faciles ci-dessous.\n• Échauffement 10 min : rameur 5 min facile + 10 squats à vide + 10 fentes + 10 bonnes mornings à la barre vide (buste qui bascule en avant\, dos plat)\n• Montée en charge au back squat : 5 reps à 20 kg\, 5 à 40 kg\, 3 à 60 kg\, 2 à 70 kg\n• Back squat 5×5 à 80 kg\, 2 min 30 de récup entre les séries\n• Rowing haltère un bras (main et genou sur un banc\, tu tires l'haltère vers la hanche\, dos plat) 3×10 par bras à 22 kg\, 1 min de récup\n• Gainage : planche ventrale 3×40 s + planche latérale 2×30 s par côté\n• 12 min de vélo de box ou de rameur en aisance\, FC sous 140\, pas de métcon\n• Retour au calme : accroupi profond tenu 1 min + étirement des fléchisseurs de hanche (fente genou au sol)\, 1 min par côté\n⚑ Si une rep sort lente ou que le dos s'arrondit\, on s'arrête là. Si le HRV était LOW deux matins de suite : 3×5 à 70 kg seulement\, en technique.\n\nCoach IA — 2026-S41
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🏋️ Box ou NST : squat + tirage (Scaled)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S41-4-matin@coach-ia
+DTSTAMP:20261007T070500Z
+DTSTART:20261009T033000Z
+DTEND:20261009T043000Z
+SUMMARY:🧘 Mobilité overhead squat 20 min
+DESCRIPTION:On prépare tes épaules\, ton dos et tes chevilles pour l'haltéro du soir. On travaille l'amplitude\, sans charge et sans forcer.\n• 3 min de respiration nasale + rotations d'épaules et de bassin\, debout\n• Dislocations à l'élastique (bras tendus\, l'élastique passe de devant à derrière la tête) 2×10\, lentement\n• Mobilité chevilles genou-mur 2×10 par jambe\n• Accroupi profond tenu 3×30 s\, talons au sol\n• Sots press au PVC (barre en plastique au-dessus de la tête\, tu t'accroupis dessous) 2×6\n• Overhead squat au PVC (squat barre au-dessus de la tête\, bras tendus) : 3 fois 30 s tenu en bas. Note si la barre part vers l'avant\n⚑ Aucune douleur : si une épaule pince\, on réduit l'amplitude. Aucune charge.\n\nCoach IA — 2026-S41
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🧘 Mobilité overhead squat 20 min
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S41-4-soir@coach-ia
+DTSTAMP:20261007T070500Z
+DTSTART:20261009T163000Z
+DTEND:20261009T174500Z
+SUMMARY:🏋️ Haltérophilie technique (RDV fixe box)
+DESCRIPTION:C'est ton rendez-vous fixe : technique de l'arraché et de l'épaulé-jeté\, charges légères\, c'est le coach de la box qui mène. Prends le créneau tôt (17 h 30-18 h 30) avant de récupérer les garçons pour le resto. Si l'horaire de la bascule ne le permet pas : 30 min de technique au PVC et à la barre vide à la maison.\n• Échauffement 10 min : mobilité épaules et hanches + mouvements à la barre vide\n• Tirage d'arraché (barre du sol jusqu'aux hanches\, grande extension sur la pointe des pieds) 4×3 à charge légère\n• Arraché réceptionné haut (tu attrapes la barre bras tendus au-dessus de la tête\, jambes peu fléchies) 5×2 à 25-30 kg\n• Épaulé (barre du sol jusqu'aux épaules) 5×2 à 40 kg maximum\n• Jeté (tu pousses la barre des épaules au-dessus de la tête avec une impulsion des jambes) 4×2 à charge légère\n• Retour au calme 5 min : dislocations à l'élastique + accroupi profond\n⚑ Jamais d'overhead squat chargé ni de réception en squat complet à l'arraché tant que la position basse au PVC n'est pas stable : on réceptionne haut.\n\nCoach IA — 2026-S41
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🏋️ Haltérophilie technique (RDV fixe box)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S41-5-matin@coach-ia
+DTSTAMP:20261007T070500Z
+DTSTART:20261010T033000Z
+DTEND:20261010T043000Z
+SUMMARY:🚴 Home-trainer aisance 50 min
+DESCRIPTION:Tu as les garçons\, donc pas de sortie : le home-trainer remplace la sortie longue cette semaine. Pédalage facile avec quelques relances libres à la sensation\, rien de dur après l'haltéro de la veille.\n• 10 min de montée progressive de 100 à 140 W\, cadence 85-90\n• 30 min à 140-150 W\, FC sous 130\, conversation possible\n• Toutes les 5 min : 20 s de relance à la sensation (cadence 105)\, sans dépasser 140 bpm\n• 5 min de retour au calme à 100 W\n• Gainage : planche ventrale 2×40 s\n⚑ Si la FC dépasse 135 à 140 W\, baisse à 120 W : c'est le signe que tu n'as pas récupéré.\n\nCoach IA — 2026-S41
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🚴 Home-trainer aisance 50 min
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S41-6-matin@coach-ia
+DTSTAMP:20261007T070500Z
+DTSTART:20261011T033000Z
+DTEND:20261011T043000Z
+SUMMARY:🧘 Pilates + mobilité 30 min
+DESCRIPTION:Une séance calme à la maison pour boucler la semaine et refaire le point sur la mobilité de l'overhead squat.\n• 3 min de respiration allongé\, ventre qui se gonfle\n• Enroulement du dos (debout\, tu descends vertèbre par vertèbre vers les pieds) 2×8\n• Pont fessier (allongé\, pieds au sol\, tu montes le bassin) 3×12\n• Dislocations à l'élastique 2×10\n• Overhead squat au PVC : 3 fois 30 s tenu en bas\, compare avec vendredi\n• Planche latérale 2×30 s par côté + mobilité chevilles genou-mur 10 par jambe\n⚑ Rien ne doit forcer. Si la nuit a été sous 6 h\, ne fais que les 15 premières minutes.\n\nCoach IA — 2026-S41
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🧘 Pilates + mobilité 30 min
+END:VALARM
+END:VEVENT
 END:VCALENDAR
