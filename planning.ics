@@ -5,21 +5,8 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
-UID:2026-S41-3-matin@coach-ia
-DTSTAMP:20261008T040000Z
-DTSTART:20261008T033000Z
-DTEND:20261008T043000Z
-SUMMARY:🏃 Footing aisance 30 min
-DESCRIPTION:Courir doucement pour faire circuler le sang\, sans rien chercher. Tu dois pouvoir parler en phrases complètes. L'allure est libre et peut varier selon les sensations.\n• 5 min de marche rapide\, puis trot très lent\n• 25 min de course en aisance\, FC sous 135\, conversation possible\n• 5 min de marche + mobilité chevilles genou-mur\, 10 par jambe (genou qui avance vers le mur\, talon collé au sol)\n⚑ Si le HRV est encore LOW ce matin ou la FC repos à 56 ou plus : pas de course\, 20 min de mobilité à la place. Douleur à l'Achille ou au genou : arrêt immédiat.\n\nCoach IA — 2026-S41
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🏃 Footing aisance 30 min
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-S41-3-soir@coach-ia
-DTSTAMP:20261008T040000Z
+DTSTAMP:20261008T050000Z
 DTSTART:20261008T163000Z
 DTEND:20261008T174500Z
 SUMMARY:🏋️ Box ou NST : squat + tirage (Scaled)
@@ -32,7 +19,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S41-4-matin@coach-ia
-DTSTAMP:20261008T040000Z
+DTSTAMP:20261008T050000Z
 DTSTART:20261009T033000Z
 DTEND:20261009T043000Z
 SUMMARY:🧘 Mobilité overhead squat 20 min
@@ -45,7 +32,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S41-4-soir@coach-ia
-DTSTAMP:20261008T040000Z
+DTSTAMP:20261008T050000Z
 DTSTART:20261009T163000Z
 DTEND:20261009T174500Z
 SUMMARY:🏋️ Haltérophilie technique (RDV fixe box)
@@ -58,7 +45,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S41-5-matin@coach-ia
-DTSTAMP:20261008T040000Z
+DTSTAMP:20261008T050000Z
 DTSTART:20261010T033000Z
 DTEND:20261010T043000Z
 SUMMARY:🚴 Home-trainer aisance 50 min
@@ -71,7 +58,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S41-6-matin@coach-ia
-DTSTAMP:20261008T040000Z
+DTSTAMP:20261008T050000Z
 DTSTART:20261011T033000Z
 DTEND:20261011T043000Z
 SUMMARY:🧘 Pilates + mobilité 30 min
