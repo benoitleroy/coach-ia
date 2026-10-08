@@ -5,21 +5,8 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
-UID:2026-S41-3-soir@coach-ia
-DTSTAMP:20261008T170000Z
-DTSTART:20261008T163000Z
-DTEND:20261008T174500Z
-SUMMARY:🏋️ Box ou NST : squat + tirage (Scaled)
-DESCRIPTION:Séance de force uniquement\, 60 min maximum. Le back squat (barre posée sur le haut du dos\, tu descends les fesses sous le niveau des genoux\, dos droit) se fait à 80 kg\, sans augmenter cette semaine : on consolide et on garde 5 % dans le réservoir. Si NST publie la séance du jour\, prends sa partie force en Scaled et remplace son conditioning par les 12 min faciles ci-dessous.\n• Échauffement 10 min : rameur 5 min facile + 10 squats à vide + 10 fentes + 10 bonnes mornings à la barre vide (buste qui bascule en avant\, dos plat)\n• Montée en charge au back squat : 5 reps à 20 kg\, 5 à 40 kg\, 3 à 60 kg\, 2 à 70 kg\n• Back squat 5×5 à 80 kg\, 2 min 30 de récup entre les séries\n• Rowing haltère un bras (main et genou sur un banc\, tu tires l'haltère vers la hanche\, dos plat) 3×10 par bras à 22 kg\, 1 min de récup\n• Gainage : planche ventrale 3×40 s + planche latérale 2×30 s par côté\n• 12 min de vélo de box ou de rameur en aisance\, FC sous 140\, pas de métcon\n• Retour au calme : accroupi profond tenu 1 min + étirement des fléchisseurs de hanche (fente genou au sol)\, 1 min par côté\n⚑ Si une rep sort lente ou que le dos s'arrondit\, on s'arrête là. Si le HRV était LOW deux matins de suite : 3×5 à 70 kg seulement\, en technique.\n\nCoach IA — 2026-S41
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🏋️ Box ou NST : squat + tirage (Scaled)
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-S41-4-matin@coach-ia
-DTSTAMP:20261008T170000Z
+DTSTAMP:20261008T180000Z
 DTSTART:20261009T033000Z
 DTEND:20261009T043000Z
 SUMMARY:🧘 Mobilité overhead squat 20 min
@@ -32,7 +19,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S41-4-soir@coach-ia
-DTSTAMP:20261008T170000Z
+DTSTAMP:20261008T180000Z
 DTSTART:20261009T163000Z
 DTEND:20261009T174500Z
 SUMMARY:🏋️ Haltérophilie technique (RDV fixe box)
@@ -45,7 +32,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S41-5-matin@coach-ia
-DTSTAMP:20261008T170000Z
+DTSTAMP:20261008T180000Z
 DTSTART:20261010T033000Z
 DTEND:20261010T043000Z
 SUMMARY:🚴 Home-trainer aisance 50 min
@@ -58,7 +45,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S41-6-matin@coach-ia
-DTSTAMP:20261008T170000Z
+DTSTAMP:20261008T180000Z
 DTSTART:20261011T033000Z
 DTEND:20261011T043000Z
 SUMMARY:🧘 Pilates + mobilité 30 min
