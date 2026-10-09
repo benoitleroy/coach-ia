@@ -5,21 +5,8 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
-UID:2026-S41-4-soir@coach-ia
-DTSTAMP:20261009T170000Z
-DTSTART:20261009T163000Z
-DTEND:20261009T174500Z
-SUMMARY:🏋️ Haltérophilie technique (RDV fixe box)
-DESCRIPTION:C'est ton rendez-vous fixe : technique de l'arraché et de l'épaulé-jeté\, charges légères\, c'est le coach de la box qui mène. Prends le créneau tôt (17 h 30-18 h 30) avant de récupérer les garçons pour le resto. Si l'horaire de la bascule ne le permet pas : 30 min de technique au PVC et à la barre vide à la maison.\n• Échauffement 10 min : mobilité épaules et hanches + mouvements à la barre vide\n• Tirage d'arraché (barre du sol jusqu'aux hanches\, grande extension sur la pointe des pieds) 4×3 à charge légère\n• Arraché réceptionné haut (tu attrapes la barre bras tendus au-dessus de la tête\, jambes peu fléchies) 5×2 à 25-30 kg\n• Épaulé (barre du sol jusqu'aux épaules) 5×2 à 40 kg maximum\n• Jeté (tu pousses la barre des épaules au-dessus de la tête avec une impulsion des jambes) 4×2 à charge légère\n• Retour au calme 5 min : dislocations à l'élastique + accroupi profond\n⚑ Jamais d'overhead squat chargé ni de réception en squat complet à l'arraché tant que la position basse au PVC n'est pas stable : on réceptionne haut.\n\nCoach IA — 2026-S41
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🏋️ Haltérophilie technique (RDV fixe box)
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-S41-5-matin@coach-ia
-DTSTAMP:20261009T170000Z
+DTSTAMP:20261009T180000Z
 DTSTART:20261010T033000Z
 DTEND:20261010T043000Z
 SUMMARY:🚴 Home-trainer aisance 50 min
@@ -32,7 +19,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S41-6-matin@coach-ia
-DTSTAMP:20261009T170000Z
+DTSTAMP:20261009T180000Z
 DTSTART:20261011T033000Z
 DTEND:20261011T043000Z
 SUMMARY:🧘 Pilates + mobilité 30 min
