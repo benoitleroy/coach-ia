@@ -5,21 +5,8 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
-UID:2026-S41-4-matin@coach-ia
-DTSTAMP:20261009T040000Z
-DTSTART:20261009T033000Z
-DTEND:20261009T043000Z
-SUMMARY:🧘 Mobilité overhead squat 20 min
-DESCRIPTION:On prépare tes épaules\, ton dos et tes chevilles pour l'haltéro du soir. On travaille l'amplitude\, sans charge et sans forcer.\n• 3 min de respiration nasale + rotations d'épaules et de bassin\, debout\n• Dislocations à l'élastique (bras tendus\, l'élastique passe de devant à derrière la tête) 2×10\, lentement\n• Mobilité chevilles genou-mur 2×10 par jambe\n• Accroupi profond tenu 3×30 s\, talons au sol\n• Sots press au PVC (barre en plastique au-dessus de la tête\, tu t'accroupis dessous) 2×6\n• Overhead squat au PVC (squat barre au-dessus de la tête\, bras tendus) : 3 fois 30 s tenu en bas. Note si la barre part vers l'avant\n⚑ Aucune douleur : si une épaule pince\, on réduit l'amplitude. Aucune charge.\n\nCoach IA — 2026-S41
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🧘 Mobilité overhead squat 20 min
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-S41-4-soir@coach-ia
-DTSTAMP:20261009T040000Z
+DTSTAMP:20261009T050000Z
 DTSTART:20261009T163000Z
 DTEND:20261009T174500Z
 SUMMARY:🏋️ Haltérophilie technique (RDV fixe box)
@@ -32,7 +19,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S41-5-matin@coach-ia
-DTSTAMP:20261009T040000Z
+DTSTAMP:20261009T050000Z
 DTSTART:20261010T033000Z
 DTEND:20261010T043000Z
 SUMMARY:🚴 Home-trainer aisance 50 min
@@ -45,7 +32,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S41-6-matin@coach-ia
-DTSTAMP:20261009T040000Z
+DTSTAMP:20261009T050000Z
 DTSTART:20261011T033000Z
 DTEND:20261011T043000Z
 SUMMARY:🧘 Pilates + mobilité 30 min
