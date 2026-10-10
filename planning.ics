@@ -5,21 +5,8 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
-UID:2026-S41-5-matin@coach-ia
-DTSTAMP:20261010T040000Z
-DTSTART:20261010T033000Z
-DTEND:20261010T043000Z
-SUMMARY:🚴 Home-trainer aisance 50 min
-DESCRIPTION:Tu as les garçons\, donc pas de sortie : le home-trainer remplace la sortie longue cette semaine. Pédalage facile avec quelques relances libres à la sensation\, rien de dur après l'haltéro de la veille.\n• 10 min de montée progressive de 100 à 140 W\, cadence 85-90\n• 30 min à 140-150 W\, FC sous 130\, conversation possible\n• Toutes les 5 min : 20 s de relance à la sensation (cadence 105)\, sans dépasser 140 bpm\n• 5 min de retour au calme à 100 W\n• Gainage : planche ventrale 2×40 s\n⚑ Si la FC dépasse 135 à 140 W\, baisse à 120 W : c'est le signe que tu n'as pas récupéré.\n\nCoach IA — 2026-S41
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🚴 Home-trainer aisance 50 min
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-S41-6-matin@coach-ia
-DTSTAMP:20261010T040000Z
+DTSTAMP:20261010T050000Z
 DTSTART:20261011T033000Z
 DTEND:20261011T043000Z
 SUMMARY:🧘 Pilates + mobilité 30 min
