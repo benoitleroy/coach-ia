@@ -4,17 +4,4 @@ PRODID:-//Coach IA//Carnet//FR
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
-BEGIN:VEVENT
-UID:2026-S41-6-matin@coach-ia
-DTSTAMP:20261010T200000Z
-DTSTART:20261011T033000Z
-DTEND:20261011T043000Z
-SUMMARY:🧘 Pilates + mobilité 30 min
-DESCRIPTION:Une séance calme à la maison pour boucler la semaine et refaire le point sur la mobilité de l'overhead squat.\n• 3 min de respiration allongé\, ventre qui se gonfle\n• Enroulement du dos (debout\, tu descends vertèbre par vertèbre vers les pieds) 2×8\n• Pont fessier (allongé\, pieds au sol\, tu montes le bassin) 3×12\n• Dislocations à l'élastique 2×10\n• Overhead squat au PVC : 3 fois 30 s tenu en bas\, compare avec vendredi\n• Planche latérale 2×30 s par côté + mobilité chevilles genou-mur 10 par jambe\n⚑ Rien ne doit forcer. Si la nuit a été sous 6 h\, ne fais que les 15 premières minutes.\n\nCoach IA — 2026-S41
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🧘 Pilates + mobilité 30 min
-END:VALARM
-END:VEVENT
 END:VCALENDAR
