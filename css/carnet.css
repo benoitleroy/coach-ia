@@ -332,3 +332,57 @@ table.grille small { color: var(--faint); font-size: .68rem; }
 .ical { font-size: .8rem; color: var(--accent); text-decoration: none; white-space: nowrap; }
 
 .g-enf { font-size: .7rem; display: block; opacity: .8; }
+
+/* Chrono (repris de Bachata) */
+.ch-modes { display: grid; grid-template-columns: 1fr 1fr; gap: .5rem; margin-bottom: .8rem; }
+.ch-modes button { padding: .8rem .5rem; border: 1px solid var(--line); background: var(--card-2); color: var(--ink); border-radius: 10px;
+  font-family: var(--display); font-size: 1.3rem; font-weight: 600; cursor: pointer; }
+.ch-modes button small { display: block; font-family: var(--body); font-size: .72rem; font-weight: 400; color: var(--muted); }
+.ch-modes button.large { grid-column: 1 / -1; }
+.ch-modes button.on { border-color: var(--accent); background: var(--accent-dim); color: var(--accent); }
+.ch-param { display: flex; justify-content: space-between; align-items: center; padding: .4rem 0; font-size: .92rem; }
+.ch-param input, .ch-row input { width: 5.5rem; padding: .45rem .5rem; border-radius: 8px; border: 1px solid var(--line);
+  background: var(--card-2); color: var(--ink); font: inherit; font-size: 1rem; text-align: center; }
+.ch-go { width: 100%; margin-top: .8rem; padding: .9rem; border: 0; border-radius: 12px; background: var(--accent); color: var(--bg);
+  font-family: var(--display); font-size: 1.8rem; font-weight: 700; letter-spacing: .08em; cursor: pointer; }
+.ch-run { position: fixed; inset: 0; z-index: 50; background: var(--bg); display: flex; flex-direction: column; align-items: center;
+  justify-content: center; gap: .6rem; padding: 1rem; text-align: center; }
+.ch-run[hidden] { display: none; }
+.ch-run.work { background: #0b2a24; }
+.ch-run.rest { background: #2a1416; }
+#ch-phase { font-family: var(--display); font-size: 1.5rem; letter-spacing: .06em; color: var(--muted); }
+#ch-time { font-family: var(--display); font-size: clamp(5rem, 28vw, 11rem); font-weight: 700; line-height: 1; font-variant-numeric: tabular-nums; }
+#ch-sub { color: var(--muted); font-size: .95rem; }
+.ch-ctrl { display: flex; gap: .8rem; margin-top: 1.2rem; }
+.ch-ctrl button { min-width: 8rem; padding: .8rem 1rem; border-radius: 12px; border: 1px solid var(--line); background: var(--card);
+  color: var(--ink); font: inherit; font-size: 1rem; font-weight: 600; cursor: pointer; }
+
+/* Charges */
+.ch-row { display: flex; align-items: center; gap: .6rem; padding: .45rem 0; border-bottom: 1px solid var(--line); }
+.ch-row:last-child { border-bottom: 0; }
+.ch-lift { flex: 1; font-weight: 600; font-size: .92rem; }
+.ch-lift small { display: block; font-weight: 400; font-size: .75rem; color: var(--muted); }
+.ch-unit { color: var(--muted); font-size: .85rem; }
+.kg-calc { color: var(--accent); font-weight: 600; white-space: nowrap; }
+
+/* Banque : bouton chrono + « Comment faire » */
+.wod-go { margin: .3rem 0 .5rem; padding: .4rem .8rem; border-radius: 999px; border: 1px solid var(--accent); background: var(--accent-dim);
+  color: var(--accent); font: inherit; font-size: .82rem; font-weight: 600; cursor: pointer; }
+details.expli { margin: .5rem 0; border: 1px solid var(--line); border-radius: 10px; background: var(--card-2); padding: .5rem .7rem; }
+details.expli > summary { cursor: pointer; list-style: none; font-weight: 600; color: var(--accent); }
+details.expli > summary::-webkit-details-marker { display: none; }
+.expli h4 { margin: .7rem 0 .2rem; font-size: .72rem; text-transform: uppercase; letter-spacing: .06em; color: var(--faint); font-weight: 600; }
+.expli p { margin: 0; font-size: .9rem; line-height: 1.5; }
+.expli ol, .expli ul { margin: 0; padding-left: 1.2rem; font-size: .9rem; line-height: 1.5; }
+.expli li { border: 0; padding: .1rem 0; }
+.expli .ex-charges { padding: .35rem .6rem; border-left: 3px solid var(--accent); background: var(--accent-dim); border-radius: 0 6px 6px 0; }
+.expli .ex-attente { color: var(--muted); font-style: italic; }
+.expli .mv-row { grid-template-columns: 4.6rem 1fr; }
+.mv-desc { font-size: .82rem; color: var(--muted); line-height: 1.4; }
+.mv-demo { font-size: .78rem; color: var(--accent); text-decoration: none; }
+
+/* 9 onglets : la barre défile horizontalement au lieu d'élargir la page */
+.tabs { min-width: 0; max-width: 100%; scrollbar-width: none; }
+.tabs::-webkit-scrollbar { display: none; }
+.tabs button { flex: 0 0 auto; padding-left: .6rem; padding-right: .6rem; }
+.tabpane, .tabpane > .bloc { min-width: 0; }

@@ -3,7 +3,7 @@
 //             données de sync) → toujours frais quand en ligne, offline possible.
 //             "cache-first" uniquement pour icônes/images/polices.
 
-const CACHE_VERSION = "coach-ia-v34";
+const CACHE_VERSION = "coach-ia-v35";
 
 const PRECACHE_URLS = [
   "./",
@@ -14,6 +14,7 @@ const PRECACHE_URLS = [
   "./js/bilan.js",
   "./programme.html",
   "./js/programme.js",
+  "./js/chrono.js",
   "./js/schemas.js",
   "./js/sommeil.js",
   "./accueil.html",
@@ -66,9 +67,9 @@ self.addEventListener("fetch", (event) => {
   const isStatic = /\.(png|jpg|jpeg|svg|ico|woff2?|ttf)$/i.test(url.pathname);
   const isOwn = url.origin === self.location.origin;
 
-  // Banque de séances (~400 ko, change au plus une fois par jour) : cache d'abord,
+  // Banque de séances (~400 ko) et ses explications (~1 Mo) : changent au plus une fois par jour : cache d'abord,
   // mise à jour silencieuse en arrière-plan → ouverture instantanée à la box, même en 4G faible.
-  if (/\/js\/wods-data\.js$/.test(url.pathname)) {
+  if (/\/js\/wods-(data|explications-data)\.js$/.test(url.pathname)) {
     event.respondWith(
       caches.match(req).then(cached => {
         const reseau = fetch(req).then(resp => {

@@ -44,6 +44,8 @@
     <button data-tab="repas">Repas</button>
     <button data-tab="banque">Séances</button>
     <button data-tab="mvt">Mouvements</button>
+    <button data-tab="chrono">Chrono</button>
+    <button data-tab="charges">Charges</button>
   </nav>
 
   <!-- AUJOURD'HUI -->
@@ -158,6 +160,37 @@
     </section>
   </section>
 
+  <!-- CHRONO -->
+  <section class="tabpane" id="tab-chrono">
+    <section class="bloc" id="ch-setup">
+      <div class="bloc-head"><h2>Chrono</h2><span class="hint">bips + écran qui reste allumé</span></div>
+      <div class="ch-modes" id="ch-modes">
+        <button data-mode="fortime">For Time<small>compte en avant</small></button>
+        <button data-mode="amrap">AMRAP<small>compte à rebours</small></button>
+        <button data-mode="emom">EMOM<small>une minute à la fois</small></button>
+        <button data-mode="tabata">Tabata<small>20 s / 10 s × 8</small></button>
+        <button data-mode="custom" class="large">Intervalles<small>travail / repos / tours</small></button>
+      </div>
+      <div id="ch-params"></div>
+      <button class="ch-go" id="ch-start" hidden>GO</button>
+    </section>
+    <section class="ch-run" id="ch-run" hidden>
+      <div id="ch-phase">&nbsp;</div>
+      <div id="ch-time">0:00</div>
+      <div id="ch-sub">&nbsp;</div>
+      <div class="ch-ctrl"><button id="ch-pause">Pause</button><button id="ch-stop">Stop</button></div>
+    </section>
+  </section>
+
+  <!-- CHARGES -->
+  <section class="tabpane" id="tab-charges">
+    <section class="bloc">
+      <div class="bloc-head"><h2>Mes charges maxi</h2><span class="hint">1RM · sur ce téléphone</span></div>
+      <p class="hint">Ta charge maxi sur 1 répétition. Les séances qui parlent en % de 1RM affichent alors la charge de travail en kg.</p>
+      <div id="ch-liste"></div>
+    </section>
+  </section>
+
   <footer class="foot"><a href="index.html">← Retour au carnet</a></footer>
 </main>
 
@@ -168,7 +201,9 @@
 <script src="js/wods-data.js" onerror="void 0"></script>
 <script src="js/garde-data.js" onerror="void 0"></script>
 <script src="js/mouvements-data.js" onerror="void 0"></script>
+<script src="js/wods-explications-data.js" onerror="void 0"></script>
 <script src="js/schemas.js"></script>
+<script src="js/chrono.js"></script>
 <script src="js/programme.js"></script>
 </body>
 </html>

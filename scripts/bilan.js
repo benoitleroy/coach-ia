@@ -325,7 +325,7 @@ export async function coachBilan(bilan, carnet, activities, opts = {}) {
   let out;
   try {
     out = execFileSync(bin, ["-p", "--model", "opus"], {
-      input: COACH_PROMPT(bilan, carnet, activities, now), encoding: "utf8", timeout: 300_000,
+      input: COACH_PROMPT(bilan, carnet, activities, now), encoding: "utf8", timeout: 900_000,
       stdio: ["pipe", "pipe", "pipe"], env: { ...process.env, CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC: "1" },
     }).trim();
   } catch (e) {

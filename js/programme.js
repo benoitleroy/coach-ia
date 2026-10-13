@@ -244,7 +244,8 @@
   rendreRepas(C);
 
   // ── Banque de séances ──
-  const W = window.WODS || [];
+  // Pages CrossFit.com mal aspirées (seul un lien « Read More → » récupéré) : on ne les montre pas.
+  const W = (window.WODS || []).filter(w => (w.en || []).join(" ").replace(/(Read More|Learn the Movement)\s*→/g, "").trim().length >= 15);
   let bqSrc = "tout", bqDuree = "tout", bqN = 20, bqQ = "";
   const bqFiltre = () => W.filter(w => {
     if (bqSrc === "hero" && w.source !== "Hero WOD") return false;
@@ -257,12 +258,42 @@
     }
     return true;
   });
+  const CH = window.CHRONO, EX = window.WODS_EXPLI || {};
+  const MVT_EN = new Map(MVT.map(m => [m.en, m]));
+  const chronoDe = w => {
+    if (!CH) return null;
+    const t = CH.detecte(w.en.join("\n") + "\n" + w.fr.join("\n"));
+    if (t && t.mode === "fortime") t.cap = Math.max(10, Math.round((w.duree || 20) * 1.5));
+    return t;
+  };
+  // « Comment faire » : texte rédigé par Claude (scripts/wods-explications.js) + fiche de chaque mouvement
+  const blocExpli = w => {
+    const e = EX[w.id];
+    const mv = (w.mouvements || []).map(m => {
+      const d = MVT_EN.get(m.en) || m;
+      const q = encodeURIComponent(m.en + " crossfit movement demo");
+      return `<div class="mv-row"><div class="mv-sch">${d.schema && window.SCHEMA ? window.SCHEMA(d.schema) : "<span class='mv-none'>—</span>"}</div>
+        <div><div class="mv-en">${esc(d.fr || m.fr)}</div>${d.desc ? `<div class="mv-desc">${esc(d.desc)}</div>` : ""}
+        <a class="mv-demo" href="https://www.youtube.com/results?search_query=${q}" target="_blank" rel="noopener">▶ vidéo démo</a></div></div>`;
+    }).join("");
+    const corps = e
+      ? `<h4>Le format</h4><p>${esc(e.format)}</p>
+         <h4>Concrètement</h4><ol>${(e.deroule || []).map(x => `<li>${esc(x)}</li>`).join("")}</ol>
+         ${e.charges ? `<h4>Tes charges</h4><p class="ex-charges">${esc(e.charges)}</p>` : ""}
+         <h4>L'objectif</h4><p>${esc(e.objectif)}</p>
+         ${(e.pieges || []).length ? `<h4>Les pièges</h4><ul>${e.pieges.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : ""}`
+      : `<p class="ex-attente">Explication détaillée en cours de rédaction — elle apparaîtra après une prochaine mise à jour.</p>`;
+    return `<details class="expli"><summary>📖 Comment faire</summary>${corps}${mv ? `<h4>Les mouvements</h4>${mv}` : ""}</details>`;
+  };
   const carteWod = w => {
     const titre = w.nom || (w.date ? fmtDate(w.date) : "Séance");
-    const meta = [w.format, w.duree + " min env.", ...(w.materiel || [])].filter(Boolean).join(" · ");
+    const meta = [w.format !== "Autre" ? w.format : null, w.duree + " min env.", ...(w.materiel || [])].filter(Boolean).join(" · ");
     const sch = (w.mouvements || []).filter(m => m.schema).map(m => `<figure class="mv"><div class="mv-sch">${window.SCHEMA ? window.SCHEMA(m.schema) : ""}</div><figcaption>${esc(m.fr)}<br><small>${esc(m.en)}</small></figcaption></figure>`).join("");
+    const t = chronoDe(w);
     return `<li><details><summary><b>${esc(titre)}</b> <small>${esc(meta)}</small></summary><div class="hi-body">
-      <div class="wod-fr">${w.fr.map(l => `<div>${esc(l)}</div>`).join("")}</div>
+      <div class="wod-fr">${w.fr.map(l => `<div>${CH ? CH.kgLigne(esc(l), w.fr.join(" ")) : esc(l)}</div>`).join("")}</div>
+      ${t ? `<button class="wod-go" data-wod="${esc(w.id)}">⏱ Chrono ${esc(t.label)}</button>` : ""}
+      ${blocExpli(w)}
       <details class="sub-en"><summary>version anglaise (celle du tableau)</summary><pre class="c-txt">${esc(w.en.join("\n"))}</pre></details>
       ${w.stimulusFr ? `<p class="wod-stim">🎯 ${esc(w.stimulusFr)}</p>` : ""}
       ${(w.scaling && w.scaling.int.length) ? `<details class="sub-en"><summary>option intermédiaire</summary><pre class="c-txt">${esc(w.scaling.int.join("\n"))}</pre></details>` : ""}
@@ -281,6 +312,11 @@
     document.querySelectorAll("#bq-duree button").forEach(b => b.addEventListener("click", () => { bqDuree = b.dataset.d; bqN = 20; document.querySelectorAll("#bq-duree button").forEach(x => x.classList.toggle("on", x === b)); rendreBanque(); }));
     $("bq-q").addEventListener("input", e => { bqQ = e.target.value.trim().toLowerCase(); bqN = 20; rendreBanque(); });
     $("bq-plus").addEventListener("click", () => { bqN += 20; rendreBanque(); });
+    $("bq-list").addEventListener("click", e => {
+      const b = e.target.closest(".wod-go"); if (!b) return;
+      const t = chronoDe(W.find(w => w.id === b.dataset.wod)); if (t) CH.lance(t);
+    });
+    if (CH) CH.surChangementCharges(rendreBanque);
     rendreBanque();
 
     // ── Glossaire des mouvements ──

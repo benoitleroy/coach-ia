@@ -1,0 +1,1920 @@
+{
+ "bench-amanda": {
+  "format": "Tu fais 3 tours le plus vite possible, avec 9, puis 7, puis 5 répétitions de chaque mouvement. Ton score est le temps total pour finir les 3 tours.",
+  "deroule": [
+   "Tour 1 : 9 muscle-up aux anneaux (tu te tractes, puis tu passes au-dessus des anneaux jusqu'à avoir les bras tendus), puis 9 arrachés en squat à 61 kg.",
+   "Tour 2 : 7 muscle-up aux anneaux, puis 7 arrachés en squat à 61 kg.",
+   "Tour 3 : 5 muscle-up aux anneaux, puis 5 arrachés en squat à 61 kg.",
+   "L'arraché en squat : tu montes la barre du sol jusqu'au-dessus de la tête en un seul mouvement, tu la reçois en squat profond, puis tu te relèves bras tendus.",
+   "Total : 21 muscle-up et 21 arrachés."
+  ],
+  "charges": "Barre à 61 kg. Anneaux : muscle-up complets, bras tendus en haut.",
+  "objectif": "Séance courte et intense qui mélange gymnastique et haltérophilie. Vise environ 12 minutes. Pars à un rythme tenable et fais des pauses courtes pour ne pas échouer sur les muscle-up.",
+  "pieges": [
+   "Tu pars trop vite sur les 9 premiers muscle-up : tes bras sont cuits pour les tours suivants. Découpe en petites séries.",
+   "Tu tires la barre avec les bras. Pousse d'abord avec les jambes, la barre monte grâce à ton élan.",
+   "Ne baisse pas la barre trop brutalement entre deux répétitions : tu perds du temps et de l'énergie."
+  ]
+ },
+ "bench-angie": {
+  "format": "Tu fais 100 répétitions d'un mouvement, puis tu passes au suivant, dans l'ordre, le plus vite possible. Ton score est le temps total pour finir les 400 répétitions.",
+  "deroule": [
+   "Étape 1 : 100 tractions. Menton au-dessus de la barre à chaque répétition.",
+   "Étape 2 : 100 pompes. Poitrine au sol, corps gainé, bras tendus en haut.",
+   "Étape 3 : 100 relevés de buste (abdos). Tu pars dos au sol, tu te redresses, puis tu reviens au sol.",
+   "Étape 4 : 100 squats au poids du corps. Tu descends les hanches sous les genoux, puis tu te relèves bras tendus.",
+   "Tu finis chaque étape complètement avant de passer à la suivante. Tu peux faire des pauses à tout moment, mais le chrono continue."
+  ],
+  "charges": "Poids du corps uniquement, aucune charge.",
+  "objectif": "Séance d'endurance musculaire, longue et répétitive. Vise environ 20 minutes. Découpe en séries courtes avec des pauses prévues à l'avance, plutôt que de t'arrêter quand tu es à bout.",
+  "pieges": [
+   "Tu fais trop de tractions d'affilée au début. Découpe par exemple en 10 séries de 10, ou 20 séries de 5.",
+   "Tu bâcles les dernières pompes ou les derniers squats quand tu es fatigué. Une répétition incomplète ne compte pas.",
+   "Garde de l'énergie pour les 100 squats. Tes jambes sont fraîches, donc la fin est plus rapide si tu as bien géré."
+  ]
+ },
+ "bench-annie": {
+  "format": "Tu enchaînes 5 tours le plus vite possible, avec 50, 40, 30, 20, puis 10 répétitions de chaque mouvement. Ton score est le temps total.",
+  "deroule": [
+   "Tour 1 : 50 double tours de corde (la corde passe 2 fois sous tes pieds à chaque saut), puis 50 relevés de buste (abdos).",
+   "Tour 2 : 40 double tours de corde, puis 40 relevés de buste.",
+   "Tour 3 : 30 double tours de corde, puis 30 relevés de buste.",
+   "Tour 4 : 20 double tours de corde, puis 20 relevés de buste.",
+   "Tour 5 : 10 double tours de corde, puis 10 relevés de buste.",
+   "Total : 150 double tours de corde et 150 relevés de buste."
+  ],
+  "charges": "Aucune charge. Corde à sauter et un tapis pour les relevés de buste.",
+  "objectif": "Séance très rapide et cardio, qui travaille la coordination et les abdominaux. Vise environ 3 minutes en étant très rapide (c'est ambitieux), plus probablement 6 à 10 minutes selon ton niveau en corde. Garde un rythme régulier sur la corde, c'est là que tu perds du temps si tu rates.",
+  "pieges": [
+   "Tu sautes trop haut ou tu tires trop fort sur la corde. Reste petit et relâché, avec des poignets souples.",
+   "Tu t'arrêtes après chaque raté de corde. Si tu rates, relance tout de suite, ne reprends pas ta respiration longtemps.",
+   "Sur les relevés de buste, ne te laisse pas retomber lourdement : utilise l'élan du dos au sol pour te relever."
+  ]
+ },
+ "bench-jackie": {
+  "format": "Le chrono tourne dès le départ et tu fais tout dans l'ordre le plus vite possible. Ton score est ton temps total.",
+  "deroule": [
+   "Rame 1 000 m sur le rameur.",
+   "Enchaîne 50 thrusters à 20 kg : tu descends en squat avec la barre sur les épaules, tu remontes et tu pousses la barre au-dessus de la tête, en un seul mouvement.",
+   "Fais-les en séries de 10 à 12, avec de très courtes pauses.",
+   "Termine avec 30 tractions (menton au-dessus de la barre).",
+   "Arrête le chrono après la dernière traction."
+  ],
+  "charges": "Barre à 20 kg pour les thrusters. Rameur : 1 000 m.",
+  "objectif": "C'est un test court et intense, visé autour de 9 min. Pars à une allure soutenue sur le rameur, mais garde des forces pour les tractions.",
+  "pieges": [
+   "Ne pars pas trop fort sur le rameur : tes bras seront vides pour les tractions.",
+   "Fractionne les tractions tôt (par exemple 6 x 5) plutôt que de tomber à zéro.",
+   "Descends bien en dessous de la parallèle sur chaque thruster."
+  ]
+ },
+ "bench-karen": {
+  "format": "Tu fais 150 lancers de médecine-ball au mur, le plus vite possible. Ton score est ton temps.",
+  "deroule": [
+   "Prends un médecine-ball de 9 kg.",
+   "Squat : descends les cuisses au moins à l'horizontale.",
+   "Remonte en lançant le ballon sur une cible à environ 3 m de haut (3 m pour un homme).",
+   "Rattrape le ballon et enchaîne directement le squat suivant.",
+   "Fais 150 répétitions au total, par séries de 15 à 25 avec de courtes pauses."
+  ],
+  "charges": "Ballon de 9 kg, cible à 3 m (10 pieds).",
+  "objectif": "Séance d'endurance de jambes et d'épaules, visée autour de 12 min. Trouve un rythme régulier et tiens-le jusqu'au bout.",
+  "pieges": [
+   "Ne pars pas trop vite : après 50 répétitions, les cuisses brûlent.",
+   "Fais des pauses courtes et prévues d'avance, pas de longues pauses subies.",
+   "Ne saute pas la profondeur du squat quand tu fatigues, sinon la répétition ne compte pas."
+  ]
+ },
+ "bench-kelly": {
+  "format": "Tu fais 5 tours, chacun avec trois exercices, le plus vite possible. Ton score est le temps total.",
+  "deroule": [
+   "Dans chaque tour, commence par courir 400 m (un tour de piste).",
+   "Enchaîne 30 sauts sur un box de 61 cm : tu sautes à deux pieds et tu te tiens debout sur le box.",
+   "Enchaîne 30 lancers de médecine-ball de 9 kg au mur (squat puis lancer).",
+   "Reviens courir 400 m pour le tour suivant.",
+   "Fais 5 tours, sans repos imposé."
+  ],
+  "charges": "Box à 61 cm, médecine-ball de 9 kg, 400 m de course par tour (2 km au total).",
+  "objectif": "Séance longue et exigeante, visée autour de 16 min. Garde une allure régulière : tu es bon en course, c'est ton atout.",
+  "pieges": [
+   "Ne cours pas trop vite au premier tour : les sauts te coûteront cher.",
+   "Descends du box en marchant pour protéger tes tendons d'Achille.",
+   "Découpe les 30 répétitions en séries courtes dès le début."
+  ]
+ },
+ "bench-linda": {
+  "format": "Tu fais un schéma qui descend de 10 à 1 répétition : tu fais d'abord 10 répétitions de chaque exercice, puis 9, puis 8, jusqu'à 1. Ton score est ton temps total.",
+  "deroule": [
+   "Tour 1 : 10 soulevés de terre, 10 développés couché, 10 épaulés.",
+   "Tour 2 : 9 de chaque, dans le même ordre.",
+   "Continue ainsi : 8, 7, 6, 5, 4, 3, 2, puis 1 de chaque.",
+   "Cela fait 55 répétitions de chaque mouvement, 165 au total.",
+   "Arrête le chrono après l'épaulé du dernier tour."
+  ],
+  "charges": "Soulevé de terre : 1,5 x ton poids de corps. Développé couché : ton poids de corps. Épaulé : 0,75 x ton poids de corps.",
+  "objectif": "Séance de force-endurance, visée autour de 12 min. Les charges sont lourdes, donc les premiers tours demandent de la maîtrise.",
+  "pieges": [
+   "Prépare les barres à l'avance pour ne pas perdre de temps à changer les disques.",
+   "Ne te précipite pas sur les gros tours du début : garde de la marge.",
+   "Fais des pauses courtes mais complètes si la technique se dégrade."
+  ]
+ },
+ "bench-lynne": {
+  "format": "Tu fais 5 tours où tu cherches le maximum de répétitions à chaque exercice, avec du repos entre les efforts. Ton score est le total de répétitions.",
+  "deroule": [
+   "Fais un maximum de développés couché à ton poids de corps, jusqu'à l'échec.",
+   "Repose-toi le temps qu'il faut, puis fais un maximum de tractions.",
+   "Repose-toi encore, puis recommence : c'est le tour 2.",
+   "Fais 5 tours au total.",
+   "Additionne toutes tes répétitions (développés couché + tractions)."
+  ],
+  "charges": "Barre chargée à ton poids de corps pour le développé couché.",
+  "objectif": "C'est un test de force-endurance, pas un test de vitesse. L'objectif est de battre ton total à chaque nouvelle tentative.",
+  "pieges": [
+   "Garde un partenaire ou des sécurités pour le développé couché à l'échec.",
+   "Ne vide pas tout au premier tour : vise un nombre régulier sur les 5 tours.",
+   "Compte seulement les répétitions propres (bras tendus en haut, menton au-dessus de la barre)."
+  ]
+ },
+ "bench-mary": {
+  "format": "Tu fais un maximum de tours complets en 20 minutes. Ton score est le nombre de tours plus les répétitions du tour en cours.",
+  "deroule": [
+   "Fais 5 pompes en équilibre sur les mains (tête qui touche le sol, pieds au mur).",
+   "Fais 10 squats sur une jambe (5 par jambe, en alternant).",
+   "Fais 15 tractions.",
+   "Recommence sans pause imposée, jusqu'à la fin des 20 minutes.",
+   "Note tes tours complets et les répétitions du tour interrompu."
+  ],
+  "charges": "Poids du corps uniquement. Pistol : squat sur une jambe, l'autre jambe tendue devant.",
+  "objectif": "Séance de gymnastique longue, avec un stimulus modéré mais continu. Garde un rythme que tu peux tenir 20 minutes.",
+  "pieges": [
+   "Ne casse pas tes épaules sur les pompes en équilibre : fractionne tôt (2 + 3).",
+   "Si le pistol est trop dur, utilise une assistance (banc, sangle) plutôt que de négliger l'amplitude.",
+   "Évite d'aller à l'échec sur les tractions dès les premiers tours."
+  ]
+ },
+ "bench-nancy": {
+  "format": "Tu fais 5 tours de deux exercices, le plus vite possible. Ton score est ton temps total.",
+  "deroule": [
+   "Cours 400 m (un tour de piste).",
+   "Enchaîne 15 squats barre tendue au-dessus de la tête, à 43 kg : tu descends en squat avec les bras verrouillés.",
+   "Reviens courir 400 m.",
+   "Fais 5 tours au total (2 km de course et 75 squats)."
+  ],
+  "charges": "Barre à 43 kg pour les squats. 400 m de course par tour.",
+  "objectif": "Séance courte et dure, visée autour de 5 à 10 minutes selon ton niveau en mobilité. Cours à une allure maîtrisée pour garder tes jambes pour les squats.",
+  "pieges": [
+   "Ne sprinte pas la première course : tes épaules et tes cuisses vont brûler.",
+   "Garde la barre bien alignée au-dessus de tes talons, bras verrouillés.",
+   "Prends une charge plus légère si tu ne tiens pas le squat profond."
+  ]
+ },
+ "bench-nastygirls": {
+  "format": "Tu fais 3 tours de trois exercices, le plus vite possible. Ton score est ton temps total.",
+  "deroule": [
+   "Fais 50 squats au poids du corps (cuisses sous l'horizontale).",
+   "Fais 7 muscles-up : tu te tractes aux anneaux, tu passes au-dessus, puis tu pousses en dips.",
+   "Fais 10 épaulés debout depuis les cuisses (la barre part des cuisses jusqu'aux épaules) à 61 kg.",
+   "Fais 3 tours au total."
+  ],
+  "charges": "Barre à 61 kg pour les épaulés. Anneaux (ou barre) pour les muscles-up.",
+  "objectif": "Séance technique, visée autour de 11 min. Préserve tes forces pour les muscles-up, qui font la différence.",
+  "pieges": [
+   "Ne gaspille pas d'énergie sur les squats : fais-les en séries de 10 ou 25.",
+   "Fractionne les muscles-up (3 + 4) si besoin.",
+   "Si le muscle-up n'est pas acquis, remplace-le par une version plus facile (traction + dips séparés)."
+  ]
+ },
+ "bench-nicole": {
+  "format": "Tu fais un maximum de tours en 20 minutes. Ton score est le nombre de tours, plus les tractions du tour en cours.",
+  "deroule": [
+   "Cours 400 m.",
+   "Enchaîne un maximum de tractions d'affilée (sans lâcher la barre trop longtemps).",
+   "Recommence : 400 m de course puis un max de tractions.",
+   "Continue jusqu'à la fin des 20 minutes.",
+   "Note ton nombre de tours et le total de tractions."
+  ],
+  "charges": "Poids du corps. Course de 400 m par tour.",
+  "objectif": "Séance mixte course et force-endurance, avec un effort régulier pendant 20 minutes. Fais un nombre de tractions que tu peux répéter à chaque tour.",
+  "pieges": [
+   "N'épuise pas tes bras dès le premier tour : fixe un nombre cible par tour.",
+   "Ne cours pas à fond : ton rythme de triathlète est un atout.",
+   "Compte seulement les tractions complètes (menton au-dessus de la barre)."
+  ]
+ },
+ "hero-abbate": {
+  "format": "Tu fais tout dans l'ordre, le plus vite possible. Ton score est ton temps total.",
+  "deroule": [
+   "Cours 1 mile (environ 1,6 km).",
+   "Fais 21 épaulés-jetés : tu montes la barre du sol aux épaules, puis tu la pousses au-dessus de la tête.",
+   "Cours 800 m.",
+   "Fais de nouveau 21 épaulés-jetés.",
+   "Termine par 1 mile de course."
+  ],
+  "charges": "Charge non précisée dans le texte : choisis une barre que tu peux enchaîner en séries de 5 à 7 (par exemple 50 à 60 kg). Course : 1,6 km, 800 m, 1,6 km.",
+  "objectif": "Séance longue en hommage, visée autour de 22 min. Ton profil de triathlète te sert : cours à un rythme régulier et garde de l'énergie pour les barres.",
+  "pieges": [
+   "Ne cours pas trop vite au départ : les jambes seront lourdes pour les épaulés.",
+   "Choisis une charge que tu peux fractionner en peu de pauses.",
+   "Garde le dos droit à chaque épaulé quand tu fatigues."
+  ]
+ },
+ "hero-adambrown": {
+  "format": "Tu fais 2 tours de 7 exercices, le plus vite possible. Ton score est ton temps total.",
+  "deroule": [
+   "Fais 24 soulevés de terre.",
+   "Fais 24 sauts sur box.",
+   "Fais 24 lancers de médecine-ball au mur.",
+   "Fais 24 développés couché.",
+   "Refais 24 sauts sur box, puis 24 lancers de médecine-ball.",
+   "Termine par 24 épaulés (barre du sol aux épaules).",
+   "Recommence tout pour le tour 2."
+  ],
+  "charges": "Charges non précisées dans le texte : choisis des barres que tu peux fractionner en grosses séries. Box à 61 cm en repère, médecine-ball de 9 kg.",
+  "objectif": "Séance longue de force-endurance, visée autour de 17 min. Garde un rythme constant et ne te vide pas sur le premier tour.",
+  "pieges": [
+   "Ne pars pas trop vite : il y a 336 répétitions en tout.",
+   "Choisis des charges réalistes pour éviter les longues pauses.",
+   "Descends du box en marchant pour ménager tes tendons."
+  ]
+ },
+ "hero-adrian": {
+  "format": "Tu fais 7 tours de 4 exercices, le plus vite possible. Ton score est ton temps total.",
+  "deroule": [
+   "Fais 3 roulades avant (tu roules sur le dos, par-dessus l'épaule, et tu te relèves).",
+   "Fais 5 montées au mur (tu pars en appui sur le sol, face au mur, et tu montes les pieds sur le mur en marchant jusqu'à toucher le mur avec la poitrine).",
+   "Fais 7 pointes de pieds à la barre : suspendu, tu lèves les pieds jusqu'à toucher la barre.",
+   "Fais 9 sauts sur box.",
+   "Recommence jusqu'à 7 tours."
+  ],
+  "charges": "Box à 61 cm en repère (hauteur non précisée dans le texte).",
+  "objectif": "Séance rapide et technique, visée autour de 11 min. Reste fluide d'un exercice à l'autre.",
+  "pieges": [
+   "Ne fais pas les roulades trop vite : garde la nuque protégée.",
+   "Fractionne les pointes de pieds à la barre tôt (4 + 3) pour garder la prise.",
+   "Fais attention à ne pas perdre ton équilibre à la montée au mur quand tu fatigues."
+  ]
+ },
+ "hero-alec": {
+  "format": "Tu fais tout le travail dans l'ordre, le plus vite possible. Ton score est le temps total quand tu termines la dernière répétition.",
+  "deroule": [
+   "Partie 1, 3 tours : 8 burpees (tu te couches au sol, tu te relèves, tu sautes), 28 squats sans charge, 9 pompes.",
+   "Partie 2 : 1 000 m de course.",
+   "Partie 2 : 25 levers de sac de sable du sol jusqu'à l'épaule. Tu alternes l'épaule à chaque répétition.",
+   "Partie 2 : 1 000 m de course.",
+   "Partie 3, 5 tours : 10 soulevés de terre (barre du sol jusqu'à debout), 14 sauts sur une boîte, 10 burpees."
+  ],
+  "charges": "Charges non précisées. Soulevés de terre : une barre que tu sais enchaîner (environ 60 à 80 kg). Boîte : 60 cm (24 pouces). Sac de sable : un poids que tu peux monter 25 fois sans t'arrêter.",
+  "objectif": "Cette séance est longue (environ 17 min) et mélange gymnastique, course et force. Pars à un rythme que tu pourrais tenir 20 minutes, surtout sur la partie 1.",
+  "pieges": [
+   "Ne pars pas trop vite sur les burpees de la partie 1. Les 5 tours de la fin sont encore longs.",
+   "Fais les 2 courses à ton allure d'endurance. Tu es triathlète, c'est ton point fort, mais ne te vide pas.",
+   "Sur les soulevés de terre, garde le dos plat même quand tu es fatigué."
+  ]
+ },
+ "hero-alexander": {
+  "format": "5 tours, le plus vite possible. Ton score est le temps total.",
+  "deroule": [
+   "Tour 1 : 31 squats avec la barre posée sur les épaules, puis 12 épaulés debout (tu montes la barre du sol aux épaules en un mouvement, sans descendre sous la parallèle).",
+   "Tours 2 à 5 : même chose.",
+   "Total : 155 squats et 60 épaulés.",
+   "Découpe les 31 squats en séries de 10 ou 11, avec de courtes pauses."
+  ],
+  "charges": "Charges habituelles pour un homme : squats 61 kg, épaulés 80 kg.",
+  "objectif": "C'est une séance de jambes et de souffle, d'environ 12 min. Garde un rythme régulier : les squats te grillent les cuisses avant les épaulés.",
+  "pieges": [
+   "Ne fais pas les 31 squats d'un seul bloc : tu auras les jambes en feu pour les épaulés.",
+   "Sur les épaulés, tire avec les hanches et pas seulement avec les bras.",
+   "Garde chaque tour à peu près à la même durée."
+  ]
+ },
+ "hero-andy": {
+  "format": "Une longue série de mouvements à enchaîner dans l'ordre, le plus vite possible. Ton score est le temps total.",
+  "deroule": [
+   "25 thrusters : un squat avec la barre devant les épaules, puis tu pousses la barre au-dessus de la tête en te relevant.",
+   "50 sauts sur une boîte.",
+   "75 soulevés de terre.",
+   "Course de 1,5 mile, soit environ 2,4 km.",
+   "75 soulevés de terre.",
+   "50 sauts sur la boîte.",
+   "25 thrusters pour finir."
+  ],
+  "charges": "Charges non précisées. Habituellement : thrusters environ 20 kg, soulevés de terre environ 61 kg, boîte à 60 cm (24 pouces).",
+  "objectif": "C'est une séance très longue (environ 55 min), à faire en endurance. Garde-toi assez pour la course et pour la descente de la fin.",
+  "pieges": [
+   "Ne pars pas trop fort sur les 25 premiers thrusters.",
+   "Découpe les 75 soulevés de terre en séries de 15 avec de courtes pauses.",
+   "Descends de la boîte en marchant pour protéger tes tendons d'Achille."
+  ]
+ },
+ "hero-arnie": {
+  "format": "Tu travailles avec une seule kettlebell (boule de fonte à poignée), le plus vite possible. Ton score est le temps total.",
+  "deroule": [
+   "21 relevés turcs bras droit : tu passes de couché à debout, kettlebell tendue au-dessus de toi.",
+   "50 swings : tu balances la kettlebell à deux mains, des jambes jusqu'à hauteur de poitrine.",
+   "21 squats avec la kettlebell tendue au-dessus de la tête, bras gauche.",
+   "50 swings.",
+   "21 squats kettlebell au-dessus de la tête, bras droit.",
+   "50 swings.",
+   "21 relevés turcs bras gauche pour finir."
+  ],
+  "charges": "Une kettlebell de 32 kg (70 livres), la charge habituelle pour un homme.",
+  "objectif": "C'est une séance de contrôle et de force (environ 12 min). Reste solide et stable : le bras tendu doit rester bien verrouillé.",
+  "pieges": [
+   "Garde le regard sur la kettlebell pendant le relevé turc.",
+   "Sur les swings, le mouvement vient des hanches, pas des bras.",
+   "Si le bras fatigue, pose la kettlebell quelques secondes plutôt que de risquer l'épaule."
+  ]
+ },
+ "hero-artie": {
+  "format": "AMRAP signifie « un maximum de tours possible » en 20 minutes. Ton score est le nombre de tours complets, plus les répétitions du tour en cours.",
+  "deroule": [
+   "5 tractions (tu montes le menton au-dessus de la barre).",
+   "10 pompes.",
+   "15 squats sans charge.",
+   "5 tractions.",
+   "10 thrusters : squat avec la barre devant les épaules, puis poussée au-dessus de la tête.",
+   "Tu recommences au début jusqu'à la fin des 20 minutes, et tu notes tes tours."
+  ],
+  "charges": "Thrusters à 43 kg (95 livres), la charge habituelle pour un homme.",
+  "objectif": "Cherche un rythme régulier sur 20 minutes. Vise environ 1 tour toutes les 2 minutes, pour 8 à 10 tours.",
+  "pieges": [
+   "Ne vide pas les bras sur les premières tractions : tu en as 10 par tour.",
+   "Fais des pauses courtes et prévues d'avance, plutôt qu'un effondrement à la fin.",
+   "Compte bien tes tours, par exemple avec des traits sur un papier."
+  ]
+ },
+ "hero-badger": {
+  "format": "3 tours, le plus vite possible. Ton score est le temps total.",
+  "deroule": [
+   "30 épaulés en squat : tu montes la barre du sol aux épaules en descendant en squat complet, puis tu te relèves.",
+   "30 tractions.",
+   "Course de 800 m.",
+   "Tu recommences 2 fois : 3 tours en tout.",
+   "Découpe les tractions en séries de 8 à 10 pour ne pas te bloquer les avant-bras."
+  ],
+  "charges": "Épaulés à 43 kg (95 livres), la charge habituelle pour un homme.",
+  "objectif": "C'est une séance courte et intense (environ 9 min), avec la course comme respiration. Garde de l'énergie pour les tractions du 3e tour.",
+  "pieges": [
+   "Ne pars pas en sprint sur la course : elle vient juste après les tractions.",
+   "Si tu dois faire des tractions assistées, choisis une version que tu peux tenir 30 fois par tour.",
+   "Sur les épaulés, reste rapide dans la descente en squat."
+  ]
+ },
+ "hero-barraza": {
+  "format": "AMRAP signifie « un maximum de tours possible » en 18 minutes. Ton score est le nombre de tours complets, plus les répétitions du tour en cours.",
+  "deroule": [
+   "Course de 200 m.",
+   "9 soulevés de terre lourds.",
+   "6 burpees muscle-ups : un burpee, puis un saut pour attraper la barre et un muscle-up (traction puis passage au-dessus de la barre).",
+   "Tu recommences au début jusqu'à la fin des 18 minutes."
+  ],
+  "charges": "Soulevés de terre à 125 kg (275 livres), la charge habituelle pour un homme.",
+  "objectif": "Ce n'est pas un sprint : la charge est lourde et les muscle-ups coûtent cher. Vise un rythme constant, sans trop de pauses.",
+  "pieges": [
+   "Si les muscle-ups ne passent pas, remplace-les par des tractions poitrine à la barre : ce n'est pas une honte.",
+   "Ne gaspille pas d'énergie sur la course de 200 m.",
+   "Prends 2 ou 3 secondes de repos entre les soulevés de terre pour rester propre."
+  ]
+ },
+ "hero-bell": {
+  "format": "3 tours, le plus vite possible. Ton score est le temps total.",
+  "deroule": [
+   "21 soulevés de terre : la barre monte du sol jusqu'à debout.",
+   "15 tractions.",
+   "9 squats avec la barre devant les épaules.",
+   "Tu recommences 2 fois : 3 tours en tout.",
+   "Découpe les soulevés de terre en 2 séries de 10 et 11."
+  ],
+  "charges": "Soulevés de terre et squats avant à 84 kg (185 livres), la charge habituelle pour un homme.",
+  "objectif": "C'est une séance courte et lourde (environ 7 min). Les jambes et le dos travaillent fort, donc surveille ta technique.",
+  "pieges": [
+   "Ne laisse pas le dos s'arrondir sur les soulevés de terre quand tu fatigues.",
+   "Sur les squats avant, garde les coudes hauts.",
+   "Fais tes tractions en séries courtes pour ne pas griller les avant-bras."
+  ]
+ },
+ "hero-bert": {
+  "format": "Tu enchaînes toutes les étapes dans l'ordre, sans repasser dessus, le plus vite possible. Ton score est le temps total.",
+  "deroule": [
+   "50 burpees : tu te couches au sol, tu te relèves, tu sautes.",
+   "Course de 400 m.",
+   "100 pompes.",
+   "Course de 400 m.",
+   "150 fentes marchées : tu avances en alternant les jambes.",
+   "Course de 400 m.",
+   "200 squats sans charge.",
+   "Course de 400 m.",
+   "150 fentes marchées.",
+   "Course de 400 m.",
+   "100 pompes.",
+   "Course de 400 m.",
+   "50 burpees pour finir. Au total, tu cours 6 × 400 m, soit 2,4 km."
+  ],
+  "charges": "",
+  "objectif": "C'est une séance très longue (environ 26 min), faite surtout au poids du corps. Garde un rythme d'endurance dès le départ, comme sur un triathlon.",
+  "pieges": [
+   "Les 50 premiers burpees sont piégeux : si tu pars trop vite, tu le paieras sur tout le reste.",
+   "Fais des séries courtes sur les pompes (par 10 ou 20), avec des pauses prévues.",
+   "Reste régulier sur les 6 courses de 400 m au lieu de sprinter."
+  ]
+ },
+ "hero-bigsexy": {
+  "format": "5 tours, le plus vite possible. Ton score est le temps total.",
+  "deroule": [
+   "6 soulevés de terre.",
+   "6 burpees.",
+   "5 épaulés : tu montes la barre du sol aux épaules en un mouvement.",
+   "5 tractions poitrine à la barre : tu montes la poitrine jusqu'à toucher la barre.",
+   "4 thrusters : squat avec la barre devant les épaules, puis poussée au-dessus de la tête.",
+   "4 muscles-ups : traction puis passage au-dessus de la barre (ou des anneaux).",
+   "Tu recommences 4 fois : 5 tours en tout."
+  ],
+  "charges": "Charges non précisées. Prends une barre unique et pas trop lourde (par exemple 60 à 80 kg) pour que les 3 mouvements de barre s'enchaînent bien.",
+  "objectif": "Les tours sont courts mais très variés, et l'ensemble dure environ 9 min. Vise un rythme soutenu et garde les muscle-ups pour des séries rapides.",
+  "pieges": [
+   "Si les muscle-ups sont trop difficiles, remplace-les par des tractions poitrine à la barre plus des dips (pompes sur barre parallèle).",
+   "Garde la même barre pour les soulevés, les épaulés et les thrusters, pour ne pas perdre de temps.",
+   "Respire pendant les burpees : tu as 4 mouvements exigeants juste après."
+  ]
+ },
+ "hero-blake": {
+  "format": "4 tours, le plus vite possible. Ton score est le temps total.",
+  "deroule": [
+   "Fentes marchées avec un poids tenu au-dessus de la tête : 100 pieds, soit environ 30 m.",
+   "30 sauts sur une boîte.",
+   "20 wall balls : tu lances un ballon lourd contre un mur, au-dessus d'une cible, après un squat.",
+   "10 pompes tête en bas : tu es en équilibre sur les mains, pieds contre le mur.",
+   "Tu recommences 3 fois : 4 tours en tout."
+  ],
+  "charges": "Charges non précisées. Habituellement : poids de 20 kg pour les fentes, boîte à 60 cm (24 pouces), ballon de 9 kg.",
+  "objectif": "C'est une séance d'environ 13 min qui demande de l'équilibre et de la force dans les épaules. Reste calme sur les fentes et les pompes tête en bas.",
+  "pieges": [
+   "Si les pompes tête en bas sont trop dures, fais des pompes pieds sur une boîte ou avec moins d'amplitude.",
+   "Garde les bras bien verrouillés sur les fentes avec le poids au-dessus de la tête.",
+   "Descends de la boîte en marchant pour économiser tes jambes."
+  ]
+ },
+ "hero-bowen": {
+  "format": "3 tours, le plus vite possible. Ton score est le temps total.",
+  "deroule": [
+   "Course de 800 m.",
+   "7 soulevés de terre.",
+   "10 burpees avec traction : tu fais un burpee, puis une traction à la barre.",
+   "14 thrusters avec une kettlebell (boule de fonte à poignée) tenue à un bras : 7 par bras. C'est un squat, puis une poussée au-dessus de la tête.",
+   "20 sauts sur une boîte.",
+   "Tu recommences 2 fois : 3 tours en tout."
+  ],
+  "charges": "Charges non précisées. Habituellement : soulevés de terre lourds (environ 125 kg), kettlebell de 24 kg, boîte à 60 cm (24 pouces).",
+  "objectif": "C'est une séance d'environ 21 min où la course sert de repère de rythme. Garde-toi de l'énergie pour les burpees avec traction.",
+  "pieges": [
+   "Ne fais pas les 800 m trop vite : le reste du tour est très costaud.",
+   "Change de bras à mi-chemin sur les thrusters, avec le même contrôle des deux côtés.",
+   "Descends de la boîte en marchant, pas en sautant."
+  ]
+ },
+ "bench-barbara": {
+  "format": "5 tours, chacun à faire le plus vite possible, avec 3 minutes de repos complet entre deux tours. Le score est ton temps de travail sur chaque tour, ou le total des 5 tours sans compter les repos.",
+  "deroule": [
+   "Dans chaque tour, enchaîne dans cet ordre : 20 tractions, 30 pompes, 40 relevés de buste (abdos), 50 squats au poids du corps.",
+   "Au dernier squat, arrête ton chrono du tour.",
+   "Repose-toi 3 minutes complètes : bois, respire, ne t'étire pas trop.",
+   "Repars pour le tour suivant, jusqu'à 5 tours.",
+   "Note le temps de chaque tour et le total pour comparer la prochaine fois."
+  ],
+  "charges": "Poids du corps uniquement. Pas de charge.",
+  "objectif": "C'est un test d'endurance musculaire : les 3 minutes de repos te laissent donner le même niveau à chaque tour. Vise des tours réguliers, par exemple 4 à 5 minutes chacun.",
+  "pieges": [
+   "Partir trop vite sur les tractions au tour 1 : tu paieras aux tours 4 et 5.",
+   "Fractionne tes séries dès le début (ex. 5 tractions x 4) avant d'être cuit.",
+   "Pompes : poitrine au sol, corps gainé, pas de bassin qui s'affaisse."
+  ]
+ },
+ "bench-chelsea": {
+  "format": "Toutes les minutes pile (EMOM) pendant 30 minutes, tu fais le même petit circuit puis tu te reposes jusqu'à la minute suivante. Le score est le nombre de minutes réussies sur 30 : si tu n'arrives pas à finir dans la minute, le test s'arrête.",
+  "deroule": [
+   "Au top de chaque minute, démarre.",
+   "Fais 5 tractions, puis 10 pompes, puis 15 squats au poids du corps.",
+   "Ce qui reste de la minute est ton repos.",
+   "À la minute suivante, recommence, jusqu'à la 30e minute.",
+   "Si tu rates une minute, le test est fini : note la minute où tu t'arrêtes."
+  ],
+  "charges": "Poids du corps uniquement. Pas de charge.",
+  "objectif": "Tenir 30 minutes sans craquer, avec un rythme constant. Le but est de finir en gardant 15 à 20 secondes de repos dans la minute, au moins au début.",
+  "pieges": [
+   "Aller trop vite au début : tu grignotes ton repos et tu le regrettes vers la minute 20.",
+   "Prendre des tractions trop dures (il faut qu'elles restent fluides, pas de série à bout de bras).",
+   "Bâcler les mouvements pour gagner du temps : ils doivent rester complets."
+  ]
+ },
+ "bench-cindy": {
+  "format": "AMRAP : faire un maximum de tours possible en 20 minutes. Le score est le nombre de tours complets, plus les répétitions du tour en cours.",
+  "deroule": [
+   "Lance un chrono de 20 minutes.",
+   "Un tour : 5 tractions, 10 pompes, 15 squats au poids du corps.",
+   "Enchaîne les tours sans pause imposée, à ton rythme.",
+   "Quand le chrono sonne, arrête-toi et compte : tours complets + répétitions du tour en cours.",
+   "Exemple : 18 tours + 5 tractions + 10 pompes = 18 tours et 15 répétitions."
+  ],
+  "charges": "Poids du corps uniquement. Pas de charge.",
+  "objectif": "Garder un rythme régulier pendant 20 minutes, sans à-coups. Un niveau intermédiaire vise souvent 14 à 20 tours.",
+  "pieges": [
+   "Partir en sprint et s'effondrer à la minute 10 : choisis un rythme tenable.",
+   "Faire des pauses longues : mieux vaut des petites pauses fréquentes (ex. 3 tractions + 2) que de s'arrêter net.",
+   "Compter les tours : note-les sur une feuille ou coche chaque tour."
+  ]
+ },
+ "bench-diane": {
+  "format": "21-15-9 : tu fais 21 répétitions de chaque mouvement, puis 15, puis 9, le plus vite possible. Le score est ton temps total.",
+  "deroule": [
+   "Série 1 : 21 soulevés de terre à 102 kg, puis 21 pompes en équilibre sur les mains.",
+   "Série 2 : 15 soulevés de terre à 102 kg, puis 15 pompes en équilibre sur les mains.",
+   "Série 3 : 9 soulevés de terre à 102 kg, puis 9 pompes en équilibre sur les mains.",
+   "Arrête le chrono à la dernière pompe."
+  ],
+  "charges": "Soulevé de terre : 102 kg. Pompes en équilibre sur les mains : poids du corps, tête qui touche le sol (ou un tapis) puis bras tendus.",
+  "objectif": "Un test de force avec des mouvements lourds et exigeants pour les épaules. Vise entre 8 et 12 minutes selon tes pompes en équilibre, sans casser la série du soulevé de terre.",
+  "pieges": [
+   "Fatiguer le dos avec un soulevé de terre mal gainé : dos plat, barre proche du corps.",
+   "Faire trop de pompes d'un coup : fractionne dès que ça ralentit, avant l'échec.",
+   "Si les pompes en équilibre sont trop dures, adapte avec des pompes en V (fesses en l'air) ou en appui sur un box, plutôt que de t'effondrer."
+  ]
+ },
+ "bench-elizabeth": {
+  "format": "21-15-9 le plus vite possible : 21 répétitions de chaque mouvement, puis 15, puis 9. Le score est ton temps total.",
+  "deroule": [
+   "Série 1 : 21 épaulés à 61 kg (barre du sol jusqu'aux épaules), puis 21 dips aux anneaux.",
+   "Série 2 : 15 épaulés à 61 kg, puis 15 dips aux anneaux.",
+   "Série 3 : 9 épaulés à 61 kg, puis 9 dips aux anneaux.",
+   "Arrête le chrono à la dernière répétition de dips."
+  ],
+  "charges": "Épaulé : 61 kg. Dips aux anneaux : poids du corps (descends jusqu'à ce que les épaules passent sous les coudes, puis tends les bras).",
+  "objectif": "Un format court et intense qui mélange force et technique. Vise environ 8 à 12 minutes avec des séries fractionnées dès qu'il le faut.",
+  "pieges": [
+   "Partir trop vite : les dips aux anneaux sont ce qui coûte le plus cher.",
+   "Épaulé : ne tire pas avec les bras, finis par l'extension des jambes et des hanches.",
+   "Dips : sans maîtrise, les anneaux bougent et fatiguent les épaules. Garde-les proches du corps."
+  ]
+ },
+ "bench-eva": {
+  "format": "5 tours à faire le plus vite possible. Le score est ton temps total pour les 5 tours.",
+  "deroule": [
+   "Tour 1 : 800 m de course, puis 30 balancers de kettlebell à 32 kg, puis 30 tractions.",
+   "Tour 2 : même chose.",
+   "Tour 3 : même chose.",
+   "Tour 4 : même chose.",
+   "Tour 5 : même chose, puis arrête le chrono à la dernière traction.",
+   "Total : 4 km de course, 150 balancers, 150 tractions."
+  ],
+  "charges": "Course : 800 m par tour. Kettlebell (boule de fonte à poignée) : 32 kg. Tractions : poids du corps.",
+  "objectif": "Un long format d'endurance où la course sert de respiration entre les efforts. Vise environ 45 à 60 minutes en gardant un rythme maîtrisé dès le premier tour.",
+  "pieges": [
+   "Courir trop vite au tour 1 : tu auras les jambes et le souffle coupés pour les tractions.",
+   "Fractionne les 30 tractions en séries courtes dès le début (ex. 10-10-5-5).",
+   "Balancers : l'élan vient des hanches, les bras ne font que guider la kettlebell."
+  ]
+ },
+ "bench-fightgonebad": {
+  "format": "3 tours de 5 postes. Tu fais un maximum de répétitions pendant 1 minute à chaque poste, puis tu passes au suivant sans repos. Le score est le total de répétitions (calories au rameur) sur tous les postes et tous les tours.",
+  "deroule": [
+   "Poste 1 (1 min) : lancers de médecine-ball au mur (wall ball) à 9 kg, un max de répétitions.",
+   "Poste 2 (1 min) : soulevé de terre sumo + tirage menton à 34 kg, un max.",
+   "Poste 3 (1 min) : sauts sur un box de 51 cm, un max.",
+   "Poste 4 (1 min) : développé avec impulsion des jambes à 34 kg, un max.",
+   "Poste 5 (1 min) : rameur, un max de calories.",
+   "Après le poste 5, repos 1 minute complète, puis recommence au poste 1. Fais 3 tours en tout (environ 17 minutes avec les repos).",
+   "Additionne tout à la fin : c'est ton score."
+  ],
+  "charges": "Wall ball : 9 kg. Soulevé sumo + tirage menton : 34 kg. Box : 51 cm. Développé avec impulsion : 34 kg. Rameur : en calories.",
+  "objectif": "Un effort intense en rafales, pour pousser fort pendant 1 minute puis changer d'activité. Vise un rythme soutenu mais régulier : ne t'arrête que si tu ne peux vraiment plus.",
+  "pieges": [
+   "Se sprinter au poste 1 et être cuit au poste 3 : garde un rythme égal sur les 5 postes.",
+   "Compter les répétitions faites en dehors de la minute ou mal exécutées (non comptées).",
+   "Changer de poste trop lentement : prépare ton matériel avant la fin de chaque minute."
+  ]
+ },
+ "bench-filthyfifty": {
+  "format": "Le plus vite possible : tu enchaînes 10 mouvements, 50 répétitions de chacun, dans l'ordre. Le score est ton temps total.",
+  "deroule": [
+   "1. 50 sauts sur box (61 cm).",
+   "2. 50 tractions sautées (avec l'aide de l'élan des jambes).",
+   "3. 50 balancers de kettlebell à 16 kg.",
+   "4. 50 fentes marchées.",
+   "5. 50 genoux aux coudes (suspendu à la barre).",
+   "6. 50 développés avec impulsion des jambes à 20 kg.",
+   "7. 50 extensions lombaires (sur banc ou au sol).",
+   "8. 50 lancers de médecine-ball au mur (wall ball) à 9 kg.",
+   "9. 50 burpees (pompe au sol puis saut).",
+   "10. 50 doubles passages de corde (la corde passe deux fois sous les pieds à chaque saut)."
+  ],
+  "charges": "Box : 61 cm. Kettlebell : 16 kg. Développé avec impulsion : 20 kg. Wall ball : 9 kg. Autres mouvements : poids du corps.",
+  "objectif": "Un très long format d'endurance qui sollicite tout le corps. Vise environ 25 à 35 minutes. Fractionne chaque mouvement en séries de 10 à 15 pour éviter l'épuisement.",
+  "pieges": [
+   "Foncer sur les premiers mouvements : 500 répétitions au total, c'est un marathon, pas un sprint.",
+   "Doubles passages de corde en dernier : si tu n'es pas à l'aise, fais des passages simples (comptés x2) plutôt que de bloquer.",
+   "Garde les mouvements propres même quand la fatigue arrive."
+  ]
+ },
+ "bench-fran": {
+  "format": "21-15-9 le plus vite possible : 21 répétitions de chaque mouvement, puis 15, puis 9. Le score est ton temps total.",
+  "deroule": [
+   "Série 1 : 21 thrusters (squat avant puis poussée de la barre au-dessus de la tête) à 43 kg, puis 21 tractions.",
+   "Série 2 : 15 thrusters à 43 kg, puis 15 tractions.",
+   "Série 3 : 9 thrusters à 43 kg, puis 9 tractions.",
+   "Arrête le chrono à la dernière traction."
+  ],
+  "charges": "Thruster : 43 kg. Tractions : poids du corps.",
+  "objectif": "Un sprint très intense. Vise 3 à 6 minutes selon ton niveau. Les séries sont courtes : réduis les pauses au maximum.",
+  "pieges": [
+   "Partir à fond sur les thrusters et ne plus pouvoir tirer : garde de la réserve pour les tractions.",
+   "Poser la barre trop souvent : fais de petites pauses debout barre sur les épaules, pas au sol.",
+   "Tractions : fractionne dès que le bras fatigue (ex. 7-7-7), avant le blocage complet."
+  ]
+ },
+ "bench-grace": {
+  "format": "Le plus vite possible : tu fais 30 épaulés-jetés à la suite. Le score est ton temps total.",
+  "deroule": [
+   "Barre au sol, 61 kg.",
+   "Épaulé : monte la barre du sol jusqu'aux épaules.",
+   "Jeté : pousse-la au-dessus de la tête, bras tendus, et stabilise.",
+   "Redescends la barre au sol (ou aux épaules puis au sol) et recommence.",
+   "Fais 30 répétitions, puis arrête le chrono."
+  ],
+  "charges": "Barre : 61 kg.",
+  "objectif": "Un sprint de puissance qui doit durer environ 3 à 6 minutes. Les séries sont fractionnées : sois efficace et propre plutôt que rapide et brouillon.",
+  "pieges": [
+   "Partir en série de 10 et s'effondrer ensuite : fais des séries de 5 à 8 avec petites pauses.",
+   "Gaspiller de l'énergie à tirer avec les bras : utilise les jambes et les hanches.",
+   "Barre qui retombe sans contrôle : ça abîme le dos et ralentit."
+  ]
+ },
+ "bench-helen": {
+  "format": "3 tours à faire le plus vite possible. Le score est ton temps total.",
+  "deroule": [
+   "Tour 1 : 400 m de course, puis 21 balancers de kettlebell à 24 kg, puis 12 tractions.",
+   "Tour 2 : même chose.",
+   "Tour 3 : même chose, puis arrête le chrono à la dernière traction."
+  ],
+  "charges": "Course : 400 m par tour. Kettlebell (boule de fonte à poignée) : 24 kg. Tractions : poids du corps.",
+  "objectif": "Un format court et intense qui mélange course et force. Vise environ 10 à 14 minutes. Garde un rythme de course soutenu mais pas maximal.",
+  "pieges": [
+   "Courir trop vite au tour 1 : le souffle manquera pour les balancers.",
+   "Balancers : l'élan vient des hanches, pas des bras.",
+   "Tractions : prévois tes séries à l'avance (ex. 6-6) pour éviter de t'arrêter au hasard."
+  ]
+ },
+ "bench-isabel": {
+  "format": "Le plus vite possible : tu fais 30 arrachés à la suite. Le score est ton temps total.",
+  "deroule": [
+   "Barre au sol, 61 kg.",
+   "Arraché : en un seul mouvement, monte la barre du sol jusqu'au-dessus de la tête, bras tendus.",
+   "Stabilise, puis redescends la barre au sol.",
+   "Recommence jusqu'à 30 répétitions.",
+   "Arrête le chrono à la dernière."
+  ],
+  "charges": "Barre : 61 kg.",
+  "objectif": "Un sprint technique et explosif : vise environ 3 à 6 minutes. Le but est de rester efficace et précis, pas de forcer.",
+  "pieges": [
+   "Tirer trop avec les bras : c'est l'extension des hanches qui lance la barre.",
+   "Partir en série de 10 et craquer : fais des séries de 3 à 5 avec petites pauses.",
+   "Barre qui s'éloigne du corps : garde-la près de toi pendant toute la montée."
+  ]
+ },
+ "hero-bradley": {
+  "format": "Pour le temps : tu fais 10 tours d'affilée le plus vite possible. Ton score est le temps total, pauses de 30 secondes comprises.",
+  "deroule": [
+   "Sprint de 100 m à fond.",
+   "10 tractions (menton au-dessus de la barre).",
+   "Re-sprint de 100 m.",
+   "10 burpees (pompe au sol, puis saut avec les mains au-dessus de la tête).",
+   "Repos 30 secondes : le chrono continue pendant la pause.",
+   "Recommence pour 10 tours au total."
+  ],
+  "charges": "Aucune charge. Distance : 100 m par sprint, soit 2 000 m de sprint au total.",
+  "objectif": "Séance courte et très intense, faite de sprints répétés. Vise environ 15 minutes en gardant un rythme que tu peux tenir sur les 10 tours.",
+  "pieges": [
+   "Partir trop vite sur les premiers sprints et exploser dès le tour 5.",
+   "Casser les tractions en trop de petites séries : fais 2 séries maximum.",
+   "Ne pas utiliser les 30 secondes de repos pour reprendre ton souffle."
+  ]
+ },
+ "hero-bradshaw": {
+  "format": "Pour le temps : 10 tours à enchaîner le plus vite possible. Ton score est le temps total.",
+  "deroule": [
+   "Chaque tour commence par 3 pompes en équilibre sur les mains (tête en bas, pieds contre le mur).",
+   "Enchaîne avec 6 soulevés de terre (barre posée au sol, tu la montes jusqu'aux hanches).",
+   "Puis 12 tractions.",
+   "Finis par 24 doubles passages de corde (la corde passe 2 fois sous tes pieds à chaque saut).",
+   "Repose-toi seulement si besoin et reprends le tour suivant, jusqu'à 10 tours."
+  ],
+  "charges": "La charge du soulevé de terre n'est pas précisée : choisis une barre que tu peux monter 6 fois sans te fatiguer le dos, avec les 10 tours en tête.",
+  "objectif": "Séance longue avec 4 mouvements très différents. Vise environ 28 minutes en gardant un rythme régulier du premier au dernier tour.",
+  "pieges": [
+   "Épuiser les épaules dès les premiers tours : fais les pompes en équilibre en séries tranquilles.",
+   "Prendre un soulevé de terre trop lourd, ce qui ruine ensuite les tractions.",
+   "Rater trop de doubles passages : si ça t'arrive, remplace par 48 sauts simples."
+  ]
+ },
+ "hero-brehm": {
+  "format": "Pour le temps : tu fais tout dans l'ordre, une seule fois, le plus vite possible. Ton score est le temps total.",
+  "deroule": [
+   "10 montées à la corde jusqu'à environ 4,5 m (15 pieds) de hauteur.",
+   "20 squats arrière (barre sur les épaules, tu descends puis tu te relèves).",
+   "30 pompes en équilibre sur les mains (tête en bas, pieds contre le mur).",
+   "40 calories au rameur, à finir en dernier."
+  ],
+  "charges": "Corde : 4,5 m de haut. La charge des squats n'est pas précisée : choisis une barre que tu peux enchaîner 20 fois avec peu de pauses.",
+  "objectif": "Séance de volume avec beaucoup de travail des bras et des épaules. Vise environ 7 minutes, mais ce temps dépend beaucoup de ton niveau sur les pompes en équilibre.",
+  "pieges": [
+   "Se fatiguer les bras avec la corde et ne plus pouvoir faire les pompes en équilibre.",
+   "Faire les 30 pompes d'un coup : coupe-les en séries de 5 à 8.",
+   "Partir trop fort au rameur alors que tu es déjà vidé : garde un effort régulier."
+  ]
+ },
+ "hero-brenton": {
+  "format": "Pour le temps : 5 tours à enchaîner le plus vite possible. Ton score est le temps total.",
+  "deroule": [
+   "Marche à quatre pattes (en ours, genoux décollés du sol) sur 30 m (100 pieds).",
+   "Saut en longueur pieds joints (départ à l'arrêt) sur 30 m, en enchaînant les sauts.",
+   "Tous les 5 sauts, tu t'arrêtes et tu fais 3 burpees avant de repartir.",
+   "Quand tu as couvert les 30 m, le tour est fini : recommence pour 5 tours au total."
+  ],
+  "charges": "Aucune charge. Distance : 30 m (100 pieds) par exercice, à chaque tour.",
+  "objectif": "Séance courte, très intense, qui mélange cardio et explosivité. Vise environ 3 minutes en gardant une allure soutenue d'un bout à l'autre.",
+  "pieges": [
+   "Partir trop vite en marche à quatre pattes et finir sans jambes pour les sauts.",
+   "Oublier les 3 burpees après chaque série de 5 sauts : compte à voix haute.",
+   "Faire des sauts très courts pour aller vite, alors que des sauts amples te font avancer plus."
+  ]
+ },
+ "hero-brian": {
+  "format": "Pour le temps : tu fais 3 tours le plus vite possible. Ton score est le temps total.",
+  "deroule": [
+   "Chaque tour commence par 5 montées à la corde jusqu'à environ 4,5 m (15 pieds) de hauteur.",
+   "Enchaîne avec 25 squats arrière (barre sur les épaules, tu descends puis tu te relèves).",
+   "Recommence jusqu'à avoir fait 3 tours."
+  ],
+  "charges": "Corde : 4,5 m de haut. La charge des squats n'est pas précisée : choisis une barre que tu peux enchaîner 25 fois sans te bloquer.",
+  "objectif": "Séance courte, avec des bras fatigués par la corde et des jambes fatiguées par les squats. Vise environ 7 minutes.",
+  "pieges": [
+   "Aller trop vite sur la corde et te fatiguer les bras dès le premier tour.",
+   "Prendre une barre trop lourde : tu ferais des pauses sur les squats.",
+   "Mal utiliser tes jambes sur la corde : elles t'aident à monter, alors serre-la entre tes pieds."
+  ]
+ },
+ "hero-bruck": {
+  "format": "Pour le temps : tu fais 4 tours le plus vite possible. Ton score est le temps total.",
+  "deroule": [
+   "Chaque tour commence par 400 m de course à pied.",
+   "Enchaîne avec 24 squats arrière (barre sur les épaules, tu descends puis tu te relèves).",
+   "Puis 24 jetés (tu montes la barre de tes épaules à bout de bras au-dessus de la tête).",
+   "Recommence jusqu'à avoir fait 4 tours."
+  ],
+  "charges": "Les charges des squats et des jetés ne sont pas précisées : choisis une barre qui te permet de faire 24 répétitions en 2 ou 3 séries.",
+  "objectif": "Séance qui plaît aux triathlètes : de la course, puis de la force en fatigue. Vise environ 18 minutes avec des tours réguliers.",
+  "pieges": [
+   "Courir trop vite sur le premier 400 m : tu auras les jambes lourdes pour les squats.",
+   "Prendre une barre trop lourde pour les jetés et perdre du temps en pauses.",
+   "Ne pas garder le même rythme sur chaque tour."
+  ]
+ },
+ "hero-bulger": {
+  "format": "Pour le temps : tu fais 10 tours le plus vite possible. Ton score est le temps total.",
+  "deroule": [
+   "Chaque tour commence par 150 m de course à pied.",
+   "Enchaîne avec 7 tractions où la poitrine touche la barre.",
+   "Puis 7 squats avant (barre posée sur le haut de la poitrine et les épaules, devant toi).",
+   "Finis par 7 pompes en équilibre sur les mains (tête en bas, pieds contre le mur).",
+   "Recommence jusqu'à avoir fait 10 tours."
+  ],
+  "charges": "La charge des squats avant n'est pas précisée : choisis une barre que tu peux monter 7 fois d'affilée à chaque tour, même fatigué.",
+  "objectif": "Séance longue qui fatigue surtout les épaules et le dos. Vise environ 23 minutes, avec des tours réguliers.",
+  "pieges": [
+   "Épuiser les épaules dès les premiers tours avec les pompes en équilibre.",
+   "Faire des tractions poitrine à la barre trop vite et bâclées : la poitrine doit vraiment toucher la barre.",
+   "Courir les 150 m à fond au lieu de garder une allure tenable."
+  ]
+ },
+ "hero-bull": {
+  "format": "Pour le temps : tu fais 2 tours le plus vite possible. Ton score est le temps total.",
+  "deroule": [
+   "200 doubles passages de corde (la corde passe 2 fois sous tes pieds à chaque saut).",
+   "50 squats barre au-dessus de la tête (barre tenue bras tendus au-dessus de toi pendant tout le squat).",
+   "50 tractions.",
+   "Course de 1 mile, soit environ 1,6 km.",
+   "Recommence pour le deuxième tour."
+  ],
+  "charges": "La charge de la barre n'est pas précisée : choisis une barre légère que tu peux tenir bras tendus sur 50 répétitions. Course : 1 mile (environ 1,6 km).",
+  "objectif": "Séance très longue, qui demande surtout de l'endurance musculaire. Vise environ 26 minutes en gardant un rythme régulier.",
+  "pieges": [
+   "Prendre une barre trop lourde : le squat au-dessus de la tête est exigeant pour les épaules.",
+   "Rater trop de doubles passages : remplace par 400 sauts simples si besoin.",
+   "Partir trop vite sur le premier tour : le deuxième sera plus dur."
+  ]
+ },
+ "hero-buriak": {
+  "format": "AMRAP signifie « autant de tours que possible » dans un temps fixé. Tu as 20 minutes et ton score est le nombre de tours complets plus les répétitions du tour en cours.",
+  "deroule": [
+   "Lance le chrono pour 20 minutes.",
+   "5 épaulés en squat (tu montes la barre du sol jusqu'aux épaules, puis tu fais un squat).",
+   "10 burpees en sautant par-dessus la barre (sauts latéraux pieds joints, de l'autre côté de la barre, à chaque répétition).",
+   "15 tractions.",
+   "Course de 200 m.",
+   "Recommence dans le même ordre jusqu'à la fin des 20 minutes."
+  ],
+  "charges": "La charge de la barre n'est pas précisée : choisis une barre que tu peux monter 5 fois d'affilée sans t'épuiser.",
+  "objectif": "Séance d'endurance où le but est de tenir le rythme pendant 20 minutes. Garde une allure régulière : tes tours doivent durer à peu près le même temps du début à la fin.",
+  "pieges": [
+   "Trop forcer au début et ralentir fortement au bout de 10 minutes.",
+   "Faire les burpees trop vite et mal sauter par-dessus la barre.",
+   "Compter à l'arrêt du chrono : note aussi les répétitions du tour en cours."
+  ]
+ },
+ "hero-cameron": {
+  "format": "Pour le temps : tu fais 10 exercices à la suite, une seule fois, le plus vite possible. Ton score est le temps total.",
+  "deroule": [
+   "50 fentes marchées (un grand pas en avant, genou arrière proche du sol, puis tu changes de jambe).",
+   "25 tractions où la poitrine touche la barre.",
+   "50 sauts sur un box (caisse en bois ou en mousse).",
+   "25 triples passages de corde (la corde passe 3 fois sous tes pieds à chaque saut).",
+   "50 extensions du dos sur un banc (tu relèves le buste, face au sol).",
+   "25 dips aux anneaux (tu descends puis tu te repousses entre deux anneaux).",
+   "50 genoux aux coudes (suspendu à la barre, tu montes les genoux vers les coudes).",
+   "25 lancers de balle au mur de type « deux pour un » (deux squats, puis un lancer).",
+   "50 relevés de buste (abdos).",
+   "5 montées à la corde jusqu'à environ 4,5 m (15 pieds) de hauteur."
+  ],
+  "charges": "Corde : 4,5 m de haut. La hauteur du box et la charge de la balle ne sont pas précisées : prends une hauteur et un poids que tu peux tenir sur 50 et 25 répétitions. Si tu ne maîtrises pas les triples passages, remplace par 50 doubles passages.",
+  "objectif": "Chipper : une longue liste d'exercices à enchaîner. Vise environ 19 minutes, avec des séries courtes et un rythme régulier.",
+  "pieges": [
+   "Aller trop vite sur les premiers exercices : tu as encore 8 exercices à faire ensuite.",
+   "Casser les séries trop tard : fais des séries courtes plutôt que de te bloquer au bout.",
+   "Négliger la montée à la corde finale : garde de l'énergie pour les bras."
+  ]
+ },
+ "hero-capoot": {
+  "format": "Pour le temps : tu enchaînes des pompes et des courses de plus en plus longues. Ton score est le temps total.",
+  "deroule": [
+   "100 pompes.",
+   "Course de 800 m.",
+   "75 pompes.",
+   "Course de 1 200 m.",
+   "50 pompes.",
+   "Course de 1 600 m.",
+   "25 pompes.",
+   "Course de 2 000 m pour finir."
+  ],
+  "charges": "Aucune charge. Course totale : 5 600 m (5,6 km).",
+  "objectif": "Séance où la course prend de plus en plus de place, ce qui te convient bien en triathlète. Vise environ 13 minutes de travail effectif, en gardant ton souffle sous contrôle.",
+  "pieges": [
+   "Faire les 100 pompes d'un coup : fais des séries de 10 à 20.",
+   "Partir trop vite sur le premier 800 m alors que tu as encore plus de 4 km à courir.",
+   "Bâcler les pompes : poitrine proche du sol et bras tendus en haut pour que ça compte."
+  ]
+ },
+ "hero-clovis": {
+  "format": "Pour le temps : deux grosses tâches à faire dans l'ordre que tu veux, le plus vite possible. Ton score est le temps total.",
+  "deroule": [
+   "Tu dois courir 10 miles, soit environ 16 km.",
+   "Tu dois aussi faire 150 burpees-tractions (un burpee, puis un saut pour attraper la barre et faire une traction).",
+   "Tu peux répartir la course et les burpees-tractions comme tu veux : par exemple 1 mile de course puis 15 burpees-tractions, répété 10 fois.",
+   "Le chrono s'arrête quand tu as tout fini."
+  ],
+  "charges": "Aucune charge. Course : 10 miles (environ 16 km). Burpees-tractions : 150.",
+  "objectif": "Séance très longue, un vrai défi d'endurance. Vise environ 75 minutes. Choisis un schéma que tu peux tenir, par exemple 10 blocs de 1 mile et 15 burpees-tractions.",
+  "pieges": [
+   "Faire tous les burpees-tractions au début : tu courras ensuite avec les bras et les épaules vidés.",
+   "Partir trop vite en course : l'allure doit rester tenable pendant plus d'une heure.",
+   "Oublier de t'hydrater et de manger : prévois-le avant de commencer."
+  ]
+ },
+ "hero-dominicjhall": {
+  "format": "Le texte de ce WOD est incomplet : il indique seulement « sur un chrono qui tourne, de 0:00 à 12:23 ». On ne sait donc ni les mouvements, ni les répétitions, ni le type de score.",
+  "deroule": [
+   "Le chrono tourne sans s'arrêter pendant 12 minutes et 23 secondes.",
+   "Le contenu de chaque minute n'est pas dans le texte fourni, donc je ne l'invente pas.",
+   "Retrouve la fiche complète de ce Hero WOD (ou demande au coach de la salle) avant de t'échauffer.",
+   "Une fois les mouvements connus, prépare le matériel et les charges avant de lancer le chrono."
+  ],
+  "charges": "",
+  "objectif": "Impossible de définir le stimulus sans la liste des mouvements. La durée totale est fixe : 12 min 23 s.",
+  "pieges": [
+   "Ne pars pas sans avoir la fiche complète.",
+   "Sur un chrono qui tourne, note l'heure de départ de chaque bloc pour ne pas te perdre."
+  ]
+ },
+ "hero-dork": {
+  "format": "6 tours « le plus vite possible » : tu enchaînes tous les mouvements, tour après tour, et tu arrêtes le chrono à la fin du 6e tour. Ton score est ton temps total.",
+  "deroule": [
+   "Chaque tour : 60 double sauts de corde (la corde passe 2 fois sous les pieds à chaque saut).",
+   "Puis 30 swings kettlebell (balancer un poids russe à anse des cuisses jusqu'à hauteur des yeux).",
+   "Puis 15 burpees (poitrine au sol, saut, mains au-dessus de la tête).",
+   "Recommence 6 fois, sans repos imposé entre les tours.",
+   "Au total : 360 doubles sauts, 180 swings, 90 burpees."
+  ],
+  "charges": "Kettlebell : non précisée dans le texte. En général 24 kg pour un homme.",
+  "objectif": "Un long effort régulier, de 30 à 35 minutes. Garde un rythme que tu peux tenir sur 6 tours, sans exploser au 2e.",
+  "pieges": [
+   "Partir trop vite sur les doubles sauts : les mollets et le souffle paient la facture au tour 4.",
+   "Fais les swings en poussant avec les hanches, pas avec les bras.",
+   "Si les doubles sauts te font perdre du temps, fais-les par petites séries et respire."
+  ]
+ },
+ "hero-dragon": {
+  "format": "« Le plus vite possible » : tu enchaînes 4 blocs dans l'ordre, et ton score est le temps total à la fin du dernier bloc. Les deux blocs de force durent chacun 4 minutes de chrono.",
+  "deroule": [
+   "Bloc 1 : cours 5 km.",
+   "Bloc 2 : tu as 4 minutes pour trouver ta charge maximale en soulevé de terre sur 4 répétitions. Tu montes en charge, essai après essai.",
+   "Bloc 3 : cours 5 km.",
+   "Bloc 4 : tu as 4 minutes pour trouver ta charge maximale en jeté (barre des épaules au-dessus de la tête, avec une réception jambes fléchies) sur 4 répétitions.",
+   "Le chrono ne s'arrête pas entre les blocs. Le temps passé à récupérer compte."
+  ],
+  "charges": "Aucune charge imposée : tu cherches ta meilleure série de 4 répétitions, dans chaque mouvement.",
+  "objectif": "Séance longue, autour de 55 à 65 minutes avec tes deux 5 km. Cours à allure d'endurance, pour arriver frais aux blocs de force.",
+  "pieges": [
+   "Courir trop vite le 1er 5 km : tes jambes seront cuites pour soulever.",
+   "Dans les 4 minutes, fais 3 à 4 essais maximum et monte la charge par paliers raisonnables.",
+   "Garde une technique propre sur le jeté, même fatigué."
+  ]
+ },
+ "hero-drew": {
+  "format": "« Le plus vite possible » : tu enchaînes 4 blocs, chacun dédié à un héros, puis un bloc final de montées sur marche. Ton score est le temps total.",
+  "deroule": [
+   "Kraus : 200 m de course, 30 tractions, 30 pompes mains décollées (tu poses la poitrine au sol, tu lèves les mains, puis tu pousses), 4 soulevés de terre.",
+   "Repos 30 secondes.",
+   "Scott : 400 m, 25 tractions, 25 pompes mains décollées, 4 soulevés de terre. Repos 30 secondes.",
+   "Good : 600 m, 20 tractions, 20 pompes mains décollées, 4 soulevés de terre. Repos 30 secondes.",
+   "Cully : 800 m, 15 tractions, 15 pompes mains décollées, 4 soulevés de terre.",
+   "Pour finir : 269 montées sur marche, sans repos supplémentaire."
+  ],
+  "charges": "Soulevés de terre : l'astérisque n'est pas détaillé dans le texte. Le standard pour un homme est souvent 102 kg. Hauteur de la marche non précisée (souvent environ 50 cm).",
+  "objectif": "Un long effort mêlant course, tirage et poussée, de l'ordre de 40 à 50 minutes. Garde du souffle pour les 269 montées finales, qui font la différence.",
+  "pieges": [
+   "Casser toutes les tractions en petites séries dès le début : fais des séries moyennes et prends tes 30 secondes de repos.",
+   "Ne grille pas tes bras sur les 30 premières pompes.",
+   "Les 269 montées : trouve un rythme régulier et change de jambe d'appui."
+  ]
+ },
+ "hero-dunn": {
+  "format": "AMRAP, c'est-à-dire « un maximum de tours » en 19 minutes. Tu répètes le même circuit sans t'arrêter. Ton score est le nombre de tours complets, plus les répétitions du tour en cours.",
+  "deroule": [
+   "3 muscles-up : tu te hisses au-dessus des anneaux (ou de la barre) en enchaînant traction puis poussée de dips.",
+   "1 sprint navette : cours 5 yards (4,6 m) et reviens, puis 10 yards (9 m) et reviens, puis 15 yards (13,7 m) et reviens.",
+   "6 burpees avec saut par-dessus la box : après le burpee, tu sautes de l'autre côté de la box sans la toucher.",
+   "Recommence jusqu'à la fin des 19 minutes."
+  ],
+  "charges": "Hauteur de la box non précisée. En général environ 60 cm pour un homme. Le sprint navette fait 27,4 m au total aller-retour.",
+  "objectif": "Un effort soutenu où les muscles-up sont le point dur. Vise un rythme régulier, sans exploser tes bras sur les premiers tours.",
+  "pieges": [
+   "Si tu enchaînes mal les muscles-up, fais-les en 2 séries (2 + 1) plutôt que de t'épuiser.",
+   "Compte bien : un tour n'est pas valide tant que le saut n'est pas terminé.",
+   "Garde de l'énergie pour les burpees : ils sont plus longs qu'ils n'en ont l'air."
+  ]
+ },
+ "hero-dvb": {
+  "format": "« Le plus vite possible » : un long enchaînement de course avec balle lestée et de blocs de travail. Ton score est le temps total.",
+  "deroule": [
+   "Cours 1 mile (environ 1,6 km) en portant un médecine-ball (balle lestée).",
+   "Puis 8 tours de : 10 lancers de médecine-ball au mur, puis 1 montée à la corde.",
+   "Cours 800 m avec le médecine-ball.",
+   "Puis 4 tours de : 10 lancers au mur et 1 montée à la corde.",
+   "Cours 400 m avec le médecine-ball.",
+   "Puis 2 tours de : 10 lancers au mur et 1 montée à la corde."
+  ],
+  "charges": "Médecine-ball : poids non précisé dans le texte, souvent 9 kg (20 lb) pour un homme. Corde : montée jusqu'en haut (souvent environ 4,6 m). Total : 140 lancers au mur, 14 montées à la corde.",
+  "objectif": "Une très longue séance d'endurance, environ 1 h 15. Reste régulier : le gros des tours arrive au début, quand tu es le plus frais.",
+  "pieges": [
+   "Aller trop vite sur les 8 premiers tours : les bras vont te lâcher sur la corde.",
+   "Apprends à bien tenir la corde avec les pieds pour économiser tes bras.",
+   "Porte la balle contre ta poitrine pendant la course pour t'économiser."
+  ]
+ },
+ "hero-emily": {
+  "format": "10 tours « le plus vite possible » : après chaque tour, tu fais 2 minutes de repos. Ton score est le temps total, repos compris.",
+  "deroule": [
+   "Chaque tour : 30 double sauts de corde (la corde passe 2 fois sous les pieds).",
+   "Puis 15 tractions.",
+   "Puis 30 squats avec le poids du corps.",
+   "Puis un sprint de 100 m.",
+   "Repos de 2 minutes, puis tu recommences. Fais 10 tours en tout."
+  ],
+  "charges": "Aucune charge : poids du corps. Distance : 100 m de sprint.",
+  "objectif": "Séance de 45 à 50 minutes. Tu vises des tours réguliers : chaque tour à la même vitesse, sans t'effondrer après le 5e.",
+  "pieges": [
+   "Sprinter à fond dès le tour 1 : les derniers tours seront très pénibles.",
+   "Fractionner tes tractions tôt, avant d'être épuisé, plutôt que d'aller à l'échec.",
+   "Prends bien tes 2 minutes de repos : elles sont comprises dans le chrono, autant en profiter."
+  ]
+ },
+ "hero-erin": {
+  "format": "5 tours « le plus vite possible » : tu enchaînes les deux mouvements, tour après tour. Ton score est le temps total.",
+  "deroule": [
+   "Chaque tour : 15 épaulés en fente avec haltères (tu montes les haltères des cuisses aux épaules en passant un pied devant, en fente).",
+   "Puis 21 tractions.",
+   "Recommence 5 fois, sans repos imposé.",
+   "Total : 75 épaulés et 105 tractions."
+  ],
+  "charges": "Haltères : non précisés dans le texte. Souvent 18 kg (40 lb) par main pour un homme.",
+  "objectif": "Un effort court mais dur, environ 12 à 18 minutes. Les tractions limitent : garde-les en séries moyennes.",
+  "pieges": [
+   "Partir trop vite sur les épaulés et arriver cuit aux tractions.",
+   "Faire les tractions à l'échec : mieux vaut 3 séries de 7 que 12 + 9.",
+   "Alterne la jambe avancée à chaque répétition."
+  ]
+ },
+ "hero-estrada": {
+  "format": "Un effort de bout en bout, sans temps imparti : tu fais un bloc de montées sur box, puis 3 tours. Ton score est probablement ton temps total.",
+  "deroule": [
+   "Commence par 100 montées sur box avec un sac à dos lesté.",
+   "Puis 3 tours, dans cet ordre :",
+   "800 m de course.",
+   "17 calories sur le vélo (la machine affiche les calories brûlées).",
+   "25 squats avant (la barre repose sur l'avant des épaules)."
+  ],
+  "charges": "Sac à dos, hauteur de box et barre : non précisés dans le texte. À défaut, vise un sac de 9 kg, une box de 50 cm et une barre à environ 60 kg.",
+  "objectif": "Séance longue, de 35 à 45 minutes, entre course et jambes. Garde de l'énergie pour les squats avant, qui sont durs après la course.",
+  "pieges": [
+   "Aller trop vite sur les 100 montées : tes jambes seront cuites.",
+   "Tenir le sac bien serré dans le dos pour ne pas être gêné.",
+   "Garde le buste droit sur les squats avant, même fatigué."
+  ]
+ },
+ "hero-evastrong": {
+  "format": "Travail en binôme, 5 tours « le plus vite possible ». Vous partagez certains mouvements, et ton score est le temps total à deux.",
+  "deroule": [
+   "Chaque tour : toi et ton partenaire faites chacun 24 double sauts de corde.",
+   "À deux, vous faites 19 pointes de pieds à la barre au total (vous vous répartissez comme vous voulez : les pieds touchent la barre en suspension).",
+   "À deux, 2 épaulés-jetés au total (la barre va du sol aux épaules, puis au-dessus de la tête) : par exemple 1 chacun.",
+   "Vous courez ensemble 400 m.",
+   "Faites 5 tours en tout."
+  ],
+  "charges": "Barre pour les épaulés-jetés : non précisée dans le texte. Course : 400 m ensemble.",
+  "objectif": "Un effort d'équipe, d'environ 22 minutes. Répartissez-vous le travail pour que personne ne s'épuise trop vite.",
+  "pieges": [
+   "Se répartir les pointes de pieds à la barre de façon trop inégale : fractionnez tôt.",
+   "Partir trop vite sur la course, car la fatigue s'accumule sur les 5 tours.",
+   "Courez ensemble et au rythme du plus lent."
+  ]
+ },
+ "hero-falkel": {
+  "format": "AMRAP, c'est-à-dire « un maximum de tours et de répétitions » en 25 minutes. Ton score est le nombre de tours complets, plus les répétitions du tour en cours.",
+  "deroule": [
+   "8 pompes en équilibre sur les mains (tu es tête en bas, appuyé au mur, et tu pousses).",
+   "8 sauts sur box (tu sautes pieds joints sur la box et tu te tiens debout dessus).",
+   "1 montée à la corde jusqu'à 15 pieds (environ 4,6 m).",
+   "Recommence jusqu'à la fin des 25 minutes."
+  ],
+  "charges": "Hauteur de la box : non précisée dans le texte. En général environ 60 cm pour un homme. Corde : 4,6 m.",
+  "objectif": "Un effort long où les épaules fatiguent vite. Garde une cadence régulière pour faire un maximum de tours sur 25 minutes.",
+  "pieges": [
+   "Faire toutes les pompes d'un coup : fractionne dès le début en 2 séries de 4.",
+   "Redescendre de la box en sautant : descends plutôt en marchant pour protéger tes tendons d'Achille.",
+   "Économise tes bras pour la corde, en utilisant bien les jambes."
+  ]
+ },
+ "hero-feeks": {
+  "format": "« Le plus vite possible » : tu alternes sprints navette et squats-poussées avec haltère, en montant de 2 à 16 répétitions. Ton score est le temps total.",
+  "deroule": [
+   "Série 1 : 2 sprints navette de 100 m, puis 2 squats-poussées avec haltère (tu montes l'haltère à l'épaule en squat, puis tu pousses au-dessus de la tête).",
+   "Série 2 : 4 sprints navette, puis 4 squats-poussées.",
+   "Tu continues par pas de 2 : 6, 8, 10, 12, 14, puis 16 de chaque.",
+   "Total : 72 sprints navette et 72 squats-poussées.",
+   "Un sprint navette de 100 m = tu fais des allers-retours sur une courte distance jusqu'à 100 m au total."
+  ],
+  "charges": "Haltère : poids non précisé dans le texte. Distance : 100 m par sprint navette. Le format du texte est ambigu, vérifie-le avec le coach.",
+  "objectif": "Le volume monte à chaque série et le repos est quasi nul. Vérifie la fiche officielle pour le temps visé, car 72 sprints de 100 m ne se font pas en 7 minutes.",
+  "pieges": [
+   "Partir trop fort sur les petites séries : le vrai travail est à la fin.",
+   "Garde un poids d'haltère que tu peux tenir jusqu'à 16 répétitions.",
+   "Compte bien tes sprints : le total grossit vite."
+  ]
+ },
+ "hero-coe": {
+  "format": "Pour le temps : tu fais 10 tours le plus vite possible. Ton score est le temps total pour finir les 10 tours.",
+  "deroule": [
+   "Un tour = 10 thrusters (squat avant, puis poussée de la barre au-dessus de la tête en un seul mouvement) puis 10 pompes aux anneaux.",
+   "Tour 1 : 10 thrusters à 43 kg, puis 10 pompes aux anneaux.",
+   "Tours 2 à 10 : même chose, sans pause imposée.",
+   "Le chrono s'arrête après la dernière pompe du 10e tour."
+  ],
+  "charges": "Thrusters à 43 kg (95 lb, charge habituelle de ce WOD, le texte ne la précise pas). Pompes aux anneaux : anneaux à environ 20 cm du sol, bras tendus en haut.",
+  "objectif": "C'est un WOD de résistance, à tenir autour de 15 à 20 minutes. Vise un rythme régulier dès le premier tour. Les pompes aux anneaux fatiguent vite les épaules et les triceps.",
+  "pieges": [
+   "Partir trop vite : tu paies dans les tours 6 à 10. Fais des séries de 5 si besoin.",
+   "Aux anneaux, les mains qui s'écartent font perdre de l'énergie. Garde le corps gainé et les coudes près du corps.",
+   "Si les pompes aux anneaux sont trop dures, pose les pieds plus haut ou passe à des pompes au sol."
+  ]
+ },
+ "hero-coffey": {
+  "format": "Pour le temps : tu enchaînes toute la liste dans l'ordre, le plus vite possible. Ton score est le temps total.",
+  "deroule": [
+   "Bloc 1 : 800 m de course, puis 50 squats arrière (barre sur les épaules), puis 50 développés couché (pousser la barre allongé sur un banc).",
+   "Bloc 2 : 800 m de course, puis 35 squats arrière, puis 35 développés couché.",
+   "Bloc 3 : 800 m de course, puis 20 squats arrière, puis 20 développés couché.",
+   "Bloc 4 : 800 m de course, puis 1 muscle-up (traction qui passe au-dessus de la barre, puis dips).",
+   "Tu fais les répétitions en séries fractionnées dès que tu sens la fatigue."
+  ],
+  "charges": "Squat arrière 61 kg (135 lb). Développé couché à ton poids de corps (charge habituelle de ce WOD). 4 × 800 m de course à pied. Si c'est trop lourd, baisse les deux barres.",
+  "objectif": "Le but est de tenir un effort long, avec de la course comme repos actif. Compte 25 à 35 minutes. Garde un rythme de course confortable : tu as encore beaucoup de répétitions à faire derrière.",
+  "pieges": [
+   "Courir trop vite le premier 800 m : tes jambes seront cuites pour les squats.",
+   "Le développé couché à ton poids de corps, 50 fois, est très dur. Baisse la charge plutôt que de te bloquer.",
+   "Garde de la force pour le muscle-up final. Si tu ne le fais pas encore, remplace-le par 3 tractions poitrine à la barre et 3 dips."
+  ]
+ },
+ "hero-coffland": {
+  "format": "Séance particulière, pas un format classique. Tu dois accumuler 6 minutes de suspension à la barre. Chaque fois que tu lâches, tu fais une pénalité. Ton score est le temps total pour y arriver.",
+  "deroule": [
+   "Accroche-toi à la barre de traction, bras tendus, et lance le chrono.",
+   "Tiens le plus longtemps possible.",
+   "Dès que tu lâches : 800 m de course, puis 30 pompes.",
+   "Reviens à la barre et reprends la suspension.",
+   "Continue jusqu'à avoir cumulé 6 minutes de suspension en tout.",
+   "Note le nombre de lâchers : le texte ne dit pas comment la pénalité est comptée. Reste sur cette lecture et garde le même choix à chaque fois que tu refais le WOD."
+  ],
+  "charges": "Pas de charge. 800 m de course et 30 pompes à chaque lâcher.",
+  "objectif": "Le but est de bosser la force de préhension et le mental. Le temps réel dépend surtout du nombre de lâchers (le 5 min annoncé n'est qu'une estimation basse). Fais de longues suspensions au début et lâche le moins possible.",
+  "pieges": [
+   "Se suspendre à fond d'entrée : les avant-bras lâchent vite. Garde les épaules actives, pas totalement relâchées.",
+   "Chaque lâcher coûte cher (800 m + 30 pompes) : mieux vaut des séries longues que beaucoup de petites.",
+   "Bien repérer la barre avant de partir courir pour reprendre vite."
+  ]
+ },
+ "hero-collin": {
+  "format": "Pour le temps : 6 tours à faire le plus vite possible. Ton score est le temps total.",
+  "deroule": [
+   "Un tour = 400 m de portage de sac de sable, puis 12 développés avec impulsion des jambes, puis 12 sauts sur boîte, puis 12 soulevés de terre sumo avec tirage au menton.",
+   "Portage : porte le sac de sable (sur l'épaule ou serré contre toi) pendant 400 m.",
+   "Développés avec impulsion : barre à l'épaule, tu fléchis les jambes puis tu pousses fort au-dessus de la tête.",
+   "Sauts sur boîte : saute sur la boîte et tends complètement les hanches en haut.",
+   "Soulevé de terre sumo + tirage menton : jambes écartées, tu soulèves la barre du sol puis tu la montes jusqu'au menton, coudes hauts.",
+   "Enchaîne les 6 tours sans pause imposée."
+  ],
+  "charges": "Sac de sable 23 kg (50 lb). Développés avec impulsion 52 kg (115 lb). Boîte de 61 cm (24 pouces). Soulevé sumo + tirage menton 43 kg (95 lb).",
+  "objectif": "Séance longue, 25 à 35 minutes pour toi. Le portage est le vrai test : 6 × 400 m, soit 2,4 km avec une charge. Garde un rythme où tu peux enchaîner sans t'arrêter.",
+  "pieges": [
+   "Partir trop vite sur le portage : les épaules et le dos fatiguent.",
+   "Dans les sauts sur boîte, redescends en marchant pour ménager les tendons d'Achille.",
+   "Le tirage au menton avec les coudes bas fait travailler les bras, pas les épaules : monte les coudes."
+  ]
+ },
+ "hero-crain": {
+  "format": "Pour le temps : tu fais 2 tours de toute la liste, le plus vite possible. Ton score est le temps total.",
+  "deroule": [
+   "Un tour = 7 mouvements de 34 répétitions chacun, avec un sprint de 50 yards (environ 46 m) après chaque mouvement.",
+   "Dans l'ordre : 34 pompes, sprint, 34 soulevés de terre, sprint, 34 sauts sur boîte, sprint.",
+   "Puis : 34 épaulés-jetés (barre du sol aux épaules, puis au-dessus de la tête), sprint, 34 burpees (pompe au sol puis saut), sprint.",
+   "Puis : 34 wall balls (lancers de ballon au mur), sprint, 34 tractions, sprint.",
+   "Recommence le tour une deuxième fois. Fractionne tes séries (par exemple 10-10-7-7) pour ne pas tomber en échec."
+  ],
+  "charges": "Le texte ne donne pas les charges. Proposition pour toi : soulevé de terre et épaulé-jeté 61 kg, boîte 61 cm, ballon 9 kg lancé à 3 m de haut. Sprint de 50 yards = environ 46 m.",
+  "objectif": "Séance très longue : 476 répétitions et 14 sprints. Compte plutôt 40 à 55 minutes, pas 24. Garde un rythme où tu ne fais pas plus de 2 pauses par mouvement.",
+  "pieges": [
+   "Aller trop vite sur les pompes et les tractions du premier tour : les bras seront finis pour le second.",
+   "Des charges trop lourdes au soulevé de terre et à l'épaulé-jeté : choisis une barre que tu peux faire en 3-4 séries.",
+   "Les sprints sont courts : sprinte vraiment, ils servent aussi de récupération active."
+  ]
+ },
+ "hero-daehan": {
+  "format": "Pour le temps : 3 tours à faire le plus vite possible. Ton score est le temps total.",
+  "deroule": [
+   "Un tour = 800 m de course en portant une barre vide, puis 3 montées de corde, puis 12 thrusters (squat avant, puis poussée au-dessus de la tête).",
+   "Course : tu cours 800 m en tenant une barre vide de 20 kg (à deux mains, devant ou sur les épaules).",
+   "Corde : monte une corde de 4,5 m (15 pieds) 3 fois, en t'aidant des jambes si besoin.",
+   "Thrusters : 12 à 61 kg.",
+   "Fais 3 tours d'affilée."
+  ],
+  "charges": "Barre vide 20 kg pendant la course. Corde de 4,5 m (15 pieds). Thrusters à 61 kg (135 lb).",
+  "objectif": "C'est une séance longue de 25 à 35 minutes pour toi (le 3 min annoncé n'est pas réaliste). La course en portant une barre est inhabituelle : trouve ta position et garde ton allure. Garde de l'énergie pour les montées de corde.",
+  "pieges": [
+   "Courir trop vite avec la barre : le haut du dos fatigue avant les thrusters.",
+   "Mal poser la barre avant de grimper : pose-la toujours au même endroit pour gagner du temps.",
+   "Sur les thrusters, découpe en 2 ou 3 séries (6-6 ou 4-4-4) plutôt que de tout faire d'un coup."
+  ]
+ },
+ "hero-daniel": {
+  "format": "Pour le temps : tu enchaînes toute la liste dans l'ordre, le plus vite possible. Ton score est le temps total.",
+  "deroule": [
+   "50 tractions (fractionne-les comme tu veux : 10-10-10-10-10 par exemple).",
+   "400 m de course.",
+   "21 thrusters (squat avant, puis poussée au-dessus de la tête) à 43 kg.",
+   "800 m de course.",
+   "21 thrusters à 43 kg.",
+   "400 m de course.",
+   "50 tractions pour finir."
+  ],
+  "charges": "Thrusters à 43 kg (95 lb, charge habituelle). Course : 400 m, 800 m, 400 m. Tractions au poids du corps.",
+  "objectif": "C'est une séance de 20 à 30 minutes. Les tractions au début et à la fin sont le point dur : le haut du corps est cuit après les thrusters. Reste régulier sur la course.",
+  "pieges": [
+   "Faire 50 tractions trop vite d'entrée : tu n'en feras plus que 3 à la fois à la fin. Planifie tes séries.",
+   "Trop forcer sur les thrusters : tu cours après le deuxième 800 m les jambes lourdes.",
+   "Si tu ne tiens pas 50 tractions, remplace-les par des tractions avec bande élastique ou des rowings à la barre."
+  ]
+ },
+ "hero-danielray": {
+  "format": "Pour le temps : 5 tours à faire le plus vite possible. Ton score est le temps total.",
+  "deroule": [
+   "Un tour = 8 mouvements. Tu portes deux kettlebells (boules de fonte à anse) pour les 4 déplacements.",
+   "Fentes (marcher en avançant, une jambe en avant) avec une kettlebell sur chaque épaule, sur 7,5 m (25 pieds).",
+   "9 tractions strictes (sans élan, sans balancement).",
+   "Marche avec les deux kettlebells tenues au-dessus de la tête, sur 15 m (50 pieds).",
+   "16 pompes mains décollées (poitrine au sol, tu lèves les mains, puis tu pousses).",
+   "Marche avec les deux kettlebells sur les épaules, sur 23 m (75 pieds).",
+   "23 squats au poids du corps.",
+   "Marche du fermier (une kettlebell dans chaque main, bras le long du corps) sur 30 m (100 pieds), puis 400 m de course.",
+   "Si tu as un gilet lesté ou un gilet pare-balles, porte-le."
+  ],
+  "charges": "Le texte ne donne pas la charge : propose 2 kettlebells de 16 kg. Distances : 7,5 m, 15 m, 23 m et 30 m (conversion des pieds).",
+  "objectif": "Séance de 35 à 45 minutes, avec beaucoup de petits déplacements. Garde de l'énergie pour la course de 400 m à chaque tour. Reste régulier de bout en bout.",
+  "pieges": [
+   "Prendre des kettlebells trop lourdes : le portage au-dessus de la tête use l'épaule.",
+   "Faire les tractions strictes en balançant : le mouvement ne compte pas, reste immobile.",
+   "Trop courir le premier 400 m : il y en a 5."
+  ]
+ },
+ "hero-danny": {
+  "format": "AMRAP signifie « autant de tours que possible » : tu as 20 minutes pour faire le plus de tours possible. Ton score est le nombre de tours complets, plus les répétitions du tour en cours.",
+  "deroule": [
+   "Lance un chrono de 20 minutes.",
+   "Un tour = 30 sauts sur boîte, puis 20 développés avec impulsion des jambes, puis 30 tractions.",
+   "Sauts : saute sur la boîte et tends complètement les hanches en haut.",
+   "Développés avec impulsion : barre sur les épaules, tu fléchis les jambes puis tu pousses fort au-dessus de la tête, 20 fois.",
+   "Tractions : 30 d'affilée en séries fractionnées.",
+   "Enchaîne les tours sans t'arrêter jusqu'à la fin des 20 minutes."
+  ],
+  "charges": "Boîte de 61 cm (24 pouces). Développés avec impulsion 52 kg (115 lb).",
+  "objectif": "Séance de 20 minutes à effort soutenu. Vise 3 tours ou plus. Garde un rythme régulier : les tractions sont le point faible, ne les fais pas en une fois.",
+  "pieges": [
+   "Aller trop fort sur la boîte : les jambes sont fatiguées avant les développés.",
+   "Faire 30 tractions d'un coup : fractionne dès le début (10-10-5-5 par exemple).",
+   "Oublier de compter les répétitions du dernier tour incomplet pour ton score."
+  ]
+ },
+ "hero-del": {
+  "format": "Pour le temps : tu enchaînes toute la liste dans l'ordre, le plus vite possible. Ton score est le temps total.",
+  "deroule": [
+   "25 burpees (pompe au sol puis saut).",
+   "400 m de course en portant un médecine-ball (ballon lesté) de 9 kg.",
+   "25 tractions lestées avec un haltère de 9 kg tenu entre les pieds.",
+   "400 m de course avec le médecine-ball.",
+   "25 pompes en équilibre sur les mains (corps à l'envers contre un mur).",
+   "400 m de course avec le médecine-ball.",
+   "25 tractions poitrine à la barre (la poitrine touche la barre).",
+   "400 m de course avec le médecine-ball, puis 25 burpees pour finir."
+  ],
+  "charges": "Médecine-ball 9 kg (20 lb), haltère de 9 kg (20 lb) pour les tractions lestées. 4 × 400 m de course.",
+  "objectif": "Séance longue et dure : compte 35 à 50 minutes, pas 6. Les pompes en équilibre sur les mains et les tractions poitrine à la barre sont les points durs. Fractionne dès le début.",
+  "pieges": [
+   "Trop courir avec le médecine-ball : tu perds de l'énergie pour la suite.",
+   "Pour les pompes en équilibre sur les mains, choisis une version adaptée (pompes avec les pieds sur une boîte) plutôt que de bloquer.",
+   "Si les tractions poitrine à la barre sont difficiles, fais des tractions classiques, mais note-le."
+  ]
+ },
+ "hero-desforges": {
+  "format": "Pour le temps : 5 tours à faire le plus vite possible. Ton score est le temps total.",
+  "deroule": [
+   "Un tour = 12 soulevés de terre, puis 20 tractions, puis 12 épaulés-jetés, puis 20 genoux aux coudes.",
+   "Soulevés de terre : la barre monte du sol jusqu'à tes hanches, dos droit.",
+   "Tractions : 20, fractionnées si besoin (10-10 par exemple).",
+   "Épaulés-jetés : la barre passe du sol aux épaules, puis au-dessus de la tête.",
+   "Genoux aux coudes : tu es suspendu à la barre et tu montes les genoux jusqu'aux coudes, 20 fois.",
+   "Enchaîne les 5 tours."
+  ],
+  "charges": "Le texte ne donne pas les charges. Proposition pour toi : soulevé de terre 100 kg, épaulé-jeté 61 kg.",
+  "objectif": "Séance de 25 à 35 minutes, très dure pour la préhension : trois mouvements sur quatre se font suspendu ou avec une barre. Garde un rythme régulier et fais des pauses courtes.",
+  "pieges": [
+   "Prendre un soulevé de terre trop lourd : tu perds ta force de grip pour les tractions.",
+   "Partir en séries trop grandes sur les tractions et les genoux aux coudes.",
+   "Épaulé-jeté : si tu n'arrives pas à passer la barre au-dessus de la tête, baisse la charge."
+  ]
+ },
+ "hero-dobogai": {
+  "format": "Pour le temps : 7 tours à faire le plus vite possible. Ton score est le temps total.",
+  "deroule": [
+   "Un tour = 8 muscles-up (traction qui passe au-dessus de la barre ou des anneaux, puis dips) et 20 m de marche du fermier (22 yards).",
+   "Marche du fermier : tu marches 20 m en tenant un haltère dans chaque main, bras le long du corps.",
+   "Pour les muscles-up : fais-les en série de 2 ou 3 maximum pour tenir.",
+   "Fais 7 tours, soit 56 muscles-up en tout."
+  ],
+  "charges": "Marche du fermier avec 2 haltères de 32 kg (70 lb), habituels pour ce WOD. Distance 20 m (22 yards).",
+  "objectif": "Séance de 25 à 40 minutes : 56 muscles-up, c'est énorme (le 5 min annoncé est faux). Ce WOD teste ta technique. Si tu en fais moins de 5 d'affilée, adapte la séance.",
+  "pieges": [
+   "Se fatiguer dès le premier tour : si le mouvement part en vrac, la technique s'effondre.",
+   "Si le muscle-up n'est pas maîtrisé, remplace-le par 3 tractions poitrine à la barre et 3 dips sur anneaux.",
+   "Garde de la force dans l'avant-bras pour la marche du fermier."
+  ]
+ },
+ "hero-glen": {
+  "format": "Tu fais tout le travail une seule fois, dans l'ordre, le plus vite possible. Ton score est ton temps total.",
+  "deroule": [
+   "Étape 1 : 30 épaulés-jetés. Tu montes la barre du sol aux épaules, puis tu la pousses au-dessus de la tête.",
+   "Étape 2 : cours 1 mile, soit environ 1,6 km.",
+   "Étape 3 : 10 montées à la corde jusqu'à 4,5 m de haut, avec les jambes et les bras.",
+   "Étape 4 : cours de nouveau 1 mile (1,6 km).",
+   "Étape 5 : 100 burpees. Tu te couches au sol, tu pousses, tu te relèves et tu sautes en tapant les mains au-dessus de la tête."
+  ],
+  "charges": "Barre : le texte ne donne pas la charge. Le standard de Glen est 61 kg. Corde : 4,5 m. Courses : 1,6 km chacune.",
+  "objectif": "C'est une séance longue qui mélange force, course et endurance musculaire. Vise environ 24 minutes. Pars à 80 % de ton rythme et garde de l'énergie pour les 100 burpees.",
+  "pieges": [
+   "Ne va pas trop vite sur les épaulés-jetés : tu paierais la fatigue pendant toute la course.",
+   "Découpe les burpees en séries de 10 à 20, avec de courtes pauses prévues à l'avance.",
+   "Si la corde est trop dure, fais une montée en technique (pieds qui pincent la corde) plutôt qu'avec les bras seuls."
+  ]
+ },
+ "hero-goose": {
+  "format": "Séance en binôme, à faire le plus vite possible. Votre score est le temps total quand vous finissez ensemble la course avec le disque.",
+  "deroule": [
+   "Étape 1 : 106 soulevés de terre (barre ramassée au sol, puis tu te redresses). Vous vous les répartissez comme vous voulez.",
+   "Étape 2 : 7 tours de : 3 montées à la corde, 15 thrusters (squat avec la barre devant les épaules, puis poussée au-dessus de la tête dans le même mouvement) et 15 swings de kettlebell (balancer la masse entre les jambes jusqu'à hauteur des yeux).",
+   "Étape 3 : 400 m de course, chacun portant un disque.",
+   "Pendant que l'un travaille, l'autre se repose. Mettez-vous d'accord sur les relais, par exemple tous les 5 à 10 répétitions."
+  ],
+  "charges": "Les charges ne sont pas indiquées. Choisis des charges que tu peux répéter sans t'arrêter longtemps. Disque pour la course : environ 10 à 20 kg.",
+  "objectif": "C'est un long travail d'équipe qui dure environ 27 minutes. Il faut alterner efficacement, sans longues attentes ni effort trop violent au début.",
+  "pieges": [
+   "Ne vous laissez pas dépasser par la fatigue : changez de rôle avant d'être à bout.",
+   "Les thrusters font monter le cœur très vite. Fais des séries plus courtes que ce que tu crois pouvoir tenir.",
+   "Garde du souffle pour les 400 m finaux avec le disque."
+  ]
+ },
+ "hero-griff": {
+  "format": "Tu enchaînes quatre courses d'affilée, le plus vite possible. Ton score est le temps total.",
+  "deroule": [
+   "Étape 1 : cours 800 m vers l'avant.",
+   "Étape 2 : cours 400 m en marche arrière (tu recules, en regardant par-dessus l'épaule de temps en temps).",
+   "Étape 3 : cours 800 m vers l'avant.",
+   "Étape 4 : cours 400 m en marche arrière."
+  ],
+  "charges": "Aucune charge. Distance totale : 2,4 km.",
+  "objectif": "C'est un effort court mais soutenu, d'environ 12 minutes. Garde une allure régulière sur les 800 m et reste prudent sur les parties à reculons.",
+  "pieges": [
+   "Choisis un terrain plat et dégagé pour reculer sans risque.",
+   "Ne pars pas trop vite sur le premier 800 m : la fin sera très dure.",
+   "En marche arrière, fais des pas courts pour ne pas perdre l'équilibre."
+  ]
+ },
+ "hero-gunny": {
+  "format": "Tu fais toute la suite le plus vite possible, avec un poids sur le dos pendant les courses. Ton score est ton temps total.",
+  "deroule": [
+   "Étape 1 : cours 1 mile (environ 1,6 km) avec une charge de 23 kg sur toi.",
+   "Étape 2 : 50 pompes, puis 50 abdos (relevés de buste).",
+   "Étape 3 : cours de nouveau 1 mile avec la charge, puis 50 pompes et 50 abdos.",
+   "Étape 4 : cours un dernier mile avec la charge, et c'est fini.",
+   "La charge peut être un gilet lesté, un sac à dos chargé ou un gilet pare-balles."
+  ],
+  "charges": "Charge portée en course : 23 kg (50 lb). Chaque course : 1,6 km.",
+  "objectif": "C'est une séance de portage lourd, qui demande de l'endurance et de la patience. Vise environ 34 minutes. Garde un rythme régulier en courant et fractionne pompes et abdos avant d'être cuit.",
+  "pieges": [
+   "Si 23 kg est trop lourd pour toi, allège un peu pour garder une foulée correcte.",
+   "Fais les pompes et abdos en séries de 10 à 15, pas en une seule fois.",
+   "Le sac doit être bien serré sur le dos pour ne pas rebondir."
+  ]
+ },
+ "hero-hall": {
+  "format": "Tu fais 5 tours, chaque tour étant chronométré, avec 2 minutes de repos entre eux. Ton score est la somme de tes temps de travail, repos exclu.",
+  "deroule": [
+   "Dans chaque tour : 3 épaulés (barre qui monte du sol jusqu'aux épaules).",
+   "Puis un sprint de 200 m.",
+   "Puis 20 arrachés de kettlebell : 10 par bras. Tu fais passer la masse du sol au-dessus de la tête en un seul geste.",
+   "Quand le tour est fini, repose-toi 2 minutes complètes.",
+   "Recommence jusqu'à avoir fait 5 tours."
+  ],
+  "charges": "Barre : le texte ne donne pas la charge, le standard est lourd (environ 61 kg). Kettlebell : environ 24 kg. Sprint : 200 m.",
+  "objectif": "Chaque tour est un effort intense avec du repos pour récupérer. Vise environ 14 minutes au total. Sprinte sans te retenir : le repos te permet de recommencer.",
+  "pieges": [
+   "Ne gaspille pas de force sur les 3 épaulés : prends une charge lourde mais maîtrisée.",
+   "Garde de l'énergie pour les arrachés de kettlebell après le sprint.",
+   "Respecte vraiment les 2 minutes de repos."
+  ]
+ },
+ "hero-hamilton": {
+  "format": "Tu fais 3 tours complets le plus vite possible. Ton score est ton temps total.",
+  "deroule": [
+   "Tour 1 : rame 1 000 m.",
+   "Puis 50 pompes.",
+   "Puis cours 1 000 m.",
+   "Puis 50 tractions (tu te hisses à la barre, menton au-dessus).",
+   "Recommence le même schéma pour les tours 2 et 3."
+  ],
+  "charges": "Aucune charge. Rameur : 1 000 m. Course : 1 000 m. Total : 3 km de rame, 3 km de course.",
+  "objectif": "C'est une séance longue qui mélange endurance et haut du corps. Vise environ 15 minutes. Garde une allure régulière au rameur et à la course.",
+  "pieges": [
+   "Ne rame pas trop fort : il reste beaucoup à faire derrière.",
+   "Fractionne pompes et tractions en séries courtes (10 à 15 par série).",
+   "Prends tes pauses avant d'être à bout, pas après."
+  ]
+ },
+ "hero-hammer": {
+  "format": "Tu fais 5 tours, chaque tour étant chronométré séparément, avec 90 secondes de repos entre eux. Ton score est la somme de tes temps de travail.",
+  "deroule": [
+   "Dans chaque tour : 5 épaulés debout (power clean : tu montes la barre du sol aux épaules sans descendre en squat profond).",
+   "Puis 10 squats avant (la barre repose sur l'avant des épaules).",
+   "Puis 5 jetés (tu pousses la barre au-dessus de la tête).",
+   "Puis 20 tractions.",
+   "Repose-toi 90 secondes, puis recommence. Fais 5 tours en tout."
+  ],
+  "charges": "Le texte ne donne pas la charge. Choisis une barre qui te permet d'enchaîner les 3 mouvements sans la poser.",
+  "objectif": "Chaque tour est court et intense, avec une vraie récupération. Vise environ 11 minutes au total. Pars vite sur chaque tour et garde la barre légère pour ne pas t'arrêter.",
+  "pieges": [
+   "Garde de la force pour les 20 tractions : ne vide pas les épaules sur la barre.",
+   "Si tu casses les tractions, fais 2 ou 3 séries rapides.",
+   "Respecte les 90 secondes de repos pour tenir 5 tours."
+  ]
+ },
+ "hero-hammy": {
+  "format": "Séance très longue, une seule fois, à faire le plus vite possible. Ton score est ton temps total.",
+  "deroule": [
+   "Étape 1 : cours 1 200 m, puis 80 passages sur box (tu montes et tu descends en marchant), puis 40 pompes mains décollées (tu relèves les mains du sol à chaque fois).",
+   "Étape 2 : cours 800 m, puis 40 burpees avec une cible à toucher au-dessus de toi, puis 20 tractions strictes (sans balancer les jambes).",
+   "Étape 3 : cours 400 m, puis 20 burpees avec saut sur la box, puis 10 muscles-up aux anneaux (tu te hisses au-dessus des anneaux).",
+   "Étape 4 : cours 400 m, puis 40 burpees avec cible, puis 20 tractions strictes.",
+   "Étape 5 : cours 800 m, puis 80 passages sur box, puis 40 pompes mains décollées, puis cours 1 200 m pour finir."
+  ],
+  "charges": "Aucune charge. Hauteur de box : non précisée, prends une hauteur confortable. Distance de course totale : 4,8 km.",
+  "objectif": "C'est une séance d'endurance très longue, d'environ 42 minutes. Reste régulier : la montée puis la descente des distances aide à gérer la fatigue.",
+  "pieges": [
+   "Ne te grille pas sur les 80 passages box, qui sont longs et monotones.",
+   "Si les muscles-up sont trop durs, demande une version plus facile (tractions poitrine à la barre et dips).",
+   "Bois et mange avant : c'est long."
+  ]
+ },
+ "hero-hansen": {
+  "format": "Tu fais 5 tours complets le plus vite possible. Ton score est ton temps total.",
+  "deroule": [
+   "Dans chaque tour : 30 swings de kettlebell (tu balances la masse jusqu'à hauteur des yeux).",
+   "Puis 30 burpees.",
+   "Puis 30 abdos sur un banc spécial (le GHD : tes pieds sont calés et tu te relèves en partant très bas).",
+   "Recommence jusqu'à 5 tours."
+  ],
+  "charges": "Kettlebell : le standard est 24 kg. Pas d'autre charge.",
+  "objectif": "C'est une séance longue, d'environ 24 minutes, qui travaille le bas du dos, le cœur et les abdos. Reste régulier : chaque tour doit durer à peu près le même temps.",
+  "pieges": [
+   "Ne casse pas tout sur le premier tour : tu n'en seras que plus lent après.",
+   "Sur le GHD, descends contrôlé pour protéger le bas du dos.",
+   "Garde le dos droit sur les swings : la force vient des hanches, pas des bras."
+  ]
+ },
+ "hero-harper": {
+  "format": "AMRAP : tu fais un maximum de tours en 23 minutes. Ton score est le nombre de tours complets, plus les répétitions du tour en cours.",
+  "deroule": [
+   "Tour : 9 tractions poitrine à la barre (la poitrine touche la barre).",
+   "Puis 15 épaulés debout (power clean : la barre monte du sol aux épaules).",
+   "Puis 21 squats (poids du corps).",
+   "Puis 400 m de course en portant un disque.",
+   "Recommence sans t'arrêter jusqu'à la fin des 23 minutes."
+  ],
+  "charges": "Barre : non précisée dans le texte, choisis une charge moyenne. Disque : environ 10 à 20 kg pour la course. Course : 400 m.",
+  "objectif": "C'est un effort long où il faut tenir le rythme. Vise 4 à 5 tours. Garde une allure régulière et évite les pauses longues.",
+  "pieges": [
+   "Ne choisis pas une barre trop lourde : tu enchaînes 15 répétitions.",
+   "Fractionne les tractions poitrine à la barre si besoin.",
+   "Garde le disque près du corps pendant la course pour ne pas fatiguer les épaules."
+  ]
+ },
+ "hero-havana": {
+  "format": "AMRAP : tu fais un maximum de tours en 25 minutes. Ton score est le nombre de tours complets, plus les répétitions du tour en cours.",
+  "deroule": [
+   "Tour : 150 double-unders (saut à la corde où la corde passe 2 fois sous les pieds à chaque saut).",
+   "Puis 50 pompes.",
+   "Puis 15 épaulés debout (power clean : la barre monte du sol aux épaules).",
+   "Recommence jusqu'à la fin des 25 minutes."
+  ],
+  "charges": "Barre : non précisée dans le texte, choisis une charge moyenne que tu peux enchaîner.",
+  "objectif": "C'est une longue séance qui travaille la coordination et l'endurance. Vise 2 à 3 tours. Reste fluide sur la corde pour ne pas perdre de temps.",
+  "pieges": [
+   "Si les doubles sauts sont difficiles, fais des simples avec plus de répétitions (environ 300).",
+   "Fractionne les 50 pompes dès le début.",
+   "Garde les épaulés propres : ne cherche pas la grosse charge."
+  ]
+ },
+ "hero-helton": {
+  "format": "Tu fais 3 tours complets le plus vite possible. Ton score est ton temps total.",
+  "deroule": [
+   "Dans chaque tour : cours 800 m.",
+   "Puis 30 épaulés en squat avec haltères : tu montes les haltères du sol aux épaules en descendant en squat, puis tu te relèves.",
+   "Puis 30 burpees.",
+   "Recommence jusqu'à 3 tours."
+  ],
+  "charges": "Haltères : non précisés, choisis une paire que tu peux enchaîner (environ 15 à 22 kg chacun). Course : 800 m par tour, soit 2,4 km au total.",
+  "objectif": "C'est une séance courte mais très dure : c'est un enchaînement continu. Vise environ 9 minutes pour un athlète rapide, ou plus pour ton niveau. Reste constant sur les 3 tours.",
+  "pieges": [
+   "Ne pars pas trop vite sur la première course.",
+   "Fractionne les 30 épaulés en 2 ou 3 séries.",
+   "Choisis des haltères légers : tu en fais 90 en tout."
+  ]
+ },
+ "hero-fern": {
+  "format": "Chronométré : tu fais tout le travail le plus vite possible et ton score est ton temps total. Temps limite de 60 minutes.",
+  "deroule": [
+   "Départ : 2 miles de course à pied, soit environ 3,2 km.",
+   "Ensuite, 9 tours. Chaque tour : 20 calories au rameur, puis 20 burpees. Burpee : tu te couches au sol, poitrine contre terre, tu te relèves et tu fais un petit saut en tapant des mains au-dessus de la tête.",
+   "Puis 3 tours chronométrés. Chaque tour : 30 pompes, 30 tractions, 30 burpees.",
+   "Le chrono ne s'arrête qu'à la dernière répétition du troisième tour."
+  ],
+  "charges": "Aucune charge. Course 3,2 km, rameur 20 calories par tour.",
+  "objectif": "Séance d'endurance très longue, à vivre comme un triathlon en mode CrossFit. Vise 50 à 60 minutes. Pars sur un rythme de course tranquille et garde de l'énergie pour la fin.",
+  "pieges": [
+   "Partir trop vite sur les 3,2 km : tu paies chaque tour de burpees ensuite.",
+   "Rester trop longtemps sur les burpees : fais des séries régulières de 5 à 10 plutôt que de t'arrêter à 15.",
+   "Fractionne les tractions et les pompes en petites séries avant la fatigue, pas après."
+  ]
+ },
+ "hero-finseth": {
+  "format": "Chronomètre de 18 minutes. Tu fais d'abord 83 lancers de médecine-ball au mur, puis tu enchaînes le plus de tours possible jusqu'à la fin. Ton score est le total de répétitions.",
+  "deroule": [
+   "Départ : 83 lancers de médecine-ball au mur (squat, puis tu lances la balle sur une cible haute). Fractionne comme tu veux.",
+   "Dès que c'est fini, tu lances les tours, sans pause entre eux.",
+   "Un tour : 2 épaulés debout, 18 pompes, 24 doubles passages de corde.",
+   "Épaulé debout : tu tires la barre du sol jusqu'aux épaules sans descendre en squat profond.",
+   "Double passage de corde : la corde passe 2 fois sous tes pieds à chaque saut.",
+   "Quand les 18 minutes sont écoulées, tu notes tes tours complets plus les répétitions du tour en cours."
+  ],
+  "charges": "Charges non précisées dans le texte. Choisis un médecine-ball d'environ 9 kg et une barre légère pour les épaulés, avec laquelle tu enchaînes sans t'arrêter.",
+  "objectif": "Effort continu et haché pendant 18 minutes. Le but est de ne jamais t'arrêter longtemps. Garde un rythme régulier, sans te griller sur les 83 lancers.",
+  "pieges": [
+   "Brûler tes forces sur les 83 lancers : découpe en séries de 10 à 15.",
+   "Prendre une barre trop lourde : avec seulement 2 épaulés par tour, tu perds du temps à chaque pause.",
+   "Rater les doubles passages et perdre le rythme : si la corde t'échappe, passe à des simples en les comptant double (par exemple 48 simples)."
+  ]
+ },
+ "hero-foo": {
+  "format": "Deux parties. D'abord 13 développés couchés, puis un chronomètre de 20 minutes où tu fais le plus de tours possible. Ton score est le nombre de tours et de répétitions de la deuxième partie.",
+  "deroule": [
+   "Départ : 13 développés couchés (allongé sur le banc, tu pousses la barre vers le haut). Prends ton temps.",
+   "Puis lance un chrono de 20 minutes.",
+   "Un tour : 7 tractions poitrine à la barre, 77 doubles passages de corde, 2 squats avec poussée au-dessus de la tête, 28 relevés de buste.",
+   "Traction poitrine à la barre : tu tires jusqu'à toucher la barre avec la poitrine.",
+   "Squat avec poussée : tu descends en squat, tu te relèves et tu pousses la barre au-dessus de la tête. Tu commences barre à l'épaule.",
+   "Enchaîne les tours jusqu'à 20 minutes, puis note tes tours et tes répétitions."
+  ],
+  "charges": "Charges non précisées. Choisis un développé couché modéré (autour de ton poids du corps) et une barre légère pour les 2 squats avec poussée.",
+  "objectif": "Séance longue et variée, mêlant force, gymnastique et cardio. Vise 3 à 4 tours. Avance par petites séries régulières, surtout sur la corde.",
+  "pieges": [
+   "Aller trop lourd sur le développé couché : tu arrives épuisé pour les tractions.",
+   "Dépenser trop de temps sur les 77 doubles passages : si tu les rates, fais des séries de 20.",
+   "Oublier de noter les répétitions du dernier tour."
+  ]
+ },
+ "hero-forrest": {
+  "format": "3 tours chronométrés : tu fais tout le plus vite possible et ton score est ton temps total.",
+  "deroule": [
+   "Un tour : 20 tractions en L, 30 relevés de jambes à la barre, 40 burpees, puis 800 m de course.",
+   "Traction en L : tu tires, jambes tendues à l'horizontale devant toi pendant tout le mouvement.",
+   "Relevé de jambes à la barre : tu es suspendu et tu amènes tes pieds jusqu'à toucher la barre.",
+   "Burpee : tu te couches au sol, tu te relèves et tu sautes en tapant des mains au-dessus de la tête.",
+   "Refais ce tour 3 fois, sans pause entre. Le chrono s'arrête après le dernier 800 m."
+  ],
+  "charges": "Aucune charge. Course : 800 m par tour, soit 2,4 km en tout.",
+  "objectif": "Séance longue et très physique, autour de 40 à 60 minutes pour un niveau intermédiaire. Garde du souffle pour les burpees et gère la course comme une allure d'endurance.",
+  "pieges": [
+   "Tout faire d'un coup sur les tractions en L : fais des séries courtes de 3 à 5.",
+   "Partir trop vite sur le premier 800 m.",
+   "Si les tractions en L sont trop dures, fais des tractions normales avec les genoux montés."
+  ]
+ },
+ "hero-fournier": {
+  "format": "Chronométré : une suite d'exercices à faire une seule fois, le plus vite possible. Ton score est ton temps.",
+  "deroule": [
+   "1. 50 épaulés-jetés (tu amènes l'objet de l'épaule au-dessus de la tête).",
+   "2. Traction de traîneau à la main sur 15 m : tu es assis ou à genoux, tu tires la corde main sur main pour faire venir le traîneau.",
+   "3. 40 burpees.",
+   "4. Encore 15 m de traction de traîneau.",
+   "5. 30 soulevés de terre sumo avec tirage menton : jambes écartées, tu soulèves la barre du sol puis tu la tires jusqu'au menton.",
+   "6. Dernière traction de traîneau sur 15 m. Le chrono s'arrête quand le traîneau arrive."
+  ],
+  "charges": "Traîneau sur 15 m (50 pieds), trois fois. Charges des barres non précisées : choisis un poids léger à moyen.",
+  "objectif": "Séance courte, autour de 10 minutes, avec un gros travail des épaules et du souffle. Vise un effort soutenu sans t'effondrer.",
+  "pieges": [
+   "Prendre un poids trop lourd pour les 50 épaulés-jetés : tes épaules lâchent avant la fin.",
+   "Tirer le traîneau avec les bras seulement : utilise aussi le dos et les jambes.",
+   "Ne pas garder de souffle avant les 40 burpees."
+  ]
+ },
+ "hero-gage": {
+  "format": "Chronométré : tu fais tout le plus vite possible et ton score est ton temps total. C'est une séance très longue.",
+  "deroule": [
+   "Départ : 1 996 m de rameur.",
+   "Puis 3 tours. Chaque tour : 12 épaulés debout, 11 squats avec la barre dans le dos, 3 montées à la corde jusqu'à 4,6 m (15 pieds), 27 burpees.",
+   "Épaulé debout : tu tires la barre du sol jusqu'aux épaules sans descendre en squat profond.",
+   "Montée à la corde : tu grimpes jusqu'à la hauteur demandée, puis tu redescends sous contrôle.",
+   "Pour finir : 2 024 m de rameur. Le chrono s'arrête à la fin."
+  ],
+  "charges": "Rameur 1 996 m au début, puis 2 024 m à la fin. Montée à la corde : 4,6 m. Barre non précisée : prends une charge moyenne, avec laquelle tu fais les 12 épaulés sans pause.",
+  "objectif": "Séance d'endurance très longue, autour d'une heure. Garde du souffle pour les rameurs. Ne te blesse pas sur la corde en étant fatigué.",
+  "pieges": [
+   "Partir trop vite sur les 1 996 premiers mètres : tu es déjà cuit pour les tours.",
+   "Rater la technique de la corde quand tu es fatigué : si tu n'arrives plus à monter, fais des montées partielles et préviens ton coach.",
+   "Prendre une barre trop lourde pour les squats : 11 répétitions après les épaulés, ça pique."
+  ]
+ },
+ "hero-galeforce": {
+  "format": "AMRAP de 30 minutes : tu fais le plus de tours possible dans le temps. Ton score est le nombre de tours et de répétitions.",
+  "deroule": [
+   "Un tour : 20 montées sur une caisse (box) avec un sac à dos lesté, 23 burpees par-dessus le sac, 19 squats au poids du corps.",
+   "Montée sur caisse : tu poses un pied sur la caisse et tu montes en te dressant complètement, puis tu redescends.",
+   "Burpee par-dessus le sac : tu fais un burpee et tu sautes par-dessus le sac posé au sol.",
+   "Enchaîne les tours pendant 30 minutes.",
+   "À la fin des 30 minutes, tu ajoutes une dernière série de 19 squats, qui compte dans ton score."
+  ],
+  "charges": "Sac à dos lesté : poids non précisé, prends 8 à 10 kg. Caisse d'environ 50 cm.",
+  "objectif": "Séance longue et régulière, comme une course à pied. Vise un rythme que tu tiens 30 minutes, sans pause longue.",
+  "pieges": [
+   "Aller trop vite sur le premier tour et exploser au troisième.",
+   "Mal te positionner sur le saut par-dessus le sac quand tu es fatigué : saute prudemment.",
+   "Oublier la série de 19 squats finale."
+  ]
+ },
+ "hero-gallant": {
+  "format": "Chronométré : tu fais tout le plus vite possible et ton score est ton temps. C'est un schéma dégressif : les distances et les répétitions diminuent à chaque étape.",
+  "deroule": [
+   "1. Course de 1 mile (1,6 km) en portant un médecine-ball.",
+   "2. 60 burpees avec traction : à chaque burpee, tu te relèves et tu fais une traction à la barre.",
+   "3. Course de 800 m avec le médecine-ball.",
+   "4. 30 burpees avec traction.",
+   "5. Course de 400 m avec le médecine-ball.",
+   "6. 15 burpees avec traction. Le chrono s'arrête là."
+  ],
+  "charges": "Médecine-ball : poids non précisé, souvent 9 kg environ. Distances : 1,6 km, 800 m, 400 m.",
+  "objectif": "Séance longue qui mélange course et gros volume. Vise environ 25 à 35 minutes. Garde ton énergie pour les 60 burpees avec traction, qui sont le gros morceau.",
+  "pieges": [
+   "Partir trop vite sur le premier mile avec la balle.",
+   "Faire les 60 burpees d'un coup : fais 6 séries de 10 avec de courtes pauses.",
+   "Perdre du temps à changer de prise sur la barre : garde la même à chaque traction."
+  ]
+ },
+ "hero-garbo": {
+  "format": "Chronomètre de 21 minutes. Tu commences par 400 m de course, puis tu fais le plus de tours possible jusqu'à la fin. Ton score est le nombre de tours et de répétitions.",
+  "deroule": [
+   "Départ : 400 m de course à pied.",
+   "Puis lance les tours sans pause.",
+   "Un tour : 10 pompes mains décollées, 4 tractions strictes, 20 balancés de kettlebell, 10 squats gobelet.",
+   "Pompe mains décollées : tu descends poitrine au sol, tu décolles les mains, puis tu te repousses.",
+   "Traction stricte : sans élan, sans balancement des jambes.",
+   "Balancé de kettlebell : tu balances le poids russe des jambes jusqu'à hauteur de poitrine.",
+   "Squat gobelet : tu tiens le poids contre la poitrine et tu descends en squat. Arrête-toi à 21 minutes et compte tes tours."
+  ],
+  "charges": "Kettlebell : poids non précisé, prends 24 kg. Course : 400 m au début.",
+  "objectif": "Séance mixte force-cardio, avec petit volume de tractions et gros volume de jambes. Garde un rythme régulier pour faire 5 à 7 tours.",
+  "pieges": [
+   "Aller trop vite sur le 400 m de départ.",
+   "Faire les tractions strictes en s'aidant d'un balancement : le tour ne compte pas pour la qualité.",
+   "Prendre un kettlebell trop lourd, qui te force à t'arrêter pendant les balancés."
+  ]
+ },
+ "hero-garrett": {
+  "format": "3 tours chronométrés : tu fais tout le plus vite possible et ton score est ton temps total.",
+  "deroule": [
+   "Un tour : 75 squats au poids du corps, 25 pompes en équilibre sur les mains aux anneaux, 25 tractions en L.",
+   "Squat : tu descends cuisses sous l'horizontale, puis tu te relèves.",
+   "Pompe en équilibre sur les mains aux anneaux : tu es à l'envers, pieds au mur, tu descends et tu pousses entre deux anneaux instables.",
+   "Traction en L : tu tires, jambes tendues à l'horizontale devant toi.",
+   "Refais ce tour 3 fois, sans pause longue entre."
+  ],
+  "charges": "Aucune charge. Si les pompes aux anneaux sont trop dures, fais des pompes en V (fesses en l'air) avec les pieds surélevés.",
+  "objectif": "Séance longue, difficile pour les épaules. Vise 30 à 40 minutes. Fractionne les mouvements difficiles en petites séries dès le début.",
+  "pieges": [
+   "Les 75 squats trop vite : garde de la force dans les jambes pour la suite.",
+   "Forcer sur les pompes aux anneaux jusqu'à t'effondrer : mieux vaut une adaptation propre.",
+   "Tirer les tractions en L en balançant les jambes."
+  ]
+ },
+ "hero-gator": {
+  "format": "8 tours chronométrés : tu fais tout le plus vite possible et ton score est ton temps total.",
+  "deroule": [
+   "Un tour : 5 squats avant, 26 pompes aux anneaux.",
+   "Squat avant : la barre repose sur le devant des épaules, tu descends en squat et tu te relèves.",
+   "Pompe aux anneaux : mains sur des anneaux suspendus, tu descends poitrine entre les anneaux, puis tu te repousses.",
+   "Fais 8 tours en tout, sans pause longue entre."
+  ],
+  "charges": "Charge de la barre non précisée : prends une barre moyenne à lourde, environ 60 kg, qui reste faisable pour 5 répétitions même fatigué.",
+  "objectif": "Séance moyenne où les bras fatiguent beaucoup. Vise autour de 15 à 20 minutes. Divise les 26 pompes en 2 ou 3 séries pour ne pas t'effondrer.",
+  "pieges": [
+   "Prendre une barre trop lourde : après quelques tours, les 5 squats deviennent difficiles.",
+   "Faire les 26 pompes en une seule série : tu craques avant la fin.",
+   "Perdre du temps à reprendre la barre : garde-la prête à chaque tour."
+  ]
+ },
+ "hero-gaza": {
+  "format": "5 tours chronométrés : tu fais tout le plus vite possible et ton score est ton temps total. C'est une séance longue.",
+  "deroule": [
+   "Un tour : 35 balancés de kettlebell, 30 pompes, 25 tractions, 20 sauts sur caisse, puis 1 mile de course (1,6 km).",
+   "Balancé de kettlebell : tu balances le poids russe des jambes jusqu'à hauteur de poitrine.",
+   "Saut sur caisse : tu sautes pieds joints sur la caisse et tu te redresses complètement.",
+   "Refais ce tour 5 fois, sans pause longue.",
+   "Le chrono s'arrête à la fin du dernier mile."
+  ],
+  "charges": "Kettlebell : poids non précisé, prends 24 kg. Caisse : environ 60 cm. Course : 1,6 km par tour, soit 8 km en tout.",
+  "objectif": "Grosse séance d'endurance, autour d'une heure. Pense à un triathlon : l'allure de course doit rester régulière sur les 5 miles.",
+  "pieges": [
+   "Partir trop vite sur le premier mile : les 4 autres sont durs ensuite.",
+   "Faire les tractions en grosses séries : fractionne avant la fatigue.",
+   "Mal sauter sur la caisse quand tu es fatigué : tu peux descendre en marchant pour protéger tes tendons."
+  ]
+ },
+ "hero-hidalgo": {
+  "format": "Tu fais tout le plus vite possible, du début à la fin, avec deux pauses imposées de 2 minutes. Ton score est le temps total (pauses incluses).",
+  "deroule": [
+   "Course à pied de 2 miles, soit 3,2 km, à allure soutenue mais tenable.",
+   "Pause de 2 minutes : bois, respire, prépare la barre.",
+   "20 épaulés en squat : tu montes la barre du sol aux épaules en descendant en squat, puis tu te relèves.",
+   "20 sauts sur la box (la caisse de saut) : tu sautes dessus, tu te redresses complètement, puis tu redescends.",
+   "20 fentes marchées barre au-dessus de la tête : à chaque pas, le genou arrière frôle le sol et les bras restent tendus.",
+   "20 sauts sur la box, puis 20 épaulés en squat avec la même barre.",
+   "Pause de 2 minutes, puis dernière course de 2 miles (3,2 km)."
+  ],
+  "charges": "Course : 3,2 km ×2. Barre et hauteur de box non précisées : prends une charge que tu peux enchaîner sans t'arrêter, et une box de 60 cm environ.",
+  "objectif": "C'est une séance longue qui mélange endurance et force. Compte environ 35 à 40 minutes. Tu gardes de la marge sur la 1re course, et tu coupes les séries de squats si la technique se dégrade.",
+  "pieges": [
+   "Partir trop vite sur la 1re course : tu paies sur les épaulés.",
+   "Choisir une barre trop lourde pour les fentes au-dessus de la tête : les épaules lâchent.",
+   "Faire les sauts sur la box en rebondissant sans pause : saute, redresse-toi, descends en marchant pour protéger les tendons d'Achille."
+  ]
+ },
+ "hero-hildy": {
+  "format": "C'est un « chipper » : une liste d'exercices à finir un par un, dans l'ordre, le plus vite possible. Ton score est le temps total.",
+  "deroule": [
+   "100 calories au rameur.",
+   "75 thrusters : squat avec la barre devant les épaules, puis poussée au-dessus de la tête en un seul mouvement.",
+   "50 tractions.",
+   "75 lancers de médecine-ball au mur (squat, puis tu lances vers une cible en hauteur et tu rattrapes).",
+   "100 calories au rameur pour finir."
+  ],
+  "charges": "Les charges ne sont pas précisées. Prends une barre légère à moyenne pour les thrusters et un ballon de 9 kg (cible à 3 m) pour les lancers.",
+  "objectif": "Tu enchaînes un gros volume à intensité modérée pendant environ 24 minutes. Tu gardes un rythme régulier au rameur et tu fractionnes tôt les tractions et les thrusters.",
+  "pieges": [
+   "Se vider sur les 100 premières calories : il reste plus de 200 répétitions derrière.",
+   "Faire les tractions en une seule grosse série : prends des petites séries de 5 à 8 avant l'échec.",
+   "Bâcler la profondeur des squats quand tu es fatigué."
+  ]
+ },
+ "hero-holbrook": {
+  "format": "Tu fais 10 tours. Chaque tour est chronométré séparément, puis tu te reposes 1 minute avant le suivant. Ton score est la somme des temps de tes 10 tours.",
+  "deroule": [
+   "Pars sur un tour : 5 thrusters (squat avec la barre devant, puis poussée au-dessus de la tête).",
+   "Enchaîne avec 10 tractions.",
+   "Termine par un sprint de 100 m, puis arrête le chrono du tour.",
+   "Repose-toi 1 minute complète, puis relance le tour suivant.",
+   "Répète jusqu'au 10e tour. Au total : 50 thrusters, 100 tractions et 1 km de sprint."
+  ],
+  "charges": "Charge de barre non précisée : choisis une barre avec laquelle tu fais les 5 thrusters sans pause. Sprint : 100 m.",
+  "objectif": "Chaque tour doit être court et intense, autour de 1 minute 30 à 2 minutes. Tu vises le même temps à chaque tour. Tu dois finir le 10e tour presque aussi vite que le 1er.",
+  "pieges": [
+   "Partir à fond sur les 3 premiers tours : les tractions s'effondrent ensuite.",
+   "Ne pas utiliser la minute de repos pour respirer et te replacer.",
+   "Garder la barre trop lourde : les 5 thrusters doivent s'enchaîner."
+  ]
+ },
+ "hero-holleyman": {
+  "format": "Tu fais 30 tours le plus vite possible, tous identiques. Ton score est le temps total.",
+  "deroule": [
+   "Un tour = 5 lancers de médecine-ball au mur (squat, puis lancer vers une cible en hauteur).",
+   "Puis 3 pompes en équilibre sur les mains (tête vers le sol, pieds au mur, tu pousses pour remonter).",
+   "Puis 1 épaulé debout : tu montes la barre du sol aux épaules sans descendre en squat profond.",
+   "Recommence 30 fois. Au total : 150 lancers, 90 pompes inversées et 30 épaulés."
+  ],
+  "charges": "Charges non précisées : prends un ballon moyen (9 kg) et une barre qui te permet des épaulés propres sans effort excessif.",
+  "objectif": "C'est une séance très longue (environ 1 heure). Tu cherches un rythme régulier, sans arrêt de plus de quelques secondes. Chaque tour dure environ 2 minutes.",
+  "pieges": [
+   "Aller trop vite aux premiers tours : les épaules vont vite fatiguer sur 90 pompes inversées.",
+   "Compter les tours de tête : note-les sur une feuille.",
+   "Faire les pompes inversées à la fatigue en déformant la posture : fractionne ou choisis la version adaptée."
+  ]
+ },
+ "hero-hollywood": {
+  "format": "Tu fais tout le plus vite possible, du début à la fin. Ton score est le temps total.",
+  "deroule": [
+   "Course de 2 000 m.",
+   "22 lancers de médecine-ball au mur.",
+   "22 muscle-ups : traction qui se termine au-dessus de l'anneau, puis dips (poussée des bras tendus).",
+   "22 lancers de médecine-ball au mur.",
+   "22 épaulés debout : tu montes la barre du sol aux épaules sans descendre en squat profond.",
+   "22 lancers de médecine-ball au mur.",
+   "Course de 2 000 m pour finir."
+  ],
+  "charges": "Charge de barre et ballon non précisés : choisis des charges qui laissent les séries d'épaulés propres. Courses : 2 000 m ×2.",
+  "objectif": "Contrairement à l'estimation affichée, la séance est longue : prévois environ 45 à 60 minutes. Tu gardes de l'énergie pour les 22 muscle-ups, et tu fractionnes les lancers dès le début.",
+  "pieges": [
+   "Ne pas prévoir de version adaptée des muscle-ups : si tu n'en fais pas 22 d'affilée, remplace-les par des tractions explosives ou des anneaux avec élastique.",
+   "Courir la 1re épreuve trop vite : il reste beaucoup à faire.",
+   "Négliger la qualité des épaulés quand la fatigue arrive."
+  ]
+ },
+ "hero-hoover": {
+  "format": "Tu fais 8 tours le plus vite possible. Ton score est le temps total.",
+  "deroule": [
+   "Un tour commence par une course de 400 m.",
+   "Puis 15 burpees avec saut par-dessus la box : tu te couches au sol, tu te relèves, puis tu sautes par-dessus la caisse (sans forcément atterrir dessus).",
+   "Puis 10 calories au vélo.",
+   "Puis 6 arrachés à l'haltère en alternance : tu montes l'haltère du sol au-dessus de la tête, 3 fois par bras.",
+   "Recommence 8 fois. Au total : 3,2 km de course, 120 burpees, 80 calories de vélo et 48 arrachés."
+  ],
+  "charges": "Haltère et hauteur de box non précisés : prends un haltère moyen que tu maîtrises à un bras et une box de 50 à 60 cm.",
+  "objectif": "Séance d'endurance avec beaucoup de rythme cardiaque, environ 17 minutes d'après la fiche, mais prévois plus pour tes 8 tours. Garde une allure constante sur la course.",
+  "pieges": [
+   "Partir trop vite sur la 1re course : les burpees te rattrapent.",
+   "Poser les pieds sur la box sans passer proprement par-dessus.",
+   "Oublier d'alterner les bras sur les arrachés."
+  ]
+ },
+ "hero-hortman": {
+  "format": "C'est un AMRAP : tu fais le plus de tours possible en 45 minutes. Ton score est le nombre de tours complets, plus les répétitions du tour en cours.",
+  "deroule": [
+   "Un tour commence par une course de 800 m.",
+   "Puis 80 squats au poids du corps : tu descends, cuisses sous l'horizontale, puis tu te relèves.",
+   "Puis 8 muscle-ups : traction qui se termine au-dessus de la barre ou des anneaux, puis dips.",
+   "Enchaîne un nouveau tour, tant que les 45 minutes ne sont pas écoulées.",
+   "Quand le temps est écoulé, note les tours finis et les répétitions du tour en cours."
+  ],
+  "charges": "Aucune charge : course de 800 m et poids du corps.",
+  "objectif": "C'est une séance d'endurance longue. Vise un rythme que tu peux tenir 45 minutes, par exemple 3 à 4 tours. Fractionne les squats en séries de 20.",
+  "pieges": [
+   "Courir trop vite : 80 squats et 8 muscle-ups suivent.",
+   "Faire les 80 squats d'une traite : fractionne avant que les jambes brûlent.",
+   "Ne pas prévoir de version adaptée des muscle-ups si tu ne les enchaînes pas."
+  ]
+ },
+ "hero-horton": {
+  "format": "Tu fais 9 tours le plus vite possible, en binôme : un seul travaille à la fois, vous vous répartissez les répétitions comme vous voulez. Ton score est le temps total.",
+  "deroule": [
+   "Un tour = 9 muscle-ups à la barre : traction qui se termine au-dessus de la barre, puis poussée bras tendus.",
+   "Puis 11 épaulés-jetés : tu montes la barre du sol aux épaules, puis tu la jettes au-dessus de la tête.",
+   "Puis 50 yards (environ 46 m) de portage du partenaire sur le dos ou dans les bras.",
+   "En binôme, vous vous répartissez les répétitions et les mètres comme vous voulez, un seul travaille à la fois.",
+   "Seul : à chaque tour, fais 5 répétitions de chaque exercice (5 muscle-ups, 5 épaulés-jetés) et porte un gros sac de sable sur 46 m."
+  ],
+  "charges": "Charge de barre non précisée. Portage : 46 m (50 yards).",
+  "objectif": "C'est un partenariat de 9 tours, environ 15 minutes. Découpe tôt les muscle-ups et garde de l'énergie pour les épaulés-jetés. En solo, reste régulier.",
+  "pieges": [
+   "Garder le chrono pendant qu'il s'arrête pour la récupération : changez-vous vite.",
+   "Prendre un sac de sable trop léger en solo : il doit peser vraiment.",
+   "Se précipiter sur les muscle-ups : si la technique lâche, passe à une version adaptée."
+  ]
+ },
+ "hero-jj": {
+  "format": "Tu fais une montée et une descente de répétitions le plus vite possible. Ton score est le temps total.",
+  "deroule": [
+   "Série 1 : 1 épaulé en squat, puis 10 pompes en équilibre sur les mains (mains sur petites barres au sol, les parallettes).",
+   "Série 2 : 2 épaulés en squat, puis 9 pompes en équilibre.",
+   "Continue : les épaulés augmentent d'un à chaque série (jusqu'à 10) et les pompes diminuent d'un (jusqu'à 1).",
+   "Dernière série : 10 épaulés en squat, puis 1 pompe en équilibre.",
+   "Au total : 55 épaulés en squat et 55 pompes en équilibre sur les mains."
+  ],
+  "charges": "Charge de barre non précisée : choisis une charge que tu peux enchaîner jusqu'à 10 épaulés. Parallettes à utiliser pour les pompes.",
+  "objectif": "C'est un sprint technique d'environ 6 minutes (c'est l'estimation donnée). Tu gardes la qualité sur les pompes inversées. Fractionne dès que le souffle manque.",
+  "pieges": [
+   "Aller trop vite sur les premières pompes : elles fatiguent les épaules pour les dernières.",
+   "Choisir une barre trop lourde : les 10 épaulés finissent mal.",
+   "Faire les pompes inversées sans amplitude complète : la tête doit descendre bas."
+  ]
+ },
+ "hero-jack": {
+  "format": "C'est un AMRAP : tu fais le plus de tours possible en 20 minutes. Ton score est le nombre de tours, plus les répétitions du tour en cours.",
+  "deroule": [
+   "Un tour commence par 10 développés avec impulsion des jambes : la barre est sur les épaules, tu fléchis les jambes puis tu pousses au-dessus de la tête.",
+   "Puis 10 balancers de kettlebell (boulet à poignée) : tu la balances entre les jambes, puis jusqu'à hauteur des yeux ou plus haut.",
+   "Puis 10 sauts sur la box.",
+   "Enchaîne un nouveau tour, tant que les 20 minutes ne sont pas écoulées.",
+   "À la fin, note tes tours complets et tes répétitions en plus."
+  ],
+  "charges": "Barre, kettlebell et hauteur de box non précisées : prends une barre légère à moyenne, une kettlebell de 24 kg et une box de 50 à 60 cm.",
+  "objectif": "Séance d'endurance intense de 20 minutes. Vise un rythme régulier, sans arrêt long, pour faire 6 à 9 tours. Garde de l'énergie pour les dernières minutes.",
+  "pieges": [
+   "Prendre une barre trop lourde : les développés cassent le rythme.",
+   "Courber le dos sur les balancers.",
+   "Sauter en rebond sur la box : descends en marchant pour épargner les tendons."
+  ]
+ },
+ "hero-jackstriangle": {
+  "format": "Tu fais un total de répétitions sur 23 minutes, en trois parties : max de soulevés de terre, puis AMRAP de 19 minutes, puis à nouveau max de soulevés de terre. Ton score est le total de répétitions.",
+  "deroule": [
+   "De 0:00 à 2:00 : tu fais un maximum de soulevés de terre à 102 kg (225 lb). Tu peux te reposer quand tu veux.",
+   "De 2:00 à 21:00 : AMRAP de 19 minutes, c'est-à-dire autant de tours que possible.",
+   "Un tour : 4 tractions strictes (sans élan), 11 sauts sur la box, 13 pompes mains décollées (en bas, tes mains quittent le sol), puis 23 calories au vélo.",
+   "De 21:00 à 23:00 : le texte s'arrête là. Normalement, tu refais 2 minutes de soulevés de terre max, comme au début.",
+   "Additionne toutes tes répétitions (soulevés de terre, tractions, sauts, pompes, calories)."
+  ],
+  "charges": "Soulevé de terre : 102 kg (225 lb). Box non précisée : 50 à 60 cm.",
+  "objectif": "Le but est de maintenir un bon rythme pendant 23 minutes, en gérant l'énergie. Garde de la marge dans l'AMRAP pour finir les 2 dernières minutes de soulevés.",
+  "pieges": [
+   "Te vider sur les 2 premières minutes de soulevés : l'AMRAP en pâtit.",
+   "Faire les tractions avec élan : elles doivent être strictes.",
+   "Oublier de lâcher les mains en bas des pompes : sinon la répétition ne compte pas."
+  ]
+ },
+ "hero-jared": {
+  "format": "Tu fais 4 tours le plus vite possible. Ton score est le temps total.",
+  "deroule": [
+   "Un tour commence par une course de 800 m.",
+   "Puis 40 tractions : fractionne en séries de 5 à 10.",
+   "Puis 70 pompes : fractionne en séries de 10 à 15.",
+   "Recommence 4 fois. Au total : 3,2 km de course, 160 tractions et 280 pompes."
+  ],
+  "charges": "Aucune charge : course de 800 m et poids du corps.",
+  "objectif": "C'est une séance d'endurance de force, environ 23 minutes d'après la fiche, mais probablement plus pour toi. Garde une allure régulière sur la course et fractionne tôt les tractions et pompes.",
+  "pieges": [
+   "Courir trop vite le 1er 800 m : les tractions s'en ressentent.",
+   "Tout faire en grosses séries : tu tombes vite à l'échec et tu perds du temps.",
+   "Bâcler l'amplitude des pompes : poitrine au sol, bras tendus en haut."
+  ]
+ }
+}
