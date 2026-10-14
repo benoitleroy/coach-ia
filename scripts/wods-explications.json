@@ -10013,5 +10013,190 @@
    "Ne t'entraîne pas sur cette fiche : elle ne décrit aucune séance.",
    "Corrige la récupération du texte (la page a probablement renvoyé un bouton ou un pied de page)."
   ]
+ },
+ "cf240831": {
+  "format": "Séance d'apprentissage sans chrono et sans score : le but est de travailler la technique d'un mouvement, pas de faire un résultat. Le texte d'origine ne précise pas quel mouvement, il faut donc regarder la vidéo ou la consigne du jour.",
+  "deroule": [
+   "Minutes 0 à 2 : échauffe-toi (vélo ou rameur facile, mobilité des épaules, des hanches et des chevilles).",
+   "Minutes 2 à 4 : regarde ou écoute la démonstration du mouvement du jour. Repère les 2 ou 3 points clés (position du dos, trajectoire, placement des pieds).",
+   "Minutes 4 à 6 : fais quelques répétitions sans charge, ou avec un bâton en plastique ou un manche à balai. Va lentement.",
+   "Minutes 6 à 11 : ajoute progressivement du poids. Fais des petites séries de 3 à 5 répétitions, avec un court repos entre chaque.",
+   "Minutes 11 à 12 : refais 2 ou 3 répétitions propres, puis note ce qui a marché et ce qui reste à corriger."
+  ],
+  "charges": "Pas de charge imposée : commence à vide, puis monte seulement tant que la technique reste propre.",
+  "objectif": "Comprendre et ancrer le geste, sans fatigue ni course contre la montre. Le travail est calme, environ 12 minutes : tu dois finir en forme, avec un geste plus propre qu'au départ.",
+  "pieges": [
+   "Ajouter trop de poids trop vite : si la technique se dégrade, redescends.",
+   "Chercher à aller vite ou à se fatiguer : ici, la qualité compte plus que la quantité.",
+   "Ne pas poser de question : si un point reste flou (surtout avec ton épaule droite fragile), demande au coach avant de continuer."
+  ]
+ },
+ "cf241024": {
+  "format": "Le texte de ce WOD n'a pas été récupéré : il contient seulement un lien « Lire l'article ». Le format et le score sont donc inconnus.",
+  "deroule": [
+   "Ouvre la page du WOD du 24/10/2024 sur CrossFit.com et lis le descriptif complet.",
+   "Recopie les mouvements, les répétitions et le format (chrono, nombre de tours, intervalles).",
+   "Relance ensuite l'explication avec ce texte complet."
+  ],
+  "charges": "",
+  "objectif": "Impossible de donner le but de la séance sans connaître son contenu. Je ne veux pas inventer un WOD qui ne correspond pas au vrai.",
+  "pieges": [
+   "Ne t'appuie pas sur cette fiche pour t'entraîner : elle ne décrit aucune séance.",
+   "Vérifie que le texte récupéré contient bien les mouvements avant de relancer."
+  ]
+ },
+ "cf241020": {
+  "format": "Le texte de ce WOD n'a pas été récupéré : il contient seulement un lien « Lire l'article ». Le format et le score sont donc inconnus.",
+  "deroule": [
+   "Ouvre la page du WOD du 20/10/2024 sur CrossFit.com et lis le descriptif complet.",
+   "Recopie les mouvements, les répétitions et le format (chrono, nombre de tours, intervalles).",
+   "Relance ensuite l'explication avec ce texte complet."
+  ],
+  "charges": "",
+  "objectif": "Impossible de donner le but de la séance sans connaître son contenu. Je ne veux pas inventer un WOD qui ne correspond pas au vrai.",
+  "pieges": [
+   "Ne t'appuie pas sur cette fiche pour t'entraîner : elle ne décrit aucune séance.",
+   "Vérifie que le texte récupéré contient bien les mouvements avant de relancer."
+  ]
+ },
+ "cf241017": {
+  "format": "Le texte de ce WOD n'a pas été récupéré : il contient seulement un lien « Lire l'article ». Le format et le score sont donc inconnus.",
+  "deroule": [
+   "Ouvre la page du WOD du 17/10/2024 sur CrossFit.com et lis le descriptif complet.",
+   "Recopie les mouvements, les répétitions et le format (chrono, nombre de tours, intervalles).",
+   "Relance ensuite l'explication avec ce texte complet."
+  ],
+  "charges": "",
+  "objectif": "Impossible de donner le but de la séance sans connaître son contenu. Je ne veux pas inventer un WOD qui ne correspond pas au vrai.",
+  "pieges": [
+   "Ne t'appuie pas sur cette fiche pour t'entraîner : elle ne décrit aucune séance.",
+   "Vérifie que le texte récupéré contient bien les mouvements avant de relancer."
+  ]
+ },
+ "cf241013": {
+  "format": "Le texte de ce WOD n'a pas été récupéré : il contient seulement un lien « Lire l'article ». Le format et le score sont donc inconnus.",
+  "deroule": [
+   "Ouvre la page du WOD du 13/10/2024 sur CrossFit.com et lis le descriptif complet.",
+   "Recopie les mouvements, les répétitions et le format (chrono, nombre de tours, intervalles).",
+   "Relance ensuite l'explication avec ce texte complet."
+  ],
+  "charges": "",
+  "objectif": "Impossible de donner le but de la séance sans connaître son contenu. Je ne veux pas inventer un WOD qui ne correspond pas au vrai.",
+  "pieges": [
+   "Ne t'appuie pas sur cette fiche pour t'entraîner : elle ne décrit aucune séance.",
+   "Vérifie que le texte récupéré contient bien les mouvements avant de relancer."
+  ]
+ },
+ "cf241010": {
+  "format": "Le texte de ce WOD n'a pas été récupéré : il contient seulement un lien « Lire l'article ». Le format et le score sont donc inconnus.",
+  "deroule": [
+   "Ouvre la page du WOD du 10/10/2024 sur CrossFit.com et lis le descriptif complet.",
+   "Recopie les mouvements, les répétitions et le format (chrono, nombre de tours, intervalles).",
+   "Relance ensuite l'explication avec ce texte complet."
+  ],
+  "charges": "",
+  "objectif": "Impossible de donner le but de la séance sans connaître son contenu. Je ne veux pas inventer un WOD qui ne correspond pas au vrai.",
+  "pieges": [
+   "Ne t'appuie pas sur cette fiche pour t'entraîner : elle ne décrit aucune séance.",
+   "Vérifie que le texte récupéré contient bien les mouvements avant de relancer."
+  ]
+ },
+ "cf241006": {
+  "format": "Le texte de ce WOD n'a pas été récupéré : il contient seulement un lien « Lire l'article ». Le format et le score sont donc inconnus.",
+  "deroule": [
+   "Ouvre la page du WOD du 06/10/2024 sur CrossFit.com et lis le descriptif complet.",
+   "Recopie les mouvements, les répétitions et le format (chrono, nombre de tours, intervalles).",
+   "Relance ensuite l'explication avec ce texte complet."
+  ],
+  "charges": "",
+  "objectif": "Impossible de donner le but de la séance sans connaître son contenu. Je ne veux pas inventer un WOD qui ne correspond pas au vrai.",
+  "pieges": [
+   "Ne t'appuie pas sur cette fiche pour t'entraîner : elle ne décrit aucune séance.",
+   "Vérifie que le texte récupéré contient bien les mouvements avant de relancer."
+  ]
+ },
+ "cf241003": {
+  "format": "Le texte de ce WOD n'a pas été récupéré : il contient seulement un lien « Lire l'article ». Le format et le score sont donc inconnus.",
+  "deroule": [
+   "Ouvre la page du WOD du 03/10/2024 sur CrossFit.com et lis le descriptif complet.",
+   "Recopie les mouvements, les répétitions et le format (chrono, nombre de tours, intervalles).",
+   "Relance ensuite l'explication avec ce texte complet."
+  ],
+  "charges": "",
+  "objectif": "Impossible de donner le but de la séance sans connaître son contenu. Je ne veux pas inventer un WOD qui ne correspond pas au vrai.",
+  "pieges": [
+   "Ne t'appuie pas sur cette fiche pour t'entraîner : elle ne décrit aucune séance.",
+   "Vérifie que le texte récupéré contient bien les mouvements avant de relancer."
+  ]
+ },
+ "cf240929": {
+  "format": "Le texte de ce WOD n'a pas été récupéré : il contient seulement un lien « Lire l'article ». Le format et le score sont donc inconnus.",
+  "deroule": [
+   "Ouvre la page du WOD du 29/09/2024 sur CrossFit.com et lis le descriptif complet.",
+   "Recopie les mouvements, les répétitions et le format (chrono, nombre de tours, intervalles).",
+   "Relance ensuite l'explication avec ce texte complet."
+  ],
+  "charges": "",
+  "objectif": "Impossible de donner le but de la séance sans connaître son contenu. Je ne veux pas inventer un WOD qui ne correspond pas au vrai.",
+  "pieges": [
+   "Ne t'appuie pas sur cette fiche pour t'entraîner : elle ne décrit aucune séance.",
+   "Vérifie que le texte récupéré contient bien les mouvements avant de relancer."
+  ]
+ },
+ "cf240926": {
+  "format": "Le texte de ce WOD n'a pas été récupéré : il contient seulement un lien « Lire l'article ». Le format et le score sont donc inconnus.",
+  "deroule": [
+   "Ouvre la page du WOD du 26/09/2024 sur CrossFit.com et lis le descriptif complet.",
+   "Recopie les mouvements, les répétitions et le format (chrono, nombre de tours, intervalles).",
+   "Relance ensuite l'explication avec ce texte complet."
+  ],
+  "charges": "",
+  "objectif": "Impossible de donner le but de la séance sans connaître son contenu. Je ne veux pas inventer un WOD qui ne correspond pas au vrai.",
+  "pieges": [
+   "Ne t'appuie pas sur cette fiche pour t'entraîner : elle ne décrit aucune séance.",
+   "Vérifie que le texte récupéré contient bien les mouvements avant de relancer."
+  ]
+ },
+ "cf240924": {
+  "format": "Ce n'est pas un WOD décrit : le texte est seulement un lien « Apprendre le mouvement ». Il n'y a ni format ni score.",
+  "deroule": [
+   "Ouvre la page du 24/09/2024 sur CrossFit.com : elle présente probablement un mouvement à apprendre.",
+   "Note le nom du mouvement et les consignes d'exécution.",
+   "Relance ensuite l'explication avec ce texte complet."
+  ],
+  "charges": "",
+  "objectif": "Je ne peux pas dire quel mouvement ou quelle séance est visé sans le contenu de la page. Je préfère ne rien inventer.",
+  "pieges": [
+   "Ne considère pas cette fiche comme une séance : elle n'en décrit aucune.",
+   "Récupère le vrai texte de la page avant de t'entraîner."
+  ]
+ },
+ "cf240922": {
+  "format": "Le texte de ce WOD n'a pas été récupéré : il contient seulement un lien « Lire l'article ». Le format et le score sont donc inconnus.",
+  "deroule": [
+   "Ouvre la page du 22/09/2024 sur CrossFit.com et lis le contenu complet.",
+   "Recopie les mouvements, les répétitions et le format s'il y a une séance.",
+   "Relance ensuite l'explication avec ce texte complet."
+  ],
+  "charges": "",
+  "objectif": "Impossible de donner le but de la séance sans connaître son contenu. Je ne veux pas inventer un WOD qui ne correspond pas au vrai.",
+  "pieges": [
+   "Ne t'appuie pas sur cette fiche pour t'entraîner : elle ne décrit aucune séance.",
+   "Cette page est peut-être un simple article, sans séance du tout."
+  ]
+ },
+ "cf240921": {
+  "format": "Ce n'est pas un WOD décrit : le texte est seulement un lien « Obtenir le matériel ». Il n'y a ni format ni score.",
+  "deroule": [
+   "Ouvre la page du 21/09/2024 sur CrossFit.com : elle renvoie sans doute vers du matériel à acheter.",
+   "Cherche si une séance est décrite ailleurs sur la page.",
+   "Relance ensuite l'explication avec ce texte complet."
+  ],
+  "charges": "",
+  "objectif": "Je ne peux pas décrire une séance qui n'apparaît pas dans le texte fourni. Je préfère ne rien inventer.",
+  "pieges": [
+   "Ne considère pas cette fiche comme une séance : elle n'en décrit aucune.",
+   "Récupère le vrai texte de la page avant de t'entraîner."
+  ]
  }
 }
