@@ -39,6 +39,7 @@
     document.querySelectorAll("#tabs button").forEach(x => x.classList.toggle("on", x === b));
     document.querySelectorAll(".tabpane").forEach(p => p.classList.toggle("on", p.id === "tab-" + b.dataset.tab));
     window.scrollTo(0, 0);
+    b.scrollIntoView({ inline: "nearest", block: "nearest" });   // onglet choisi toujours visible dans la barre
   }));
 
   // ── En-tête ──
