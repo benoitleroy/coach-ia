@@ -26,3 +26,4 @@ node_modules/
 # Mac
 .DS_Store
 scripts/wods-explications.log
+scripts/.blessure.local.txt
