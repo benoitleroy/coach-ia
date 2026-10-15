@@ -5,21 +5,8 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
-UID:2026-S42-3-soir@coach-ia
-DTSTAMP:20261015T170000Z
-DTSTART:20261015T163000Z
-DTEND:20261015T174500Z
-SUMMARY:🧘 Pilates adapté à l'épaule (25 min)
-DESCRIPTION:Séance de récup au sol\, à la maison\, sans jamais t'appuyer sur le bras droit. Le but est de détendre les hanches et le dos\, pas de transpirer.\n• 3 min : respiration et bascule du bassin\, allongé sur le dos\n• Pont fessier en déroulant la colonne\, 2×10\n• Cercles de jambe allongé sur le dos\, 2×8 par sens et par jambe\n• Écartement des genoux contre un élastique\, allongé sur le dos\, 2×15\n• Dead bug bras posés au sol\, 2×10\n• 5 min d'étirements des fessiers et de l'arrière des cuisses\n⚑ Ne t'allonge jamais sur l'épaule droite. Si un exercice réveille l'épaule\, tu le sautes.\n\nCoach IA — 2026-S42
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🧘 Pilates adapté à l'épaule (25 min)
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-S42-4-matin@coach-ia
-DTSTAMP:20261015T170000Z
+DTSTAMP:20261015T180000Z
 DTSTART:20261016T033000Z
 DTEND:20261016T043000Z
 SUMMARY:🚴 Home-trainer de mise en jambes (35 min)
@@ -32,7 +19,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S42-4-soir@coach-ia
-DTSTAMP:20261015T170000Z
+DTSTAMP:20261015T180000Z
 DTSTART:20261016T163000Z
 DTEND:20261016T174500Z
 SUMMARY:🏃 30/30 Billat : 2 blocs de 8 (remplace l'haltérophilie suspendue)
@@ -45,7 +32,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S42-5-matin@coach-ia
-DTSTAMP:20261015T170000Z
+DTSTAMP:20261015T180000Z
 DTSTART:20261017T033000Z
 DTEND:20261017T043000Z
 SUMMARY:🏃 Sortie longue de 1 h 15 à la sensation
@@ -58,7 +45,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S42-6-matin@coach-ia
-DTSTAMP:20261015T170000Z
+DTSTAMP:20261015T180000Z
 DTSTART:20261018T033000Z
 DTEND:20261018T043000Z
 SUMMARY:🚶 Marche active de 40 min (ou vélo très facile)
@@ -71,7 +58,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S42-6-soir@coach-ia
-DTSTAMP:20261015T170000Z
+DTSTAMP:20261015T180000Z
 DTSTART:20261018T163000Z
 DTEND:20261018T174500Z
 SUMMARY:🏋️ Force bas du corps\, arrière de la jambe (box ou NST\, bas du corps seulement)
