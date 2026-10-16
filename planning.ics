@@ -5,21 +5,8 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
-UID:2026-S42-4-matin@coach-ia
-DTSTAMP:20261016T040000Z
-DTSTART:20261016T033000Z
-DTEND:20261016T043000Z
-SUMMARY:🚴 Home-trainer de mise en jambes (35 min)
-DESCRIPTION:Vélo plutôt que course pour ménager les tendons avant le 30/30 du soir. Tout doit rester très facile.\n• 10 min de montée progressive\n• 20 min à une FC sous 130 bpm\, cadence souple\n• 5 min de retour au calme\n⚑ Reste à une allure de conversation. La séance dure\, c'est ce soir.\n\nCoach IA — 2026-S42
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🚴 Home-trainer de mise en jambes (35 min)
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-S42-4-soir@coach-ia
-DTSTAMP:20261016T040000Z
+DTSTAMP:20261016T050000Z
 DTSTART:20261016T163000Z
 DTEND:20261016T174500Z
 SUMMARY:🏃 30/30 Billat : 2 blocs de 8 (remplace l'haltérophilie suspendue)
@@ -32,7 +19,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S42-5-matin@coach-ia
-DTSTAMP:20261016T040000Z
+DTSTAMP:20261016T050000Z
 DTSTART:20261017T033000Z
 DTEND:20261017T043000Z
 SUMMARY:🏃 Sortie longue de 1 h 15 à la sensation
@@ -45,7 +32,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S42-6-matin@coach-ia
-DTSTAMP:20261016T040000Z
+DTSTAMP:20261016T050000Z
 DTSTART:20261018T033000Z
 DTEND:20261018T043000Z
 SUMMARY:🚶 Marche active de 40 min (ou vélo très facile)
@@ -58,7 +45,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S42-6-soir@coach-ia
-DTSTAMP:20261016T040000Z
+DTSTAMP:20261016T050000Z
 DTSTART:20261018T163000Z
 DTEND:20261018T174500Z
 SUMMARY:🏋️ Force bas du corps\, arrière de la jambe (box ou NST\, bas du corps seulement)
