@@ -5,21 +5,8 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
-UID:2026-S42-4-soir@coach-ia
-DTSTAMP:20261016T170000Z
-DTSTART:20261016T163000Z
-DTEND:20261016T174500Z
-SUMMARY:🏃 30/30 Billat : 2 blocs de 8 (remplace l'haltérophilie suspendue)
-DESCRIPTION:Ta seule séance très dure en course de la semaine. Tu alternes 30 s vite et 30 s de trot. « Vite » veut dire l'allure que tu pourrais tenir environ 6 min à fond (effort 9/10\, repère ~4:40/km)\, mais c'est la sensation qui décide. Sur terrain plat\, bras relâchés. Si tu as les garçons ce soir : même séance sur le home-trainer à la maison.\n• 15 min de footing très facile (FC sous 135)\n• 3 accélérations progressives de 20 s\, avec 40 s de marche entre chaque\n• Bloc 1 : 8 fois (30 s vite + 30 s de trot)\n• 3 min de trot très lent\n• Bloc 2 : 8 fois (30 s vite + 30 s de trot). Les 2 dernières fractions doivent être aussi rapides que les premières\n• 10 min de retour au calme : trot\, puis marche\n⚑ Si ce matin ta FC repos dépasse 55 ou ton HRV est en statut LOW : 40 min en aisance à la place. Douleur au tendon d'Achille ou au genou : tu arrêtes la course.\n\nCoach IA — 2026-S42
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🏃 30/30 Billat : 2 blocs de 8 (remplace l'haltérophilie suspendue)
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-S42-5-matin@coach-ia
-DTSTAMP:20261016T170000Z
+DTSTAMP:20261016T180000Z
 DTSTART:20261017T033000Z
 DTEND:20261017T043000Z
 SUMMARY:🏃 Sortie longue de 1 h 15 à la sensation
@@ -32,7 +19,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S42-6-matin@coach-ia
-DTSTAMP:20261016T170000Z
+DTSTAMP:20261016T180000Z
 DTSTART:20261018T033000Z
 DTEND:20261018T043000Z
 SUMMARY:🚶 Marche active de 40 min (ou vélo très facile)
@@ -45,7 +32,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S42-6-soir@coach-ia
-DTSTAMP:20261016T170000Z
+DTSTAMP:20261016T180000Z
 DTSTART:20261018T163000Z
 DTEND:20261018T174500Z
 SUMMARY:🏋️ Force bas du corps\, arrière de la jambe (box ou NST\, bas du corps seulement)
