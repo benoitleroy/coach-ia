@@ -5,21 +5,8 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
-UID:2026-S42-5-matin@coach-ia
-DTSTAMP:20261017T040000Z
-DTSTART:20261017T033000Z
-DTEND:20261017T043000Z
-SUMMARY:🏃 Sortie longue de 1 h 15 à la sensation
-DESCRIPTION:Sortie facile\, en conversation\, avec des variations libres à la Billat. Tu peux faire une relance si tu en as envie et marcher dans les côtes. Si les garçons sont là : 1 h de home-trainer à la maison.\n• 10 min de départ très facile\n• 50 min en aisance (FC sous 140)\, relances spontanées de 20-30 s autorisées\n• 10 min plus lent pour rentrer\n• 5 min de marche\, puis étirements des mollets et des hanches\n⚑ Douleur au tendon d'Achille ou au genou : tu finis en marchant. Si tes jambes sont encore cuites du 30/30\, raccourcis à 55 min.\n\nCoach IA — 2026-S42
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🏃 Sortie longue de 1 h 15 à la sensation
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-S42-6-matin@coach-ia
-DTSTAMP:20261017T040000Z
+DTSTAMP:20261017T050000Z
 DTSTART:20261018T033000Z
 DTEND:20261018T043000Z
 SUMMARY:🚶 Marche active de 40 min (ou vélo très facile)
@@ -32,7 +19,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S42-6-soir@coach-ia
-DTSTAMP:20261017T040000Z
+DTSTAMP:20261017T050000Z
 DTSTART:20261018T163000Z
 DTEND:20261018T174500Z
 SUMMARY:🏋️ Force bas du corps\, arrière de la jambe (box ou NST\, bas du corps seulement)
