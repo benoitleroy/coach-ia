@@ -5,29 +5,146 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
-UID:2026-S42-6-matin@coach-ia
-DTSTAMP:20261017T200000Z
-DTSTART:20261018T033000Z
-DTEND:20261018T043000Z
-SUMMARY:🚶 Marche active de 40 min (ou vélo très facile)
-DESCRIPTION:Tu fais circuler le sang après la sortie longue\, sans aucune fatigue. Ça se fait aussi en balade avec les garçons.\n• 5 min de marche tranquille\n• 30 min de marche active\, à respiration aisée\n• 5 min de mobilité des chevilles et des hanches\n⚑ Si tes jambes sont lourdes\, 30 min suffisent.\n\nCoach IA — 2026-S42
+UID:2026-S43-0-matin@coach-ia
+DTSTAMP:20261018T040600Z
+DTSTART:20261019T033000Z
+DTEND:20261019T043000Z
+SUMMARY:🏃 Footing d'aisance 30 min
+DESCRIPTION:Une reprise douce le matin de l'infiltration : 30 min en conversation\, FC sous 140. Garde les bras relâchés\, sans balancer fort côté droit.\n• 5 min de marche rapide puis trot très lent\n• 20 min de course en aisance\, FC sous 140 : tu dois pouvoir parler en phrases complètes\n• 5 min de trot puis marche\n• Mobilité des chevilles genou-mur : 2×10 par jambe (pied à 10 cm du mur\, amener le genou au mur sans décoller le talon)\n⚑ Si les enfants sont là ce matin : même durée sur home-trainer\, FC sous 130. Douleur au tendon d'Achille ou au genou = stop\, vélo à la place.\n\nCoach IA — 2026-S43
 BEGIN:VALARM
 TRIGGER:-PT30M
 ACTION:DISPLAY
-DESCRIPTION:🚶 Marche active de 40 min (ou vélo très facile)
+DESCRIPTION:🏃 Footing d'aisance 30 min
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:2026-S42-6-soir@coach-ia
-DTSTAMP:20261017T200000Z
-DTSTART:20261018T163000Z
-DTEND:20261018T174500Z
-SUMMARY:🏋️ Force bas du corps\, arrière de la jambe (box ou NST\, bas du corps seulement)
-DESCRIPTION:La séance NST n'est pas fournie\, donc séance construite sur leur modèle. L'intention : la chaîne arrière (fessiers\, ischios)\, parce que mercredi était dominé par le squat. Tout le haut du corps est retiré. Si les garçons sont là : même séance à la maison\, sans la trap bar. Par rapport à la semaine dernière\, la force continue sans l'épaule. Demain c'est l'infiltration : garde 5 % dans le réservoir.\n• Échauffement 10 min : 5 min d'Assault bike avec les jambes seules (mains sur les cuisses)\, 2×15 ponts fessiers\, 2×10 good mornings au poids du corps (mains sur les hanches\, dos plat\, tu penches le buste en reculant les fesses)\n• Soulevé de terre à la trap bar (la barre hexagonale : tu te places au centre\, dos plat\, tu pousses le sol) : 1×8 à vide. Si c'est indolore : 4×5 à 60 kg maximum\, 2 min de récup. Sinon tu passes directement à l'exercice suivant\n• Hip thrust 4×8 : dos appuyé sur un banc\, barre posée sur les hanches avec une mousse\, tu montes les hanches. Monte jusqu'à la charge où les 2 dernières reps restent propres (repère 60-80 kg). 90 s de récup\n• Soulevé de terre roumain sur une jambe 3×8 par jambe : kettlebell de 16 kg dans la main GAUCHE\, tu bascules le buste en tendant la jambe libre derrière toi\n• Fentes marchées 3×10 par jambe\, au poids du corps ou avec un gilet lesté\n• Gainage : planche latérale sur le coude gauche 3×30 s + dead bug bras au sol 3×10\n• 5 min de retour au calme\n⚑ Si l'épaule fait mal pendant l'échauffement à la trap bar : pas de trap bar\, seulement du hip thrust. Une douleur à l'épaule pendant un exercice = cet exercice s'arrête.\n\nCoach IA — 2026-S42
+UID:2026-S43-0-soir@coach-ia
+DTSTAMP:20261018T040600Z
+DTSTART:20261019T163000Z
+DTEND:20261019T174500Z
+SUMMARY:— Repos — infiltration de l'épaule
+DESCRIPTION:Jour de l'infiltration : le bras droit ne fait rien\, ne porte rien.\n\nCoach IA — 2026-S43
 BEGIN:VALARM
 TRIGGER:-PT30M
 ACTION:DISPLAY
-DESCRIPTION:🏋️ Force bas du corps\, arrière de la jambe (box ou NST\, bas du corps seulement)
+DESCRIPTION:— Repos — infiltration de l'épaule
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S43-1-soir@coach-ia
+DTSTAMP:20261018T040600Z
+DTSTART:20261020T163000Z
+DTEND:20261020T174500Z
+SUMMARY:— Repos complet (épaule\, lendemain d'infiltration)
+DESCRIPTION:Ta journée complète sans rien de la semaine : l'épaule se repose et la charge de dimanche dernier s'efface.\n\nCoach IA — 2026-S43
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:— Repos complet (épaule\, lendemain d'infiltration)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S43-2-matin@coach-ia
+DTSTAMP:20261018T040600Z
+DTSTART:20261021T033000Z
+DTEND:20261021T043000Z
+SUMMARY:🧘 Mobilité bas du corps 15 min
+DESCRIPTION:On garde la partie hanches et chevilles du travail pour l'overhead squat. La partie épaules (dislocations\, overhead squat au PVC) est suspendue jusqu'à la radio de contrôle.\n• Accroupi profond tenu 3×30 s (tu peux te tenir d'une main GAUCHE à un montant de porte)\n• Mobilité des chevilles genou-mur 2×10 par jambe\n• Étirement du devant de hanche (un genou au sol\, avancer le bassin) 2×45 s par côté\n• Pont fessier (dos au sol\, pieds à plat\, monter les hanches) 2×15\n• 2 min de respiration lente allongé\n⚑ Aucun mouvement de bras au-dessus de la tête\, aucun appui sur la main droite.\n\nCoach IA — 2026-S43
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🧘 Mobilité bas du corps 15 min
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S43-2-soir@coach-ia
+DTSTAMP:20261018T040600Z
+DTSTART:20261021T163000Z
+DTEND:20261021T174500Z
+SUMMARY:🏋️ Force A — squat (décharge)
+DESCRIPTION:À la box\, ou en NST si la séance du jour arrive (pas encore fournie) : n'en garde alors que les parties bas du corps. Même structure que NST : échauffement → force lourde → endurance de force → cardio aérobie. Pas de barre sur le dos (48 h après l'infiltration) : on fait le squat à la ceinture (la charge pend à une ceinture autour des hanches\, les bras ne portent rien) ou à la presse à cuisses. Décharge = mêmes séries\, charges plus légères.\n• Échauffement 10 min : 5 min d'Assault bike jambes seules (mains sur les cuisses) + 10 squats au poids du corps lents + 10 ponts fessiers\n• Montée en charge : 3 séries de 5 squats à la ceinture (ou presse à cuisses)\, de plus en plus lourdes\n• Force : 5×5 à une charge où les 2 dernières reps restent faciles (≈ 60-65 % de ton effort habituel)\, un départ toutes les 2 min 30. Note la charge.\n• Endurance de force : squat bulgare (pied arrière posé sur un banc\, descendre le genou arrière vers le sol) 3×8 par jambe au poids du corps\, 3 s de descente\, 1 min 30 de récup\n• Gainage : 3×10 dead bug jambes seules (allongé sur le dos\, bras posés au sol\, tendre une jambe puis l'autre sans creuser le dos) + 3×30 s de gainage latéral sur le coude GAUCHE\n• Cardio aérobie : 12 min d'Assault bike jambes seules en conversation (FC sous 140)\n• Retour au calme : 5 min de marche + étirement des cuisses et des fessiers\n⚑ Le moindre tiraillement à l'épaule\, même en tenant une poignée = on lâche l'exercice. Pas de machine disponible : squat au poids du corps\, 3 s de descente\, 5×10.\n\nCoach IA — 2026-S43
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🏋️ Force A — squat (décharge)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S43-3-matin@coach-ia
+DTSTAMP:20261018T040600Z
+DTSTART:20261022T033000Z
+DTEND:20261022T043000Z
+SUMMARY:🏃 Footing d'aisance 35 min
+DESCRIPTION:Le lendemain de la force : on fait circuler\, rien de plus. Conversation possible du début à la fin\, et tu as le droit de marcher dans les côtes.\n• 5 min de trot très lent\n• 25 min en aisance\, FC sous 140\, allure libre à la sensation\n• 5 min de trot puis marche\n• Accroupi profond tenu 2×30 s\n⚑ Si les enfants sont là ce matin : 35 min de home-trainer\, FC sous 130. Cuisses encore lourdes de mercredi = 25 min seulement.\n\nCoach IA — 2026-S43
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🏃 Footing d'aisance 35 min
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S43-4-matin@coach-ia
+DTSTAMP:20261018T040600Z
+DTSTART:20261023T033000Z
+DTEND:20261023T043000Z
+SUMMARY:🧘 Gainage + mobilité 15 min (maison)
+DESCRIPTION:Une petite séance à la maison\, réalisable avec ou sans les enfants\, qui prépare la séance du soir.\n• Mobilité des chevilles genou-mur 2×10 par jambe\n• Accroupi profond tenu 2×30 s\n• Pont fessier sur une jambe 2×10 par jambe\n• Dead bug jambes seules 2×10\n• Gainage latéral sur le coude GAUCHE 2×30 s\n⚑ Aucun appui sur le bras droit\, ni pompe ni planche sur les mains.\n\nCoach IA — 2026-S43
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🧘 Gainage + mobilité 15 min (maison)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S43-4-soir@coach-ia
+DTSTAMP:20261018T040600Z
+DTSTART:20261023T163000Z
+DTEND:20261023T174500Z
+SUMMARY:🏋️ Force B — charnière + sauts (remplace l'haltéro)
+DESCRIPTION:L'haltérophilie est suspendue. À la place\, une séance bas du corps avec un autre geste que mercredi : la charnière (bascule du buste dos plat) et les sauts. Les sauts se font en début de séance\, quand tu es frais. C'est une décharge : chaque série finit avec l'impression d'en avoir encore 3 en réserve.\n• Échauffement 10 min : 5 min de vélo facile + 10 balancements de jambe par côté + 10 ponts fessiers\n• Puissance : sauts sur box (boîte de 50 cm\, atterrir en douceur\, redescendre en marchant) 5×3\, 1 min 30 de récup\n• Force charnière : soulevé de terre sur une jambe (debout sur une jambe\, le buste bascule dos plat\, l'autre jambe part en arrière) 4×6 par jambe\, kettlebell de 12 kg TOUJOURS dans la main gauche\, 1 min 30 de récup\n• Endurance de force : montées sur box (step-ups : monter sur la boîte d'une seule jambe sans pousser avec l'autre) 3×10 par jambe au poids du corps\n• Pont fessier sur une jambe 3×12 par jambe\n• Cardio aérobie : 15 min de vélo ou d'Assault bike jambes seules en aisance (FC sous 135)\n• Retour au calme : 5 min d'étirements de l'arrière des cuisses et des mollets\n⚑ Si les garçons arrivent ce soir (bascule) : version maison de 30 min (étapes 1\, 3 sans kettlebell\, 4 sur une marche d'escalier\, 5)\, puis resto.\n\nCoach IA — 2026-S43
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🏋️ Force B — charnière + sauts (remplace l'haltéro)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S43-5-matin@coach-ia
+DTSTAMP:20261018T040600Z
+DTSTART:20261024T033000Z
+DTEND:20261024T043000Z
+SUMMARY:🏃 Sortie longue raccourcie 50 min à la sensation
+DESCRIPTION:Décharge : 50 min au lieu de 1 h 15-1 h 30. Allure libre\, relances spontanées autorisées\, marche dans les montées si tu en as envie. Tu dois finir frais\, avec l'envie de continuer.\n• 10 min de trot très lent\n• 35 min en aisance\, FC sous 140\, avec 3 ou 4 relances libres de 20 s si l'envie vient\n• 5 min de trot très lent puis marche\n• Étirement des mollets et des fessiers 5 min\n⚑ Si les enfants sont là ce week-end : 50 min de home-trainer en aisance à la maison\, pas de sortie dehors.\n\nCoach IA — 2026-S43
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🏃 Sortie longue raccourcie 50 min à la sensation
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S43-6-matin@coach-ia
+DTSTAMP:20261018T040600Z
+DTSTART:20261025T043000Z
+DTEND:20261025T053000Z
+SUMMARY:⏱️ Demi-Cooper : test de 3 min (vVO2max)
+DESCRIPTION:C'est le test prévu dans le bloc\, et ton seul rappel d'intensité de la semaine : 3 min à fond pour mesurer ta vVO2max\, sur laquelle on calera les 30/30 de la semaine prochaine. Le test de tractions max est annulé (épaule).\n• Au réveil\, vérifie : FC repos à 55 ou moins et HRV pas en statut LOW. Sinon\, 40 min d'aisance à la place du test.\n• Échauffement de 15 min : 10 min de trot très lent\, puis 5 min en accélérant doucement\n• 3 lignes droites de 80 m en accélérant (pas à fond)\, retour en marchant\, puis 3 min de trot\n• TEST : 3 min à fond sur du plat (idéalement une piste)\, à l'allure la plus régulière possible. Note la distance exacte.\n• Calcul : vVO2max (km/h) = distance en mètres × 20 ÷ 1000 (ex. 750 m → 15 km/h)\n• Retour au calme : 10 min de trot très lent puis marche\n⚑ Aucun demi-Cooper antérieur dans tes données : celui-ci devient la référence. Si les enfants sont là : pas de test\, 30 min de home-trainer avec 6×(30 s fort / 30 s facile)\, et le test passe en semaine 9.\n\nCoach IA — 2026-S43
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:⏱️ Demi-Cooper : test de 3 min (vVO2max)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S43-6-soir@coach-ia
+DTSTAMP:20261018T040600Z
+DTSTART:20261025T173000Z
+DTEND:20261025T184500Z
+SUMMARY:🧖 Sauna + hammam à Cassis (sans nager)
+DESCRIPTION:Récupération à Cap Provence après le test\, sans aucune nage\, même pas la brasse. Vérifie les horaires du dimanche avant d'y aller.\n• Douche tiède\n• Sauna 12-15 min\n• Douche fraîche + 5 min assis au calme\n• Hammam 10 min\n• Boire 500 ml d'eau en sortant\n⚑ Pas de bassin pour l'épaule. Si les enfants sont là : 15 min de mobilité bas du corps à la maison à la place.\n\nCoach IA — 2026-S43
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🧖 Sauna + hammam à Cassis (sans nager)
 END:VALARM
 END:VEVENT
 END:VCALENDAR

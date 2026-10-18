@@ -1844,20 +1844,5 @@ window.SEANCES = [
   "contenuFr": null,
   "note": null,
   "photo": null
- },
- {
-  "id": 18192568876,
-  "date": "2026-04-21T05:41:27Z",
-  "type": "Pilates",
-  "name": "Discipline",
-  "sec": 1845,
-  "km": 0,
-  "hr": 98,
-  "hrMax": 124,
-  "effort": 4,
-  "contenu": null,
-  "contenuFr": null,
-  "note": null,
-  "photo": null
  }
 ];
