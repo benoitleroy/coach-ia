@@ -1799,35 +1799,5 @@ window.SEANCES = [
   "contenuFr": null,
   "note": null,
   "photo": null
- },
- {
-  "id": 18200447508,
-  "date": "2026-04-21T18:29:47Z",
-  "type": "Run",
-  "name": "Crossfit",
-  "sec": 1299,
-  "km": 3.2,
-  "hr": 171,
-  "hrMax": 181,
-  "effort": 42,
-  "contenu": null,
-  "contenuFr": null,
-  "note": null,
-  "photo": null
- },
- {
-  "id": 18199605443,
-  "date": "2026-04-21T18:03:46Z",
-  "type": "HighIntensityIntervalTraining",
-  "name": "HIIT en soirée",
-  "sec": 75,
-  "km": 0,
-  "hr": 128,
-  "hrMax": 134,
-  "effort": null,
-  "contenu": null,
-  "contenuFr": null,
-  "note": null,
-  "photo": null
  }
 ];
