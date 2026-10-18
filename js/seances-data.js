@@ -1829,20 +1829,5 @@ window.SEANCES = [
   "contenuFr": null,
   "note": null,
   "photo": null
- },
- {
-  "id": 18198666867,
-  "date": "2026-04-21T14:09:16Z",
-  "type": "VirtualRide",
-  "name": "Zwift - Foundations",
-  "sec": 2727,
-  "km": 24.2,
-  "hr": 130,
-  "hrMax": 148,
-  "effort": 20,
-  "contenu": null,
-  "contenuFr": null,
-  "note": null,
-  "photo": null
  }
 ];
