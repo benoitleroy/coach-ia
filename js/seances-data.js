@@ -760,10 +760,10 @@ window.SEANCES = [
   "hr": 122,
   "hrMax": 185,
   "effort": 23,
-  "contenu": "Vendredi 21 août\n\nWarm up\n3 sets\n:30 easy\n:20 moderate\n:10 hard\n\n1 set\n:30 band pull apart\n10 pvc reach through\n10 HRPU\n10 ring row\n50m farmer carry\n\n1 set\n:30 band pull apart\n:30 pass through\n10 burpees\n5 strict pull up / ring row\n50m farmer carry\n\nWOD : for time 15'\n400m farmer carry 2x 22,5/15\nthen\n6 rounds\n5 burpees\n1 rope climb\n\nPost workout : 3 sets\n12/12 single leg KB deadlift\nInt 17,5/12,5\nSc 15/10",
-  "contenuFr": "Vendredi 21 aoûts\néchauffement\n3 séries\n:30 easys\n:20 moderates\n:10 hards\n1 séries\n:30 bands pull apart\n10 pvcs reach through\n10 HRPU\n10 tirages horizontal aux anneaux\n50m portage fermier\n1 séries\n:30 bands pull apart\n:30 pass through\n10 burpees\n5 tractions strictes / tirage horizontal aux anneaux\n50m portage fermier\nWOD : le plus vite possible : 15'\n400m portage fermier 2x 22,5/15\npuis\n6 tours\n5 burpees\n1 montée à la corde\nPost workout : 3 séries\n12/12 singles leg KB soulevé de terre\nInt 17,5/12,5\nSc 15/10",
+  "contenu": null,
+  "contenuFr": null,
   "note": null,
-  "photo": "https://dgtzuqphqg23d.cloudfront.net/P6Ln8fVG5YJOZW0GRwTCIoPqMEmEsx6nyZRr4C_Zto0-2048x1536.jpg"
+  "photo": null
  },
  {
   "id": 19818430897,
