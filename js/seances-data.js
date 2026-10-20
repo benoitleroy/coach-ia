@@ -1769,20 +1769,5 @@ window.SEANCES = [
   "contenuFr": null,
   "note": null,
   "photo": null
- },
- {
-  "id": 18226587739,
-  "date": "2026-04-23T13:56:22Z",
-  "type": "VirtualRide",
-  "name": "Zwift - Figure 8 in Watopia",
-  "sec": 3292,
-  "km": 30.5,
-  "hr": 139,
-  "hrMax": 160,
-  "effort": 41,
-  "contenu": null,
-  "contenuFr": null,
-  "note": null,
-  "photo": null
  }
 ];
