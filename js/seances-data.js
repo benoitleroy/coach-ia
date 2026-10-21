@@ -730,10 +730,10 @@ window.SEANCES = [
   "hr": 127,
   "hrMax": 151,
   "effort": 22,
-  "contenu": "Zwift - Parcours Casse-Pattes (France / Mont Saint-Michel)\n\nCapture 1 (16:29)\nPuissance 177 W\nCadence 76 RPM\nFC 131 BPM\nPuissance moyenne 140 W\nDépense 113 KJ\nGear 14\nVitesse 29 KM/H\nDistance 6.6 KM\nDénivelé 7 M\nTemps écoulé 13:22\nPente -2 %\nPosition parcours Casse-Pattes 17.3 KM\nB.Leroy 2.5 w/kg 6.6 KM\n\nCapture 2 (16:56)\nPuissance 163 W\nCadence 69 RPM\nFC 135 BPM\nPuissance moyenne 162 W\nDépense 392 KJ\nGear 9\nVitesse 12 KM/H\nDistance 19.2 KM\nDénivelé 122 M\nTemps écoulé 40:18\nPente 6 % (segment 5.9 %)\nSegment Petit KOM 4.0% 2.7 KM - temps de référence 7:50\nPosition parcours Casse-Pattes 4.7 KM\nB.Leroy 2.3 w/kg 19.2 KM\n\nCapture 3 (17:03)\nPuissance 143 W\nCadence 96 RPM\nFC 124 BPM\nPuissance moyenne 159 W\nDépense 451 KJ\nGear 14\nVitesse 57 KM/H\nDistance 22.6 KM\nDénivelé 155 M\nTemps écoulé 47:03\nPente -5 %\nSegment Marina Sprint Reverse 0.0% 0.19 KM - RP 90 jours 26.47 (il y a 44 min)\nPosition parcours Casse-Pattes 1.2 KM\nB.Leroy 2.0 w/kg 22.6 KM\nObjectif hebdomadaire atteint 2:00 heures",
-  "contenuFr": "Zwift - Parcours Casse-Pattes (France / Mont Saint-Michel)\nCapture 1 (16:29)\nPuissance 177 W\nCadence 76 RPM\nFC 131 BPM\nPuissance moyenne 140 W\nDépense 113 KJ\nGear 14\nVitesse 29 KM/H\nDistance 6.6 KM\nDénivelé 7 M\nTemps écoulé 13:22\nPente -2 %\nPosition parcours Casse-Pattes 17.3 KM\nB.Leroy 2.5 ws/kg 6.6 KM\nCapture 2 (16:56)\nPuissance 163 W\nCadence 69 RPM\nFC 135 BPM\nPuissance moyenne 162 W\nDépense 392 KJ\nGear 9\nVitesse 12 KM/H\nDistance 19.2 KM\nDénivelé 122 M\nTemps écoulé 40:18\nPente 6 % (segment 5.9 %)\nSegment Petit KOM 4.0% 2.7 KM - temps de référence 7:50\nPosition parcours Casse-Pattes 4.7 KM\nB.Leroy 2.3 ws/kg 19.2 KM\nCapture 3 (17:03)\nPuissance 143 W\nCadence 96 RPM\nFC 124 BPM\nPuissance moyenne 159 W\nDépense 451 KJ\nGear 14\nVitesse 57 KM/H\nDistance 22.6 KM\nDénivelé 155 M\nTemps écoulé 47:03\nPente -5 %\nSegment Marina Sprint Reverse 0.0% 0.19 KM - RP 90 jours 26.47 (il y a 44 min)\nPosition parcours Casse-Pattes 1.2 KM\nB.Leroy 2.0 w/kg 22.6 KM\nObjectif hebdomadaire atteint 2:00 heures",
+  "contenu": null,
+  "contenuFr": null,
   "note": null,
-  "photo": "https://dgtzuqphqg23d.cloudfront.net/Y99-VN-xYCQOEnrbpRfDtWyhucgt_cRvLS9fv7J_bvA-2048x1430.jpg"
+  "photo": null
  },
  {
   "id": 19845461484,
