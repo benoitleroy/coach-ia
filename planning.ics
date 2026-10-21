@@ -5,21 +5,8 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
-UID:2026-S43-2-soir@coach-ia
-DTSTAMP:20261021T170000Z
-DTSTART:20261021T163000Z
-DTEND:20261021T174500Z
-SUMMARY:🏋️ Force A — squat (décharge)
-DESCRIPTION:À la box\, ou en NST si la séance du jour arrive (pas encore fournie) : n'en garde alors que les parties bas du corps. Même structure que NST : échauffement → force lourde → endurance de force → cardio aérobie. Pas de barre sur le dos (48 h après l'infiltration) : on fait le squat à la ceinture (la charge pend à une ceinture autour des hanches\, les bras ne portent rien) ou à la presse à cuisses. Décharge = mêmes séries\, charges plus légères.\n• Échauffement 10 min : 5 min d'Assault bike jambes seules (mains sur les cuisses) + 10 squats au poids du corps lents + 10 ponts fessiers\n• Montée en charge : 3 séries de 5 squats à la ceinture (ou presse à cuisses)\, de plus en plus lourdes\n• Force : 5×5 à une charge où les 2 dernières reps restent faciles (≈ 60-65 % de ton effort habituel)\, un départ toutes les 2 min 30. Note la charge.\n• Endurance de force : squat bulgare (pied arrière posé sur un banc\, descendre le genou arrière vers le sol) 3×8 par jambe au poids du corps\, 3 s de descente\, 1 min 30 de récup\n• Gainage : 3×10 dead bug jambes seules (allongé sur le dos\, bras posés au sol\, tendre une jambe puis l'autre sans creuser le dos) + 3×30 s de gainage latéral sur le coude GAUCHE\n• Cardio aérobie : 12 min d'Assault bike jambes seules en conversation (FC sous 140)\n• Retour au calme : 5 min de marche + étirement des cuisses et des fessiers\n⚑ Le moindre tiraillement à l'épaule\, même en tenant une poignée = on lâche l'exercice. Pas de machine disponible : squat au poids du corps\, 3 s de descente\, 5×10.\n\nCoach IA — 2026-S43
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🏋️ Force A — squat (décharge)
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-S43-3-matin@coach-ia
-DTSTAMP:20261021T170000Z
+DTSTAMP:20261021T180000Z
 DTSTART:20261022T033000Z
 DTEND:20261022T043000Z
 SUMMARY:🏃 Footing d'aisance 35 min
@@ -32,7 +19,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S43-4-matin@coach-ia
-DTSTAMP:20261021T170000Z
+DTSTAMP:20261021T180000Z
 DTSTART:20261023T033000Z
 DTEND:20261023T043000Z
 SUMMARY:🧘 Gainage + mobilité 15 min (maison)
@@ -45,7 +32,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S43-4-soir@coach-ia
-DTSTAMP:20261021T170000Z
+DTSTAMP:20261021T180000Z
 DTSTART:20261023T163000Z
 DTEND:20261023T174500Z
 SUMMARY:🏋️ Force B — charnière + sauts (remplace l'haltéro)
@@ -58,7 +45,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S43-5-matin@coach-ia
-DTSTAMP:20261021T170000Z
+DTSTAMP:20261021T180000Z
 DTSTART:20261024T033000Z
 DTEND:20261024T043000Z
 SUMMARY:🏃 Sortie longue raccourcie 50 min à la sensation
@@ -71,7 +58,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S43-6-matin@coach-ia
-DTSTAMP:20261021T170000Z
+DTSTAMP:20261021T180000Z
 DTSTART:20261025T043000Z
 DTEND:20261025T053000Z
 SUMMARY:⏱️ Demi-Cooper : test de 3 min (vVO2max)
@@ -84,7 +71,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S43-6-soir@coach-ia
-DTSTAMP:20261021T170000Z
+DTSTAMP:20261021T180000Z
 DTSTART:20261025T173000Z
 DTEND:20261025T184500Z
 SUMMARY:🧖 Sauna + hammam à Cassis (sans nager)
