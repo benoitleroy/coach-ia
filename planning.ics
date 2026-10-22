@@ -5,21 +5,8 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
-UID:2026-S43-3-matin@coach-ia
-DTSTAMP:20261022T040000Z
-DTSTART:20261022T033000Z
-DTEND:20261022T043000Z
-SUMMARY:🏃 Footing d'aisance 35 min
-DESCRIPTION:Le lendemain de la force : on fait circuler\, rien de plus. Conversation possible du début à la fin\, et tu as le droit de marcher dans les côtes.\n• 5 min de trot très lent\n• 25 min en aisance\, FC sous 140\, allure libre à la sensation\n• 5 min de trot puis marche\n• Accroupi profond tenu 2×30 s\n⚑ Si les enfants sont là ce matin : 35 min de home-trainer\, FC sous 130. Cuisses encore lourdes de mercredi = 25 min seulement.\n\nCoach IA — 2026-S43
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🏃 Footing d'aisance 35 min
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-S43-4-matin@coach-ia
-DTSTAMP:20261022T040000Z
+DTSTAMP:20261022T050000Z
 DTSTART:20261023T033000Z
 DTEND:20261023T043000Z
 SUMMARY:🧘 Gainage + mobilité 15 min (maison)
@@ -32,7 +19,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S43-4-soir@coach-ia
-DTSTAMP:20261022T040000Z
+DTSTAMP:20261022T050000Z
 DTSTART:20261023T163000Z
 DTEND:20261023T174500Z
 SUMMARY:🏋️ Force B — charnière + sauts (remplace l'haltéro)
@@ -45,7 +32,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S43-5-matin@coach-ia
-DTSTAMP:20261022T040000Z
+DTSTAMP:20261022T050000Z
 DTSTART:20261024T033000Z
 DTEND:20261024T043000Z
 SUMMARY:🏃 Sortie longue raccourcie 50 min à la sensation
@@ -58,7 +45,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S43-6-matin@coach-ia
-DTSTAMP:20261022T040000Z
+DTSTAMP:20261022T050000Z
 DTSTART:20261025T043000Z
 DTEND:20261025T053000Z
 SUMMARY:⏱️ Demi-Cooper : test de 3 min (vVO2max)
@@ -71,7 +58,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S43-6-soir@coach-ia
-DTSTAMP:20261022T040000Z
+DTSTAMP:20261022T050000Z
 DTSTART:20261025T173000Z
 DTEND:20261025T184500Z
 SUMMARY:🧖 Sauna + hammam à Cassis (sans nager)
