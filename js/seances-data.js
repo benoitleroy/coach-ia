@@ -715,10 +715,10 @@ window.SEANCES = [
   "hr": 128,
   "hrMax": 171,
   "effort": 39,
-  "contenu": "Dimanche 23 août\n\nWarm up\n2' Erg (1'/30\"/30\")\n2 rounds\n10 Air Squat\n10 Up n Down\n10 Lunges\n1 round\n10 P.V.C Front Squat\n10 Burpees\n\nWOD : Team of 2\nAMRAP 30' : You go I go\n12 Hang Squat Clean\n12 Cal Row\n12 Front Rack Lunges\n12 Burpees Over the Bar\n\nAfter 8 rounds : MAX\n10 Thruster\n10 Cal Bike (Echo) — to share\n\nRx : 45/30\nInt : 35/20\nSc : 20/15",
-  "contenuFr": "Dimanche 23 aoûts\néchauffement\n2' Erg (1'/30\"/30\")\n2 tours\n10 squats au poids du corps\n10 ups & down (planche ↔ pompes sur les mains)\n10 fentes\n1 tour\n10 P.V.C squat avant (barre devant)\n10 burpees\nWOD : Team of 2\nAMRAP (maximum de tours) 30' : You go I go\n12 épaulés en squat depuis les cuisses\n12 Cal rameur\n12 fentes barre devant (front rack)\n12 burpees Over the Bar\nAfter 8 tours : MAX\n10 thrusters (squat + poussée)\n10 Cal Bike (Echo) — to share\nRx : 45/30\nInt : 35/20\nSc : 20/15",
+  "contenu": null,
+  "contenuFr": null,
   "note": "Travaillé à 30 kg sur le WOD (hang squat clean / front rack lunges / thrusters) — entre Sc 20 et Int 35",
-  "photo": "https://dgtzuqphqg23d.cloudfront.net/QNMZR_EGWvu1UBoNJ9uZhj8HRR2xFepOH314m8lvhMU-2048x1536.jpg"
+  "photo": null
  },
  {
   "id": 19852337254,
