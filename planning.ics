@@ -5,21 +5,8 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
-UID:2026-S43-4-soir@coach-ia
-DTSTAMP:20261023T170000Z
-DTSTART:20261023T163000Z
-DTEND:20261023T174500Z
-SUMMARY:🏋️ Force B — charnière + sauts (remplace l'haltéro)
-DESCRIPTION:L'haltérophilie est suspendue. À la place\, une séance bas du corps avec un autre geste que mercredi : la charnière (bascule du buste dos plat) et les sauts. Les sauts se font en début de séance\, quand tu es frais. C'est une décharge : chaque série finit avec l'impression d'en avoir encore 3 en réserve.\n• Échauffement 10 min : 5 min de vélo facile + 10 balancements de jambe par côté + 10 ponts fessiers\n• Puissance : sauts sur box (boîte de 50 cm\, atterrir en douceur\, redescendre en marchant) 5×3\, 1 min 30 de récup\n• Force charnière : soulevé de terre sur une jambe (debout sur une jambe\, le buste bascule dos plat\, l'autre jambe part en arrière) 4×6 par jambe\, kettlebell de 12 kg TOUJOURS dans la main gauche\, 1 min 30 de récup\n• Endurance de force : montées sur box (step-ups : monter sur la boîte d'une seule jambe sans pousser avec l'autre) 3×10 par jambe au poids du corps\n• Pont fessier sur une jambe 3×12 par jambe\n• Cardio aérobie : 15 min de vélo ou d'Assault bike jambes seules en aisance (FC sous 135)\n• Retour au calme : 5 min d'étirements de l'arrière des cuisses et des mollets\n⚑ Si les garçons arrivent ce soir (bascule) : version maison de 30 min (étapes 1\, 3 sans kettlebell\, 4 sur une marche d'escalier\, 5)\, puis resto.\n\nCoach IA — 2026-S43
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🏋️ Force B — charnière + sauts (remplace l'haltéro)
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-S43-5-matin@coach-ia
-DTSTAMP:20261023T170000Z
+DTSTAMP:20261023T180000Z
 DTSTART:20261024T033000Z
 DTEND:20261024T043000Z
 SUMMARY:🏃 Sortie longue raccourcie 50 min à la sensation
@@ -32,7 +19,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S43-6-matin@coach-ia
-DTSTAMP:20261023T170000Z
+DTSTAMP:20261023T180000Z
 DTSTART:20261025T043000Z
 DTEND:20261025T053000Z
 SUMMARY:⏱️ Demi-Cooper : test de 3 min (vVO2max)
@@ -45,7 +32,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S43-6-soir@coach-ia
-DTSTAMP:20261023T170000Z
+DTSTAMP:20261023T180000Z
 DTSTART:20261025T173000Z
 DTEND:20261025T184500Z
 SUMMARY:🧖 Sauna + hammam à Cassis (sans nager)
