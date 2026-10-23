@@ -1739,20 +1739,5 @@ window.SEANCES = [
   "contenuFr": null,
   "note": null,
   "photo": null
- },
- {
-  "id": 18260177225,
-  "date": "2026-04-26T04:09:17Z",
-  "type": "VirtualRide",
-  "name": "Zwift - Climb Portal: Cheddar Gorge at 100% Elevation in France",
-  "sec": 3532,
-  "km": 26.6,
-  "hr": 137,
-  "hrMax": 168,
-  "effort": 42,
-  "contenu": null,
-  "contenuFr": null,
-  "note": null,
-  "photo": null
  }
 ];
