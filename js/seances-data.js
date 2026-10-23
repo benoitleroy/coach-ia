@@ -1724,20 +1724,5 @@ window.SEANCES = [
   "contenuFr": null,
   "note": null,
   "photo": null
- },
- {
-  "id": 18261787959,
-  "date": "2026-04-26T10:27:27Z",
-  "type": "Workout",
-  "name": "Entraînement le matin",
-  "sec": 1523,
-  "km": 0,
-  "hr": 162,
-  "hrMax": 186,
-  "effort": 53,
-  "contenu": null,
-  "contenuFr": null,
-  "note": null,
-  "photo": null
  }
 ];
