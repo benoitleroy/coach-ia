@@ -5,21 +5,8 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
-UID:2026-S43-5-matin@coach-ia
-DTSTAMP:20261024T040000Z
-DTSTART:20261024T033000Z
-DTEND:20261024T043000Z
-SUMMARY:🏃 Sortie longue raccourcie 50 min à la sensation
-DESCRIPTION:Décharge : 50 min au lieu de 1 h 15-1 h 30. Allure libre\, relances spontanées autorisées\, marche dans les montées si tu en as envie. Tu dois finir frais\, avec l'envie de continuer.\n• 10 min de trot très lent\n• 35 min en aisance\, FC sous 140\, avec 3 ou 4 relances libres de 20 s si l'envie vient\n• 5 min de trot très lent puis marche\n• Étirement des mollets et des fessiers 5 min\n⚑ Si les enfants sont là ce week-end : 50 min de home-trainer en aisance à la maison\, pas de sortie dehors.\n\nCoach IA — 2026-S43
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🏃 Sortie longue raccourcie 50 min à la sensation
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-S43-6-matin@coach-ia
-DTSTAMP:20261024T040000Z
+DTSTAMP:20261024T050000Z
 DTSTART:20261025T043000Z
 DTEND:20261025T053000Z
 SUMMARY:⏱️ Demi-Cooper : test de 3 min (vVO2max)
@@ -32,7 +19,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S43-6-soir@coach-ia
-DTSTAMP:20261024T040000Z
+DTSTAMP:20261024T050000Z
 DTSTART:20261025T173000Z
 DTEND:20261025T184500Z
 SUMMARY:🧖 Sauna + hammam à Cassis (sans nager)
