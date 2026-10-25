@@ -625,10 +625,10 @@ window.SEANCES = [
   "hr": 118,
   "hrMax": 160,
   "effort": 13,
-  "contenu": "Mercredi 26 Août\n\nWarm up\n200m Run\n1min : inchworm + push-ups\n200m Run\n1min : up & down\n200m Run\n1min : plank shoulder taps\n200m Run\n1min : burpees\n\nSkill\nReview wall walk\nWOD prep :\n100m + 2 wall walk\n30s\n2 WW + 100m\n\nWOD\nAMRAP 15min\n300m Ski-Erg\n5 wall walk\nRest 1' -> switch 5 wall walk + 300m Ski-Erg\n\nFinisher\nCumuler 25-30 strict pull-ups\nou\nCumuler 15 excentric pull-ups",
-  "contenuFr": "Mercredi 26 Août\néchauffement\n200m course à pied\n1min : chenille (inchworm) + pompe\n200m course à pied\n1min : up & down (planche ↔ pompes sur les mains)\n200m course à pied\n1min : gainage (planche) touches d'épaule\n200m course à pied\n1min : burpee\ntechnique\nrevoir montée au mur (wall walk)\nWOD prep :\n100m + 2 montées au mur (wall walk)\n30s\n2 WW + 100m\nWOD\nAMRAP (maximum de tours) 15min\n300m ski erg\n5 montées au mur (wall walk)\nrécupération 1 min -> on change 5 montées au mur (wall walk) + 300m ski erg\nfinisher (fin de séance)\ncumuler 25-30 tractions strictes\nou\ncumuler 15 tractions excentriques (descente lente)",
+  "contenu": null,
+  "contenuFr": null,
   "note": null,
-  "photo": "https://dgtzuqphqg23d.cloudfront.net/W-65VKI367Ko2PoqqRLTjjj437YbvW_r4AfTwEmCaPA-2048x1536.jpg"
+  "photo": null
  },
  {
   "id": 19903199439,
