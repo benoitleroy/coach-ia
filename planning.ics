@@ -5,21 +5,8 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
-UID:2026-S44-0-soir@coach-ia
-DTSTAMP:20261026T180000Z
-DTSTART:20261026T173000Z
-DTEND:20261026T184500Z
-SUMMARY:🏋️ Force A — squat (box ou NST\, bas du corps)
-DESCRIPTION:La programmation NST n'est pas encore fournie. Si elle arrive\, tu ne gardes que ses parties bas du corps et tu retires tout le haut du corps sans le remplacer. Intention : force lourde en squat sans rien sur les épaules\, semaine 1 = repère sur 5 reps\, en gardant 5 % dans le réservoir. Presse à cuisses = assis\, tu pousses la plateforme avec les pieds. Ceinture de squat = la charge est accrochée à une ceinture sur les hanches.\n• Échauffement 8 min : vélo jambes seules (mains sur les cuisses\, pas sur les poignées)\, puis 2×10 squats au poids du corps\n• Montée en charge à la presse (ou ceinture de squat) : 3 séries de 5 en ajoutant du poids à chaque série\n• Presse à cuisses 5×5 : départ ≈ 100 kg\, +10 kg par série tant que les 2 dernières reps restent propres. Effort 7/10 (2-3 reps en réserve)\, 2 min 30 de récup\n• Fente bulgare (pied arrière posé sur un banc\, descendre le genou arrière vers le sol\, buste droit) : 3×8 par jambe\, 3 s de descente\, gilet lesté 10 kg ou poids du corps\, 90 s de récup\n• Pont fessier sur une jambe (sur le dos\, pousser les hanches vers le plafond avec un seul pied) : 3×12 par jambe\n• Gainage latéral sur le coude GAUCHE uniquement 3×30 s\, puis dead bug jambes seules 2×10\n• Retour au calme 5 min : vélo très facile + étirements fessiers et cuisses\n⚑ Douleur à l'épaule = tu arrêtes l'exercice. Si tu as les garçons ce soir : version maison de 35 min (squat au gilet lesté 5×5\, fente bulgare\, gainage)\, sans cardio.\n\nCoach IA — 2026-S44
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🏋️ Force A — squat (box ou NST\, bas du corps)
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-S44-1-matin@coach-ia
-DTSTAMP:20261026T180000Z
+DTSTAMP:20261026T190000Z
 DTSTART:20261027T043000Z
 DTEND:20261027T053000Z
 SUMMARY:🏃 Footing en aisance
@@ -32,7 +19,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S44-2-matin@coach-ia
-DTSTAMP:20261026T180000Z
+DTSTAMP:20261026T190000Z
 DTSTART:20261028T043000Z
 DTEND:20261028T053000Z
 SUMMARY:🧘 Mobilité courte (maison)
@@ -45,7 +32,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S44-2-soir@coach-ia
-DTSTAMP:20261026T180000Z
+DTSTAMP:20261026T190000Z
 DTSTART:20261028T173000Z
 DTEND:20261028T184500Z
 SUMMARY:⚡ 30/30 Billat — retour du stimulus VO2max
@@ -58,7 +45,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S44-3-matin@coach-ia
-DTSTAMP:20261026T180000Z
+DTSTAMP:20261026T190000Z
 DTSTART:20261029T043000Z
 DTEND:20261029T053000Z
 SUMMARY:🚴 Home-trainer en endurance facile
@@ -71,7 +58,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S44-4-soir@coach-ia
-DTSTAMP:20261026T180000Z
+DTSTAMP:20261026T190000Z
 DTSTART:20261030T173000Z
 DTEND:20261030T184500Z
 SUMMARY:🚴 Vélo souple (remplace l'haltéro suspendue)
@@ -84,7 +71,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S44-5-matin@coach-ia
-DTSTAMP:20261026T180000Z
+DTSTAMP:20261026T190000Z
 DTSTART:20261031T043000Z
 DTEND:20261031T053000Z
 SUMMARY:🏃 Course en aisance (1re partie de la séance combinée)
@@ -97,7 +84,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S44-5-soir@coach-ia
-DTSTAMP:20261026T180000Z
+DTSTAMP:20261026T190000Z
 DTSTART:20261031T173000Z
 DTEND:20261031T184500Z
 SUMMARY:🏋️ Force B — charnière + unilatéral (box ou NST\, bas du corps)
