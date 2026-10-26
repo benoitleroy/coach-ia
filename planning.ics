@@ -5,21 +5,8 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
-UID:2026-S44-0-matin@coach-ia
-DTSTAMP:20261026T050000Z
-DTSTART:20261026T043000Z
-DTEND:20261026T053000Z
-SUMMARY:🧘 Mobilité bas du corps + gainage (maison)
-DESCRIPTION:10 min au domicile\, possible avec les garçons. On ouvre chevilles et hanches sans jamais lever les bras. Le travail de l'overhead squat (squat barre au-dessus de la tête) est mis en pause tant que l'épaule est blessée.\n• Chevilles genou-mur : pied à 10 cm du mur\, amener le genou au mur sans décoller le talon\, 2×10 par jambe\n• Accroupi profond tenu\, talons au sol\, mains libres devant toi : 3×30 s\n• Hanches en 90/90 : assis\, une jambe pliée devant\, l'autre pliée derrière\, 1 min de chaque côté\n• Rotation du buste assis\, bras croisés sur la poitrine : 10 de chaque côté\n• Dead bug jambes seules : sur le dos\, bras posés au sol le long du corps\, descendre une jambe tendue puis l'autre\, 3×10\n⚑ Si un mouvement tire dans l'épaule droite\, tu le sautes.\n\nCoach IA — 2026-S44
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🧘 Mobilité bas du corps + gainage (maison)
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-S44-0-soir@coach-ia
-DTSTAMP:20261026T050000Z
+DTSTAMP:20261026T060000Z
 DTSTART:20261026T173000Z
 DTEND:20261026T184500Z
 SUMMARY:🏋️ Force A — squat (box ou NST\, bas du corps)
@@ -32,7 +19,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S44-1-matin@coach-ia
-DTSTAMP:20261026T050000Z
+DTSTAMP:20261026T060000Z
 DTSTART:20261027T043000Z
 DTEND:20261027T053000Z
 SUMMARY:🏃 Footing en aisance
@@ -45,7 +32,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S44-2-matin@coach-ia
-DTSTAMP:20261026T050000Z
+DTSTAMP:20261026T060000Z
 DTSTART:20261028T043000Z
 DTEND:20261028T053000Z
 SUMMARY:🧘 Mobilité courte (maison)
@@ -58,7 +45,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S44-2-soir@coach-ia
-DTSTAMP:20261026T050000Z
+DTSTAMP:20261026T060000Z
 DTSTART:20261028T173000Z
 DTEND:20261028T184500Z
 SUMMARY:⚡ 30/30 Billat — retour du stimulus VO2max
@@ -71,7 +58,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S44-3-matin@coach-ia
-DTSTAMP:20261026T050000Z
+DTSTAMP:20261026T060000Z
 DTSTART:20261029T043000Z
 DTEND:20261029T053000Z
 SUMMARY:🚴 Home-trainer en endurance facile
@@ -84,7 +71,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S44-4-soir@coach-ia
-DTSTAMP:20261026T050000Z
+DTSTAMP:20261026T060000Z
 DTSTART:20261030T173000Z
 DTEND:20261030T184500Z
 SUMMARY:🚴 Vélo souple (remplace l'haltéro suspendue)
@@ -97,7 +84,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S44-5-matin@coach-ia
-DTSTAMP:20261026T050000Z
+DTSTAMP:20261026T060000Z
 DTSTART:20261031T043000Z
 DTEND:20261031T053000Z
 SUMMARY:🏃 Course en aisance (1re partie de la séance combinée)
@@ -110,7 +97,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S44-5-soir@coach-ia
-DTSTAMP:20261026T050000Z
+DTSTAMP:20261026T060000Z
 DTSTART:20261031T173000Z
 DTEND:20261031T184500Z
 SUMMARY:🏋️ Force B — charnière + unilatéral (box ou NST\, bas du corps)
