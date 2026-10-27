@@ -1649,20 +1649,5 @@ window.SEANCES = [
   "contenuFr": null,
   "note": null,
   "photo": null
- },
- {
-  "id": 18317841876,
-  "date": "2026-04-30T12:30:47Z",
-  "type": "Run",
-  "name": "Course à pied le midi",
-  "sec": 3380,
-  "km": 10.2,
-  "hr": 144,
-  "hrMax": 154,
-  "effort": 55,
-  "contenu": null,
-  "contenuFr": null,
-  "note": null,
-  "photo": null
  }
 ];
