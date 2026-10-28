@@ -565,10 +565,10 @@ window.SEANCES = [
   "hr": 123,
   "hrMax": 161,
   "effort": 32,
-  "contenu": "Samedi 29 Août\n\nWarm up\n30\"/20\"/10\" x 3' ergo\nthen,\n5+5 scorpions\n5+5 reverse scorpions\n5 russian baby makers\nthen, 2 rounds :\n10 scap pull-ups\n10 kipping\n10 pvc overhead squat\n\nTeam of 3\n\n1. AMRAP 12'\nP1 : max cals ski\nP2 : Rest\nP3 : 5 power snatch @60/40 Rx\n10 pull-up / chest to bar\n\nREST 2'\n\n2. AMRAP 12'\nP1 : max cals echo\nP2 : Rest\nP3 : 5 overhead squat @60/40 Rx\n10 pull-ups / chest to bar\n\nSwitch quand P3 a terminé son round\n\nScaling\nElite : 70/45 + chest\nINT : 50/35 + pull-ups\nSC : 40/30 + jumping\nDeb : 30/25 + ring row",
-  "contenuFr": "Samedi 29 Août\néchauffement\n30\"/20\"/10\" x 3' ergo\npuis,\n5+5 scorpions\n5+5 reverses scorpions\n5 russians baby makers\npuis, 2 tours :\n10 scaps traction\n10 kippings\n10 pvcs squat barre au-dessus de la tête\nTeam of 3\n1. AMRAP (maximum de tours) 12'\nP1 : max cals ski erg\nP2 : récupération\nP3 : 5 arrachés debout @60/40 Rx\n10 tractions / chest to bar\nrécupération 2 min\n2. AMRAP (maximum de tours) 12'\nP1 : max cals echo\nP2 : récupération\nP3 : 5 squats barre au-dessus de la tête @60/40 Rx\n10 tractions / chest to bar\non change quand P3 a terminé son tour\nScaling\nElite : 70/45 + chest\nINT : 50/35 + traction\nSC : 40/30 + jumping\nDeb : 30/25 + tirage horizontal aux anneaux",
+  "contenu": null,
+  "contenuFr": null,
   "note": "Team of 3 fait à 30 kg (entre Déb 30 et Sc 40). Difficulté sur les overhead squats : manque de mobilité épaules/thoracique/chevilles à travailler.",
-  "photo": "https://dgtzuqphqg23d.cloudfront.net/VAKECToE3SwJHjaCudl6NxBRymVRUzLo4HuCoZrkfv8-2048x1536.jpg"
+  "photo": null
  },
  {
   "id": 19935452223,
@@ -1615,21 +1615,6 @@ window.SEANCES = [
   "hr": 141,
   "hrMax": 151,
   "effort": 44,
-  "contenu": null,
-  "contenuFr": null,
-  "note": null,
-  "photo": null
- },
- {
-  "id": 18328417581,
-  "date": "2026-05-01T09:16:38Z",
-  "type": "Pilates",
-  "name": "Discipline",
-  "sec": 2845,
-  "km": 0,
-  "hr": 109,
-  "hrMax": 175,
-  "effort": 11,
   "contenu": null,
   "contenuFr": null,
   "note": null,
