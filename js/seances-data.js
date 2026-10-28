@@ -1634,20 +1634,5 @@ window.SEANCES = [
   "contenuFr": null,
   "note": null,
   "photo": null
- },
- {
-  "id": 18327991709,
-  "date": "2026-05-01T06:54:55Z",
-  "type": "VirtualRide",
-  "name": "Zwift - Watopia",
-  "sec": 1204,
-  "km": 10.9,
-  "hr": 117,
-  "hrMax": 138,
-  "effort": 4,
-  "contenu": null,
-  "contenuFr": null,
-  "note": null,
-  "photo": null
  }
 ];
