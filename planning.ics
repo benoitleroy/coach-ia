@@ -5,21 +5,8 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
-UID:2026-S44-4-soir@coach-ia
-DTSTAMP:20261030T180000Z
-DTSTART:20261030T173000Z
-DTEND:20261030T184500Z
-SUMMARY:🚴 Vélo souple (remplace l'haltéro suspendue)
-DESCRIPTION:La séance d'haltérophilie du vendredi est suspendue à cause de l'épaule. À la place\, du vélo très facile vers 17 h 30\, avant un éventuel resto avec les garçons. Le but : arriver frais à la séance combinée de samedi.\n• Home-trainer ou vélo de route : 20 min très facile\, FC < 125\n• Hanches en 90/90 : 1 min de chaque côté\n• Accroupi profond tenu : 2×30 s\n⚑ Pas d'arraché\, d'épaulé ni de barre aujourd'hui\, même « juste la technique ».\n\nCoach IA — 2026-S44
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🚴 Vélo souple (remplace l'haltéro suspendue)
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-S44-5-matin@coach-ia
-DTSTAMP:20261030T180000Z
+DTSTAMP:20261030T190000Z
 DTSTART:20261031T043000Z
 DTEND:20261031T053000Z
 SUMMARY:🏃 Course en aisance (1re partie de la séance combinée)
@@ -32,7 +19,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S44-5-soir@coach-ia
-DTSTAMP:20261030T180000Z
+DTSTAMP:20261030T190000Z
 DTSTART:20261031T173000Z
 DTEND:20261031T184500Z
 SUMMARY:🏋️ Force B — charnière + unilatéral (box ou NST\, bas du corps)
