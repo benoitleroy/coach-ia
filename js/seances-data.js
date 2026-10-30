@@ -535,10 +535,10 @@ window.SEANCES = [
   "hr": 81,
   "hrMax": 104,
   "effort": 3,
-  "contenu": "Mobilité + gainage (nuit courte)\n\n5 min de respiration nasale + rotations d'épaules et de bassin, debout\nDislocations à l'élastique (bras tendus, l'élastique passe de devant à derrière la tête) 2×10, lentement\nSots press au PVC (barre en plastique au-dessus de la tête, on s'accroupit sous la barre) 2×8\nOverhead squat au PVC : 3× tenir 30 s en position basse, barre au-dessus de la tête, bras tendus\nMobilité chevilles genou-mur : 2×10 par jambe (genou avance vers le mur, talon collé au sol)\nGainage : planche ventrale 3×40 s + planche latérale 2×30 s par côté\n5 min étirement des fléchisseurs de hanche (fente genou au sol, bassin qui rentre)",
-  "contenuFr": "Mobilité + gainage (nuit courte)\n5 min de respiration nasale + rotations d'épaules et de bassin, debout\nDislocations à l'élastique (bras tendus, l'élastique passe de devant à derrière la tête) 2×10, lentement\nSots press au PVC (barre en plastique au-dessus de la tête, on s'accroupit sous la barre) 2×8\nsquat barre au-dessus de la tête au PVC : 3× tenir 30 s en position basse, barre au-dessus de la tête, bras tendus\nMobilité chevilles genou-mur : 2×10 par jambe (genou avance vers le mur, talon collé au sol)\nGainage : planche ventrale 3×40 s + planche latérale 2×30 s par côté\n5 min étirement des fléchisseurs de hanche (fente genou au sol, bassin qui rentre)",
+  "contenu": null,
+  "contenuFr": null,
   "note": null,
-  "photo": "https://dgtzuqphqg23d.cloudfront.net/y5_SdluIwq9Wq3neeBL5F2fd2-db1N1Coa2qzd6_ung-942x2048.jpg"
+  "photo": null
  },
  {
   "id": 19953230142,
