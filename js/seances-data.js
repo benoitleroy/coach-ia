@@ -505,10 +505,10 @@ window.SEANCES = [
   "hr": 112,
   "hrMax": 126,
   "effort": 8,
-  "contenu": "High-Cadence Builds (Zwift - Whole Lotta Lava)\nStructure: 30sec @150w / 30sec @175w / 30sec @130w / 30sec @150w / 30sec @175w (répété)\nRécupération: 5 min @120w entre blocs\nPuissance moyenne: 139w\nDistance: 19.6 km\nDurée: 46:31\nCalories: 369 kcal\nFC moyenne: 112 bpm\nPic puissance: 502w\nPic FC: 126 bpm",
-  "contenuFr": "High-Cadence Builds (Zwift - Whole Lotta Lava)\nStructure: 30sec @150w / 30sec @175w / 30sec @130w / 30sec @150w / 30sec @175w (répété)\nRécupération: 5 min @120w entre blocs\nPuissance moyenne: 139w\nDistance: 19.6 km\nDurée: 46:31\nCalories: 369 kcals\nFC moyenne: 112 bpms\nPic puissance: 502w\nPic FC: 126 bpms",
+  "contenu": null,
+  "contenuFr": null,
   "note": null,
-  "photo": "https://dgtzuqphqg23d.cloudfront.net/ZvoPiHOYQYwA_gNyvFejSDKT-FlYGfDGt4gi05lWO70-2048x1430.jpg"
+  "photo": null
  },
  {
   "id": 19977764573,
