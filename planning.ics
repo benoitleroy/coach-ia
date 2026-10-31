@@ -5,21 +5,8 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
-UID:2026-S44-5-matin@coach-ia
-DTSTAMP:20261031T050000Z
-DTSTART:20261031T043000Z
-DTEND:20261031T053000Z
-SUMMARY:🏃 Course en aisance (1re partie de la séance combinée)
-DESCRIPTION:C'est la 1re moitié de la séance combinée qui prépare le test : de l'aisance le matin\, de la force l'après-midi. Si l'envie vient dans la 2e moitié\, tu peux faire quelques relances libres à la sensation\, sans forcer.\n• 5 min de marche rapide\n• 25 min de course en aisance\, FC < 140\, allure libre\n• Si tu te sens bien sur les 10 dernières minutes : 3 relances libres de 20 s\, puis retour à l'aisance\n• 5 min de marche + chevilles genou-mur\n⚑ Si tu as les garçons ce week-end : home-trainer 40 min\, FC < 135\, à la maison.\n\nCoach IA — 2026-S44
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🏃 Course en aisance (1re partie de la séance combinée)
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-S44-5-soir@coach-ia
-DTSTAMP:20261031T050000Z
+DTSTAMP:20261031T060000Z
 DTSTART:20261031T173000Z
 DTEND:20261031T184500Z
 SUMMARY:🏋️ Force B — charnière + unilatéral (box ou NST\, bas du corps)
