@@ -4,17 +4,4 @@ PRODID:-//Coach IA//Carnet//FR
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
-BEGIN:VEVENT
-UID:2026-S44-5-soir@coach-ia
-DTSTAMP:20261031T180000Z
-DTSTART:20261031T173000Z
-DTEND:20261031T184500Z
-SUMMARY:🏋️ Force B — charnière + unilatéral (box ou NST\, bas du corps)
-DESCRIPTION:Vers 17 h\, au moins 6 h après la course. La charnière\, c'est plier les hanches dos plat (la famille du soulevé de terre). On la travaille sans barre dans les mains ni sur le dos. Hip thrust = dos appuyé sur un banc\, barre posée sur les hanches avec un coussin\, tu pousses les hanches vers le plafond.\n• Échauffement 8 min : vélo jambes seules 5 min\, 2×10 ponts fessiers\, 10 good mornings sans barre (mains sur les hanches\, pencher le buste dos plat en reculant les fesses)\n• Sauts sur box 50 cm : 4×3\, réception douce\, redescendre en marchant\n• Hip thrust 5×5 : départ ≈ 60 kg\, +10 kg si les 5 reps sortent propres\, 2 min de récup. La main droite est juste posée sur la barre\, sans tirer\n• Step-up (monter sur la box en poussant sur la jambe posée dessus\, redescendre contrôlé) : box 50 cm\, gilet lesté 10 kg\, 3×8 par jambe\, 90 s de récup\n• Soulevé de terre sur une jambe (buste qui bascule vers l'avant\, jambe arrière tendue\, dos plat) : kettlebell 12 kg dans la main GAUCHE uniquement\, 3×8 par jambe\, seulement si indolore\n• Retour au calme : 5 min de vélo très facile + étirements arrière des cuisses et fessiers\n⚑ Douleur à l'épaule = tu arrêtes l'exercice. Si tu as les garçons : version maison de 35 min (ponts fessiers au gilet lesté\, step-up\, fentes)\, sans cardio.\n\nCoach IA — 2026-S44
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🏋️ Force B — charnière + unilatéral (box ou NST\, bas du corps)
-END:VALARM
-END:VEVENT
 END:VCALENDAR
