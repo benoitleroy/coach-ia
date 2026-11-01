@@ -4,4 +4,147 @@ PRODID:-//Coach IA//Carnet//FR
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
+BEGIN:VEVENT
+UID:2026-S45-0-matin@coach-ia
+DTSTAMP:20261101T050700Z
+DTSTART:20261102T043000Z
+DTEND:20261102T053000Z
+SUMMARY:🧘 Mobilité bas du corps 10 min
+DESCRIPTION:On réveille chevilles et hanches sans rien demander à l'épaule. Tant que l'épaule n'est pas validée\, les exercices bras au-dessus de la tête de ta mobilité pour l'overhead squat (dislocations au bâton\, overhead squat au bâton) sont suspendus : on garde seulement la partie chevilles et hanches.\n• Mobilité cheville genou-mur (pied à 10 cm du mur\, tu pousses le genou vers le mur\, talon au sol) : 2×10 par jambe\n• Accroupi profond tenu (squat le plus bas possible\, talons au sol\, mains jointes devant la poitrine) : 3×30 s\n• Rotations du buste assis\, bras croisés sur la poitrine : 2×10 de chaque côté\n• Pont fessier (sur le dos\, pieds au sol\, tu montes le bassin en serrant les fesses) : 2×15\n• Planche latérale sur l'avant-bras GAUCHE uniquement : 2×30 s\n⚑ Rien ne doit tirer dans l'épaule droite : au moindre signal\, tu retires l'exercice.\n\nCoach IA — 2026-S45
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🧘 Mobilité bas du corps 10 min
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S45-0-soir@coach-ia
+DTSTAMP:20261101T050700Z
+DTSTART:20261102T173000Z
+DTEND:20261102T184500Z
+SUMMARY:🏃 Footing de reprise 25 min
+DESCRIPTION:Premier footing depuis le 17/10 : on vérifie que les tendons répondent. Tu cours à la sensation\, assez lentement pour parler en phrases complètes.\n• 5 min de marche rapide\n• 20 min de footing à FC < 140\, allure libre\n• Si la FC dépasse 140 : 1 min de marche\, puis tu repars\n• 5 min de marche + étirement des mollets contre un mur\, 2×30 s par jambe\n⚑ Si les garçons sont là ce soir : 30 min de home-trainer à la place. Douleur au tendon d'Achille ou au genou = tu arrêtes la course et tu passes au vélo pour le reste de la semaine.\n\nCoach IA — 2026-S45
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🏃 Footing de reprise 25 min
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S45-1-matin@coach-ia
+DTSTAMP:20261101T050700Z
+DTSTART:20261103T043000Z
+DTEND:20261103T053000Z
+SUMMARY:🚴 Home-trainer souple 20 min
+DESCRIPTION:Faire circuler le sang avant le chantier\, sans te fatiguer : les jambes tournent vite\, le souffle reste calme.\n• 5 min très facile\, cadence libre\n• 12 min à 85-90 tours de pédale par minute\, FC < 125\n• 3 min de retour au calme en moulinant\n⚑ Nuit de moins de 6 h : tu coupes à 10 min ou tu restes couché.\n\nCoach IA — 2026-S45
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🚴 Home-trainer souple 20 min
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S45-1-soir@coach-ia
+DTSTAMP:20261101T050700Z
+DTSTART:20261103T173000Z
+DTEND:20261103T184500Z
+SUMMARY:🏋️ Force A : squat (box\, ou parties bas du corps de NST)
+DESCRIPTION:But de la séance : la force pure au squat\, sur la structure NST (échauffement\, force lourde\, endurance de force)\, sans métcon. La programmation NST n'est pas fournie : si la séance du jour arrive\, tu n'en gardes que les parties bas du corps. La barre sur le dos est exclue\, car elle met l'épaule en rotation. À la place : front squat bras croisés (barre posée sur l'avant des épaules\, bras croisés devant toi\, coudes hauts)\, SEULEMENT si la barre à vide ne donne aucune gêne\, sinon presse à cuisses. Après 2 semaines sans charge\, tu reprends autour de 60 % de ta référence et tu gardes 5 % dans le réservoir.\n• Échauffement 8 min : 4 min de vélo d'appartement en jambes seules + 10 squats au poids du corps + 10 fentes arrière + 30 s d'accroupi tenu\n• Test de l'épaule : 2×5 front squat bras croisés à la barre à vide. La moindre gêne = tu passes à la presse à cuisses\n• Montée en charge : 5 reps à 30 kg\, puis 5 reps à 40 kg\n• Front squat bras croisés 5×5 à 47\,5-50 kg (ou presse à cuisses 5×5 à la charge où les 2 dernières reps restent propres)\, 2 min 30 de récup\n• Chaise contre le mur (dos au mur\, cuisses parallèles au sol) : 3×45 s\, 1 min de récup\n• Montées sur box (un pied sur la box\, tu montes sans pousser avec l'autre jambe) : 3×8 par jambe au poids du corps\, 1 min de récup\n• Gainage : sur le dos\, bras posés au sol le long du corps\, relevés de jambes alternés\, 3×10 par jambe\n• Retour au calme : 5 min de vélo très facile\n⚑ Douleur à l'épaule = arrêt de l'exercice. Si les garçons sont là : version maison de 35 min (squat bulgare\, c'est-à-dire une fente avec le pied arrière posé sur une chaise\, 5×6 par jambe + chaise contre le mur + montées sur une chaise + gainage). Si les 5×5 sortent propres\, tu ajoutes 2\,5 kg la semaine prochaine.\n\nCoach IA — 2026-S45
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🏋️ Force A : squat (box\, ou parties bas du corps de NST)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S45-2-matin@coach-ia
+DTSTAMP:20261101T050700Z
+DTSTART:20261104T043000Z
+DTEND:20261104T053000Z
+SUMMARY:🧘 Mobilité + gainage 10 min
+DESCRIPTION:Entretien des chevilles et des hanches\, et un gainage qui ne demande aucun appui sur le bras droit.\n• Mobilité cheville genou-mur : 2×10 par jambe\n• Fente basse tenue (genou arrière au sol\, tu pousses le bassin vers l'avant) : 2×30 s par côté\n• Accroupi profond tenu : 3×30 s\n• Gainage sur le dos\, jambes à 90°\, bras au sol : tu descends une jambe tendue jusqu'à 2 cm du sol\, en alternant\, 3×8 par jambe\n• Planche latérale gauche : 2×30 s\n⚑ Aucun appui sur la main ou le coude droit.\n\nCoach IA — 2026-S45
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🧘 Mobilité + gainage 10 min
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S45-2-soir@coach-ia
+DTSTAMP:20261101T050700Z
+DTSTART:20261104T173000Z
+DTEND:20261104T184500Z
+SUMMARY:🚴 Vélo en aisance 30 min
+DESCRIPTION:Lendemain de force : on rince les jambes\, sans aucun effort. Home-trainer ou vélo de route.\n• 5 min en montant doucement\n• 20 min à FC 115-130\, cadence 85-90\n• 5 min de retour au calme\n⚑ Jambes lourdes ou nuit de moins de 6 h 30 : 20 min\, ou repos. C'est la première séance à sauter.\n\nCoach IA — 2026-S45
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🚴 Vélo en aisance 30 min
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S45-3-matin@coach-ia
+DTSTAMP:20261101T050700Z
+DTSTART:20261105T043000Z
+DTEND:20261105T053000Z
+SUMMARY:🧘 Activation 10 min
+DESCRIPTION:On prépare mollets et tendons d'Achille pour les 30/30 du soir. Ce matin reste facile.\n• Mobilité cheville genou-mur : 2×10 par jambe\n• Pont fessier sur une jambe : 2×10 par jambe\n• Montées lentes sur la pointe des pieds (3 s pour monter\, 3 s pour descendre) : 2×12\n• Accroupi profond tenu : 2×30 s\n⚑ Rien d'intense ce matin : la séance dure\, c'est ce soir.\n\nCoach IA — 2026-S45
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🧘 Activation 10 min
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S45-3-soir@coach-ia
+DTSTAMP:20261101T050700Z
+DTSTART:20261105T173000Z
+DTEND:20261105T184500Z
+SUMMARY:⚡ 30/30 Billat : retour de la VO2max
+DESCRIPTION:Ta seule séance VO2max de la semaine\, au format Billat : 30 s vite à la sensation (dur mais contrôlé\, comme sur un 1 500 m\, environ 4:20-4:40/km\, soit ~110 m en 30 s)\, puis 30 s de trot. Après 2 semaines sans courir\, un seul bloc de 10 ; la semaine prochaine\, 2 blocs.\n• Échauffement 15 min : 10 min de footing très facile\, puis 5 min en accélérant doucement\n• 3 accélérations progressives de 20 s\, retour en marchant\n• 10 × (30 s vite à la sensation / 30 s de trot) : les 10 à la même vitesse\, pas de sprint\n• Retour au calme : 10 min de footing très lent\, puis marche\n• Étirement des mollets : 2×30 s par jambe\n⚑ Feu vert seulement si la nuit a fait au moins 6 h 30\, si l'HRV n'est pas LOW deux matins de suite et si la FC de repos est ≤ 55. Sinon : 30 min de footing facile. Si les garçons sont là : 10×30/30 sur home-trainer. Douleur au tendon d'Achille ou au genou = stop.\n\nCoach IA — 2026-S45
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:⚡ 30/30 Billat : retour de la VO2max
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S45-4-matin@coach-ia
+DTSTAMP:20261101T050700Z
+DTSTART:20261106T043000Z
+DTEND:20261106T053000Z
+SUMMARY:🚴 Home-trainer 30 min (à la place de l'haltéro)
+DESCRIPTION:L'haltérophilie du vendredi soir est suspendue à cause de l'épaule. On la remplace par du vélo facile\, placé le matin pour garder ta soirée libre (resto avec les garçons si c'est le soir de bascule).\n• 5 min en montant doucement\n• 20 min à FC 115-130\, avec 3 accélérations libres de 1 min (pas dures)\n• 5 min de retour au calme\n⚑ Lendemain de séance dure : si les jambes sont lourdes\, 20 min suffisent.\n\nCoach IA — 2026-S45
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🚴 Home-trainer 30 min (à la place de l'haltéro)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S45-5-matin@coach-ia
+DTSTAMP:20261101T050700Z
+DTSTART:20261107T043000Z
+DTEND:20261107T053000Z
+SUMMARY:🏃 Sortie facile 45 min (1re partie de la séance combinée)
+DESCRIPTION:Mini-répétition du test du 21/11 : endurance le matin\, force l'après-midi. Tu cours à sensation constante\, et tu as le droit d'alterner marche et course : ce n'est pas tricher\, c'est ce qui protège tes tendons à la reprise.\n• 5 min de marche rapide\n• 35 min de course à FC < 140\, allure libre ; si la FC monte\, 1 min de marche puis tu repars\n• Si tout va bien\, laisse l'allure monter d'elle-même sur les 5 dernières minutes\, sans dépasser 145 bpm\n• 5 min de marche + mollets\, 2×30 s par jambe\n• Note ta distance et ta FC moyenne : ce sera ta référence pour les prochaines semaines\n⚑ Si tu as les garçons ce week-end : 45 min de home-trainer à la maison à la place. Douleur au tendon d'Achille ou au genou = arrêt.\n\nCoach IA — 2026-S45
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🏃 Sortie facile 45 min (1re partie de la séance combinée)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S45-5-soir@coach-ia
+DTSTAMP:20261101T050700Z
+DTSTART:20261107T173000Z
+DTEND:20261107T184500Z
+SUMMARY:🏋️ Force B : arrière des jambes (box\, ou parties bas du corps de NST)
+DESCRIPTION:2e partie de la séance combinée\, 4 à 6 h après la course. But : la force des fesses et de l'arrière des cuisses\, sans charger les bras. Hip thrust = le haut du dos appuyé sur un banc\, la barre posée sur les hanches avec une mousse\, et tu montes le bassin : la barre ne passe jamais par les épaules. Pas de soulevé de terre à la barre cette semaine : la barre pend dans les bras et tire sur l'épaule.\n• Échauffement 8 min : 4 min de vélo en jambes seules + 2×10 ponts fessiers + 10 fentes arrière par jambe\n• Montée en charge au hip thrust : 8 reps barre à vide\, puis 5 reps à 40 kg et 5 reps à 50 kg (fais-toi aider pour placer la barre)\n• Hip thrust 5×5 à 60-70 kg (la charge où les 2 dernières reps restent propres\, 1 s serré en haut)\, 2 min de récup\n• Soulevé de terre sur une jambe au poids du corps (le buste bascule vers l'avant\, la jambe arrière tendue\, le dos plat) : 3×8 par jambe\, 1 min de récup\n• Sauts sur une box basse de 40-50 cm : 4×3\, tu redescends en marchant\, 1 min de récup\n• Planche latérale gauche 2×30 s + relevés de jambes alternés sur le dos 2×10\n• Retour au calme : 5 min de marche ou de vélo très facile\n⚑ Douleur à l'épaule\, même en plaçant la barre = arrêt. Si les garçons sont là : version maison de 35 min (pont fessier\, le haut du dos appuyé sur le canapé\, avec un sac à dos chargé posé sur les hanches 5×10 + soulevé sur une jambe + gainage).\n\nCoach IA — 2026-S45
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🏋️ Force B : arrière des jambes (box\, ou parties bas du corps de NST)
+END:VALARM
+END:VEVENT
 END:VCALENDAR
