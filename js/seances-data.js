@@ -1499,20 +1499,5 @@ window.SEANCES = [
   "contenuFr": null,
   "note": null,
   "photo": null
- },
- {
-  "id": 18401503328,
-  "date": "2026-05-06T18:30:21Z",
-  "type": "Run",
-  "name": "Wod",
-  "sec": 1158,
-  "km": 4.3,
-  "hr": 161,
-  "hrMax": 181,
-  "effort": 39,
-  "contenu": null,
-  "contenuFr": null,
-  "note": null,
-  "photo": null
  }
 ];
