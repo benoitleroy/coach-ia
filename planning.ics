@@ -5,21 +5,8 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
-UID:2026-S45-1-soir@coach-ia
-DTSTAMP:20261103T180000Z
-DTSTART:20261103T173000Z
-DTEND:20261103T184500Z
-SUMMARY:🏋️ Force A : squat (box\, ou parties bas du corps de NST)
-DESCRIPTION:But de la séance : la force pure au squat\, sur la structure NST (échauffement\, force lourde\, endurance de force)\, sans métcon. La programmation NST n'est pas fournie : si la séance du jour arrive\, tu n'en gardes que les parties bas du corps. La barre sur le dos est exclue\, car elle met l'épaule en rotation. À la place : front squat bras croisés (barre posée sur l'avant des épaules\, bras croisés devant toi\, coudes hauts)\, SEULEMENT si la barre à vide ne donne aucune gêne\, sinon presse à cuisses. Après 2 semaines sans charge\, tu reprends autour de 60 % de ta référence et tu gardes 5 % dans le réservoir.\n• Échauffement 8 min : 4 min de vélo d'appartement en jambes seules + 10 squats au poids du corps + 10 fentes arrière + 30 s d'accroupi tenu\n• Test de l'épaule : 2×5 front squat bras croisés à la barre à vide. La moindre gêne = tu passes à la presse à cuisses\n• Montée en charge : 5 reps à 30 kg\, puis 5 reps à 40 kg\n• Front squat bras croisés 5×5 à 47\,5-50 kg (ou presse à cuisses 5×5 à la charge où les 2 dernières reps restent propres)\, 2 min 30 de récup\n• Chaise contre le mur (dos au mur\, cuisses parallèles au sol) : 3×45 s\, 1 min de récup\n• Montées sur box (un pied sur la box\, tu montes sans pousser avec l'autre jambe) : 3×8 par jambe au poids du corps\, 1 min de récup\n• Gainage : sur le dos\, bras posés au sol le long du corps\, relevés de jambes alternés\, 3×10 par jambe\n• Retour au calme : 5 min de vélo très facile\n⚑ Douleur à l'épaule = arrêt de l'exercice. Si les garçons sont là : version maison de 35 min (squat bulgare\, c'est-à-dire une fente avec le pied arrière posé sur une chaise\, 5×6 par jambe + chaise contre le mur + montées sur une chaise + gainage). Si les 5×5 sortent propres\, tu ajoutes 2\,5 kg la semaine prochaine.\n\nCoach IA — 2026-S45
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🏋️ Force A : squat (box\, ou parties bas du corps de NST)
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-S45-2-matin@coach-ia
-DTSTAMP:20261103T180000Z
+DTSTAMP:20261103T190000Z
 DTSTART:20261104T043000Z
 DTEND:20261104T053000Z
 SUMMARY:🧘 Mobilité + gainage 10 min
@@ -32,7 +19,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S45-2-soir@coach-ia
-DTSTAMP:20261103T180000Z
+DTSTAMP:20261103T190000Z
 DTSTART:20261104T173000Z
 DTEND:20261104T184500Z
 SUMMARY:🚴 Vélo en aisance 30 min
@@ -45,7 +32,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S45-3-matin@coach-ia
-DTSTAMP:20261103T180000Z
+DTSTAMP:20261103T190000Z
 DTSTART:20261105T043000Z
 DTEND:20261105T053000Z
 SUMMARY:🧘 Activation 10 min
@@ -58,7 +45,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S45-3-soir@coach-ia
-DTSTAMP:20261103T180000Z
+DTSTAMP:20261103T190000Z
 DTSTART:20261105T173000Z
 DTEND:20261105T184500Z
 SUMMARY:⚡ 30/30 Billat : retour de la VO2max
@@ -71,7 +58,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S45-4-matin@coach-ia
-DTSTAMP:20261103T180000Z
+DTSTAMP:20261103T190000Z
 DTSTART:20261106T043000Z
 DTEND:20261106T053000Z
 SUMMARY:🚴 Home-trainer 30 min (à la place de l'haltéro)
@@ -84,7 +71,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S45-5-matin@coach-ia
-DTSTAMP:20261103T180000Z
+DTSTAMP:20261103T190000Z
 DTSTART:20261107T043000Z
 DTEND:20261107T053000Z
 SUMMARY:🏃 Sortie facile 45 min (1re partie de la séance combinée)
@@ -97,7 +84,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S45-5-soir@coach-ia
-DTSTAMP:20261103T180000Z
+DTSTAMP:20261103T190000Z
 DTSTART:20261107T173000Z
 DTEND:20261107T184500Z
 SUMMARY:🏋️ Force B : arrière des jambes (box\, ou parties bas du corps de NST)
