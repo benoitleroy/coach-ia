@@ -5,21 +5,8 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
-UID:2026-S45-2-matin@coach-ia
-DTSTAMP:20261104T050000Z
-DTSTART:20261104T043000Z
-DTEND:20261104T053000Z
-SUMMARY:🧘 Mobilité + gainage 10 min
-DESCRIPTION:Entretien des chevilles et des hanches\, et un gainage qui ne demande aucun appui sur le bras droit.\n• Mobilité cheville genou-mur : 2×10 par jambe\n• Fente basse tenue (genou arrière au sol\, tu pousses le bassin vers l'avant) : 2×30 s par côté\n• Accroupi profond tenu : 3×30 s\n• Gainage sur le dos\, jambes à 90°\, bras au sol : tu descends une jambe tendue jusqu'à 2 cm du sol\, en alternant\, 3×8 par jambe\n• Planche latérale gauche : 2×30 s\n⚑ Aucun appui sur la main ou le coude droit.\n\nCoach IA — 2026-S45
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🧘 Mobilité + gainage 10 min
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-S45-2-soir@coach-ia
-DTSTAMP:20261104T050000Z
+DTSTAMP:20261104T060000Z
 DTSTART:20261104T173000Z
 DTEND:20261104T184500Z
 SUMMARY:🚴 Vélo en aisance 30 min
@@ -32,7 +19,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S45-3-matin@coach-ia
-DTSTAMP:20261104T050000Z
+DTSTAMP:20261104T060000Z
 DTSTART:20261105T043000Z
 DTEND:20261105T053000Z
 SUMMARY:🧘 Activation 10 min
@@ -45,7 +32,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S45-3-soir@coach-ia
-DTSTAMP:20261104T050000Z
+DTSTAMP:20261104T060000Z
 DTSTART:20261105T173000Z
 DTEND:20261105T184500Z
 SUMMARY:⚡ 30/30 Billat : retour de la VO2max
@@ -58,7 +45,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S45-4-matin@coach-ia
-DTSTAMP:20261104T050000Z
+DTSTAMP:20261104T060000Z
 DTSTART:20261106T043000Z
 DTEND:20261106T053000Z
 SUMMARY:🚴 Home-trainer 30 min (à la place de l'haltéro)
@@ -71,7 +58,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S45-5-matin@coach-ia
-DTSTAMP:20261104T050000Z
+DTSTAMP:20261104T060000Z
 DTSTART:20261107T043000Z
 DTEND:20261107T053000Z
 SUMMARY:🏃 Sortie facile 45 min (1re partie de la séance combinée)
@@ -84,7 +71,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S45-5-soir@coach-ia
-DTSTAMP:20261104T050000Z
+DTSTAMP:20261104T060000Z
 DTSTART:20261107T173000Z
 DTEND:20261107T184500Z
 SUMMARY:🏋️ Force B : arrière des jambes (box\, ou parties bas du corps de NST)
