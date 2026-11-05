@@ -127,5 +127,5 @@ window.PROGRAMME = {
   "debut": "2026-08-31",
   "termine": false
  },
- "generatedAt": "2026-11-05T17:00:40.094Z"
+ "generatedAt": "2026-11-05T18:00:26.746Z"
 };
