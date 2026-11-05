@@ -5,21 +5,8 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
-UID:2026-S45-3-soir@coach-ia
-DTSTAMP:20261105T180000Z
-DTSTART:20261105T173000Z
-DTEND:20261105T184500Z
-SUMMARY:⚡ 30/30 Billat : retour de la VO2max
-DESCRIPTION:Ta seule séance VO2max de la semaine\, au format Billat : 30 s vite à la sensation (dur mais contrôlé\, comme sur un 1 500 m\, environ 4:20-4:40/km\, soit ~110 m en 30 s)\, puis 30 s de trot. Après 2 semaines sans courir\, un seul bloc de 10 ; la semaine prochaine\, 2 blocs.\n• Échauffement 15 min : 10 min de footing très facile\, puis 5 min en accélérant doucement\n• 3 accélérations progressives de 20 s\, retour en marchant\n• 10 × (30 s vite à la sensation / 30 s de trot) : les 10 à la même vitesse\, pas de sprint\n• Retour au calme : 10 min de footing très lent\, puis marche\n• Étirement des mollets : 2×30 s par jambe\n⚑ Feu vert seulement si la nuit a fait au moins 6 h 30\, si l'HRV n'est pas LOW deux matins de suite et si la FC de repos est ≤ 55. Sinon : 30 min de footing facile. Si les garçons sont là : 10×30/30 sur home-trainer. Douleur au tendon d'Achille ou au genou = stop.\n\nCoach IA — 2026-S45
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:⚡ 30/30 Billat : retour de la VO2max
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-S45-4-matin@coach-ia
-DTSTAMP:20261105T180000Z
+DTSTAMP:20261105T190000Z
 DTSTART:20261106T043000Z
 DTEND:20261106T053000Z
 SUMMARY:🚴 Home-trainer 30 min (à la place de l'haltéro)
@@ -32,7 +19,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S45-5-matin@coach-ia
-DTSTAMP:20261105T180000Z
+DTSTAMP:20261105T190000Z
 DTSTART:20261107T043000Z
 DTEND:20261107T053000Z
 SUMMARY:🏃 Sortie facile 45 min (1re partie de la séance combinée)
@@ -45,7 +32,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S45-5-soir@coach-ia
-DTSTAMP:20261105T180000Z
+DTSTAMP:20261105T190000Z
 DTSTART:20261107T173000Z
 DTEND:20261107T184500Z
 SUMMARY:🏋️ Force B : arrière des jambes (box\, ou parties bas du corps de NST)
