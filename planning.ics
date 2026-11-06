@@ -5,21 +5,8 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
-UID:2026-S45-4-matin@coach-ia
-DTSTAMP:20261106T050000Z
-DTSTART:20261106T043000Z
-DTEND:20261106T053000Z
-SUMMARY:🚴 Home-trainer 30 min (à la place de l'haltéro)
-DESCRIPTION:L'haltérophilie du vendredi soir est suspendue à cause de l'épaule. On la remplace par du vélo facile\, placé le matin pour garder ta soirée libre (resto avec les garçons si c'est le soir de bascule).\n• 5 min en montant doucement\n• 20 min à FC 115-130\, avec 3 accélérations libres de 1 min (pas dures)\n• 5 min de retour au calme\n⚑ Lendemain de séance dure : si les jambes sont lourdes\, 20 min suffisent.\n\nCoach IA — 2026-S45
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🚴 Home-trainer 30 min (à la place de l'haltéro)
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-S45-5-matin@coach-ia
-DTSTAMP:20261106T050000Z
+DTSTAMP:20261106T060000Z
 DTSTART:20261107T043000Z
 DTEND:20261107T053000Z
 SUMMARY:🏃 Sortie facile 45 min (1re partie de la séance combinée)
@@ -32,7 +19,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S45-5-soir@coach-ia
-DTSTAMP:20261106T050000Z
+DTSTAMP:20261106T060000Z
 DTSTART:20261107T173000Z
 DTEND:20261107T184500Z
 SUMMARY:🏋️ Force B : arrière des jambes (box\, ou parties bas du corps de NST)
