@@ -5,21 +5,8 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
-UID:2026-S45-5-matin@coach-ia
-DTSTAMP:20261107T050000Z
-DTSTART:20261107T043000Z
-DTEND:20261107T053000Z
-SUMMARY:🏃 Sortie facile 45 min (1re partie de la séance combinée)
-DESCRIPTION:Mini-répétition du test du 21/11 : endurance le matin\, force l'après-midi. Tu cours à sensation constante\, et tu as le droit d'alterner marche et course : ce n'est pas tricher\, c'est ce qui protège tes tendons à la reprise.\n• 5 min de marche rapide\n• 35 min de course à FC < 140\, allure libre ; si la FC monte\, 1 min de marche puis tu repars\n• Si tout va bien\, laisse l'allure monter d'elle-même sur les 5 dernières minutes\, sans dépasser 145 bpm\n• 5 min de marche + mollets\, 2×30 s par jambe\n• Note ta distance et ta FC moyenne : ce sera ta référence pour les prochaines semaines\n⚑ Si tu as les garçons ce week-end : 45 min de home-trainer à la maison à la place. Douleur au tendon d'Achille ou au genou = arrêt.\n\nCoach IA — 2026-S45
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🏃 Sortie facile 45 min (1re partie de la séance combinée)
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-S45-5-soir@coach-ia
-DTSTAMP:20261107T050000Z
+DTSTAMP:20261107T060000Z
 DTSTART:20261107T173000Z
 DTEND:20261107T184500Z
 SUMMARY:🏋️ Force B : arrière des jambes (box\, ou parties bas du corps de NST)
