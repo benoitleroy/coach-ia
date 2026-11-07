@@ -4,17 +4,4 @@ PRODID:-//Coach IA//Carnet//FR
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
-BEGIN:VEVENT
-UID:2026-S45-5-soir@coach-ia
-DTSTAMP:20261107T180000Z
-DTSTART:20261107T173000Z
-DTEND:20261107T184500Z
-SUMMARY:🏋️ Force B : arrière des jambes (box\, ou parties bas du corps de NST)
-DESCRIPTION:2e partie de la séance combinée\, 4 à 6 h après la course. But : la force des fesses et de l'arrière des cuisses\, sans charger les bras. Hip thrust = le haut du dos appuyé sur un banc\, la barre posée sur les hanches avec une mousse\, et tu montes le bassin : la barre ne passe jamais par les épaules. Pas de soulevé de terre à la barre cette semaine : la barre pend dans les bras et tire sur l'épaule.\n• Échauffement 8 min : 4 min de vélo en jambes seules + 2×10 ponts fessiers + 10 fentes arrière par jambe\n• Montée en charge au hip thrust : 8 reps barre à vide\, puis 5 reps à 40 kg et 5 reps à 50 kg (fais-toi aider pour placer la barre)\n• Hip thrust 5×5 à 60-70 kg (la charge où les 2 dernières reps restent propres\, 1 s serré en haut)\, 2 min de récup\n• Soulevé de terre sur une jambe au poids du corps (le buste bascule vers l'avant\, la jambe arrière tendue\, le dos plat) : 3×8 par jambe\, 1 min de récup\n• Sauts sur une box basse de 40-50 cm : 4×3\, tu redescends en marchant\, 1 min de récup\n• Planche latérale gauche 2×30 s + relevés de jambes alternés sur le dos 2×10\n• Retour au calme : 5 min de marche ou de vélo très facile\n⚑ Douleur à l'épaule\, même en plaçant la barre = arrêt. Si les garçons sont là : version maison de 35 min (pont fessier\, le haut du dos appuyé sur le canapé\, avec un sac à dos chargé posé sur les hanches 5×10 + soulevé sur une jambe + gainage).\n\nCoach IA — 2026-S45
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🏋️ Force B : arrière des jambes (box\, ou parties bas du corps de NST)
-END:VALARM
-END:VEVENT
 END:VCALENDAR
