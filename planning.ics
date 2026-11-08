@@ -4,4 +4,134 @@ PRODID:-//Coach IA//Carnet//FR
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
+BEGIN:VEVENT
+UID:2026-S46-0-matin@coach-ia
+DTSTAMP:20261108T050800Z
+DTSTART:20261109T043000Z
+DTEND:20261109T053000Z
+SUMMARY:🧘 Mobilité hanches-chevilles + gainage
+DESCRIPTION:15 min à la maison\, avant 6 h\, pour réveiller les articulations du bas du corps sans jamais solliciter l'épaule. Ça doit détendre\, pas fatiguer.\n• Chevilles genou-mur (pied à 10 cm du mur\, pousser le genou vers le mur\, talon collé au sol) : 2×10 par jambe\n• Hanches 90/90 (assis\, les deux jambes pliées à 90°\, basculer les genoux d'un côté à l'autre) : 2×8 bascules\n• Accroupi profond tenu (squat le plus bas possible\, talons au sol\, main gauche sur un montant de porte si besoin) : 3×30 s\n• Pont fessier (couché sur le dos\, pieds au sol\, monter les hanches en serrant les fesses) : 2×15\n• Dead bug jambes seules (couché sur le dos\, bras posés au sol\, descendre une jambe tendue à la fois sans creuser le dos) : 2×10\n• Planche latérale côté gauche uniquement (appui sur l'avant-bras gauche) : 2×20 s\n⚑ Le bras droit reste posé. Les dislocations au bâton pour l'overhead squat sont suspendues tant que le chirurgien n'a pas validé l'épaule.\n\nCoach IA — 2026-S46
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🧘 Mobilité hanches-chevilles + gainage
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S46-0-soir@coach-ia
+DTSTAMP:20261108T050800Z
+DTSTART:20261109T173000Z
+DTEND:20261109T184500Z
+SUMMARY:🚴 Home-trainer en aisance
+DESCRIPTION:35 min pour remettre le moteur en route : FC entre 120 et 135\, conversation possible. Tu tenais 174 W à 136 bpm le 4/11\, donc vise plutôt 150-165 W.\n• 5 min très faciles à 100-120 W\, cadence 85-90\n• 25 min à 150-165 W\, FC 120-135\, cadence 85-90\n• 5 min de retour au calme à 100 W\n• 3 min d'étirements mollets et quadriceps\n⚑ Si la FC dépasse 140 à puissance stable\, baisse de 15 W.\n\nCoach IA — 2026-S46
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🚴 Home-trainer en aisance
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S46-1-matin@coach-ia
+DTSTAMP:20261108T050800Z
+DTSTART:20261110T043000Z
+DTEND:20261110T053000Z
+SUMMARY:🏃 Footing ou home-trainer très facile
+DESCRIPTION:20 min très faciles. Sans les enfants ce matin\, footing autour de chez toi ; avec eux\, home-trainer à 130-150 W.\n• 5 min de marche rapide\, ou de pédalage très facile\n• 15 min de course ou de pédalage\, FC sous 135\n• 3 min de marche et d'étirements des mollets\n⚑ Une gêne au tendon d'Achille ou au genou : on passe au home-trainer et la course s'arrête jusqu'à disparition complète.\n\nCoach IA — 2026-S46
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🏃 Footing ou home-trainer très facile
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S46-1-soir@coach-ia
+DTSTAMP:20261108T050800Z
+DTSTART:20261110T173000Z
+DTEND:20261110T184500Z
+SUMMARY:🏋️ Force A : squat (bas du corps)
+DESCRIPTION:À la box ou en NST : si la séance du jour est fournie\, garde uniquement ses parties jambes en version Scaled. Sinon\, fais cette séance construite sur leur modèle (échauffement\, force absolue\, endurance de force\, gainage). Première semaine de reprise : garde 20 % dans le réservoir au lieu des 5 % habituels. Avec les enfants ce soir : même séance à la maison\, sans les sauts sur box.\n• Échauffement 8 min : 5 min de vélo jambes seules\, 10 squats au poids du corps\, 10 fentes arrière\, 2×20 s d'accroupi profond\n• Montée en charge au squat gobelet (kettlebell tenue contre la poitrine à deux mains\, coudes serrés\, descendre entre les genoux) : 3×5 à 12\, 16 puis 20 kg\n• Squat gobelet 5×5 à 24 kg\, descente en 3 s\, 2 min de récup entre séries\n• Fente bulgare (pied arrière posé sur un banc\, descendre le genou arrière vers le sol) : 3×8 par jambe\, haltère de 12 kg dans la main GAUCHE seulement\, 90 s de récup\n• Sauts sur box de 50 cm : 4×3\, redescendre en marchant\, 1 min de récup\n• Gainage : dead bug jambes seules 3×10\, puis planche latérale côté gauche 3×20 s\n• Retour au calme : 5 min de vélo très facile et étirement des fessiers\n⚑ Si l'épaule tire en tenant la kettlebell\, pose-la et passe au gilet lesté de 10-15 kg ou au squat à la ceinture. Si les 2 dernières reps ne sont pas propres\, reste à 20 kg.\n\nCoach IA — 2026-S46
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🏋️ Force A : squat (bas du corps)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S46-3-matin@coach-ia
+DTSTAMP:20261108T050800Z
+DTSTART:20261112T043000Z
+DTEND:20261112T053000Z
+SUMMARY:🧘 Mobilité hanches + mollets
+DESCRIPTION:15 min à la maison\, une variante de lundi pour ouvrir les hanches avant le 30/30 du soir.\n• Chevilles genou-mur : 2×10 par jambe\n• Fente basse (genou arrière au sol\, pousser le bassin vers l'avant pour étirer le devant de la hanche) : 2×30 s par côté\n• Accroupi profond tenu : 3×30 s\n• Pont fessier sur une jambe : 2×10 par jambe\n• Dead bug jambes seules : 2×10\n• Planche latérale côté gauche : 2×20 s\n⚑ Aucun exercice bras au-dessus de la tête\, aucun appui sur le bras droit.\n\nCoach IA — 2026-S46
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🧘 Mobilité hanches + mollets
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S46-3-soir@coach-ia
+DTSTAMP:20261108T050800Z
+DTSTART:20261112T173000Z
+DTEND:20261112T184500Z
+SUMMARY:🚴 30/30 Billat sur home-trainer
+DESCRIPTION:Seul rappel VO2max de la semaine\, au format Billat\, peu traumatisant : 30 s dur (8/10\, environ 260-290 W\, cadence 95 ou plus) puis 30 s très facile. Ta FC doit monter vers 165-175 en fin de bloc. Sur le vélo\, c'est sans impact pour les tendons qui reprennent.\n• Échauffement progressif 12 min : 4 min à 120 W\, 4 min à 150 W\, 4 min à 170 W\n• 3 accélérations de 15 s (cadence 100 ou plus)\, 45 s faciles entre chaque\n• Bloc 1 : 8×(30 s à ~270 W / 30 s à 100 W)\n• 3 min très faciles à 100 W\n• Bloc 2 : 8×(30 s dur / 30 s facile)\, même puissance\, ou +10 W si le bloc 1 était facile\n• Retour au calme 8 min à 110 W\, puis étirements\n⚑ Si ce matin ta FC repos est à 55 ou plus\, ou si ton HRV est LOW deux matins de suite : 40 min en aisance à la place. Si tu ne tiens plus la puissance sur 2 répétitions de suite\, arrête le bloc.\n\nCoach IA — 2026-S46
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🚴 30/30 Billat sur home-trainer
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S46-4-matin@coach-ia
+DTSTAMP:20261108T050800Z
+DTSTART:20261113T043000Z
+DTEND:20261113T053000Z
+SUMMARY:🧘 Pieds\, mollets et gainage
+DESCRIPTION:15 min légères pour renforcer pieds et mollets\, la base pour encaisser la course qui revient.\n• Montées sur pointes de pieds (sur une marche\, monter haut et redescendre lentement en 3 s) : 3×15\n• Chevilles genou-mur : 2×10 par jambe\n• Accroupi profond tenu : 2×30 s\n• Pont fessier : 2×15\n• Dead bug jambes seules : 2×10\n⚑ Une douleur au tendon d'Achille sur les montées sur pointes : tu les supprimes et tu le notes.\n\nCoach IA — 2026-S46
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🧘 Pieds\, mollets et gainage
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S46-4-soir@coach-ia
+DTSTAMP:20261108T050800Z
+DTSTART:20261113T173000Z
+DTEND:20261113T184500Z
+SUMMARY:🚴 Vélo en aisance (remplace l'haltéro)
+DESCRIPTION:L'haltérophilie du vendredi est suspendue à cause de l'épaule. À la place\, 30 min de vélo facile vers 17 h 30\, avant le resto si tu récupères les garçons.\n• 5 min faciles à 110-120 W\n• 20 min à 150-160 W\, FC sous 135\n• 5 min de retour au calme à 100 W\n⚑ Si tu sens la fatigue de la semaine ou si ta FC repos est à base +5\, raccourcis à 20 min.\n\nCoach IA — 2026-S46
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🚴 Vélo en aisance (remplace l'haltéro)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S46-5-matin@coach-ia
+DTSTAMP:20261108T050800Z
+DTSTART:20261114T043000Z
+DTEND:20261114T053000Z
+SUMMARY:🏋️ Force B : charnière de hanche
+DESCRIPTION:Vers 9 h 30-10 h. Le WOD de la box pour sa seule partie jambes en Scaled\, ou cette séance construite sur le modèle NST. Week-end avec les enfants : version maison de 35 min (hip thrust et montées sur box\, sans le reste). Le pattern change du mardi : ici ce sont les hanches et l'arrière des cuisses qui travaillent.\n• Échauffement 8 min : 5 min de vélo jambes seules\, 2×10 ponts fessiers\, 10 good mornings mains sur les hanches (buste penché dos plat\, hanches qui reculent)\n• Montée en charge au hip thrust (haut du dos appuyé sur un banc\, barre sur les hanches avec une mousse\, pousser les hanches vers le plafond) : 3×5 à 40\, 50 puis 60 kg\n• Hip thrust 5×5 à 70 kg\, 1 s de pause en haut\, 2 min de récup : c'est la charge où les 2 dernières reps restent propres\n• Montées sur box de 50 cm (un pied sur la box\, pousser dessus pour monter\, redescendre contrôlé) : 3×10 par jambe\, gilet lesté de 10 kg ou haltère de 12 kg main gauche\, 90 s de récup\n• Soulevé de terre sur une jambe (buste qui bascule vers l'avant\, jambe arrière tendue\, dos plat) : 3×8 par jambe\, kettlebell de 12 kg main gauche\n• Gainage : pont fessier sur une jambe tenu 3×20 s par côté\, puis dead bug 2×10\n• Retour au calme : 5 min de vélo très facile\n⚑ Au hip thrust\, la main droite ne fait qu'équilibrer la barre\, elle ne porte rien. Une douleur à l'épaule ou dans le bas du dos arrête l'exercice.\n\nCoach IA — 2026-S46
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🏋️ Force B : charnière de hanche
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S46-6-matin@coach-ia
+DTSTAMP:20261108T050800Z
+DTSTART:20261115T043000Z
+DTEND:20261115T053000Z
+SUMMARY:🏃 Sortie longue course-marche en aisance
+DESCRIPTION:45 min à la sensation\, façon Billat : tu dois pouvoir parler en phrases complètes\, l'allure est libre (environ 6:10-6:30/km) et marcher fait partie de la séance. Week-end avec les enfants : 45 min de home-trainer en aisance à la maison.\n• 5 min de marche rapide\, puis 5 min de trot très lent\n• 30 min de course à sensation facile\, FC sous 140 ; 1 min de marche dès qu'elle dépasse 140\n• Facultatif\, si les jambes sont bonnes : 3 accélérations progressives de 15 s\n• 5 min de marche pour revenir au calme\, puis étirements des mollets\n⚑ Une gêne au tendon d'Achille ou au genou : tu finis en marchant et la prochaine sortie se fait à vélo.\n\nCoach IA — 2026-S46
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🏃 Sortie longue course-marche en aisance
+END:VALARM
+END:VEVENT
 END:VCALENDAR
