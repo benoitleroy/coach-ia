@@ -5,21 +5,8 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
-UID:2026-S46-0-matin@coach-ia
-DTSTAMP:20261109T050000Z
-DTSTART:20261109T043000Z
-DTEND:20261109T053000Z
-SUMMARY:🧘 Mobilité hanches-chevilles + gainage
-DESCRIPTION:15 min à la maison\, avant 6 h\, pour réveiller les articulations du bas du corps sans jamais solliciter l'épaule. Ça doit détendre\, pas fatiguer.\n• Chevilles genou-mur (pied à 10 cm du mur\, pousser le genou vers le mur\, talon collé au sol) : 2×10 par jambe\n• Hanches 90/90 (assis\, les deux jambes pliées à 90°\, basculer les genoux d'un côté à l'autre) : 2×8 bascules\n• Accroupi profond tenu (squat le plus bas possible\, talons au sol\, main gauche sur un montant de porte si besoin) : 3×30 s\n• Pont fessier (couché sur le dos\, pieds au sol\, monter les hanches en serrant les fesses) : 2×15\n• Dead bug jambes seules (couché sur le dos\, bras posés au sol\, descendre une jambe tendue à la fois sans creuser le dos) : 2×10\n• Planche latérale côté gauche uniquement (appui sur l'avant-bras gauche) : 2×20 s\n⚑ Le bras droit reste posé. Les dislocations au bâton pour l'overhead squat sont suspendues tant que le chirurgien n'a pas validé l'épaule.\n\nCoach IA — 2026-S46
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🧘 Mobilité hanches-chevilles + gainage
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-S46-0-soir@coach-ia
-DTSTAMP:20261109T050000Z
+DTSTAMP:20261109T060000Z
 DTSTART:20261109T173000Z
 DTEND:20261109T184500Z
 SUMMARY:🚴 Home-trainer en aisance
@@ -32,7 +19,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S46-1-matin@coach-ia
-DTSTAMP:20261109T050000Z
+DTSTAMP:20261109T060000Z
 DTSTART:20261110T043000Z
 DTEND:20261110T053000Z
 SUMMARY:🏃 Footing ou home-trainer très facile
@@ -45,7 +32,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S46-1-soir@coach-ia
-DTSTAMP:20261109T050000Z
+DTSTAMP:20261109T060000Z
 DTSTART:20261110T173000Z
 DTEND:20261110T184500Z
 SUMMARY:🏋️ Force A : squat (bas du corps)
@@ -58,7 +45,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S46-3-matin@coach-ia
-DTSTAMP:20261109T050000Z
+DTSTAMP:20261109T060000Z
 DTSTART:20261112T043000Z
 DTEND:20261112T053000Z
 SUMMARY:🧘 Mobilité hanches + mollets
@@ -71,7 +58,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S46-3-soir@coach-ia
-DTSTAMP:20261109T050000Z
+DTSTAMP:20261109T060000Z
 DTSTART:20261112T173000Z
 DTEND:20261112T184500Z
 SUMMARY:🚴 30/30 Billat sur home-trainer
@@ -84,7 +71,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S46-4-matin@coach-ia
-DTSTAMP:20261109T050000Z
+DTSTAMP:20261109T060000Z
 DTSTART:20261113T043000Z
 DTEND:20261113T053000Z
 SUMMARY:🧘 Pieds\, mollets et gainage
@@ -97,7 +84,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S46-4-soir@coach-ia
-DTSTAMP:20261109T050000Z
+DTSTAMP:20261109T060000Z
 DTSTART:20261113T173000Z
 DTEND:20261113T184500Z
 SUMMARY:🚴 Vélo en aisance (remplace l'haltéro)
@@ -110,7 +97,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S46-5-matin@coach-ia
-DTSTAMP:20261109T050000Z
+DTSTAMP:20261109T060000Z
 DTSTART:20261114T043000Z
 DTEND:20261114T053000Z
 SUMMARY:🏋️ Force B : charnière de hanche
@@ -123,7 +110,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S46-6-matin@coach-ia
-DTSTAMP:20261109T050000Z
+DTSTAMP:20261109T060000Z
 DTSTART:20261115T043000Z
 DTEND:20261115T053000Z
 SUMMARY:🏃 Sortie longue course-marche en aisance
