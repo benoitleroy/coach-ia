@@ -5,21 +5,8 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
-UID:2026-S46-1-soir@coach-ia
-DTSTAMP:20261110T180000Z
-DTSTART:20261110T173000Z
-DTEND:20261110T184500Z
-SUMMARY:🏋️ Force A : squat (bas du corps)
-DESCRIPTION:À la box ou en NST : si la séance du jour est fournie\, garde uniquement ses parties jambes en version Scaled. Sinon\, fais cette séance construite sur leur modèle (échauffement\, force absolue\, endurance de force\, gainage). Première semaine de reprise : garde 20 % dans le réservoir au lieu des 5 % habituels. Avec les enfants ce soir : même séance à la maison\, sans les sauts sur box.\n• Échauffement 8 min : 5 min de vélo jambes seules\, 10 squats au poids du corps\, 10 fentes arrière\, 2×20 s d'accroupi profond\n• Montée en charge au squat gobelet (kettlebell tenue contre la poitrine à deux mains\, coudes serrés\, descendre entre les genoux) : 3×5 à 12\, 16 puis 20 kg\n• Squat gobelet 5×5 à 24 kg\, descente en 3 s\, 2 min de récup entre séries\n• Fente bulgare (pied arrière posé sur un banc\, descendre le genou arrière vers le sol) : 3×8 par jambe\, haltère de 12 kg dans la main GAUCHE seulement\, 90 s de récup\n• Sauts sur box de 50 cm : 4×3\, redescendre en marchant\, 1 min de récup\n• Gainage : dead bug jambes seules 3×10\, puis planche latérale côté gauche 3×20 s\n• Retour au calme : 5 min de vélo très facile et étirement des fessiers\n⚑ Si l'épaule tire en tenant la kettlebell\, pose-la et passe au gilet lesté de 10-15 kg ou au squat à la ceinture. Si les 2 dernières reps ne sont pas propres\, reste à 20 kg.\n\nCoach IA — 2026-S46
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🏋️ Force A : squat (bas du corps)
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-S46-3-matin@coach-ia
-DTSTAMP:20261110T180000Z
+DTSTAMP:20261110T190000Z
 DTSTART:20261112T043000Z
 DTEND:20261112T053000Z
 SUMMARY:🧘 Mobilité hanches + mollets
@@ -32,7 +19,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S46-3-soir@coach-ia
-DTSTAMP:20261110T180000Z
+DTSTAMP:20261110T190000Z
 DTSTART:20261112T173000Z
 DTEND:20261112T184500Z
 SUMMARY:🚴 30/30 Billat sur home-trainer
@@ -45,7 +32,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S46-4-matin@coach-ia
-DTSTAMP:20261110T180000Z
+DTSTAMP:20261110T190000Z
 DTSTART:20261113T043000Z
 DTEND:20261113T053000Z
 SUMMARY:🧘 Pieds\, mollets et gainage
@@ -58,7 +45,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S46-4-soir@coach-ia
-DTSTAMP:20261110T180000Z
+DTSTAMP:20261110T190000Z
 DTSTART:20261113T173000Z
 DTEND:20261113T184500Z
 SUMMARY:🚴 Vélo en aisance (remplace l'haltéro)
@@ -71,7 +58,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S46-5-matin@coach-ia
-DTSTAMP:20261110T180000Z
+DTSTAMP:20261110T190000Z
 DTSTART:20261114T043000Z
 DTEND:20261114T053000Z
 SUMMARY:🏋️ Force B : charnière de hanche
@@ -84,7 +71,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S46-6-matin@coach-ia
-DTSTAMP:20261110T180000Z
+DTSTAMP:20261110T190000Z
 DTSTART:20261115T043000Z
 DTEND:20261115T053000Z
 SUMMARY:🏃 Sortie longue course-marche en aisance
