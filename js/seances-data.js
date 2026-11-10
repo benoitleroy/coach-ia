@@ -1469,20 +1469,5 @@ window.SEANCES = [
   "contenuFr": null,
   "note": null,
   "photo": null
- },
- {
-  "id": 18499834210,
-  "date": "2026-05-14T08:13:09Z",
-  "type": "Pilates",
-  "name": "Pilates le matin",
-  "sec": 1799,
-  "km": 0,
-  "hr": 93,
-  "hrMax": 122,
-  "effort": 3,
-  "contenu": null,
-  "contenuFr": null,
-  "note": null,
-  "photo": null
  }
 ];
