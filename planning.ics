@@ -5,21 +5,8 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
-UID:2026-S46-3-matin@coach-ia
-DTSTAMP:20261112T050000Z
-DTSTART:20261112T043000Z
-DTEND:20261112T053000Z
-SUMMARY:🧘 Mobilité hanches + mollets
-DESCRIPTION:15 min à la maison\, une variante de lundi pour ouvrir les hanches avant le 30/30 du soir.\n• Chevilles genou-mur : 2×10 par jambe\n• Fente basse (genou arrière au sol\, pousser le bassin vers l'avant pour étirer le devant de la hanche) : 2×30 s par côté\n• Accroupi profond tenu : 3×30 s\n• Pont fessier sur une jambe : 2×10 par jambe\n• Dead bug jambes seules : 2×10\n• Planche latérale côté gauche : 2×20 s\n⚑ Aucun exercice bras au-dessus de la tête\, aucun appui sur le bras droit.\n\nCoach IA — 2026-S46
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🧘 Mobilité hanches + mollets
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-S46-3-soir@coach-ia
-DTSTAMP:20261112T050000Z
+DTSTAMP:20261112T060000Z
 DTSTART:20261112T173000Z
 DTEND:20261112T184500Z
 SUMMARY:🚴 30/30 Billat sur home-trainer
@@ -32,7 +19,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S46-4-matin@coach-ia
-DTSTAMP:20261112T050000Z
+DTSTAMP:20261112T060000Z
 DTSTART:20261113T043000Z
 DTEND:20261113T053000Z
 SUMMARY:🧘 Pieds\, mollets et gainage
@@ -45,7 +32,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S46-4-soir@coach-ia
-DTSTAMP:20261112T050000Z
+DTSTAMP:20261112T060000Z
 DTSTART:20261113T173000Z
 DTEND:20261113T184500Z
 SUMMARY:🚴 Vélo en aisance (remplace l'haltéro)
@@ -58,7 +45,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S46-5-matin@coach-ia
-DTSTAMP:20261112T050000Z
+DTSTAMP:20261112T060000Z
 DTSTART:20261114T043000Z
 DTEND:20261114T053000Z
 SUMMARY:🏋️ Force B : charnière de hanche
@@ -71,7 +58,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S46-6-matin@coach-ia
-DTSTAMP:20261112T050000Z
+DTSTAMP:20261112T060000Z
 DTSTART:20261115T043000Z
 DTEND:20261115T053000Z
 SUMMARY:🏃 Sortie longue course-marche en aisance

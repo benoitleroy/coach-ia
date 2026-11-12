@@ -1469,20 +1469,5 @@ window.SEANCES = [
   "contenuFr": null,
   "note": null,
   "photo": null
- },
- {
-  "id": 18524355501,
-  "date": "2026-05-16T05:13:41Z",
-  "type": "VirtualRide",
-  "name": "Zwift - Tick Tock in Watopia",
-  "sec": 2146,
-  "km": 20,
-  "hr": 126,
-  "hrMax": 145,
-  "effort": 12,
-  "contenu": null,
-  "contenuFr": null,
-  "note": null,
-  "photo": null
  }
 ];
