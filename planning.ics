@@ -5,21 +5,8 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
-UID:2026-S46-3-soir@coach-ia
-DTSTAMP:20261112T180000Z
-DTSTART:20261112T173000Z
-DTEND:20261112T184500Z
-SUMMARY:🚴 30/30 Billat sur home-trainer
-DESCRIPTION:Seul rappel VO2max de la semaine\, au format Billat\, peu traumatisant : 30 s dur (8/10\, environ 260-290 W\, cadence 95 ou plus) puis 30 s très facile. Ta FC doit monter vers 165-175 en fin de bloc. Sur le vélo\, c'est sans impact pour les tendons qui reprennent.\n• Échauffement progressif 12 min : 4 min à 120 W\, 4 min à 150 W\, 4 min à 170 W\n• 3 accélérations de 15 s (cadence 100 ou plus)\, 45 s faciles entre chaque\n• Bloc 1 : 8×(30 s à ~270 W / 30 s à 100 W)\n• 3 min très faciles à 100 W\n• Bloc 2 : 8×(30 s dur / 30 s facile)\, même puissance\, ou +10 W si le bloc 1 était facile\n• Retour au calme 8 min à 110 W\, puis étirements\n⚑ Si ce matin ta FC repos est à 55 ou plus\, ou si ton HRV est LOW deux matins de suite : 40 min en aisance à la place. Si tu ne tiens plus la puissance sur 2 répétitions de suite\, arrête le bloc.\n\nCoach IA — 2026-S46
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🚴 30/30 Billat sur home-trainer
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-S46-4-matin@coach-ia
-DTSTAMP:20261112T180000Z
+DTSTAMP:20261112T190000Z
 DTSTART:20261113T043000Z
 DTEND:20261113T053000Z
 SUMMARY:🧘 Pieds\, mollets et gainage
@@ -32,7 +19,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S46-4-soir@coach-ia
-DTSTAMP:20261112T180000Z
+DTSTAMP:20261112T190000Z
 DTSTART:20261113T173000Z
 DTEND:20261113T184500Z
 SUMMARY:🚴 Vélo en aisance (remplace l'haltéro)
@@ -45,7 +32,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S46-5-matin@coach-ia
-DTSTAMP:20261112T180000Z
+DTSTAMP:20261112T190000Z
 DTSTART:20261114T043000Z
 DTEND:20261114T053000Z
 SUMMARY:🏋️ Force B : charnière de hanche
@@ -58,7 +45,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S46-6-matin@coach-ia
-DTSTAMP:20261112T180000Z
+DTSTAMP:20261112T190000Z
 DTSTART:20261115T043000Z
 DTEND:20261115T053000Z
 SUMMARY:🏃 Sortie longue course-marche en aisance
