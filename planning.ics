@@ -5,21 +5,8 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
-UID:2026-S46-4-soir@coach-ia
-DTSTAMP:20261113T180000Z
-DTSTART:20261113T173000Z
-DTEND:20261113T184500Z
-SUMMARY:🚴 Vélo en aisance (remplace l'haltéro)
-DESCRIPTION:L'haltérophilie du vendredi est suspendue à cause de l'épaule. À la place\, 30 min de vélo facile vers 17 h 30\, avant le resto si tu récupères les garçons.\n• 5 min faciles à 110-120 W\n• 20 min à 150-160 W\, FC sous 135\n• 5 min de retour au calme à 100 W\n⚑ Si tu sens la fatigue de la semaine ou si ta FC repos est à base +5\, raccourcis à 20 min.\n\nCoach IA — 2026-S46
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🚴 Vélo en aisance (remplace l'haltéro)
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-S46-5-matin@coach-ia
-DTSTAMP:20261113T180000Z
+DTSTAMP:20261113T190000Z
 DTSTART:20261114T043000Z
 DTEND:20261114T053000Z
 SUMMARY:🏋️ Force B : charnière de hanche
@@ -32,7 +19,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S46-6-matin@coach-ia
-DTSTAMP:20261113T180000Z
+DTSTAMP:20261113T190000Z
 DTSTART:20261115T043000Z
 DTEND:20261115T053000Z
 SUMMARY:🏃 Sortie longue course-marche en aisance
