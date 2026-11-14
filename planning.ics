@@ -5,21 +5,8 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
-UID:2026-S46-5-matin@coach-ia
-DTSTAMP:20261114T050000Z
-DTSTART:20261114T043000Z
-DTEND:20261114T053000Z
-SUMMARY:🏋️ Force B : charnière de hanche
-DESCRIPTION:Vers 9 h 30-10 h. Le WOD de la box pour sa seule partie jambes en Scaled\, ou cette séance construite sur le modèle NST. Week-end avec les enfants : version maison de 35 min (hip thrust et montées sur box\, sans le reste). Le pattern change du mardi : ici ce sont les hanches et l'arrière des cuisses qui travaillent.\n• Échauffement 8 min : 5 min de vélo jambes seules\, 2×10 ponts fessiers\, 10 good mornings mains sur les hanches (buste penché dos plat\, hanches qui reculent)\n• Montée en charge au hip thrust (haut du dos appuyé sur un banc\, barre sur les hanches avec une mousse\, pousser les hanches vers le plafond) : 3×5 à 40\, 50 puis 60 kg\n• Hip thrust 5×5 à 70 kg\, 1 s de pause en haut\, 2 min de récup : c'est la charge où les 2 dernières reps restent propres\n• Montées sur box de 50 cm (un pied sur la box\, pousser dessus pour monter\, redescendre contrôlé) : 3×10 par jambe\, gilet lesté de 10 kg ou haltère de 12 kg main gauche\, 90 s de récup\n• Soulevé de terre sur une jambe (buste qui bascule vers l'avant\, jambe arrière tendue\, dos plat) : 3×8 par jambe\, kettlebell de 12 kg main gauche\n• Gainage : pont fessier sur une jambe tenu 3×20 s par côté\, puis dead bug 2×10\n• Retour au calme : 5 min de vélo très facile\n⚑ Au hip thrust\, la main droite ne fait qu'équilibrer la barre\, elle ne porte rien. Une douleur à l'épaule ou dans le bas du dos arrête l'exercice.\n\nCoach IA — 2026-S46
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🏋️ Force B : charnière de hanche
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-S46-6-matin@coach-ia
-DTSTAMP:20261114T050000Z
+DTSTAMP:20261114T060000Z
 DTSTART:20261115T043000Z
 DTEND:20261115T053000Z
 SUMMARY:🏃 Sortie longue course-marche en aisance
