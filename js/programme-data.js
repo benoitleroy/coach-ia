@@ -97,7 +97,7 @@ window.PROGRAMME = {
    "date": "2026-11-21",
    "libelle": "Test hybride maison (samedi 21/11) : 10 km en aisance sous 55 min (FC moyenne < 155) le matin, puis l'après-midi 5 tractions strictes enchaînées + back squat 5 reps à 1,2× poids de corps (≈ 95 kg) + 500 m rameur."
   },
-  "semaineDansCycle": 11,
+  "semaineDansCycle": 12,
   "totalSemaines": 12,
   "bloc": {
    "id": 3,
@@ -121,11 +121,11 @@ window.PROGRAMME = {
    ],
    "test": "Semaine 12 : test hybride (10 km en aisance + force l'après-midi)."
   },
-  "semaineDansBloc": 3,
-  "decharge": false,
+  "semaineDansBloc": 4,
+  "decharge": true,
   "avantDebut": false,
   "debut": "2026-08-31",
   "termine": false
  },
- "generatedAt": "2026-11-14T21:00:31.062Z"
+ "generatedAt": "2026-11-15T05:08:06.311Z"
 };
