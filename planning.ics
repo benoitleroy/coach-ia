@@ -5,21 +5,8 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
-UID:2026-S47-0-soir@coach-ia
-DTSTAMP:20261116T180000Z
-DTSTART:20261116T173000Z
-DTEND:20261116T184500Z
-SUMMARY:🏋️ Force bas du corps — box ou NST (partie jambes)
-DESCRIPTION:Programme NST pas encore fourni : si la séance du jour arrive\, garde seulement sa partie jambes. Sinon\, fais celle-ci\, construite comme chez NST : échauffement\, force principale\, endurance de force\, sans conditioning (semaine allégée). On repart en squat gobelet (kettlebell tenue contre la poitrine à deux mains\, coudes serrés) parce que la barre sur le dos sollicite l'épaule. La séance doit te laisser frais\, avec 2-3 reps en réserve sur chaque série. Si les garçons sont là ce soir\, fais la même séance à la maison avec une kettlebell ou un haltère.\n• Échauffement : 8 min de vélo (Assault bike jambes seules ou home-trainer)\, facile\, puis 3 accélérations de 10 s\n• Mobilité : chevilles genou-mur (pied à une main du mur\, le genou vient toucher le mur sans décoller le talon) 2×10 par côté + accroupi profond tenu 2×30 s\n• Montée en charge : squat gobelet 5 reps à 12 kg\, puis 5 reps à 16 kg\n• Squat gobelet 4×5 à 16-20 kg\, descente en 3 s : la charge où les 2 dernières reps restent propres\, 2 min de récup\n• Fentes arrière (grand pas en arrière\, le genou arrière frôle le sol) au poids du corps : 3×8 par jambe\, 1 min de récup\n• Pont fessier sur une jambe (sur le dos\, pousser le bassin vers le plafond sur un pied) : 3×10 par jambe\n• Gainage latéral sur le coude GAUCHE uniquement : 2×30 s\n• Retour au calme : 5 min de vélo très facile + étirement des fessiers\n⚑ Si l'épaule tire en tenant la kettlebell\, passe en squat au poids du corps (descente en 3 s). Douleur à l'épaule = tu arrêtes l'exercice.\n\nCoach IA — 2026-S47
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🏋️ Force bas du corps — box ou NST (partie jambes)
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-S47-1-matin@coach-ia
-DTSTAMP:20261116T180000Z
+DTSTAMP:20261116T190000Z
 DTSTART:20261117T043000Z
 DTEND:20261117T053000Z
 SUMMARY:🏃 Footing de reprise
@@ -32,7 +19,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S47-2-soir@coach-ia
-DTSTAMP:20261116T180000Z
+DTSTAMP:20261116T190000Z
 DTSTART:20261118T173000Z
 DTEND:20261118T184500Z
 SUMMARY:🚴 Rappel VO2max — 30/30 Billat sur le vélo
@@ -45,7 +32,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S47-3-matin@coach-ia
-DTSTAMP:20261116T180000Z
+DTSTAMP:20261116T190000Z
 DTSTART:20261119T043000Z
 DTEND:20261119T053000Z
 SUMMARY:🏃 Footing + 4 lignes droites
@@ -58,7 +45,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S47-3-soir@coach-ia
-DTSTAMP:20261116T180000Z
+DTSTAMP:20261116T190000Z
 DTSTART:20261119T173000Z
 DTEND:20261119T184500Z
 SUMMARY:🏋️ Rappel force léger — box ou NST (partie jambes)
@@ -71,7 +58,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S47-4-soir@coach-ia
-DTSTAMP:20261116T180000Z
+DTSTAMP:20261116T190000Z
 DTSTART:20261120T173000Z
 DTEND:20261120T184500Z
 SUMMARY:🚴 Vélo jambes légères (remplace l'haltéro suspendue)
@@ -84,7 +71,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S47-5-matin@coach-ia
-DTSTAMP:20261116T180000Z
+DTSTAMP:20261116T190000Z
 DTSTART:20261121T043000Z
 DTEND:20261121T053000Z
 SUMMARY:🏃 Test de reprise — 10 km en aisance
@@ -97,7 +84,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S47-5-soir@coach-ia
-DTSTAMP:20261116T180000Z
+DTSTAMP:20261116T190000Z
 DTSTART:20261121T173000Z
 DTEND:20261121T184500Z
 SUMMARY:🏋️ Test force bas du corps (version épaule)
