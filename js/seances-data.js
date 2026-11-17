@@ -1409,20 +1409,5 @@ window.SEANCES = [
   "contenuFr": null,
   "note": null,
   "photo": null
- },
- {
-  "id": 18596594485,
-  "date": "2026-05-21T14:52:20Z",
-  "type": "VirtualRide",
-  "name": "Zwift - Tair Dringfa Fechan in Watopia",
-  "sec": 2480,
-  "km": 18.5,
-  "hr": 119,
-  "hrMax": 142,
-  "effort": 9,
-  "contenu": null,
-  "contenuFr": null,
-  "note": null,
-  "photo": null
  }
 ];
