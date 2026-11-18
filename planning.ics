@@ -5,21 +5,8 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
-UID:2026-S47-2-soir@coach-ia
-DTSTAMP:20261118T180000Z
-DTSTART:20261118T173000Z
-DTEND:20261118T184500Z
-SUMMARY:🚴 Rappel VO2max — 30/30 Billat sur le vélo
-DESCRIPTION:C'est le seul effort dur de la semaine\, en version courte : 1 bloc au lieu de 2 (semaine allégée). Il se fait sur le vélo pour épargner tes tendons avant le 10 km. « Fort » = l'effort que tu tiendrais 5-6 min\, pas un sprint : environ 240-260 W à la sensation. Faisable à la maison même avec les garçons.\n• Échauffement de 12 min : 6 min facile\, 4 min modéré\, 2 min soutenu\, puis 2 min très facile\n• 8 × (30 s fort / 30 s très facile)\, cadence 90 ou plus\n• 3 min très facile\n• Retour au calme : 10 min très facile\, jusqu'à ce que la FC repasse sous 110\n• Noter dans le journal : watts moyens sur les 30 s fortes et sensation sur 10\n⚑ Nuit de moins de 6 h 30\, ou FC au repos du matin au-dessus de 55 : pas de 30/30\, 30 min faciles à la place.\n\nCoach IA — 2026-S47
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🚴 Rappel VO2max — 30/30 Billat sur le vélo
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-S47-3-matin@coach-ia
-DTSTAMP:20261118T180000Z
+DTSTAMP:20261118T190000Z
 DTSTART:20261119T043000Z
 DTEND:20261119T053000Z
 SUMMARY:🏃 Footing + 4 lignes droites
@@ -32,7 +19,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S47-3-soir@coach-ia
-DTSTAMP:20261118T180000Z
+DTSTAMP:20261118T190000Z
 DTSTART:20261119T173000Z
 DTEND:20261119T184500Z
 SUMMARY:🏋️ Rappel force léger — box ou NST (partie jambes)
@@ -45,7 +32,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S47-4-soir@coach-ia
-DTSTAMP:20261118T180000Z
+DTSTAMP:20261118T190000Z
 DTSTART:20261120T173000Z
 DTEND:20261120T184500Z
 SUMMARY:🚴 Vélo jambes légères (remplace l'haltéro suspendue)
@@ -58,7 +45,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S47-5-matin@coach-ia
-DTSTAMP:20261118T180000Z
+DTSTAMP:20261118T190000Z
 DTSTART:20261121T043000Z
 DTEND:20261121T053000Z
 SUMMARY:🏃 Test de reprise — 10 km en aisance
@@ -71,7 +58,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S47-5-soir@coach-ia
-DTSTAMP:20261118T180000Z
+DTSTAMP:20261118T190000Z
 DTSTART:20261121T173000Z
 DTEND:20261121T184500Z
 SUMMARY:🏋️ Test force bas du corps (version épaule)
