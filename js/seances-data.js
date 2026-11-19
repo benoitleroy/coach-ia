@@ -1379,20 +1379,5 @@ window.SEANCES = [
   "contenuFr": null,
   "note": null,
   "photo": null
- },
- {
-  "id": 18622432332,
-  "date": "2026-05-23T14:39:24Z",
-  "type": "EMountainBikeRide",
-  "name": "Sortie en VTT électrique dans l'après-midi",
-  "sec": 4877,
-  "km": 14.6,
-  "hr": 111,
-  "hrMax": 151,
-  "effort": 16,
-  "contenu": null,
-  "contenuFr": null,
-  "note": null,
-  "photo": null
  }
 ];
