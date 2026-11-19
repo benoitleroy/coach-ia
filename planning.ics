@@ -5,21 +5,8 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
-UID:2026-S47-3-soir@coach-ia
-DTSTAMP:20261119T180000Z
-DTSTART:20261119T173000Z
-DTEND:20261119T184500Z
-SUMMARY:🏋️ Rappel force léger — box ou NST (partie jambes)
-DESCRIPTION:Juste un rappel du geste de charnière (pencher le buste en poussant les hanches en arrière)\, à 60 % de l'effort : on garde largement 5 % dans le réservoir\, le test est dans 2 jours. Faisable à la maison.\n• Échauffement : 5 min de vélo facile + 10 ponts fessiers\n• Soulevé de terre jambes tendues à la kettlebell (jambes presque tendues\, hanches poussées en arrière\, dos plat\, la charge descend le long des cuisses jusqu'aux genoux) : 3×8 à 16 kg\, 90 s de récup\n• Montées sur box (monter sur une box de 40-50 cm en poussant sur la jambe d'appui) au poids du corps : 3×8 par jambe\n• Dead bug sans les bras (sur le dos\, bras croisés sur la poitrine\, allonger une jambe puis l'autre\, bas du dos collé au sol) : 2×10\n• 2 min d'étirement des ischios (arrière des cuisses)\n⚑ Si l'épaule réagit à la kettlebell : soulevé sur une jambe sans charge. Rien ne doit brûler.\n\nCoach IA — 2026-S47
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🏋️ Rappel force léger — box ou NST (partie jambes)
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-S47-4-soir@coach-ia
-DTSTAMP:20261119T180000Z
+DTSTAMP:20261119T190100Z
 DTSTART:20261120T173000Z
 DTEND:20261120T184500Z
 SUMMARY:🚴 Vélo jambes légères (remplace l'haltéro suspendue)
@@ -32,7 +19,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S47-5-matin@coach-ia
-DTSTAMP:20261119T180000Z
+DTSTAMP:20261119T190100Z
 DTSTART:20261121T043000Z
 DTEND:20261121T053000Z
 SUMMARY:🏃 Test de reprise — 10 km en aisance
@@ -45,7 +32,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S47-5-soir@coach-ia
-DTSTAMP:20261119T180000Z
+DTSTAMP:20261119T190100Z
 DTSTART:20261121T173000Z
 DTEND:20261121T184500Z
 SUMMARY:🏋️ Test force bas du corps (version épaule)
