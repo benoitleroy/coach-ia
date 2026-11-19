@@ -5,21 +5,8 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
-UID:2026-S47-3-matin@coach-ia
-DTSTAMP:20261119T050000Z
-DTSTART:20261119T043000Z
-DTEND:20261119T053000Z
-SUMMARY:🏃 Footing + 4 lignes droites
-DESCRIPTION:Footing facile avec 4 accélérations relâchées (les lignes droites) pour réveiller les jambes avant samedi\, sans te fatiguer. Si les garçons sont là ce matin : 30 min de home-trainer facile avec 4 accélérations de 15 s.\n• 5 min de marche puis trot très lent\n• 20 min de course en aisance\, FC sous 140\n• 4 lignes droites de 15 s (accélérer progressivement jusqu'à rapide mais relâché)\, 45 s de marche entre chaque\n• 3 min de trot pour finir\n⚑ Si mardi a laissé une douleur de tendon : pas de course\, home-trainer à la place.\n\nCoach IA — 2026-S47
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🏃 Footing + 4 lignes droites
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-S47-3-soir@coach-ia
-DTSTAMP:20261119T050000Z
+DTSTAMP:20261119T060000Z
 DTSTART:20261119T173000Z
 DTEND:20261119T184500Z
 SUMMARY:🏋️ Rappel force léger — box ou NST (partie jambes)
@@ -32,7 +19,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S47-4-soir@coach-ia
-DTSTAMP:20261119T050000Z
+DTSTAMP:20261119T060000Z
 DTSTART:20261120T173000Z
 DTEND:20261120T184500Z
 SUMMARY:🚴 Vélo jambes légères (remplace l'haltéro suspendue)
@@ -45,7 +32,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S47-5-matin@coach-ia
-DTSTAMP:20261119T050000Z
+DTSTAMP:20261119T060000Z
 DTSTART:20261121T043000Z
 DTEND:20261121T053000Z
 SUMMARY:🏃 Test de reprise — 10 km en aisance
@@ -58,7 +45,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S47-5-soir@coach-ia
-DTSTAMP:20261119T050000Z
+DTSTAMP:20261119T060000Z
 DTSTART:20261121T173000Z
 DTEND:20261121T184500Z
 SUMMARY:🏋️ Test force bas du corps (version épaule)
