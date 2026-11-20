@@ -5,21 +5,8 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
-UID:2026-S47-4-soir@coach-ia
-DTSTAMP:20261120T180000Z
-DTSTART:20261120T173000Z
-DTEND:20261120T184500Z
-SUMMARY:🚴 Vélo jambes légères (remplace l'haltéro suspendue)
-DESCRIPTION:L'haltéro du vendredi reste suspendue à cause de l'épaule : à la place\, un petit déblocage pour arriver frais au test. Si tu récupères les garçons ce soir\, fais-le avant le resto.\n• 12 min faciles\, cadence autour de 90\n• 3 × 15 s vite et souple\, 1 min facile entre chaque\n• 3 min très facile\n⚑ Rien de plus ce soir : demain\, c'est le test.\n\nCoach IA — 2026-S47
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🚴 Vélo jambes légères (remplace l'haltéro suspendue)
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-S47-5-matin@coach-ia
-DTSTAMP:20261120T180000Z
+DTSTAMP:20261120T190000Z
 DTSTART:20261121T043000Z
 DTEND:20261121T053000Z
 SUMMARY:🏃 Test de reprise — 10 km en aisance
@@ -32,7 +19,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S47-5-soir@coach-ia
-DTSTAMP:20261120T180000Z
+DTSTAMP:20261120T190000Z
 DTSTART:20261121T173000Z
 DTEND:20261121T184500Z
 SUMMARY:🏋️ Test force bas du corps (version épaule)
