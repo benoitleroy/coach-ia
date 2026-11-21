@@ -4,17 +4,4 @@ PRODID:-//Coach IA//Carnet//FR
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
-BEGIN:VEVENT
-UID:2026-S47-5-soir@coach-ia
-DTSTAMP:20261121T180000Z
-DTSTART:20261121T173000Z
-DTEND:20261121T184500Z
-SUMMARY:🏋️ Test force bas du corps (version épaule)
-DESCRIPTION:L'après-midi du test\, sans tractions ni rameur (tous deux interdits par l'épaule) et sans barre sur le dos. On mesure des repères qu'on pourra refaire au prochain cycle. Faisable à la maison.\n• Échauffement : 8 min de vélo facile + 10 squats au poids du corps + 10 fentes arrière\n• Squat gobelet\, 5 reps propres à chaque palier : 16 kg → 20 kg → 24 kg si indolore. Noter la charge la plus lourde réussie proprement\n• 2 min de récup\n• Chaise contre le mur (dos au mur\, cuisses parallèles au sol) : une seule tenue maximale\, chrono noté\n• Vélo (Assault bike jambes seules ou home-trainer) : 2 min à fond\, noter les watts moyens. Remplace le 500 m rameur\n• Retour au calme : 5 min de vélo très facile\n⚑ Douleur à l'épaule = arrêt de l'exercice. On ne remplace pas les tractions par quoi que ce soit qui tire sur le bras.\n\nCoach IA — 2026-S47
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🏋️ Test force bas du corps (version épaule)
-END:VALARM
-END:VEVENT
 END:VCALENDAR
