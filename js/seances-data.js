@@ -238,7 +238,7 @@ window.SEANCES = [
   "contenu": null,
   "contenuFr": null,
   "note": null,
-  "photo": "https://dgtzuqphqg23d.cloudfront.net/VWIqHclRoyIXqbBBCbh3bRjQ6loKWjkam0ohA0QRDFE-1536x2048.jpg"
+  "photo": null
  },
  {
   "id": 20269787481,
