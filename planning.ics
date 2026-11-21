@@ -5,21 +5,8 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
-UID:2026-S47-5-matin@coach-ia
-DTSTAMP:20261121T050000Z
-DTSTART:20261121T043000Z
-DTEND:20261121T053000Z
-SUMMARY:🏃 Test de reprise — 10 km en aisance
-DESCRIPTION:Le test du bloc\, en version réaliste : 10 km à la sensation\, sous une limite de FC\, sans courir après le chrono. Le sub-55 min n'est pas l'objectif cette fois. Repère attendu : autour de 5:50-6:15/km. Le résultat servira de point de départ au prochain cycle.\n• Échauffement de 10 min : 5 min de marche rapide + 5 min de trot très lent\n• Km 1 à 5 : FC sous 150\, allure libre\n• Km 6 à 10 : FC jamais au-dessus de 155 ; si elle dépasse\, tu ralentis ou tu marches 1 min (c'est permis)\n• 5 min de marche\, puis noter dans le journal : temps total\, FC moyenne\, douleurs éventuelles\n⚑ Garçons à la maison ce matin\, ou douleur de tendon dans la semaine : pas de course. Fais à la place 30 min de home-trainer à FC 140 stable et note les watts (repère : 178 W à 136 bpm le 04/11). Si un footing de la semaine a semblé lourd\, coupe le 10 km à 6 km.\n\nCoach IA — 2026-S47
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🏃 Test de reprise — 10 km en aisance
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-S47-5-soir@coach-ia
-DTSTAMP:20261121T050000Z
+DTSTAMP:20261121T060000Z
 DTSTART:20261121T173000Z
 DTEND:20261121T184500Z
 SUMMARY:🏋️ Test force bas du corps (version épaule)
