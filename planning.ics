@@ -4,4 +4,95 @@ PRODID:-//Coach IA//Carnet//FR
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
+BEGIN:VEVENT
+UID:2026-S48-0-matin@coach-ia
+DTSTAMP:20261122T050400Z
+DTSTART:20261123T043000Z
+DTEND:20261123T053000Z
+SUMMARY:🚴 Home-trainer en aisance
+DESCRIPTION:Faisable avec ou sans les enfants. On remet le moteur en route sans forcer : tu dois pouvoir parler en phrases complètes tout du long.\n• 5 min de montée progressive\, cadence 85-90 tours/min\n• 20 min en aisance\, FC entre 120 et 135 bpm\, cadence 85-95\n• 5 min de retour au calme très facile\n• Noter la puissance moyenne des 20 min : c'est ta référence de reprise\n⚑ FC au-dessus de 140 bpm : baisse la résistance. Le but de la séance n'est pas la puissance.\n\nCoach IA — 2026-S48
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🚴 Home-trainer en aisance
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S48-1-matin@coach-ia
+DTSTAMP:20261122T050400Z
+DTSTART:20261124T043000Z
+DTEND:20261124T053000Z
+SUMMARY:🧘 Mobilité bas du corps
+DESCRIPTION:15 min à la maison\, faisable avec les enfants. Tant que l'épaule n'est pas réglée\, le travail de mobilité pour le squat barre au-dessus de la tête (dislocations au bâton\, squat au bâton bras tendus) est suspendu : on travaille seulement chevilles et hanches.\n• Mobilité des chevilles genou-mur (pied à 10 cm du mur\, amener le genou toucher le mur sans décoller le talon) : 2×10 par jambe\n• Hanches en 90/90 (assis au sol\, les deux genoux pliés à 90°\, pivoter d'un côté à l'autre) : 2×8 bascules\n• Accroupi profond tenu 3×30 s\, main gauche sur un montant de porte si besoin\n• Pont fessier (sur le dos\, pieds au sol\, monter le bassin) : 2×12\n• Dead bug jambes seules (sur le dos\, bras le long du corps\, descendre une jambe tendue sans creuser le dos) : 2×10\n⚑ Aucun mouvement ne doit tirer dans l'épaule droite : si ça tire\, tu sautes l'exercice.\n\nCoach IA — 2026-S48
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🧘 Mobilité bas du corps
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S48-1-soir@coach-ia
+DTSTAMP:20261122T050400Z
+DTSTART:20261124T173000Z
+DTEND:20261124T184500Z
+SUMMARY:🏋️ Force bas du corps n°1 : squat (box ou NST)
+DESCRIPTION:Sans les enfants : à la box\, en reprenant seulement les parties bas du corps de la séance NST si elle est fournie\, sinon cette séance. Avec les enfants : version maison de 35 min (squats au gilet lesté ou au poids du corps à la place de la presse). Pas de barre sur le dos pour le moment : la presse à cuisses (machine\, dos calé\, on pousse le plateau avec les jambes) ou le squat à la ceinture (la charge est accrochée à une ceinture autour des hanches) épargnent l'épaule. S1 de reprise : on laisse 3 répétitions en réserve.\n• Échauffement : 8 min de vélo ou d'Assault bike jambes seules\, puis 2×10 squats au poids du corps\n• Squat lent au poids du corps : 2×8\, descente en 3 s et 1 s de pause en bas\n• Presse à cuisses ou squat à la ceinture : 4×8 à une charge où il te reste 3 reps sous le pied\, 2 min de récup\n• Fentes arrière au poids du corps (grand pas en arrière\, genou arrière frôle le sol) : 3×8 par jambe\, 90 s de récup\n• Montées sur box de 50 cm (step-ups) : 3×8 par jambe\, bras le long du corps\n• Gainage : 3 tours de 30 s de dead bug jambes seules + 20 s de gainage latéral sur le coude gauche uniquement\n• Retour au calme : 5 min de vélo très facile + étirement des hanches\n⚑ Douleur à l'épaule = arrêt de l'exercice. Si la dernière série à 8 reps te coûte plus que prévu\, tu restes à cette charge la semaine prochaine.\n\nCoach IA — 2026-S48
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🏋️ Force bas du corps n°1 : squat (box ou NST)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S48-2-matin@coach-ia
+DTSTAMP:20261122T050400Z
+DTSTART:20261125T043000Z
+DTEND:20261125T053000Z
+SUMMARY:🏃 Footing en aisance (ou home-trainer)
+DESCRIPTION:Sans les enfants : 30 min de course à la sensation\, la marche est autorisée et légitime. Avec les enfants : 35 min de home-trainer comme lundi. Après 5 semaines sans courir\, ce sont les tendons qui décident\, pas le cardio.\n• 5 min de marche rapide puis trot très lent\n• 20 min de course en aisance\, FC sous 140 bpm\, allure libre\n• Si la FC dépasse 140 : 1 min de marche\, puis on repart\n• 5 min de marche de retour au calme + mollets contre un mur 2×30 s\n⚑ Douleur au tendon d'Achille ou au genou : tu passes en marche et tu rentres.\n\nCoach IA — 2026-S48
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🏃 Footing en aisance (ou home-trainer)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S48-4-soir@coach-ia
+DTSTAMP:20261122T050400Z
+DTSTART:20261127T173000Z
+DTEND:20261127T184500Z
+SUMMARY:🏋️ Force bas du corps n°2 : charnière (à la place de l'haltéro)
+DESCRIPTION:L'haltérophilie est suspendue : cette séance prend son créneau. La charnière\, c'est le mouvement de plier le bassin vers l'arrière\, dos plat\, comme pour ramasser un carton. Avec le hip thrust (dos appuyé sur un banc\, barre posée sur les hanches\, on monte le bassin)\, les mains ne font que stabiliser la barre et le bras droit ne porte rien. Si c'est le soir de bascule des enfants\, fais la version maison à 17 h (poids du corps et gilet lesté) avant le resto.\n• Échauffement : 8 min de vélo\, puis 2×10 ponts fessiers et 2×10 good mornings à vide (mains sur la poitrine\, pencher le buste dos plat)\n• Hip thrust à la barre : 4×8 à une charge où il te reste 3 reps sous le pied\, 2 min de récup\n• Soulevé de terre sur une jambe sans charge (buste qui bascule\, jambe arrière tendue\, dos plat) : 3×8 par jambe\n• Fentes marchées au poids du corps : 3×10 pas\, 90 s de récup\n• Sauts sur box de 40 cm : 4×5\, en redescendant en marchant\n• Gainage : 3×30 s de hollow (sur le dos\, jambes tendues décollées\, bras le long du corps)\n• Retour au calme : 5 min de vélo très facile\n⚑ Si l'épaule tire au moment de placer la barre de hip thrust\, tu remplaces par des ponts fessiers sur une jambe au poids du corps.\n\nCoach IA — 2026-S48
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🏋️ Force bas du corps n°2 : charnière (à la place de l'haltéro)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S48-5-matin@coach-ia
+DTSTAMP:20261122T050400Z
+DTSTART:20261128T043000Z
+DTEND:20261128T053000Z
+SUMMARY:🏃 Sortie la plus longue de la semaine
+DESCRIPTION:Sans les enfants : 45 min de course-marche en aisance\, à la sensation\, avec 2-3 relances libres de 20 s si tu te sens bien en fin de sortie. Avec les enfants : 50 min de home-trainer en aisance. Pas de charge lourde la veille\, donc ça passe.\n• 5 min de marche rapide\n• 35 min de course en aisance (FC sous 140)\, alterner 5 min de course et 1 min de marche si besoin\n• Optionnel\, sur les 10 dernières minutes : 2-3 relances de 20 s à la sensation\, puis trot\n• 5 min de marche + étirements des mollets et des fessiers\n⚑ Jambes lourdes de la veille dès les 10 premières minutes : on raccourcit à 30 min.\n\nCoach IA — 2026-S48
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🏃 Sortie la plus longue de la semaine
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-S48-6-matin@coach-ia
+DTSTAMP:20261122T050400Z
+DTSTART:20261129T043000Z
+DTEND:20261129T053000Z
+SUMMARY:🚶 Marche active
+DESCRIPTION:45 à 60 min de marche\, seul ou avec les garçons (colline\, calanques). Récupération active avant le batch cooking.\n• 45 à 60 min de marche à bon pas\, conversation facile\n• Si ça grimpe : on monte sans s'essouffler\n• 10 min de mobilité en rentrant : accroupi profond 3×30 s + chevilles genou-mur 2×10\n⚑ Rien ne doit forcer : c'est de la récupération.\n\nCoach IA — 2026-S48
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:🚶 Marche active
+END:VALARM
+END:VEVENT
 END:VCALENDAR

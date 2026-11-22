@@ -97,35 +97,14 @@ window.PROGRAMME = {
    "date": "2026-11-21",
    "libelle": "Test hybride maison (samedi 21/11) : 10 km en aisance sous 55 min (FC moyenne < 155) le matin, puis l'après-midi 5 tractions strictes enchaînées + back squat 5 reps à 1,2× poids de corps (≈ 95 kg) + 500 m rameur."
   },
-  "semaineDansCycle": 12,
+  "semaineDansCycle": 13,
   "totalSemaines": 12,
-  "bloc": {
-   "id": 3,
-   "nom": "Expression",
-   "semaines": 4,
-   "debut": "2026-10-26",
-   "but": "Rendre la forme utilisable : combiner endurance et force dans la même journée.",
-   "doubles": [
-    5,
-    5,
-    4,
-    2
-   ],
-   "priorites": [
-    "Bi-quotidien stabilisé à 5 doublés, réduit à 2 la semaine du test",
-    "Maintenir 1 séance VO2max/semaine (30/30 ou 3×3 min à vVO2max)",
-    "1 séance combinée par semaine (course en aisance puis force dans la journée) pour préparer le test",
-    "Force : chercher le back squat 5 reps à 1,2× poids de corps (≈ 95 kg) et 5 tractions strictes enchaînées",
-    "Volume stable 6 h 30-7 h, dernière semaine allégée de 40 % avant le test",
-    "Semaine 12 : test hybride le samedi 21/11"
-   ],
-   "test": "Semaine 12 : test hybride (10 km en aisance + force l'après-midi)."
-  },
-  "semaineDansBloc": 4,
-  "decharge": true,
+  "bloc": null,
+  "semaineDansBloc": null,
+  "decharge": false,
   "avantDebut": false,
   "debut": "2026-08-31",
-  "termine": false
+  "termine": true
  },
- "generatedAt": "2026-11-21T21:00:32.776Z"
+ "generatedAt": "2026-11-22T05:04:53.734Z"
 };
