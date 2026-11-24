@@ -5,21 +5,8 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
-UID:2026-S48-1-soir@coach-ia
-DTSTAMP:20261124T180000Z
-DTSTART:20261124T173000Z
-DTEND:20261124T184500Z
-SUMMARY:🏋️ Force bas du corps n°1 : squat (box ou NST)
-DESCRIPTION:Sans les enfants : à la box\, en reprenant seulement les parties bas du corps de la séance NST si elle est fournie\, sinon cette séance. Avec les enfants : version maison de 35 min (squats au gilet lesté ou au poids du corps à la place de la presse). Pas de barre sur le dos pour le moment : la presse à cuisses (machine\, dos calé\, on pousse le plateau avec les jambes) ou le squat à la ceinture (la charge est accrochée à une ceinture autour des hanches) épargnent l'épaule. S1 de reprise : on laisse 3 répétitions en réserve.\n• Échauffement : 8 min de vélo ou d'Assault bike jambes seules\, puis 2×10 squats au poids du corps\n• Squat lent au poids du corps : 2×8\, descente en 3 s et 1 s de pause en bas\n• Presse à cuisses ou squat à la ceinture : 4×8 à une charge où il te reste 3 reps sous le pied\, 2 min de récup\n• Fentes arrière au poids du corps (grand pas en arrière\, genou arrière frôle le sol) : 3×8 par jambe\, 90 s de récup\n• Montées sur box de 50 cm (step-ups) : 3×8 par jambe\, bras le long du corps\n• Gainage : 3 tours de 30 s de dead bug jambes seules + 20 s de gainage latéral sur le coude gauche uniquement\n• Retour au calme : 5 min de vélo très facile + étirement des hanches\n⚑ Douleur à l'épaule = arrêt de l'exercice. Si la dernière série à 8 reps te coûte plus que prévu\, tu restes à cette charge la semaine prochaine.\n\nCoach IA — 2026-S48
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🏋️ Force bas du corps n°1 : squat (box ou NST)
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-S48-2-matin@coach-ia
-DTSTAMP:20261124T180000Z
+DTSTAMP:20261124T190000Z
 DTSTART:20261125T043000Z
 DTEND:20261125T053000Z
 SUMMARY:🏃 Footing en aisance (ou home-trainer)
@@ -32,7 +19,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S48-4-soir@coach-ia
-DTSTAMP:20261124T180000Z
+DTSTAMP:20261124T190000Z
 DTSTART:20261127T173000Z
 DTEND:20261127T184500Z
 SUMMARY:🏋️ Force bas du corps n°2 : charnière (à la place de l'haltéro)
@@ -45,7 +32,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S48-5-matin@coach-ia
-DTSTAMP:20261124T180000Z
+DTSTAMP:20261124T190000Z
 DTSTART:20261128T043000Z
 DTEND:20261128T053000Z
 SUMMARY:🏃 Sortie la plus longue de la semaine
@@ -58,7 +45,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S48-6-matin@coach-ia
-DTSTAMP:20261124T180000Z
+DTSTAMP:20261124T190000Z
 DTSTART:20261129T043000Z
 DTEND:20261129T053000Z
 SUMMARY:🚶 Marche active
