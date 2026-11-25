@@ -5,21 +5,8 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
-UID:2026-S48-2-matin@coach-ia
-DTSTAMP:20261125T050000Z
-DTSTART:20261125T043000Z
-DTEND:20261125T053000Z
-SUMMARY:🏃 Footing en aisance (ou home-trainer)
-DESCRIPTION:Sans les enfants : 30 min de course à la sensation\, la marche est autorisée et légitime. Avec les enfants : 35 min de home-trainer comme lundi. Après 5 semaines sans courir\, ce sont les tendons qui décident\, pas le cardio.\n• 5 min de marche rapide puis trot très lent\n• 20 min de course en aisance\, FC sous 140 bpm\, allure libre\n• Si la FC dépasse 140 : 1 min de marche\, puis on repart\n• 5 min de marche de retour au calme + mollets contre un mur 2×30 s\n⚑ Douleur au tendon d'Achille ou au genou : tu passes en marche et tu rentres.\n\nCoach IA — 2026-S48
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🏃 Footing en aisance (ou home-trainer)
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-S48-4-soir@coach-ia
-DTSTAMP:20261125T050000Z
+DTSTAMP:20261125T060000Z
 DTSTART:20261127T173000Z
 DTEND:20261127T184500Z
 SUMMARY:🏋️ Force bas du corps n°2 : charnière (à la place de l'haltéro)
@@ -32,7 +19,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S48-5-matin@coach-ia
-DTSTAMP:20261125T050000Z
+DTSTAMP:20261125T060000Z
 DTSTART:20261128T043000Z
 DTEND:20261128T053000Z
 SUMMARY:🏃 Sortie la plus longue de la semaine
@@ -45,7 +32,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S48-6-matin@coach-ia
-DTSTAMP:20261125T050000Z
+DTSTAMP:20261125T060000Z
 DTSTART:20261129T043000Z
 DTEND:20261129T053000Z
 SUMMARY:🚶 Marche active
