@@ -1289,35 +1289,5 @@ window.SEANCES = [
   "contenuFr": null,
   "note": null,
   "photo": null
- },
- {
-  "id": 18727439664,
-  "date": "2026-05-31T10:24:56Z",
-  "type": "Ride",
-  "name": "Morning Ride",
-  "sec": 4404,
-  "km": 31.8,
-  "hr": 141,
-  "hrMax": 190,
-  "effort": 66,
-  "contenu": null,
-  "contenuFr": null,
-  "note": null,
-  "photo": null
- },
- {
-  "id": 18727439630,
-  "date": "2026-05-31T10:18:11Z",
-  "type": "Workout",
-  "name": "Morning Workout",
-  "sec": 282,
-  "km": 0.4,
-  "hr": 84,
-  "hrMax": 113,
-  "effort": null,
-  "contenu": null,
-  "contenuFr": null,
-  "note": null,
-  "photo": null
  }
 ];
