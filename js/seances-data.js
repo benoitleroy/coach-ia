@@ -1274,20 +1274,5 @@ window.SEANCES = [
   "contenuFr": null,
   "note": null,
   "photo": null
- },
- {
-  "id": 18727439632,
-  "date": "2026-05-31T11:45:38Z",
-  "type": "Workout",
-  "name": "Lunch Workout",
-  "sec": 2,
-  "km": 0,
-  "hr": 117,
-  "hrMax": 129,
-  "effort": null,
-  "contenu": null,
-  "contenuFr": null,
-  "note": null,
-  "photo": null
  }
 ];
