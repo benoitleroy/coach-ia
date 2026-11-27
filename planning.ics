@@ -5,21 +5,8 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
-UID:2026-S48-4-soir@coach-ia
-DTSTAMP:20261127T180000Z
-DTSTART:20261127T173000Z
-DTEND:20261127T184500Z
-SUMMARY:🏋️ Force bas du corps n°2 : charnière (à la place de l'haltéro)
-DESCRIPTION:L'haltérophilie est suspendue : cette séance prend son créneau. La charnière\, c'est le mouvement de plier le bassin vers l'arrière\, dos plat\, comme pour ramasser un carton. Avec le hip thrust (dos appuyé sur un banc\, barre posée sur les hanches\, on monte le bassin)\, les mains ne font que stabiliser la barre et le bras droit ne porte rien. Si c'est le soir de bascule des enfants\, fais la version maison à 17 h (poids du corps et gilet lesté) avant le resto.\n• Échauffement : 8 min de vélo\, puis 2×10 ponts fessiers et 2×10 good mornings à vide (mains sur la poitrine\, pencher le buste dos plat)\n• Hip thrust à la barre : 4×8 à une charge où il te reste 3 reps sous le pied\, 2 min de récup\n• Soulevé de terre sur une jambe sans charge (buste qui bascule\, jambe arrière tendue\, dos plat) : 3×8 par jambe\n• Fentes marchées au poids du corps : 3×10 pas\, 90 s de récup\n• Sauts sur box de 40 cm : 4×5\, en redescendant en marchant\n• Gainage : 3×30 s de hollow (sur le dos\, jambes tendues décollées\, bras le long du corps)\n• Retour au calme : 5 min de vélo très facile\n⚑ Si l'épaule tire au moment de placer la barre de hip thrust\, tu remplaces par des ponts fessiers sur une jambe au poids du corps.\n\nCoach IA — 2026-S48
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🏋️ Force bas du corps n°2 : charnière (à la place de l'haltéro)
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-S48-5-matin@coach-ia
-DTSTAMP:20261127T180000Z
+DTSTAMP:20261127T190000Z
 DTSTART:20261128T043000Z
 DTEND:20261128T053000Z
 SUMMARY:🏃 Sortie la plus longue de la semaine
@@ -32,7 +19,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-S48-6-matin@coach-ia
-DTSTAMP:20261127T180000Z
+DTSTAMP:20261127T190000Z
 DTSTART:20261129T043000Z
 DTEND:20261129T053000Z
 SUMMARY:🚶 Marche active
