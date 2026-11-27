@@ -1319,20 +1319,5 @@ window.SEANCES = [
   "contenuFr": null,
   "note": null,
   "photo": null
- },
- {
-  "id": 18727439786,
-  "date": "2026-05-31T09:35:23Z",
-  "type": "Swim",
-  "name": "Morning Swim",
-  "sec": 2569,
-  "km": 1.1,
-  "hr": null,
-  "hrMax": null,
-  "effort": null,
-  "contenu": null,
-  "contenuFr": null,
-  "note": null,
-  "photo": null
  }
 ];
