@@ -5,21 +5,8 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Coach IA — entraînement
 BEGIN:VEVENT
-UID:2026-S48-5-matin@coach-ia
-DTSTAMP:20261128T050000Z
-DTSTART:20261128T043000Z
-DTEND:20261128T053000Z
-SUMMARY:🏃 Sortie la plus longue de la semaine
-DESCRIPTION:Sans les enfants : 45 min de course-marche en aisance\, à la sensation\, avec 2-3 relances libres de 20 s si tu te sens bien en fin de sortie. Avec les enfants : 50 min de home-trainer en aisance. Pas de charge lourde la veille\, donc ça passe.\n• 5 min de marche rapide\n• 35 min de course en aisance (FC sous 140)\, alterner 5 min de course et 1 min de marche si besoin\n• Optionnel\, sur les 10 dernières minutes : 2-3 relances de 20 s à la sensation\, puis trot\n• 5 min de marche + étirements des mollets et des fessiers\n⚑ Jambes lourdes de la veille dès les 10 premières minutes : on raccourcit à 30 min.\n\nCoach IA — 2026-S48
-BEGIN:VALARM
-TRIGGER:-PT30M
-ACTION:DISPLAY
-DESCRIPTION:🏃 Sortie la plus longue de la semaine
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:2026-S48-6-matin@coach-ia
-DTSTAMP:20261128T050000Z
+DTSTAMP:20261128T060000Z
 DTSTART:20261129T043000Z
 DTEND:20261129T053000Z
 SUMMARY:🚶 Marche active
