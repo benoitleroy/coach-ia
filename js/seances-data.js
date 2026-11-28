@@ -1259,20 +1259,5 @@ window.SEANCES = [
   "contenuFr": null,
   "note": null,
   "photo": null
- },
- {
-  "id": 18737264453,
-  "date": "2026-06-01T06:17:20Z",
-  "type": "Run",
-  "name": "Course à pied le matin",
-  "sec": 1117,
-  "km": 3.5,
-  "hr": 141,
-  "hrMax": 151,
-  "effort": 13,
-  "contenu": null,
-  "contenuFr": null,
-  "note": null,
-  "photo": null
  }
 ];
